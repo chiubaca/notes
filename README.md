@@ -13,9 +13,6 @@ Compilation of resources that I have read/watched/worked through that have helpe
 ## Vue.js
 - *[X] [Docs: Vue Composition API docs](https://composition-api.vuejs.org/api.html#setup)
 
-# Time Management
-
-
 # Broaden Perspective
 - *[ ] [Book: The Coding Career Handbook](https://www.goodreads.com/book/show/54375336-the-coding-career-handbook-guides-principles-strategies-and-tactics?from_search=true&from_srp=true&qid=5kvqgZ476m&rank=3)
 - *[X] [Book: Atomic Habits](https://www.goodreads.com/book/show/40121378-atomic-habits?ac=1&from_search=true&qid=rKTDNoeadD&rank=1)
