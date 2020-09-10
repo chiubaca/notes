@@ -1,7 +1,7 @@
-# learning
+# Learning
 Compilation of resources that I have read/watched/worked through that have helped me become a better programmer.
 
-[Learn-In-Public Micro Journal](https://github.com/chiubaca/learning/tree/master/journal)
+Also, my [Learn-In-Public Micro Journal](https://github.com/chiubaca/learning/tree/master/journal)
 
 # General Coding
 
