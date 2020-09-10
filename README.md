@@ -13,4 +13,5 @@ Compilation of resources that I have read/watched/worked through that have helpe
 ## Vue.js
 - *[X] [Vue Composition API docs](https://composition-api.vuejs.org/api.html#setup)
 
-
+# Time Managment
+- *[X] [Do Less Get More](https://www.goodreads.com/book/show/23493715-do-less-get-more)
