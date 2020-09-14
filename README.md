@@ -4,6 +4,8 @@ Compilation of resources that I have read/watched/worked through that have helpe
 Also, my [Learn-In-Public Micro Journal](https://github.com/chiubaca/learning/tree/master/journal)
 
 # General Coding
+- *[ ] [Book: Clean Code - A Code of Conduct for Professional Programmers ](https://www.goodreads.com/book/show/10284614-the-clean-coder?from_search=true&from_srp=true&qid=hjlFgvTICu&rank=2)
+- *[ ] [Book: Clean Code - A Handbook of Agile Software Craftsmanship  ](https://www.goodreads.com/book/show/3735293-clean-code?from_search=true&from_srp=true&qid=hjlFgvTICu&rank=1)
 
 ## TypeScript
 - *[X] [Tutorial: Execute Program TS track](https://www.executeprogram.com/courses/typescript)
@@ -14,6 +16,7 @@ Also, my [Learn-In-Public Micro Journal](https://github.com/chiubaca/learning/tr
 - *[X] [Docs: Vue Composition API docs](https://composition-api.vuejs.org/api.html#setup)
 
 # Broaden Perspective
+- *[ ] [Book: Essentialism: The Disciplined Pursuit of Less](https://www.goodreads.com/book/show/18077875-essentialism?from_search=true&from_srp=true&qid=AhUzfVOjtr&rank=1)
 - *[ ] [Book: The Coding Career Handbook](https://www.goodreads.com/book/show/54375336-the-coding-career-handbook-guides-principles-strategies-and-tactics?from_search=true&from_srp=true&qid=5kvqgZ476m&rank=3)
 - *[X] [Book: Atomic Habits](https://www.goodreads.com/book/show/40121378-atomic-habits?ac=1&from_search=true&qid=rKTDNoeadD&rank=1)
 - *[X] [Book: The Subtle Art of Not Giving a F\*\*k](https://www.goodreads.com/book/show/28257707-the-subtle-art-of-not-giving-a-f-ck?ac=1&from_search=true&qid=uOLKRHgnPw&rank=1)
