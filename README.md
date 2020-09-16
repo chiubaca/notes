@@ -13,6 +13,7 @@ This is also my [Learn-In-Public Micro Journal](https://github.com/chiubaca/lear
 ## TypeScript
 - *[X] [Tutorial: Execute Program TS track](https://www.executeprogram.com/courses/typescript)
 - *[ ] [Book: Effective TypeScript: 62 Specific Ways to Improve Your TypeScript](https://www.goodreads.com/book/show/48570456-effective-typescript?from_search=true&from_srp=true&qid=matDhX05HW&rank=1)
+- *[X] [Video: TypeScript Basics 18 - Enums](https://www.youtube.com/watch?v=tkPzU-pYErk)
 
 # Front-end Web Development
 
