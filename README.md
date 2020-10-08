@@ -26,7 +26,7 @@ Inspired by [amitness](https://github.com/amitness/learning).
 # Broaden Perspective
 - *[ ] [Book: Managing Oneself ](https://www.goodreads.com/book/show/2477223.Managing_Oneself?from_search=true&from_srp=true&qid=Ueo8HhE0Hk&rank=11)
 - *[ ] [Book: Essentialism: The Disciplined Pursuit of Less](https://www.goodreads.com/book/show/18077875-essentialism?from_search=true&from_srp=true&qid=AhUzfVOjtr&rank=1)
-- *[ ] [Book: The Coding Career Handbook](https://www.goodreads.com/book/show/54375336-the-coding-career-handbook-guides-principles-strategies-and-tactics?from_search=true&from_srp=true&qid=5kvqgZ476m&rank=3)
+- *[X] [Book: The Coding Career Handbook](https://www.goodreads.com/book/show/54375336-the-coding-career-handbook-guides-principles-strategies-and-tactics?from_search=true&from_srp=true&qid=5kvqgZ476m&rank=3)
 - *[X] [Book: Atomic Habits](https://www.goodreads.com/book/show/40121378-atomic-habits?ac=1&from_search=true&qid=rKTDNoeadD&rank=1)
 - *[X] [Book: The Subtle Art of Not Giving a F\*\*k](https://www.goodreads.com/book/show/28257707-the-subtle-art-of-not-giving-a-f-ck?ac=1&from_search=true&qid=uOLKRHgnPw&rank=1)
 - *[X] [Book: Do Less Get More](https://www.goodreads.com/book/show/23493715-do-less-get-more)
