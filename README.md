@@ -23,6 +23,11 @@ Inspired by [amitness](https://github.com/amitness/learning).
 ## Vue.js
 - *[X] [Docs: Vue Composition API docs](https://composition-api.vuejs.org/api.html#setup)
 
+## Design
+
+- [ ] [Book: CSS In Depth ](https://www.manning.com/books/css-in-depth#toc)
+- [ ] [Book: CSS Secrets](https://www.goodreads.com/book/show/20830437-css-secrets)
+
 # Broaden Perspective
 - *[ ] [Book: Managing Oneself ](https://www.goodreads.com/book/show/2477223.Managing_Oneself?from_search=true&from_srp=true&qid=Ueo8HhE0Hk&rank=11)
 - *[ ] [Book: Essentialism: The Disciplined Pursuit of Less](https://www.goodreads.com/book/show/18077875-essentialism?from_search=true&from_srp=true&qid=AhUzfVOjtr&rank=1)
