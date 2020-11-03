@@ -16,7 +16,7 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - *[X] [Tutorial: Execute Program TS track](https://www.executeprogram.com/courses/typescript)
 - *[ ] [Book: Effective TypeScript: 62 Specific Ways to Improve Your TypeScript](https://www.goodreads.com/book/show/48570456-effective-typescript?from_search=true&from_srp=true&qid=matDhX05HW&rank=1)
 - *[X] [Video: TypeScript Basics 18 - Enums](https://www.youtube.com/watch?v=tkPzU-pYErk)
-- *[ ] [Book: TypeScript Deep Dive](https://basarat.gitbook.io/typescript/)
+- *[X] [Book: TypeScript Deep Dive](https://basarat.gitbook.io/typescript/)
 
 # Front-end Web Development
 
@@ -35,3 +35,4 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - *[X] [Book: Atomic Habits](https://www.goodreads.com/book/show/40121378-atomic-habits?ac=1&from_search=true&qid=rKTDNoeadD&rank=1)
 - *[X] [Book: The Subtle Art of Not Giving a F\*\*k](https://www.goodreads.com/book/show/28257707-the-subtle-art-of-not-giving-a-f-ck?ac=1&from_search=true&qid=uOLKRHgnPw&rank=1)
 - *[X] [Book: Do Less Get More](https://www.goodreads.com/book/show/23493715-do-less-get-more)
+- *[X] [Book: The One Thing](https://www.goodreads.com/book/show/16256798-the-one-thing)
