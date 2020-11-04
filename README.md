@@ -29,10 +29,12 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - [ ] [Book: CSS Secrets](https://www.goodreads.com/book/show/20830437-css-secrets)
 
 # Broaden Perspective
-- *[ ] [Book: Managing Oneself ](https://www.goodreads.com/book/show/2477223.Managing_Oneself?from_search=true&from_srp=true&qid=Ueo8HhE0Hk&rank=11)
-- *[ ] [Book: Essentialism: The Disciplined Pursuit of Less](https://www.goodreads.com/book/show/18077875-essentialism?from_search=true&from_srp=true&qid=AhUzfVOjtr&rank=1)
 - *[X] [Book: The Coding Career Handbook](https://www.goodreads.com/book/show/54375336-the-coding-career-handbook-guides-principles-strategies-and-tactics?from_search=true&from_srp=true&qid=5kvqgZ476m&rank=3)
 - *[X] [Book: Atomic Habits](https://www.goodreads.com/book/show/40121378-atomic-habits?ac=1&from_search=true&qid=rKTDNoeadD&rank=1)
 - *[X] [Book: The Subtle Art of Not Giving a F\*\*k](https://www.goodreads.com/book/show/28257707-the-subtle-art-of-not-giving-a-f-ck?ac=1&from_search=true&qid=uOLKRHgnPw&rank=1)
 - *[X] [Book: Do Less Get More](https://www.goodreads.com/book/show/23493715-do-less-get-more)
 - *[X] [Book: The One Thing](https://www.goodreads.com/book/show/16256798-the-one-thing)
+- *[ ] [Book: Managing Oneself ](https://www.goodreads.com/book/show/2477223.Managing_Oneself?from_search=true&from_srp=true&qid=Ueo8HhE0Hk&rank=11)
+- *[ ] [Book: Essentialism: The Disciplined Pursuit of Less](https://www.goodreads.com/book/show/18077875-essentialism?from_search=true&from_srp=true&qid=AhUzfVOjtr&rank=1)
+- *[ ] [Book: Deep Work](https://www.goodreads.com/book/show/25744928-deep-work?from_search=true&from_srp=true&qid=eckFypFBhS&rank=1)
+- *[ ] [Book: The 7 Habits of Highly Effective People](https://www.goodreads.com/book/show/36072.The_7_Habits_of_Highly_Effective_People?from_search=true&from_srp=true&qid=Ch4yAR1c5V&rank=1)
