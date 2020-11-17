@@ -11,6 +11,7 @@ Inspired by [amitness](https://github.com/amitness/learning).
 
 ## JavaScript
 - *[ ] [Book: Eloquent JavaScript](https://eloquentjavascript.net/)
+- *[ ] [Article: https://medium.com/@bretcameron/13-tips-to-write-faster-better-optimized-javascript-dc1f9ab063d8 ](https://medium.com/@bretcameron/13-tips-to-write-faster-better-optimized-javascript-dc1f9ab063d8)
 
 ## TypeScript
 - *[X] [Tutorial: Execute Program TS track](https://www.executeprogram.com/courses/typescript)
