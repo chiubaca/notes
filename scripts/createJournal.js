@@ -5,7 +5,7 @@ if (process.env.NODE_ENV === "development") {
 }
 
 const octokit = new Octokit({
-    auth: process.env.GITHUB_ACCESS_TOKEN,
+    auth: process.env.GH_KEY,
 })
 
 function currentDateStamp (){
