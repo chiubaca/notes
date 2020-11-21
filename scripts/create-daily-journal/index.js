@@ -8,32 +8,38 @@ const octokit = new Octokit({
     auth: process.env.GITHUB_ACCESS_TOKEN,
 })
 
+function currentDateStamp (){
+    const dateObj = new Date();
+    const date = ("0" + dateObj.getDate()).slice(-2);
+    const month = ("0" + (dateObj.getMonth() + 1)).slice(-2);
+    const year = dateObj.getFullYear();
+    return year +  month  + date;
+}
+
 async function main() {
   try {
-    const buffContent = Buffer.from("encoded content", 'utf-8');
+    const buffContent = Buffer.from("no entry yet", 'utf-8');
     const contentEncoded =  buffContent.toString('base64');
-
-    console.log("Encoded", contentEncoded);
-
+    const currentDate = currentDateStamp()
     const { data } = await octokit.repos.createOrUpdateFileContents({
       owner: "chiubaca",
       repo: "learning",
-      path: "journal/OUTPUT.md",
-      message: "feat: Added OUTPUT.md programatically",
+      path: `journal/${currentDate}.md`,
+      message: `Create ${currentDate}.md`,
       content: contentEncoded,
       committer: {
-        name: `Alex Chiu`,
-        email: "alexchiu11@gmail.com",
+        name: process.env.NAME,
+        email: process.env.EMAIL,
       },
       author: {
-        name: "Alex Chiu",
-        email: "alexchiu11@gmail.com",
+        name: process.env.NAME,
+        email: process.env.EMAIL,
       },
     })
 
-    console.log("created new journal", data)
+    console.log("Created placeholder journal", data)
   } catch (err) {
-    console.error("something went wrong",err)
+    console.error("Something went wrong",err)
   }
 }
 
