@@ -1,0 +1,16 @@
+{
+  "name": "learning",
+  "version": "1.0.0",
+  "description": "All resources used for my personal learning & my micro learning journals",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create-journal": "node ./scripts/createJournal.js",
+    "dev:create-journal": "env NODE_ENV=development node ./scripts/createJournal.js"
+  },
+  "author": "Alex Chiu",
+  "license": "ISC",
+  "dependencies": {
+    "@octokit/rest": "^18.0.9",
+    "dotenv": "^8.2.0"
+  }
+}
