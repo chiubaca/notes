@@ -15,7 +15,7 @@ jobs:
     - run: npm install
     - run: npm create-journal
       env:
-        GITHUB_ACCESS_TOKEN : ${{ secrets.GITHUB_ACCESS_TOKEN }}
+        GH_KEY : ${{ secrets.GH_KEY }}
         OWNER : ${{ secrets.OWNER }}
         REPO : ${{ secrets.REPO }}
         NAME : ${{ secrets.NAME }}
