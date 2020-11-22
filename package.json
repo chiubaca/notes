@@ -5,12 +5,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "create-journal": "node ./scripts/createJournal.js",
-    "dev:create-journal": "env NODE_ENV=development node ./scripts/createJournal.js"
+    "dev:create-journal": "env NODE_ENV=development node ./scripts/createJournal.js",
+    "serve": "eleventy --serve",
+    "build": "eleventy"
   },
   "author": "Alex Chiu",
   "license": "ISC",
   "dependencies": {
     "@octokit/rest": "^18.0.9",
     "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1"
   }
 }

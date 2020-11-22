@@ -13,7 +13,7 @@ jobs:
         node-version: '12.x'
         registry-url: 'https://registry.npmjs.org'
     - run: npm install
-    - run: npm create-journal
+    - run: npm run create-journal
       env:
         GH_KEY : ${{ secrets.GH_KEY }}
         OWNER : ${{ secrets.OWNER }}
