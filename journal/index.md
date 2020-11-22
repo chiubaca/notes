@@ -1,4 +1,11 @@
+---
+title: Learning Micro Journal
+---
+# {{ title }}
 
-This is a demonstration website using the [11ty static site generator](https://www.11ty.dev/). It shows pages, blog posts, lists, and tags.
-
-The whole build process is managed through 11ty.
+{% for journal in collections.entry reversed %}
+  <a href="{{ journal.url }}">
+    <h2>{{ journal.url }}</h2>
+  </a>
+  {{ journal.templateContent }}
+{% endfor %}
