@@ -24,7 +24,7 @@ async function main() {
     const { data } = await octokit.repos.createOrUpdateFileContents({
       owner: "chiubaca",
       repo: "learning",
-      path: `journal/${currentDate}.md`,
+      path: `journal/entry/${currentDate}.md`,
       message: `Create ${currentDate}.md`,
       content: contentEncoded,
       committer: {
