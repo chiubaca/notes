@@ -1,7 +1,7 @@
 # Learning
 Compilation of resources that I have read/watched/worked through that have helped me become 1% better everyday.
 
-This is also my [Learn-In-Public Micro Journal](https://github.com/chiubaca/learning/tree/master/journal).
+This is also my [Learn-In-Public Micro Journal](https://chiubaca-is-learning.netlify.app/).
 
 Inspired by [amitness](https://github.com/amitness/learning).
 
