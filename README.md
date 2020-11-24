@@ -29,6 +29,10 @@ Inspired by [amitness](https://github.com/amitness/learning).
 
 - *[X] [Video: CDN Caching, Static Site Generation, and Server Side Rendering](https://www.youtube.com/watch?v=bfLFHp7Sbkg)
 
+## Docker 
+- *[X] [Tutorial: How to use Docker with Node.js a step-by-step tutorial](https://geshan.com.np/blog/2020/11/nodejs-with-docker/)
+- *[ ] [Video: Docker and PostgreSQL](https://www.youtube.com/watch?v=aHbE3pTyG-Q)
+
 ## Design
 
 - [ ] [Book: CSS In Depth ](https://www.manning.com/books/css-in-depth#toc)
