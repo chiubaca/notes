@@ -25,7 +25,7 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - *[X] [Docs: Vue Composition API docs](https://composition-api.vuejs.org/api.html#setup)
 - *[X] [Book: Vue.js 2 Web Development Projects](https://www.goodreads.com/book/show/36697278-vue-js-2-web-development-projects?from_search=true&from_srp=true&qid=kDklLmjzT9&rank=1)
 
-# Backend
+# Back end Development
 
 - *[X] [Video: CDN Caching, Static Site Generation, and Server Side Rendering](https://www.youtube.com/watch?v=bfLFHp7Sbkg)
 
