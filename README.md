@@ -31,7 +31,8 @@ Inspired by [amitness](https://github.com/amitness/learning).
 
 ## Docker 
 - *[X] [Tutorial: How to use Docker with Node.js a step-by-step tutorial](https://geshan.com.np/blog/2020/11/nodejs-with-docker/)
-- *[ ] [Tutorial: Getting Started Walk-through for Developers](https://training.play-with-docker.com/) 
+- *[X] [Tutorial: Docker for Beginners - Linux](https://training.play-with-docker.com/beginner-linux/) 
+- *[X] [Tutorial: Node.js live debugging ](https://training.play-with-docker.com/nodejs-live-debugging/)
 - *[X] [Tutorial: Docker for JavaScript Developers](https://www.robincussol.com/docker-for-js-devs-how-to-containerise-nodejs-apps-efficiently/)
 - *[ ] [Video: Docker and PostgreSQL](https://www.youtube.com/watch?v=aHbE3pTyG-Q)
 
