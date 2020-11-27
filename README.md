@@ -34,6 +34,8 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - *[X] [Tutorial: Docker for Beginners - Linux](https://training.play-with-docker.com/beginner-linux/) 
 - *[X] [Tutorial: Node.js live debugging ](https://training.play-with-docker.com/nodejs-live-debugging/)
 - *[X] [Tutorial: Docker for JavaScript Developers](https://www.robincussol.com/docker-for-js-devs-how-to-containerise-nodejs-apps-efficiently/)
+- *[X] [Tutorial: How To Setup Your Local Node.js Development Environment Using Docker pt1](https://www.docker.com/blog/how-to-setup-your-local-node-js-development-environment-using-docker/)
+- *[X] [Tutorial: How To Setup Your Local Node.js Development Environment Using Docker pt2](https://www.docker.com/blog/how-to-setup-your-local-node-js-development-environment-using-docker-part-2/)
 - *[ ] [Video: Docker and PostgreSQL](https://www.youtube.com/watch?v=aHbE3pTyG-Q)
 
 ## Design
