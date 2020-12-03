@@ -38,6 +38,34 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - *[X] [Tutorial: How To Setup Your Local Node.js Development Environment Using Docker pt2](https://www.docker.com/blog/how-to-setup-your-local-node-js-development-environment-using-docker-part-2/)
 - *[X] [Video: Docker and PostgreSQL](https://www.youtube.com/watch?v=aHbE3pTyG-Q)
 
+## Postgres
+- *[ ] [Basic PostgreSQL Tutorials](https://www.postgresqltutorial.com/) `in progress`
+    - *[X] Section 1. Querying Data
+    - *[X] Section 2. Filtering Data
+    - *[X] Section 3. Joining Multiple Tables
+    - *[X] Section 4. Grouping Data
+    - *[X] Section 5. Set Operations
+    - *[X] Section 6. Grouping sets, Cube, and Rollup
+    - *[X] Section 7. Subquery
+    - *[X] Section 8. Common Table Expressions
+    - *[X] Section 9. Modifying Data
+    - *[ ] Section 10. Transactions
+    - *[ ] Section 11. Import & Export Data
+    - *[ ] Section 12. Managing Tables
+    - *[ ] Section 13. Understanding PostgreSQL Constraints
+    - *[ ] Section 14. PostgreSQL Data Types in Depth
+    - *[ ] Section 15. Conditional Expressions & Operators
+    - *[ ] Section 16. PostgreSQL Utilities
+    - *[ ] Section 17. PostgreSQL Recipes
+
+
+- *[ ] Advanced PostgreSQL Tutorials
+  - *[ ] [PostgreSQL PL/pgSQL](https://www.postgresqltutorial.com/postgresql-plpgsql/)
+  - *[ ] [PostgreSQL Triggers](https://www.postgresqltutorial.com/postgresql-triggers/)
+  - *[ ] [PostgreSQL Views](https://www.postgresqltutorial.com/postgresql-views/)
+  - *[ ] [PostgreSQL Indexes](https://www.postgresqltutorial.com/postgresql-indexes/)
+  - *[ ] [PostgreSQL Administration](https://www.postgresqltutorial.com/postgresql-administration/)
+
 ## Design
 
 - [ ] [Book: CSS In Depth ](https://www.manning.com/books/css-in-depth#toc)
@@ -51,5 +79,5 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - *[X] [Book: The One Thing](https://www.goodreads.com/book/show/16256798-the-one-thing)
 - *[ ] [Book: Managing Oneself ](https://www.goodreads.com/book/show/2477223.Managing_Oneself?from_search=true&from_srp=true&qid=Ueo8HhE0Hk&rank=11)
 - *[X] [Book: Essentialism: The Disciplined Pursuit of Less](https://www.goodreads.com/book/show/18077875-essentialism?from_search=true&from_srp=true&qid=AhUzfVOjtr&rank=1)
-- *[ ] [Book: Deep Work](https://www.goodreads.com/book/show/25744928-deep-work?from_search=true&from_srp=true&qid=eckFypFBhS&rank=1)
+- *[ ] [Book: Deep Work](https://www.goodreads.com/book/show/25744928-deep-work?from_search=true&from_srp=true&qid=eckFypFBhS&rank=1) `reading`
 - *[ ] [Book: The 7 Habits of Highly Effective People](https://www.goodreads.com/book/show/36072.The_7_Habits_of_Highly_Effective_People?from_search=true&from_srp=true&qid=Ch4yAR1c5V&rank=1)
