@@ -5,9 +5,10 @@ This is also my [Learn-In-Public Micro Journal](https://chiubaca-is-learning.net
 
 Inspired by [amitness](https://github.com/amitness/learning).
 
+## Key
 | Reading | Paused | Recommended |
-|:------- | :----: | ----------: |
-|`👀`     |`💤`    |`⭐`        |
+| --- | --- | --- |
+| `👀` |`💤`| `⭐` |
 
 
 # General Coding
