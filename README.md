@@ -55,9 +55,9 @@ Inspired by [amitness](https://github.com/amitness/learning).
     - *[X] Section 7. Subquery
     - *[X] Section 8. Common Table Expressions
     - *[X] Section 9. Modifying Data
-    - *[ ] Section 10. Transactions
-    - *[ ] Section 11. Import & Export Data
-    - *[ ] Section 12. Managing Tables
+    - *[X] Section 10. Transactions
+    - *[X] Section 11. Import & Export Data
+    - *[X] Section 12. Managing Tables
     - *[ ] Section 13. Understanding PostgreSQL Constraints
     - *[ ] Section 14. PostgreSQL Data Types in Depth
     - *[ ] Section 15. Conditional Expressions & Operators
