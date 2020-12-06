@@ -1,7 +1,7 @@
 # Learning
 Compilation of resources that I have read/watched/worked through that have helped me become 1% better everyday.
 
-This is also my [Learn-In-Public Micro Journal](https://chiubaca-is-learning.netlify.app/).
+This is also my [Learn-In-Public Micro Journal](https://journal.chiubaca.com).
 
 Inspired by [amitness](https://github.com/amitness/learning).
 
@@ -58,7 +58,7 @@ Inspired by [amitness](https://github.com/amitness/learning).
     - *[X] Section 10. Transactions
     - *[X] Section 11. Import & Export Data
     - *[X] Section 12. Managing Tables
-    - *[ ] Section 13. Understanding PostgreSQL Constraints
+    - *[X] Section 13. Understanding PostgreSQL Constraints
     - *[ ] Section 14. PostgreSQL Data Types in Depth
     - *[ ] Section 15. Conditional Expressions & Operators
     - *[ ] Section 16. PostgreSQL Utilities
