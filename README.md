@@ -59,9 +59,9 @@ Inspired by [amitness](https://github.com/amitness/learning).
     - *[X] Section 11. Import & Export Data
     - *[X] Section 12. Managing Tables
     - *[X] Section 13. Understanding PostgreSQL Constraints
-    - *[ ] Section 14. PostgreSQL Data Types in Depth
-    - *[ ] Section 15. Conditional Expressions & Operators
-    - *[ ] Section 16. PostgreSQL Utilities
+    - *[X] Section 14. PostgreSQL Data Types in Depth
+    - *[X] Section 15. Conditional Expressions & Operators
+    - *[X] Section 16. PostgreSQL Utilities
     - *[ ] Section 17. PostgreSQL Recipes
 
 
