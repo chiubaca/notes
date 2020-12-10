@@ -63,7 +63,8 @@ Inspired by [amitness](https://github.com/amitness/learning).
     - *[X] Section 15. Conditional Expressions & Operators
     - *[X] Section 16. PostgreSQL Utilities
     - *[X] Section 17. PostgreSQL Recipes
-
+- *[X] [Creating and Using PostgreSQL Functions](https://www.postgresqltutorial.com/postgresql-create-function/)
+- *[X] [Creating and Using PostgreSQL Stored Procedures](https://www.postgresqltutorial.com/postgresql-create-procedure/)
 
 - *[ ] Advanced PostgreSQL Tutorials
   - *[ ] [PostgreSQL PL/pgSQL](https://www.postgresqltutorial.com/postgresql-plpgsql/)
