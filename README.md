@@ -44,7 +44,7 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - *[X] [Tutorial: How To Setup Your Local Node.js Development Environment Using Docker pt2](https://www.docker.com/blog/how-to-setup-your-local-node-js-development-environment-using-docker-part-2/)
 - *[X] [Video: Docker and PostgreSQL](https://www.youtube.com/watch?v=aHbE3pTyG-Q)
 
-## Postgres
+## PostgreSQL
 - *[X] [Basic PostgreSQL Tutorials](https://www.postgresqltutorial.com/) `⭐`
     - *[X] Section 1. Querying Data
     - *[X] Section 2. Filtering Data
