@@ -45,7 +45,7 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - *[X] [Video: Docker and PostgreSQL](https://www.youtube.com/watch?v=aHbE3pTyG-Q)
 
 ## Postgres
-- *[ ] [Basic PostgreSQL Tutorials](https://www.postgresqltutorial.com/) `👀` `⭐`
+- *[X] [Basic PostgreSQL Tutorials](https://www.postgresqltutorial.com/) `👀` `⭐`
     - *[X] Section 1. Querying Data
     - *[X] Section 2. Filtering Data
     - *[X] Section 3. Joining Multiple Tables
@@ -62,7 +62,7 @@ Inspired by [amitness](https://github.com/amitness/learning).
     - *[X] Section 14. PostgreSQL Data Types in Depth
     - *[X] Section 15. Conditional Expressions & Operators
     - *[X] Section 16. PostgreSQL Utilities
-    - *[ ] Section 17. PostgreSQL Recipes
+    - *[X] Section 17. PostgreSQL Recipes
 
 
 - *[ ] Advanced PostgreSQL Tutorials
