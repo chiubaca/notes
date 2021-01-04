@@ -18,7 +18,7 @@ Inspired by [amitness](https://github.com/amitness/learning).
 ## JavaScript
 - *[ ] [Book: Eloquent JavaScript](https://eloquentjavascript.net/) `💤`
 - *[ ] [Article: 13 Tips to Write Faster, Better-Optimized JavaScript](https://medium.com/@bretcameron/13-tips-to-write-faster-better-optimized-javascript-dc1f9ab063d8)
-
+- *[ ] [Book: Clean Code, adapted for JavaScript](https://github.com/ryanmcdermott/clean-code-javascript)
 ## TypeScript
 - *[X] [Tutorial: Execute Program TS track](https://www.executeprogram.com/courses/typescript) `⭐`
 - *[ ] [Book: Effective TypeScript: 62 Specific Ways to Improve Your TypeScript](https://www.goodreads.com/book/show/48570456-effective-typescript?from_search=true&from_srp=true&qid=matDhX05HW&rank=1)
