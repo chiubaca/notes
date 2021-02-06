@@ -78,6 +78,9 @@ Inspired by [amitness](https://github.com/amitness/learning).
   - *[ ] [PostgreSQL Views](https://www.postgresqltutorial.com/postgresql-views/)
   - *[ ] [PostgreSQL Indexes](https://www.postgresqltutorial.com/postgresql-indexes/)
   - *[ ] [PostgreSQL Administration](https://www.postgresqltutorial.com/postgresql-administration/)
+  
+## GraphQL
+ - *[ ] [How to GraphQL](https://www.howtographql.com/)
 
 ## Design
 
