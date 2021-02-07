@@ -81,6 +81,8 @@ Inspired by [amitness](https://github.com/amitness/learning).
   
 ## GraphQL
  - *[ ] [How to GraphQL](https://www.howtographql.com/)
+ - *[ ] [Production Ready GraphQL](https://book.productionreadygraphql.com/)
+ - *[ ] [Learning GraphQL](https://www.bookdepository.com/Learning-GraphQL-Eve-Porcello/9781492030713)
 
 ## Design
 
