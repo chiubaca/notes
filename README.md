@@ -32,10 +32,13 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - *[X] [Docs: Vue Composition API docs](https://composition-api.vuejs.org/api.html#setup) `⭐`
 - *[X] [Book: Vue.js 2 Web Development Projects](https://www.goodreads.com/book/show/36697278-vue-js-2-web-development-projects?from_search=true&from_srp=true&qid=kDklLmjzT9&rank=1)
 
+## React.js
+- *[ ] [Book: Pro React 16](https://www.amazon.co.uk/Pro-React-16-Adam-Freeman/dp/1484244508)
+
 ## Design & UI/UX
-- *[ ] [CSS Secrets](https://www.amazon.com/CSS-Secrets-Lea-Verou/dp/1449372635?tag=leaverou-20)
-- *[ ] [Refactoring UI](https://www.goodreads.com/book/show/43190966-refactoring-ui) `👀`
-- *[ ] [Inclusive Components](https://www.goodreads.com/book/show/41730458-inclusive-components-accessible-web-interfaces-piece-by-piece?ac=1&from_search=true&qid=TFYA3VHQKH&rank=1)
+- *[ ] [Book: CSS Secrets](https://www.amazon.com/CSS-Secrets-Lea-Verou/dp/1449372635?tag=leaverou-20)
+- *[ ] [Book: Refactoring UI](https://www.goodreads.com/book/show/43190966-refactoring-ui) `👀`
+- *[ ] [Book: Inclusive Components](https://www.goodreads.com/book/show/41730458-inclusive-components-accessible-web-interfaces-piece-by-piece?ac=1&from_search=true&qid=TFYA3VHQKH&rank=1)
 
 # Back end Development
 
@@ -80,9 +83,9 @@ Inspired by [amitness](https://github.com/amitness/learning).
   - *[ ] [PostgreSQL Administration](https://www.postgresqltutorial.com/postgresql-administration/)
   
 ## GraphQL
- - *[ ] [How to GraphQL](https://www.howtographql.com/)
- - *[ ] [Production Ready GraphQL](https://book.productionreadygraphql.com/)
- - *[ ] [Learning GraphQL](https://www.bookdepository.com/Learning-GraphQL-Eve-Porcello/9781492030713)
+ - *[ ] [Tutorials: How to GraphQL](https://www.howtographql.com/)
+ - *[ ] [Book: Production Ready GraphQL](https://book.productionreadygraphql.com/)
+ - *[ ] [Book: Learning GraphQL](https://www.bookdepository.com/Learning-GraphQL-Eve-Porcello/9781492030713)
 
 ## Design
 
