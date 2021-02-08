@@ -33,6 +33,7 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - *[X] [Book: Vue.js 2 Web Development Projects](https://www.goodreads.com/book/show/36697278-vue-js-2-web-development-projects?from_search=true&from_srp=true&qid=kDklLmjzT9&rank=1)
 
 ## React.js
+- *[ ] [Book: Full-Stack React, TypeScript, and Node](https://www.goodreads.com/book/show/56378893-full-stack-react-typescript-and-node?from_search=true&from_srp=true&qid=91xB999JLw&rank=1)
 - *[ ] [Book: Pro React 16](https://www.amazon.co.uk/Pro-React-16-Adam-Freeman/dp/1484244508)
 
 ## Design & UI/UX
