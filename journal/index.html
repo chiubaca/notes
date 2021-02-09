@@ -13,9 +13,8 @@ title: Learning Journal
 
 <body>
     <h1>{{ title }}</h1>
-
-    <p>This is my public learning journal. I'm logging every resource that has helped expand my knowledge even if
-        just at little bit on my <a href="https://github.com/chiubaca/learning">GitHub</a>.</p>
+    <p> I'm logging what I've learnt everyday in public.</p>
+    <p> Every resource that has helped expand my knowledge even if just at little can be found on my <a href="https://github.com/chiubaca/learning">GitHub</a>.</p>
     <hr>
     {% for journal in collections.entry reversed %}
     <a href="{{ journal.url }}">
