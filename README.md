@@ -24,6 +24,7 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - *[ ] [Book: Effective TypeScript: 62 Specific Ways to Improve Your TypeScript](https://www.goodreads.com/book/show/48570456-effective-typescript?from_search=true&from_srp=true&qid=matDhX05HW&rank=1)
 - *[X] [Video: TypeScript Basics 18 - Enums](https://www.youtube.com/watch?v=tkPzU-pYErk)
 - *[X] [Book: TypeScript Deep Dive](https://basarat.gitbook.io/typescript/) `⭐`
+- *[ ] [Book: Tackling TypeScript](https://exploringjs.com/tackling-ts/toc.html) 
 
 # Front-end Web Development
 
