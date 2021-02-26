@@ -12,7 +12,7 @@ Inspired by [amitness](https://github.com/amitness/learning).
 
 
 # General Coding
-- *[ ] [Book: Clean Code - A Code of Conduct for Professional Programmers ](https://www.goodreads.com/book/show/10284614-the-clean-coder?from_search=true&from_srp=true&qid=hjlFgvTICu&rank=2) `👀`
+- *[ ] [Book: Clean Code - A Code of Conduct for Professional Programmers ](https://www.goodreads.com/book/show/10284614-the-clean-coder?from_search=true&from_srp=true&qid=hjlFgvTICu&rank=2) `💤`
 - *[ ] [Book: Clean Code - A Handbook of Agile Software Craftsmanship  ](https://www.goodreads.com/book/show/3735293-clean-code?from_search=true&from_srp=true&qid=hjlFgvTICu&rank=1)
 
 ## JavaScript
