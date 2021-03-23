@@ -36,11 +36,16 @@ Inspired by [amitness](https://github.com/amitness/learning).
 ## React.js
 - *[X] [Book: Full-Stack React, TypeScript, and Node](https://www.goodreads.com/book/show/56378893-full-stack-react-typescript-and-node?from_search=true&from_srp=true&qid=91xB999JLw&rank=1) `👀`
 - *[ ] [Book: Pro React 16](https://www.amazon.co.uk/Pro-React-16-Adam-Freeman/dp/1484244508)
+- *[ ] [Article: A complete guide to useEffect ](https://overreacted.io/a-complete-guide-to-useeffect/)
+- *[ ] [Docs: useImperativeHandle](https://reactjs.org/docs/hooks-reference.html#useimperativehandle) 
 
 ## Design & UI/UX
 - *[ ] [Book: CSS Secrets](https://www.amazon.com/CSS-Secrets-Lea-Verou/dp/1449372635?tag=leaverou-20)
 - *[ ] [Book: Refactoring UI](https://www.goodreads.com/book/show/43190966-refactoring-ui) `👀`
 - *[ ] [Book: Inclusive Components](https://www.goodreads.com/book/show/41730458-inclusive-components-accessible-web-interfaces-piece-by-piece?ac=1&from_search=true&qid=TFYA3VHQKH&rank=1)
+
+## Uncategorised
+- *[ ] [Video: Netflix JavaScript Talks - RxJS + Redux + React = Amazing!](https://www.youtube.com/watch?v=AslncyG8whg)
 
 # Back end Development
 
