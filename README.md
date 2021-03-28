@@ -19,12 +19,18 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - *[ ] [Book: Eloquent JavaScript](https://eloquentjavascript.net/) `💤`
 - *[ ] [Article: 13 Tips to Write Faster, Better-Optimized JavaScript](https://medium.com/@bretcameron/13-tips-to-write-faster-better-optimized-javascript-dc1f9ab063d8)
 - *[ ] [Book: Clean Code, adapted for JavaScript](https://github.com/ryanmcdermott/clean-code-javascript)
+- *[X] [Video: Netflix JavaScript Talks - RxJS + Redux + React = Amazing!](https://www.youtube.com/watch?v=AslncyG8whg)
+- *[X] [Video: OBSERVABLES, OBSERVERS & SUBSCRIPTIONS | RxJS TUTORIAL](https://www.youtube.com/watch?v=Tux1nhBPl_w)
+- *[X] [Video: RxJS Quick Start with Practical Examples](https://www.youtube.com/watch?v=2LCo926NFLI)
+
+
 ## TypeScript
 - *[X] [Tutorial: Execute Program TS track](https://www.executeprogram.com/courses/typescript) `⭐`
 - *[ ] [Book: Effective TypeScript: 62 Specific Ways to Improve Your TypeScript](https://www.goodreads.com/book/show/48570456-effective-typescript?from_search=true&from_srp=true&qid=matDhX05HW&rank=1)
 - *[X] [Video: TypeScript Basics 18 - Enums](https://www.youtube.com/watch?v=tkPzU-pYErk)
 - *[X] [Book: TypeScript Deep Dive](https://basarat.gitbook.io/typescript/) `⭐`
 - *[ ] [Book: Tackling TypeScript](https://exploringjs.com/tackling-ts/toc.html) 
+- *[ ] [Book: TypeScript in 50 Lessons](https://typescript-book.com/)
 
 # Front-end Web Development
 
@@ -43,9 +49,6 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - *[ ] [Book: CSS Secrets](https://www.amazon.com/CSS-Secrets-Lea-Verou/dp/1449372635?tag=leaverou-20)
 - *[ ] [Book: Refactoring UI](https://www.goodreads.com/book/show/43190966-refactoring-ui) `👀`
 - *[ ] [Book: Inclusive Components](https://www.goodreads.com/book/show/41730458-inclusive-components-accessible-web-interfaces-piece-by-piece?ac=1&from_search=true&qid=TFYA3VHQKH&rank=1)
-
-## Uncategorised
-- *[ ] [Video: Netflix JavaScript Talks - RxJS + Redux + React = Amazing!](https://www.youtube.com/watch?v=AslncyG8whg)
 
 # Back end Development
 
