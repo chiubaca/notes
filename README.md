@@ -97,6 +97,9 @@ Inspired by [amitness](https://github.com/amitness/learning).
  - *[ ] [Book: Production Ready GraphQL](https://book.productionreadygraphql.com/)
  - *[ ] [Book: Learning GraphQL](https://www.bookdepository.com/Learning-GraphQL-Eve-Porcello/9781492030713)
 
+## Prisma 2
+ - *[X] [Tutorials: Set up Prisma from scratch](https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch-typescript-postgres)
+
 ## Design
 
 - [ ] [Book: CSS In Depth ](https://www.manning.com/books/css-in-depth#toc)
