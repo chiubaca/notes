@@ -32,6 +32,10 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - *[ ] [Book: Tackling TypeScript](https://exploringjs.com/tackling-ts/toc.html) 
 - *[ ] [Book: TypeScript in 50 Lessons](https://typescript-book.com/)
 
+## Testing
+- *[X] [Blog: But really, what is a JavaScript test?](https://kentcdodds.com/blog/but-really-what-is-a-javascript-test)
+- *[X] [Blog: But really, what is a JavaScript mock?](https://kentcdodds.com/blog/but-really-what-is-a-javascript-mock)
+
 # Front-end Web Development
 
 ## Vue.js
