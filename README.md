@@ -7,8 +7,8 @@ Inspired by [amitness](https://github.com/amitness/learning).
 
 ## Key
 | Reading | Paused | Recommended |
-| --- | --- | --- |
-| `👀` |`💤`| `⭐` |
+| ------- | ------ | ----------- |
+|   `👀`  |   `💤`  |    `⭐`     |
 
 
 # General Coding
@@ -44,6 +44,11 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - *[X] [Book: Vue.js 2 Web Development Projects](https://www.goodreads.com/book/show/36697278-vue-js-2-web-development-projects?from_search=true&from_srp=true&qid=FBPjixxWqo&rank=1)
 - *[X] [Docs: Vue Composition API docs](https://composition-api.vuejs.org/api.html#setup) `⭐`
 - *[X] [Book: Vue.js 2 Web Development Projects](https://www.goodreads.com/book/show/36697278-vue-js-2-web-development-projects?from_search=true&from_srp=true&qid=kDklLmjzT9&rank=1)
+
+## Animation
+- * [X] [Video: The Hidden World of requestAnimationFrame](https://www.youtube.com/watch?v=zBRqnSiq_VM)`⭐`
+- * [X] [Article: Using requestAnimationFrame with React Hooks](https://css-tricks.com/using-requestanimationframe-with-react-hooks/)
+- * [X] [Article: Understanding JavaScript's requestAnimationFrame() method for smooth animations](http://www.javascriptkit.com/javatutors/requestanimationframe.shtml)
 
 ## React.js
 - *[X] [Book: Full-Stack React, TypeScript, and Node](https://www.goodreads.com/book/show/56378893-full-stack-react-typescript-and-node?from_search=true&from_srp=true&qid=91xB999JLw&rank=1) `👀`
