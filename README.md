@@ -22,6 +22,7 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - *[X] [Video: Netflix JavaScript Talks - RxJS + Redux + React = Amazing!](https://www.youtube.com/watch?v=AslncyG8whg)
 - *[X] [Video: OBSERVABLES, OBSERVERS & SUBSCRIPTIONS | RxJS TUTORIAL](https://www.youtube.com/watch?v=Tux1nhBPl_w)
 - *[X] [Video: RxJS Quick Start with Practical Examples](https://www.youtube.com/watch?v=2LCo926NFLI)
+- *[X] [Article: Stop using isLoading booleans](https://kentcdodds.com/blog/stop-using-isloading-booleans)
 
 
 ## TypeScript
