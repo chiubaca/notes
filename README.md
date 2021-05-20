@@ -63,6 +63,7 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - *[ ] [Book: CSS Secrets](https://www.amazon.com/CSS-Secrets-Lea-Verou/dp/1449372635?tag=leaverou-20)
 - *[ ] [Book: Refactoring UI](https://www.goodreads.com/book/show/43190966-refactoring-ui) `👀`
 - *[ ] [Book: Inclusive Components](https://www.goodreads.com/book/show/41730458-inclusive-components-accessible-web-interfaces-piece-by-piece?ac=1&from_search=true&qid=TFYA3VHQKH&rank=1)
+- *[ ] [Course: Learn CSS ](https://web.dev/learn/css/)
 
 # Back end Development
 
