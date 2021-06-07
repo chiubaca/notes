@@ -68,6 +68,9 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - *[ ] [Book: Inclusive Components](https://www.goodreads.com/book/show/41730458-inclusive-components-accessible-web-interfaces-piece-by-piece?ac=1&from_search=true&qid=TFYA3VHQKH&rank=1)
 - *[ ] [Course: Learn CSS ](https://web.dev/learn/css/)
 
+## Misc
+- *[ ] [Course: Create an Eleventy (11ty) Site From Scratch](https://egghead.io/lessons/11ty-create-an-eleventy-11ty-site-from-scratch)
+
 # Back end Development
 
 - *[X] [Video: CDN Caching, Static Site Generation, and Server Side Rendering](https://www.youtube.com/watch?v=bfLFHp7Sbkg)
