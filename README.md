@@ -54,7 +54,7 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - * [X] [Article: Understanding JavaScript's requestAnimationFrame() method for smooth animations](http://www.javascriptkit.com/javatutors/requestanimationframe.shtml)
 - * [X] [How SVG Line Animation Works ](https://css-tricks.com/svg-line-animation-works/)
 - * [X] [A Guide to SVG Animations (SMIL)](https://css-tricks.com/guide-svg-animations-smil/)
-
+- * [X] [Video: GSAP - Getting Started](https://greensock.com/get-started) 
 
 ## React.js
 - *[X] [Book: Full-Stack React, TypeScript, and Node](https://www.goodreads.com/book/show/56378893-full-stack-react-typescript-and-node?from_search=true&from_srp=true&qid=91xB999JLw&rank=1) `👀`
