@@ -120,6 +120,7 @@ Inspired by [amitness](https://github.com/amitness/learning).
 
 ## Prisma 2
  - *[X] [Tutorials: Set up Prisma from scratch](https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch-typescript-postgres)
+ - *[ ] [Tutorial: How to Setup Full Stack Apollo, GQL-CodeGen, Prisma 2.0, Typescript, React: Part 1 — The Backend](https://medium.com/geekculture/how-to-setup-full-stack-apollo-gql-codegen-prisma-2-0-typescript-react-part-1-the-backend-e9eae9518dc9)
 
 ## Design
 
