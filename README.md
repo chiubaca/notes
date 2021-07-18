@@ -16,6 +16,7 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - *[ ] [Book: Clean Code - A Handbook of Agile Software Craftsmanship  ](https://www.goodreads.com/book/show/3735293-clean-code?from_search=true&from_srp=true&qid=hjlFgvTICu&rank=1)
 - *[X] [Article: git rebase](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase#:~:text=What%20is%20git%20rebase%3F,of%20a%20feature%20branching%20workflow.)
 - *[X] [Video: Git MERGE vs REBASE](https://www.youtube.com/watch?v=CRlGDDprdOQ)
+- *[X] [Goodbye Clean Code](https://overreacted.io/goodbye-clean-code)`⭐`
 
 ## JavaScript
 - *[ ] [Book: Eloquent JavaScript](https://eloquentjavascript.net/) `💤`
@@ -141,5 +142,5 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - *[X] [Book: Essentialism: The Disciplined Pursuit of Less](https://www.goodreads.com/book/show/18077875-essentialism?from_search=true&from_srp=true&qid=AhUzfVOjtr&rank=1)
 - *[X] [Book: Deep Work](https://www.goodreads.com/book/show/25744928-deep-work?from_search=tru&from_srp=true&qid=eckFypFBhS&rank=1) `⭐`
 - *[X] [Book: So Good They Can't Ignore You](https://www.goodreads.com/book/show/13525945-so-good-they-can-t-ignore-you) `⭐`
-- *[ ] [Book: The 7 Habits of Highly Effective People](https://www.goodreads.com/book/show/36072.The_7_Habits_of_Highly_Effective_People?from_search=true&from_srp=true&qid=Ch4yAR1c5V&rank=1) `👀`
+- *[ ] [Book: The 7 Habits of Highly Effective People](https://www.goodreads.com/book/show/36072.The_7_Habits_of_Highly_Effective_People?from_search=true&from_srp=true&qid=Ch4yAR1c5V&rank=1) `💤`
 
