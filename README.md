@@ -131,6 +131,7 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - [X] [Article: A Complete Guide to Flexbox ](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) `⭐`
 - [X] [Article: A Complete Guide to Grid ](https://css-tricks.com/snippets/css/complete-guide-grid/) `⭐`
 - [X] [Article: The Devil's Albatross](https://9elements.com/blog/the-devils-albatros-an-algorithmic-layout-technique/)
+- [X] [Thesis: Gridless Design](https://gridless.design/) `⭐`
 
 # Broaden Perspective
 - *[X] [Book: The Coding Career Handbook](https://www.goodreads.com/book/show/54375336-the-coding-career-handbook-guides-principles-strategies-and-tactics?from_search=true&from_srp=true&qid=5kvqgZ476m&rank=3) `⭐`
