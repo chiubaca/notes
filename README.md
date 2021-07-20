@@ -63,12 +63,6 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - *[ ] [Article: A complete guide to useEffect](https://overreacted.io/a-complete-guide-to-useeffect/)
 - *[X] [Video: `useRef` in 11 minutes](https://www.youtube.com/watch?v=t2ypzz6gJm0)
 
-## Design & UI/UX
-- *[ ] [Book: CSS Secrets](https://www.amazon.com/CSS-Secrets-Lea-Verou/dp/1449372635?tag=leaverou-20)
-- *[ ] [Book: Refactoring UI](https://www.goodreads.com/book/show/43190966-refactoring-ui) `👀`
-- *[ ] [Book: Inclusive Components](https://www.goodreads.com/book/show/41730458-inclusive-components-accessible-web-interfaces-piece-by-piece?ac=1&from_search=true&qid=TFYA3VHQKH&rank=1)
-- *[ ] [Course: Learn CSS ](https://web.dev/learn/css/)
-
 ## Misc
 - *[ ] [Course: Create an Eleventy (11ty) Site From Scratch](https://egghead.io/lessons/11ty-create-an-eleventy-11ty-site-from-scratch)
 
@@ -123,15 +117,20 @@ Inspired by [amitness](https://github.com/amitness/learning).
  - *[X] [Tutorials: Set up Prisma from scratch](https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch-typescript-postgres)
  - *[ ] [Tutorial: How to Setup Full Stack Apollo, GQL-CodeGen, Prisma 2.0, Typescript, React: Part 1 — The Backend](https://medium.com/geekculture/how-to-setup-full-stack-apollo-gql-codegen-prisma-2-0-typescript-react-part-1-the-backend-e9eae9518dc9)
 
-## Design
+## Design & UI/UX
 
 - [ ] [Book: CSS In Depth ](https://www.manning.com/books/css-in-depth#toc)
 - [ ] [Book: CSS Secrets](https://www.goodreads.com/book/show/20830437-css-secrets)
+- [ ] [Book: Refactoring UI](https://www.goodreads.com/book/show/43190966-refactoring-ui) `👀`
+- [ ] [Book: Inclusive Components](https://www.goodreads.com/book/show/41730458-inclusive-components-accessible-web-interfaces-piece-by-piece?ac=1&from_search=true&qid=TFYA3VHQKH&rank=1)
+- [ ] [Course: Learn CSS ](https://web.dev/learn/css/)
 - [X] [Video: Learn CSS Grid in 20 Minutes](https://youtu.be/0-DY8J_skZ0) `⭐`
 - [X] [Article: A Complete Guide to Flexbox ](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) `⭐`
 - [X] [Article: A Complete Guide to Grid ](https://css-tricks.com/snippets/css/complete-guide-grid/) `⭐`
 - [X] [Article: The Devil's Albatross](https://9elements.com/blog/the-devils-albatros-an-algorithmic-layout-technique/)
 - [X] [Thesis: Gridless Design](https://gridless.design/) `⭐`
+
+
 
 # Broaden Perspective
 - *[X] [Book: The Coding Career Handbook](https://www.goodreads.com/book/show/54375336-the-coding-career-handbook-guides-principles-strategies-and-tactics?from_search=true&from_srp=true&qid=5kvqgZ476m&rank=3) `⭐`
