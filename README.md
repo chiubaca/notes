@@ -59,9 +59,11 @@ Inspired by [amitness](https://github.com/amitness/learning).
 
 ## React.js
 - *[X] [Book: Full-Stack React, TypeScript, and Node](https://www.goodreads.com/book/show/56378893-full-stack-react-typescript-and-node?from_search=true&from_srp=true&qid=91xB999JLw&rank=1) `👀`
-- *[ ] [Book: Pro React 16](https://www.amazon.co.uk/Pro-React-16-Adam-Freeman/dp/1484244508)
-- *[ ] [Article: A complete guide to useEffect](https://overreacted.io/a-complete-guide-to-useeffect/)
+- *[X] [Article: A complete guide to useEffect](https://overreacted.io/a-complete-guide-to-useeffect/)`⭐`
 - *[X] [Video: `useRef` in 11 minutes](https://www.youtube.com/watch?v=t2ypzz6gJm0)
+- *[X] [Article: Composition vs Inheritance](https://reactjs.org/docs/composition-vs-inheritance.html)`⭐`
+- *[X] [Article: Thinking in React](https://reactjs.org/docs/thinking-in-react.html)`⭐`
+
 
 ## Misc
 - *[ ] [Course: Create an Eleventy (11ty) Site From Scratch](https://egghead.io/lessons/11ty-create-an-eleventy-11ty-site-from-scratch)
