@@ -145,4 +145,4 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - *[X] [Book: Deep Work](https://www.goodreads.com/book/show/25744928-deep-work?from_search=tru&from_srp=true&qid=eckFypFBhS&rank=1) `⭐`
 - *[X] [Book: So Good They Can't Ignore You](https://www.goodreads.com/book/show/13525945-so-good-they-can-t-ignore-you) `⭐`
 - *[ ] [Book: The 7 Habits of Highly Effective People](https://www.goodreads.com/book/show/36072.The_7_Habits_of_Highly_Effective_People?from_search=true&from_srp=true&qid=Ch4yAR1c5V&rank=1) `💤`
-
+- *[X] [Article: How To Learn Stuff Quickly](https://www.joshwcomeau.com/blog/how-to-learn-stuff-quickly/)`⭐`
