@@ -111,7 +111,13 @@ Inspired by [amitness](https://github.com/amitness/learning).
   - *[ ] [PostgreSQL Administration](https://www.postgresqltutorial.com/postgresql-administration/)
   
 ## GraphQL
- - *[ ] [Tutorials: How to GraphQL](https://www.howtographql.com/)
+ - *[X] [Tutorials: How to GraphQL](https://www.howtographql.com/)`⭐`
+ - *[X] [Tutorial: Introduction to Apollo full stack tutorial](https://www.apollographql.com/docs/tutorial/introduction/)`⭐`
+ - *[ ] [Tutorials: Apollo Odyssey, learning platform](https://odyssey.apollographql.com/)
+ - *[X]  [Blog: graphqljs vs typegraphql vs graphql nexus](https://medium.com/swlh/graphql-js-vs-typegraphql-vs-graphql-nexus-2a8036deb851)
+ - *[X]  [Apollo GraphQL Server 🚀 With TypeScript](https://mbbaig.blog/apollo-server-typescript/)
+ - *[X] [Blog: How to Setup Full Stack Apollo, GQL-CodeGen, Prisma 2.0, Typescript, React: Part 1 — The Backend](https://medium.com/geekculture/how-to-setup-full-stack-apollo-gql-codegen-prisma-2-0-typescript-react-part-1-the-backend-e9eae9518dc9) `⭐`
+ - *[ ] [Blog: How to Setup Full Stack Apollo, GQL-CodeGen, Prisma 2.0, Typescript, React: Part 2— The Frontend](https://kieron-mckenna.medium.com/how-to-setup-full-stack-apollo-gql-codegen-prisma-2-0-typescript-react-part-2-the-frontend-caf4e2e871de)
  - *[ ] [Book: Production Ready GraphQL](https://book.productionreadygraphql.com/)
  - *[ ] [Book: Learning GraphQL](https://www.bookdepository.com/Learning-GraphQL-Eve-Porcello/9781492030713)
 
