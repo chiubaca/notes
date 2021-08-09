@@ -120,6 +120,9 @@ Inspired by [amitness](https://github.com/amitness/learning).
  - *[ ] [Blog: How to Setup Full Stack Apollo, GQL-CodeGen, Prisma 2.0, Typescript, React: Part 2— The Frontend](https://kieron-mckenna.medium.com/how-to-setup-full-stack-apollo-gql-codegen-prisma-2-0-typescript-react-part-2-the-frontend-caf4e2e871de)
  - *[ ] [Book: Production Ready GraphQL](https://book.productionreadygraphql.com/)
  - *[ ] [Book: Learning GraphQL](https://www.bookdepository.com/Learning-GraphQL-Eve-Porcello/9781492030713)
+ - *[ ] [Video: How to Update the Apollo Cache After a Mutation](https://www.youtube.com/watch?v=lQ7t20gFR14)
+ - *[ ] [Video: React Apollo State Management Best Practices](https://www.youtube.com/watch?v=N2q-ZYuQWI8)
+ - *[ ] [Video: Dispatch this: Using Apollo Client 3 as a State Management Solution](https://www.youtube.com/watch?v=xASrlg9rmR4)
 
 ## Prisma 2
  - *[X] [Tutorials: Set up Prisma from scratch](https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch-typescript-postgres)
