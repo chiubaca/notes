@@ -125,6 +125,7 @@ Inspired by [amitness](https://github.com/amitness/learning).
  - *[ ] [Video: React Apollo State Management Best Practices](https://www.youtube.com/watch?v=N2q-ZYuQWI8)
  - *[ ] [Video: Dispatch this: Using Apollo Client 3 as a State Management Solution](https://www.youtube.com/watch?v=xASrlg9rmR4)
  - *[X] [Intro to Apollo Client 3.0](https://www.youtube.com/watch?v=ou0fEW1eRjc)
+ - *[X] [200 OK! Error Handling in GraphQL](https://www.youtube.com/watch?v=RDNTP66oY2o)`⭐`
 
 ## Prisma 2
  - *[X] [Tutorials: Set up Prisma from scratch](https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch-typescript-postgres)
