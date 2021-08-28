@@ -71,7 +71,10 @@ Inspired by [amitness](https://github.com/amitness/learning).
 
 # Back end Development
 
-- *[X] [Video: CDN Caching, Static Site Generation, and Server Side Rendering](https://www.youtube.com/watch?v=bfLFHp7Sbkg)
+## Web Security
+- *[ ] [Video Series: CS253 Web Security](https://www.youtube.com/playlist?list=PL1y1iaEtjSYiiSGVlL1cHsXN_kvJOOhu-)
+   - *[X] [Web Security - Lecture 01 - What is Web Security? HTML & JavaScript Review](https://www.youtube.com/watch?v=5JJrJGZ_LjM&list=PL1y1iaEtjSYiiSGVlL1cHsXN_kvJOOhu-)
+
 
 ## Docker 
 - *[X] [Tutorial: How to use Docker with Node.js a step-by-step tutorial](https://geshan.com.np/blog/2020/11/nodejs-with-docker/)
@@ -144,6 +147,8 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - [X] [Article: The Devil's Albatross](https://9elements.com/blog/the-devils-albatros-an-algorithmic-layout-technique/)
 - [X] [Thesis: Gridless Design](https://gridless.design/) `⭐`
 
+# Misc
+- *[X] [Video: CDN Caching, Static Site Generation, and Server Side Rendering](https://www.youtube.com/watch?v=bfLFHp7Sbkg)
 
 
 # Broaden Perspective
