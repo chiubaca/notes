@@ -8,14 +8,14 @@ interface MarkdownFrontmatter {
   publish_date: number;
 }
 
-let title = 'Learning Journal';
-let description = `My digital garden to log notes from things i've read, watched and listened to.`;
-let permalink = 'https://learning.chiubaca.com/';
+const title = 'Learning Journal';
+const description = `My digital garden to log notes from things i've read, watched and listened to.`;
+const permalink = 'https://learning.chiubaca.com/';
 
 
-let fleetingNotes = Astro.fetchContent<MarkdownFrontmatter>('./fleeting-notes/*.md');
+let fleetingNotes =  Astro.fetchContent<MarkdownFrontmatter>('./fleeting-notes/*.md');
 fleetingNotes = fleetingNotes.sort((a, b) =>  DateTime.fromISO(b['publish_date']).ts - DateTime.fromISO(a['publish_date']).ts);
-
+const latestFleetingNote =  fleetingNotes[0];
 ---
 <html lang="en">
   <head>
@@ -25,14 +25,22 @@ fleetingNotes = fleetingNotes.sort((a, b) =>  DateTime.fromISO(b['publish_date']
   <body>
     <div class="layout">
       <article>
+         <nav> <p><a href="/">/🏠Home /</a></p></nav>
         <section>
           <h1> {title} </h1>
           <p> My digital garden to log notes from things i've read, watched and listened to. </p>
           <p> Every resource that has helped expand my knowledge even if just at little can be found on my <a href="https://github.com/chiubaca/learning">GitHub</a>.</p>
           <hr>
         </section>
+
         <section>
-          {fleetingNotes.map(p => <Note note={p} />)}
+          <h2>🧠 Latest Note</h2>
+           <Note note={latestFleetingNote}/>
+        </section>
+        <hr />
+        <section>
+          <h2> <a href="/fleeting-notes"> 🦄 All Fleeting Notes </a></h2>
+          <h2> <a href="/literature-notes"> 📚 All Literature Notes </a></h2> 
         </section>
       </article>
     </div>
