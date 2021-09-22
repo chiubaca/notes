@@ -1,0 +1,10 @@
+{
+  "newFileLocation": "current",
+  "newLinkFormat": "absolute",
+  "useMarkdownLinks": true,
+  "spellcheck": true,
+  "spellcheckDictionary": [
+    "NoteLayout",
+    "astro"
+  ]
+}

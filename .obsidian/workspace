@@ -1,0 +1,98 @@
+{
+  "main": {
+    "id": "0fa77bc7a7acc5b4",
+    "type": "split",
+    "children": [
+      {
+        "id": "5b5e203e6eb21fe9",
+        "type": "leaf",
+        "state": {
+          "type": "graph",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "88debd2ac5a7a5a9",
+    "type": "split",
+    "children": [
+      {
+        "id": "bf7d603f9e0214da",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ae89a846c0599355",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "ab7b566910c34816",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "44707d50bcdce2e7",
+    "type": "split",
+    "children": [
+      {
+        "id": "baa2c67277c68f2d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "78846a2592bcf6b1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "5b5e203e6eb21fe9",
+  "lastOpenFiles": [
+    "src/pages/fleeting-notes/20201102.md",
+    "src/pages/fleeting-notes/20201101.md",
+    "src/pages/fleeting-notes/20201031.md",
+    "src/pages/fleeting-notes/20201030.md",
+    "src/pages/fleeting-notes/20201029.md",
+    "src/pages/fleeting-notes/20201028.md",
+    "src/pages/fleeting-notes/20201027.md",
+    "src/pages/fleeting-notes/20201026.md",
+    "src/pages/fleeting-notes/20201025.md",
+    "src/pages/fleeting-notes/20201024.md"
+  ]
+}
