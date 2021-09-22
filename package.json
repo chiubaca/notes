@@ -6,13 +6,16 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "create-note": "node ./scripts/createNote.js",
+    "dev:create-note": "env NODE_ENV=development node ./scripts/createNote.js"
   },
   "author": "Alex Chiu",
   "license": "ISC",
   "dependencies": {
     "@octokit/rest": "^18.0.9",
     "dotenv": "^8.2.0",
+    "frontmatter-file-batcher": "^0.0.1-beta.0",
     "luxon": "^2.0.2"
   },
   "devDependencies": {
