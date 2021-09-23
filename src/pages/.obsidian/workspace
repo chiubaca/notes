@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "literature-notes/zettelkasten.md",
+            "file": "fleeting-notes/20210921.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "literature-notes/zettelkasten.md",
+                "file": "fleeting-notes/20210921.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "c3b97d237a3525aa",
   "lastOpenFiles": [
-    "literature-notes/zettelkasten.md",
-    "fleeting-notes/20210922.md",
-    "fleeting-notes/20200910.md",
+    "Untitled.md",
     "fleeting-notes/Untitled.md",
-    "literature-notes/Untitled.md",
-    "literature-notes/Untitled 1.md",
-    "fleeting-notes/20201204.md",
-    "fleeting-notes/20201203.md",
-    "fleeting-notes/20201202.md",
-    "fleeting-notes/20201201.md"
+    "fleeting-notes/20210919.md",
+    "fleeting-notes/20210922.md",
+    "fleeting-notes/20210918.md",
+    "fleeting-notes/20210917.md",
+    "fleeting-notes/20210916.md",
+    "fleeting-notes/20210915.md",
+    "fleeting-notes/20210914.md",
+    "fleeting-notes/20210906.md"
   ]
 }
