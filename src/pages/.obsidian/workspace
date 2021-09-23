@@ -4,12 +4,41 @@
     "type": "split",
     "children": [
       {
-        "id": "c3b97d237a3525aa",
-        "type": "leaf",
-        "state": {
-          "type": "graph",
-          "state": {}
-        }
+        "id": "6a439761cb13ef32",
+        "type": "split",
+        "children": [
+          {
+            "id": "c3b97d237a3525aa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "literature-notes/Astro.md",
+                "mode": "source"
+              }
+            },
+            "group": "38ec99c8ec0c2614"
+          },
+          {
+            "id": "a645c5ff16021384",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "literature-notes/Astro.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            },
+            "group": "38ec99c8ec0c2614"
+          }
+        ],
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -65,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "literature-notes/Astro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,15 +114,15 @@
   },
   "active": "c3b97d237a3525aa",
   "lastOpenFiles": [
-    "fleeting-notes/20210110.md",
-    "fleeting-notes/20210912.md",
-    "poliigon.com.md",
-    "fleeting-notes/20210801.md",
-    "Untitled.md",
-    "fleeting-notes/Untitled.md",
-    "fleeting-notes/20210919.md",
+    "literature-notes/Astro.md",
+    "literature-notes/Zettelkasten.md",
+    "fleeting-notes/20210923.md",
+    "literature-notes/zettelkasten.md",
+    "`Astro`.md",
     "fleeting-notes/20210922.md",
-    "fleeting-notes/20210918.md",
-    "fleeting-notes/20210917.md"
+    "fleeting-notes/20210921.md",
+    "fleeting-notes/20210920.md",
+    "fleeting-notes/20210919.md",
+    "fleeting-notes/20210918.md"
   ]
 }

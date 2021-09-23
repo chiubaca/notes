@@ -3,5 +3,15 @@
   "attachmentFolderPath": "./",
   "newLinkFormat": "absolute",
   "spellcheck": true,
-  "showFrontmatter": true
+  "showFrontmatter": true,
+  "spellcheckDictionary": [
+    "optimise",
+    "zettelkasten",
+    "organise",
+    "astro",
+    "NoteLayout",
+    "reorganised",
+    "js"
+  ],
+  "alwaysUpdateLinks": true
 }
