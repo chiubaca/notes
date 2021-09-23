@@ -16,6 +16,8 @@ function currentDateStamp() {
   return year + month + date;
 }
 
+const currentDate = currentDateStamp();
+
 async function main() {
   try {
     const placeholderText = `---
@@ -26,7 +28,6 @@ layout: ../../layouts/NoteLayout.astro
 
     const buffContent = Buffer.from(placeholderText, "utf-8");
     const contentEncoded = buffContent.toString("base64");
-    const currentDate = currentDateStamp();
     const { data } = await octokit.repos.createOrUpdateFileContents({
       owner: "chiubaca",
       repo: "learning",
