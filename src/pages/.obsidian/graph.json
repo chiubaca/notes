@@ -6,8 +6,16 @@
   "hideUnresolved": false,
   "showOrphans": true,
   "collapse-color-groups": true,
-  "colorGroups": [],
-  "collapse-display": true,
+  "colorGroups": [
+    {
+      "query": "zero-day",
+      "color": {
+        "a": 1,
+        "rgb": 14701138
+      }
+    }
+  ],
+  "collapse-display": false,
   "showArrow": false,
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1,
@@ -17,6 +25,6 @@
   "repelStrength": 11.3846153846154,
   "linkStrength": 1,
   "linkDistance": 60,
-  "scale": 0.4597182591697423,
+  "scale": 0.2512980674951435,
   "close": false
 }
