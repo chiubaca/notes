@@ -7,11 +7,8 @@
         "id": "c3b97d237a3525aa",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "fleeting-notes/20210921.md",
-            "mode": "source"
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -68,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20210921.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +84,15 @@
   },
   "active": "c3b97d237a3525aa",
   "lastOpenFiles": [
+    "fleeting-notes/20210110.md",
+    "fleeting-notes/20210912.md",
+    "poliigon.com.md",
+    "fleeting-notes/20210801.md",
     "Untitled.md",
     "fleeting-notes/Untitled.md",
     "fleeting-notes/20210919.md",
     "fleeting-notes/20210922.md",
     "fleeting-notes/20210918.md",
-    "fleeting-notes/20210917.md",
-    "fleeting-notes/20210916.md",
-    "fleeting-notes/20210915.md",
-    "fleeting-notes/20210914.md",
-    "fleeting-notes/20210906.md"
+    "fleeting-notes/20210917.md"
   ]
 }
