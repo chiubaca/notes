@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "literature-notes/Astro.md",
+                "file": "fleeting-notes/20210923.md",
                 "mode": "source"
               }
             },
@@ -25,14 +25,14 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "literature-notes/Astro.md",
+                "file": "fleeting-notes/20210923.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             },
             "group": "38ec99c8ec0c2614"
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "literature-notes/Astro.md",
+                "file": "fleeting-notes/20210923.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,13 +114,13 @@
   },
   "active": "c3b97d237a3525aa",
   "lastOpenFiles": [
-    "literature-notes/Astro.md",
-    "literature-notes/Zettelkasten.md",
     "fleeting-notes/20210923.md",
+    "literature-notes/Astro.md",
+    "fleeting-notes/20210921.md",
+    "fleeting-notes/20210922.md",
+    "literature-notes/Zettelkasten.md",
     "literature-notes/zettelkasten.md",
     "`Astro`.md",
-    "fleeting-notes/20210922.md",
-    "fleeting-notes/20210921.md",
     "fleeting-notes/20210920.md",
     "fleeting-notes/20210919.md",
     "fleeting-notes/20210918.md"

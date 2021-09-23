@@ -11,7 +11,8 @@
     "astro",
     "NoteLayout",
     "reorganised",
-    "js"
+    "js",
+    "frontmatter"
   ],
   "alwaysUpdateLinks": true
 }
