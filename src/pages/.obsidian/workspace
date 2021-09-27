@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "a5640c96760d0d42",
+        "id": "c9fa6de865f888cb",
         "type": "split",
         "children": [
           {
@@ -13,32 +13,40 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/zettelkasten.md",
+                "file": "index-notes/Zettelkasten.md",
                 "mode": "source"
               }
             },
-            "group": "f1732ceecc37d402"
+            "group": "47a22549808ec693"
           },
           {
-            "id": "9ff7681984b0a7ad",
+            "id": "b5e43421578311d5",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/zettelkasten.md",
+                "file": "index-notes/Zettelkasten.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": false
+                "unlinkedCollapsed": true
               }
             },
-            "group": "f1732ceecc37d402"
+            "group": "47a22549808ec693"
           }
         ],
         "direction": "horizontal"
+      },
+      {
+        "id": "4dd31c75e26d2044",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
       }
     ],
     "direction": "vertical"
@@ -78,7 +86,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 402
   },
   "right": {
     "id": "7d79c914da9cc99e",
@@ -94,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/zettelkasten.md",
+                "file": "index-notes/Zettelkasten.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,15 +122,15 @@
   },
   "active": "c3b97d237a3525aa",
   "lastOpenFiles": [
-    "fleeting-notes/zettelkasten.md",
+    "index-notes/Zettelkasten.md",
     "fleeting-notes/20210927.md",
-    "fleeting-notes/20210925.md",
-    "fleeting-notes/20210924.md",
-    "fleeting-notes/20210923.md",
-    "fleeting-notes/20210926.md",
-    "fleeting-notes/20210919.md",
     "fleeting-notes/20210920.md",
+    "fleeting-notes/20210923.md",
     "fleeting-notes/20210922.md",
-    "literature-notes/Astro.md"
+    "fleeting-notes/20210924.md",
+    "fleeting-notes/20210921.md",
+    "index-notes/Astro.md",
+    "literature-notes/zettelkasten-smart-notes-step-by-step-with-obsidian.md",
+    "literature-notes/test.md"
   ]
 }
