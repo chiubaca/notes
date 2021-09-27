@@ -12,7 +12,9 @@
     "NoteLayout",
     "reorganised",
     "js",
-    "frontmatter"
+    "frontmatter",
+    "optimises",
+    "discoverability"
   ],
   "alwaysUpdateLinks": true
 }
