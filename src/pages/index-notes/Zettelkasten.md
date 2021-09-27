@@ -5,5 +5,4 @@ last_updated: 20210927
 layout: ../../layouts/NoteLayout.astro
 ---
 
-- [zettelkasten-smart-notes-step-by-step-with-obsidian](literature-notes/zettelkasten-smart-notes-step-by-step-with-obsidian.md)
-
+- [zettelkasten-smart-notes-step-by-step-with-obsidian](../literature-notes/zettelkasten-smart-notes-step-by-step-with-obsidian.md)
