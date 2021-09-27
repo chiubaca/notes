@@ -1,12 +1,3 @@
----
-title: Zettelkasten
-publish_date: 20210922
-last_updated: 20210927
-layout: ../../layouts/NoteLayout.astro
----
-
-# Zettelkasten
-
 This is technique to write notes in a way that optimises for discoverability of previously written notes.
 
 There are three types of notes:
