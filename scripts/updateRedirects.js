@@ -1,3 +1,11 @@
+/**
+ * This is required because Obsidan creates backlinks to other markdown files with the extension `.md`.
+ * These links persist to website and causes an invalid url.
+ * So the purpose of this script is build a list of all markdown files to redirect to url without a `.md` extension.
+ * This script will construct a` _redirects` file, which Netlify uses to handle the redirecting.
+ * https://docs.netlify.com/routing/redirects/#syntax-for-the-redirects-file
+ */
+
 const fs = require("fs");
 
 // file paths pages
