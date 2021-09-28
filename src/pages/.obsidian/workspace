@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "c9fa6de865f888cb",
+        "id": "7ee30ded0e11e3e4",
         "type": "split",
         "children": [
           {
@@ -13,29 +13,29 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index-notes/Zettelkasten.md",
+                "file": "literature-notes/threejs-journey.md",
                 "mode": "source"
               }
             },
-            "group": "47a22549808ec693"
+            "group": "e8ab784f1ef529bb"
           },
           {
-            "id": "b5e43421578311d5",
+            "id": "1346ac87b856fd53",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index-notes/Zettelkasten.md",
+                "file": "literature-notes/threejs-journey.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
-                "showSearch": false,
+                "showSearch": true,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             },
-            "group": "47a22549808ec693"
+            "group": "e8ab784f1ef529bb"
           }
         ],
         "direction": "horizontal"
@@ -73,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "zett",
+                "query": "three.js",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -82,7 +82,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -102,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index-notes/Zettelkasten.md",
+                "file": "literature-notes/threejs-journey.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,15 +123,15 @@
   },
   "active": "c3b97d237a3525aa",
   "lastOpenFiles": [
-    "index-notes/Zettelkasten.md",
-    "fleeting-notes/20210927.md",
-    "fleeting-notes/20210920.md",
-    "fleeting-notes/20210923.md",
-    "fleeting-notes/20210922.md",
-    "fleeting-notes/20210924.md",
-    "fleeting-notes/20210921.md",
-    "index-notes/Astro.md",
+    "literature-notes/threejs-journey.md",
+    "fleeting-notes/20210829.md",
+    "fleeting-notes/20210820.md",
     "literature-notes/zettelkasten-smart-notes-step-by-step-with-obsidian.md",
-    "literature-notes/test.md"
+    "index-notes/Astro.md",
+    "index-notes/Zettelkasten.md",
+    "index-notes/Three-js.md",
+    "literature-notes/Untitled.md",
+    "index-notes/Untitled.md",
+    "fleeting-notes/20210927.md"
   ]
 }
