@@ -4,44 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "7ee30ded0e11e3e4",
-        "type": "split",
-        "children": [
-          {
-            "id": "c3b97d237a3525aa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "literature-notes/threejs-journey.md",
-                "mode": "source"
-              }
-            },
-            "group": "e8ab784f1ef529bb"
-          },
-          {
-            "id": "1346ac87b856fd53",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "literature-notes/threejs-journey.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": true,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": false
-              }
-            },
-            "group": "e8ab784f1ef529bb"
-          }
-        ],
-        "direction": "horizontal"
-      },
-      {
-        "id": "4dd31c75e26d2044",
+        "id": "5479a0696ee8b196",
         "type": "leaf",
         "state": {
           "type": "empty",
@@ -103,7 +66,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "literature-notes/threejs-journey.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +83,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "c3b97d237a3525aa",
+  "active": "5479a0696ee8b196",
   "lastOpenFiles": [
     "literature-notes/threejs-journey.md",
     "fleeting-notes/20210829.md",
