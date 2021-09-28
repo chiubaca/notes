@@ -1,38 +1,25 @@
 ---
 import { DateTime } from "luxon";
 
-import BaseHead from '../components/BaseHead.astro';
-import Note from '../components/Note.astro';
+import AllLiteratureNotesLayout from '../layouts/AllLiteratureNotesLayout.astro'
 
 interface MarkdownFrontmatter {
+  title?: string;
   publish_date: number;
 }
-
-let title = 'Learning Journal';
-let description = `My digital garden to log notes from things i've read, watched and listened to.`;
-let permalink = 'https://learning.chiubaca.com/';
-``
 
 let literatureNotes = Astro.fetchContent<MarkdownFrontmatter>('./literature-notes/*.md');
 literatureNotes = literatureNotes.sort((a, b) =>  DateTime.fromISO(b['publish_date']).ts - DateTime.fromISO(a['publish_date']).ts);
 
 ---
-<html lang="en">
-  <head>
-    <BaseHead title={title} description={description} permalink={permalink} />
-  </head>
-
-  <body>
-    <div class="layout">
-      <article>
-        <section>
-          <p><a href="/">/🏠Home</a> / literature-notes </p>
-          <h1>Literature Notes</h1>
-          <p>Unravelling thoughts from my fleeting notes...</p>
-          <hr />
-          {literatureNotes.map(p => <Note note={p} />)}
-        </section>
-      </article>
-    </div>
-  </body>
-</html>
+  
+<AllLiteratureNotesLayout>
+  <section>
+    <ul>
+      {literatureNotes.map(p => <li> <h2><a href={p.url}>
+          {p.title}
+        </a>
+      </h2></li>)}
+    </ul>
+  </section>
+</AllLiteratureNotesLayout>

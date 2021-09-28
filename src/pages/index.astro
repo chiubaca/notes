@@ -1,7 +1,7 @@
 ---
 import { DateTime } from "luxon";
 
-import BaseHead from '../components/BaseHead.astro';
+import IndexLayout from '../layouts/IndexLayout.astro'
 import Note from '../components/Note.astro';
 
 interface MarkdownFrontmatter {
@@ -9,39 +9,31 @@ interface MarkdownFrontmatter {
 }
 
 const title = 'Learning Journal';
-const description = `My digital garden to log notes from things i've read, watched and listened to.`;
-const permalink = 'https://learning.chiubaca.com/';
-
 
 let fleetingNotes =  Astro.fetchContent<MarkdownFrontmatter>('./fleeting-notes/*.md');
 fleetingNotes = fleetingNotes.sort((a, b) =>  DateTime.fromISO(b['publish_date']).ts - DateTime.fromISO(a['publish_date']).ts);
 const latestFleetingNote =  fleetingNotes[0];
 ---
-<html lang="en">
-  <head>
-    <BaseHead title={title} description={description} permalink={permalink} />
-  </head>
 
-  <body>
-    <div class="layout">
-      <article>
-        <section>
-          <h1> {title} </h1>
-          <p> My digital garden to log notes from things i've read, watched and listened to. </p>
-          <p> Every resource that has helped expand my knowledge even if just at little can be found on my <a href="https://github.com/chiubaca/learning">GitHub</a>.</p>
-          <hr>
-        </section>
+<IndexLayout>
+  <header>
+    <h1> {title} </h1>
+    <p> This is where I log notes for everything that I've read, watched and listened to.</p>
+    <p> I'm using the <a href="https://zettelkasten.de/introduction/">Zettelkasten Method</a> to build my second brain here.</p>
+    <p> Every resource that has helped expand my knowledge can also be found on my <a href="https://github.com/chiubaca/learning">GitHub</a>.</p>
+    <hr>
+  </header>
+  <section>
+    <h2>📝 Latest Fleeting Note</h2>
+    <Note note={latestFleetingNote}/>
+    <h3> <a href="/fleeting-notes"> All Fleeting Notes ➡</a></h3>
+  </section>
+  <hr />
+  <section>
+    <h2> <a href="/literature-notes"> 📚 All Literature Notes </a></h2>
+    <h2> <a href="/index-notes"> 🔢 Index Notes </a></h2>
+  </section>
+</IndexLayout>
 
-        <section>
-          <h2>🧠 Latest Note</h2>
-           <Note note={latestFleetingNote}/>
-        </section>
-        <hr />
-        <section>
-          <h2> <a href="/fleeting-notes"> 🦄 All Fleeting Notes </a></h2>
-          <h2> <a href="/literature-notes"> 📚 All Literature Notes </a></h2> 
-        </section>
-      </article>
-    </div>
-  </body>
-</html>
+
+
