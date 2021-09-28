@@ -21,7 +21,7 @@ const { read, batch } = require("frontmatter-file-batcher");
 
       const newData = update({
         data: {
-          layout: { $set: "../../layouts/NoteLayout.astro" },
+          layout: { $set: "../../layouts/FleetingNoteLayout.astro" },
           publish_date: { $set: Number(fileName) },
         },
       });
