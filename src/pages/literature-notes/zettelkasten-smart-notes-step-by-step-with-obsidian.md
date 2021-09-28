@@ -1,5 +1,5 @@
 ---
-_title: Zettelkasten
+title: Zettelkasten
 publish_date: 20210922
 last_updated: 20210927
 layout: ../../layouts/NoteLayout.astro
@@ -9,7 +9,7 @@ This is technique to write notes in a way that optimises for discoverability of 
 
 There are three types of notes:
 
-## `Fleeting Notes` 
+## `Fleeting Notes`
 
 - Quick notes for passing thoughts, or from something that you listened to, read or watched.
 
@@ -20,7 +20,7 @@ There are three types of notes:
 - It should link back to any corresponding fleeting note.
 - It's OK for the literature note to have the same title as your fleeting note
 
- ## `Permanent Notes`
+## `Permanent Notes`
 
 - This should be the end blog or article that you want to publish and show to the world.
 - It should draw upon all the literature notes that you have consumed.

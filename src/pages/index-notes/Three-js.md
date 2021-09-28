@@ -1,5 +1,5 @@
 ---
-_title: Three.js
+title: Three.js
 publish_date: 20210928
 layout: ../../layouts/NoteLayout.astro
 ---
