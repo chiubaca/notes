@@ -15,10 +15,6 @@ const { read, batch } = require("frontmatter-file-batcher");
     async ({ goods, actions }) => {
       //get file name from path
       const fileName = goods.path.split("/").pop().split(".")[0];
-      console.log(
-        "🚀 ~ file: updateFrontMatter.js ~ line 18 ~ fileName",
-        fileName
-      );
 
       // const { publish_date } = goods.data;
       const { update, save } = actions;
