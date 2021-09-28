@@ -1,10 +1,11 @@
 ---
-title: Three.js Journey
+title: threejs-journey
 publish_date: 20210928
-layout: ../../layouts/NoteLayout.astro
+description: Notes from threejs-journey.xyz
+layout: ../../layouts/LiteratureNoteLayout.astro
 ---
 
-# Notes from three.js journey
+# Notes from threejs-journey.xyz
 
 ## Basics
 
