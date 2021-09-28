@@ -1,19 +1,12 @@
 ---
 export interface Props {
-  note: any;
+  note: any
 }
-
 
 const { note } = Astro.props;
 ---
 
-<article class="note-preview">
-  <header>
-    <h3 class="publish-date">{note.publishDate}</h3>
-    <a href={note.url}><h1 class="title">{note.title}</h1></a>
-  </header>
-  <main>
-    <h2> <a href={note.url}>/{note['publish_date']}/</a></h2>
-    <section>{note.astro.html}</section>
-  </main>
+<article>
+  <h2> <a href={note.url}>/{ note.title|| note['publish_date']}/</a></h2>
+  <section>{note.astro.html}</section>
 </article>
