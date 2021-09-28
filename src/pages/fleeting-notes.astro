@@ -8,9 +8,9 @@ interface MarkdownFrontmatter {
   publish_date: number;
 }
 
-let title = 'Learning Journal';
+let title = 'Learning Journal | Fleeting Notes';
 let description = `My digital garden to log notes from things i've read, watched and listened to.`;
-let permalink = 'https://learning.chiubaca.com/';
+let permalink = 'https://learning.chiubaca.com/fleeting-notes';
 
 
 let fleetingNotes = Astro.fetchContent<MarkdownFrontmatter>('./fleeting-notes/*.md');
@@ -28,7 +28,7 @@ fleetingNotes = fleetingNotes.sort((a, b) =>  DateTime.fromISO(b['publish_date']
         <section>
           <p><a href="/">/🏠Home</a> / fleeting-notes </p>
           <h1>Fleeting Notes</h1>
-          <p>Thoughts and notes...</p>
+          <p>Daily thoughts and notes...</p>
           <hr />
           {fleetingNotes.map(p => <Note note={p} />)}
         </section>
