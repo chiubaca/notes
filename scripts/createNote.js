@@ -22,7 +22,7 @@ async function main() {
   try {
     const placeholderText = `---
 publish_date: ${currentDate}    
-layout: ../../layouts/NoteLayout.astro
+layout: ../../layouts/FleetingNoteLayout.astro
 ---
 - no entry yet`;
 
