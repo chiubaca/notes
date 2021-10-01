@@ -68,6 +68,7 @@ Inspired by [amitness](https://github.com/amitness/learning).
 
 ## Misc
 - *[ ] [Course: Create an Eleventy (11ty) Site From Scratch](https://egghead.io/lessons/11ty-create-an-eleventy-11ty-site-from-scratch)
+- *[ ] [Course: Full Stack open 2021](https://fullstackopen.com/en/)
 
 # Back end Development
 
