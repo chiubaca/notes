@@ -1,5 +1,7 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
+import Logo from '../components/Logo.astro'
+import ThemeSwitcher from '../components/ThemeSwitcher.astro'
 
 export interface Props {
   title: string;
@@ -15,6 +17,10 @@ const { title, description, permalink, content } = Astro.props;
   </head>
 
   <body>
+      <ThemeSwitcher />
+
+      <Logo />
+  
       <slot />
   </body>
 </html>
