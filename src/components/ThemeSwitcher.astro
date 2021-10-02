@@ -8,24 +8,21 @@
   const stylesheet = document.getElementById('theme')
   const themeSwitcherButton = document.getElementById('theme-switcher')
   
-
-  
   const systemTheme = () => { 
-    if (window.matchMedia('(prefers-color-scheme: dark)')){
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches){
       return 'dark'
     }
       return ' light'
     }
     
+    // Set the initial theme
     let currentTheme = systemTheme() === 'dark' ? 'dark' : 'light'
-    
-   themeSwitcherButton.innerHTML = currentTheme === 'dark' ? '🌞' : '🌚'
+    themeSwitcherButton.innerHTML = currentTheme === 'dark' ? '🌞' : '🌚'
 
 
     function themeHandler () {
 
       if(currentTheme === 'dark'){
-        console.log('theme dark ', currentTheme);
         stylesheet.href = LIGHT_THEME
         currentTheme = 'light'
         themeSwitcherButton.innerHTML = '🌚'
@@ -33,7 +30,6 @@
       }
 
       if(currentTheme === 'light'){
-        console.log('theme light ', currentTheme);
         stylesheet.href = DARK_THEME
         currentTheme = 'dark'
          themeSwitcherButton.innerHTML = '🌞'
