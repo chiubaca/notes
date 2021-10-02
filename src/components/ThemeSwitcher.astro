@@ -4,6 +4,7 @@
 
   const LIGHT_THEME = 'https://cdn.jsdelivr.net/npm/water.css@2/out/light.css'
   const DARK_THEME = 'https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css'
+  const localStorageTheme = localStorage.getItem('theme')
   
   const stylesheet = document.getElementById('theme')
   const themeSwitcherButton = document.getElementById('theme-switcher')
@@ -19,6 +20,21 @@
     let currentTheme = systemTheme() === 'dark' ? 'dark' : 'light'
     themeSwitcherButton.innerHTML = currentTheme === 'dark' ? '🌞' : '🌚'
 
+    // Set the current them if a theme as been set already
+    if(localStorageTheme){
+      if (localStorageTheme === 'dark'){
+        stylesheet.href = DARK
+        currentTheme = 'dark'
+        themeSwitcherButton.innerHTML = '🌞'
+      }
+
+      if (localStorageTheme === 'light'){
+        stylesheet.href = LIGHT_THEME
+        currentTheme = 'light'
+        themeSwitcherButton.innerHTML = '🌚'
+      }
+    }
+
 
     function themeHandler () {
 
@@ -26,6 +42,7 @@
         stylesheet.href = LIGHT_THEME
         currentTheme = 'light'
         themeSwitcherButton.innerHTML = '🌚'
+        localStorage.setItem('theme', 'light')
         return
       }
 
@@ -33,6 +50,7 @@
         stylesheet.href = DARK_THEME
         currentTheme = 'dark'
          themeSwitcherButton.innerHTML = '🌞'
+         localStorage.setItem('theme', 'dark')
         return
       }
     }
