@@ -57,6 +57,10 @@ Things get a lot more interesting when we bring controls and animations into the
 ### Animations
 - [20210829](../fleeting-notes/20210829.md)
 
+### Text
+- [20211002](../fleeting-notes/20211002.md)
+
+
 ### Debugging
 - [20210911](../fleeting-notes/20210911.md)
 
