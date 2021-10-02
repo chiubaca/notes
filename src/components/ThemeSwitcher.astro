@@ -1,0 +1,54 @@
+<button id='theme-switcher' onclick='themeHandler()'></button>
+
+<script>
+
+  const LIGHT_THEME = 'https://cdn.jsdelivr.net/npm/water.css@2/out/light.css'
+  const DARK_THEME = 'https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css'
+  
+  const stylesheet = document.getElementById('theme')
+  const themeSwitcherButton = document.getElementById('theme-switcher')
+  
+
+  
+  const systemTheme = () => { 
+    if (window.matchMedia('(prefers-color-scheme: dark)')){
+      return 'dark'
+    }
+      return ' light'
+    }
+    
+    let currentTheme = systemTheme() === 'dark' ? 'dark' : 'light'
+    
+   themeSwitcherButton.innerHTML = currentTheme === 'dark' ? '🌞' : '🌚'
+
+
+    function themeHandler () {
+
+      if(currentTheme === 'dark'){
+        console.log('theme dark ', currentTheme);
+        stylesheet.href = LIGHT_THEME
+        currentTheme = 'light'
+        themeSwitcherButton.innerHTML = '🌚'
+        return
+      }
+
+      if(currentTheme === 'light'){
+        console.log('theme light ', currentTheme);
+        stylesheet.href = DARK_THEME
+        currentTheme = 'dark'
+         themeSwitcherButton.innerHTML = '🌞'
+        return
+      }
+    }
+
+</script>
+
+
+<style>
+  #theme-switcher{
+    position: fixed;
+    right: 10px;
+    padding: 5px;
+  }
+</style>
+
