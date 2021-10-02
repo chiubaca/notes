@@ -24,9 +24,14 @@ const latestFleetingNote =  fleetingNotes[0];
     <hr>
   </header>
   <section>
-    <h2>📝 Latest Fleeting Note</h2>
-    <Note note={latestFleetingNote}/>
-    <h3> <a href="/fleeting-notes"> All Fleeting Notes ➡</a></h3>
+   
+ 
+   <details>
+      <summary> 📝 Latest Fleeting Note</summary>
+      <Note note={latestFleetingNote}/>
+   </details>
+
+    <h2> <a href="/fleeting-notes"> 📝 All Fleeting Notes</a></h2>
   </section>
   <hr />
   <section>
@@ -35,5 +40,10 @@ const latestFleetingNote =  fleetingNotes[0];
   </section>
 </IndexLayout>
 
-
-
+<style>
+  details {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: .5em .5em 0;
+  }
+</style>
