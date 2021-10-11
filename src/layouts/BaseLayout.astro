@@ -20,11 +20,31 @@ const { title, description, permalink, content } = Astro.props;
   <body>
       <ThemeSwitcher />
 
-      <Logo />
-  
-      <slot />
+      <div class='page-wrapper'>
+        <Logo />
 
-      <Footer/>
+        <div class='content'>      
+          <slot /> 
+        </div>
+
+        <Footer/>
+      </div>
+
   </body>
 </html>
+
+<style>
+
+  .page-wrapper{
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .content{
+    flex-grow: 1;
+  }
+
+</style>
 
