@@ -61,8 +61,14 @@ Things get a lot more interesting when we bring controls and animations into the
 - [20211002](../fleeting-notes/20211002.md)
 
 
+### Lighting & Shadows
+- [20211010](../fleeting-notes/20211010.md)
+- [20211012](../fleeting-notes/20211012.md)
+
 ### Debugging
 - [20210911](../fleeting-notes/20210911.md)
+
+
 
 ## References
 
