@@ -34,6 +34,7 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - *[X] [Book: TypeScript Deep Dive](https://basarat.gitbook.io/typescript/) `⭐`
 - *[ ] [Book: Tackling TypeScript](https://exploringjs.com/tackling-ts/toc.html) 
 - *[ ] [Book: TypeScript in 50 Lessons](https://typescript-book.com/)
+- *[ ] [Blog: 3 TypeScript Tricks I wish I knew when I learned TypeScript](https://www.cstrnt.dev/blog/three-typescript-tricks)
 
 ## Testing
 - *[X] [Blog: But really, what is a JavaScript test?](https://kentcdodds.com/blog/but-really-what-is-a-javascript-test)`⭐`
