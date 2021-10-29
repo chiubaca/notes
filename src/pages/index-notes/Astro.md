@@ -5,3 +5,4 @@ layout: ../../layouts/IndexNoteLayout.astro
 ---
 
 # Astro.js
+- [20211013](../fleeting-notes/20211013.md)
