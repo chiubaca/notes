@@ -148,6 +148,7 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - [X] [Article: A Complete Guide to Grid ](https://css-tricks.com/snippets/css/complete-guide-grid/) `⭐`
 - [X] [Article: The Devil's Albatross](https://9elements.com/blog/the-devils-albatros-an-algorithmic-layout-technique/)
 - [X] [Thesis: Gridless Design](https://gridless.design/) `⭐`
+- [X] [Blog: What is a design system?](https://www.tallan.com/insights/what-is-a-design-system/)
 
 # Misc
 - *[X] [Video: CDN Caching, Static Site Generation, and Server Side Rendering](https://www.youtube.com/watch?v=bfLFHp7Sbkg)
