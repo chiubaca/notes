@@ -8,7 +8,7 @@ Inspired by [amitness](https://github.com/amitness/learning).
 ## Key
 | Reading | Paused | Recommended |
 | ------- | ------ | ----------- |
-|   `👀`  |   `💤`  |    `⭐`     |
+|   `👀`  |  `💤` |    `⭐`     |
 
 
 # General Coding
@@ -26,6 +26,7 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - *[X] [Video: OBSERVABLES, OBSERVERS & SUBSCRIPTIONS | RxJS TUTORIAL](https://www.youtube.com/watch?v=Tux1nhBPl_w)
 - *[X] [Video: RxJS Quick Start with Practical Examples](https://www.youtube.com/watch?v=2LCo926NFLI)
 - *[X] [Article: Stop using isLoading booleans](https://kentcdodds.com/blog/stop-using-isloading-booleans)
+- *[X] [Video: Intro to Typed Arrays in JavaScript](https://www.youtube.com/watch?v=UYkJaW3pmj0)
 
 
 ## TypeScript
@@ -45,22 +46,25 @@ Inspired by [amitness](https://github.com/amitness/learning).
 
 # Front-end Web Development
 
+## A11y
+- *[X] [Video: Common HTML problems](https://www.youtube.com/watch?v=NexL5_Vdoq8)
+
 ## Vue.js
 - *[X] [Book: Vue.js 2 Web Development Projects](https://www.goodreads.com/book/show/36697278-vue-js-2-web-development-projects?from_search=true&from_srp=true&qid=FBPjixxWqo&rank=1)
 - *[X] [Docs: Vue Composition API docs](https://composition-api.vuejs.org/api.html#setup) `⭐`
 - *[X] [Book: Vue.js 2 Web Development Projects](https://www.goodreads.com/book/show/36697278-vue-js-2-web-development-projects?from_search=true&from_srp=true&qid=kDklLmjzT9&rank=1)
 
 ## Animation
-- * [X] [Video: The Hidden World of requestAnimationFrame](https://www.youtube.com/watch?v=zBRqnSiq_VM)`⭐`
-- * [X] [Article: Using requestAnimationFrame with React Hooks](https://css-tricks.com/using-requestanimationframe-with-react-hooks/)
-- * [X] [Article: Understanding JavaScript's requestAnimationFrame() method for smooth animations](http://www.javascriptkit.com/javatutors/requestanimationframe.shtml)
-- * [X] [How SVG Line Animation Works ](https://css-tricks.com/svg-line-animation-works/)
-- * [X] [A Guide to SVG Animations (SMIL)](https://css-tricks.com/guide-svg-animations-smil/)
-- * [X] [Video: GSAP - Getting Started](https://greensock.com/get-started)
-- * [ ] [Article: GSAP + React, First Steps & Handy Techniques](https://greensock.com/react/) 
+- *[X] [Video: The Hidden World of requestAnimationFrame](https://www.youtube.com/watch?v=zBRqnSiq_VM)`⭐`
+- *[X] [Article: Using requestAnimationFrame with React Hooks](https://css-tricks.com/using-requestanimationframe-with-react-hooks/)
+- *[X] [Article: Understanding JavaScript's requestAnimationFrame() method for smooth animations](http://www.javascriptkit.com/javatutors/requestanimationframe.shtml)
+- *[X] [How SVG Line Animation Works ](https://css-tricks.com/svg-line-animation-works/)
+- *[X] [A Guide to SVG Animations (SMIL)](https://css-tricks.com/guide-svg-animations-smil/)
+- *[X] [Video: GSAP - Getting Started](https://greensock.com/get-started)
+- *[ ] [Article: GSAP + React, First Steps & Handy Techniques](https://greensock.com/react/) 
 
 ## React.js
-- *[X] [Book: Full-Stack React, TypeScript, and Node](https://www.goodreads.com/book/show/56378893-full-stack-react-typescript-and-node?from_search=true&from_srp=true&qid=91xB999JLw&rank=1) `👀`
+- *[X] [Book: Full-Stack React, TypeScript, and Node](https://www.goodreads.com/book/show/56378893-full-stack-react-typescript-and-node?from_search=true&from_srp=true&qid=91xB999JLw&rank=1)
 - *[X] [Article: A complete guide to useEffect](https://overreacted.io/a-complete-guide-to-useeffect/)`⭐`
 - *[X] [Video: `useRef` in 11 minutes](https://www.youtube.com/watch?v=t2ypzz6gJm0)
 - *[X] [Article: Composition vs Inheritance](https://reactjs.org/docs/composition-vs-inheritance.html)`⭐`
@@ -71,11 +75,11 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - *[ ] [Course: Create an Eleventy (11ty) Site From Scratch](https://egghead.io/lessons/11ty-create-an-eleventy-11ty-site-from-scratch)
 - *[ ] [Course: Full Stack open 2021](https://fullstackopen.com/en/)
 
-# Back end Development
+# Back-end Development
 
 ## Web Security
 - *[ ] [Video Series: CS253 Web Security](https://www.youtube.com/playlist?list=PL1y1iaEtjSYiiSGVlL1cHsXN_kvJOOhu-)
-   - *[X] [Web Security - Lecture 01 - What is Web Security? HTML & JavaScript Review](https://www.youtube.com/watch?v=5JJrJGZ_LjM&list=PL1y1iaEtjSYiiSGVlL1cHsXN_kvJOOhu-)
+- *[X] [Web Security - Lecture 01 - What is Web Security? HTML & JavaScript Review](https://www.youtube.com/watch?v=5JJrJGZ_LjM&list=PL1y1iaEtjSYiiSGVlL1cHsXN_kvJOOhu-)
 
 
 ## Docker 
@@ -134,13 +138,11 @@ Inspired by [amitness](https://github.com/amitness/learning).
 
 ## Prisma 2
  - *[X] [Tutorials: Set up Prisma from scratch](https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch-typescript-postgres)
- - *[ ] [Tutorial: How to Setup Full Stack Apollo, GQL-CodeGen, Prisma 2.0, Typescript, React: Part 1 — The Backend](https://medium.com/geekculture/how-to-setup-full-stack-apollo-gql-codegen-prisma-2-0-typescript-react-part-1-the-backend-e9eae9518dc9)
 
 ## Design & UI/UX
-
 - [ ] [Book: CSS In Depth ](https://www.manning.com/books/css-in-depth#toc)
 - [ ] [Book: CSS Secrets](https://www.goodreads.com/book/show/20830437-css-secrets)
-- [ ] [Book: Refactoring UI](https://www.goodreads.com/book/show/43190966-refactoring-ui) `👀`
+- [ ] [Book: Refactoring UI](https://www.goodreads.com/book/show/43190966-refactoring-ui)
 - [ ] [Book: Inclusive Components](https://www.goodreads.com/book/show/41730458-inclusive-components-accessible-web-interfaces-piece-by-piece?ac=1&from_search=true&qid=TFYA3VHQKH&rank=1)
 - [ ] [Course: Learn CSS ](https://web.dev/learn/css/)
 - [X] [Video: Learn CSS Grid in 20 Minutes](https://youtu.be/0-DY8J_skZ0) `⭐`
