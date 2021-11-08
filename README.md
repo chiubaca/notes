@@ -14,9 +14,14 @@ Inspired by [amitness](https://github.com/amitness/learning).
 # General Coding
 - *[ ] [Book: Clean Code - A Code of Conduct for Professional Programmers ](https://www.goodreads.com/book/show/10284614-the-clean-coder?from_search=true&from_srp=true&qid=hjlFgvTICu&rank=2) `💤`
 - *[ ] [Book: Clean Code - A Handbook of Agile Software Craftsmanship  ](https://www.goodreads.com/book/show/3735293-clean-code?from_search=true&from_srp=true&qid=hjlFgvTICu&rank=1)
-- *[X] [Article: git rebase](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase#:~:text=What%20is%20git%20rebase%3F,of%20a%20feature%20branching%20workflow.)
-- *[X] [Video: Git MERGE vs REBASE](https://www.youtube.com/watch?v=CRlGDDprdOQ)
 - *[X] [Goodbye Clean Code](https://overreacted.io/goodbye-clean-code)`⭐`
+
+## Git
+- *[X] [Article: git rebase](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase#:~:text=What%20is%20git%20rebase%3F,of%20a%20feature%20branching%20workflow.)
+- *[X] [Article: Git rebase: apply your changes onto another branch](https://jeffkreeftmeijer.com/git-rebase/)
+- *[X] [Video: Git MERGE vs REBASE](https://www.youtube.com/watch?v=CRlGDDprdOQ)
+- [Git Ready](http://gitready.com/)
+    - *[X] [Article: Git pull with rebase](http://gitready.com/advanced/2009/02/11/pull-with-rebase.html)
 
 ## JavaScript
 - *[ ] [Book: Eloquent JavaScript](https://eloquentjavascript.net/) `💤`
