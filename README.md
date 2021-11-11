@@ -174,3 +174,4 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - *[ ] [Book: The 7 Habits of Highly Effective People](https://www.goodreads.com/book/show/36072.The_7_Habits_of_Highly_Effective_People?from_search=true&from_srp=true&qid=Ch4yAR1c5V&rank=1) `💤`
 - *[X] [Article: How To Learn Stuff Quickly](https://www.joshwcomeau.com/blog/how-to-learn-stuff-quickly/)`⭐`
 - *[X] [Interactive: How to remeber anything forever-ish](https://ncase.me/remember/)`⭐⭐`
+- *[ ] [The Courage To Be Disliked](https://www.goodreads.com/book/show/43306206-the-courage-to-be-disliked)
