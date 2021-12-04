@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "fleeting-notes/20211203.md",
+            "file": "index-notes/Zettelkasten.md",
             "mode": "source"
           }
         }
@@ -52,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 448
+    "width": 236
   },
   "right": {
     "id": "7d79c914da9cc99e",
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20211203.md",
+                "file": "index-notes/Zettelkasten.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,8 @@
   },
   "active": "2b12fd305ffba17c",
   "lastOpenFiles": [
+    "index-notes/Zettelkasten.md",
+    "permanent-notes/anatomy-of-a-threejs-scene.md",
     "fleeting-notes/20211203.md",
     "fleeting-notes/20211118.md",
     "fleeting-notes/gltf.md",
@@ -95,8 +97,6 @@
     "literature-notes/threejs-journey.md",
     "fleeting-notes/20211119.md",
     "fleeting-notes/20211109.md",
-    "fleeting-notes/20211108.md",
-    "literature-notes/zettelkasten-smart-notes-step-by-step-with-obsidian.md",
-    "index-notes/Three-js.md"
+    "fleeting-notes/20211108.md"
   ]
 }

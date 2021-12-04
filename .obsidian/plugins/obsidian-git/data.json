@@ -1,5 +1,5 @@
 {
-  "commitMessage": "obsidian auto sync: {{date}}",
+  "commitMessage": "obsidian sync: {{date}}",
   "commitDateFormat": "YYYY-MM-DD HH:mm:ss",
   "autoSaveInterval": 0,
   "autoPullInterval": 30,
