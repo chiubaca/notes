@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "fleeting-notes/20211118.md",
+            "file": "fleeting-notes/20211203.md",
             "mode": "source"
           }
         }
@@ -68,13 +68,13 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20211118.md",
+                "file": "fleeting-notes/20211203.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
                 "showSearch": true,
                 "searchQuery": "threejs-journey",
-                "backlinkCollapsed": false,
+                "backlinkCollapsed": true,
                 "unlinkedCollapsed": false
               }
             }
@@ -83,10 +83,12 @@
       }
     ],
     "direction": "horizontal",
-    "width": 500
+    "width": 500,
+    "collapsed": true
   },
   "active": "2b12fd305ffba17c",
   "lastOpenFiles": [
+    "fleeting-notes/20211203.md",
     "fleeting-notes/20211118.md",
     "fleeting-notes/gltf.md",
     "glTF.md",
@@ -95,7 +97,6 @@
     "fleeting-notes/20211109.md",
     "fleeting-notes/20211108.md",
     "literature-notes/zettelkasten-smart-notes-step-by-step-with-obsidian.md",
-    "index-notes/Three-js.md",
-    "fleeting-notes/20210927.md"
+    "index-notes/Three-js.md"
   ]
 }
