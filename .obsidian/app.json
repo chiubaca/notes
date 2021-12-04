@@ -25,5 +25,7 @@
     "colours",
     "fomo"
   ],
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": true,
+  "newFileLocation": "current"
 }
