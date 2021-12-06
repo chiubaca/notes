@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "764f463eb6c71bb3",
+        "id": "7d922f6454e89e9e",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -39,8 +39,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "NFT",
-                "matchingCase": false,
+                "query": "",
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -86,17 +86,17 @@
     "width": 500,
     "collapsed": true
   },
-  "active": "764f463eb6c71bb3",
+  "active": "7d922f6454e89e9e",
   "lastOpenFiles": [
     "fleeting-notes/20211206.md",
+    "fleeting-notes/20211205.md",
+    "fleeting-notes/20211204.md",
     "fleeting-notes/20211203.md",
+    "fleeting-notes/20211108.md",
+    "literature-notes/threejs-journey.md",
     "index-notes/Zettelkasten.md",
     "literature-notes/zettelkasten-smart-notes-step-by-step-with-obsidian.md",
     "permanent-notes/anatomy-of-a-threejs-scene.md",
-    "literature-notes/threejs-journey.md",
-    "index-notes/Svelte.md",
-    "index-notes/Three-js.md",
-    "fleeting-notes/20211118.md",
-    "fleeting-notes/gltf.md"
+    "index-notes/Svelte.md"
   ]
 }
