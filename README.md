@@ -1,7 +1,7 @@
 # Learning
 Compilation of resources that I have read/watched/worked through that have helped me become at least 1% better.
 
-This is also my [Learn-In-Public Micro Journal](https://learning.chiubaca.com).
+This is also my [Learn-In-Public Micro Journal](https://notes.chiubaca.com).
 
 Inspired by [amitness](https://github.com/amitness/learning).
 
