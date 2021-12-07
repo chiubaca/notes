@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "fleeting-notes/20211207.md",
-            "mode": "preview"
+            "file": "README.md",
+            "mode": "source"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20211207.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -88,9 +88,9 @@
   },
   "active": "7d922f6454e89e9e",
   "lastOpenFiles": [
+    "README.md",
     "fleeting-notes/20211207.md",
     "fleeting-notes/20211206.md",
-    "README.md",
     "fleeting-notes/20211205.md",
     "fleeting-notes/20211204.md",
     "fleeting-notes/20211203.md",

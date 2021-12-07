@@ -82,6 +82,7 @@ Inspired by [amitness](https://github.com/amitness/learning).
 ## Misc
 - *[ ] [Course: Create an Eleventy (11ty) Site From Scratch](https://egghead.io/lessons/11ty-create-an-eleventy-11ty-site-from-scratch)
 - *[ ] [Course: Full Stack open 2021](https://fullstackopen.com/en/)
+- *[ ] [Video: From Blender to the Web - the Journey of a 3D Model](https://portal.gitnation.org/contents/from-blender-to-the-web-the-journey-of-a-3d-model)
 
 # Back-end Development
 
