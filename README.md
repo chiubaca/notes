@@ -1,9 +1,9 @@
 # Learning
-Compilation of resources that I have read/watched/worked through that have helped me become at least 1% better.
-
-This is also my [Learn-In-Public Micro Journal](https://notes.chiubaca.com).
+Compilation of resources that I have read/watched/worked through that have helped expand my knowledge.
 
 Inspired by [amitness](https://github.com/amitness/learning).
+
+This is also where I'm organising my [second brain](https://notes.chiubaca.com) using the [Zettelkasten](index-notes/Zettelkasten.md) method.
 
 ## Key
 | Reading | Paused | Recommended |
@@ -94,17 +94,6 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - [X] [Article: Composition vs Inheritance](https://reactjs.org/docs/composition-vs-inheritance.html)`⭐`
 - [X] [Article: Thinking in React](https://reactjs.org/docs/thinking-in-react.html)`⭐`
 
-
-## Misc
-- [ ] [Course: Create an Eleventy (11ty) Site From Scratch](https://egghead.io/lessons/11ty-create-an-eleventy-11ty-site-from-scratch)
-- [ ] [Course: Full Stack open 2021](https://fullstackopen.com/en/)
-- [ ] [Video: From Blender to the Web - the Journey of a 3D Model](https://portal.gitnation.org/contents/from-blender-to-the-web-the-journey-of-a-3d-model)
-- [X] [Article: Reduce Your Website’s Environmental Impact With a Carbon Budge/](https://css-tricks.com/reduce-your-websites-environmental-impact-with-a-carbon-budget/)
--  [X] [https://preactjs.com/guide/v10/differences-to-react](https://preactjs.com/guide/v10/differences-to-react)
--  [X] [https://github.com/vercel/next.js/tree/canary/examples/using-preact](https://github.com/vercel/next.js/tree/canary/examples/using-preact)
--  [X] [https://javascript.plainenglish.io/next-js-preact-f993c95a3f93](https://javascript.plainenglish.io/next-js-preact-f993c95a3f93)
-
-
 # Back-end Development
 
 ## Web Security
@@ -176,8 +165,15 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - [X] [Thesis: Gridless Design](https://gridless.design/) `⭐`
 - [X] [Blog: What is a design system?](https://www.tallan.com/insights/what-is-a-design-system/)
 
-# Misc
+# Uncatagorised
 - [X] [Video: CDN Caching, Static Site Generation, and Server Side Rendering](https://www.youtube.com/watch?v=bfLFHp7Sbkg)
+- [ ] [Course: Create an Eleventy (11ty) Site From Scratch](https://egghead.io/lessons/11ty-create-an-eleventy-11ty-site-from-scratch)
+- [ ] [Course: Full Stack open 2021](https://fullstackopen.com/en/)
+- [ ] [Video: From Blender to the Web - the Journey of a 3D Model](https://portal.gitnation.org/contents/from-blender-to-the-web-the-journey-of-a-3d-model)
+- [X] [Article: Reduce Your Website’s Environmental Impact With a Carbon Budge/](https://css-tricks.com/reduce-your-websites-environmental-impact-with-a-carbon-budget/)
+-  [X] [https://preactjs.com/guide/v10/differences-to-react](https://preactjs.com/guide/v10/differences-to-react)
+-  [X] [https://github.com/vercel/next.js/tree/canary/examples/using-preact](https://github.com/vercel/next.js/tree/canary/examples/using-preact)
+-  [X] [https://javascript.plainenglish.io/next-js-preact-f993c95a3f93](https://javascript.plainenglish.io/next-js-preact-f993c95a3f93)
 
 
 # Broaden Perspective
@@ -192,6 +188,6 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - [X] [Book: So Good They Can't Ignore You](https://www.goodreads.com/book/show/13525945-so-good-they-can-t-ignore-you) `⭐`
 - [x] [Book: The 7 Habits of Highly Effective People](https://www.goodreads.com/book/show/36072.The_7_Habits_of_Highly_Effective_People?from_search=true&from_srp=true&qid=Ch4yAR1c5V&rank=1) `💤`
 - [X] [Article: How To Learn Stuff Quickly](https://www.joshwcomeau.com/blog/how-to-learn-stuff-quickly/)`⭐`
-- [X] [Interactive: How to remeber anything forever-ish](https://ncase.me/remember/)`⭐⭐`
+- [X] [Interactive: How to remember anything forever-ish](https://ncase.me/remember/)`⭐⭐`
 - [X] [The Courage To Be Disliked](https://www.goodreads.com/book/show/43306206-the-courage-to-be-disliked)`💤`
 - [X] [Cleaning Up Your Mental Mess](https://www.goodreads.com/book/show/54080933-cleaning-up-your-mental-mess?ac=1&from_search=true&qid=aXIuw0cbak&rank=1)`👀`
