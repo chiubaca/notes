@@ -15,6 +15,11 @@ Inspired by [amitness](https://github.com/amitness/learning).
 - [ ] [Book: Clean Code - A Code of Conduct for Professional Programmers ](https://www.goodreads.com/book/show/10284614-the-clean-coder?from_search=true&from_srp=true&qid=hjlFgvTICu&rank=2) `💤`
 - [ ] [Book: Clean Code - A Handbook of Agile Software Craftsmanship  ](https://www.goodreads.com/book/show/3735293-clean-code?from_search=true&from_srp=true&qid=hjlFgvTICu&rank=1)
 - [X] [Goodbye Clean Code](https://overreacted.io/goodbye-clean-code)`⭐`
+-   [Learn X in Y minutes](https://learnxinyminutes.com/)
+	-  [ ] [Bash](https://learnxinyminutes.com/docs/bash/)
+	-  [ ]  [Rust](https://learnxinyminutes.com/docs/rust/)
+	-  [ ]  [Go](https://learnxinyminutes.com/docs/go/)
+   
 
 ## Git
 - [X] [Article: git rebase](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase#:~:text=What%20is%20git%20rebase%3F,of%20a%20feature%20branching%20workflow.)
@@ -59,7 +64,14 @@ Inspired by [amitness](https://github.com/amitness/learning).
 
 ## CSS
 - [X] [Blog: Defensive CSS](https://www.livescience.com/little-known-sleep-stage-may-be-creative-sweet-spot)
-- [ ]  [CSS for JS devs](https://css-for-js.dev/)
+- [ ] [Course: CSS for JS devs](https://css-for-js.dev/)
+- [ ] [Book: CSS In Depth ](https://www.manning.com/books/css-in-depth#toc)
+- [ ] [Book: CSS Secrets](https://www.goodreads.com/book/show/20830437-css-secrets)
+- [ ] [Course: Learn CSS ](https://web.dev/learn/css/)
+- [X] [Video: Learn CSS Grid in 20 Minutes](https://youtu.be/0-DY8J_skZ0) `⭐`
+- [X] [Article: A Complete Guide to Flexbox ](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) `⭐`
+- [X] [Article: A Complete Guide to Grid ](https://css-tricks.com/snippets/css/complete-guide-grid/) `⭐`
+- [X] [Article: The Devil's Albatross](https://9elements.com/blog/the-devils-albatros-an-algorithmic-layout-technique/)
 
 ## Vue.js
 - [X] [Book: Vue.js 2 Web Development Projects](https://www.goodreads.com/book/show/36697278-vue-js-2-web-development-projects?from_search=true&from_srp=true&qid=FBPjixxWqo&rank=1)
@@ -91,6 +103,7 @@ Inspired by [amitness](https://github.com/amitness/learning).
 -  [X] [https://preactjs.com/guide/v10/differences-to-react](https://preactjs.com/guide/v10/differences-to-react)
 -  [X] [https://github.com/vercel/next.js/tree/canary/examples/using-preact](https://github.com/vercel/next.js/tree/canary/examples/using-preact)
 -  [X] [https://javascript.plainenglish.io/next-js-preact-f993c95a3f93](https://javascript.plainenglish.io/next-js-preact-f993c95a3f93)
+
 
 # Back-end Development
 
@@ -157,15 +170,9 @@ Inspired by [amitness](https://github.com/amitness/learning).
  - [X] [Tutorials: Set up Prisma from scratch](https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch-typescript-postgres)
 
 ## Design & UI/UX
-- [ ] [Book: CSS In Depth ](https://www.manning.com/books/css-in-depth#toc)
-- [ ] [Book: CSS Secrets](https://www.goodreads.com/book/show/20830437-css-secrets)
+
 - [ ] [Book: Refactoring UI](https://www.goodreads.com/book/show/43190966-refactoring-ui)
 - [ ] [Book: Inclusive Components](https://www.goodreads.com/book/show/41730458-inclusive-components-accessible-web-interfaces-piece-by-piece?ac=1&from_search=true&qid=TFYA3VHQKH&rank=1)
-- [ ] [Course: Learn CSS ](https://web.dev/learn/css/)
-- [x] [Video: Learn CSS Grid in 20 Minutes](https://youtu.be/0-DY8J_skZ0) `⭐`
-- [X] [Article: A Complete Guide to Flexbox ](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) `⭐`
-- [X] [Article: A Complete Guide to Grid ](https://css-tricks.com/snippets/css/complete-guide-grid/) `⭐`
-- [X] [Article: The Devil's Albatross](https://9elements.com/blog/the-devils-albatros-an-algorithmic-layout-technique/)
 - [X] [Thesis: Gridless Design](https://gridless.design/) `⭐`
 - [X] [Blog: What is a design system?](https://www.tallan.com/insights/what-is-a-design-system/)
 
