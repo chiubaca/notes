@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "README.md",
-            "mode": "source"
+            "file": "literature-notes/swapping-react-for-preact-in-nextjs.md",
+            "mode": "preview"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "literature-notes/swapping-react-for-preact-in-nextjs.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "7d922f6454e89e9e",
   "lastOpenFiles": [
+    "literature-notes/swapping-react-for-preact-in-nextjs.md",
+    "fleeting-notes/20211211.md",
+    "fleeting-notes/20211210.md",
+    "fleeting-notes/20211209.md",
+    "literature-notes/zettelkasten-smart-notes-step-by-step-with-obsidian.md",
+    "literature-notes/threejs-journey.md",
+    "fleeting-notes/20211208.md",
     "README.md",
     "fleeting-notes/20211207.md",
-    "fleeting-notes/20211206.md",
-    "fleeting-notes/20211205.md",
-    "fleeting-notes/20211204.md",
-    "fleeting-notes/20211203.md",
-    "fleeting-notes/20211108.md",
-    "literature-notes/threejs-journey.md",
-    "index-notes/Zettelkasten.md",
-    "literature-notes/zettelkasten-smart-notes-step-by-step-with-obsidian.md"
+    "fleeting-notes/20211206.md"
   ]
 }
