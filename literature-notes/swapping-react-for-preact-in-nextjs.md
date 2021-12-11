@@ -72,7 +72,7 @@ There is a Next.js - Preact - TS - Styled Components template at [](https://gith
 
 # References
 
--   [](https://css-tricks.com/reduce-your-websites-environmental-impact-with-a-carbon-budget/)[https://css-tricks.com/reduce-your-websites-environmental-impact-with-a-carbon-budget/](https://css-tricks.com/reduce-your-websites-environmental-impact-with-a-carbon-budget/)
--   [](https://preactjs.com/guide/v10/differences-to-react)[https://preactjs.com/guide/v10/differences-to-react](https://preactjs.com/guide/v10/differences-to-react)
--   [](https://github.com/vercel/next.js/tree/canary/examples/using-preact)[https://github.com/vercel/next.js/tree/canary/examples/using-preact](https://github.com/vercel/next.js/tree/canary/examples/using-preact)
--   [](https://javascript.plainenglish.io/next-js-preact-f993c95a3f93)[https://javascript.plainenglish.io/next-js-preact-f993c95a3f93](https://javascript.plainenglish.io/next-js-preact-f993c95a3f93)
+-   [https://css-tricks.com/reduce-your-websites-environmental-impact-with-a-carbon-budget/](https://css-tricks.com/reduce-your-websites-environmental-impact-with-a-carbon-budget/)
+-   [https://preactjs.com/guide/v10/differences-to-react](https://preactjs.com/guide/v10/differences-to-react)
+-   [https://github.com/vercel/next.js/tree/canary/examples/using-preact](https://github.com/vercel/next.js/tree/canary/examples/using-preact)
+-   [https://javascript.plainenglish.io/next-js-preact-f993c95a3f93](https://javascript.plainenglish.io/next-js-preact-f993c95a3f93)
