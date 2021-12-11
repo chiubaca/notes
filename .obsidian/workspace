@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "permanent-notes/swapping-react-for-preact-in-nextjs.md",
+            "file": "fleeting-notes/20211211.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "permanent-notes/swapping-react-for-preact-in-nextjs.md",
+                "file": "fleeting-notes/20211211.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "1400f20558697080",
   "lastOpenFiles": [
-    "permanent-notes/swapping-react-for-preact-in-nextjs.md",
-    "permanent-notes/anatomy-of-a-threejs-scene.md",
-    "README.md",
-    "fleeting-notes/20211210.md",
     "fleeting-notes/20211211.md",
-    "Untitled 1.md",
-    "Untitled.md",
-    "fleeting-notes/20211209.md",
-    "fleeting-notes/20211208.md",
-    "literature-notes/zettelkasten-smart-notes-step-by-step-with-obsidian.md"
+    "index-notes/Astro.md",
+    "index-notes/Svelte.md",
+    "index-notes/Three-js.md",
+    "literature-notes/threejs-journey.md",
+    "literature-notes/zettelkasten-smart-notes-step-by-step-with-obsidian.md",
+    "permanent-notes/anatomy-of-a-threejs-scene.md",
+    "permanent-notes/swapping-react-for-preact-in-nextjs.md",
+    "README.md",
+    "fleeting-notes/20211210.md"
   ]
 }
