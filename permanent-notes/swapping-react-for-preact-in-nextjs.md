@@ -1,5 +1,5 @@
 ---
-title: swapping-react-for-preact-in-nextjs
+title: Swapping React for Preact in Next.js
 publish_date: 20211210
 last_updated: 20211210
 description: Some notes from swapping React for Preact in Next.js
