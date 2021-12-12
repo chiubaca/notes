@@ -11,7 +11,7 @@ layout: ../../layouts/PermanentNoteLayout.astro
 
 Variables are automatically reactive in `.svelte` files. 
 
-```svelte
+```js
 <script>
 	let count = 0;
 
@@ -30,7 +30,7 @@ Variables are automatically reactive in `.svelte` files.
 
 Note that  sveltes reactivity only happens on re-assignments to variables. so methods like `push()` `pop()`  do not cause any reactivity. The way around this is to clone and reassign arrays making use of the spread operator:
 
-```
+```js
 function addNumber() {
 	numbers = [...numbers, numbers.length + 1];
 }
@@ -39,7 +39,7 @@ function addNumber() {
 ### Reactive Declarations
  aka computed values can be created with the `$` syntax .e.g
  
- ```svelte
+ ```js
 <script>
 	let count = 0;
 	
@@ -63,7 +63,7 @@ function addNumber() {
  ---
 We're not limited to declaring reactive _values_ — we can also run arbitrary _statements_ reactively. For example, we can log the value of `count` whenever it changes:
 
-```
+```js
 $: console.log(`the count is ${count}`);
 ```
 
@@ -78,7 +78,7 @@ $: {
 
 You can even put the `$:` in front of things like `if` blocks:
 
-```
+```js
 $: if (count >= 10) {
 	alert(`count is dangerously high!`);
 	count = 9;
@@ -87,10 +87,10 @@ $: if (count >= 10) {
 
 ---
 
-### Props
+## Props
 
 props for components are exposed using the `export keyword` e.g
-```
+```js
 // Nested.svelete
 
 <script>
@@ -100,7 +100,7 @@ props for components are exposed using the `export keyword` e.g
 <p>The answer is {answer}</p>
 ```
 
-```
+```js
 //App.svelte
 
 <script>
@@ -122,3 +122,35 @@ Default props can e applied by defining it at the export
 
 <p>The answer is {answer}</p>
 ```
+
+## Svelte Syntax
+
+### Loops
+```js
+{#each things as thing (thing.id)}
+	<Thing name={thing.name}/>
+{/each}
+
+```
+
+### Suspense
+a.k.a, async rendering
+
+```
+{#await promise}
+	<p>...waiting</p>
+{:then number}
+	<p>The number is {number}</p>
+{:catch error}
+	<p style="color: red">{error.message}</p>
+{/await}
+```
+
+
+## Two-way Data Binding
+
+[20211212](../fleeting-notes/20211212.md)
+
+## Stores`
+
+[20211212](../fleeting-notes/20211212.md)
