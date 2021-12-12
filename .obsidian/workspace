@@ -4,12 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "572725bd4407f1d1",
+        "id": "f6d9cfd273bb10e4",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "README.md",
+            "file": "permanent-notes/svelte-basics.md",
+            "mode": "source"
+          }
+        }
+      },
+      {
+        "id": "abaac784b8d0bc0c",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "fleeting-notes/20211002.md",
             "mode": "source"
           }
         }
@@ -68,14 +79,14 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "permanent-notes/svelte-basics.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
                 "showSearch": true,
-                "searchQuery": "threejs-journey",
-                "backlinkCollapsed": true,
-                "unlinkedCollapsed": false
+                "searchQuery": "svelte",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
               }
             }
           }
@@ -86,17 +97,17 @@
     "width": 500,
     "collapsed": true
   },
-  "active": "572725bd4407f1d1",
+  "active": "f6d9cfd273bb10e4",
   "lastOpenFiles": [
+    "permanent-notes/svelte-basics.md",
+    "permanent-notes/anatomy-of-a-threejs-scene.md",
+    "permanent-notes/swapping-react-for-preact-in-nextjs.md",
     "README.md",
-    "index-notes/Zettelkasten.md",
-    "literature-notes/zettelkasten-smart-notes-step-by-step-with-obsidian.md",
-    "fleeting-notes/20211210.md",
-    "fleeting-notes/20211211.md",
-    "index-notes/Astro.md",
+    "fleeting-notes/20211002.md",
     "index-notes/Svelte.md",
+    "fleeting-notes/20210425.md",
+    "index-notes/Zettelkasten.md",
     "index-notes/Three-js.md",
-    "literature-notes/threejs-journey.md",
-    "permanent-notes/anatomy-of-a-threejs-scene.md"
+    "literature-notes/zettelkasten-smart-notes-step-by-step-with-obsidian.md"
   ]
 }
