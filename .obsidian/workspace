@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "permanent-notes/svelte-basics.md",
+            "file": "fleeting-notes/20211213.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "permanent-notes/svelte-basics.md",
+                "file": "fleeting-notes/20211213.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "0c66015c3e88c7a3",
   "lastOpenFiles": [
-    "permanent-notes/svelte-basics.md",
+    "fleeting-notes/20211213.md",
     "fleeting-notes/20211212.md",
+    "permanent-notes/svelte-basics.md",
     "index-notes/Three-js.md",
     "fleeting-notes/20211013.md",
     "index-notes/Astro.md",
     "index-notes/Svelte.md",
     "fleeting-notes/20211002.md",
     "literature-notes/threejs-journey.md",
-    "fleeting-notes/20211211.md",
-    "permanent-notes/anatomy-of-a-threejs-scene.md"
+    "fleeting-notes/20211211.md"
   ]
 }
