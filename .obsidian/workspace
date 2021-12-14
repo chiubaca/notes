@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "0c66015c3e88c7a3",
+        "id": "188bb9c27bed3366",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "fleeting-notes/20211213.md",
+            "file": "fleeting-notes/20211214.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20211213.md",
+                "file": "fleeting-notes/20211214.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -86,17 +86,17 @@
     "width": 500,
     "collapsed": true
   },
-  "active": "0c66015c3e88c7a3",
+  "active": "188bb9c27bed3366",
   "lastOpenFiles": [
+    "fleeting-notes/20211214.md",
     "fleeting-notes/20211213.md",
+    "fleeting-notes/20211211.md",
     "fleeting-notes/20211212.md",
-    "permanent-notes/svelte-basics.md",
-    "index-notes/Three-js.md",
-    "fleeting-notes/20211013.md",
-    "index-notes/Astro.md",
-    "index-notes/Svelte.md",
-    "fleeting-notes/20211002.md",
-    "literature-notes/threejs-journey.md",
-    "fleeting-notes/20211211.md"
+    "fleeting-notes/20211208 (1).md",
+    "fleeting-notes/20211207 (1).md",
+    "fleeting-notes/20211211 (1).md",
+    "fleeting-notes/20211210 (1).md",
+    "fleeting-notes/20211209 (1).md",
+    "fleeting-notes/20211212 (1).md"
   ]
 }
