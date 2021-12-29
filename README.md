@@ -94,6 +94,11 @@ This is also where I'm organising my [second brain](https://notes.chiubaca.com) 
 - [X] [Article: Composition vs Inheritance](https://reactjs.org/docs/composition-vs-inheritance.html)`⭐`
 - [X] [Article: Thinking in React](https://reactjs.org/docs/thinking-in-react.html)`⭐`
 
+## Svelte
+- [ ] [Svelte 3: Rethinking reactivity](https://svelte.dev/blog/svelte-3-rethinking-reactivity)
+- [X] [Virtual DOM is pure overhead](https://svelte.dev/blog/virtual-dom-is-pure-overhead)
+- [X]  [How to add module import aliases in SvelteKit](https://dev.to/danawoodman/how-to-add-module-import-aliases-in-sveltekit-2ck)
+
 # Back-end Development
 
 ## Web Security
