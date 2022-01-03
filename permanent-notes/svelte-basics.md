@@ -206,3 +206,15 @@ Svelte also handle converting values from numbers to strings, this is helpful wh
 ## Stores
 
 [20211212](../fleeting-notes/20211212.md)
+
+
+## Debugging
+
+```
+{@debug user}
+
+// these do the same things
+
+{console.log(user)}
+
+```

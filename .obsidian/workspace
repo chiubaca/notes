@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "permanent-notes/svelte-basics.md",
+            "file": "fleeting-notes/20220103.md",
             "mode": "source"
           }
         }
@@ -79,7 +79,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20220102.md",
+                "file": "fleeting-notes/20220103.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -97,17 +97,17 @@
     "width": 500,
     "collapsed": true
   },
-  "active": "d30eb81419e1a1aa",
+  "active": "188bb9c27bed3366",
   "lastOpenFiles": [
-    "fleeting-notes/20220102.md",
+    "fleeting-notes/20220103.md",
     "permanent-notes/svelte-basics.md",
+    "fleeting-notes/20220102.md",
     "permanent-notes/anatomy-of-a-threejs-scene.md",
     "index-notes/Svelte.md",
     "literature-notes/zettelkasten-smart-notes-step-by-step-with-obsidian.md",
     "literature-notes/threejs-journey.md",
     "literature-notes/consuming-less-javascript-in-our-frontends.md",
     "permanent-notes/swapping-react-for-preact-in-nextjs.md",
-    "fleeting-notes/20211212.md",
-    "fleeting-notes/20211230.md"
+    "fleeting-notes/20211212.md"
   ]
 }
