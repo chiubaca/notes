@@ -27,7 +27,8 @@
     "organising",
     "Uncatagorised",
     "Vue",
-    "async"
+    "async",
+    "lifecycle"
   ],
   "alwaysUpdateLinks": true,
   "showUnsupportedFiles": true,

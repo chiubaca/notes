@@ -7,6 +7,9 @@ status: draft
 layout: ../../layouts/PermanentNoteLayout.astro
 ---
 
+# Svelte Basics
+Notes on using Svelte.js
+
 ## Reactivity
 
 Variables are automatically reactive in `.svelte` files. 
@@ -149,8 +152,57 @@ a.k.a, async rendering
 
 ## Two-way Data Binding
 
+Two way data binding works very similar to Vue.js. element values can be binded both ways to read and edit data 
+
+```html
+<script>
+	let name = 'world';
+</script>
+
+<input bind:value={name}>
+
+<h1>Hello {name}!</h1>
+```
+
+
+`bind` works across pretty much everything you expect it to including `textarea` `input` `select` and even `contenteditable` on divs
+
+Svelte provides reactive bindings to `audio` and `video` elements 
+The complete set of bindings for `<audio>` and `<video>` is as follows — six _readonly_ bindings...
+
+-   `duration` (readonly) — the total duration of the video, in seconds
+-   `buffered` (readonly) — an array of `{start, end}` objects
+-   `seekable` (readonly) — ditto
+-   `played` (readonly) — ditto
+-   `seeking` (readonly) — boolean
+-   `ended` (readonly) — boolean
+
+...and five _two-way_ bindings:
+
+-   `currentTime` — the current point in the video, in seconds
+-   `playbackRate` — how fast to play the video, where `1` is 'normal'
+-   `paused` — this one should be self-explanatory
+-   `volume` — a value between 0 and 1
+-   `muted` — a boolean value where true is muted
+
+Videos additionally have readonly `videoWidth` and `videoHeight` bindings.
+
+----
+
+Svelte also handle converting values from numbers to strings, this is helpful when you're dealing with numeric inputs — `type="number"` and `type="range"` — as it means you have to remember to coerce `input.value` before using it.
+
+```html
+<script>
+	let a = 1;
+</script>
+
+
+<input type=number bind:value={a} min=0 max=10>
+<input type=range bind:value={a} min=0 max=10>
+```
+
 [20211212](../fleeting-notes/20211212.md)
 
-## Stores`
+## Stores
 
 [20211212](../fleeting-notes/20211212.md)
