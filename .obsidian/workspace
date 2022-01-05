@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "fleeting-notes/20220104.md",
+            "file": "fleeting-notes/20220105.md",
             "mode": "source"
           }
         }
@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "svelte",
+                "query": "20210929",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20220104.md",
+                "file": "fleeting-notes/20220105.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "188bb9c27bed3366",
   "lastOpenFiles": [
+    "fleeting-notes/20220105.md",
     "fleeting-notes/20220104.md",
+    "fleeting-notes/20210929.md",
+    "fleeting-notes/20210930.md",
+    "fleeting-notes/20211001.md",
+    "fleeting-notes/20210928.md",
+    "fleeting-notes/20211029.md",
+    "fleeting-notes/20211028.md",
     "fleeting-notes/20220103.md",
-    "fleeting-notes/20211212.md",
-    "permanent-notes/svelte-basics.md",
-    "fleeting-notes/20220102.md",
-    "permanent-notes/anatomy-of-a-threejs-scene.md",
-    "index-notes/Svelte.md",
-    "literature-notes/zettelkasten-smart-notes-step-by-step-with-obsidian.md",
-    "literature-notes/threejs-journey.md",
-    "literature-notes/consuming-less-javascript-in-our-frontends.md"
+    "fleeting-notes/20211212.md"
   ]
 }
