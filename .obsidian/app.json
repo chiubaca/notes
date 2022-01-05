@@ -28,7 +28,9 @@
     "Uncatagorised",
     "Vue",
     "async",
-    "lifecycle"
+    "lifecycle",
+    "organises",
+    "eslint"
   ],
   "alwaysUpdateLinks": true,
   "showUnsupportedFiles": true,
