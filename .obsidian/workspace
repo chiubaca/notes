@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "fleeting-notes/20220105.md",
+            "file": "fleeting-notes/20220106.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20220105.md",
+                "file": "fleeting-notes/20220106.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,7 @@
   },
   "active": "188bb9c27bed3366",
   "lastOpenFiles": [
+    "fleeting-notes/20220106.md",
     "fleeting-notes/20220105.md",
     "fleeting-notes/20220104.md",
     "fleeting-notes/20210929.md",
@@ -96,7 +97,6 @@
     "fleeting-notes/20210928.md",
     "fleeting-notes/20211029.md",
     "fleeting-notes/20211028.md",
-    "fleeting-notes/20220103.md",
-    "fleeting-notes/20211212.md"
+    "fleeting-notes/20220103.md"
   ]
 }
