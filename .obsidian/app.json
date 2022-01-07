@@ -30,7 +30,8 @@
     "async",
     "lifecycle",
     "organises",
-    "eslint"
+    "eslint",
+    "SVGs"
   ],
   "alwaysUpdateLinks": true,
   "showUnsupportedFiles": true,
