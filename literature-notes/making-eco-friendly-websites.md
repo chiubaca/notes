@@ -1,7 +1,7 @@
 ---
 title: consuming-less-javascript-in-our-frontends
 publish_date: 20211226
-last_updated: 20211227
+last_updated: 20220107
 description: Consuming less JavaScript in our frontend applications
 layout: ../../layouts/LiteratureNoteLayout.astro
 ---
@@ -96,6 +96,15 @@ Worth noting, we could also achieve a similar effect using JS using the browsers
  ![](Pasted%20image%2020220106182550.png)
 
 ## Less JavaScript
+
+This is slightly controversial as we are hired as Javascript developers. I guess what I really mean by this is to be smarter with Javascript.
+
+The rise in website sizes is directly correlated to when client side rendering library like Angular, React  Vue started becoming very popular, roughly between 2010 until now. 
+
+Fortunately this trend seems to be swinging back the other way and SSR techniques which PHP popularized  is starting to become more and more favorable. 
+
+I really like this article titled  ' The Third Age of JavaScript'
+
 
 - tree shaking
 
