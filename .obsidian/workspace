@@ -79,7 +79,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20220108.md",
+                "file": "fleeting-notes/20211226.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -97,17 +97,17 @@
     "width": 500,
     "collapsed": true
   },
-  "active": "188bb9c27bed3366",
+  "active": "283a6935559b0dbd",
   "lastOpenFiles": [
-    "fleeting-notes/20220108.md",
     "fleeting-notes/20211226.md",
-    "literature-notes/making-eco-friendly-websites.md",
+    "fleeting-notes/20220108.md",
     "fleeting-notes/20220107.md",
+    "fleeting-notes/20220109.md",
+    "literature-notes/making-eco-friendly-websites.md",
     "fleeting-notes/20220106.md",
     "permanent-notes/anatomy-of-a-threejs-scene.md",
     "permanent-notes/swapping-react-for-preact-in-nextjs.md",
     "fleeting-notes/20220105.md",
-    "fleeting-notes/20220104.md",
-    "fleeting-notes/20210929.md"
+    "fleeting-notes/20220104.md"
   ]
 }
