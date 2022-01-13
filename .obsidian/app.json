@@ -31,7 +31,10 @@
     "lifecycle",
     "organises",
     "eslint",
-    "SVGs"
+    "SVGs",
+    "Javascript",
+    "Penso",
+    "facebook"
   ],
   "alwaysUpdateLinks": true,
   "showUnsupportedFiles": true,
