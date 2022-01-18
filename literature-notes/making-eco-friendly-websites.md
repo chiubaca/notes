@@ -118,6 +118,11 @@ I guess what I really mean by this is to be smarter with Javascript.
 
 To make environmentally friendly sites as developers we should be doing our best to ship no mode code than is truly required for the end-user. This is even more important now we're shipping more client heavy application in the form of SPA/ PWA's
 
+great talk about the cost of JS - https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4
+
+too much js can impact TTI(time to interactive)
+it cost energy to parse code, more importantly it will have negative impact on UX
+
 Some sub-strategies for this.
 
 
@@ -148,7 +153,6 @@ A must in modern front-end development. Fortunately most frameworks has configur
 #### Tree shaking
 
 when we import our modules  using  ES module syntax like so:
-```
 ```js
 import { capitalize } from "lodash";✅ do this 
 
@@ -244,5 +248,8 @@ RSC will only send back HTML to the client without any JS bundle a
 - https://www.speedcurve.com/blog/web-performance-page-bloat/
 - https://www.swyx.io/js-third-age/
 - https://developers.google.com/web/fundamentals/performance/optimizing-javascript/tree-shaking/
+- https://blog.logrocket.com/lazy-loading-components-in-react-16-6-6cea535c0b52/
 
 - https://reactjs.org/blog/2020/12/21/data-fetching-with-react-server-components.html
+- https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4
+- https://www.wired.co.uk/article/internet-carbon-footprint
