@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "literature-notes/must-have-mac-apps.md",
+            "file": "permanent-notes/must-have-mac-apps.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "literature-notes/must-have-mac-apps.md",
+                "file": "permanent-notes/must-have-mac-apps.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -89,7 +89,7 @@
   },
   "active": "188bb9c27bed3366",
   "lastOpenFiles": [
-    "literature-notes/must-have-mac-apps.md",
+    "permanent-notes/must-have-mac-apps.md",
     "literature-notes/making-eco-friendly-websites.md",
     "fleeting-notes/20220123.md",
     "fleeting-notes/20220122.md",
