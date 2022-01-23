@@ -2,7 +2,7 @@
 title: must-have-mac-apps
 publish_date: 20220123
 last_updated: 20220123
-description: Notes from threejs-journey.xyz
+description: Must have mac apps
 layout: ../../layouts/LiteratureNoteLayout.astro
 ---
 
