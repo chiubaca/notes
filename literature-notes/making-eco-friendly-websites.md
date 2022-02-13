@@ -253,3 +253,8 @@ RSC will only send back HTML to the client without any JS bundle a
 - https://reactjs.org/blog/2020/12/21/data-fetching-with-react-server-components.html
 - https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4
 - https://www.wired.co.uk/article/internet-carbon-footprint
+
+To read...
+
+- https://vwo.com/blog/reduce-website-carbon-footprint/
+-  https://kinsta.com/blog/zero-carbon-websites/
