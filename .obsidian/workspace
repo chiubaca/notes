@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "fleeting-notes/20220303.md",
+            "file": "fleeting-notes/20220307.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20220303.md",
+                "file": "fleeting-notes/20220307.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "188bb9c27bed3366",
   "lastOpenFiles": [
+    "fleeting-notes/20220307.md",
+    "fleeting-notes/20220306.md",
+    "fleeting-notes/20220305.md",
+    "fleeting-notes/20220304.md",
     "fleeting-notes/20220303.md",
     "fleeting-notes/20220302.md",
     "fleeting-notes/20220301.md",
     "fleeting-notes/20220228.md",
     "fleeting-notes/20220227.md",
-    "fleeting-notes/20220222.md",
-    "permanent-notes/must-have-mac-apps.md",
-    "fleeting-notes/20220226.md",
-    "fleeting-notes/20220225.md",
-    "fleeting-notes/20220219.md"
+    "fleeting-notes/20220222.md"
   ]
 }
