@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "fleeting-notes/20220326.md",
+            "file": "fleeting-notes/20220327.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20220326.md",
+                "file": "fleeting-notes/20220327.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "188bb9c27bed3366",
   "lastOpenFiles": [
+    "fleeting-notes/20220327.md",
     "fleeting-notes/20220326.md",
+    "fleeting-notes/20220328.md",
+    "fleeting-notes/20210912.md",
+    "literature-notes/threejs-journey.md",
+    "literature-notes/zettelkasten-smart-notes-step-by-step-with-obsidian.md",
+    "fleeting-notes/I've seen is not 100% correct and has more nuances depending on the region you want to ship to!.md",
     "fleeting-notes/20220325.md",
     "fleeting-notes/20220324.md",
-    "fleeting-notes/20220323.md",
-    "fleeting-notes/20220322.md",
-    "fleeting-notes/20220320.md",
-    "fleeting-notes/20220321.md",
-    "fleeting-notes/20220318.md",
-    "fleeting-notes/20220319.md",
-    "fleeting-notes/20220316.md"
+    "fleeting-notes/20220323.md"
   ]
 }
