@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "fleeting-notes/20220402.md",
+            "file": "fleeting-notes/20220403.md",
             "mode": "source",
             "source": false
           }
@@ -81,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20220402.md",
+                "file": "fleeting-notes/20220403.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -101,9 +101,9 @@
   },
   "active": "188bb9c27bed3366",
   "lastOpenFiles": [
+    "fleeting-notes/20220403.md",
     "fleeting-notes/20220402.md",
     "literature-notes/building-a-headless-dropshipping-site.md",
-    "fleeting-notes/20220403.md",
     "fleeting-notes/20220401.md",
     "fleeting-notes/20220331.md",
     "fleeting-notes/20220330.md",
