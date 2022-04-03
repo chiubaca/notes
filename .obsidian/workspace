@@ -9,7 +9,19 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "fleeting-notes/20220327.md",
+            "file": "fleeting-notes/20220402.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "1de4badf586ba0f3",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "literature-notes/building-a-headless-dropshipping-site.md",
             "mode": "source",
             "source": false
           }
@@ -53,7 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 416
+    "width": 529
   },
   "right": {
     "id": "7d79c914da9cc99e",
@@ -69,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20220327.md",
+                "file": "fleeting-notes/20220402.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -89,15 +101,15 @@
   },
   "active": "188bb9c27bed3366",
   "lastOpenFiles": [
-    "fleeting-notes/20220327.md",
-    "fleeting-notes/20220326.md",
+    "fleeting-notes/20220402.md",
+    "literature-notes/building-a-headless-dropshipping-site.md",
+    "fleeting-notes/20220403.md",
+    "fleeting-notes/20220401.md",
+    "fleeting-notes/20220331.md",
+    "fleeting-notes/20220330.md",
+    "fleeting-notes/20220329.md",
     "fleeting-notes/20220328.md",
-    "fleeting-notes/20210912.md",
-    "literature-notes/threejs-journey.md",
-    "literature-notes/zettelkasten-smart-notes-step-by-step-with-obsidian.md",
-    "fleeting-notes/I've seen is not 100% correct and has more nuances depending on the region you want to ship to!.md",
-    "fleeting-notes/20220325.md",
-    "fleeting-notes/20220324.md",
-    "fleeting-notes/20220323.md"
+    "fleeting-notes/20220327.md",
+    "fleeting-notes/20220326.md"
   ]
 }
