@@ -72,6 +72,7 @@ This is also where I'm organising my [second brain](https://notes.chiubaca.com) 
 - [X] [Article: A Complete Guide to Flexbox ](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) `⭐`
 - [X] [Article: A Complete Guide to Grid ](https://css-tricks.com/snippets/css/complete-guide-grid/) `⭐`
 - [X] [Article: The Devil's Albatross](https://9elements.com/blog/the-devils-albatros-an-algorithmic-layout-technique/)
+- [ ] [Article: CSS Variables for React Devs](https://www.joshwcomeau.com/css/css-variables-for-react-devs/)
 
 ## Vue.js
 - [X] [Book: Vue.js 2 Web Development Projects](https://www.goodreads.com/book/show/36697278-vue-js-2-web-development-projects?from_search=true&from_srp=true&qid=FBPjixxWqo&rank=1)
