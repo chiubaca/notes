@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "fleeting-notes/20220405.md",
+            "file": "fleeting-notes/20220417.md",
             "mode": "source",
             "source": false
           }
@@ -65,7 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 529
+    "width": 248
   },
   "right": {
     "id": "7d79c914da9cc99e",
@@ -81,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20220405.md",
+                "file": "fleeting-notes/20220417.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -101,6 +101,7 @@
   },
   "active": "188bb9c27bed3366",
   "lastOpenFiles": [
+    "fleeting-notes/20220417.md",
     "fleeting-notes/20220405.md",
     "fleeting-notes/20220406.md",
     "fleeting-notes/20220404.md",
@@ -109,7 +110,6 @@
     "literature-notes/building-a-headless-dropshipping-site.md",
     "fleeting-notes/20220401.md",
     "fleeting-notes/20220331.md",
-    "fleeting-notes/20220330.md",
-    "fleeting-notes/20220329.md"
+    "fleeting-notes/20220330.md"
   ]
 }
