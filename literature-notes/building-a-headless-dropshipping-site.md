@@ -1,7 +1,7 @@
 ---
 title: making-eco-friendly-websites
 publish_date: 20220403
-last_updated: 20220403
+last_updated: 20220423
 description: Notes on building a headless dropping site
 layout: ../../layouts/LiteratureNoteLayout.astro
 ---
@@ -11,8 +11,8 @@ layout: ../../layouts/LiteratureNoteLayout.astro
 
 ### Business logic
 - [x] Connect to Printful api to get all products
-- [ ] Build storefront
-	- [ ] Show all items
+- [x] Build storefront
+	- [x] Show all items
 	- [ ] Show individual item
 		- [ ] Show all variants of individual item
 	- [ ] Checkout
@@ -21,7 +21,9 @@ layout: ../../layouts/LiteratureNoteLayout.astro
 		- [ ] Workout shipping costs
 		- [ ] SPIKE - explore stripe
 	- [ ] 
- 
+
+## Payments
+
 
 # References
  - https://github.com/notrab/printful-request

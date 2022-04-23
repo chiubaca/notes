@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "fleeting-notes/20220421.md",
+            "file": "fleeting-notes/20220422.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20220421.md",
+                "file": "fleeting-notes/20220422.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "1aa1198579b24b72",
   "lastOpenFiles": [
+    "fleeting-notes/20220422.md",
     "fleeting-notes/20220421.md",
-    "fleeting-notes/20220104.md",
-    "literature-notes/building-a-headless-dropshipping-site.md",
     "fleeting-notes/20220420.md",
+    "literature-notes/paypal-sdk.md",
+    "literature-notes/making-eco-friendly-websites.md",
+    "literature-notes/building-a-headless-dropshipping-site.md",
+    "fleeting-notes/20220104.md",
     "fleeting-notes/20220419.md",
     "fleeting-notes/20220418.md",
-    "fleeting-notes/20220417.md",
-    "fleeting-notes/20220405.md",
-    "fleeting-notes/20220406.md",
-    "fleeting-notes/20220404.md"
+    "fleeting-notes/20220417.md"
   ]
 }
