@@ -9,3 +9,4 @@ layout: ../../layouts/PermanentNoteLayout.astro
 https://pilotmoon.com/scrollreverser/
 https://github.com/MonitorControl/MonitorControl
 https://rectangleapp.com/
+https://github.com/kyleneideck/BackgroundMusic
