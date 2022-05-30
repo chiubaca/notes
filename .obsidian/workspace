@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "fleeting-notes/20220523.md",
+            "file": "fleeting-notes/20220529.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20220523.md",
+                "file": "fleeting-notes/20220529.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "1aa1198579b24b72",
   "lastOpenFiles": [
+    "fleeting-notes/20220529.md",
+    "fleeting-notes/20220528.md",
+    "fleeting-notes/20220527.md",
+    "fleeting-notes/20220526.md",
+    "fleeting-notes/20220525.md",
+    "fleeting-notes/20220524.md",
     "fleeting-notes/20220523.md",
     "fleeting-notes/20220522.md",
-    "fleeting-notes/20220524.md",
-    "fleeting-notes/20220525.md",
     "fleeting-notes/20220521.md",
-    "permanent-notes/must-have-mac-apps.md",
-    "fleeting-notes/20220520.md",
-    "fleeting-notes/20220519.md",
-    "permanent-notes/svelte-basics.md",
-    "fleeting-notes/20220518.md"
+    "permanent-notes/must-have-mac-apps.md"
   ]
 }
