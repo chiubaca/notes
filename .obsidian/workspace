@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "fleeting-notes/20220606.md",
+            "file": "fleeting-notes/20220611.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20220606.md",
+                "file": "fleeting-notes/20220611.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "1aa1198579b24b72",
   "lastOpenFiles": [
+    "fleeting-notes/20220611.md",
+    "fleeting-notes/20220610.md",
+    "fleeting-notes/20220609.md",
+    "fleeting-notes/20220608.md",
+    "fleeting-notes/20220607.md",
     "fleeting-notes/20220606.md",
     "fleeting-notes/20220605.md",
     "fleeting-notes/20220604.md",
     "fleeting-notes/20220603.md",
-    "fleeting-notes/20220602.md",
-    "fleeting-notes/20200910.md",
-    "fleeting-notes/20211212.md",
-    "permanent-notes/svelte-basics.md",
-    "index-notes/Svelte.md",
-    "fleeting-notes/20211002.md"
+    "fleeting-notes/20220602.md"
   ]
 }
