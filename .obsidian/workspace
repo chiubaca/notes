@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "fleeting-notes/20220704.md",
+            "file": "fleeting-notes/20220709.md",
             "mode": "source",
             "source": false
           }
@@ -53,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 241
+    "width": 364
   },
   "right": {
     "id": "7d79c914da9cc99e",
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20220704.md",
+                "file": "fleeting-notes/20220709.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "1aa1198579b24b72",
   "lastOpenFiles": [
+    "fleeting-notes/20220709.md",
+    "fleeting-notes/20220710.md",
+    "fleeting-notes/20220708.md",
+    "fleeting-notes/20220707.md",
+    "fleeting-notes/20220711.md",
+    "fleeting-notes/20220706.md",
+    "fleeting-notes/20220705.md",
     "fleeting-notes/20220704.md",
     "fleeting-notes/20220703.md",
-    "fleeting-notes/20220702.md",
-    "fleeting-notes/20220701.md",
-    "fleeting-notes/20220630.md",
-    "fleeting-notes/20220629.md",
-    "fleeting-notes/20220628.md",
-    "fleeting-notes/20220627.md",
-    "fleeting-notes/20220626.md",
-    "fleeting-notes/20220625.md"
+    "fleeting-notes/20220702.md"
   ]
 }
