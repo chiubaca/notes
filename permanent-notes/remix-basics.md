@@ -18,6 +18,8 @@ layout: ../../layouts/PermanentNoteLayout.astro
 
 - File based routing works different to Next.js. You can the name of the file will correspond the route its on and will only render if it matches. This _must_ be using in conjuction with the `Outlet` component
 
+- Remix projects will have `.server` and `.client` file extension names . These are not just naming conventions but also are hints to the Remix compiler to prevent server code leaking into client side code and vice versa. It can help with tree shaking.
+
 
 References
 - [20220717](../fleeting-notes/20220717.md)
