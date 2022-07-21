@@ -9,19 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "permanent-notes/remix-basics.md",
-            "mode": "source",
-            "source": false
-          }
-        }
-      },
-      {
-        "id": "2bca2e429be47690",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "fleeting-notes/20220720.md",
+            "file": "fleeting-notes/20220721.md",
             "mode": "source",
             "source": false
           }
@@ -52,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "full bleed",
+                "query": "svelte store",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -61,12 +49,11 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 364
+    "width": 241
   },
   "right": {
     "id": "7d79c914da9cc99e",
@@ -82,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20220720.md",
+                "file": "fleeting-notes/20220721.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -100,17 +87,17 @@
     "width": 500,
     "collapsed": true
   },
-  "active": "2bca2e429be47690",
+  "active": "1aa1198579b24b72",
   "lastOpenFiles": [
-    "fleeting-notes/20220720.md",
-    "fleeting-notes/Pasted image 20220711180651.png",
-    "fleeting-notes/20220719.md",
-    "fleeting-notes/20220718.md",
-    "fleeting-notes/20220717.md",
-    "permanent-notes/remix-basics.md",
-    "permanent-notes/svelte-basics.md",
-    "permanent-notes/must-have-mac-apps.md",
-    "fleeting-notes/20220716.md",
-    "fleeting-notes/20201223.md"
+    "fleeting-notes/20220721.md",
+    "fleeting-notes/20220619.md",
+    "fleeting-notes/20220618.md",
+    "fleeting-notes/20220617.md",
+    "fleeting-notes/Pasted image 20220611144043.png",
+    "fleeting-notes/().md",
+    "fleeting-notes/20200910.md",
+    "fleeting-notes/20220616.md",
+    "fleeting-notes/20220615.md",
+    "fleeting-notes/20220614.md"
   ]
 }
