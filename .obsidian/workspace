@@ -9,9 +9,19 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "fleeting-notes/20220721.md",
+            "file": "fleeting-notes/20220724.md",
             "mode": "source",
             "source": false
+          }
+        }
+      },
+      {
+        "id": "2bca2e429be47690",
+        "type": "leaf",
+        "state": {
+          "type": "image",
+          "state": {
+            "file": "fleeting-notes/Pasted image 20220711180651.png"
           }
         }
       }
@@ -40,7 +50,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "svelte store",
+                "query": "full bleed",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -53,7 +63,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 241
+    "width": 245
   },
   "right": {
     "id": "7d79c914da9cc99e",
@@ -69,7 +79,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20220721.md",
+                "file": "fleeting-notes/20220724.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -89,15 +99,15 @@
   },
   "active": "1aa1198579b24b72",
   "lastOpenFiles": [
+    "fleeting-notes/20220724.md",
+    "fleeting-notes/20220723.md",
+    "fleeting-notes/20220725.md",
+    "fleeting-notes/20220726.md",
+    "fleeting-notes/20220722.md",
     "fleeting-notes/20220721.md",
-    "fleeting-notes/20220619.md",
-    "fleeting-notes/20220618.md",
-    "fleeting-notes/20220617.md",
-    "fleeting-notes/Pasted image 20220611144043.png",
-    "fleeting-notes/().md",
-    "fleeting-notes/20200910.md",
-    "fleeting-notes/20220616.md",
-    "fleeting-notes/20220615.md",
-    "fleeting-notes/20220614.md"
+    "fleeting-notes/20220720.md",
+    "permanent-notes/remix-basics.md",
+    "fleeting-notes/Pasted image 20220711180651.png",
+    "fleeting-notes/20220719.md"
   ]
 }
