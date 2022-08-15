@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "993bef2a18658cf9",
+        "id": "1aa1198579b24b72",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "full bleed",
+                "query": "svelte store",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -53,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 245
+    "width": 241
   },
   "right": {
     "id": "7d79c914da9cc99e",
@@ -87,17 +87,17 @@
     "width": 500,
     "collapsed": true
   },
-  "active": "993bef2a18658cf9",
+  "active": "1aa1198579b24b72",
   "lastOpenFiles": [
-    "fleeting-notes/20220814.md",
-    "fleeting-notes/20220813.md",
-    "literature-notes/making-eco-friendly-websites.md",
-    "literature-notes/building-a-headless-dropshipping-site.md",
-    "fleeting-notes/20220811.md",
-    "fleeting-notes/20220812.md",
-    "fleeting-notes/20220810.md",
-    "fleeting-notes/20220809.md",
-    "fleeting-notes/20220808.md",
-    "fleeting-notes/20220807.md"
+    "fleeting-notes/20220724.md",
+    "fleeting-notes/20220722.md",
+    "fleeting-notes/20220721.md",
+    "fleeting-notes/20220723.md",
+    "fleeting-notes/20220619.md",
+    "fleeting-notes/20220618.md",
+    "fleeting-notes/20220617.md",
+    "fleeting-notes/Pasted image 20220611144043.png",
+    "fleeting-notes/().md",
+    "fleeting-notes/20200910.md"
   ]
 }
