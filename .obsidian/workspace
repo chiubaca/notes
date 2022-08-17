@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "full bleed",
+                "query": "animated border",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -49,7 +49,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -87,7 +88,7 @@
     "width": 500,
     "collapsed": true
   },
-  "active": "993bef2a18658cf9",
+  "active": "a115ee82096eefc4",
   "lastOpenFiles": [
     "fleeting-notes/20220815.md",
     "fleeting-notes/20220814.md",
