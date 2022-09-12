@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "fleeting-notes/20220909.md",
+            "file": "fleeting-notes/20220912.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20220909.md",
+                "file": "fleeting-notes/20220912.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "89fe92cc166cab1b",
   "lastOpenFiles": [
-    "fleeting-notes/20220905.md",
-    "fleeting-notes/20220906.md",
-    "fleeting-notes/20220907.md",
-    "fleeting-notes/20220908.md",
+    "fleeting-notes/20220911.md",
+    "fleeting-notes/20220910.md",
     "fleeting-notes/20220909.md",
-    "fleeting-notes/20220904.md",
-    "fleeting-notes/20220606.md",
-    "fleeting-notes/20220723.md",
-    "fleeting-notes/20220820.md",
-    "literature-notes/making-eco-friendly-websites.md"
+    "fleeting-notes/20220912.md",
+    "fleeting-notes/20220908.md",
+    "fleeting-notes/20220907.md",
+    "literature-notes/building-a-headless-dropshipping-site.md",
+    "fleeting-notes/20220903.md",
+    "fleeting-notes/20220905.md",
+    "fleeting-notes/20220904.md"
   ]
 }
