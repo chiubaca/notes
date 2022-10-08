@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "fleeting-notes/20221007.md",
+            "file": "fleeting-notes/20221008.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Set",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -49,8 +49,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -70,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20221007.md",
+                "file": "fleeting-notes/20221008.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -88,8 +87,10 @@
     "width": 500,
     "collapsed": true
   },
-  "active": "a115ee82096eefc4",
+  "active": "89fe92cc166cab1b",
   "lastOpenFiles": [
+    "fleeting-notes/20221007.md",
+    "fleeting-notes/20221008.md",
     "fleeting-notes/20221003.md",
     "literature-notes/building-a-headless-dropshipping-site.md",
     "literature-notes/docker-basics.md",
@@ -97,8 +98,6 @@
     "fleeting-notes/20221002.md",
     "fleeting-notes/20220930.md",
     "fleeting-notes/20220929.md",
-    "fleeting-notes/20220928.md",
-    "fleeting-notes/20220927.md",
-    "fleeting-notes/20220926.md"
+    "fleeting-notes/20220928.md"
   ]
 }
