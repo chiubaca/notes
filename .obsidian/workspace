@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "fleeting-notes/20221008.md",
+            "file": "fleeting-notes/20221009.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20221008.md",
+                "file": "fleeting-notes/20221009.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -89,8 +89,8 @@
   },
   "active": "89fe92cc166cab1b",
   "lastOpenFiles": [
-    "fleeting-notes/20221007.md",
     "fleeting-notes/20221008.md",
+    "fleeting-notes/20221007.md",
     "fleeting-notes/20221003.md",
     "literature-notes/building-a-headless-dropshipping-site.md",
     "literature-notes/docker-basics.md",
