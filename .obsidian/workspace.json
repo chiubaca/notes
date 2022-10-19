@@ -13,13 +13,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/20221018.md",
+                "file": "fleeting-notes/20221019.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "stacked": true
       }
     ],
     "direction": "vertical"
@@ -69,7 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 245
+    "width": 200
   },
   "right": {
     "id": "7d79c914da9cc99e",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20221018.md",
+                "file": "fleeting-notes/20221019.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -108,15 +109,15 @@
   },
   "active": "9b76db6dfc5d5a60",
   "lastOpenFiles": [
+    "permanent-notes/svelte-basics.md",
+    "permanent-notes/remix-basics.md",
+    "fleeting-notes/20220717.md",
+    "fleeting-notes/20211212.md",
+    "permanent-notes/must-have-mac-apps.md",
     "fleeting-notes/20221019.md",
-    "fleeting-notes/20221018.md",
     "fleeting-notes/20221017.md",
+    "fleeting-notes/20221018.md",
     "fleeting-notes/20221016.md",
-    "fleeting-notes/20221015.md",
-    "fleeting-notes/20221014.md",
-    "fleeting-notes/20221013.md",
-    "fleeting-notes/20220426.md",
-    "fleeting-notes/Pasted image 20220711180651.png",
-    "fleeting-notes/20221011.md"
+    "fleeting-notes/20221015.md"
   ]
 }
