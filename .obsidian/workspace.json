@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20221106.md",
+                "file": "literature-notes/docker-basics.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -124,17 +124,17 @@
     "width": 500,
     "collapsed": true
   },
-  "active": "9b76db6dfc5d5a60",
+  "active": "0e99ae1506300a9e",
   "lastOpenFiles": [
+    "fleeting-notes/20221106.md",
+    "literature-notes/docker-basics.md",
     "fleeting-notes/20221105.md",
     "fleeting-notes/20221104.md",
     "fleeting-notes/20221103.md",
-    "literature-notes/docker-basics.md",
     "fleeting-notes/20221101.md",
     "fleeting-notes/20221029.md",
     "permanent-notes/swapping-react-for-preact-in-nextjs.md",
     "permanent-notes/svelte-basics.md",
-    "permanent-notes/remix-basics.md",
-    "permanent-notes/auto-js-sdk-for-any-rest-api.md"
+    "permanent-notes/remix-basics.md"
   ]
 }
