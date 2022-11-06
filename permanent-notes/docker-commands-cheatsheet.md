@@ -1,16 +1,18 @@
-. ---
+---
 title: Docker Commands Cheatsheet
 publish_date: 20221101
 last_updated: 20221101
 description: Docker Commands Cheatsheet
 status: draft
-layout: ../../layouts/PermanentNoteLayout.astro
+layout: ../../layouts/PermanentNoteLayout.astr0
 ---
 
 
 `docker ps -a` - list all installed containers
 
 `docker rm <node-container-name>` - remove a container
+`docker rm -f <node-container-name>`  - force remove
+`docker rm -fv <node-container-name>`  - force remove and volumes too 
 
 `docker stop <node-container-name>` - stop a container
 
@@ -23,3 +25,7 @@ layout: ../../layouts/PermanentNoteLayout.astro
 
 
 `docker exec -it <container-name> bash `   - enter a running container in a interactive bash mode
+
+
+`docker compose -f docker-compose.dev.yml up` - reference a specific docker compose file , useful when you have multiple docker compose files for dev and and prod
+
