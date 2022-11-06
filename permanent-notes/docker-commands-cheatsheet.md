@@ -4,7 +4,7 @@ publish_date: 20221101
 last_updated: 20221101
 description: Docker Commands Cheatsheet
 status: draft
-layout: ../../layouts/PermanentNoteLayout.astr0
+layout: ../../layouts/PermanentNoteLayout.astro
 ---
 
 
