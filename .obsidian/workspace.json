@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/docker-commands-cheatsheet.md",
+                "file": "fleeting-notes/20221102.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "astr0",
+                "query": "20221102",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "permanent-notes/docker-commands-cheatsheet.md",
+                "file": "fleeting-notes/20221102.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -106,15 +106,15 @@
   },
   "active": "84844509c3626240",
   "lastOpenFiles": [
-    "literature-notes/docker-basics.md",
     "fleeting-notes/20221106.md",
     "fleeting-notes/20221105.md",
     "fleeting-notes/20221104.md",
+    "permanent-notes/docker-commands-cheatsheet.md",
+    "permanent-notes/must-have-mac-apps.md",
+    "permanent-notes/anatomy-of-a-threejs-scene.md",
+    "permanent-notes/auto-js-sdk-for-any-rest-api.md",
+    "literature-notes/docker-basics.md",
     "fleeting-notes/20221103.md",
-    "fleeting-notes/20221101.md",
-    "fleeting-notes/20221029.md",
-    "permanent-notes/swapping-react-for-preact-in-nextjs.md",
-    "permanent-notes/svelte-basics.md",
-    "permanent-notes/remix-basics.md"
+    "fleeting-notes/20221101.md"
   ]
 }
