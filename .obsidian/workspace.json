@@ -77,7 +77,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "svg svg",
+                "query": "AI",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -94,7 +94,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -132,7 +133,7 @@
     "width": 500,
     "collapsed": true
   },
-  "active": "b88e2677700acf80",
+  "active": "a115ee82096eefc4",
   "lastOpenFiles": [
     "fleeting-notes/20221212.md",
     "fleeting-notes/20221216.md",
