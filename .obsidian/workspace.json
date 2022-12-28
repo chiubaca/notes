@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/holograpic-cards-pt1.md",
+                "file": "permanent-notes/holograpic-cards-soft-spotlight.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "018a9a4bae80f83b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "permanent-notes/holograpic-cards-tilt-effect.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,7 +43,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -97,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "permanent-notes/holograpic-cards-pt1.md",
+                "file": "permanent-notes/holograpic-cards-tilt-effect.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -115,13 +128,13 @@
     "width": 500,
     "collapsed": true
   },
-  "active": "39529280a8468a4f",
+  "active": "018a9a4bae80f83b",
   "lastOpenFiles": [
+    "permanent-notes/holograpic-cards-soft-spotlight.md",
     "permanent-notes/Pasted image 20221228112640.png",
     "permanent-notes/Pasted image 20221228123653.png",
     "permanent-notes/Pasted image 20221228124058.png",
     "permanent-notes/().md",
-    "permanent-notes/holograpic-cards-pt1.md",
     "fleeting-notes/20221227.md",
     "permanent-notes/svelte-basics.md",
     "fleeting-notes/20221228.md",

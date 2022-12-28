@@ -1,8 +1,8 @@
 ---
-title: Holograpic cards pt1
+title: Holographic cards soft spotlight
 publish_date: 20221229
 last_updated: 20221229
-description: Creating holograpics cards with css and sprinkle of js
+description: Creating holographic cards with CSS and a sprinkle of js
 status: draft
 layout: ../../layouts/PermanentNoteLayout.astro
 ---
