@@ -64,10 +64,10 @@ The spotlight effect is all achieved with the `.card__softlight` class.
 ```
 
 
-Some basic stuff in the `card` class. As the children element will be `absolute` positioned we need to remember to add `position: relative`  so all children elements are contained relative to this element.
+Some basic stuff in the `card` class. As the children element will be `absolute` positioned we need to remember to add `position: relative` so all children elements are contained relative to this element.
 
 
-Moving into `.card__softlight`. we use `inset: 0` make this inner div "fill up" to the parent container. it's the equivalent to :
+Moving into `.card__softlight`. we use `inset: 0` to make this inner div "fill up" to the parent container. it's the equivalent to :
 ```css
   top: 0;
   right: 0;
@@ -83,7 +83,7 @@ if you want to see the radial gradient effect a bit clearer you can try swapping
 background: radial-gradient( circle farthest-side at var(--x, 0%) var(--y, 10%), red 10%, green 20%, blue 80%);
 ```
 
-Lets take a deep dive into the `radial-gradient` function. If you want to skip the next section is *NEXT-SECTION* .
+Let's take a deep dive into how the `radial-gradient` function works. 
 
 MDN documents the `radial-gradient` function like so:
 ```
@@ -92,9 +92,9 @@ radial-gradient( [ <ending-shape> || <size> ]? [ at <position> ]? , <color-stop-
 
 ```
 
-`<ending-shape>` - can either be `circle` or `elipse`, `elipse` is basically just a stretched circle to match the aspect ratio of the element it's in. For our spotlight effect, we want to ensure the radial gradient is always a `circle`. 
+`<ending-shape>` - can either be `circle` or `elipse`. `elipse` is basically just a stretched circle to match the aspect ratio of the element it's in. For our spotlight effect, we want to ensure the radial gradient is always a `circle`. 
 
-> try swapping `circle` for `elipse` to see how the radial gradient skews.
+> Try swapping `circle` for `elipse` to see how the radial gradient skews.
 
 
 `<size>` - has four options [documented here](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/radial-gradient#values) 
@@ -103,35 +103,35 @@ radial-gradient( [ <ending-shape> || <size> ]? [ at <position> ]? , <color-stop-
    - `farthest-side`
    - `farthest-corner` - default
 
-This means we can omit `farthest-corner` and it would still function the same. i've kept it for explicitness. 
+This means we can omit `farthest-corner` and it would still function the same. I've kept it for explicitness. 
 
 > try swapping `farthest-corner` for one of the other options. Maybe you think a different one looks better. it's completely subjective!
 
-[`<position>`](https://developer.mozilla.org/en-US/docs/Web/CSS/position_value) - defaults to `center` but supports an `x` and `y` positions.  Note, for this arguiment we'e using  `var(--x, 10%)`  and  `var(--y, 10%)`. We're using CSS variables, the second argument in a CSS variable is the fallback value if either `--x` or `--y` has not been set yet. In a mo we will set `--x` and `--y` dynamically using javascript!
+[`<position>`](https://developer.mozilla.org/en-US/docs/Web/CSS/position_value) - defaults to `center` but supports `x` and `y` positions.  Note, for this argument we'e using  `var(--x, 10%)`  and  `var(--y, 10%)`. These are CSS variables, the second argument in a CSS variable is the fallback value if either `--x` or `--y` has not been set yet. In the next section we will set `--x` and `--y` dynamically using javascript!
 
 
-The final bit of magic is   `mix-blend-mode: soft-light`  we will make heavy use of `mix-blend-mode` through this tutorial series. This property will literally blend the radial background into the other elements. it is key to making the spotlight effect feel "softer"
+The final bit of magic is `mix-blend-mode: soft-light` we will make heavy use of `mix-blend-mode` throughout this tutorial series. This property will literally blend the radial background into the other elements. it is key to making the spotlight effect feel "softer". Learn more about [`mix-blend-mode` on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode)
 
 > try removing this property and experimenting with other blend values e.g `multiply`, `hard-light` or `difference`.
 
 
-## the javascript
+## The Javascript
 
-With our css variables in place, we can programmatically update the x and y positions of the radial gradient.
+With our CSS variables in place, we can now programmatically update the `x` and `y` positions of the radial gradient.
 
-Firstly, we need to tap into the mouse move events to get the position of the mouse when we hover over our `card`.  We can do so like this: 
+Firstly, we need to tap into the `mousemove` event to get the position our our cursor when we hover over our `card`.  We can do so like this: 
 ```js
 
 const card = document.querySelector(".card");
 
 card.addEventListener("mousemove", (e) => {
-	console.log(e.clientX , e.clientY) //130 30  
+	console.log(e.clientX , e.clientY) //e.g 130 30  
 });
 
 ```
 
 
-We have a problem though, the values returned from `e.`clientX and `e.clientY` are pixel positions of where the cursor is on the screen.
+We have a problem though, the values returned from `e.clientX` and `e.clientY` are pixel positions of where the cursor is on the screen. Here is an example of the values that will be returned by `e.clientX` and `e.clientY` .
 
 ![](Pasted%20image%2020221228123653.png)
 
@@ -140,13 +140,13 @@ We want relative units within the card element itself like so:
 ![](Pasted%20image%2020221228124058.png)
 
 
-To achieve this we need the following things:
+To achieve this we need the following values:
 
-1. the size of the card element
-2. the position of the element relative to the viewport.
+1. The size of the card element
+2. The position of the element relative to the viewport.
 
 
-fortunately, the browser DOM API provides everything we need within [`Element.getBoundingClientRect()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) . This metod which exist on any HTML element returns an object that looks something like:
+Fortunately, we  have everything we need within [`Element.getBoundingClientRect()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) . This method which exists on any HTML element returns an object that looks something like:
 
 ```js
 {
@@ -161,18 +161,16 @@ fortunately, the browser DOM API provides everything we need within [`Element.ge
 }
 ```
 
-We can now work out the relative unit of the cursor position within the `.card`  element with some [maths](https://byjus.com/maths/percentage/#:~:text=To%20determine%20the%20percentage%2C%20we,multiply%20the%20resultant%20by%20100.)!:
+We can now work out the relative unit of the cursor position within the `.card`  element with some basic [maths](https://byjus.com/maths/percentage/#:~:text=To%20determine%20the%20percentage%2C%20we,multiply%20the%20resultant%20by%20100.)!:
 
-here's the logic we'll need to write:
+Here's the logic we'll need to write:
 
-- Minus the  card `left` position with the cursor `x` position (this gives us a corrected position value of 0 to the width of the card)
-	-  Divide this value with the `cardWidth` (this converts the value into decimals between 0.0 - 1.0)
-	- multiply by 100 (convert this figure into a percentage value)
-	- 
-- Minus the card `top` position with the cursor `y` position (this gives us a corrected position value of 0 to the height of the card)
-	- then divide with the `cardHeight` (this converts the value into decimals between 0.0 - 1.0)
-	- multiply by 100 (convert this figure into a percentage value)
-
+- Minus the  card `left` position with the cursor `x` position (this gives us a corrected position value of 0 to the max width of the card)
+	-  Divide this value with the `cardWidth` (this converts the value into a decimal range 0.0 - 1.0)
+	- Multiply this value by 100 (this converts this figure into a percentage value)
+- Minus the card `top` position with the cursor `y` position (this gives us a corrected position value of 0 to the max height of the card)
+	-  Divide with the `cardHeight` (this converts the value into decimals between 0.0 - 1.0)
+	- Multiply this value by 100 (this converts this figure into a percentage value)
 
 Let's convert that pseudo logic into javascript:
 
@@ -186,7 +184,6 @@ const {
   top: cardTop
 } = card.getBoundingClientRect();
 
-console.log(cardWidth, cardHeight, cardLeft, cardTop);
 
 card.addEventListener("mousemove", (e) => {
   let X = (e.clientX - cardLeft) / cardWidth;
@@ -196,7 +193,8 @@ card.addEventListener("mousemove", (e) => {
   let cardYPercentage = `${Y * 100}%`;
 
   console.log(cardXPercentage, cardYPercentage); // e.g "50%" "50%"
- .document.documentElement.style.setProperty("--x", cardXPercentage);
+  
+  document.documentElement.style.setProperty("--x", cardXPercentage);
   document.documentElement.style.setProperty("--y", cardYPercentage);
   
 });
@@ -207,21 +205,17 @@ card.addEventListener("mousemove", (e) => {
 Note the last two lines is where the fun happens:
 
 ```js
- .document.documentElement.style.setProperty("--x", cardXPercentage);
-  document.documentElement.style.setProperty("--y", cardYPercentage);
+document.documentElement.style.setProperty("--x", cardXPercentage);
+document.documentElement.style.setProperty("--y", cardYPercentage);
 ```
 
-We set our percentage values to our CSS variable with [`CSSStyleDeclaration.setProperty()`](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/setProperty).  
-
-This how as we move our mouse, the radial gradient follows along 🙌.
+We set our percentage values into our CSS variables with [`CSSStyleDeclaration.setProperty()`](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/setProperty). This is how as we move our cursor the radial gradient follows along 🙌.
 
 <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="MWBwQLe" data-user="chiubaca" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/chiubaca/pen/MWBwQLe">
   Holographic cards | Spot light effect</a> by Alex Chiu (<a href="https://codepen.io/chiubaca">@chiubaca</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-
-
 
 
 References
