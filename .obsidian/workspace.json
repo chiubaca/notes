@@ -6,14 +6,17 @@
       {
         "id": "20c0b273a67c0f51",
         "type": "tabs",
-        "dimension": 56.73352435530086,
         "children": [
           {
             "id": "39529280a8468a4f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "permanent-notes/holograpic-cards-pt1.md",
+                "mode": "source",
+                "source": false
+              }
             }
           },
           {
@@ -23,25 +26,6 @@
               "type": "markdown",
               "state": {
                 "file": "fleeting-notes/20221024.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ]
-      },
-      {
-        "id": "530af4cde4663cf7",
-        "type": "tabs",
-        "dimension": 43.26647564469914,
-        "children": [
-          {
-            "id": "b17467567ab1bec5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "fleeting-notes/20221227.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 430.5
+    "width": 366.5
   },
   "right": {
     "id": "7d79c914da9cc99e",
@@ -113,6 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "permanent-notes/holograpic-cards-pt1.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -132,15 +117,15 @@
   },
   "active": "39529280a8468a4f",
   "lastOpenFiles": [
+    "permanent-notes/Pasted image 20221228112640.png",
+    "permanent-notes/Pasted image 20221228123653.png",
+    "permanent-notes/Pasted image 20221228124058.png",
     "permanent-notes/().md",
-    "permanent-notes/holograpic-cards.md",
+    "permanent-notes/holograpic-cards-pt1.md",
     "fleeting-notes/20221227.md",
     "permanent-notes/svelte-basics.md",
     "fleeting-notes/20221228.md",
     "fleeting-notes/20221024.md",
-    "permanent-notes/must-have-mac-apps.md",
-    "permanent-notes/remix-basics.md",
-    "permanent-notes/anatomy-of-a-threejs-scene.md",
-    "fleeting-notes/20221221.md"
+    "permanent-notes/must-have-mac-apps.md"
   ]
 }
