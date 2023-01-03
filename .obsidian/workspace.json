@@ -4,47 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "20c0b273a67c0f51",
+        "id": "0780bf5fca5fee16",
         "type": "tabs",
         "children": [
           {
-            "id": "39529280a8468a4f",
+            "id": "22dca2134ed63ee3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/holograpic-cards-soft-spotlight.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "018a9a4bae80f83b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "permanent-notes/holograpic-cards-tilt-effect.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e6697ec1dc3a22a3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "fleeting-notes/20221024.md",
+                "file": "fleeting-notes/20230103.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -94,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 366.5
+    "width": 260.5
   },
   "right": {
     "id": "7d79c914da9cc99e",
@@ -110,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "permanent-notes/holograpic-cards-tilt-effect.md",
+                "file": "fleeting-notes/20230103.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -128,17 +103,26 @@
     "width": 500,
     "collapsed": true
   },
-  "active": "018a9a4bae80f83b",
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false
+    }
+  },
+  "active": "22dca2134ed63ee3",
   "lastOpenFiles": [
-    "permanent-notes/holograpic-cards-soft-spotlight.md",
-    "permanent-notes/Pasted image 20221228112640.png",
-    "permanent-notes/Pasted image 20221228123653.png",
-    "permanent-notes/Pasted image 20221228124058.png",
-    "permanent-notes/().md",
+    "fleeting-notes/test canvas.canvas",
+    "fleeting-notes/Pasted image 20220905142930.png",
+    "fleeting-notes/20230103.md",
     "fleeting-notes/20221227.md",
-    "permanent-notes/svelte-basics.md",
+    "permanent-notes/holograpic-cards-tilt-effect.md",
+    "fleeting-notes/20221221.md",
     "fleeting-notes/20221228.md",
+    "fleeting-notes/20200917.md",
     "fleeting-notes/20221024.md",
-    "permanent-notes/must-have-mac-apps.md"
+    "permanent-notes/holograpic-cards-soft-spotlight.md"
   ]
 }
