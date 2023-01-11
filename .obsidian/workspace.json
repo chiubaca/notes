@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/20230107.md",
+                "file": "fleeting-notes/20230109.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4f042ba5e67695ce",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "fleeting-notes/20230110.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20230107.md",
+                "file": "fleeting-notes/20230110.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -112,17 +125,17 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "22dca2134ed63ee3",
+  "active": "4f042ba5e67695ce",
   "lastOpenFiles": [
+    "fleeting-notes/20230109.md",
+    "fleeting-notes/20230107.md",
+    "fleeting-notes/20230108.md",
+    "fleeting-notes/20230110.md",
+    "fleeting-notes/20230111.md",
     "fleeting-notes/20230104.md",
+    "fleeting-notes/20230106.md",
+    "fleeting-notes/20230105.md",
     "fleeting-notes/20230103.md",
-    "fleeting-notes/20221228.md",
-    "fleeting-notes/test canvas.canvas",
-    "fleeting-notes/Pasted image 20220905142930.png",
-    "fleeting-notes/20221227.md",
-    "permanent-notes/holograpic-cards-tilt-effect.md",
-    "fleeting-notes/20221221.md",
-    "fleeting-notes/20200917.md",
-    "fleeting-notes/20221024.md"
+    "fleeting-notes/20221228.md"
   ]
 }
