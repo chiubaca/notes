@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/nx-for-noobs.md",
+                "file": "permanent-notes/nextjs-vs-remix.md",
                 "mode": "source",
                 "source": false
               }
@@ -49,14 +49,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/20230115.md",
+                "file": "fleeting-notes/20230113.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -85,7 +85,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "3d cards",
+                "query": "remix vs",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20230115.md",
+                "file": "permanent-notes/nextjs-vs-remix.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -149,17 +149,17 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "00ffc54334856923",
+  "active": "50ea3d9af16635c3",
   "lastOpenFiles": [
-    "fleeting-notes/20230114.md",
-    "fleeting-notes/20230113.md",
-    "permanent-notes/nextjs-vs-remix.md",
     "permanent-notes/nx-for-noobs.md",
-    "permanent-notes/Pasted image 20221228112640.png",
-    "fleeting-notes/20230112.md",
-    "fleeting-notes/20230111.md",
-    "fleeting-notes/20230109.md",
+    "fleeting-notes/20230113.md",
+    "fleeting-notes/20220715.md",
+    "fleeting-notes/20220522.md",
+    "fleeting-notes/20220308.md",
+    "permanent-notes/nextjs-vs-remix.md",
+    "permanent-notes/must-have-mac-apps.md",
+    "permanent-notes/holograpic-cards-tilt-effect.md",
     "permanent-notes/holograpic-cards-soft-spotlight.md",
-    "fleeting-notes/20230110.md"
+    "permanent-notes/docker-commands-cheatsheet.md"
   ]
 }
