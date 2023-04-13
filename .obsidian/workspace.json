@@ -11,12 +11,8 @@
             "id": "00ffc54334856923",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "fleeting-notes/20230305.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20230305.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -114,9 +109,24 @@
   },
   "active": "00ffc54334856923",
   "lastOpenFiles": [
+    "fleeting-notes/20230306.md",
+    "fleeting-notes/20230305.md",
+    "fleeting-notes/20230307.md",
+    "fleeting-notes/20230308.md",
+    "fleeting-notes/20230309.md",
+    "fleeting-notes/20230310.md",
+    "fleeting-notes/20230311.md",
+    "fleeting-notes/20230312.md",
+    "fleeting-notes/20230313.md",
+    "fleeting-notes/20230316.md",
+    "fleeting-notes/20230317.md",
+    "fleeting-notes/20230318.md",
+    "fleeting-notes/20230320.md",
+    "fleeting-notes/20230321.md",
+    "fleeting-notes/20230322.md",
+    "fleeting-notes/20230412.md",
     "fleeting-notes/20230201.md",
     "fleeting-notes/20230129.md",
-    "fleeting-notes/20230305.md",
     "fleeting-notes/20230124.md",
     "fleeting-notes/20230220.md",
     "fleeting-notes/20230221.md",
@@ -124,21 +134,6 @@
     "fleeting-notes/20230223.md",
     "fleeting-notes/20230224.md",
     "fleeting-notes/20230225.md",
-    "fleeting-notes/20230226.md",
-    "fleeting-notes/20230227.md",
-    "fleeting-notes/20230228.md",
-    "fleeting-notes/20230301.md",
-    "fleeting-notes/20230302.md",
-    "fleeting-notes/20230303.md",
-    "fleeting-notes/20230304.md",
-    "fleeting-notes/20230219.md",
-    "fleeting-notes/20230104.md",
-    "fleeting-notes/20221228.md",
-    "fleeting-notes/20221218.md",
-    "fleeting-notes/20221128.md",
-    "fleeting-notes/20221126.md",
-    "fleeting-notes/20221124.md",
-    "fleeting-notes/20221123.md",
-    "fleeting-notes/20221122.md"
+    "fleeting-notes/20230226.md"
   ]
 }
