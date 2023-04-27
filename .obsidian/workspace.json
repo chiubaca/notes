@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "0780bf5fca5fee16",
+        "id": "d7a32277afb1b84f",
         "type": "tabs",
         "children": [
           {
-            "id": "00ffc54334856923",
+            "id": "18b69696a4f5773f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "fleeting-notes/20230305.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "fleeting-notes/20230305.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -107,33 +112,33 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "00ffc54334856923",
+  "active": "18b69696a4f5773f",
   "lastOpenFiles": [
-    "fleeting-notes/20230306.md",
+    "fleeting-notes/20230413.md",
+    "fleeting-notes/20230414.md",
+    "fleeting-notes/20230415.md",
+    "fleeting-notes/20230416.md",
+    "fleeting-notes/20230417.md",
+    "fleeting-notes/20230418.md",
+    "fleeting-notes/20230419.md",
+    "fleeting-notes/20230420.md",
+    "fleeting-notes/20230421.md",
+    "fleeting-notes/20230422.md",
+    "fleeting-notes/20230423.md",
+    "fleeting-notes/20230426.md",
+    "fleeting-notes/20230424.md",
+    "fleeting-notes/20230425.md",
+    "fleeting-notes/20230427.md",
     "fleeting-notes/20230305.md",
+    "fleeting-notes/20230201.md",
+    "fleeting-notes/20200910.md",
+    "fleeting-notes/20230114.md",
+    "fleeting-notes/20230306.md",
     "fleeting-notes/20230307.md",
     "fleeting-notes/20230308.md",
     "fleeting-notes/20230309.md",
     "fleeting-notes/20230310.md",
     "fleeting-notes/20230311.md",
-    "fleeting-notes/20230312.md",
-    "fleeting-notes/20230313.md",
-    "fleeting-notes/20230316.md",
-    "fleeting-notes/20230317.md",
-    "fleeting-notes/20230318.md",
-    "fleeting-notes/20230320.md",
-    "fleeting-notes/20230321.md",
-    "fleeting-notes/20230322.md",
-    "fleeting-notes/20230412.md",
-    "fleeting-notes/20230201.md",
-    "fleeting-notes/20230129.md",
-    "fleeting-notes/20230124.md",
-    "fleeting-notes/20230220.md",
-    "fleeting-notes/20230221.md",
-    "fleeting-notes/20230222.md",
-    "fleeting-notes/20230223.md",
-    "fleeting-notes/20230224.md",
-    "fleeting-notes/20230225.md",
-    "fleeting-notes/20230226.md"
+    "fleeting-notes/20230312.md"
   ]
 }
