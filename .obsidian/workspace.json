@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "literature-notes/total-typescript-notes.md",
+                "file": "fleeting-notes/20230519.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "literature-notes/total-typescript-notes.md",
+                "file": "fleeting-notes/20230519.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -114,6 +114,7 @@
   },
   "active": "28427923bc7dbf44",
   "lastOpenFiles": [
+    "literature-notes/total-typescript-notes.md",
     "fleeting-notes/20230519.md",
     "fleeting-notes/20230305.md",
     "fleeting-notes/20230201.md",
@@ -124,7 +125,6 @@
     "fleeting-notes/Pasted image 20230109112631.png",
     "fleeting-notes/Pasted image 20220905142930.png",
     "fleeting-notes/Pasted image 20220711180651.png",
-    "literature-notes/total-typescript-notes.md",
     "literature-notes/threejs-journey.md",
     "permanent-notes/nextjs-vs-remix.md",
     "fleeting-notes/20230113.md",
