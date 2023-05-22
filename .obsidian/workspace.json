@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/20230520.md",
+                "file": "fleeting-notes/20230521.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "gsap",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20230520.md",
+                "file": "fleeting-notes/20230521.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -114,8 +114,10 @@
   },
   "active": "28427923bc7dbf44",
   "lastOpenFiles": [
-    "fleeting-notes/20230519.md",
+    "fleeting-notes/20211011.md",
+    "fleeting-notes/20230521.md",
     "fleeting-notes/20230520.md",
+    "fleeting-notes/20230519.md",
     "literature-notes/total-typescript-notes.md",
     "fleeting-notes/20230305.md",
     "fleeting-notes/20230201.md",
@@ -143,8 +145,6 @@
     "fleeting-notes/20230505.md",
     "fleeting-notes/20230506.md",
     "fleeting-notes/20230413.md",
-    "fleeting-notes/20230414.md",
-    "fleeting-notes/20230415.md",
-    "fleeting-notes/20230416.md"
+    "fleeting-notes/20230414.md"
   ]
 }
