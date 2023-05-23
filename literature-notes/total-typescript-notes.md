@@ -21,7 +21,7 @@ layout: ../../layouts/LiteratureNoteLayout.astro
 ```jsx
 import React , { ComponentProps } from "react";
 
-export const Button ({...rest}): ComponentProps<"button"> = ()=>{
+export const Button ({...rest}): ComponentProps<"button"> = ()=> {
 	return (
 		<button {...rest}/>
 	)
@@ -41,3 +41,13 @@ type AnyCompProps = React.ComponentProps<typeof AnyComp>
 https://stackoverflow.com/a/55220191
 
 ### Hooks notes
+
+TIL:  useState can also take a callback function that contains the current state
+```jsx
+<div onClick={() => {
+
+setState((currentState) => ({
+	...currentState,
+	newKey: 123,
+}))/>;
+```
