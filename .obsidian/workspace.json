@@ -6,6 +6,7 @@
       {
         "id": "d7a32277afb1b84f",
         "type": "tabs",
+        "dimension": 21.153846153846153,
         "children": [
           {
             "id": "28427923bc7dbf44",
@@ -13,7 +14,39 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/20230523.md",
+                "file": "fleeting-notes/20230525.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1bc20fdc7526ebd0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "permanent-notes/docker-commands-cheatsheet.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "d6a48782a1baf70c",
+        "type": "tabs",
+        "dimension": 78.84615384615384,
+        "children": [
+          {
+            "id": "23557d5051981071",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "permanent-notes/Quick look at`use()`. The hook that solves React client-side data fetching..md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +102,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 368.5
+    "width": 271.5
   },
   "right": {
     "id": "7d79c914da9cc99e",
@@ -85,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20230523.md",
+                "file": "permanent-notes/Quick look at`use()`. The hook that solves React client-side data fetching..md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -112,10 +145,14 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "28427923bc7dbf44",
+  "active": "23557d5051981071",
   "lastOpenFiles": [
-    "fleeting-notes/20230522.md",
+    "permanent-notes/docker-commands-cheatsheet.md",
+    "permanent-notes/Quick look at`use()`. The hook that solves React client-side data fetching..md",
+    "fleeting-notes/20230525.md",
     "fleeting-notes/20230523.md",
+    "fleeting-notes/20230524.md",
+    "fleeting-notes/20230522.md",
     "fleeting-notes/20230521.md",
     "fleeting-notes/20211101.md",
     "fleeting-notes/20211011.md",
@@ -141,10 +178,6 @@
     "fleeting-notes/20230428.md",
     "fleeting-notes/20230429.md",
     "fleeting-notes/20230430.md",
-    "fleeting-notes/20230501.md",
-    "fleeting-notes/20230502.md",
-    "fleeting-notes/20230503.md",
-    "fleeting-notes/20230504.md",
-    "fleeting-notes/20230505.md"
+    "fleeting-notes/20230501.md"
   ]
 }
