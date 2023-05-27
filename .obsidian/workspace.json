@@ -46,7 +46,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/Quick look at`use()`. The hook that solves React client-side data fetching..md",
+                "file": "fleeting-notes/20230527.md",
                 "mode": "source",
                 "source": false
               }
@@ -118,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "permanent-notes/Quick look at`use()`. The hook that solves React client-side data fetching..md",
+                "file": "fleeting-notes/20230527.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -147,8 +147,10 @@
   },
   "active": "23557d5051981071",
   "lastOpenFiles": [
-    "permanent-notes/docker-commands-cheatsheet.md",
+    "fleeting-notes/20230526.md",
+    "fleeting-notes/20230527.md",
     "permanent-notes/Quick look at`use()`. The hook that solves React client-side data fetching..md",
+    "permanent-notes/docker-commands-cheatsheet.md",
     "fleeting-notes/20230525.md",
     "fleeting-notes/20230523.md",
     "fleeting-notes/20230524.md",
@@ -176,8 +178,6 @@
     "fleeting-notes/20230129.md",
     "fleeting-notes/20230.md",
     "fleeting-notes/20230428.md",
-    "fleeting-notes/20230429.md",
-    "fleeting-notes/20230430.md",
-    "fleeting-notes/20230501.md"
+    "fleeting-notes/20230429.md"
   ]
 }
