@@ -122,9 +122,11 @@
   },
   "active": "23557d5051981071",
   "lastOpenFiles": [
+    "fleeting-notes/20230603.md",
+    "fleeting-notes/20230601.md",
+    "fleeting-notes/20230602.md",
     "fleeting-notes/20230531.md",
     "fleeting-notes/20230530.md",
-    "fleeting-notes/20230601.md",
     "permanent-notes/Quick look at`use()`. The hook that solves React client-side data fetching..md",
     "fleeting-notes/20230527.md",
     "fleeting-notes/20230525.md",
@@ -151,8 +153,6 @@
     "fleeting-notes/Pasted image 20220905142930.png",
     "fleeting-notes/Pasted image 20220711180651.png",
     "literature-notes/threejs-journey.md",
-    "permanent-notes/nextjs-vs-remix.md",
-    "fleeting-notes/20230113.md",
-    "permanent-notes/auto-js-sdk-for-any-rest-api.md"
+    "permanent-notes/nextjs-vs-remix.md"
   ]
 }
