@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d6a48782a1baf70c",
+        "id": "bb9cf83fdc1e50bd",
         "type": "tabs",
         "children": [
           {
-            "id": "23557d5051981071",
+            "id": "6ab96ff28831f3a8",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -77,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 271.5
+    "width": 286.5
   },
   "right": {
     "id": "7d79c914da9cc99e",
@@ -120,10 +120,24 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "23557d5051981071",
+  "active": "6ab96ff28831f3a8",
   "lastOpenFiles": [
-    "fleeting-notes/20230603.md",
+    "fleeting-notes/20230604.md",
     "fleeting-notes/20230601.md",
+    "fleeting-notes/20230605.md",
+    "fleeting-notes/20230606.md",
+    "fleeting-notes/20230607.md",
+    "fleeting-notes/20230608.md",
+    "fleeting-notes/20230609.md",
+    "fleeting-notes/20230610.md",
+    "fleeting-notes/20230611.md",
+    "fleeting-notes/Pasted image 20220711180651.png",
+    "fleeting-notes/Pasted image 20220905142930.png",
+    "fleeting-notes/Pasted image 20230109115252.png",
+    "fleeting-notes/Pasted image 20230109114622.png",
+    "fleeting-notes/Pasted image 20230109114133.png",
+    "fleeting-notes/Pasted image 20230109112631.png",
+    "fleeting-notes/20230603.md",
     "fleeting-notes/20230602.md",
     "fleeting-notes/20230531.md",
     "fleeting-notes/20230530.md",
@@ -139,20 +153,6 @@
     "fleeting-notes/20230524.md",
     "fleeting-notes/20230521.md",
     "fleeting-notes/20211101.md",
-    "fleeting-notes/20211011.md",
-    "literature-notes/total-typescript-notes.md",
-    "fleeting-notes/20230520.md",
-    "fleeting-notes/20230519.md",
-    "fleeting-notes/20230305.md",
-    "fleeting-notes/20230201.md",
-    "fleeting-notes/Pasted image 20230109115252.png",
-    "permanent-notes/nx-for-noobs.md",
-    "fleeting-notes/Pasted image 20230109114622.png",
-    "fleeting-notes/Pasted image 20230109114133.png",
-    "fleeting-notes/Pasted image 20230109112631.png",
-    "fleeting-notes/Pasted image 20220905142930.png",
-    "fleeting-notes/Pasted image 20220711180651.png",
-    "literature-notes/threejs-journey.md",
-    "permanent-notes/nextjs-vs-remix.md"
+    "fleeting-notes/20211011.md"
   ]
 }
