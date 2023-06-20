@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/20230601.md",
+                "file": "fleeting-notes/20230612.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20230601.md",
+                "file": "fleeting-notes/20230612.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -122,8 +122,18 @@
   },
   "active": "6ab96ff28831f3a8",
   "lastOpenFiles": [
-    "fleeting-notes/20230604.md",
     "fleeting-notes/20230601.md",
+    "fleeting-notes/20230612.md",
+    "fleeting-notes/20230613.md",
+    "fleeting-notes/20230614.md",
+    "fleeting-notes/20230615.md",
+    "fleeting-notes/20230616.md",
+    "fleeting-notes/20230617.md",
+    "fleeting-notes/20230620.md",
+    "fleeting-notes/20230618.md",
+    "fleeting-notes/20230619.md",
+    "fleeting-notes/20230527.md",
+    "fleeting-notes/20230604.md",
     "fleeting-notes/20230605.md",
     "fleeting-notes/20230606.md",
     "fleeting-notes/20230607.md",
@@ -142,17 +152,7 @@
     "fleeting-notes/20230531.md",
     "fleeting-notes/20230530.md",
     "permanent-notes/Quick look at`use()`. The hook that solves React client-side data fetching..md",
-    "fleeting-notes/20230527.md",
     "fleeting-notes/20230525.md",
-    "fleeting-notes/20230523.md",
-    "fleeting-notes/20230522.md",
-    "fleeting-notes/20230529.md",
-    "fleeting-notes/20230528.md",
-    "fleeting-notes/20230526.md",
-    "permanent-notes/docker-commands-cheatsheet.md",
-    "fleeting-notes/20230524.md",
-    "fleeting-notes/20230521.md",
-    "fleeting-notes/20211101.md",
-    "fleeting-notes/20211011.md"
+    "fleeting-notes/20230523.md"
   ]
 }
