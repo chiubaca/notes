@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/20230612.md",
+                "file": "fleeting-notes/20230703.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20230612.md",
+                "file": "fleeting-notes/20230703.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -122,37 +122,37 @@
   },
   "active": "6ab96ff28831f3a8",
   "lastOpenFiles": [
-    "fleeting-notes/20230601.md",
+    "fleeting-notes/20230620.md",
     "fleeting-notes/20230612.md",
+    "fleeting-notes/20230630.md",
+    "fleeting-notes/20230628.md",
+    "fleeting-notes/20230627.md",
+    "fleeting-notes/20230625.md",
+    "fleeting-notes/20230623.md",
+    "fleeting-notes/20230703.md",
+    "fleeting-notes/20230624.md",
+    "fleeting-notes/20230626.md",
+    "fleeting-notes/20230629.md",
+    "fleeting-notes/20230701.md",
+    "fleeting-notes/20230702.md",
+    "fleeting-notes/20230622.md",
+    "fleeting-notes/20230621.md",
+    "fleeting-notes/20230601.md",
     "fleeting-notes/20230613.md",
     "fleeting-notes/20230614.md",
     "fleeting-notes/20230615.md",
     "fleeting-notes/20230616.md",
     "fleeting-notes/20230617.md",
-    "fleeting-notes/20230620.md",
     "fleeting-notes/20230618.md",
     "fleeting-notes/20230619.md",
     "fleeting-notes/20230527.md",
     "fleeting-notes/20230604.md",
     "fleeting-notes/20230605.md",
-    "fleeting-notes/20230606.md",
-    "fleeting-notes/20230607.md",
-    "fleeting-notes/20230608.md",
-    "fleeting-notes/20230609.md",
-    "fleeting-notes/20230610.md",
-    "fleeting-notes/20230611.md",
     "fleeting-notes/Pasted image 20220711180651.png",
     "fleeting-notes/Pasted image 20220905142930.png",
     "fleeting-notes/Pasted image 20230109115252.png",
     "fleeting-notes/Pasted image 20230109114622.png",
     "fleeting-notes/Pasted image 20230109114133.png",
-    "fleeting-notes/Pasted image 20230109112631.png",
-    "fleeting-notes/20230603.md",
-    "fleeting-notes/20230602.md",
-    "fleeting-notes/20230531.md",
-    "fleeting-notes/20230530.md",
-    "permanent-notes/Quick look at`use()`. The hook that solves React client-side data fetching..md",
-    "fleeting-notes/20230525.md",
-    "fleeting-notes/20230523.md"
+    "fleeting-notes/Pasted image 20230109112631.png"
   ]
 }
