@@ -13,7 +13,25 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/20230704.md",
+                "file": "permanent-notes/anatomy-of-a-threejs-scene.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "91e1ba51a0cbadf7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e2e3d694a4d23971",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "permanent-notes/principles-for-using-ai-to-write-code.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20230704.md",
+                "file": "permanent-notes/principles-for-using-ai-to-write-code.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -120,12 +138,17 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "78adc7b2576c3787",
+  "active": "e2e3d694a4d23971",
   "lastOpenFiles": [
+    "permanent-notes/anatomy-of-a-threejs-scene.md",
+    "permanent-notes/principles-for-using-ai-to-write-code.md",
+    "fleeting-notes/20230704.md",
+    "fleeting-notes/20230707.md",
+    "fleeting-notes/20230706.md",
+    "fleeting-notes/20230705.md",
+    "fleeting-notes/20230708.md",
     "fleeting-notes/20230620.md",
     "fleeting-notes/20230703.md",
-    "fleeting-notes/20230704.md",
-    "fleeting-notes/20230705.md",
     "literature-notes/making-eco-friendly-websites.md",
     "fleeting-notes/20230612.md",
     "fleeting-notes/20230630.md",
@@ -143,11 +166,6 @@
     "fleeting-notes/20230601.md",
     "fleeting-notes/20230613.md",
     "fleeting-notes/20230614.md",
-    "fleeting-notes/20230615.md",
-    "fleeting-notes/20230616.md",
-    "fleeting-notes/20230617.md",
-    "fleeting-notes/20230618.md",
-    "fleeting-notes/20230619.md",
     "fleeting-notes/Pasted image 20220711180651.png",
     "fleeting-notes/Pasted image 20220905142930.png",
     "fleeting-notes/Pasted image 20230109115252.png",
