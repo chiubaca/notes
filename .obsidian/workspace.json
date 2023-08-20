@@ -4,65 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "4cb4ca06168b23bf",
+        "id": "7ae9afa6a7521dab",
         "type": "tabs",
         "children": [
           {
-            "id": "78adc7b2576c3787",
+            "id": "1a484743487b9f15",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "permanent-notes/anatomy-of-a-threejs-scene.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
-      },
-      {
-        "id": "91e1ba51a0cbadf7",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "e2e3d694a4d23971",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "fleeting-notes/20230704.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a4c18ab06ec91c66",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "fleeting-notes/20230704.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "fa328c5745e4f542",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "fleeting-notes/20230820.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ],
-        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -136,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20230820.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -163,39 +115,39 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "fa328c5745e4f542",
+  "active": "1a484743487b9f15",
   "lastOpenFiles": [
     "fleeting-notes/20230704.md",
+    "literature-notes/docker-basics.md",
+    "fleeting-notes/20221106.md",
+    "fleeting-notes/20221103.md",
+    "fleeting-notes/20220311.md",
+    "fleeting-notes/20220921.md",
+    "literature-notes/2022.md",
+    "literature-notes/making-eco-friendly-websites.md",
+    "literature-notes/building-a-headless-dropshipping-site.md",
+    "index-notes/Three-js.md",
+    "index-notes/Svelte.md",
+    "fleeting-notes/Pasted image 20230109115252.png",
+    "fleeting-notes/Pasted image 20230109114622.png",
+    "fleeting-notes/Pasted image 20230109114133.png",
+    "fleeting-notes/Pasted image 20230109112631.png",
+    "fleeting-notes/Pasted image 20220905142930.png",
+    "fleeting-notes/Pasted image 20220711180651.png",
+    "index-notes/Zettelkasten.md",
+    "index-notes/Astro.md",
+    "permanent-notes/nx-for-noobs.md",
+    "permanent-notes/anatomy-of-a-threejs-scene.md",
+    "fleeting-notes/20230820.md",
     "fleeting-notes/20230612.md",
     "fleeting-notes/20230620.md",
-    "fleeting-notes/20230820.md",
     "fleeting-notes/20230601.md",
-    "fleeting-notes/Pasted image 20220711180651.png",
     "fleeting-notes/20230708.md",
     "fleeting-notes/20230709.md",
     "fleeting-notes/20230710.md",
     "fleeting-notes/20230711.md",
     "permanent-notes/principles-for-using-ai-to-write-code.md",
     "fleeting-notes/20230712.md",
-    "fleeting-notes/20230713.md",
-    "fleeting-notes/20230714.md",
-    "fleeting-notes/20230715.md",
-    "fleeting-notes/20230716.md",
-    "fleeting-notes/20230717.md",
-    "fleeting-notes/20230718.md",
-    "permanent-notes/anatomy-of-a-threejs-scene.md",
-    "fleeting-notes/20230707.md",
-    "fleeting-notes/20230706.md",
-    "fleeting-notes/20230705.md",
-    "fleeting-notes/20230703.md",
-    "literature-notes/making-eco-friendly-websites.md",
-    "fleeting-notes/20230630.md",
-    "fleeting-notes/20230628.md",
-    "fleeting-notes/20230627.md",
-    "fleeting-notes/Pasted image 20220905142930.png",
-    "fleeting-notes/Pasted image 20230109115252.png",
-    "fleeting-notes/Pasted image 20230109114622.png",
-    "fleeting-notes/Pasted image 20230109114133.png",
-    "fleeting-notes/Pasted image 20230109112631.png"
+    "fleeting-notes/20230713.md"
   ]
 }
