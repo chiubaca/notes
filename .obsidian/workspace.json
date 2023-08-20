@@ -11,8 +11,12 @@
             "id": "1a484743487b9f15",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "permanent-notes/svelte-basics.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -44,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "svelte",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,11 +73,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 286.5
+    "width": 200
   },
   "right": {
     "id": "7d79c914da9cc99e",
@@ -89,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "permanent-notes/svelte-basics.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -117,6 +123,7 @@
   },
   "active": "1a484743487b9f15",
   "lastOpenFiles": [
+    "fleeting-notes/20211212.md",
     "fleeting-notes/20230704.md",
     "literature-notes/docker-basics.md",
     "fleeting-notes/20221106.md",
@@ -147,7 +154,6 @@
     "fleeting-notes/20230710.md",
     "fleeting-notes/20230711.md",
     "permanent-notes/principles-for-using-ai-to-write-code.md",
-    "fleeting-notes/20230712.md",
-    "fleeting-notes/20230713.md"
+    "fleeting-notes/20230712.md"
   ]
 }

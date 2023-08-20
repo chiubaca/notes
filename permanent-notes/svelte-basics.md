@@ -1,5 +1,4 @@
 ---
----
 title: Svelte Basics
 publish_date: 20211212
 last_updated: 20211212
