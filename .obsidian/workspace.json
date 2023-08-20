@@ -36,8 +36,33 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "a4c18ab06ec91c66",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "fleeting-notes/20230704.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fa328c5745e4f542",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "fleeting-notes/20230820.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -111,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20230704.md",
+                "file": "fleeting-notes/20230820.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -138,10 +163,13 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "e2e3d694a4d23971",
+  "active": "fa328c5745e4f542",
   "lastOpenFiles": [
-    "fleeting-notes/20230620.md",
     "fleeting-notes/20230704.md",
+    "fleeting-notes/20230612.md",
+    "fleeting-notes/20230620.md",
+    "fleeting-notes/20230820.md",
+    "fleeting-notes/20230601.md",
     "fleeting-notes/Pasted image 20220711180651.png",
     "fleeting-notes/20230708.md",
     "fleeting-notes/20230709.md",
@@ -161,11 +189,9 @@
     "fleeting-notes/20230705.md",
     "fleeting-notes/20230703.md",
     "literature-notes/making-eco-friendly-websites.md",
-    "fleeting-notes/20230612.md",
     "fleeting-notes/20230630.md",
     "fleeting-notes/20230628.md",
     "fleeting-notes/20230627.md",
-    "fleeting-notes/20230625.md",
     "fleeting-notes/Pasted image 20220905142930.png",
     "fleeting-notes/Pasted image 20230109115252.png",
     "fleeting-notes/Pasted image 20230109114622.png",
