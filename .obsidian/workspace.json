@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/svelte-basics.md",
+                "file": "fleeting-notes/20230826.md",
                 "mode": "source",
                 "source": false
               }
@@ -73,8 +73,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -94,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "permanent-notes/svelte-basics.md",
+                "file": "fleeting-notes/20230826.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -123,6 +122,7 @@
   },
   "active": "1a484743487b9f15",
   "lastOpenFiles": [
+    "permanent-notes/svelte-basics.md",
     "fleeting-notes/20211212.md",
     "fleeting-notes/20230704.md",
     "literature-notes/docker-basics.md",
@@ -153,7 +153,6 @@
     "fleeting-notes/20230709.md",
     "fleeting-notes/20230710.md",
     "fleeting-notes/20230711.md",
-    "permanent-notes/principles-for-using-ai-to-write-code.md",
-    "fleeting-notes/20230712.md"
+    "permanent-notes/principles-for-using-ai-to-write-code.md"
   ]
 }
