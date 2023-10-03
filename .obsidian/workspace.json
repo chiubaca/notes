@@ -42,6 +42,18 @@
             }
           },
           {
+            "id": "4acdd7560e84a549",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "fleeting-notes/20231003.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "fd2044a76b55da5a",
             "type": "leaf",
             "state": {
@@ -54,7 +66,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -128,7 +140,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20230927.md",
+                "file": "fleeting-notes/20231003.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -136,6 +148,16 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d23b410d5698b328",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
               }
             }
           }
@@ -155,14 +177,20 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "201952ae5619c81c",
+  "active": "4acdd7560e84a549",
   "lastOpenFiles": [
+    "fleeting-notes/20231002.md",
+    "fleeting-notes/20231003.md",
+    "fleeting-notes/20230927.md",
+    "fleeting-notes/20231001.md",
+    "fleeting-notes/20230930.md",
+    "fleeting-notes/20230929.md",
     "fleeting-notes/20230921.md",
+    "fleeting-notes/20230928.md",
     "fleeting-notes/20230305.md",
     "permanent-notes/principles-for-using-ai-to-write-code.md",
     "permanent-notes/Quick look at`use()`. The hook that solves React client-side data fetching..md",
     "literature-notes/total-typescript-notes.md",
-    "fleeting-notes/20230927.md",
     "fleeting-notes/20230926.md",
     "fleeting-notes/20230925.md",
     "fleeting-notes/20230924.md",
@@ -176,12 +204,6 @@
     "fleeting-notes/20230704.md",
     "fleeting-notes/20230620.md",
     "fleeting-notes/20230612.md",
-    "fleeting-notes/20230601.md",
-    "fleeting-notes/20230527.md",
-    "fleeting-notes/20230525.md",
-    "fleeting-notes/20230523.md",
-    "fleeting-notes/20230522.md",
-    "fleeting-notes/20230521.md",
-    "fleeting-notes/20230520.md"
+    "fleeting-notes/20230601.md"
   ]
 }
