@@ -13,60 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/20230305.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a53cc7b995a3381a",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.3.5"
-              }
-            }
-          },
-          {
-            "id": "201952ae5619c81c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "fleeting-notes/20230927.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4acdd7560e84a549",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "fleeting-notes/20231010.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "fd2044a76b55da5a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "fleeting-notes/20230305.md",
+                "file": "literature-notes/all-things-vector-tiles.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -120,8 +73,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -141,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20231010.md",
+                "file": "literature-notes/all-things-vector-tiles.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -178,33 +130,33 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "4acdd7560e84a549",
+  "active": "18b69696a4f5773f",
   "lastOpenFiles": [
+    "fleeting-notes/20231010.md",
+    "literature-notes/all-things-vector-tiles.md",
+    "literature-notes/building-a-headless-dropshipping-site.md",
+    "fleeting-notes/20230820.md",
+    "fleeting-notes/20230918.md",
+    "permanent-notes/nx-for-noobs.md",
+    "permanent-notes/docker-commands-cheatsheet.md",
+    "permanent-notes/anatomy-of-a-threejs-scene.md",
     "fleeting-notes/20231011.md",
     "fleeting-notes/20231009.md",
-    "permanent-notes/nx-for-noobs.md",
-    "permanent-notes/anatomy-of-a-threejs-scene.md",
+    "fleeting-notes/20231008.md",
+    "fleeting-notes/20231003.md",
+    "fleeting-notes/20230927.md",
+    "fleeting-notes/20230921.md",
+    "fleeting-notes/20231002.md",
+    "fleeting-notes/20231007.md",
+    "fleeting-notes/20231006.md",
+    "fleeting-notes/20231005.md",
+    "fleeting-notes/20231004.md",
+    "fleeting-notes/20230305.md",
     "permanent-notes/remix-basics.md",
     "permanent-notes/auto-js-sdk-for-any-rest-api.md",
-    "fleeting-notes/20231003.md",
-    "fleeting-notes/20231002.md",
-    "fleeting-notes/20230927.md",
     "fleeting-notes/20231001.md",
     "fleeting-notes/20230930.md",
     "fleeting-notes/20230929.md",
-    "fleeting-notes/20230921.md",
-    "fleeting-notes/20230928.md",
-    "fleeting-notes/20230305.md",
-    "permanent-notes/principles-for-using-ai-to-write-code.md",
-    "permanent-notes/Quick look at`use()`. The hook that solves React client-side data fetching..md",
-    "literature-notes/total-typescript-notes.md",
-    "fleeting-notes/20230926.md",
-    "fleeting-notes/20230925.md",
-    "fleeting-notes/20230924.md",
-    "fleeting-notes/20230923.md",
-    "fleeting-notes/20230922.md",
-    "fleeting-notes/20230918.md",
-    "fleeting-notes/20230912.md",
-    "fleeting-notes/20230910.md"
+    "fleeting-notes/20230928.md"
   ]
 }
