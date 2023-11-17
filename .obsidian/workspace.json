@@ -4,28 +4,26 @@
     "type": "split",
     "children": [
       {
-        "id": "9575d218cb05e4dd",
+        "id": "c7baac2732087e7e",
         "type": "tabs",
         "children": [
           {
-            "id": "89fe92cc166cab1b",
+            "id": "8d85792a22a23358",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "242afe38cf7a0d82",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/20231021.md",
+                "file": "fleeting-notes/20231117.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "63287faf73ae0b5a",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.4.16"
               }
             }
           }
@@ -59,7 +57,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "vector tiles",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,7 +67,15 @@
             }
           },
           {
-            "id": "679e8218a1f5b3c6",
+            "id": "89fe92cc166cab1b",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          },
+          {
+            "id": "14a9314022567571",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -80,7 +86,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 245
+    "width": 260.5
   },
   "right": {
     "id": "7d79c914da9cc99e",
@@ -96,19 +102,19 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20231021.md",
+                "file": "fleeting-notes/20231117.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
-                "showSearch": true,
-                "searchQuery": "svelte",
+                "showSearch": false,
+                "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "7cf7ef914a2ca60d",
+            "id": "d23b410d5698b328",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -116,20 +122,13 @@
                 "sortOrder": "frequency"
               }
             }
-          },
-          {
-            "id": "6b4b9703ddb33ea7",
-            "type": "leaf",
-            "state": {
-              "type": "git-history-view",
-              "state": {}
-            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 344.5
+    "width": 500,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -140,33 +139,33 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "cdd64a28cc6fe199",
+  "active": "242afe38cf7a0d82",
   "lastOpenFiles": [
+    "fleeting-notes/20231116.md",
+    "fleeting-notes/20231117.md",
     "fleeting-notes/20231112.md",
-    "fleeting-notes/20231111.md",
-    "fleeting-notes/20231110.md",
-    "fleeting-notes/20231109.md",
-    "fleeting-notes/20231108.md",
-    "fleeting-notes/20231107.md",
-    "fleeting-notes/20231106.md",
-    "fleeting-notes/20231105.md",
-    "fleeting-notes/20231104.md",
-    "fleeting-notes/20231103.md",
+    "fleeting-notes/20231115.md",
+    "fleeting-notes/20231114.md",
+    "fleeting-notes/20231113.md",
     "fleeting-notes/20231102.md",
     "fleeting-notes/20231030.md",
+    "fleeting-notes/20231101.md",
+    "fleeting-notes/20231031.md",
     "fleeting-notes/20231027.md",
+    "fleeting-notes/20231029.md",
+    "fleeting-notes/20231028.md",
+    "fleeting-notes/20231016.md",
     "fleeting-notes/20231026.md",
     "fleeting-notes/20231025.md",
     "fleeting-notes/20231024.md",
     "fleeting-notes/20231023.md",
     "fleeting-notes/20231022.md",
-    "fleeting-notes/20231019.md",
-    "fleeting-notes/20231017.md",
-    "fleeting-notes/20231020.md",
     "fleeting-notes/20231021.md",
+    "fleeting-notes/20231020.md",
+    "fleeting-notes/20231019.md",
     "fleeting-notes/20231018.md",
-    "fleeting-notes/20231016.md",
+    "fleeting-notes/20231017.md",
     "fleeting-notes/20231010.md",
-    "fleeting-notes/20231009.md"
+    "fleeting-notes/20231015.md"
   ]
 }
