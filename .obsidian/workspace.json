@@ -13,8 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index-notes/Business Ideas.md",
-                "file": "fleeting-notes/20231215.md",
+                "file": "fleeting-notes/20231221.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index-notes/Business Ideas.md",
+                "file": "fleeting-notes/20231221.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -132,11 +131,16 @@
   },
   "active": "ff21b984cc00591b",
   "lastOpenFiles": [
+    "fleeting-notes/20231215.md",
+    "fleeting-notes/20231220.md",
+    "fleeting-notes/20231218.md",
     "fleeting-notes/20231217.md",
     "fleeting-notes/20231216.md",
-    "fleeting-notes/20231215.md",
-    "index-notes/Zettelkasten.md",
+    "fleeting-notes/20231221.md",
     "index-notes/Business Ideas.md",
+    "fleeting-notes/20231219.md",
+    "wat.canvas",
+    "index-notes/Zettelkasten.md",
     "index-notes/Astro.md",
     "index-notes/Untitled.md",
     "fleeting-notes/20231203.md",
@@ -153,10 +157,6 @@
     "fleeting-notes/20231123.md",
     "fleeting-notes/20231122.md",
     "fleeting-notes/20231121.md",
-    "fleeting-notes/20231120.md",
-    "fleeting-notes/20231119.md",
-    "fleeting-notes/20231118.md",
-    "fleeting-notes/20231116.md",
-    "fleeting-notes/20231021.md"
+    "fleeting-notes/20231120.md"
   ]
 }
