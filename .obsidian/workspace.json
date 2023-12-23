@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/20231221.md",
+                "file": "permanent-notes/nx-for-noobs.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/20231221.md",
+                "file": "permanent-notes/nx-for-noobs.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -131,12 +131,13 @@
   },
   "active": "ff21b984cc00591b",
   "lastOpenFiles": [
+    "fleeting-notes/20231221.md",
+    "permanent-notes/nx-for-noobs.md",
     "fleeting-notes/20231215.md",
     "fleeting-notes/20231220.md",
     "fleeting-notes/20231218.md",
     "fleeting-notes/20231217.md",
     "fleeting-notes/20231216.md",
-    "fleeting-notes/20231221.md",
     "index-notes/Business Ideas.md",
     "fleeting-notes/20231219.md",
     "wat.canvas",
@@ -156,7 +157,6 @@
     "fleeting-notes/20231124.md",
     "fleeting-notes/20231123.md",
     "fleeting-notes/20231122.md",
-    "fleeting-notes/20231121.md",
-    "fleeting-notes/20231120.md"
+    "fleeting-notes/20231121.md"
   ]
 }
