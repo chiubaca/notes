@@ -1,7 +1,7 @@
 ---
 title: Easy React data fetching with `use()`
-publish_date: 202305027
-last_updated: 202305027
+publish_date: 20230527
+last_updated: 20230527
 description: Quick looks at the new `use()` hook
 status: draft
 layout: ../../layouts/PermanentNoteLayout.astro

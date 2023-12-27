@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/nx-for-noobs.md",
+                "file": "permanent-notes/Quick look at`use()`. The hook that solves React client-side data fetching..md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "permanent-notes/nx-for-noobs.md",
+                "file": "permanent-notes/Quick look at`use()`. The hook that solves React client-side data fetching..md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -131,18 +131,23 @@
   },
   "active": "ff21b984cc00591b",
   "lastOpenFiles": [
+    "fleeting-notes/20231227.md",
     "fleeting-notes/20231221.md",
+    "permanent-notes/auto-js-sdk-for-any-rest-api.md",
+    "permanent-notes/anatomy-of-a-threejs-scene.md",
+    "index-notes/Zettelkasten.md",
+    "index-notes/Svelte.md",
+    "index-notes/Business Ideas.md",
+    "index-notes/Astro.md",
+    "fleeting-notes/Pasted image 20220711180651.png",
     "permanent-notes/nx-for-noobs.md",
     "fleeting-notes/20231215.md",
     "fleeting-notes/20231220.md",
     "fleeting-notes/20231218.md",
     "fleeting-notes/20231217.md",
     "fleeting-notes/20231216.md",
-    "index-notes/Business Ideas.md",
     "fleeting-notes/20231219.md",
     "wat.canvas",
-    "index-notes/Zettelkasten.md",
-    "index-notes/Astro.md",
     "index-notes/Untitled.md",
     "fleeting-notes/20231203.md",
     "fleeting-notes/20231202.md",
@@ -153,10 +158,6 @@
     "fleeting-notes/20231128.md",
     "fleeting-notes/20231127.md",
     "fleeting-notes/20231126.md",
-    "fleeting-notes/20231125.md",
-    "fleeting-notes/20231124.md",
-    "fleeting-notes/20231123.md",
-    "fleeting-notes/20231122.md",
-    "fleeting-notes/20231121.md"
+    "fleeting-notes/20231125.md"
   ]
 }

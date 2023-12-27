@@ -1,6 +1,6 @@
 ---
 title: Svelte.js
-publish_date: 20211002
+publish_date: 20211000
 layout: ../../layouts/IndexNoteLayout.astro
 ---
 
