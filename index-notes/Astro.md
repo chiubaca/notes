@@ -4,4 +4,5 @@ publish_date: '2021-09-23'
 ---
 
 # Astro.js
-- [20211013](../fleeting-notes/20211013.md)
+- [2021-10-13](fleeting-notes/2021-10-13.md)
+

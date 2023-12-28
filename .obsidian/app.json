@@ -1,7 +1,7 @@
 {
   "useMarkdownLinks": true,
   "attachmentFolderPath": "./",
-  "newLinkFormat": "relative",
+  "newLinkFormat": "absolute",
   "spellcheck": true,
   "showFrontmatter": true,
   "spellcheckDictionary": [
