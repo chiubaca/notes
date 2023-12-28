@@ -1,9 +1,18 @@
+---
+title: Resources
+publish_date: '2023-12-28'
+last_updated: 20220618
+description: Compilation of resources that I have read/watched/worked through that have helped expand my knowledge.
+status: draft
+---
+
+
 # Learning
 Compilation of resources that I have read/watched/worked through that have helped expand my knowledge.
 
 Inspired by [amitness](https://github.com/amitness/learning).
 
-This is also where I'm organising my [second brain](https://notes.chiubaca.com) using the [Zettelkasten](index-notes/Zettelkasten.md) method.
+This is also where I'm organising my [second brain](https://notes.chiubaca.com) using the [zettelkasten](index-notes/zettelkasten.md) method.
 
 ## Key
 | Reading | Paused | Recommended |

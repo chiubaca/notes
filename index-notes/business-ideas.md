@@ -1,5 +1,5 @@
 ---
-title: buisness-ideas
+title: Buisness Ideas
 publish_date: '2023-12-17'
 last_updated: 20231217
 ---
