@@ -1,9 +1,8 @@
 ---
 title: paypal-sdk
-publish_date: 20220423
+publish_date: '2022-04-23'
 last_updated: 20220423
 description: Notes on using the PayPal SDK
-layout: ../../layouts/LiteratureNoteLayout.astro
 ---
 
 - There are quite a few different layers to the PayPal SDK

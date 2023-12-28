@@ -1,10 +1,9 @@
 ---
 title: Remix Basics
-publish_date: 20220618
+publish_date: '2022-06-18'
 last_updated: 20220618
 description: Remix Basics
 status: draft
-layout: ../../layouts/PermanentNoteLayout.astro
 ---
 
 # Notes on Remix

@@ -1,10 +1,9 @@
 ---
 title: Svelte Basics
-publish_date: 20211212
+publish_date: '2021-12-12'
 last_updated: 20211212
 description: Svelte Basics
 status: draft
-layout: ../../layouts/PermanentNoteLayout.astro
 ---
 
 # Svelte Basics

@@ -1,9 +1,8 @@
 ---
 title: Swapping React for Preact in Next.js
-publish_date: 20211210
+publish_date: '2021-12-10'
 last_updated: 20211210
 description: Some notes from swapping React for Preact in Next.js
-layout: ../../layouts/LiteratureNoteLayout.astro
 ---
 
 # Motivation

@@ -1,9 +1,8 @@
 ---
 title: threejs-journey
-publish_date: 20210928
+publish_date: '2021-09-28'
 last_updated: 20210930
 description: Notes from threejs-journey.xyz
-layout: ../../layouts/LiteratureNoteLayout.astro
 ---
 
 # Notes from threejs-journey.xyz

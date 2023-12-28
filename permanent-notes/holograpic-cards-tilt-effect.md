@@ -1,10 +1,9 @@
 ---
 title: Holographic cards tilt effect
-publish_date: 20221229
+publish_date: '2022-12-29'
 last_updated: 20221229
 description: Creating holographic cards with CSS and a sprinkle of js
 status: draft
-layout: ../../layouts/PermanentNoteLayout.astro
 ---
 
 ## Intro

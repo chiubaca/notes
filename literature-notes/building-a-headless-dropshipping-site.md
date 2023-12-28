@@ -1,9 +1,8 @@
 ---
 title: making-eco-friendly-websites
-publish_date: 20220403
+publish_date: '2022-04-03'
 last_updated: 20220423
 description: Notes on building a headless dropping site
-layout: ../../layouts/LiteratureNoteLayout.astro
 ---
 
 

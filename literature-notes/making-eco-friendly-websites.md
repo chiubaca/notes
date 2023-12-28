@@ -1,9 +1,8 @@
 ---
 title: making-eco-friendly-websites
-publish_date: 20211226
+publish_date: '2021-12-26'
 last_updated: 20220107
 description: Consuming less JavaScript in our frontend applications
-layout: ../../layouts/LiteratureNoteLayout.astro
 ---
 
 

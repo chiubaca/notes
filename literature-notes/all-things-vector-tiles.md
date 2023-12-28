@@ -1,10 +1,9 @@
 ---
 title: All things vector tiles
-publish_date: 20230111
+publish_date: '2023-01-11'
 last_updated: 20230111
 description: all my notes about vector tiles live here
 status: draft
-layout: ../../layouts/LiteratureNoteLayout.astro
 ---
 
 # Overview of vector tiles

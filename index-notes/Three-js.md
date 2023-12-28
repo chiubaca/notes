@@ -1,7 +1,6 @@
 ---
 title: Three.js
-publish_date: 20210928
-layout: ../../layouts/IndexNoteLayout.astro
+publish_date: '2021-09-28'
 ---
 
 - [Three.js journey](../literature-notes/threejs-journey.md)

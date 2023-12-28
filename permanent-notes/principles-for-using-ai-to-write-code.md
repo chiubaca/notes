@@ -1,9 +1,8 @@
 ---
 title: Principles for using AI to write code
-publish_date: 20230708
+publish_date: '2023-07-08'
 last_updated: 20230708
 description: My thoughts on how to best using AI to write code
-layout: ../../layouts/PermanentNoteLayout.astro
 ---
 
 1. Understand exactly what the AI has written.

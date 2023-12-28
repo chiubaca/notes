@@ -1,7 +1,6 @@
 ---
 title: Astro.js
-publish_date: 20210923
-layout: ../../layouts/IndexNoteLayout.astro
+publish_date: '2021-09-23'
 ---
 
 # Astro.js

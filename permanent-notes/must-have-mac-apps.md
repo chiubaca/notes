@@ -1,9 +1,8 @@
 ---
 title: must-have-mac-apps
-publish_date: 20220123
+publish_date: '2022-01-23'
 last_updated: 20220123
 description: Must have mac apps
-layout: ../../layouts/PermanentNoteLayout.astro
 ---
 
 https://pilotmoon.com/scrollreverser/

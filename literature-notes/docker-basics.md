@@ -1,9 +1,8 @@
 ---
 title: docker-basics
-publish_date: 20220921
+publish_date: '2022-09-21'
 last_updated: 20220921
 description: Docker Basics
-layout: ../../layouts/LiteratureNoteLayout.astro
 ---
 
 Notes from [ Docker Tutorial for Beginners](https://www.youtube.com/watch?v=zJ6WbK9zFpI)
