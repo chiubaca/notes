@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index-notes/zettelkasten.md",
+                "file": "fleeting-notes/2023-12-28.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index-notes/zettelkasten.md",
+                "file": "fleeting-notes/2023-12-28.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -120,13 +120,13 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "cdd64a28cc6fe199",
+  "active": "1a484743487b9f15",
   "lastOpenFiles": [
+    "index-notes/zettelkasten.md",
     "permanent-notes/resources.md",
     "permanent-notes/README.md",
     "index-notes/svelte.md",
     "index-notes/astro.md",
-    "index-notes/zettelkasten.md",
     "index-notes/three-js.md",
     "svelte.md",
     "index-notes/business-ideas.md",
@@ -134,7 +134,7 @@
     "fleeting-notes/2020-09-10.md",
     "permanent-notes/svelte-basics.md",
     "literature-notes/all-things-vector-tiles.md",
-    "fleeting-notes/20231228.md",
+    "fleeting-notes/2023-12-28.md",
     "fleeting-notes/2023-12-27.md",
     "fleeting-notes/2023-12-21.md",
     "fleeting-notes/2023-12-19.md",
