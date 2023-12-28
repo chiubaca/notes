@@ -56,9 +56,6 @@ Things get a lot more interesting when we bring controls and animations into the
 
 ### Textures / Meshes
 
-- [20210912](../fleeting-notes/20210912.md)
-- [20210930](../fleeting-notes/20210930.md)
-
 [2021-09-12](fleeting-notes/2021-09-12.md)
 [2021-09-30](fleeting-notes/2021-09-30.md)
 

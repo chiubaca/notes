@@ -21,4 +21,4 @@ status: draft
 
 
 References
-- [20220717](../fleeting-notes/20220717.md)
+- [2022-07-17](fleeting-notes/2022-07-17.md)
