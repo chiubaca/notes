@@ -50,6 +50,6 @@ The `OpenAPIClientAxios` class requires parameter object, the minium it needs is
 Note i've configured the `definition` parameter to point to a `open-api.json`  which is co-located with my `printfulClient.ts` file. I have pre-downloaded Printfuls open api spec [here](blob:https://developers.printful.com/102d71b9-2e81-41f7-adb5-1cb12b4533b9).
 
 
-Related Note: 
-- [20220612](../fleeting-notes/20220612.md)
+Related Notes: 
+- [2022-06-12](fleeting-notes/2022-06-12.md)
 

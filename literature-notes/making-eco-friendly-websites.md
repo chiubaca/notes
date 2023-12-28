@@ -241,7 +241,7 @@ RSC will only send back HTML to the client without any JS bundle a
 
 #  References
 
-- [20211226](../fleeting-notes/20211226.md)
+- [2021-12-26](fleeting-notes/2021-12-26.md)
 - https://sustainablewebdesign.org/
 - https://css-tricks.com/reduce-your-websites-environmental-impact-with-a-carbon-budget/
 - https://www.speedcurve.com/blog/web-performance-page-bloat/

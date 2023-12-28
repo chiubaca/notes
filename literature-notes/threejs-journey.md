@@ -49,40 +49,41 @@ Things get a lot more interesting when we bring controls and animations into the
 
 ### Cameras
 
-- [20210828](../fleeting-notes/20210828.md)
-- [20210830](../fleeting-notes/20210830.md)
-- [20210905](../fleeting-notes/20210905.md)
-- [20210909](../fleeting-notes/20210909.md)
+[2021-08-28](fleeting-notes/2021-08-28.md)
+[2021-08-30](fleeting-notes/2021-08-30.md)
+[2021-09-05](fleeting-notes/2021-09-05.md)
+[2021-09-09](fleeting-notes/2021-09-09.md)
 
 ### Textures / Meshes
 
 - [20210912](../fleeting-notes/20210912.md)
 - [20210930](../fleeting-notes/20210930.md)
 
+[2021-09-12](fleeting-notes/2021-09-12.md)
+[2021-09-30](fleeting-notes/2021-09-30.md)
+
 ### Animations
 
-- [20210829](../fleeting-notes/20210829.md)
+[2021-08-29](fleeting-notes/2021-08-29.md)
 
 ### Text
 
-- [20211002](../fleeting-notes/20211002.md)
-
+[2021-10-02](fleeting-notes/2021-10-02.md)
 ### Lighting & Shadows
 
-- [20211010](../fleeting-notes/20211010.md)
-- [20211012](../fleeting-notes/20211012.md)
+[2021-10-10](fleeting-notes/2021-10-10.md)
+[2021-10-12](fleeting-notes/2021-10-12.md)
 
 ### Raycasting
 
-- [20211108](../fleeting-notes/20211108.md)
+[2021-11-08](fleeting-notes/2021-11-08.md)
 
 ### Importing 3D models
 
-- [20211118](../fleeting-notes/20211118.md)
-
+[2022-11-18](fleeting-notes/2022-11-18.md)
 ### Debugging
 
-- [20210911](../fleeting-notes/20210911.md)
+[2021-09-11](fleeting-notes/2021-09-11.md)
 
 ## References
 

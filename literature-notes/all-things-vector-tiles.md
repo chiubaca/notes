@@ -56,9 +56,10 @@ One way of acheiveing 3d effects in vector tiles is to enbed height attribute to
 
 
 Fleeting notes about vector tiles
-[20230820](../fleeting-notes/20230820.md)
-[20230918](../fleeting-notes/20230918.md)
-[[20231010]]
+
+[2023-08-20](fleeting-notes/2023-08-20.md)
+[2023-09-18](fleeting-notes/2023-09-18.md)
+[2023-10-10](fleeting-notes/2023-10-10.md)
 
 References
  - [Build Your Own Static Vector Tile Pipeline - Geovation Tech Blog](https://geovation.github.io/build-your-own-static-vector-tile-pipeline)

@@ -200,11 +200,7 @@ Svelte also handle converting values from numbers to strings, this is helpful wh
 <input type=range bind:value={a} min=0 max=10>
 ```
 
-[20211212](../fleeting-notes/20211212.md)
-
 ## Stores
-
-[20211212](../fleeting-notes/20211212.md)
 
 
 ## Debugging

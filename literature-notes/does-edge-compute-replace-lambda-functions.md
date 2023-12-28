@@ -17,5 +17,4 @@ https://www.stackery.io/blog/lambda-at-edge/
 
 -  [Lambda@Edge](https://aws.amazon.com/lambda/edge/)
 - [Deno Deploy](https://deno.com/deploy)
-- 
 

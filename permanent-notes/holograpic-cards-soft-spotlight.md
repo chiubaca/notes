@@ -217,5 +217,3 @@ We set our percentage values into our CSS variables with [`CSSStyleDeclaration.s
 </p>
 
 
-References
--[20221227](../fleeting-notes/20221227.md)
