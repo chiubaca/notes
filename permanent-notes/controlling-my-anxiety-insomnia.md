@@ -1,5 +1,5 @@
 ---
-title: # Controlling My Anxiety & Insomnia
+title: Controlling My Anxiety & Insomnia
 publish_date: 2020-02-01
 last_updated: 2020-02-01
 status: live
