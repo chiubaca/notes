@@ -1,6 +1,6 @@
 ---
-title: docker-basics
-publish_date: '2022-09-21'
+title: Docker Basics
+publish_date: 2022-09-21
 last_updated: 20220921
 description: Docker Basics
 ---

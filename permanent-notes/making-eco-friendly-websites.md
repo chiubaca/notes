@@ -1,6 +1,6 @@
 ---
-title: making-eco-friendly-websites
-publish_date: '2021-12-26'
+title: Eco friendly websites
+publish_date: 2021-12-26
 last_updated: 20220107
 description: Consuming less JavaScript in our frontend applications
 ---
@@ -107,7 +107,7 @@ Worth noting, we could also achieve a similar effect using JS using the browsers
  
  ### 4. `next/image`
  All the above is actually quite a lot of work. So big shout out to  `next/image` which does all the above auto-magically for you! we're using this for Penso.  With great results
- ![](Pasted%20image%2020220106182550.png)
+ ![](permanent-notes/Pasted%20image%2020220106182550.png)
 
 ## Less JavaScript
 

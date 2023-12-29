@@ -1,6 +1,6 @@
 ---
-title: must-have-mac-apps
-publish_date: '2022-01-23'
+title: Must have mac apps
+publish_date: 2022-01-23
 last_updated: 20220123
 description: Must have mac apps
 ---

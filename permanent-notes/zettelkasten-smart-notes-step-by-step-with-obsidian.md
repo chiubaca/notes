@@ -1,8 +1,8 @@
 ---
-title: zettelkasten-smart-notes
-publish_date: '2021-09-22'
+title: Zettelkasten smart notes
+publish_date: 2021-09-22
 last_updated: 20210927
-description: 'Notes from https://www.youtube.com/watch?v=ziE6UExsOr'
+description: Notes from https://www.youtube.com/watch?v=ziE6UExsOr
 ---
 
 This is technique to write notes in a way that optimises for discoverability of previously written notes.
