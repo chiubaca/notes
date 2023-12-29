@@ -3,7 +3,7 @@ title: Easy React data fetching with `use()`
 publish_date: '2023-05-27'
 last_updated: 20230527
 description: Quick looks at the new `use()` hook
-status: draft
+status: live
 ---
 
 **NOTE: ** :  `React.use()` is still an unstable API. For more information check out the [support for promises React RFC](https://github.com/acdlite/rfcs/blob/first-class-promises/text/0000-first-class-support-for-promises.md) . At the time of writing this, you can only test this API in Next.js 13.

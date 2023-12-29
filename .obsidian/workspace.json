@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/using-javascript-to-write-postgresql-functions.md",
+                "file": "permanent-notes/how-use-npm-modules-client-side-in-astrojs.md",
                 "mode": "source",
                 "source": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "permanent-notes/using-javascript-to-write-postgresql-functions.md",
+                "file": "permanent-notes/how-use-npm-modules-client-side-in-astrojs.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -169,6 +169,8 @@
   },
   "active": "1a484743487b9f15",
   "lastOpenFiles": [
+    "permanent-notes/quick-look-at-react-use-hook.md",
+    "permanent-notes/using-javascript-to-write-postgresql-functions.md",
     "permanent-notes/zettelkasten-smart-notes-step-by-step-with-obsidian.md",
     "permanent-notes/swapping-react-for-preact-in-nextjs.md",
     "permanent-notes/principles-for-using-ai-to-write-code.md",
@@ -180,7 +182,6 @@
     "permanent-notes/managing-your-self-learning.md",
     "fleeting-notes/2021-09-12.md",
     "fleeting-notes/2021-09-28.md",
-    "permanent-notes/using-javascript-to-write-postgresql-functions.md",
     "permanent-notes/shiba-every-hour-a-twitter-bot-powered-by-github-actions.md",
     "permanent-notes/resources.md",
     "permanent-notes/remix-basics.md",
@@ -193,7 +194,6 @@
     "permanent-notes/auto-js-sdk-for-any-rest-api.md",
     "permanent-notes/anatomy-of-a-threejs-scene.md",
     "permanent-notes/all-things-vector-tiles.md",
-    "permanent-notes/quick-look-at-react-use-hook.md",
     "permanent-notes/svelte-basics.md",
     "permanent-notes/Pasted image 20220106182550.png",
     "permanent-notes/Pasted image 20221228112640.png",
