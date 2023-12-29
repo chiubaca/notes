@@ -2,6 +2,7 @@
 title: Buisness Ideas
 publish_date: '2023-12-17'
 last_updated: 20231217
+status: draft
 ---
 1. Co-locate loyalty cards for small  businesses
 2. Co-locate pensions into a one pot (pension bee alternative)
