@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/controlling-my-anxiety-insomnia.md",
+                "file": "permanent-notes/using-javascript-to-write-postgresql-functions.md",
                 "mode": "source",
                 "source": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "permanent-notes/controlling-my-anxiety-insomnia.md",
+                "file": "permanent-notes/using-javascript-to-write-postgresql-functions.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -169,8 +169,13 @@
   },
   "active": "1a484743487b9f15",
   "lastOpenFiles": [
-    "permanent-notes/_template.md",
+    "permanent-notes/zettelkasten-smart-notes-step-by-step-with-obsidian.md",
+    "permanent-notes/swapping-react-for-preact-in-nextjs.md",
+    "permanent-notes/principles-for-using-ai-to-write-code.md",
+    "permanent-notes/must-have-mac-apps.md",
+    "permanent-notes/nx-for-noobs.md",
     "permanent-notes/controlling-my-anxiety-insomnia.md",
+    "permanent-notes/_template.md",
     "permanent-notes/how-use-npm-modules-client-side-in-astrojs.md",
     "permanent-notes/managing-your-self-learning.md",
     "fleeting-notes/2021-09-12.md",
@@ -180,7 +185,6 @@
     "permanent-notes/resources.md",
     "permanent-notes/remix-basics.md",
     "permanent-notes/typescript-and-netlify-functions.md",
-    "permanent-notes/swapping-react-for-preact-in-nextjs.md",
     "permanent-notes/making-eco-friendly-websites.md",
     "permanent-notes/holograpic-cards-soft-spotlight.md",
     "permanent-notes/docker-commands-cheatsheet.md",
@@ -190,12 +194,8 @@
     "permanent-notes/anatomy-of-a-threejs-scene.md",
     "permanent-notes/all-things-vector-tiles.md",
     "permanent-notes/quick-look-at-react-use-hook.md",
-    "permanent-notes/must-have-mac-apps.md",
-    "permanent-notes/nx-for-noobs.md",
     "permanent-notes/svelte-basics.md",
-    "permanent-notes/zettelkasten-smart-notes-step-by-step-with-obsidian.md",
     "permanent-notes/Pasted image 20220106182550.png",
-    "permanent-notes/Untitled 1.md",
     "permanent-notes/Pasted image 20221228112640.png",
     "permanent-notes/Pasted image 20221228124058.png",
     "fleeting-notes/Pasted image 20230109115252.png",

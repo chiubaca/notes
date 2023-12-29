@@ -3,7 +3,7 @@ title: Using JavaScript to write PostgreSQL functions
 publish_date: 2020-12-12
 last_updated: 2020-12-12
 description: 
-status: draft %% or live %%
+status: draft
 tags:
   - postgres
   - javascript
