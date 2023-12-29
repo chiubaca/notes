@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "literature-notes/zettelkasten-smart-notes-step-by-step-with-obsidian.md",
+                "file": "literature-notes/does-edge-compute-replace-lambda-functions.md",
                 "mode": "source",
                 "source": false
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "literature-notes/zettelkasten-smart-notes-step-by-step-with-obsidian.md",
+                "file": "literature-notes/does-edge-compute-replace-lambda-functions.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -125,6 +125,18 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "3596050b6936a68d",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           }
@@ -146,14 +158,17 @@
   },
   "active": "1a484743487b9f15",
   "lastOpenFiles": [
+    "fleeting-notes/2023-12-29.md",
+    "literature-notes/does-edge-compute-replace-lambda-functions.md",
+    "literature-notes/docker-basics.md",
+    "literature-notes/all-things-vector-tiles.md",
+    "index-notes/astro.md",
+    "literature-notes/zettelkasten-smart-notes-step-by-step-with-obsidian.md",
     "literature-notes/total-typescript-notes.md",
     "literature-notes/threejs-journey.md",
     "literature-notes/paypal-sdk.md",
     "literature-notes/Pasted image 20220106182550.png",
     "literature-notes/making-eco-friendly-websites.md",
-    "literature-notes/does-edge-compute-replace-lambda-functions.md",
-    "literature-notes/docker-basics.md",
-    "literature-notes/all-things-vector-tiles.md",
     "permanent-notes/anatomy-of-a-threejs-scene.md",
     "permanent-notes/nx-for-noobs.md",
     "permanent-notes/Pasted image 20221228112640.png",
@@ -168,12 +183,10 @@
     "permanent-notes/holograpic-cards-tilt-effect.md",
     "permanent-notes/docker-commands-cheatsheet.md",
     "permanent-notes/auto-js-sdk-for-any-rest-api.md",
-    "literature-notes/zettelkasten-smart-notes-step-by-step-with-obsidian.md",
     "fleeting-notes/2021-09-12.md",
     "literature-notes/building-a-headless-dropshipping-site.md",
     "index-notes/zettelkasten.md",
     "index-notes/three-js.md",
-    "index-notes/svelte.md",
     "fleeting-notes/Pasted image 20230109115252.png",
     "fleeting-notes/Pasted image 20230109114622.png",
     "fleeting-notes/Pasted image 20230109114133.png",
