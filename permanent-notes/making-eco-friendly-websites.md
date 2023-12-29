@@ -108,7 +108,7 @@ Worth noting, we could also achieve a similar effect using JS using the browsers
  
  ### 4. `next/image`
  All the above is actually quite a lot of work. So big shout out to  `next/image` which does all the above auto-magically for you! we're using this for Penso.  With great results
- ![](permanent-notes/Pasted%20image%2020220106182550.png)
+ ![](https://private-user-images.githubusercontent.com/18376481/293421818-fc1e575d-8f10-4aa6-b1e0-5a2ee4ab3a66.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDM4ODI2OTcsIm5iZiI6MTcwMzg4MjM5NywicGF0aCI6Ii8xODM3NjQ4MS8yOTM0MjE4MTgtZmMxZTU3NWQtOGYxMC00YWE2LWIxZTAtNWEyZWU0YWIzYTY2LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyMzEyMjklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjMxMjI5VDIwMzk1N1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWZmMDJmN2M3OTE5OGRlZmIwNGZlMDNkYzU1MzVhODdkMWE0ZTdhMGI5NDY3NTdiMmQwMmJmNzFlNGFhNTJjYjgmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.AN0QT2R_eStbZzfyF76Ind32bydzizRmUmpfYLajdcI)
 
 ## Less JavaScript
 
