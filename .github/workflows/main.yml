@@ -25,4 +25,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Hit Netlify build hook
-        run: curl -X POST -d {} https://api.netlify.com/build_hooks/61add62e29f4915769085457
+        run: curl -X POST -d {} https://api.netlify.com/build_hooks/658ede728522cbb92f70153d
