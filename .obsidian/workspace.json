@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "literature-notes/does-edge-compute-replace-lambda-functions.md",
+                "file": "fleeting-notes/2023-12-29.md",
                 "mode": "source",
                 "source": false
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "literature-notes/does-edge-compute-replace-lambda-functions.md",
+                "file": "fleeting-notes/2023-12-29.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -158,8 +158,8 @@
   },
   "active": "1a484743487b9f15",
   "lastOpenFiles": [
-    "fleeting-notes/2023-12-29.md",
     "literature-notes/does-edge-compute-replace-lambda-functions.md",
+    "fleeting-notes/2023-12-29.md",
     "literature-notes/docker-basics.md",
     "literature-notes/all-things-vector-tiles.md",
     "index-notes/astro.md",
