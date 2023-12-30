@@ -7,7 +7,6 @@ status: live
 tags:
   - javascript
   - github
-  - github actions
 ---
 
 # My Workflow
