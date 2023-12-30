@@ -7,8 +7,6 @@ tags:
   - wellbeing
 ---
 
-# Controlling My Anxiety & Insomnia
-
 I think we can all agree at that 2020 was a tough year. Mental health took the forefront as we all had to adapt to a life of social distancing and not being able to see our loved ones. I’ve not had any mental health issues in the past, but last year I noticed my anxiety was spiralling out of control and causing insomnia.
 
 Here are a few things I’ve learnt to help keep it under control. I hope they help you too if you are suffering from anxiety for the first time.
