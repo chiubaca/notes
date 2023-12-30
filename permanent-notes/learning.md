@@ -6,7 +6,6 @@ description: Compilation of resources that I have read/watched/worked through th
 status: draft
 ---
 
-# Learning
 Compilation of resources that I have read/watched/worked through that have helped expand my knowledge.
 
 Inspired by [amitness](https://github.com/amitness/learning).

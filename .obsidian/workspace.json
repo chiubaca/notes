@@ -21,14 +21,40 @@
             "id": "ecb43ca977b11acd",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "attachments/Pasted image 20220711180651.png"
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "36f115377f60eb71",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e493ad0aa9fa245a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -102,7 +128,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "attachments/Pasted image 20220711180651.png",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -140,11 +166,14 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "ecb43ca977b11acd",
+  "active": "e493ad0aa9fa245a",
   "lastOpenFiles": [
+    "permanent-notes/learning.md",
     "README.md",
-    "attachments/Pasted image 20220905142930.png",
+    "permanent-notes/zettelkasten.md",
+    "index-notes/zettelkasten.md",
     "attachments/Pasted image 20220711180651.png",
+    "attachments/Pasted image 20220905142930.png",
     "attachments/Pasted image 20230109115252.png",
     "attachments/Pasted image 20230109114622.png",
     "attachments/Pasted image 20230109114133.png",
@@ -170,14 +199,11 @@
     "permanent-notes/how-use-npm-modules-client-side-in-astrojs.md",
     "permanent-notes/quick-look-at-react-use-hook.md",
     "permanent-notes/using-javascript-to-write-postgresql-functions.md",
-    "permanent-notes/zettelkasten-smart-notes-step-by-step-with-obsidian.md",
     "permanent-notes/swapping-react-for-preact-in-nextjs.md",
     "permanent-notes/principles-for-using-ai-to-write-code.md",
     "permanent-notes/_template.md",
     "fleeting-notes/2021-09-12.md",
     "fleeting-notes/2021-09-28.md",
-    "permanent-notes/shiba-every-hour-a-twitter-bot-powered-by-github-actions.md",
-    "permanent-notes/resources.md",
-    "permanent-notes/remix-basics.md"
+    "permanent-notes/shiba-every-hour-a-twitter-bot-powered-by-github-actions.md"
   ]
 }
