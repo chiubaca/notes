@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/making-eco-friendly-websites.md",
+                "file": "fleeting-notes/2023-12-30.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "permanent-notes/making-eco-friendly-websites.md",
+                "file": "fleeting-notes/2023-12-30.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -131,8 +131,11 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "f7e5c6ae38fcd73d",
+  "active": "cdd64a28cc6fe199",
   "lastOpenFiles": [
+    "fleeting-notes/2023-12-29.md",
+    "fleeting-notes/2023-12-30.md",
+    "permanent-notes/making-eco-friendly-websites.md",
     "permanent-notes/holograpic-cards-soft-spotlight.md",
     "permanent-notes/Pasted image 20221228124058.png",
     "permanent-notes/Pasted image 20221228123653.png",
@@ -140,7 +143,6 @@
     "permanent-notes/Pasted image 20231229203601.png",
     "permanent-notes/Pasted image 20231229203756.png",
     "permanent-notes/Pasted image 20231229203803.png",
-    "permanent-notes/making-eco-friendly-websites.md",
     "permanent-notes/Pasted image 20220106182550.png",
     "permanent-notes/must-have-mac-apps.md",
     "permanent-notes/nx-for-noobs.md",
@@ -164,7 +166,6 @@
     "permanent-notes/build-a-serverless-crud-app-using-vue-js-netlify-and-faunadb.md",
     "permanent-notes/auto-js-sdk-for-any-rest-api.md",
     "permanent-notes/anatomy-of-a-threejs-scene.md",
-    "permanent-notes/all-things-vector-tiles.md",
     "fleeting-notes/Pasted image 20230109115252.png",
     "fleeting-notes/Pasted image 20230109114622.png",
     "fleeting-notes/Pasted image 20230109114133.png"
