@@ -1,6 +1,6 @@
 {
   "useMarkdownLinks": true,
-  "attachmentFolderPath": "./",
+  "attachmentFolderPath": "assets",
   "newLinkFormat": "absolute",
   "spellcheck": true,
   "showFrontmatter": true,
