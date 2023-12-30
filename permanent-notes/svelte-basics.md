@@ -1,9 +1,11 @@
 ---
 title: Svelte Basics
-publish_date: '2021-12-12'
+publish_date: 2021-12-12
 last_updated: 20211212
 description: Svelte Basics
 status: draft
+tags:
+  - svelte
 ---
 
 # Svelte Basics

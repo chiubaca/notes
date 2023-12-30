@@ -1,9 +1,11 @@
 ---
 title: The Anatomy of A Three.js Scene
-publish_date: '2021-10-03'
+publish_date: 2021-10-03
 last_updated: 20211003
 description: The basics of how a three.js scene works
 status: draft
+tags:
+  - threejs
 ---
 
 These are the core building blocks which every Three.js app is comprised of.

@@ -47,14 +47,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2023-10-18.md",
+                "file": "index-notes/svelte.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ad54df96ee9d2316",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "permanent-notes/anatomy-of-a-threejs-scene.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -128,7 +140,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/2023-10-18.md",
+                "file": "permanent-notes/anatomy-of-a-threejs-scene.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -166,10 +178,17 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "e493ad0aa9fa245a",
+  "active": "ad54df96ee9d2316",
   "lastOpenFiles": [
-    "fleeting-notes/2023-10-17.md",
+    "index-notes/three-js.md",
+    "literature-notes/threejs-journey.md",
+    "permanent-notes/svelte-basics.md",
+    "index-notes/svelte.md",
+    "fleeting-notes/2021-10-13.md",
+    "index-notes/astro.md",
+    "fleeting-notes/2023-12-30.md",
     "fleeting-notes/2023-10-18.md",
+    "fleeting-notes/2023-10-17.md",
     "fleeting-notes/2023-10-20.md",
     "fleeting-notes/2023-10-19.md",
     "fleeting-notes/2023-10-27.md",
@@ -187,13 +206,6 @@
     "fleeting-notes/2023-12-15.md",
     "fleeting-notes/2023-12-21.md",
     "fleeting-notes/2023-12-28.md",
-    "fleeting-notes/2023-12-29.md",
-    "fleeting-notes/2023-12-30.md",
-    "fleeting-notes/2023-12-19.md",
-    "fleeting-notes/2023-12-27.md",
-    "permanent-notes/shiba-every-hour-a-twitter-bot-powered-by-github-actions.md",
-    "README.md",
-    "permanent-notes/learning.md",
     "attachments/Pasted image 20220711180651.png",
     "attachments/Pasted image 20220905142930.png",
     "attachments/Pasted image 20230109115252.png",
