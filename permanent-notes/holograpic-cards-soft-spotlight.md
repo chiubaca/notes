@@ -1,9 +1,11 @@
 ---
 title: Holographic cards soft spotlight
-publish_date: '2022-12-29'
+publish_date: 2022-12-29
 last_updated: 20221229
 description: Creating holographic cards with CSS and a sprinkle of js
 status: draft
+tags:
+  - javascript
 ---
 
 ## Intro

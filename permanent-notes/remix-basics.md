@@ -1,9 +1,12 @@
 ---
 title: Remix Basics
-publish_date: '2022-06-18'
+publish_date: 2022-06-18
 last_updated: 20220618
 description: Remix Basics
 status: draft
+tags:
+  - remix
+  - react
 ---
 
 # Notes on Remix

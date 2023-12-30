@@ -3,6 +3,8 @@ title: Docker Basics
 publish_date: 2022-09-21
 last_updated: 20220921
 description: Docker Basics
+tags:
+  - docker
 ---
 
 Notes from [ Docker Tutorial for Beginners](https://www.youtube.com/watch?v=zJ6WbK9zFpI)

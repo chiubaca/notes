@@ -11,43 +11,21 @@
             "id": "84ef837d2e6fa8e1",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "attachments/Pasted image 20220711180651.png"
-              }
-            }
-          },
-          {
-            "id": "ecb43ca977b11acd",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "fleeting-notes/2021-12-30.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "36f115377f60eb71",
+            "id": "ff26667cbd30260d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e493ad0aa9fa245a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "index-notes/svelte.md",
+                "file": "fleeting-notes/2022-01-23.md",
                 "mode": "source",
                 "source": false
               }
@@ -59,14 +37,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/controlling-my-anxiety-insomnia.md",
+                "file": "literature-notes/total-typescript-notes.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -95,7 +72,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#productivity",
+                "query": "tag:state-managment",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -140,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "permanent-notes/controlling-my-anxiety-insomnia.md",
+                "file": "fleeting-notes/2021-12-30.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -178,34 +155,34 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "ad54df96ee9d2316",
+  "active": "84ef837d2e6fa8e1",
   "lastOpenFiles": [
-    "permanent-notes/holograpic-cards-soft-spotlight.md",
-    "permanent-notes/anatomy-of-a-threejs-scene.md",
-    "index-notes/three-js.md",
-    "literature-notes/threejs-journey.md",
-    "permanent-notes/svelte-basics.md",
-    "index-notes/svelte.md",
-    "fleeting-notes/2021-10-13.md",
-    "index-notes/astro.md",
-    "fleeting-notes/2023-12-30.md",
-    "fleeting-notes/2023-10-18.md",
-    "fleeting-notes/2023-10-17.md",
-    "fleeting-notes/2023-10-20.md",
-    "fleeting-notes/2023-10-19.md",
-    "fleeting-notes/2023-10-27.md",
-    "fleeting-notes/2023-10-21.md",
-    "fleeting-notes/2023-10-23.md",
-    "fleeting-notes/2023-10-24.md",
-    "fleeting-notes/2023-10-25.md",
-    "fleeting-notes/2023-10-26.md",
-    "fleeting-notes/2023-10-30.md",
-    "fleeting-notes/2023-11-02.md",
-    "fleeting-notes/2023-11-12.md",
-    "fleeting-notes/2023-11-16.md",
-    "fleeting-notes/2023-11-17.md",
-    "fleeting-notes/2023-12-03.md",
-    "fleeting-notes/2023-12-15.md",
+    "fleeting-notes/2021-12-31.md",
+    "fleeting-notes/2021-12-30.md",
+    "fleeting-notes/2022-01-01.md",
+    "fleeting-notes/2022-01-02.md",
+    "fleeting-notes/2022-01-03.md",
+    "fleeting-notes/2022-01-04.md",
+    "fleeting-notes/2022-01-05.md",
+    "fleeting-notes/2022-01-06.md",
+    "fleeting-notes/2022-01-07.md",
+    "fleeting-notes/2022-01-08.md",
+    "fleeting-notes/2022-01-09.md",
+    "fleeting-notes/2022-01-10.md",
+    "fleeting-notes/2022-01-11.md",
+    "fleeting-notes/2022-01-12.md",
+    "fleeting-notes/2022-01-13.md",
+    "fleeting-notes/2022-01-14.md",
+    "fleeting-notes/2022-01-16.md",
+    "fleeting-notes/2022-01-15.md",
+    "fleeting-notes/2022-01-17.md",
+    "fleeting-notes/2022-01-18.md",
+    "fleeting-notes/2022-01-19.md",
+    "fleeting-notes/2022-01-20.md",
+    "fleeting-notes/2022-01-21.md",
+    "fleeting-notes/2022-01-22.md",
+    "fleeting-notes/2022-01-23.md",
+    "fleeting-notes/2022-01-24.md",
     "attachments/Pasted image 20220711180651.png",
     "attachments/Pasted image 20220905142930.png",
     "attachments/Pasted image 20230109115252.png",

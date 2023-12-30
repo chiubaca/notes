@@ -3,7 +3,10 @@ title: Eco friendly websites
 publish_date: 2021-12-26
 last_updated: 20220107
 description: Consuming less JavaScript in our frontend applications
-status: draft
+status: live
+tags:
+  - javascript
+  - webdev
 ---
 
 

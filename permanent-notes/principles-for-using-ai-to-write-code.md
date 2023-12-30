@@ -1,9 +1,11 @@
 ---
 title: Principles for using AI to write code
-publish_date: '2023-07-08'
+publish_date: 2023-07-08
 last_updated: 20230708
 description: My thoughts on how to best using AI to write code
 status: draft
+tags:
+  - maplibre
 ---
 
 1. Understand exactly what the AI has written.

@@ -3,6 +3,8 @@ title: total typescript notes
 publish_date: 2023-05-18
 last_updated: 20230518
 description: Notes from https://www.totaltypescript.com
+tags:
+  - typescript
 ---
 
 

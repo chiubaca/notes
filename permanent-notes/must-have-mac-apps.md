@@ -4,6 +4,8 @@ publish_date: 2022-01-23
 last_updated: 20220123
 description: Must have mac apps
 status: draft
+tags:
+  - handy
 ---
 
 https://pilotmoon.com/scrollreverser/

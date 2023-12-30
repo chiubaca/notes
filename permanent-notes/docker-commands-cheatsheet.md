@@ -1,9 +1,11 @@
 ---
 title: Docker Commands Cheatsheet
-publish_date: '2022-11-01'
+publish_date: 2022-11-01
 last_updated: 20221101
 description: Docker Commands Cheatsheet
 status: draft
+tags:
+  - docker
 ---
 
 
