@@ -2,7 +2,7 @@
 title: Building My New Blog | Nuxt Vs Gridsome
 publish_date: 2021-01-17
 last_updated: 2021-01-17
-description: a quick description
+description: a comparison of building a blog with nuxt vs gridsome
 status: live
 tags:
   - vue
