@@ -1,13 +1,15 @@
 ---
 title: Shiba Every Hour - A Twitter bot powered by GitHub Actions
 publish_date: 2020-06-19
-last_updated: 2020-06-28
+last_updated: 2023-12-31
 description: 
 status: live
 tags:
   - javascript
   - github
 ---
+
+> This blog is from [DEV.to](https://dev.to/chiubaca/shiba-every-hour-a-twitter-bot-powered-by-github-actions-1m1e) as part of GitHub actions hackathon.
 
 # My Workflow
 
@@ -20,7 +22,7 @@ If it's not obvious already, this is one for the **Wacky Wildcards** 😂.
 
 # Yaml File or Link to Code
 
-{% github https://github.com/chiubaca/shiba-every-hour %}
+[chiubaca/shiba-every-hour: GitHub Action to post a Shiba to Twitter every hour. Because why not? 🐕](https://github.com/chiubaca/shiba-every-hour)
 
 
 # Additional Resources / Info
