@@ -29,7 +29,7 @@ There are three types of notes:
 - It should draw upon all the literature notes that you have consumed.
 - This can be a topic that over-arches multiple literature notes
 
-By using this note-taking technique, we can consume lots of different types of content. It's important to covert fleeting notes to literature notes as often as possible to start building connections between topics. This could spark an idea for a permanent note
+By using this note-taking technique, we can consume lots of different types of content. It's important to convert fleeting notes to literature notes as often as possible to start building connections between topics. This could spark an idea for a permanent note
 
 ## References
 

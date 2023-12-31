@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/zettelkasten.md",
+                "file": "permanent-notes/shiba-every-hour-a-twitter-bot-powered-by-github-actions.md",
                 "mode": "source",
                 "source": false
               }
@@ -105,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "permanent-notes/zettelkasten.md",
+                "file": "permanent-notes/shiba-every-hour-a-twitter-bot-powered-by-github-actions.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -145,6 +145,7 @@
   },
   "active": "ff26667cbd30260d",
   "lastOpenFiles": [
+    "permanent-notes/zettelkasten.md",
     "fleeting-notes/2022-01-23.md",
     "index-notes/zettelkasten.md",
     "permanent-notes/learning.md",
@@ -172,7 +173,6 @@
     "fleeting-notes/2022-01-01.md",
     "fleeting-notes/2022-01-02.md",
     "fleeting-notes/2022-01-03.md",
-    "fleeting-notes/2022-01-04.md",
     "attachments/Pasted image 20220905142930.png",
     "attachments/Pasted image 20230109115252.png",
     "attachments/Pasted image 20230109114622.png",

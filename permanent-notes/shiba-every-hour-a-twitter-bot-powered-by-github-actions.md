@@ -9,7 +9,7 @@ tags:
   - github
 ---
 
-> This blog is from [DEV.to](https://dev.to/chiubaca/shiba-every-hour-a-twitter-bot-powered-by-github-actions-1m1e) as part of GitHub actions hackathon.
+> This blog is from [DEV.to](https://dev.to/chiubaca/shiba-every-hour-a-twitter-bot-powered-by-github-actions-1m1e) as part of a GitHub actions hackathon.
 
 # My Workflow
 
