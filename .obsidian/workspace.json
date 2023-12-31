@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/how-use-npm-modules-client-side-in-astrojs.md",
+                "file": "permanent-notes/shiba-every-hour-a-twitter-bot-powered-by-github-actions.md",
                 "mode": "source",
                 "source": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "permanent-notes/how-use-npm-modules-client-side-in-astrojs.md",
+                "file": "permanent-notes/shiba-every-hour-a-twitter-bot-powered-by-github-actions.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -157,13 +157,13 @@
   },
   "active": "84ef837d2e6fa8e1",
   "lastOpenFiles": [
+    "permanent-notes/how-use-npm-modules-client-side-in-astrojs.md",
     "fleeting-notes/2023-12-30.md",
     "attachments/Pasted image 20220711180651.png",
     "permanent-notes/auto-js-sdk-for-any-rest-api.md",
     "permanent-notes/build-a-serverless-crud-app-using-vue-js-netlify-and-faunadb.md",
     "permanent-notes/building-my-new-blog-nuxt-vs-gridsome.md",
     "permanent-notes/using-javascript-to-write-postgresql-functions.md",
-    "permanent-notes/how-use-npm-modules-client-side-in-astrojs.md",
     "permanent-notes/_template.md",
     "permanent-notes/managing-your-self-learning.md",
     "permanent-notes/controlling-my-anxiety-insomnia.md",
