@@ -13,9 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2023-12-30.md",
+                "file": "permanent-notes/how-use-npm-modules-client-side-in-astrojs.md",
                 "mode": "source",
-                "source": false
+                "source": true
               }
             }
           },
@@ -117,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/2023-12-30.md",
+                "file": "permanent-notes/how-use-npm-modules-client-side-in-astrojs.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -157,6 +157,7 @@
   },
   "active": "84ef837d2e6fa8e1",
   "lastOpenFiles": [
+    "fleeting-notes/2023-12-30.md",
     "attachments/Pasted image 20220711180651.png",
     "permanent-notes/auto-js-sdk-for-any-rest-api.md",
     "permanent-notes/build-a-serverless-crud-app-using-vue-js-netlify-and-faunadb.md",

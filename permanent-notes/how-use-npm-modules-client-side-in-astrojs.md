@@ -1,7 +1,7 @@
 ---
 title: How to use npm modules client-side in Astro.js `.astro` files
-publish_date: 2021-10-213
-last_updated: 2021-10-213
+publish_date: 2021-10-21
+last_updated: 2021-10-21
 description: 
 status: live
 tags:
