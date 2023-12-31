@@ -1,7 +1,7 @@
 ---
 title: Shiba Every Hour - A Twitter bot powered by GitHub Actions
-publish_date: 2021-12-28
-last_updated: 2021-12-28
+publish_date: 2020-06-19
+last_updated: 2020-06-28
 description: 
 status: live
 tags:
