@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2023-12-31.md",
+                "file": "fleeting-notes/2024-01-01.md",
                 "mode": "source",
                 "source": false
               }
@@ -105,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/2023-12-31.md",
+                "file": "fleeting-notes/2024-01-01.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -143,10 +143,11 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "cdd64a28cc6fe199",
+  "active": "ff26667cbd30260d",
   "lastOpenFiles": [
-    "permanent-notes/shiba-every-hour-a-twitter-bot-powered-by-github-actions.md",
     "fleeting-notes/2023-12-31.md",
+    "fleeting-notes/2024-01-01.md",
+    "permanent-notes/shiba-every-hour-a-twitter-bot-powered-by-github-actions.md",
     "permanent-notes/zettelkasten.md",
     "fleeting-notes/2022-01-23.md",
     "index-notes/zettelkasten.md",
@@ -172,7 +173,6 @@
     "fleeting-notes/2021-12-30.md",
     "fleeting-notes/2021-12-31.md",
     "fleeting-notes/2022-01-01.md",
-    "fleeting-notes/2022-01-02.md",
     "attachments/Pasted image 20220905142930.png",
     "attachments/Pasted image 20230109115252.png",
     "attachments/Pasted image 20230109114622.png",
