@@ -8,13 +8,13 @@ tags:
   - zettelkasten
 ---
 
-This is technique to write notes in a way that optimises for discoverability of previously written notes.
+Zettelkasten is a technique to write notes in a way that optimises for discoverability of previously written notes.
 
 There are three types of notes:
 
 ## `Fleeting Notes`
 
-- Quick notes for passing thoughts, or from something that you listened to, read or watched.
+- Quick notes for passing thoughts, something that you listened to, read or watched.
 
 ## `Literature Notes`
 
