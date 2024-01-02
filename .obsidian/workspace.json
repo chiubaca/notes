@@ -27,7 +27,7 @@
               "state": {
                 "file": "permanent-notes/everest-basecamp.md",
                 "mode": "source",
-                "source": false
+                "source": true
               }
             }
           },
@@ -41,6 +41,14 @@
                 "mode": "source",
                 "source": false
               }
+            }
+          },
+          {
+            "id": "8820b9cb39ee95ac",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
             }
           }
         ],
@@ -158,6 +166,8 @@
   },
   "active": "697d71a9667a33af",
   "lastOpenFiles": [
+    "fleeting-notes/2023-10-20.md",
+    "permanent-notes/everest-basecamp.md",
     "README.md",
     "fleeting-notes/2020-09-10.md",
     "attachments/GOPR0235.jpg",
@@ -167,11 +177,9 @@
     "attachments/Pasted image 20230109112631.png",
     "attachments/Pasted image 20220905142930.png",
     "attachments/Pasted image 20220711180651.png",
-    "permanent-notes/everest-basecamp.md",
     "permanent-notes/base.md",
     "permanent-notes/pragmatism-over-perfectionism.md",
     "permanent-notes/making-eco-friendly-websites.md",
-    "fleeting-notes/2023-10-20.md",
     "permanent-notes/_template.md",
     "fleeting-notes/2024-01-02.md",
     "fleeting-notes/2022-10-18.md",
