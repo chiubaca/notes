@@ -224,7 +224,7 @@ Astro.js is popularising a technique called 'Islands'. This is the idea that our
 
 ## Svelte
 
-Svelte is taking a radical approach and trying to compile away as much javascript as possible. The result is the ability to build rich user interfaces with much smaller javascript payloads. 
+Svelte is taking a radical approach and trying to compile away as much JavaScript as possible. The result is the ability to build rich user interfaces with much smaller JavaScript payloads. 
 
 #  References
 
