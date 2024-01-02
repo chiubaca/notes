@@ -36,7 +36,6 @@ Tileset - A **tileset** is a collection of raster or vector data broken up int
 MBTiles - a file format for storing [tilesets](https://docs.mapbox.com/help/glossary/tileset/). It's designed to allow you to package up many files into a single tileset.  MBTiles is an open specification based on the [SQLite](https://sqlite.org/) database. MBTiles can contain raster or vector [tilesets](https://docs.mapbox.com/help/glossary/tileset/).
 
 
-
 ## Workflow A
 
 - geojson to mbtiles via [tippicanoe]([felt/tippecanoe: Build vector tilesets from large collections of GeoJSON features. (github.com)](https://github.com/felt/tippecanoe))
@@ -51,11 +50,6 @@ One way of acheiveing 3d effects in vector tiles is to enbed height attribute to
 
 ## Creating terrains raster basemaps?
 - [joerd/docs/formats.md at master · tilezen/joerd (github.com)](https://github.com/tilezen/joerd/blob/master/docs/formats.md)
-
-
-
-
-
 
 
 Fleeting notes about vector tiles

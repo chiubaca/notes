@@ -2,7 +2,7 @@
 title: Eco friendly websites
 publish_date: 2021-12-26
 last_updated: 20220107
-description: Consuming less JavaScript in our frontend applications
+description: Notes on how to build eco-friendly websites
 status: live
 tags:
   - javascript
@@ -198,7 +198,7 @@ So, can we have our cake and eat?
 
 Fortunately, the trend of very heavy client side app seems to be swinging back the other way and SSR techniques which PHP popularized way back is starting to make a resurgence but augmented with all the lessons we've learnt in the last decade of component based UI development.  
 
-I really like this article titled  []'The Third Age of JavaScript'](https://www.swyx.io/js-third-age/), where the author talks about how we're potentially entering new age tooling.
+I really like this article titled  ['The Third Age of JavaScript'](https://www.swyx.io/js-third-age/), where the author talks about how we're potentially entering new age tooling.
 
 ![third age of JS](https://dev-to-uploads.s3.amazonaws.com/i/rlixanixq8pyrpg9ivrv.png)
 
