@@ -139,7 +139,6 @@ To achieve this we need the following values:
 1. The size of the card element
 2. The position of the element relative to the viewport.
 
-
 Fortunately, we  have everything we need within [`Element.getBoundingClientRect()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) . This method which exists on any HTML element returns an object that looks something like:
 
 ```js
