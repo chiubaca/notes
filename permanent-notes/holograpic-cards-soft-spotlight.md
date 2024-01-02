@@ -210,9 +210,4 @@ document.documentElement.style.setProperty("--y", cardYPercentage);
 
 We set our percentage values into our CSS variables with [`CSSStyleDeclaration.setProperty()`](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/setProperty). This is how as we move our cursor the radial gradient follows along 🙌.
 
-<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="MWBwQLe" data-user="chiubaca" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/chiubaca/pen/MWBwQLe">
-  Holographic cards | Spot light effect</a> by Alex Chiu (<a href="https://codepen.io/chiubaca">@chiubaca</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-
+In the next part we'll explore how the tilt effect works,
