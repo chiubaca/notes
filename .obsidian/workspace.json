@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/making-eco-friendly-websites.md",
+                "file": "permanent-notes/everest-basecamp.md",
                 "mode": "source",
                 "source": false
               }
@@ -43,7 +43,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "39bb57f27e02fc74",
@@ -55,7 +56,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2024-01-02.md",
+                "file": "permanent-notes/pragmatism-over-perfectionism.md",
                 "mode": "source",
                 "source": false
               }
@@ -135,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/2024-01-02.md",
+                "file": "permanent-notes/pragmatism-over-perfectionism.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -175,7 +176,12 @@
   },
   "active": "0dd3a91e78d8be40",
   "lastOpenFiles": [
+    "permanent-notes/everest-basecamp.md",
+    "permanent-notes/pragmatism-over-perfectionism.md",
+    "permanent-notes/making-eco-friendly-websites.md",
     "fleeting-notes/2023-10-20.md",
+    "permanent-notes/_template.md",
+    "fleeting-notes/2024-01-02.md",
     "fleeting-notes/2022-10-18.md",
     "permanent-notes/auto-js-sdk-for-any-rest-api.md",
     "fleeting-notes/2021-05-21.md",
@@ -183,9 +189,7 @@
     "fleeting-notes/2021-04-13.md",
     "fleeting-notes/2021-12-20.md",
     "fleeting-notes/2022-12-27.md",
-    "fleeting-notes/2024-01-02.md",
     "permanent-notes/swapping-react-for-preact-in-nextjs.md",
-    "permanent-notes/making-eco-friendly-websites.md",
     "permanent-notes/svelte-basics.md",
     "permanent-notes/shiba-every-hour-a-twitter-bot-powered-by-github-actions.md",
     "permanent-notes/quick-look-at-react-use-hook.md",
@@ -198,9 +202,6 @@
     "permanent-notes/how-use-npm-modules-client-side-in-astrojs.md",
     "permanent-notes/holograpic-cards-soft-spotlight.md",
     "permanent-notes/docker-commands-cheatsheet.md",
-    "permanent-notes/controlling-my-anxiety-insomnia.md",
-    "permanent-notes/building-my-new-blog-nuxt-vs-gridsome.md",
-    "permanent-notes/build-a-serverless-crud-app-using-vue-js-netlify-and-faunadb.md",
     "index-notes",
     "attachments/Pasted image 20220711180651.png",
     "attachments/Pasted image 20220905142930.png",
