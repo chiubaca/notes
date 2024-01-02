@@ -202,8 +202,7 @@ I really like this article titled  'The Third Age of JavaScript', where the auth
 
 ![third age of JS](https://dev-to-uploads.s3.amazonaws.com/i/rlixanixq8pyrpg9ivrv.png)
 
-I just want to highlight some of these new technologies emerging that will help us write more efficient code.
-
+I'd want to highlight some new emerging technologies that will help us build more efficient websites.
 ## React Server Component
 React Server Components (RSC) are components that run on the server 🤯
 
