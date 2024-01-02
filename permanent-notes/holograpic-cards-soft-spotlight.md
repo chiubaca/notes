@@ -1,19 +1,19 @@
 ---
-title: Holographic cards soft spotlight
+title: Holographic cards soft spotlight part 1
 publish_date: 2022-12-29
 last_updated: 20221229
 description: Creating holographic cards with CSS and a sprinkle of js
-status: draft
+status: live
 tags:
   - javascript
+  - css
 ---
 
 ## Intro
 
-inspired by [3d pokemon cards with css](https://deck-24abcd.netlify.app/) &  [tutorial for the same effect](https://twitter.com/akella/status/1584473504975446016?s=20&t=2l6I8nucAA3OYEAPHUHTPg)
+My [digital business card](https://im.chiubaca.com) is inspired by this [3d pokemon cards with css](https://deck-24abcd.netlify.app/) demo this [twitter post](https://twitter.com/akella/status/1584473504975446016?s=20&t=2l6I8nucAA3OYEAPHUHTPg)which uses a similar effect.
 
-
-
+I want to break down some of the techniques involved in multi-part blog series. In this post we'll focus on just the...
 ## The spotlight effect
 
 The effect is extremely subtle when you interact with these 3D cards. it mimics the reflection of a light source shining down on the card. This effect adds that extra level of realism to your 3D card. 
@@ -38,7 +38,6 @@ Let's break this down, line by line.
 The  `.card`  is our container element which defines the element dimension and houses the inner element.
 
 The spotlight effect is all achieved with the `.card__softlight` class.
-
 
 ### The CSS
 
@@ -88,9 +87,7 @@ Let's take a deep dive into how the `radial-gradient` function works.
 
 MDN documents the `radial-gradient` function like so:
 ```
-
-radial-gradient( [ <ending-shape> || <size> ]? [ at <position> ]? , <color-stop-list> )  
-
+radial-gradient( [ <ending-shape> || <size> ]? [ at <position> ]? , <color-stop-list> ) 
 ```
 
 `<ending-shape>` - can either be `circle` or `elipse`. `elipse` is basically just a stretched circle to match the aspect ratio of the element it's in. For our spotlight effect, we want to ensure the radial gradient is always a `circle`. 
@@ -108,7 +105,7 @@ This means we can omit `farthest-corner` and it would still function the same. I
 
 > try swapping `farthest-corner` for one of the other options. Maybe you think a different one looks better. it's completely subjective!
 
-[`<position>`](https://developer.mozilla.org/en-US/docs/Web/CSS/position_value) - defaults to `center` but supports `x` and `y` positions.  Note, for this argument we'e using  `var(--x, 10%)`  and  `var(--y, 10%)`. These are CSS variables, the second argument in a CSS variable is the fallback value if either `--x` or `--y` has not been set yet. In the next section we will set `--x` and `--y` dynamically using javascript!
+[`<position>`](https://developer.mozilla.org/en-US/docs/Web/CSS/position_value) - defaults to `center` but supports `x` and `y` positions.  Note, for this argument we're using  `var(--x, 10%)`  and  `var(--y, 10%)`. These are CSS variables, the second argument in a CSS variable is the fallback value if either `--x` or `--y` has not been set yet. In the next section we will set `--x` and `--y` dynamically using javascript!
 
 
 The final bit of magic is `mix-blend-mode: soft-light` we will make heavy use of `mix-blend-mode` throughout this tutorial series. This property will literally blend the radial background into the other elements. it is key to making the spotlight effect feel "softer". Learn more about [`mix-blend-mode` on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode)
@@ -116,7 +113,7 @@ The final bit of magic is `mix-blend-mode: soft-light` we will make heavy use of
 > try removing this property and experimenting with other blend values e.g `multiply`, `hard-light` or `difference`.
 
 
-## The Javascript
+##\ The Javascript
 
 With our CSS variables in place, we can now programmatically update the `x` and `y` positions of the radial gradient.
 
@@ -217,5 +214,4 @@ We set our percentage values into our CSS variables with [`CSSStyleDeclaration.s
   Holographic cards | Spot light effect</a> by Alex Chiu (<a href="https://codepen.io/chiubaca">@chiubaca</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-
 
