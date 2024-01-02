@@ -9,33 +9,21 @@ tags:
   - hiking
   - wellbeing
 ---
+On the 11th October 2022 I signed up for an opportunity to hike Everest Basecamp for [work](https://neverbland.com/blog/neverbland-dev-team-sign-up-for-everest-basecamp) .On the 2nd April 2023 I made it to Everest Basecamp. It was probably one of the most physically demanding things I have ever done. I endured altitude sickness, sleep depravation, freezing temperatures and I don't regret any part of it.
 
-
-WIP blog about my hike to Everest basecamp
-
-  
-
-On the 2nd April 2023 I made it to Everest Basecamp. It was probably one of the most physically demanding things I have ever done. I endured altitude sickness, sleep depravation, freezing temperatures and I don't regret any part of it.
-
-  
-
-Lots of people have made it to basecamp before me but this is how it went for me.
-
-  
+Lots of people have made it to basecamp before me but this is how it went for me.  
 
 ## Day 1 - Arrival at Lukkla (1800m)
 
-  
+
 
 The team and I arrive at Lukkla on tiny and shaky plane and hiked our first 8k to a tiny teahouse in Phakding.
 
 ![the btbc team at lukkla](attachments/GOPR0235.jpg) 
-
   
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8773766993" data-style="standard"></div>
 
-  
 
 ## Day 2 - Hike to Namche Bazaar
 
@@ -50,11 +38,7 @@ The reward was arriving at the largest settlement along the course. Namche Bazaa
 
 ## Day 3 -
 
-  
-
-(content)
-
-  
+A slightly more relaxed day after yesterday big hike. We got up early for a gentle walk near our tea house to get our first glimpse of Mount Everest! Then we had the rest of the day to explore the Bazar where we enjoyed local coffee with amazing scenery of mountains all around us.
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8783863155" data-style="standard"></div>
 
@@ -62,10 +46,7 @@ The reward was arriving at the largest settlement along the course. Namche Bazaa
 
 ## Day 4 -
 
-  
-
-(content)
-
+We spent another full day  in the vicinity of Namche Bazar but the sherpas took us for  light trek  to the nearby settlements of Khunde and Khmjung where we had the oppurtunity to visit the local hospital and school. It gave us a real sense of what living in the mountains is like.
   
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8784362504" data-style="standard"></div>
@@ -82,10 +63,7 @@ The reward was arriving at the largest settlement along the course. Namche Bazaa
 
 ## Day 5 -
 
-  
-
-(content)
-
+We moved on from Namche Bazzar for long hike to our next location Tengboche. Before arriving we had the oppurtunity to visit what must be one of highest situation monstraries in the world. Here witness monks praying and chanting with intrustuments. A truly amaing thing to witness
   
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8800868630" data-style="standard"></div>
@@ -94,10 +72,9 @@ The reward was arriving at the largest settlement along the course. Namche Bazaa
 
 ## Day 6 -
 
-  
+  Another long hike moving on from Tengbouche to the settlement of Dingbouche where the environments started to get much harsher. We reached altiitued of 4000m . At this elevation it was noticable more baren and cold. The lack of greenary around me got to me a little bit. Things were starting to get tough for me at this stage. 
 
-(content)
-
+Funnily at settlem,entof Tengbouche resided one of the most endearing little cafes I have ever been in where they were serving high quality coffees in cosy environment with tiny little Cinema. here we settled for the evening to watch the documentry  [Sherpa](https://en.wikipedia.org/wiki/Sherpa_(film))
   
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8801937278" data-style="standard"></div>

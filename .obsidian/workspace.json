@@ -26,7 +26,7 @@
               "type": "markdown",
               "state": {
                 "file": "permanent-notes/everest-basecamp.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": true
               }
             }
@@ -164,7 +164,7 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "cdd64a28cc6fe199",
+  "active": "697d71a9667a33af",
   "lastOpenFiles": [
     "attachments/interative-hike-map.gif",
     "fleeting-notes/2020-09-10.md",
