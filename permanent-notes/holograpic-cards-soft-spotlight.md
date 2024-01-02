@@ -11,10 +11,9 @@ tags:
 
 ## Intro
 
-My [digital business card](https://im.chiubaca.com) is inspired by this [3d pokemon cards with css](https://deck-24abcd.netlify.app/) demo this [twitter post](https://twitter.com/akella/status/1584473504975446016?s=20&t=2l6I8nucAA3OYEAPHUHTPg)which uses a similar effect.
+My [digital business card](https://im.chiubaca.com) is inspired by this amazing [3d pokemon cards demo](https://deck-24abcd.netlify.app/) demo and also this [twitter post](https://twitter.com/akella/status/1584473504975446016?s=20&t=2l6I8nucAA3OYEAPHUHTPg)which uses a similar effect.
 
-I want to break down some of the techniques involved in multi-part blog series. In this post we'll focus on just the...
-## The spotlight effect
+I want to break down some of the techniques involved in a multi-part blog series. In this post we'll focus on just the  soft spotlight effect.
 
 The effect is extremely subtle when you interact with these 3D cards. it mimics the reflection of a light source shining down on the card. This effect adds that extra level of realism to your 3D card. 
 
@@ -95,7 +94,6 @@ radial-gradient( [ <ending-shape> || <size> ]? [ at <position> ]? , <color-stop-
 
 > Try swapping `circle` for `elipse` to see how the radial gradient skews.
 
-
 `<size>` - has four options [documented here](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/radial-gradient#values) 
    - `closest-side`
    - `closest-corner`
@@ -108,11 +106,9 @@ This means we can omit `farthest-corner` and it would still function the same. I
 
 [`<position>`](https://developer.mozilla.org/en-US/docs/Web/CSS/position_value) - defaults to `center` but supports `x` and `y` positions.  Note, for this argument we're using  `var(--x, 10%)`  and  `var(--y, 10%)`. These are CSS variables, the second argument in a CSS variable is the fallback value if either `--x` or `--y` has not been set yet. In the next section we will set `--x` and `--y` dynamically using javascript!
 
-
 The final bit of magic is `mix-blend-mode: soft-light` we will make heavy use of `mix-blend-mode` throughout this tutorial series. This property will literally blend the radial background into the other elements. it is key to making the spotlight effect feel "softer". Learn more about [`mix-blend-mode` on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode)
 
 > try removing this property and experimenting with other blend values e.g `multiply`, `hard-light` or `difference`.
-
 
 ##\ The Javascript
 
@@ -128,7 +124,6 @@ card.addEventListener("mousemove", (e) => {
 });
 
 ```
-
 
 We have a problem though, the values returned from `e.clientX` and `e.clientY` are pixel positions of where the cursor is on the screen. Here is an example of the values that will be returned by `e.clientX` and `e.clientY` .
 
