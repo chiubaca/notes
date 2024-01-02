@@ -13,18 +13,10 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/auto-js-sdk-for-any-rest-api.md",
+                "file": "fleeting-notes/2023-10-20.md",
                 "mode": "source",
                 "source": false
               }
-            }
-          },
-          {
-            "id": "21b7db462a1a8269",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
             }
           },
           {
@@ -51,20 +43,19 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
-        "id": "1b0e5adfeb7f5245",
+        "id": "39bb57f27e02fc74",
         "type": "tabs",
         "children": [
           {
-            "id": "8a51577a236d9707",
+            "id": "0dd3a91e78d8be40",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2021-05-21.md",
+                "file": "fleeting-notes/2024-01-02.md",
                 "mode": "source",
                 "source": false
               }
@@ -99,7 +90,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#zero-day",
+                "query": "perfection",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -124,8 +115,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -145,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/2021-05-21.md",
+                "file": "fleeting-notes/2024-01-02.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -183,8 +173,12 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "8a51577a236d9707",
+  "active": "0dd3a91e78d8be40",
   "lastOpenFiles": [
+    "fleeting-notes/2023-10-20.md",
+    "fleeting-notes/2022-10-18.md",
+    "permanent-notes/auto-js-sdk-for-any-rest-api.md",
+    "fleeting-notes/2021-05-21.md",
     "fleeting-notes/2021-05-01.md",
     "fleeting-notes/2021-04-13.md",
     "fleeting-notes/2021-12-20.md",
@@ -207,10 +201,6 @@
     "permanent-notes/controlling-my-anxiety-insomnia.md",
     "permanent-notes/building-my-new-blog-nuxt-vs-gridsome.md",
     "permanent-notes/build-a-serverless-crud-app-using-vue-js-netlify-and-faunadb.md",
-    "permanent-notes/auto-js-sdk-for-any-rest-api.md",
-    "permanent-notes/anatomy-of-a-threejs-scene.md",
-    "fleeting-notes/2022-06-12.md",
-    "permanent-notes/all-things-vector-tiles.md",
     "index-notes",
     "attachments/Pasted image 20220711180651.png",
     "attachments/Pasted image 20220905142930.png",
