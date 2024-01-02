@@ -1,5 +1,5 @@
 ---
-title: Eco friendly websites
+title: Eco-friendly websites
 publish_date: 2021-12-26
 last_updated: 20220107
 description: Notes on how to build eco-friendly websites

@@ -25,7 +25,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/auto-js-sdk-for-any-rest-api.md",
+                "file": "permanent-notes/swapping-react-for-preact-in-nextjs.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "697d71a9667a33af",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "permanent-notes/making-eco-friendly-websites.md",
                 "mode": "source",
                 "source": false
               }
@@ -118,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "permanent-notes/auto-js-sdk-for-any-rest-api.md",
+                "file": "permanent-notes/swapping-react-for-preact-in-nextjs.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -158,34 +170,34 @@
   },
   "active": "21b7db462a1a8269",
   "lastOpenFiles": [
+    "permanent-notes/making-eco-friendly-websites.md",
+    "permanent-notes/swapping-react-for-preact-in-nextjs.md",
+    "permanent-notes/svelte-basics.md",
+    "permanent-notes/shiba-every-hour-a-twitter-bot-powered-by-github-actions.md",
+    "permanent-notes/quick-look-at-react-use-hook.md",
+    "permanent-notes/remix-basics.md",
+    "permanent-notes/principles-for-using-ai-to-write-code.md",
+    "permanent-notes/nx-for-noobs.md",
+    "permanent-notes/must-have-mac-apps.md",
+    "permanent-notes/managing-your-self-learning.md",
+    "permanent-notes/learning.md",
+    "permanent-notes/how-use-npm-modules-client-side-in-astrojs.md",
+    "permanent-notes/holograpic-cards-soft-spotlight.md",
+    "permanent-notes/docker-commands-cheatsheet.md",
+    "permanent-notes/controlling-my-anxiety-insomnia.md",
+    "permanent-notes/building-my-new-blog-nuxt-vs-gridsome.md",
+    "permanent-notes/build-a-serverless-crud-app-using-vue-js-netlify-and-faunadb.md",
+    "permanent-notes/auto-js-sdk-for-any-rest-api.md",
     "permanent-notes/anatomy-of-a-threejs-scene.md",
     "fleeting-notes/2022-06-12.md",
-    "permanent-notes/auto-js-sdk-for-any-rest-api.md",
     "permanent-notes/all-things-vector-tiles.md",
-    "permanent-notes/making-eco-friendly-websites.md",
     "fleeting-notes/2021-12-26.md",
-    "permanent-notes/holograpic-cards-soft-spotlight.md",
-    "permanent-notes/how-use-npm-modules-client-side-in-astrojs.md",
     "literature-notes/does-edge-compute-replace-lambda-functions.md",
     "literature-notes/docker-basics.md",
     "literature-notes/total-typescript-notes.md",
     "fleeting-notes/2024-01-01.md",
-    "fleeting-notes/2023-12-31.md",
-    "permanent-notes/shiba-every-hour-a-twitter-bot-powered-by-github-actions.md",
-    "permanent-notes/zettelkasten.md",
-    "fleeting-notes/2022-01-23.md",
-    "index-notes/zettelkasten.md",
-    "permanent-notes/learning.md",
     "index-notes",
-    "fleeting-notes/2021-09-20.md",
-    "permanent-notes/typescript-and-netlify-functions.md",
-    "permanent-notes/swapping-react-for-preact-in-nextjs.md",
-    "permanent-notes/building-my-new-blog-nuxt-vs-gridsome.md",
-    "permanent-notes/using-javascript-to-write-postgresql-functions.md",
-    "permanent-notes/svelte-basics.md",
-    "fleeting-notes/2023-12-30.md",
     "attachments/Pasted image 20220711180651.png",
-    "permanent-notes/build-a-serverless-crud-app-using-vue-js-netlify-and-faunadb.md",
     "attachments/Pasted image 20220905142930.png",
     "attachments/Pasted image 20230109115252.png",
     "attachments/Pasted image 20230109114622.png",

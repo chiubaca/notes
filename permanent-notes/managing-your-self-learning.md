@@ -2,7 +2,7 @@
 title: Managing your self-learning
 publish_date: 2020-04-22
 last_updated: 2021-01-11
-description:
+description: Notes on how i'm organsing my self-learning
 status: live
 tags:
   - productivity

@@ -3,20 +3,16 @@ title: Swapping React for Preact in Next.js
 publish_date: 2021-12-10
 last_updated: 20211210
 description: Some notes from swapping React for Preact in Next.js
-status: draft
+status: live
 tags:
   - react
   - preact
   - nextjs
 ---
 
-# Motivation
+This a slight follow up to by blog about [eco-friendly websites](https://chiubaca.com/making-eco-friendly-websites/). 
 
-The average web page size now stands at [around 2MB](https://httparchive.org/reports/page-weight). Large bloated websites will generally lead to poor performance for users on slower connections and use more CPU and energy which is bad for the environment. Therefore anything we can do to try and reduce our website size will be beneficial for the environment.
-
-# Why Preact?
-
-React is generally our framework of choice, however it comes at a [cost of ~120kb](https://bundlephobia.com/package/react-dom@17.0.2). Preact is a 3kb alternative to React. When used in conjunction with `[preact-compat](<https://github.com/preactjs/preact-compat>)` we can do a straight swap of React for Preact without any breaking API changes. ****The official docs claim that this thin layer over Preact achieves [100% compatibility with React](https://preactjs.com/guide/v10/differences-to-react).
+At work, React is our framework of choice, however it comes at a [cost of ~120kb](https://bundlephobia.com/package/react-dom@17.0.2). Preact is a 3kb alternative to React. When used in conjunction with `[preact-compat](<https://github.com/preactjs/preact-compat>)` we can do a straight swap of React for Preact without any breaking API changes. ****The official docs claim that this thin layer over Preact achieves [100% compatibility with React](https://preactjs.com/guide/v10/differences-to-react).
 
 # Quick Guide
 
