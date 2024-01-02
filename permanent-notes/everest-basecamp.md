@@ -210,13 +210,10 @@ The reward was arriving at the largest settlement along the course. Namche Bazaa
 
 Of course I _had_ to make my own visualisation with all this GPS data. So heres my own interactive map the entire route broken down into the daily legs.
 
-  
+![3d map of the hiking trail](attachments/interative-hike-map.gif)
 
-<iframe style="width:100%; height: 700px"  src="https://btbc-2023-data-viz.vercel.app/" title="intertive map of the full route hiking to everest basecamp"></iframe>
 
-  
-
-([full screen version](https://btbc-2023-data-viz.vercel.app/))
+([live version](https://btbc-2023-data-viz.vercel.app/))
 
   
 

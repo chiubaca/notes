@@ -26,8 +26,8 @@
               "type": "markdown",
               "state": {
                 "file": "permanent-notes/everest-basecamp.md",
-                "mode": "source",
-                "source": false
+                "mode": "preview",
+                "source": true
               }
             }
           },
@@ -73,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "perfection",
+                "query": "basecamp",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -106,8 +106,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
@@ -165,12 +164,13 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "697d71a9667a33af",
+  "active": "cdd64a28cc6fe199",
   "lastOpenFiles": [
-    "fleeting-notes/2023-10-20.md",
+    "attachments/interative-hike-map.gif",
+    "fleeting-notes/2020-09-10.md",
     "permanent-notes/everest-basecamp.md",
     "README.md",
-    "fleeting-notes/2020-09-10.md",
+    "fleeting-notes/2023-10-20.md",
     "attachments/GOPR0235.jpg",
     "attachments/Pasted image 20230109115252.png",
     "attachments/Pasted image 20230109114622.png",
@@ -199,7 +199,6 @@
     "permanent-notes/nx-for-noobs.md",
     "permanent-notes/must-have-mac-apps.md",
     "permanent-notes/managing-your-self-learning.md",
-    "permanent-notes/learning.md",
     "index-notes",
     "attachments",
     "permanent-notes/Pasted image 20221228124058.png",
