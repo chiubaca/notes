@@ -217,7 +217,6 @@ SSR is when a react component is first rendered on the server and HTML is sent t
 
 RSC will only send back HTML to the client without any JS bundle a
 
-
 ## Astro.js
 
 Astro.js is popularising a technique called 'Islands'. This is the idea that our website are comprised of little islands of interactive blocks. They're asking the question, what if these little islands could have their own strategies? Such as, can loading of the interaction be delayed until when the component is in view? or when the CPU is free? 
@@ -225,6 +224,11 @@ Astro.js is popularising a technique called 'Islands'. This is the idea that our
 ## Svelte
 
 Svelte is taking a radical approach and trying to compile away as much JavaScript as possible. The result is the ability to build rich user interfaces with much smaller JavaScript payloads. 
+
+
+# Final remarks
+
+There is not a satisfying conclusion to this unfortunately. The reality is that creating highly optimised web experience is hard and requires us to all be collectively mindful in the way we're designing and building. With tight deadlines and customers to appease you can see why corners may need to cut and we end shipping more bloat than we would like. However, I'm confident that the innovations that are happening in our tool chain is going to carry on getting better and help us out more and more. That being said, we still have our part to make sure we're all informed of the optimisations that are happening and I hope these notes help, even if just a little.
 
 #  References
 
