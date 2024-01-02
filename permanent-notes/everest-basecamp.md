@@ -5,12 +5,11 @@ last_updated: 2024-01-02
 description: a quick description
 status: draft
 tags:
-  - life
-  - hiking
-  - wellbeing
+  - life
+  - hiking
+  - wellbeing
 ---
 
-  
 
 WIP blog about my hike to Everest basecamp
 
@@ -125,7 +124,7 @@ The reward was arriving at the largest settlement along the course. Namche Bazaa
 
   
 
-<div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8811609867" data-style="standard"></div>
+<div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8800868630" data-style="standard"></div>
 
   
 

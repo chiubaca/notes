@@ -27,7 +27,7 @@
               "state": {
                 "file": "permanent-notes/everest-basecamp.md",
                 "mode": "source",
-                "source": true
+                "source": false
               }
             }
           },
@@ -41,14 +41,6 @@
                 "mode": "source",
                 "source": false
               }
-            }
-          },
-          {
-            "id": "8820b9cb39ee95ac",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
             }
           }
         ],
@@ -105,8 +97,17 @@
               "type": "bookmarks",
               "state": {}
             }
+          },
+          {
+            "id": "8820b9cb39ee95ac",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
