@@ -1,5 +1,5 @@
 ---
-title: Holographic cards soft spotlight part 1
+title: CSS Holographic cards - part 1, the soft spotlight effect
 publish_date: 2022-12-29
 last_updated: 20221229
 description: Creating holographic cards with CSS and a sprinkle of js
@@ -19,12 +19,13 @@ I want to break down some of the techniques involved in multi-part blog series. 
 The effect is extremely subtle when you interact with these 3D cards. it mimics the reflection of a light source shining down on the card. This effect adds that extra level of realism to your 3D card. 
 
 
-Here's the effect that w're going to produce:
-<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="MWBwQLe" data-user="chiubaca" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/chiubaca/pen/MWBwQLe">
+Here's the effect that we're going to produce:
+
+<iframe height="300" style="width: 100%;" scrolling="no" title="Holographic cards | Spot light effect" src="https://codepen.io/chiubaca/embed/preview/MWBwQLe?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/chiubaca/pen/MWBwQLe">
   Holographic cards | Spot light effect</a> by Alex Chiu (<a href="https://codepen.io/chiubaca">@chiubaca</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 Let's break this down, line by line.
 
