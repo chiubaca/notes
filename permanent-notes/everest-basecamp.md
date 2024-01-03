@@ -17,7 +17,7 @@ Lots of people have made it to basecamp before me but this is how it went for me
 
 
 
-The team and I arrive at Lukkla on tiny and shaky plane and hiked our first 8k to a tiny teahouse in Phakding.
+The team and I arrived at Lukkla on tiny and shaky plane and hiked our first 8k to a tiny teahouse in Phakding.
 
 ![the btbc team at lukkla](attachments/GOPR0235.jpg) 
   
@@ -29,7 +29,7 @@ The team and I arrive at Lukkla on tiny and shaky plane and hiked our first 8k t
 
 Our Sherpas at the time didn't tell us. But this would be one of the hardest treks of the trip.  Blissfully unware we would ascend over 1000m today. The route was steep and treacherous in places. In hindsight it was genius move by our Sherpas to not let us know how tough this route would be.
 
-The reward was arriving at the largest settlement along the course. Namche Bazaar. Here we would spend two day acclimatising to the altitude
+The reward was arriving at the largest settlement along the course. Namche Bazaar. Here we would spend two days acclimatising to the altitude.
   
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8779392541" data-style="standard"></div>
@@ -58,7 +58,7 @@ We spent another full day  in the vicinity of Namche Bazar but the Sherpas took 
 
 ## Day 5 -
 
-We moved on from Namche Bazzar for a long hike to our next location, Tengboche. Before arriving we had the opportunity to visit what must be one of highest situated monastery in the world. Here we have the opportunity to visit monks whilst they were praying and chanting with instruments. A truly amazing thing to witness.
+We moved on from Namche Bazzar for a long hike to our next location, Tengboche. Before arriving we had the opportunity to visit what must be one of the highest situated monastery in the world. Here we have the opportunity to visit monks whilst they were praying and chanting with instruments. A truly amazing thing to witness.
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8800868630" data-style="standard"></div>
 
@@ -73,7 +73,7 @@ Funnily, at this location resided one of the most endearing little cafes I have 
 
 ## Day 7 -
 
-We spent one day at Dingbouche to acclimatise to this altitude and it was well needed. Most of the team were quite tired at this stage. We just hand gentle hike around the local area and we spent the the rest of the day resting up back at the cafe. Tomorrow would be a big day.
+We spent one day at Dingbouche to acclimatise to this altitude and it was well needed. Most of the team were quite tired at this stage. We just had a gentle hike around the local area and we spent the the rest of the day resting up back at the cafe. Tomorrow would be a big day.
   
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8806491990" data-style="standard"></div>
 
@@ -87,13 +87,15 @@ We spent one day at Dingbouche to acclimatise to this altitude and it was well n
 
 ## Day 9 - 
 
-Today was the day! We were going reach Everest basecamp today. We had to reach our  teahouse Gorak Shek by lunch to have small break and do one last push which would take us to Everest basecamp and then hike _back_ to Gorak Shep.
+Today was the day! We were going to reach Everest basecamp today. We had to reach our  teahouse Gorak Shek by lunch to have small break and do one last push which would take us to Everest basecamp and then hike _back_ to Gorak Shep.
 
 Though it wasnt without drama. Before starting the day  one team member   took a tough decision to drop out due to  overwheling altitude sickness....
 
 Half to Gorak Shep we also lost another member, we had to call for an emergancy horse to bring her down the mountain.  It was just 4 out of the orignal team members left now. 
 
-As planned, we reach Gorak Shep by lunch, exhausted. I was not feeling good at this stage either, I thought i may need to drop out next too. But for somehow, i gritted my teeth and pushed through the final leg, getting slightly delirous at this stage. We made it to Everest basecamp!
+As planned, we reach Gorak Shep by lunch, exhausted. I was not feeling good at this stage either, I thought I may need to drop out next too. But somehow, I gritted my teeth and pushed through the final leg, getting slightly delirous at this stage. 
+
+We made it to Everest basecamp!
 
 It was slighlty surreal.
 
@@ -101,9 +103,9 @@ Our Sherpa gave us a kit kat to celebrate.
 
 We took pictures by the famous basecamp rock.
 
-And as suddenly as we arrived, it was time to head back to Gorak Shek.
+And suddenly as we arrived, it was time to head back to Gorak Shek.
 
-We had accomplished what we set out to do. I couldn't quite believe and I'm not sure if it as every quite truly sunk in.
+We had accomplished what we set out to do. I couldn't quite believe it and I'm not sure if it has truly quite sunk in.
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8852888942" data-style="standard"></div>
 
@@ -111,9 +113,9 @@ We had accomplished what we set out to do. I couldn't quite believe and I'm not 
 
 ## Day 10 -
 
-We were all tired, but we were ready to leave.   It was a surpringly long hike, but at least it was mostly downhill. It was probably the longest hike we did all trip. a whoping 18km hike down all the way past Dingboche and back in one of the teahouses we stayed in at Pangbouche. 
+We were all tired, but we were ready to leave.  It was a surpringly long hike, but at least it was mostly downhill. It was probably the longest hike we did all trip. a whoping 18km hike down all the way past Dingboche and back in one of the teahouses we stayed in at Pangbouche. 
 
-Here we reunited with the other two members that did'nt make it to EBC. Even though it  was only 1 day. It felt like a massive reunion. The band was back together and it was amazing feeling.
+Here we reunited with the other two members that didn't make it to EBC. Even though it  was only 1 day. It felt like a massive reunion. The band was back together and it was an amazing feeling.
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8824344017" data-style="standard"></div>
 
@@ -121,7 +123,7 @@ Here we reunited with the other two members that did'nt make it to EBC. Even tho
 
 ## Day 11 -
 
-We all felt mostly rejuventated today and ready to descend more, it was interesting revisiting sites on the way back down. We all still pretty tired, but in high sprits
+We all felt mostly rejuventated today and ready to descend more, it was interesting revisiting sites on the way back down. We were all still pretty tired, but in high spirits.
   
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8829287149" data-style="standard"></div>
@@ -140,7 +142,7 @@ We felt like regulars walking around Namche this time round. The feeling was dif
 
 ## Day 13 -
 
-  The penultimate day of the hike took us back to the very teahouse we stayed in and argubaly the best one . Hot showers, _much_ higher quality food and we all celebrated with a beer. Sweet, sweet beer.
+  The penultimate day of the hike took us back to the very teahouse we stayed in and argubaly the best one. Hot showers, _much_ higher quality food and we all celebrated with a beer. Sweet, sweet beer.
   
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8841006070" data-style="standard"></div>
@@ -149,13 +151,13 @@ We felt like regulars walking around Namche this time round. The feeling was dif
 
 ## Day 14 -
 
-The last leg of the descent and we were back to were it all began. Lukla. We stayed one night here, enjoyed the local cafes and also PIZZA! In the morning we board yet another rickity plane back to Katmundhu.
+The last leg of the descent and we were back to were it all began, Lukla. We stayed one night here, enjoyed the local cafes and also PIZZA! In the morning we board yet another rickity plane back to Katmundhu.
 
 We had done it!  
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8845817389" data-style="standard"></div>
 
-  
+    
 
 ## The whole route
 
