@@ -1,5 +1,5 @@
 ---
-title: I hiked to Everest Basecamp
+title: I Hiked To Everest Basecamp
 publish_date: 2024-01-02
 last_updated: 2024-01-02
 description: a quick description
@@ -9,18 +9,26 @@ tags:
   - hiking
   - wellbeing
 ---
-On the 11th October 2022 I signed up for an opportunity to hike Everest Basecamp for [work](https://neverbland.com/blog/neverbland-dev-team-sign-up-for-everest-basecamp) . On the 2nd April 2023 I made it to Everest Basecamp. It was probably one of the most physically demanding things I have ever done. I endured altitude sickness, sleep depravation, freezing temperatures and I don't regret any part of it.
+ On the 2nd April 2023 I made it to Everest Basecamp. It was probably one of the most physically demanding things I have ever done. I endured altitude sickness, sleep depravation, freezing temperatures and I don't regret any part of it.
 
-Lots of people have made it to basecamp before me but this is how it went for me.  
+Lots of people have made it to basecamp before, but this is how it went for me.  
 
 ## Day 1 - Arrival at Lukkla (1800m)
 
+We onboarded a tiny and shaky plane from Kathmundu a flew for about an hour to arrive at Lukkla. 
 
+Stepping off the plane we witnessed the towering mountains all around us. The scale of these mountains surrounding you is hard a feeling to explain, but in a word, _humbling_.
 
-The team and I arrived at Lukkla on tiny and shaky plane and hiked our first 8k to a tiny teahouse in Phakding.
+The team and I had to wait for a little bit for our luggage before we could begin. The plane was not big enough to store everybody's backpacks so they were coming in the next plane in.
+
+We passed the time by having by having some hot chocolates and once our luggage finally arrived we promptly started our first leg of the hike. 
+
+Our first 8km hike took us from Lukkla to Phakding.  We crossed our first couple of suspension bridges and already felt very high in the mountains. 
 
 ![the btbc team at lukkla](attachments/GOPR0235.jpg) 
-  
+> The team arriving at Lukkla
+
+
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8773766993" data-style="standard"></div>
 
