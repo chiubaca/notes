@@ -25,26 +25,32 @@ We passed the time by having by having some hot chocolates and once our luggage 
 
 Our first 8km hike took us from Lukkla to Phakding.  We crossed our first couple of suspension bridges and already felt very high in the mountains. 
 
+We arrived at our first teahouse, the Sherpa Guide Lodge, where we would spend one night.
+
 ![the btbc team at lukkla](attachments/GOPR0235.jpg) 
 > The team arriving at Lukkla
 
 
+![](20230406_142626.jpg)
+> the Sherpa Guide Lodge
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8773766993" data-style="standard"></div>
 
 
-## Day 2 - Hike to Namche Bazaar
+## Day 2 - Hike to Namche Bazaar (3200m)
 
-Our Sherpas at the time didn't tell us. But this would be one of the hardest treks of the trip.  Blissfully unware we would ascend over 1000m today. The route was steep and treacherous in places. In hindsight it was genius move by our Sherpas to not let us know how tough this route would be.
+Our Sherpas at the time didn't tell us, but this would be one of the hardest treks of the trip.  
 
-The reward was arriving at the largest settlement along the course. Namche Bazaar. Here we would spend two days acclimatising to the altitude.
+Blissfully unware, today we would ascend over 1000m. The route started easy and the weather was perfect for hiking. We enjoyed the beautiful mountainous scenery around us as we continued to follow the beaten trail that followed the Kosi River upstream. We eventually reached the entry of the Sargamatha National Park entry. The home of Mount Everest!
+
+The second half the hike we had to push through the the trail turned steep and treacherous in places but the reward was arriving at the largest settlement along the course, Namche Bazaar. Here we would spend two days acclimatising to the new altitude at 3200m.
   
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8779392541" data-style="standard"></div>
 
   
 
-## Day 3 -
+## Day 3 - Nache Acclimatisation
 
 A slightly more relaxed day after yesterday big hike. We got up early for a gentle walk near our tea house to get our first glimpse of Mount Everest! Then we had the rest of the day to explore the Bazar where we enjoyed local coffee with amazing scenery of mountains all around us.
 
