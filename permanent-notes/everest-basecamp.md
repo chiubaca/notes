@@ -50,7 +50,7 @@ The second half the hike we had to push through the the trail turned steep and t
 
   
 
-## Day 3 - Nache Acclimatisation
+## Day 3 - Namche Acclimatisation
 
 A slightly more relaxed day after yesterday big hike. We got up early for a gentle walk near our tea house to get our first glimpse of Mount Everest! Then we had the rest of the day to explore the Bazar where we enjoyed local coffee with amazing scenery of mountains all around us.
 
