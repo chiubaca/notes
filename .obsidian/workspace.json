@@ -8,14 +8,14 @@
         "type": "tabs",
         "children": [
           {
-            "id": "527f00706ca05dd4",
+            "id": "9886948948d7f93b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "permanent-notes/everest-basecamp.md",
                 "mode": "source",
-                "source": true
+                "source": false
               }
             }
           }
@@ -139,20 +139,20 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "527f00706ca05dd4",
+  "active": "9886948948d7f93b",
   "lastOpenFiles": [
-    "20230331_122444.jpg",
-    "20230330_140148.jpg",
-    "GOPR0448.jpg",
-    "GOPR0458.jpg",
+    "attachments/README.md",
+    "attachments/GOPR0458.jpg",
+    "attachments/VideoCapture_20230412-205115.jpg",
+    "attachments/GOPR0448.jpg",
     "permanent-notes/everest-basecamp.md",
-    "GOPR0424_1680172721833.jpg",
-    "VideoCapture_20230412-205115.jpg",
-    "20230328_123519.jpg",
-    "20230328_103559.jpg",
-    "20230328_071246.jpg",
-    "20230327_161056.jpg",
-    "GOPR0333.jpg",
+    "attachments/20230331_122444.jpg",
+    "attachments/20230330_140148.jpg",
+    "attachments/GOPR0424_1680172721833.jpg",
+    "attachments/20230328_123519.jpg",
+    "attachments/20230328_103559.jpg",
+    "attachments/20230328_071246.jpg",
+    "attachments/20230327_161056.jpg",
     "fleeting-notes/2024-01-05.md",
     "fleeting-notes/2023-10-20.md",
     "fleeting-notes/2021-12-26.md",
@@ -160,7 +160,6 @@
     "fleeting-notes/2024-01-04.md",
     "fleeting-notes/2024-01-03.md",
     "fleeting-notes/2020-09-10.md",
-    "README.md",
     "permanent-notes/base.md",
     "permanent-notes/pragmatism-over-perfectionism.md",
     "permanent-notes/making-eco-friendly-websites.md",
