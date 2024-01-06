@@ -15,7 +15,7 @@
               "state": {
                 "file": "permanent-notes/everest-basecamp.md",
                 "mode": "source",
-                "source": false
+                "source": true
               }
             }
           }
@@ -85,7 +85,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 303.5
+    "width": 303.5,
+    "collapsed": true
   },
   "right": {
     "id": "7d79c914da9cc99e",
@@ -141,11 +142,18 @@
   },
   "active": "9886948948d7f93b",
   "lastOpenFiles": [
+    "GOPR0496.jpg",
+    "permanent-notes/all-things-vector-tiles.md",
+    "permanent-notes/using-javascript-to-write-postgresql-functions.md",
+    "permanent-notes/typescript-and-netlify-functions.md",
+    "permanent-notes/swapping-react-for-preact-in-nextjs.md",
+    "permanent-notes/business-ideas.md",
+    "permanent-notes/everest-basecamp.md",
+    "fleeting-notes/2024-01-06.md",
     "attachments/README.md",
     "attachments/GOPR0458.jpg",
     "attachments/VideoCapture_20230412-205115.jpg",
     "attachments/GOPR0448.jpg",
-    "permanent-notes/everest-basecamp.md",
     "attachments/20230331_122444.jpg",
     "attachments/20230330_140148.jpg",
     "attachments/GOPR0424_1680172721833.jpg",
@@ -170,12 +178,6 @@
     "fleeting-notes/2021-05-21.md",
     "fleeting-notes/2021-05-01.md",
     "fleeting-notes/2021-04-13.md",
-    "fleeting-notes/2021-12-20.md",
-    "fleeting-notes/2022-12-27.md",
-    "permanent-notes/swapping-react-for-preact-in-nextjs.md",
-    "permanent-notes/svelte-basics.md",
-    "permanent-notes/shiba-every-hour-a-twitter-bot-powered-by-github-actions.md",
-    "permanent-notes/quick-look-at-react-use-hook.md",
     "index-notes",
     "attachments"
   ]

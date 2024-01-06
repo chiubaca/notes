@@ -2,14 +2,14 @@
 title: I Hiked To Everest Basecamp
 publish_date: 2024-01-02
 last_updated: 2024-01-02
-description: a quick description
+description: My trip to everest basecamp
 status: draft
 tags:
   - life
   - hiking
   - wellbeing
 ---
- On the 2nd April 2023 I made it to Everest Basecamp. It was probably one of the most physically demanding things I have ever done. I endured altitude sickness, sleep depravation, freezing temperatures and I don't regret any part of it.
+ On the 2nd April 2023 I made it to Everest Basecamp. It was probably one of the most physically demanding things I have ever done. I endured altitude sickness, sleep depravation, freezing temperatures and it was one the most amazing things I've ever done.
 
 Lots of people have made it to basecamp before, but this is how it went for me.  
 
@@ -70,10 +70,10 @@ The second half of the day we had a short trek to a tiny settlement and had less
 
 ## Day 4 - Namche Acclimatisation part 2
 
-Over night snow fell. It's amazing how the scenary changes so dramatically. The team and I were giddy all giddy as if christmas had come early. 
+Over night snow fell. It's amazing how the scenery changes so dramatically after a dusting of snow. Over breakfast the team and I were giddy as if christmas had come early. 
 
 ![](attachments/20230328_071246.jpg)
-> The view from outside our teahouse
+> The view from outside our tea house
 
 For our second acclimatisation day we  explored the areas in the vicinity of Namche Bazar some more. We went for a  light trek  to the nearby settlements of Khunde and Khumjung where we had the opportunity to visit the local hospital and school. It gave us a real sense of what living in the mountains is like.
 
@@ -85,7 +85,7 @@ For our second acclimatisation day we  explored the areas in the vicinity of Nam
 ![](attachments/VideoCapture_20230412-205115.jpg)
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8784362504" data-style="standard"></div>
-> Pray wheels greeted us at ever location
+> Prayer wheels greeted us at every location
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8789974770" data-style="standard"></div>  
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8789975194" data-style="standard"></div>
@@ -93,7 +93,7 @@ For our second acclimatisation day we  explored the areas in the vicinity of Nam
 
 ## Day 5 - Tengboche (3700m)
 
-It was time to move on from Namche. It would be a fairly long hike to our next location, Tengboche. Before arriving we had the opportunity to visit what must be one of the highest situated monastery's in the world. Here we have the opportunity to visit monks whilst they were praying and chanting with instruments. A truly amazing thing to witness. 
+It was time to move on from Namche. It would be a fairly long hike to our next location, Tengboche. Before arriving we had the opportunity to visit what must be one of the highest situated monastery's in the world. Here we had the opportunity to visit monks whilst they were praying and chanting with instruments. A truly amazing thing to witness. 
 
 ![](attachments/GOPR0424_1680172721833.jpg)
 > Outside the Tengboche Gompa monastery (we were not allowed to take photos inside)
@@ -102,12 +102,12 @@ It was time to move on from Namche. It would be a fairly long hike to our next l
 
 ## Day 6 - Dingbouche (4400m)
 
-We were on the move again and it would be another long hike moving on from Tengbouche to the settlement of Dingbouche where the environments started to get much harsher. We would reach an altitude of over 4400m . At this elevation it was noticeably more barren and cold. The lack of greenery around me got to me a little bit. Things were starting to get tough for me at this stage. 
+We were on the move again and it would be another long hike moving on from Tengbouche to the settlement of Dingbouche where the environment started to get much harsher. We would reach an altitude of over 4400m . At this elevation it was noticeably barren and cold now. The lack of greenery around me got to me a little bit and physically things were starting to get tough for me at this stage. 
 
 ![](attachments/GOPR0458.jpg)
-> Baren lands at over 4200m shrubs and trees can't grow at this altitude.
+> Barren lands at over 4200m. Shrubs and trees can't grow at this altitude.
 
-Funnily, at this location resided one of the most endearing little cafes I have ever been to. They were serving high quality coffees in a cosy environment  and there was even a tiny little cinema! We settled down here for the evening to watch the documentary  [Sherpa](https://en.wikipedia.org/wiki/Sherpa_(film)). As the evening drew, the wind and snow had started to pick up so we had to run back to our accommodation through what felt like a little white out. The teahouse was noticiabally cold  so to keep warm we all had to huddle around a burner fuels by Yak manure! (yes really). It didn't smell as bad as you might imagined.
+Funnily, at this location resided one of the most endearing little cafes I have ever been to. They were serving high quality coffees in a cosy environment  and there was even a tiny little cinema! We has the chance to relax here for an hour, but as the evening drew in, the wind and snow had started to pick up so we had to run back to our accommodation through what felt like a little white out. The teahouse was noticiabally cold  so to keep warm we all had to huddle around a burner fuels by Yak manure! (yes really). It didn't smell as bad as you might imagined.
 
 ![](attachments/GOPR0448.jpg)
 > "Huddled around a yak shit fire" - *Nick Cragg* (second to the left)
@@ -123,7 +123,7 @@ Afterwards out sherpas gave us demo for a life-saving contraption known as a por
 ![](attachments/20230331_122444.jpg)
 > Pumping up the PAC
 
- We spent the the rest of the day resting up back at the cafe. Tomorrow would be a big day.
+ We spent the the rest of the day resting up back at the cafe and we watched the documentary [Sherpa](https://en.wikipedia.org/wiki/Sherpa_(film)). This down time felt well earned as tomorrow would be a big day.
 
 ![](attachments/20230330_140148.jpg)
 > Caffe 4410
@@ -133,7 +133,16 @@ Afterwards out sherpas gave us demo for a life-saving contraption known as a por
   
 ## Day 8 - Tengboche
 
-We had to move on from Dingbouche and hike to Tengboche today. Snow had fallen again but the team was noticeably quieter in the morning. Altitude sickness had hit most of us including myself. The recommendation to knock back a couple of paracetamols for the headache was no longer helping out much. Nonetheless we booted up and begun an icy trek!
+We headed to Tengboche today. Snow had fallen again but the team was noticeably quieter in the morning. Altitude sickness had hit most of us including myself. The recommendation to knock back a couple of paracetamols for the headache was no longer helping out much. Nonetheless we booted up and begun an icy trek!
+
+The route would take us through a cemetry of climbers and sherpas whos fate had been taken from climbing mount everest.  We had a moment of reflection and it for a moment i felt quite homesick and questioned why I was here. 
+
+Life is fragile but at the same time we only have one, so you _have_ to take the big opportunities like this when they come.
+
+![](GOPR0496.jpg)
+> Views from the hikers cemetary
+
+We finally reached our tea house as the clouds loomed.  We settled in for another evening huddle around a yak manure fire. It was bitterlly cold at this location. I had mixed feelings suddenly. I wanted savour every moment of this trip, but at the same time I couldnt wait to reach base camp as soon as possibe so we could get back to comfortable elevation again. I decided to take an early night at this location becasue of a persistant headache was making me feel sick, not to dissimimalr form the feeling of being car sick
 
 
 
