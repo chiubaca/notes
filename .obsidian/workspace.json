@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/everest-basecamp.md",
+                "file": "permanent-notes/holograpic-cards-pt-1.md",
                 "mode": "source",
                 "source": true
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "basecamp",
+                "query": "ideas",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,8 +85,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 303.5,
-    "collapsed": true
+    "width": 303.5
   },
   "right": {
     "id": "7d79c914da9cc99e",
@@ -102,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "permanent-notes/everest-basecamp.md",
+                "file": "permanent-notes/holograpic-cards-pt-1.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -142,13 +141,13 @@
   },
   "active": "9886948948d7f93b",
   "lastOpenFiles": [
+    "permanent-notes/business-ideas.md",
+    "permanent-notes/everest-basecamp.md",
     "GOPR0496.jpg",
     "permanent-notes/all-things-vector-tiles.md",
     "permanent-notes/using-javascript-to-write-postgresql-functions.md",
     "permanent-notes/typescript-and-netlify-functions.md",
     "permanent-notes/swapping-react-for-preact-in-nextjs.md",
-    "permanent-notes/business-ideas.md",
-    "permanent-notes/everest-basecamp.md",
     "fleeting-notes/2024-01-06.md",
     "attachments/README.md",
     "attachments/GOPR0458.jpg",
@@ -160,7 +159,6 @@
     "attachments/20230328_123519.jpg",
     "attachments/20230328_103559.jpg",
     "attachments/20230328_071246.jpg",
-    "attachments/20230327_161056.jpg",
     "fleeting-notes/2024-01-05.md",
     "fleeting-notes/2023-10-20.md",
     "fleeting-notes/2021-12-26.md",
