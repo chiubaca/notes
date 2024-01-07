@@ -35,6 +35,8 @@ We arrived at our first teahouse, the Sherpa Guide Lodge, where we would spend o
 ![](attachments/20230406_142626.jpg)
 > The Sherpa Guide Lodge.
 
+---
+
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8773766993" data-style="standard"></div>
 
 ## Day 2 - Hike to Namche Bazaar (3200m)
@@ -52,6 +54,7 @@ The second half of the hike we had to push through a trail that turned steep and
 > Enroute to Namche.
 
 ---
+
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8779392541" data-style="standard"></div>
 
 ## Day 3 - Namche Acclimatisation
