@@ -13,9 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "literature-notes/total-typescript-notes.md",
+                "file": "permanent-notes/business-ideas.md",
                 "mode": "source",
-                "source": true
+                "source": false
               }
             }
           }
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "literature-notes/total-typescript-notes.md",
+                "file": "permanent-notes/business-ideas.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -143,6 +143,7 @@
   },
   "active": "9886948948d7f93b",
   "lastOpenFiles": [
+    "literature-notes/total-typescript-notes.md",
     "literature-notes/threejs-journey.md",
     "literature-notes/paypal-sdk.md",
     "literature-notes/does-edge-compute-replace-lambda-functions.md",
@@ -168,7 +169,6 @@
     "permanent-notes/docker-commands-cheatsheet.md",
     "permanent-notes/controlling-my-anxiety-insomnia.md",
     "permanent-notes/business-ideas.md",
-    "permanent-notes/building-my-new-blog-nuxt-vs-gridsome.md",
     "attachments/20230401_095655.jpg",
     "attachments/GOPR0183.jpg",
     "attachments/20230404_143210.jpg",
