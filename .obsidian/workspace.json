@@ -11,11 +11,9 @@
             "id": "9886948948d7f93b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "permanent-notes/I-hiked-to-everest-basecamp.md",
-                "mode": "source",
-                "source": false
+                "file": "attachments/20230401_095655.jpg"
               }
             }
           }
@@ -101,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "permanent-notes/I-hiked-to-everest-basecamp.md",
+                "file": "attachments/20230401_095655.jpg",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -143,18 +141,18 @@
   },
   "active": "9886948948d7f93b",
   "lastOpenFiles": [
-    "permanent-notes/managing-your-self-learning.md",
     "permanent-notes/I-hiked-to-everest-basecamp.md",
-    "GOPR0183.jpg",
-    "20230404_143210.jpg",
-    "20230407_173601.jpg",
-    "20230406_160504.jpg",
-    "20230405_160155.jpg",
-    "20230403_134426.jpg",
-    "20230402_155054.jpg",
-    "20230401_095655.jpg",
-    "GOPR0564.jpg",
-    "GOPR0547.jpg",
+    "permanent-notes/managing-your-self-learning.md",
+    "attachments/GOPR0183.jpg",
+    "attachments/20230404_143210.jpg",
+    "attachments/20230407_173601.jpg",
+    "attachments/20230406_160504.jpg",
+    "attachments/20230405_160155.jpg",
+    "attachments/20230403_134426.jpg",
+    "attachments/20230402_155054.jpg",
+    "attachments/20230401_095655.jpg",
+    "attachments/GOPR0564.jpg",
+    "attachments/GOPR0547.jpg",
     "fleeting-notes/2024-01-07.md",
     "permanent-notes/build-a-serverless-crud-app-using-vue-js-netlify-and-faunadb.md",
     "permanent-notes/auto-js-sdk-for-any-rest-api.md",

@@ -3,7 +3,7 @@ title: I Hiked To Everest Basecamp
 publish_date: 2024-01-07
 last_updated: 2024-01-07
 description: My trip to the Everest basecamp
-status: draft
+status: live
 tags:
   - life
   - hiking
@@ -109,7 +109,7 @@ We were on the move again and it would be another long hike from Tengbouche to t
 
 The route would take us through a cemetery of climbers and sherpas whose fate had been taken from climbing Mount Everest. We had a moment of reflection to think about all the hikers and sherpas that come before us here.
 
-![](GOPR0496.jpg)
+![](attachments/GOPR0496.jpg)
 > Views from the hiker's cemetery
 
 When we reached Tengbouche, we were surprised to find an endearing little cafe called Cafe 4410. They were serving high-quality coffees in a cosy environment and there was even a tiny little cinema! We had the chance to relax here for an hour, but as the evening drew in, the wind and snow started to pick up so we had to run back to our accommodation through a little whiteout. The teahouse was noticeably cold, so to keep warm we all had to huddle around a burner fueled by Yak manure! (yes really). It didn't smell as bad as you might imagined.
@@ -148,7 +148,7 @@ The altitude sickness for me had been lingering throughout the trek, grating awa
 
 I tried to get some sleep knowing tomorrow was the day.
 
-![](20230401_095655.jpg)
+![](attachments/20230401_095655.jpg)
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8811609867" data-style="standard"></div>
 > The view enroute to Tengbouche.
@@ -169,11 +169,11 @@ Step by step, we eventually made it. I was standing at Everest base camp!
 
 It felt surreal. Different emotions came flooding through. Relief, excitement and happiness I was also sad that our other team members were not here.
 
-![](GX010518_1680688090641.jpg)
+![](attachments/GX010518_1680688090641.jpg)
 
 > The team at the famous Everest Basecamp rock.
 
-![](20230402_155054.jpg)
+![](attachments/20230402_155054.jpg)
 > Proud and tired. Mount Everest poking out in between.
 
 And as quickly as we arrived, it was time to head back to Gorak Shek.
@@ -191,7 +191,7 @@ Naturally, we were all tired from yesterday, but we were ready to leave.
 Today we unexpectedly did our longest hike but it was mostly downhill. We would descend a whopping 18 km taking past Loboche and Dingboche.
 
 
-![](20230403_134426.jpg)
+![](attachments/20230403_134426.jpg)
 >Taking a break during the descent.
 
 We reunited with the other two members who didn't make it to the Everest base camp at a tea house at Pangbouche. Even though were only apart for one day It felt like a big reunion. It was like the band was back together and it was an amazing feeling. Descending over 1000m made all of us feel _so much_ better from the altitude sickness. Spirits were high over dinner as we shared our stories of what happened. 
@@ -205,7 +205,7 @@ It was interesting revisiting sites on the way back down and with every meter we
 
 We felt like regulars walking around Namche this time around. The feeling was different, with less apprehension of what was to come. We could properly relax this time round. 
 
-![](GOPR0547.jpg)
+![](attachments/GOPR0547.jpg)
 >Looking back at where we had descended from.
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8829287149" data-style="standard"></div>
@@ -218,7 +218,7 @@ We felt like regulars walking around Namche this time around. The feeling was di
 
 On the penultimate day of the hike, we excited Sagarmatha National Park and arrived back at the first teahouse we stayed in and arguably the best one, the Sherpa Guide Lodge. Hot showers, _much_ higher quality food and beer! Sweet, sweet beer.
   
-![](20230406_160504.jpg)
+![](attachments/20230406_160504.jpg)
 
 >A pint of Khumbu Kolsh.
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8841006070" data-style="standard"></div>
@@ -234,7 +234,7 @@ Over dinner, the Sherpas who had guided us throughout the trip gave us a little 
 We had done it!  
 
 
-![](20230407_173601.jpg)
+![](attachments/20230407_173601.jpg)
 > Celebrations at our last tea house.
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8845817389" data-style="standard"></div>
@@ -262,11 +262,11 @@ The charity that organised the trip. They focus on improving the lives in Nepal 
 
 We had the opportunity to visit their office in Kathmandu before we started the expedition.
 
-![](GOPR0183.jpg)
+![](attachments/GOPR0183.jpg)
 > Lunch at the PHASE Kathmandu office. 
 ### The Team
 
-![](20230405_160155.jpg)
+![](attachments/20230405_160155.jpg)
 
 - Nick Cragg (far left)
 - Dawn Limbu (second left)
@@ -277,11 +277,11 @@ We had the opportunity to visit their office in Kathmandu before we started the 
 
 ### Our Sherpas
 
-![](GOPR0564.jpg)
+![](attachments/GOPR0564.jpg)
 > Passang
 
 
-![](20230404_143210.jpg)
+![](attachments/20230404_143210.jpg)
 > Mingma
 
 
