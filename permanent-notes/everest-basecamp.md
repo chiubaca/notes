@@ -236,7 +236,7 @@ We felt like regulars walking around Namche this time around. The feeling was di
 
 ## Day 13 - Back at Phakding (2600m)
 
-On the penultimate day of the hike, we excited Sagarmatha National Park and arrived back at the first teahouse we stayed in and arguably the best one, the Sherpa Guide Lodge. Hot showers, _much_ higher quality food and beer! Sweet, sweet beer.
+On the penultimate day of the hike, we exited Sagarmatha National Park and arrived back at the first teahouse we stayed in and arguably the best one, the Sherpa Guide Lodge. Hot showers, _much_ higher quality food and beer! Sweet, sweet beer.
   
 ![](attachments/20230406_160504.jpg)
 
