@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2024-01-07.md",
+                "file": "permanent-notes/everest-basecamp.md",
                 "mode": "source",
                 "source": true
               }
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/2024-01-07.md",
+                "file": "permanent-notes/everest-basecamp.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -141,10 +141,14 @@
       "obsidian-grammarly-plugin:Enable Grammarly": false
     }
   },
-  "active": "cdd64a28cc6fe199",
+  "active": "9886948948d7f93b",
   "lastOpenFiles": [
-    "fleeting-notes/2024-01-05.md",
+    "permanent-notes/all-things-vector-tiles.md",
+    "fleeting-notes/2024-01-03.md",
+    "fleeting-notes/2024-01-04.md",
     "fleeting-notes/2024-01-07.md",
+    "fleeting-notes/2024-01-05.md",
+    "fleeting-notes/2024-01-06.md",
     "permanent-notes/everest-basecamp.md",
     "attachments/20230401_095655.jpg",
     "permanent-notes/managing-your-self-learning.md",
@@ -161,17 +165,13 @@
     "permanent-notes/auto-js-sdk-for-any-rest-api.md",
     "permanent-notes/holograpic-cards-pt-1.md",
     "permanent-notes/business-ideas.md",
-    "permanent-notes/all-things-vector-tiles.md",
     "permanent-notes/using-javascript-to-write-postgresql-functions.md",
     "permanent-notes/typescript-and-netlify-functions.md",
     "permanent-notes/swapping-react-for-preact-in-nextjs.md",
-    "fleeting-notes/2024-01-06.md",
     "attachments/README.md",
     "fleeting-notes/2023-10-20.md",
     "fleeting-notes/2021-12-26.md",
     "conflict-files-obsidian-git.md",
-    "fleeting-notes/2024-01-04.md",
-    "fleeting-notes/2024-01-03.md",
     "fleeting-notes/2020-09-10.md",
     "permanent-notes/base.md",
     "permanent-notes/pragmatism-over-perfectionism.md",
