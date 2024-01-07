@@ -136,11 +136,15 @@
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "command-palette:Open command palette": false,
-      "markdown-importer:Open format converter": false
+      "markdown-importer:Open format converter": false,
+      "obsidian42-brat:BRAT": false,
+      "obsidian-grammarly-plugin:Enable Grammarly": false
     }
   },
   "active": "9886948948d7f93b",
   "lastOpenFiles": [
+    "permanent-notes/managing-your-self-learning.md",
+    "permanent-notes/I-hiked-to-everest-basecamp.md",
     "GOPR0183.jpg",
     "20230404_143210.jpg",
     "20230407_173601.jpg",
@@ -150,9 +154,7 @@
     "20230402_155054.jpg",
     "20230401_095655.jpg",
     "GOPR0564.jpg",
-    "permanent-notes/I-hiked-to-everest-basecamp.md",
     "GOPR0547.jpg",
-    "GOPR0564 1.jpg",
     "fleeting-notes/2024-01-07.md",
     "permanent-notes/build-a-serverless-crud-app-using-vue-js-netlify-and-faunadb.md",
     "permanent-notes/auto-js-sdk-for-any-rest-api.md",
