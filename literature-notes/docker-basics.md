@@ -1,7 +1,7 @@
 ---
 title: Docker Basics
 publish_date: 2022-09-21
-last_updated: 20220921
+last_updated: 2022-09-21
 description: Docker Basics
 tags:
   - docker

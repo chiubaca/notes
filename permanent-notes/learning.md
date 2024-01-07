@@ -1,7 +1,7 @@
 ---
 title: Resources
-publish_date: 2023-12-28
-last_updated: 20220618
+publish_date: 2020-01-01
+last_updated: 2023-12-28
 description: Compilation of resources that I have read/watched/worked through that have helped expand my knowledge.
 status: draft
 tags:

@@ -1,7 +1,7 @@
 ---
 title: Create an auto-generated JS client for any REST API
 publish_date: 2022-06-12
-last_updated: 20220612
+last_updated: 2022-06-12
 description: Quick walk through of how to use openapi-client-axios
 status: live
 tags:

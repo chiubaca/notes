@@ -1,7 +1,7 @@
 ---
 title: Remix Basics
 publish_date: 2022-06-18
-last_updated: 20220618
+last_updated: 2022-06-18
 description: Remix Basics
 status: draft
 tags:

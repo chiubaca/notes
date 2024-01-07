@@ -1,7 +1,7 @@
 ---
 title: paypal-sdk
 publish_date: 2022-04-23
-last_updated: 20220423
+last_updated: 2022-04-23
 description: Notes on using the PayPal SDK
 tags:
   - paypal

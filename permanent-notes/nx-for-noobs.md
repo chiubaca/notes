@@ -1,7 +1,7 @@
 ---
 title: nx for noobs
 publish_date: 2023-01-11
-last_updated: 20230111
+last_updated: 2023-01-11
 description: nx mono repos for noobs
 status: draft
 tags:

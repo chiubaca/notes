@@ -1,7 +1,7 @@
 ---
 title: Buisness Ideas
 publish_date: 2023-12-17
-last_updated: 20231217
+last_updated: 2023-12-17
 status: draft
 tags:
   - career

@@ -1,7 +1,7 @@
 ---
 title: Svelte Basics
 publish_date: 2021-12-12
-last_updated: 20211212
+last_updated: 2021-12-12
 description: Svelte Basics
 status: draft
 tags:

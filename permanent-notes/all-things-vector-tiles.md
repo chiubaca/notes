@@ -1,7 +1,7 @@
 ---
 title: All things vector tiles
 publish_date: 2023-01-11
-last_updated: 20230111
+last_updated: 2023-01-11
 description: all my notes about vector tiles live here
 status: draft
 tags:

@@ -1,7 +1,7 @@
 ---
 title: Easy React data fetching with `use()`
 publish_date: 2023-05-27
-last_updated: 20230527
+last_updated: 2023-05-27
 description: Quick looks at the new `use()` hook
 status: live
 tags:

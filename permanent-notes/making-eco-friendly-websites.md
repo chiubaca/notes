@@ -1,7 +1,7 @@
 ---
 title: Eco-friendly websites
 publish_date: 2021-12-26
-last_updated: 20220107
+last_updated: 2022-01-07
 description: Notes on how to build eco-friendly websites
 status: live
 tags:

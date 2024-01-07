@@ -1,7 +1,7 @@
 ---
 title: Principles for using AI to write code
 publish_date: 2023-07-08
-last_updated: 20230708
+last_updated: 2023-07-08
 description: My thoughts on how to best using AI to write code
 status: draft
 tags:
