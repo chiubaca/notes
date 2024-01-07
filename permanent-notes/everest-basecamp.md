@@ -229,7 +229,6 @@ Over dinner, the Sherpas who had guided us throughout the trip gave us a little 
 
 We had done it!  
 
-
 ![](attachments/20230407_173601.jpg)
 > Celebrations at our last tea house.
 
