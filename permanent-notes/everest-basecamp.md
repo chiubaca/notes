@@ -2,7 +2,7 @@
 title: I Hiked To Everest Basecamp
 publish_date: 2024-01-07
 last_updated: 2024-01-07
-description: My trip to the Everest basecamp
+description: My trip to the Everest base camp
 status: live
 tags:
   - life
@@ -10,13 +10,13 @@ tags:
   - wellbeing
 ---
 
- On the 2nd of April 2023, I made it to Everest Basecamp. It was probably one of the most physically demanding things I have ever done. I endured altitude sickness, sleep deprivation, and freezing temperatures and it was one the most amazing things I've ever done.
+ On the 2nd of April 2023, I made it to Everest Base camp. It was probably one of the most physically demanding things I have ever done. I endured altitude sickness, sleep deprivation, and freezing temperatures and it was one the most amazing things I've ever done.
 
 Lots of people have made it to base camp before, but this is how it went for me.  
 
 ## Day 1 - Arrival at Lukla (1800m)
 
-We onboarded a tiny and shaky plane from Kathmandu a flew for about an hour to arrive at Lukkla. 
+We onboarded a tiny and shaky plane from Kathmandu a flew for about an hour to arrive at Lukla. 
 
 Stepping off the plane we witnessed the towering mountains all around us. I have no other word to describe the scale of these mountains but, _humbling_.
 
@@ -29,11 +29,11 @@ Our first 8km hike took us from Lukla to Phakding.  We crossed our first couple 
 We arrived at our first teahouse, the Sherpa Guide Lodge, where we would spend one night.
 
 ![the btbc team at lukkla](attachments/GOPR0235.jpg) 
-> The team arriving at Lukkla
+> The team arriving at Lukla.
 
 
 ![](attachments/20230406_142626.jpg)
-> The Sherpa Guide Lodge
+> The Sherpa Guide Lodge.
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8773766993" data-style="standard"></div>
 
@@ -41,16 +41,15 @@ We arrived at our first teahouse, the Sherpa Guide Lodge, where we would spend o
 
 Our Sherpas at the time didn't tell us, but this would be one of the hardest treks of the trip.  
 
-Blissfully unaware, today we would ascend over 1000m. The route started easy and the weather was perfect for hiking. We enjoyed the stunning mountainous scenery around us as we continued to follow the beaten trail that followed the[Kosi River](https://en.wikipedia.org/wiki/Kosi_River) upstream. We eventually reached the entry of the Sargamatha National Park entry. The home of Mount Everest!
+Blissfully unaware, today we would ascend over 1000m. The route started easy and the weather was perfect for hiking. We enjoyed the stunning mountainous scenery around us as we continued to follow the beaten trail that followed the [Kosi River](https://en.wikipedia.org/wiki/Kosi_River) upstream. We eventually reached the entry of the Sagarmatha National Park entry. The home of Mount Everest!
 
 ![Entrance to Sargamatha National Park](attachments/20230326_112558.jpg)
->Entrance to  Sargamatha National Park
+>Entrance to Sagarmatha National Park.
 
 The second half of the hike we had to push through a trail that turned steep and treacherous in places but the reward was arriving at the largest settlement along the course, Namche Bazaar. Here we would spend two days acclimatising to the new altitude at 3200m.
 
 ![sign: way to namche](attachments/20230404_104812.jpg)
-> Enroute to Namche
-
+> Enroute to Namche.
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8779392541" data-style="standard"></div>
 
@@ -84,12 +83,12 @@ For our second acclimatisation day, we explored the areas in the vicinity of Nam
 
 ![](attachments/VideoCapture_20230412-205115.jpg)
 > Prayer wheels greeted us at every location
+
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8784362504" data-style="standard"></div>
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8789974770" data-style="standard"></div>
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8789975194" data-style="standard"></div>
-
 
 ## Day 5 - Tengboche (3700m)
 
@@ -212,8 +211,6 @@ We felt like regulars walking around Namche this time around. The feeling was di
   
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8835095144" data-style="standard"></div>
 
-  
-
 ## Day 13 - Back at Phakding (2600m)
 
 On the penultimate day of the hike, we excited Sagarmatha National Park and arrived back at the first teahouse we stayed in and arguably the best one, the Sherpa Guide Lodge. Hot showers, _much_ higher quality food and beer! Sweet, sweet beer.
@@ -221,9 +218,8 @@ On the penultimate day of the hike, we excited Sagarmatha National Park and arri
 ![](attachments/20230406_160504.jpg)
 
 >A pint of Khumbu Kolsh.
-<div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8841006070" data-style="standard"></div>
 
-  
+<div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8841006070" data-style="standard"></div>
 
 ## Day 14 -
 

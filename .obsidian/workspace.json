@@ -13,9 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/I-hiked-to-everest-basecamp.md",
+                "file": "permanent-notes/everest-basecamp.md",
                 "mode": "source",
-                "source": false
+                "source": true
               }
             }
           }
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "permanent-notes/I-hiked-to-everest-basecamp.md",
+                "file": "permanent-notes/everest-basecamp.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -141,10 +141,10 @@
       "obsidian-grammarly-plugin:Enable Grammarly": false
     }
   },
-  "active": "cdd64a28cc6fe199",
+  "active": "9886948948d7f93b",
   "lastOpenFiles": [
     "attachments/20230401_095655.jpg",
-    "permanent-notes/I-hiked-to-everest-basecamp.md",
+    "permanent-notes/everest-basecamp.md",
     "permanent-notes/managing-your-self-learning.md",
     "attachments/GOPR0183.jpg",
     "attachments/20230404_143210.jpg",
