@@ -162,11 +162,12 @@ The altitude sickness for me had been lingering throughout the trek, grating awa
 I tried to get some sleep knowing tomorrow was the day.
 
 ![](attachments/20230401_095655.jpg)
+> The view enroute to Tengbouche.
 
 ---
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8811609867" data-style="standard"></div>
-> The view enroute to Tengbouche.
+
 
 ## Day 9 - Final push to Everest Basecamp (5300m)
 
