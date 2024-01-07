@@ -51,6 +51,7 @@ The second half of the hike we had to push through a trail that turned steep and
 ![sign: way to namche](attachments/20230404_104812.jpg)
 > Enroute to Namche.
 
+---
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8779392541" data-style="standard"></div>
 
 ## Day 3 - Namche Acclimatisation
@@ -65,6 +66,7 @@ In the second half of the day, we had a short trek to a tiny settlement and had 
 ![](attachments/20230327_161056.jpg)
 > Me and the team enjoying some beverages in the Namche town square.
 
+---
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8783863155" data-style="standard"></div>
 
 ## Day 4 - Namche Acclimatisation part 2
@@ -84,6 +86,7 @@ For our second acclimatisation day, we explored the areas in the vicinity of Nam
 ![](attachments/VideoCapture_20230412-205115.jpg)
 > Prayer wheels greeted us at every location
 
+---
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8784362504" data-style="standard"></div>
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8789974770" data-style="standard"></div>
@@ -97,6 +100,7 @@ It was time to move on from Namche. It would be a fairly long hike to our next l
 ![](attachments/GOPR0424_1680172721833.jpg)
 > Outside the Tengboche Gompa monastery (we were not allowed to take photos inside)
 
+---
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8800868630" data-style="standard"></div>
 
 ## Day 6 - Dingbouche (4400m)
@@ -116,6 +120,7 @@ When we reached Tengbouche, we were surprised to find an endearing little cafe c
 ![](attachments/GOPR0448.jpg)
 > "Huddled around a yak shit fire" - *Nick Cragg*
 
+---
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8801937278" data-style="standard"></div>
 
 ## Day 7 - Dingbouche Acclimatisation
@@ -132,6 +137,7 @@ Afterwards, our sherpas gave us a demo of a life-saving contraption known as a p
 ![](attachments/20230330_140148.jpg)
 > The best cafe you find at this altitude. Caffe 4410.
 
+---
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8806491990" data-style="standard"></div>
 
  
@@ -149,6 +155,7 @@ I tried to get some sleep knowing tomorrow was the day.
 
 ![](attachments/20230401_095655.jpg)
 
+---
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8811609867" data-style="standard"></div>
 > The view enroute to Tengbouche.
 
@@ -179,6 +186,7 @@ And as quickly as we arrived, it was time to head back to Gorak Shek.
 
 We had accomplished what we set out to do. I couldn't quite believe it and I'm _still_ not sure if it has truly quite sunk in.
 
+---
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8852888942" data-style="standard"></div>
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8819257607" data-style="standard"></div>
@@ -187,14 +195,15 @@ We had accomplished what we set out to do. I couldn't quite believe it and I'm _
 
 Naturally, we were all tired from yesterday, but we were ready to leave. 
 
-Today we unexpectedly did our longest hike but it was mostly downhill. We would descend a whopping 18 km taking past Loboche and Dingboche.
+Today we unexpectedly did our longest hike but it was mostly downhill. We would descend a whopping 18 km taking us past Loboche and Dingboche.
 
 
 ![](attachments/20230403_134426.jpg)
 >Taking a break during the descent.
 
-We reunited with the other two members who didn't make it to the Everest base camp at a tea house at Pangbouche. Even though were only apart for one day It felt like a big reunion. It was like the band was back together and it was an amazing feeling. Descending over 1000m made all of us feel _so much_ better from the altitude sickness. Spirits were high over dinner as we shared our stories of what happened. 
+We reunited with our team members who didn't make it to the Everest base camp at a tea house at Pangbouche. Even though were only apart for one day It felt like a big reunion. It was like the band was back together and it was an amazing feeling. Descending over 1000m made all of us feel _so much_ better from the altitude sickness. Spirits were high over dinner as we shared our stories of what happened. 
 
+---
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8824344017" data-style="standard"></div>
 
   
@@ -207,6 +216,7 @@ We felt like regulars walking around Namche this time around. The feeling was di
 ![](attachments/GOPR0547.jpg)
 >Looking back at where we had descended from.
 
+---
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8829287149" data-style="standard"></div>
   
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8835095144" data-style="standard"></div>
@@ -221,7 +231,7 @@ On the penultimate day of the hike, we excited Sagarmatha National Park and arri
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8841006070" data-style="standard"></div>
 
-## Day 14 -
+## Day 14 - The End (1800m)
 
 The last leg of the descent and we were back to where it all began, Lukkla. This time around we had the opportunity to explore the the local shops and cafes.
 
@@ -232,9 +242,9 @@ We had done it!
 ![](attachments/20230407_173601.jpg)
 > Celebrations at our last tea house.
 
+---
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8845817389" data-style="standard"></div>
 
----
 
 ## The whole route mapped
 
@@ -244,7 +254,7 @@ Of course, I _had_ to make my own visualisation with all this GPS data I had col
 ![3d map of the hiking trail](attachments/interative-hike-map.gif)
 
 
-( [live version](https://btbc-2023-data-viz.vercel.app/))
+( [live version](https://btbc-2023-data-viz.vercel.app/) )
 
 ## Shout Outs
 
