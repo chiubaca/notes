@@ -1,7 +1,7 @@
 ---
 title: I Hiked To Everest Basecamp
-publish_date: 2024-01-02
-last_updated: 2024-01-02
+publish_date: 2024-01-07
+last_updated: 2024-01-07
 description: My trip to everest basecamp
 status: draft
 tags:
@@ -17,7 +17,7 @@ Lots of people have made it to basecamp before, but this is how it went for me.
 
 We onboarded a tiny and shaky plane from Kathmundu a flew for about an hour to arrive at Lukkla. 
 
-Stepping off the plane we witnessed the towering mountains all around us. The scale of these mountains surrounding you is hard a feeling to explain, but in a word, _humbling_.
+Stepping off the plane we witnessed the towering mountains all around us. I have no other word to describe the scale of these mountains but, _humbling_.
 
 The team and I had to wait for a little bit for our luggage before we could begin. The plane was not big enough to store everybody's backpacks so they were coming in the next plane in.
 
@@ -35,7 +35,6 @@ We arrived at our first teahouse, the Sherpa Guide Lodge, where we would spend o
 > the Sherpa Guide Lodge
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8773766993" data-style="standard"></div>
-
 
 ## Day 2 - Hike to Namche Bazaar (3200m)
 
@@ -107,7 +106,13 @@ We were on the move again and it would be another long hike moving on from Tengb
 ![](attachments/GOPR0458.jpg)
 > Barren lands at over 4200m. Shrubs and trees can't grow at this altitude.
 
-Funnily, at this location resided one of the most endearing little cafes I have ever been to. They were serving high quality coffees in a cosy environment  and there was even a tiny little cinema! We has the chance to relax here for an hour, but as the evening drew in, the wind and snow had started to pick up so we had to run back to our accommodation through what felt like a little white out. The teahouse was noticiabally cold  so to keep warm we all had to huddle around a burner fuels by Yak manure! (yes really). It didn't smell as bad as you might imagined.
+The route would take us through a cemetry of climbers and sherpas whos fate had been taken from climbing mount everest. We had moment of reflection to think about all the hikers and sherpas that come before us here. It was customary to place a stone on the mounds that were building up.
+
+![](GOPR0496.jpg)
+> Views from the hikers cemetary
+
+
+When we reached Tengbouche, we were  surprised to find an endearing little cafe called Cafe 44000. They were serving high quality coffees in a cosy environment  and there was even a tiny little cinema! We has the chance to relax here for an hour, but as the evening drew in, the wind and snow had started to pick up so we had to run back to our accommodation through what felt like a little white out. The teahouse was noticiabally cold  so to keep warm we all had to huddle around a burner fuels by Yak manure! (yes really). It didn't smell as bad as you might imagined.
 
 ![](attachments/GOPR0448.jpg)
 > "Huddled around a yak shit fire" - *Nick Cragg* (second to the left)
@@ -123,7 +128,7 @@ Afterwards out sherpas gave us demo for a life-saving contraption known as a por
 ![](attachments/20230331_122444.jpg)
 > Pumping up the PAC
 
- We spent the the rest of the day resting up back at the cafe and we watched the documentary [Sherpa](https://en.wikipedia.org/wiki/Sherpa_(film)). This down time felt well earned as tomorrow would be a big day.
+ We spent the the rest of the day resting up back at the cafe and we watched the documentary [Sherpa](https://en.wikipedia.org/wiki/Sherpa_(film)). The down time felt well earned as tomorrow would be a big day.
 
 ![](attachments/20230330_140148.jpg)
 > Caffe 4410
@@ -131,83 +136,87 @@ Afterwards out sherpas gave us demo for a life-saving contraption known as a por
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8806491990" data-style="standard"></div>
 
   
-## Day 8 - Tengboche
+## Day 8 - Loboche (4900m)
 
-We headed to Tengboche today. Snow had fallen again but the team was noticeably quieter in the morning. Altitude sickness had hit most of us including myself. The recommendation to knock back a couple of paracetamols for the headache was no longer helping out much. Nonetheless we booted up and begun an icy trek!
+We headed to Loboche today. Snow had fallen again but the team was noticeably quieter in the morning. Altitude sickness had hit most of us including myself. The recommendation to knock back a couple of paracetamols for the headache was no longer helping out much. Nonetheless we booted up and begun an icy trek!
 
-The route would take us through a cemetry of climbers and sherpas whos fate had been taken from climbing mount everest.  We had a moment of reflection and it for a moment i felt quite homesick and questioned why I was here. 
+The trek was a combination of beaming hot sun to bitterly cold cross winds, but one thing that was a constant was the stunning white mountains surrounding us. 
 
-Life is fragile but at the same time we only have one, so you _have_ to take the big opportunities like this when they come.
+We reached our teahouse before dusk. It was noticablably busier than all the other places we stayed at. It made sense as there was less accomodation options to stay the higher you get. At this altitude, this teahouse would be the penultimate location for many before reaching base camp. 
 
-![](GOPR0496.jpg)
-> Views from the hikers cemetary
-
-We finally reached our tea house as the clouds loomed.  We settled in for another evening huddle around a yak manure fire. It was bitterlly cold at this location. I had mixed feelings suddenly. I wanted savour every moment of this trip, but at the same time I couldnt wait to reach base camp as soon as possibe so we could get back to comfortable elevation again. I decided to take an early night at this location becasue of a persistant headache was making me feel sick, not to dissimimalr form the feeling of being car sick
+The altitude sickness for me had been lingering throughout the whole day, grating away at my energy levels. So tried to get an early night and make my self comfortable. however at this this altitude taking your clothes off to wipe down is _very_ difficult.  You just want to stay in your clothes and not move. At this stage I had mastered the dance of stripping down and jumping into my sleeping bag as quick as possible.  Tomorrow was the day.
 
 
+![](20230401_095655.jpg)
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8811609867" data-style="standard"></div>
+> The view enroute to Tengbouche
 
+## Day 9 - Final push to Everest Basecamp (5300m)
 
-## Day 9 - 
+I slept horribly. The small part of my face that was exposed in my sleeping bag was so dry and chapped. My headache was somehow even worse and felt like I had hit my head against a wall
 
-Today was the day! We were going to reach Everest basecamp today. We had to reach our  teahouse Gorak Shek by lunch to have small break and do one last push which would take us to Everest basecamp and then hike _back_ to Gorak Shep.
+Somehow, we were going hike to Everest basecamp today.
 
-Though it wasnt without drama. Before starting the day  one team member   took a tough decision to drop out due to  overwheling altitude sickness....
+Over breakfast, it turned it was not just me who had night sleep one  member of the team had struggled to catch their breath over nighht  and took a tough decision to drop out and make their way down to help recover. we were all devasted.
 
-Half to Gorak Shep we also lost another member, we had to call for an emergancy horse to bring her down the mountain.  It was just 4 out of the orignal team members left now. 
+We had to push on though. The plan was to reach another tea house at Gorak Shep by noon, have small break then do the final push to Everest basecamp. Half way enroute to Gorak Shep another team member had to pull out, the altitude sickness was too overwhelming.  It was just 4 out of the orignal team  6  team members left now. 
 
-As planned, we reach Gorak Shep by lunch, exhausted. I was not feeling good at this stage either, I thought I may need to drop out next too. But somehow, I gritted my teeth and pushed through the final leg, getting slightly delirous at this stage. 
+As planned, we reached Gorak Shep by noon, exhausted. I was not feeling good at this stage either, I thought I may need to drop out next too. But somehow, I gritted my teeth and pushed through the final leg, getting slightly delirous at this stage. 
 
-We made it to Everest basecamp!
+Step by step, we eventually made it. I was standing at Everest basecamp!
 
-It was slighlty surreal.
+It felt surreal. Different emotions came flooding through. Relief , excitement and happiness I was also sad that our other team members were not here.
 
-Our Sherpa gave us a kit kat to celebrate.
+![](GX010518_1680688090641.jpg)
 
-We took pictures by the famous basecamp rock.
+> The team at the famous Everest basecamp rock
 
-And suddenly as we arrived, it was time to head back to Gorak Shek.
+![](20230402_155054.jpg)
+> Proud. Mount Everest poking out in between.
 
-We had accomplished what we set out to do. I couldn't quite believe it and I'm not sure if it has truly quite sunk in.
+And as quickly suddenly as we arrived, it was time to head back to Gorak Shek.
+
+We had accomplished what we set out to do. I couldn't quite believe it and I'm _still_ not sure if it has truly quite sunk in.
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8852888942" data-style="standard"></div>
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8819257607" data-style="standard"></div>
 
-## Day 10 -
+## Day 10 - Descend to Pangboche (3900m)
 
-We were all tired, but we were ready to leave.  It was a surpringly long hike, but at least it was mostly downhill. It was probably the longest hike we did all trip. a whoping 18km hike down all the way past Dingboche and back in one of the teahouses we stayed in at Pangbouche. 
+Naturally we were all tired from yesterday, but we ready to leave.  However, we unexpectedly  did our longest hike today but it was mostly downhill. We would descend a whoping 18km  taking past Loboche and Dingboche.
 
-Here we reunited with the other two members that didn't make it to EBC. Even though it  was only 1 day. It felt like a massive reunion. The band was back together and it was an amazing feeling.
+
+![](20230403_134426.jpg)
+>Taking a break during the descent
+
+We reunited with the other two members that didn't make it to EBC at a tea house at Pangbouche. Even though  were only apart for one day It felt like a big reunion. It was like the band was back together and it was an amazing feeling. Descending down over 1000m made all of us feel _much_ better from the altitude sickness. Spirits were high over dinner as we shared our stories of what happened. 
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8824344017" data-style="standard"></div>
 
   
+## Day 11 / 12- Back to Namche (3400m)
 
-## Day 11 -
+it was interesting revisiting sites on the way back down and very meter we descend we felt more rejuventated and stronger.  It would take us two day to reach Namche again and it we were all excited. It felt like we were back at the captial city.
 
-We all felt mostly rejuventated today and ready to descend more, it was interesting revisiting sites on the way back down. We were all still pretty tired, but in high spirits.
-  
+We felt like regulars walking around Namche this time round. The feeling was different, less apprehension of the what was to come. We could properly relax this time round. 
+
+![](GOPR0547.jpg)
+>Looking back at where where we had descended from
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8829287149" data-style="standard"></div>
-
   
-
-## Day 12 -
-
-The descent took us back to Namche and we were all excited. It felt like we were back at the captial city. There was trees and greenary again and our altitude sickness was mostly gone. 
-
-We felt like regulars walking around Namche this time round. The feeling was different, less aprehension of the what was to come. We could properly relax this time round.
-
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8835095144" data-style="standard"></div>
 
   
 
-## Day 13 -
+## Day 13 - Back at Phakding (2600m)
 
-  The penultimate day of the hike took us back to the very teahouse we stayed in and argubaly the best one. Hot showers, _much_ higher quality food and we all celebrated with a beer. Sweet, sweet beer.
+The penultimate day of the hike, we excited Sagarmatha national park and arrived back at the very first teahouse we stayed in and arguably the best one, the Sherpa Guide Lodge. Hot showers, _much_ higher quality food and we all celebrated with a beer. Sweet, sweet beer.
   
+![](20230406_160504.jpg)
+
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8841006070" data-style="standard"></div>
 
@@ -215,17 +224,23 @@ We felt like regulars walking around Namche this time round. The feeling was dif
 
 ## Day 14 -
 
-The last leg of the descent and we were back to were it all began, Lukla. We stayed one night here, enjoyed the local cafes and also PIZZA! In the morning we board yet another rickity plane back to Katmundhu.
+The last leg of the descent and we were back to were it all began, Lukkla. We stayed one night here, enjoyed the local cafes and also PIZZA! 
+
+Over dinner, the sherpas that had guided us throughout the trip gave us a little ceremony to celebrate what we had accomplished over the last 14 days. We had our chance to thank our sherpas and we reflected what amazing trip this had been.
 
 We had done it!  
 
+
+![](20230407_173601.jpg)
+> The team
+
+
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8845817389" data-style="standard"></div>
 
-    
+---
 
 ## The whole route
 
-  
 
 Of course I _had_ to make my own visualisation with all this GPS data. So heres my own interactive map the entire route broken down into the daily legs.
 
@@ -236,4 +251,40 @@ Of course I _had_ to make my own visualisation with all this GPS data. So heres 
 
   
 
+
+
+## Shout Outs
+
+### [NEVERBLAND](https://neverbland.com/blog/b2bc-the-summit)
+The company that I worked for at the time. They donated 2500 pounds to wards the charity Phase World Wide and let me take the time off to go on this trip.
+
+### [PHASE Worldwide](https://phaseworldwide.org/about-us/our-team/)
+
+The charity that organised this trip. They focus on improving the lives in Nepal through our health, education and livelihoods work.
+
+We had the oppurtuniyt to visit their office in Kahtmundu before we started the expedition.
+
+![](GOPR0183.jpg)
+### The Team
+
+![](20230405_160155.jpg)
+
+- Nick Cragg (far left)
+- Dawn Limbu (second left)
+- Bethan Hall (third left)
+- Sam Robinson (third right)
+- Me (seond right)
+- Ryan (Ryan Gledhill)
+
+### Our Sherpas
+
+![](GOPR0564.jpg)
+Passang
+
+
+![](20230404_143210.jpg)
+Mingma
+
+
+---
 <script defer src="https://strava-embeds.com/embed.js"></script>
