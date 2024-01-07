@@ -70,6 +70,7 @@ In the second half of the day, we had a short trek to a tiny settlement and had 
 > Me and the team enjoying some beverages in the Namche town square.
 
 ---
+
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8783863155" data-style="standard"></div>
 
 ## Day 4 - Namche Acclimatisation part 2
@@ -90,6 +91,7 @@ For our second acclimatisation day, we explored the areas in the vicinity of Nam
 > Prayer wheels greeted us at every location
 
 ---
+
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8784362504" data-style="standard"></div>
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8789974770" data-style="standard"></div>
@@ -104,6 +106,7 @@ It was time to move on from Namche. It would be a fairly long hike to our next l
 > Outside the Tengboche Gompa monastery (we were not allowed to take photos inside)
 
 ---
+
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8800868630" data-style="standard"></div>
 
 ## Day 6 - Dingbouche (4400m)
@@ -124,6 +127,7 @@ When we reached Tengbouche, we were surprised to find an endearing little cafe c
 > "Huddled around a yak shit fire" - *Nick Cragg*
 
 ---
+
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8801937278" data-style="standard"></div>
 
 ## Day 7 - Dingbouche Acclimatisation
@@ -141,6 +145,7 @@ Afterwards, our sherpas gave us a demo of a life-saving contraption known as a p
 > The best cafe you find at this altitude. Caffe 4410.
 
 ---
+
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8806491990" data-style="standard"></div>
 
  
@@ -159,6 +164,7 @@ I tried to get some sleep knowing tomorrow was the day.
 ![](attachments/20230401_095655.jpg)
 
 ---
+
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8811609867" data-style="standard"></div>
 > The view enroute to Tengbouche.
 
@@ -190,6 +196,7 @@ And as quickly as we arrived, it was time to head back to Gorak Shek.
 We had accomplished what we set out to do. I couldn't quite believe it and I'm _still_ not sure if it has truly quite sunk in.
 
 ---
+
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8852888942" data-style="standard"></div>
 
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8819257607" data-style="standard"></div>
@@ -207,6 +214,7 @@ Today we unexpectedly did our longest hike but it was mostly downhill. We would 
 We reunited with our team members who didn't make it to the Everest base camp at a tea house at Pangbouche. Even though were only apart for one day It felt like a big reunion. It was like the band was back together and it was an amazing feeling. Descending over 1000m made all of us feel _so much_ better from the altitude sickness. Spirits were high over dinner as we shared our stories of what happened. 
 
 ---
+
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8824344017" data-style="standard"></div>
 
   
@@ -220,6 +228,7 @@ We felt like regulars walking around Namche this time around. The feeling was di
 >Looking back at where we had descended from.
 
 ---
+
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8829287149" data-style="standard"></div>
   
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8835095144" data-style="standard"></div>
@@ -246,11 +255,11 @@ We had done it!
 > Celebrations at our last tea house.
 
 ---
+
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8845817389" data-style="standard"></div>
 
 
 ## The whole route mapped
-
 
 Of course, I _had_ to make my own visualisation with all this GPS data I had collected. So here's my own interactive map of the entire route broken down into the daily legs.
 
