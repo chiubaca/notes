@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "2cc6e1c09b551f97",
+        "id": "775ad1787c0fbf43",
         "type": "tabs",
         "children": [
           {
-            "id": "9886948948d7f93b",
+            "id": "b0ab52f5d200250a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2024-01-07.md",
+                "file": "fleeting-notes/2024-01-08.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "ideas",
+                "query": "vector tiles",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,18 +66,10 @@
             }
           },
           {
-            "id": "04b78d0fb417358c",
+            "id": "14a9314022567571",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
-            }
-          },
-          {
-            "id": "8820b9cb39ee95ac",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
               "state": {}
             }
           }
@@ -85,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 303.5
+    "width": 260.5
   },
   "right": {
     "id": "7d79c914da9cc99e",
@@ -101,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/2024-01-07.md",
+                "file": "fleeting-notes/2024-01-08.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -113,7 +105,7 @@
             }
           },
           {
-            "id": "3596050b6936a68d",
+            "id": "d23b410d5698b328",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -136,50 +128,47 @@
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "command-palette:Open command palette": false,
-      "markdown-importer:Open format converter": false,
-      "obsidian42-brat:BRAT": false,
-      "obsidian-grammarly-plugin:Enable Grammarly": false
+      "markdown-importer:Open format converter": false
     }
   },
-  "active": "9886948948d7f93b",
+  "active": "b0ab52f5d200250a",
   "lastOpenFiles": [
-    "permanent-notes/business-ideas.md",
-    "literature-notes/total-typescript-notes.md",
+    "fleeting-notes/2024-01-07.md",
+    "fleeting-notes/2024-01-08.md",
+    "fleeting-notes/2024-01-03.md",
+    "permanent-notes/holograpic-cards-pt-1.md",
+    "attachments/VideoCapture_20230412-205115.jpg",
+    "attachments/README.md",
+    "attachments/GX010518_1680688090641.jpg",
+    "attachments/GOPR0564.jpg",
+    "attachments/GOPR0547.jpg",
+    "attachments/GOPR0496.jpg",
+    "attachments/GOPR0458.jpg",
+    "attachments/GOPR0448.jpg",
+    "attachments/GOPR0424_1680172721833.jpg",
+    "attachments/GOPR0333.jpg",
+    "attachments/GOPR0254.jpg",
+    "fleeting-notes/2024-01-05.md",
+    "fleeting-notes/2024-01-04.md",
+    "permanent-notes/anatomy-of-a-threejs-scene.md",
+    "permanent-notes/all-things-vector-tiles.md",
+    "permanent-notes/_template.md",
     "literature-notes/threejs-journey.md",
     "literature-notes/paypal-sdk.md",
     "literature-notes/does-edge-compute-replace-lambda-functions.md",
     "literature-notes/docker-basics.md",
-    "permanent-notes/zettelkasten.md",
-    "permanent-notes/using-javascript-to-write-postgresql-functions.md",
-    "permanent-notes/typescript-and-netlify-functions.md",
-    "permanent-notes/swapping-react-for-preact-in-nextjs.md",
-    "permanent-notes/svelte-basics.md",
-    "permanent-notes/shiba-every-hour-a-twitter-bot-powered-by-github-actions.md",
-    "permanent-notes/remix-basics.md",
-    "permanent-notes/quick-look-at-react-use-hook.md",
-    "permanent-notes/principles-for-using-ai-to-write-code.md",
-    "permanent-notes/pragmatism-over-perfectionism.md",
-    "permanent-notes/nx-for-noobs.md",
-    "permanent-notes/must-have-mac-apps.md",
-    "permanent-notes/managing-your-self-learning.md",
-    "permanent-notes/making-eco-friendly-websites.md",
+    "fleeting-notes/2020-09-10.md",
+    "fleeting-notes/20231215.md",
     "permanent-notes/learning.md",
     "permanent-notes/how-use-npm-modules-client-side-in-astrojs.md",
-    "permanent-notes/holograpic-cards-pt-1.md",
     "permanent-notes/everest-basecamp.md",
-    "permanent-notes/docker-commands-cheatsheet.md",
     "permanent-notes/controlling-my-anxiety-insomnia.md",
-    "attachments/20230401_095655.jpg",
-    "attachments/GOPR0183.jpg",
-    "attachments/20230404_143210.jpg",
-    "attachments/20230407_173601.jpg",
-    "attachments/20230406_160504.jpg",
-    "attachments/20230405_160155.jpg",
-    "attachments/20230403_134426.jpg",
-    "attachments/20230402_155054.jpg",
-    "attachments/GOPR0564.jpg",
-    "attachments/GOPR0547.jpg",
-    "index-notes",
+    "permanent-notes/business-ideas.md",
+    "permanent-notes/building-my-new-blog-nuxt-vs-gridsome.md",
+    "permanent-notes/build-a-serverless-crud-app-using-vue-js-netlify-and-faunadb.md",
+    "fleeting-notes/2023-10-09.md",
+    "fleeting-notes/2023-10-08.md",
+    "fleeting-notes/2023-10-03.md",
     "attachments"
   ]
 }
