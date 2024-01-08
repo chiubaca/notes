@@ -1,5 +1,5 @@
 ---
-title: threejs-journey
+title: Notes from threejs-journey.xyz
 publish_date: 2021-09-28
 last_updated: 2021-09-30
 description: Notes from threejs-journey.xyz
@@ -8,8 +8,6 @@ tags:
   - 3d
   - webgl
 ---
-
-# Notes from threejs-journey.xyz
 
 ## Basics
 

@@ -1,5 +1,5 @@
 ---
-title: does-edge-compute-replace-lambda-functions
+title: Does edge compute replace lambda functions?
 publish_date: 2022-06-04
 last_updated: 2022-06-04
 description: Does edge compute replace lambda functions?

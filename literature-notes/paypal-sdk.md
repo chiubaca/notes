@@ -1,5 +1,5 @@
 ---
-title: paypal-sdk
+title: Notes about the PayPal JS SDK
 publish_date: 2022-04-23
 last_updated: 2022-04-23
 description: Notes on using the PayPal SDK

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2024-01-08.md",
+                "file": "literature-notes/total-typescript-notes.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/2024-01-08.md",
+                "file": "literature-notes/total-typescript-notes.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -133,8 +133,12 @@
   },
   "active": "b0ab52f5d200250a",
   "lastOpenFiles": [
-    "fleeting-notes/2024-01-07.md",
+    "literature-notes/threejs-journey.md",
+    "literature-notes/paypal-sdk.md",
+    "literature-notes/does-edge-compute-replace-lambda-functions.md",
+    "literature-notes/docker-basics.md",
     "fleeting-notes/2024-01-08.md",
+    "fleeting-notes/2024-01-07.md",
     "fleeting-notes/2024-01-03.md",
     "permanent-notes/holograpic-cards-pt-1.md",
     "attachments/VideoCapture_20230412-205115.jpg",
@@ -153,10 +157,6 @@
     "permanent-notes/anatomy-of-a-threejs-scene.md",
     "permanent-notes/all-things-vector-tiles.md",
     "permanent-notes/_template.md",
-    "literature-notes/threejs-journey.md",
-    "literature-notes/paypal-sdk.md",
-    "literature-notes/does-edge-compute-replace-lambda-functions.md",
-    "literature-notes/docker-basics.md",
     "fleeting-notes/2020-09-10.md",
     "fleeting-notes/20231215.md",
     "permanent-notes/learning.md",
