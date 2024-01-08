@@ -6,6 +6,7 @@ description: Compilation of resources that I have read/watched/worked through th
 status: draft
 tags:
   - productivity
+  - second-brain
 ---
 
 Compilation of resources that I have read/watched/worked through that have helped expand my knowledge.
