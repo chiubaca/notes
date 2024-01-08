@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "literature-notes/total-typescript-notes.md",
+                "file": "fleeting-notes/2024-01-08.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "literature-notes/total-typescript-notes.md",
+                "file": "fleeting-notes/2024-01-08.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -133,6 +133,7 @@
   },
   "active": "b0ab52f5d200250a",
   "lastOpenFiles": [
+    "literature-notes/total-typescript-notes.md",
     "literature-notes/threejs-journey.md",
     "literature-notes/paypal-sdk.md",
     "literature-notes/does-edge-compute-replace-lambda-functions.md",
@@ -168,7 +169,6 @@
     "permanent-notes/build-a-serverless-crud-app-using-vue-js-netlify-and-faunadb.md",
     "fleeting-notes/2023-10-09.md",
     "fleeting-notes/2023-10-08.md",
-    "fleeting-notes/2023-10-03.md",
     "attachments"
   ]
 }
