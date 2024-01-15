@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "2cc6e1c09b551f97",
+        "id": "8efb8402c5bf3ceb",
         "type": "tabs",
         "children": [
           {
-            "id": "9886948948d7f93b",
+            "id": "91802d43e635064d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2024-01-15.md",
+                "file": "permanent-notes/pragmatism-over-perfectionism.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "ideas",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/2024-01-15.md",
+                "file": "permanent-notes/pragmatism-over-perfectionism.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -139,10 +139,27 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "9886948948d7f93b",
+  "active": "91802d43e635064d",
   "lastOpenFiles": [
-    "permanent-notes/typescript-and-netlify-functions.md",
+    "permanent-notes/quick-look-at-react-use-hook.md",
+    "permanent-notes/principles-for-using-ai-to-write-code.md",
+    "fleeting-notes/2023-10-20.md",
+    "permanent-notes/pragmatism-over-perfectionism.md",
+    "permanent-notes/my-over-engineered-blog.md",
+    "Pasted image 20240115192642.jpg",
+    "fleeting-notes/2021-03-03.md",
+    "fleeting-notes/2023-09-27.md",
+    "permanent-notes/_template.md",
+    "permanent-notes/zettelkasten.md",
+    "permanent-notes/all-things-vector-tiles.md",
+    "permanent-notes/making-eco-friendly-websites.md",
+    "permanent-notes/holograpic-cards-pt-1.md",
+    "permanent-notes/docker-commands-cheatsheet.md",
+    "permanent-notes/building-my-new-blog-nuxt-vs-gridsome.md",
+    "permanent-notes/auto-js-sdk-for-any-rest-api.md",
+    "permanent-notes/anatomy-of-a-threejs-scene.md",
     "fleeting-notes/2024-01-15.md",
+    "permanent-notes/typescript-and-netlify-functions.md",
     "fleeting-notes/2020-09-10.md",
     "permanent-notes/how-use-npm-modules-client-side-in-astrojs.md",
     "fleeting-notes/2024-01-14.md",
@@ -151,22 +168,6 @@
     "fleeting-notes/2024-01-08.md",
     "fleeting-notes/2024-01-11.md",
     "fleeting-notes/2024-01-12.md",
-    "fleeting-notes/2024-01-13.md",
-    "fleeting-notes/2024-01-09.md",
-    "fleeting-notes/2024-01-03.md",
-    "permanent-notes/business-ideas.md",
-    "literature-notes/total-typescript-notes.md",
-    "literature-notes/threejs-journey.md",
-    "literature-notes/paypal-sdk.md",
-    "literature-notes/does-edge-compute-replace-lambda-functions.md",
-    "literature-notes/docker-basics.md",
-    "permanent-notes/zettelkasten.md",
-    "permanent-notes/using-javascript-to-write-postgresql-functions.md",
-    "permanent-notes/swapping-react-for-preact-in-nextjs.md",
-    "permanent-notes/svelte-basics.md",
-    "permanent-notes/shiba-every-hour-a-twitter-bot-powered-by-github-actions.md",
-    "permanent-notes/remix-basics.md",
-    "permanent-notes/quick-look-at-react-use-hook.md",
     "attachments/20230401_095655.jpg",
     "attachments/GOPR0183.jpg",
     "attachments/20230404_143210.jpg",
@@ -176,7 +177,6 @@
     "attachments/20230403_134426.jpg",
     "attachments/20230402_155054.jpg",
     "attachments/GOPR0564.jpg",
-    "attachments/GOPR0547.jpg",
     "index-notes",
     "attachments"
   ]
