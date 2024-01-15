@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2024-01-14.md",
+                "file": "permanent-notes/how-use-npm-modules-client-side-in-astrojs.md",
                 "mode": "source",
                 "source": false
               }
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/2024-01-14.md",
+                "file": "permanent-notes/how-use-npm-modules-client-side-in-astrojs.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -141,10 +141,11 @@
   },
   "active": "9886948948d7f93b",
   "lastOpenFiles": [
+    "fleeting-notes/2024-01-14.md",
+    "fleeting-notes/2024-01-15.md",
     "fleeting-notes/2024-01-10.md",
     "fleeting-notes/2024-01-07.md",
     "fleeting-notes/2024-01-08.md",
-    "fleeting-notes/2024-01-14.md",
     "fleeting-notes/2024-01-11.md",
     "fleeting-notes/2024-01-12.md",
     "fleeting-notes/2024-01-13.md",
@@ -166,7 +167,6 @@
     "permanent-notes/quick-look-at-react-use-hook.md",
     "permanent-notes/principles-for-using-ai-to-write-code.md",
     "permanent-notes/pragmatism-over-perfectionism.md",
-    "permanent-notes/nx-for-noobs.md",
     "attachments/20230401_095655.jpg",
     "attachments/GOPR0183.jpg",
     "attachments/20230404_143210.jpg",
