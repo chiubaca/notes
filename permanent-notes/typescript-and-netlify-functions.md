@@ -1,7 +1,7 @@
 ---
 title: TypeScript and Netlify Functions
-publish_date: 2020-18-07
-last_updated: 2021-10-01
+publish_date: 2021-10-01
+last_updated: 2024-01-15
 description: How get betting typings with in netlify functions
 status: live
 tags:
@@ -9,6 +9,7 @@ tags:
   - serverless
   - netlify
 ---
+**This blog out of date. Netlify has first class support for now TypeScript. Make sure to read  [Announcing native TypeScript support for Netlify Functions](https://www.netlify.com/blog/2021/04/19/announcing-native-typescript-support-for-netlify-functions/)**
 
 Did you know that Netlify Functions are just using AWS Lambdas behind the scenes?
 

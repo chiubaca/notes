@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/how-use-npm-modules-client-side-in-astrojs.md",
+                "file": "fleeting-notes/2024-01-15.md",
                 "mode": "source",
                 "source": false
               }
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "permanent-notes/how-use-npm-modules-client-side-in-astrojs.md",
+                "file": "fleeting-notes/2024-01-15.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -141,8 +141,11 @@
   },
   "active": "9886948948d7f93b",
   "lastOpenFiles": [
-    "fleeting-notes/2024-01-14.md",
+    "permanent-notes/typescript-and-netlify-functions.md",
     "fleeting-notes/2024-01-15.md",
+    "fleeting-notes/2020-09-10.md",
+    "permanent-notes/how-use-npm-modules-client-side-in-astrojs.md",
+    "fleeting-notes/2024-01-14.md",
     "fleeting-notes/2024-01-10.md",
     "fleeting-notes/2024-01-07.md",
     "fleeting-notes/2024-01-08.md",
@@ -159,14 +162,11 @@
     "literature-notes/docker-basics.md",
     "permanent-notes/zettelkasten.md",
     "permanent-notes/using-javascript-to-write-postgresql-functions.md",
-    "permanent-notes/typescript-and-netlify-functions.md",
     "permanent-notes/swapping-react-for-preact-in-nextjs.md",
     "permanent-notes/svelte-basics.md",
     "permanent-notes/shiba-every-hour-a-twitter-bot-powered-by-github-actions.md",
     "permanent-notes/remix-basics.md",
     "permanent-notes/quick-look-at-react-use-hook.md",
-    "permanent-notes/principles-for-using-ai-to-write-code.md",
-    "permanent-notes/pragmatism-over-perfectionism.md",
     "attachments/20230401_095655.jpg",
     "attachments/GOPR0183.jpg",
     "attachments/20230404_143210.jpg",
