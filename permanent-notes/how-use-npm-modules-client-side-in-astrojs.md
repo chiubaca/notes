@@ -9,7 +9,7 @@ tags:
   - astro
 ---
 
-> This blog is out of date. Check out the Astro docs: [Scripts and Event Handling | Docs (astro.build)](https://docs.astro.build/en/guides/client-side-scripts/). It now works exactly how you would expect. 🥳
+ **This blog is out of date. Check out the Astro docs: [Scripts and Event Handling | Docs (astro.build)](https://docs.astro.build/en/guides/client-side-scripts/). It now works exactly how you would expect. 🥳**
 
 I've been playing with Astro some more and finally got my head around how to use npm modules client side in a `.astro` file. It's not that obvious...
 
