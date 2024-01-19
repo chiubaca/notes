@@ -24,7 +24,7 @@ I love it.
 It spent _way_ more time than I'm willing to admit putting blogging setup together. But it's always a fun learning experience. If you're developer you should also over-engineer your blog. More on that later.
 
 
-![](Pasted%20image%2020240115192642.jpg)
+![](attachments/Pasted%20image%2020240115192642.jpg)
 
 I wont take a deep dive into how everything works, you can do that yourself by looking at the [source code](https://github.com/chiubaca/chiubaca-monorepo) . What I'll do is briefly explain all the components.
 
