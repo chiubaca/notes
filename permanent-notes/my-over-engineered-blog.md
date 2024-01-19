@@ -3,7 +3,7 @@ title: My Over Engineered Blog
 publish_date: 2024-01-15
 last_updated: 2024-01-15
 description: Build overegineered stuff for fun
-status: draft %% or live %%
+status: draft
 tags:
   - "#astro"
   - programming
