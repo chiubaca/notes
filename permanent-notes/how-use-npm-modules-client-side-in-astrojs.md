@@ -11,7 +11,7 @@ tags:
 
  **This blog is out of date.**
  
-**Check out the Astro docs: [Scripts and Event Handling | Docs (astro.build)](https://docs.astro.build/en/guides/client-side-scripts/). It now works exactly how you would expect. 🥳**
+**Check out [Scripts and Event Handling | Docs (astro.build)](https://docs.astro.build/en/guides/client-side-scripts/). Importing scripts in Astro now works exactly how you would expect. 🥳**
 
 ---
 
