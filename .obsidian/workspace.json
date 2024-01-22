@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "8efb8402c5bf3ceb",
+        "id": "0373dbac653e4281",
         "type": "tabs",
         "children": [
           {
-            "id": "91802d43e635064d",
+            "id": "d30667c5e0e52150",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/how-use-npm-modules-client-side-in-astrojs.md",
+                "file": "fleeting-notes/2024-01-22.md",
                 "mode": "source",
                 "source": false
               }
@@ -66,18 +66,10 @@
             }
           },
           {
-            "id": "04b78d0fb417358c",
+            "id": "14a9314022567571",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
-            }
-          },
-          {
-            "id": "8820b9cb39ee95ac",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
               "state": {}
             }
           }
@@ -85,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 303.5
+    "width": 260.5
   },
   "right": {
     "id": "7d79c914da9cc99e",
@@ -101,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "permanent-notes/how-use-npm-modules-client-side-in-astrojs.md",
+                "file": "fleeting-notes/2024-01-22.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -113,7 +105,7 @@
             }
           },
           {
-            "id": "3596050b6936a68d",
+            "id": "d23b410d5698b328",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -139,45 +131,44 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "91802d43e635064d",
+  "active": "d30667c5e0e52150",
   "lastOpenFiles": [
-    "permanent-notes/my-over-engineered-blog.md",
-    "permanent-notes/typescript-and-netlify-functions.md",
     "fleeting-notes/2024-01-19.md",
     "fleeting-notes/2024-01-18.md",
+    "fleeting-notes/2024-01-15.md",
+    "fleeting-notes/2024-01-22.md",
+    "fleeting-notes/2024-01-21.md",
+    "fleeting-notes/2024-01-20.md",
+    "attachments/Pasted image 20240115192642.jpg",
     "fleeting-notes/2024-01-17.md",
     "fleeting-notes/2024-01-16.md",
-    "permanent-notes/pragmatism-over-perfectionism.md",
-    "permanent-notes/quick-look-at-react-use-hook.md",
-    "permanent-notes/principles-for-using-ai-to-write-code.md",
-    "fleeting-notes/2023-10-20.md",
-    "attachments/Pasted image 20240115192642.jpg",
-    "fleeting-notes/2021-03-03.md",
-    "fleeting-notes/2023-09-27.md",
-    "permanent-notes/_template.md",
+    "permanent-notes/my-over-engineered-blog.md",
     "permanent-notes/zettelkasten.md",
-    "permanent-notes/all-things-vector-tiles.md",
-    "permanent-notes/making-eco-friendly-websites.md",
-    "permanent-notes/holograpic-cards-pt-1.md",
-    "permanent-notes/docker-commands-cheatsheet.md",
-    "permanent-notes/building-my-new-blog-nuxt-vs-gridsome.md",
-    "permanent-notes/auto-js-sdk-for-any-rest-api.md",
-    "permanent-notes/anatomy-of-a-threejs-scene.md",
-    "fleeting-notes/2024-01-15.md",
-    "fleeting-notes/2020-09-10.md",
-    "permanent-notes/how-use-npm-modules-client-side-in-astrojs.md",
     "fleeting-notes/2024-01-14.md",
+    "Pasted image 20240115192642.jpg",
+    "fleeting-notes/2024-01-11.md",
     "fleeting-notes/2024-01-10.md",
-    "attachments/20230401_095655.jpg",
-    "attachments/GOPR0183.jpg",
-    "attachments/20230404_143210.jpg",
-    "attachments/20230407_173601.jpg",
-    "attachments/20230406_160504.jpg",
-    "attachments/20230405_160155.jpg",
-    "attachments/20230403_134426.jpg",
-    "attachments/20230402_155054.jpg",
+    "README.md",
+    "fleeting-notes/2024-01-09.md",
+    "permanent-notes/_template.md",
+    "fleeting-notes/2020-09-28.md",
+    "fleeting-notes/2021-02-22.md",
+    "permanent-notes/controlling-my-anxiety-insomnia.md",
+    "fleeting-notes/2021-09-22.md",
+    "fleeting-notes/2021-01-28.md",
+    "fleeting-notes/2021-09-23.md",
+    "attachments/README.md",
+    "fleeting-notes/2021-05-08.md",
+    "permanent-notes/learning.md",
+    "fleeting-notes/2024-01-08.md",
+    "attachments/VideoCapture_20230412-205115.jpg",
+    "attachments/GX010518_1680688090641.jpg",
     "attachments/GOPR0564.jpg",
-    "index-notes",
+    "attachments/GOPR0547.jpg",
+    "attachments/GOPR0496.jpg",
+    "attachments/GOPR0458.jpg",
+    "attachments/GOPR0448.jpg",
+    "attachments/GOPR0424_1680172721833.jpg",
     "attachments"
   ]
 }
