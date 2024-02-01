@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2024-02-01.md",
+                "file": "permanent-notes/business-ideas.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:psor",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -81,8 +81,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -102,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/2024-02-01.md",
+                "file": "permanent-notes/business-ideas.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -140,10 +139,10 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "a115ee82096eefc4",
+  "active": "91802d43e635064d",
   "lastOpenFiles": [
-    "fleeting-notes/2023-12-29.md",
     "fleeting-notes/2024-02-01.md",
+    "fleeting-notes/2023-12-29.md",
     "fleeting-notes/2023-12-30.md",
     "fleeting-notes/2023-12-31.md",
     "fleeting-notes/2024-01-02.md",
