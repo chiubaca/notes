@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2024-01-31.md",
+                "file": "fleeting-notes/2024-02-01.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:psor",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -81,7 +81,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -101,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/2024-01-31.md",
+                "file": "fleeting-notes/2024-02-01.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -139,35 +140,35 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "cdd64a28cc6fe199",
+  "active": "a115ee82096eefc4",
   "lastOpenFiles": [
+    "fleeting-notes/2023-12-29.md",
+    "fleeting-notes/2024-02-01.md",
+    "fleeting-notes/2023-12-30.md",
+    "fleeting-notes/2023-12-31.md",
+    "fleeting-notes/2024-01-02.md",
+    "fleeting-notes/2024-01-03.md",
+    "fleeting-notes/2024-01-07.md",
+    "fleeting-notes/2024-01-10.md",
+    "fleeting-notes/2024-01-14.md",
+    "fleeting-notes/2024-01-15.md",
+    "fleeting-notes/2024-01-18.md",
+    "fleeting-notes/2024-01-19.md",
+    "fleeting-notes/2024-01-22.md",
+    "fleeting-notes/2024-01-28.md",
+    "fleeting-notes/2024-01-29.md",
     "fleeting-notes/2024-01-30.md",
     "fleeting-notes/2024-01-31.md",
     "fleeting-notes/2022-04-21.md",
-    "fleeting-notes/2024-01-29.md",
-    "fleeting-notes/2024-01-28.md",
-    "fleeting-notes/2024-01-19.md",
     "fleeting-notes/2024-01-24.md",
     "fleeting-notes/2024-01-23.md",
-    "fleeting-notes/2024-01-22.md",
     "fleeting-notes/2024-01-21.md",
     "fleeting-notes/2024-01-20.md",
     "permanent-notes/how-use-npm-modules-client-side-in-astrojs.md",
     "permanent-notes/my-over-engineered-blog.md",
     "permanent-notes/typescript-and-netlify-functions.md",
-    "fleeting-notes/2024-01-18.md",
     "fleeting-notes/2024-01-17.md",
-    "fleeting-notes/2024-01-16.md",
-    "permanent-notes/pragmatism-over-perfectionism.md",
-    "permanent-notes/quick-look-at-react-use-hook.md",
-    "permanent-notes/principles-for-using-ai-to-write-code.md",
-    "fleeting-notes/2023-10-20.md",
     "attachments/Pasted image 20240115192642.jpg",
-    "fleeting-notes/2021-03-03.md",
-    "fleeting-notes/2023-09-27.md",
-    "permanent-notes/_template.md",
-    "permanent-notes/zettelkasten.md",
-    "permanent-notes/all-things-vector-tiles.md",
     "attachments/20230401_095655.jpg",
     "attachments/GOPR0183.jpg",
     "attachments/20230404_143210.jpg",
