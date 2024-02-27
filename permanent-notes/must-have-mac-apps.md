@@ -8,7 +8,8 @@ tags:
   - handy
 ---
 
-https://pilotmoon.com/scrollreverser/
-https://github.com/MonitorControl/MonitorControl
-https://rectangleapp.com/
-https://github.com/kyleneideck/BackgroundMusic
+
+- https://github.com/MonitorControl/MonitorControl
+- https://rectangleapp.com/
+- https://github.com/kyleneideck/BackgroundMusic
+- https://pilotmoon.com/scrollreverser/ (no longer need, disable natural scrolling on mouse settings)
