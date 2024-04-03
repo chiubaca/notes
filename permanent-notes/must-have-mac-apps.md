@@ -13,3 +13,4 @@ tags:
 - https://rectangleapp.com/
 - https://github.com/kyleneideck/BackgroundMusic
 - https://pilotmoon.com/scrollreverser/ (no longer need, disable natural scrolling on mouse settings)
+- https://github.com/quentinlesceller/macmediakeyforwarder
