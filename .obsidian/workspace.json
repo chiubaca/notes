@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2024-05-03.md",
+                "file": "fleeting-notes/2024-05-09.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 303.5
+    "width": 200
   },
   "right": {
     "id": "7d79c914da9cc99e",
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/2024-05-03.md",
+                "file": "fleeting-notes/2024-05-09.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -128,7 +128,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 500
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -140,15 +141,22 @@
   },
   "active": "91802d43e635064d",
   "lastOpenFiles": [
+    "fleeting-notes/2024-05-03.md",
+    "fleeting-notes/2024-05-08.md",
+    "fleeting-notes/2024-05-07.md",
+    "fleeting-notes/2024-05-06.md",
+    "fleeting-notes/2024-05-05.md",
+    "fleeting-notes/2024-05-04.md",
     "fleeting-notes/2024-04-21.md",
+    "permanent-notes/fullstack-cloudflare-nextjs.md",
+    "fleeting-notes/2024-05-09.md",
+    "permanent-notes/everest-basecamp.md",
     "fleeting-notes/2024-05-02.md",
     "fleeting-notes/2024-05-01.md",
     "fleeting-notes/2024-04-30.md",
-    "fleeting-notes/2024-05-03.md",
     "fleeting-notes/2024-02-23.md",
     "fleeting-notes/2024-04-29.md",
     "fleeting-notes/2024-04-28.md",
-    "permanent-notes/Full stack Cloudflare.md",
     "permanent-notes/_template.md",
     "fleeting-notes/2024-04-27.md",
     "fleeting-notes/2024-04-26.md",
@@ -159,13 +167,6 @@
     "fleeting-notes/2024-02-24.md",
     "fleeting-notes/2024-04-20.md",
     "fleeting-notes/2024-04-15.md",
-    "fleeting-notes/2024-04-08.md",
-    "fleeting-notes/2024-04-07.md",
-    "fleeting-notes/2024-04-02.md",
-    "fleeting-notes/2024-03-24.md",
-    "fleeting-notes/2024-03-23.md",
-    "fleeting-notes/2024-03-21.md",
-    "fleeting-notes/2024-03-17.md",
     "attachments/Pasted image 20240115192642.jpg",
     "attachments/20230401_095655.jpg",
     "attachments/GOPR0183.jpg",
