@@ -22,7 +22,7 @@ Code repo:
 https://github.com/chiubaca/fullstack-astro-cloudflare
 
 Demo site:
-
+https://fullstack-astro-cloudflare.pages.dev/
 
 References:
 

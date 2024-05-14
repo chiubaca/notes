@@ -73,7 +73,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/fullstack-cloudflare-nextjs.md",
+                "file": "fleeting-notes/2024-05-14.md",
                 "mode": "source",
                 "source": false
               }
@@ -162,7 +162,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "permanent-notes/fullstack-cloudflare-nextjs.md",
+                "file": "fleeting-notes/2024-05-14.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -201,8 +201,9 @@
   },
   "active": "c04f22b35a6eea61",
   "lastOpenFiles": [
-    "fleeting-notes/2024-05-13.md",
     "permanent-notes/fullstack-cloudflare-nextjs.md",
+    "fleeting-notes/2024-05-14.md",
+    "fleeting-notes/2024-05-13.md",
     "permanent-notes/holograpic-cards-pt-1.md",
     "permanent-notes/how-use-npm-modules-client-side-in-astrojs.md",
     "permanent-notes/making-eco-friendly-websites.md",
@@ -226,7 +227,6 @@
     "fleeting-notes/2024-04-17.md",
     "fleeting-notes/2022-03-26.md",
     "fleeting-notes/2022-03-06.md",
-    "fleeting-notes/2024-02-27.md",
     "Untitled",
     "attachments/Pasted image 20240115192642.jpg",
     "attachments/20230401_095655.jpg",
