@@ -73,7 +73,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2024-05-27.md",
+                "file": "fleeting-notes/2024-05-29.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "printful",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -162,7 +162,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/2024-05-27.md",
+                "file": "fleeting-notes/2024-05-29.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -202,8 +202,11 @@
   },
   "active": "c04f22b35a6eea61",
   "lastOpenFiles": [
-    "fleeting-notes/2024-05-26.md",
+    "permanent-notes/fullstack-cloudflare-astro.md",
+    "fleeting-notes/2024-05-29.md",
     "fleeting-notes/2024-05-27.md",
+    "fleeting-notes/2024-05-28.md",
+    "fleeting-notes/2024-05-26.md",
     "fleeting-notes/2024-05-19.md",
     "fleeting-notes/2024-05-25.md",
     "fleeting-notes/2024-05-24.md",
@@ -223,11 +226,8 @@
     "permanent-notes/making-eco-friendly-websites.md",
     "permanent-notes/must-have-mac-apps.md",
     "permanent-notes/managing-your-self-learning.md",
-    "permanent-notes/fullstack-cloudflare-astro.md",
     "fleeting-notes/2024-04-02.md",
     "fleeting-notes/2024-05-12.md",
-    "fleeting-notes/2024-05-11.md",
-    "fleeting-notes/2024-05-09.md",
     "Untitled",
     "attachments/Pasted image 20240115192642.jpg",
     "attachments/20230401_095655.jpg",

@@ -78,9 +78,16 @@ export default async function Page(){
 
 ```
 
+---
 
+## Images
+- enable public access to your r2 bucket ( maybe work around this with signed urls?)
+- enable transformation on your cloudflare domain name a.k.a zone
+- forward your r2 images url into your transfomration zone via the [transform via url API](https://developers.cloudflare.com/images/transform-images/transform-via-url/)
+- use this url with https://unpic.pics/img/react/ and we have extremlely optimised images on your website
+  
 
-
+---
 
 
 my demos:
