@@ -9,12 +9,6 @@ tags:
   - astro
 ---
 
-
-[Full-stack deployment · Cloudflare Pages docs](https://developers.cloudflare.com/pages/framework-guides/nextjs/deploy-a-nextjs-site/)
-
-[Typesafe Database Queries With Drizzle and Cloudflare D1 (hrishikeshpathak.com)](https://hrishikeshpathak.com/blog/typesafe-database-queries-with-drizzle-and-cloudflare-d1/)
-
-
 Setting up D1 with Drizzle
 
 via CLI:
@@ -85,29 +79,4 @@ export default async function Page(){
 - enable transformation on your cloudflare domain name a.k.a zone
 - forward your r2 images url into your transfomration zone via the [transform via url API](https://developers.cloudflare.com/images/transform-images/transform-via-url/)
 - use this url with https://unpic.pics/img/react/ and we have extremlely optimised images on your website
-  
 
----
-
-
-my demos:
-[fullstack-next-cloudflare.pages.dev](https://fullstack-next-cloudflare.pages.dev/)
-
-[chiubaca/fullstack-next-cloudflare (github.com)](https://github.com/chiubaca/fullstack-next-cloudflare)
-
-
-
-
-Problems 
-
-cant seem instantiate cloudflare with `getRequestContext` in a way that doesnt make it crash with:
-```
-[Error: Functions cannot be passed directly to Client Components unless you explicitly expose it by marking it with "use server". Or maybe you meant to call this function rather than return it.
-```
-
-
-example project here uses a third party lib to bind
-[next-on-cloudflare-example/src/bindings.ts at main · Rei-x/next-on-cloudflare-example (github.com)](https://github.com/Rei-x/next-on-cloudflare-example/blob/main/src/bindings.ts)
-
-Found this document hidden away [next-on-pages/packages/next-on-pages/docs/supported.md at main · cloudflare/next-on-pages (github.com)](https://github.com/cloudflare/next-on-pages/blob/main/packages/next-on-pages/docs/supported.md). 
-There are just too many gotchas to make next.js viable on on cloudlflare for now ... sad.....

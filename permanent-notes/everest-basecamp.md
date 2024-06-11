@@ -270,8 +270,8 @@ We had the opportunity to visit their office in Kathmandu before we started the 
 - Dawn Limbu (second left)
 - Bethan Hall (third left)
 - Sam Robinson (third right)
-- Me (seond right)
-- Ryan (Ryan Gledhill)
+- Me (second right)
+- Ryan Gledhill (far right)
 
 ### Our Sherpas
 
