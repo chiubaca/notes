@@ -78,21 +78,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "f3fbd4093c9fe6d7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "fleeting-notes/2024-06-30.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 6
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -174,7 +162,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/2024-06-30.md",
+                "file": "fleeting-notes/2024-06-15.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -212,10 +200,23 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "f3fbd4093c9fe6d7",
+  "active": "cdd64a28cc6fe199",
   "lastOpenFiles": [
-    "fleeting-notes/2024-06-15.md",
     "fleeting-notes/2024-06-30.md",
+    "fleeting-notes/2024-07-01.md",
+    "fleeting-notes/2024-07-02.md",
+    "fleeting-notes/2024-06-02.md",
+    "fleeting-notes/2024-05-31.md",
+    "fleeting-notes/2024-05-30.md",
+    "fleeting-notes/2024-06-15.md",
+    "fleeting-notes/2024-07-06.md",
+    "fleeting-notes/2024-07-05.md",
+    "fleeting-notes/2024-07-04.md",
+    "fleeting-notes/2024-07-11.md",
+    "fleeting-notes/2024-07-10.md",
+    "fleeting-notes/2024-07-09.md",
+    "fleeting-notes/2024-07-08.md",
+    "fleeting-notes/2024-07-07.md",
     "fleeting-notes/2024-06-08.md",
     "fleeting-notes/2024-06-14.md",
     "fleeting-notes/2024-06-13.md",
@@ -227,19 +228,6 @@
     "permanent-notes/my-over-engineered-blog.md",
     "permanent-notes/_template.md",
     "permanent-notes/delete-fullstack-cloudflare-astro.md",
-    "permanent-notes/delete-fullstack-cloudflare.md",
-    "permanent-notes/holograpic-cards-pt-1.md",
-    "literature-notes/total-typescript-notes.md",
-    "literature-notes/total-typescript-react-notes.md",
-    "literature-notes/threejs-journey.md",
-    "permanent-notes/typescript-and-netlify-functions.md",
-    "fleeting-notes/2024-06-02.md",
-    "fleeting-notes/2024-06-07.md",
-    "fleeting-notes/2024-06-06.md",
-    "fleeting-notes/2024-06-05.md",
-    "fleeting-notes/2024-05-31.md",
-    "fleeting-notes/2024-06-04.md",
-    "fleeting-notes/2024-06-03.md",
     "Untitled",
     "attachments/Pasted image 20240115192642.jpg",
     "attachments/20230401_095655.jpg",
