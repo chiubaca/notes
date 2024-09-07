@@ -1,0 +1,13 @@
+{
+	"nodes":[
+		{"id":"db75f12622235e98","x":-540,"y":-80,"width":250,"height":60,"type":"text","text":"Game"},
+		{"id":"8d44249e5216ebc8","x":500,"y":-603,"width":280,"height":63,"type":"text","text":"[detect facial expressions](https://justadudewhohacks.github.io/face-api.js/face_expression_recognition)"},
+		{"id":"e85d10bde38a84f8","x":-120,"y":-360,"width":250,"height":60,"type":"text","text":"Detetct facial movements with camera"},
+		{"id":"36695d9115e1cd27","x":240,"y":-500,"width":160,"height":60,"type":"text","text":"[face-api.js](https://github.com/justadudewhohacks/face-api.js#face-api.js-for-the-browser)"}
+	],
+	"edges":[
+		{"id":"afd17f7c15e11741","fromNode":"db75f12622235e98","fromSide":"right","toNode":"e85d10bde38a84f8","toSide":"left"},
+		{"id":"006ce0c920c98dbf","fromNode":"e85d10bde38a84f8","fromSide":"right","toNode":"36695d9115e1cd27","toSide":"left"},
+		{"id":"91b0889b87e09650","fromNode":"36695d9115e1cd27","fromSide":"right","toNode":"8d44249e5216ebc8","toSide":"left"}
+	]
+}
