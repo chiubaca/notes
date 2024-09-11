@@ -1,13 +1,32 @@
 {
 	"nodes":[
-		{"id":"db75f12622235e98","x":-540,"y":-80,"width":250,"height":60,"type":"text","text":"Game"},
-		{"id":"8d44249e5216ebc8","x":500,"y":-603,"width":280,"height":63,"type":"text","text":"[detect facial expressions](https://justadudewhohacks.github.io/face-api.js/face_expression_recognition)"},
-		{"id":"e85d10bde38a84f8","x":-120,"y":-360,"width":250,"height":60,"type":"text","text":"Detetct facial movements with camera"},
-		{"id":"36695d9115e1cd27","x":240,"y":-500,"width":160,"height":60,"type":"text","text":"[face-api.js](https://github.com/justadudewhohacks/face-api.js#face-api.js-for-the-browser)"}
+		{"id":"db75f12622235e98","type":"text","text":"Game","x":-540,"y":-80,"width":250,"height":60},
+		{"id":"8d44249e5216ebc8","type":"text","text":"[detect facial expressions](https://justadudewhohacks.github.io/face-api.js/face_expression_recognition)","x":500,"y":-440,"width":280,"height":63},
+		{"id":"e85d10bde38a84f8","type":"text","text":"detect facial movements with camera","x":-200,"y":-200,"width":250,"height":60},
+		{"id":"36695d9115e1cd27","type":"text","text":"[face-api.js](https://github.com/justadudewhohacks/face-api.js#face-api.js-for-the-browser)","x":180,"y":-377,"width":160,"height":60},
+		{"id":"f49487cbb8b51058","type":"text","text":"[jeelizFaceExpressions.js](https://github.com/jeeliz/jeelizWeboji?tab=readme-ov-file)","x":135,"y":-95,"width":251,"height":75},
+		{"id":"74209c6b297dd90e","type":"text","text":"[track face movements](https://jeeliz.com/demos/faceFilter/demos/babylonjs/cube/)","x":533,"y":-137,"width":250,"height":60},
+		{"id":"2983855312496570","type":"text","text":"Infinite wall","x":-200,"y":100,"width":250,"height":60},
+		{"id":"fba9648047a7618e","x":-415,"y":560,"width":250,"height":60,"type":"text","text":"Make 3D Face"},
+		{"id":"1c00655793f58697","x":180,"y":780,"width":250,"height":60,"type":"text","text":"[crocotile3D](https://crocotile3d.com/)"},
+		{"id":"98eb919a22d71269","x":-115,"y":480,"width":250,"height":60,"type":"text","text":"Make 3D walls\n"},
+		{"id":"44535634f24ca68a","type":"text","text":"babylon.js\n","x":283,"y":240,"width":250,"height":50},
+		{"id":"54fd0ec2c6f75cc6","x":-7,"y":-555,"width":250,"height":60,"type":"text","text":"[tiktok effect house](https://effecthouse.tiktok.com/learn/?enter_method=section_link)"},
+		{"id":"b5ea4a1434262d79","x":210,"y":-263,"width":260,"height":123,"type":"text","text":"Dont use getting deprecated in 2025\n [meta spark](https://spark.meta.com/learn/getting-started)"}
 	],
 	"edges":[
 		{"id":"afd17f7c15e11741","fromNode":"db75f12622235e98","fromSide":"right","toNode":"e85d10bde38a84f8","toSide":"left"},
 		{"id":"006ce0c920c98dbf","fromNode":"e85d10bde38a84f8","fromSide":"right","toNode":"36695d9115e1cd27","toSide":"left"},
-		{"id":"91b0889b87e09650","fromNode":"36695d9115e1cd27","fromSide":"right","toNode":"8d44249e5216ebc8","toSide":"left"}
+		{"id":"91b0889b87e09650","fromNode":"36695d9115e1cd27","fromSide":"right","toNode":"8d44249e5216ebc8","toSide":"left"},
+		{"id":"47a879cbe15596d7","fromNode":"e85d10bde38a84f8","fromSide":"right","toNode":"f49487cbb8b51058","toSide":"left"},
+		{"id":"ab4577e63286cd84","fromNode":"f49487cbb8b51058","fromSide":"right","toNode":"74209c6b297dd90e","toSide":"left"},
+		{"id":"4bfba604e653fc84","fromNode":"db75f12622235e98","fromSide":"right","toNode":"2983855312496570","toSide":"left"},
+		{"id":"903ba110efb42b0a","fromNode":"2983855312496570","fromSide":"right","toNode":"44535634f24ca68a","toSide":"left"},
+		{"id":"3d82ce42ec1eaba4","fromNode":"2983855312496570","fromSide":"bottom","toNode":"98eb919a22d71269","toSide":"top"},
+		{"id":"69c09c21747db2dd","fromNode":"98eb919a22d71269","fromSide":"right","toNode":"1c00655793f58697","toSide":"left"},
+		{"id":"c201d309227b0de7","fromNode":"2983855312496570","fromSide":"bottom","toNode":"fba9648047a7618e","toSide":"top"},
+		{"id":"64907306b5ea1fe5","fromNode":"fba9648047a7618e","fromSide":"right","toNode":"1c00655793f58697","toSide":"left"},
+		{"id":"c5342fe954dc3e24","fromNode":"e85d10bde38a84f8","fromSide":"right","toNode":"b5ea4a1434262d79","toSide":"left"},
+		{"id":"279ceb0f61f0e750","fromNode":"e85d10bde38a84f8","fromSide":"top","toNode":"54fd0ec2c6f75cc6","toSide":"bottom"}
 	]
 }

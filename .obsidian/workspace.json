@@ -4,25 +4,41 @@
     "type": "split",
     "children": [
       {
-        "id": "d4c0d566e0be8a7c",
+        "id": "a3a3a53365fd21fa",
         "type": "tabs",
         "children": [
           {
-            "id": "4ccbdb0665846ec7",
+            "id": "b43b81851a28abc9",
             "type": "leaf",
             "state": {
               "type": "canvas",
               "state": {
                 "file": "planning/Face Wall Game.canvas",
                 "viewState": {
-                  "x": 241.5608608420497,
-                  "y": 4.849202227323076,
-                  "zoom": -0.4
+                  "x": 183.75090128755352,
+                  "y": 52.253424892703535,
+                  "zoom": -0.31771149845410834
+                }
+              }
+            }
+          },
+          {
+            "id": "a2c53b77f9238a28",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "planning/Face Wall Game.canvas",
+                "viewState": {
+                  "x": 738.75,
+                  "y": -122.61232299804692,
+                  "zoom": 0
                 }
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -143,9 +159,14 @@
       "canvas:Create new canvas": false
     }
   },
-  "active": "4ccbdb0665846ec7",
+  "active": "a2c53b77f9238a28",
   "lastOpenFiles": [
+    "fleeting-notes/2024-09-11.md",
     "planning/Face Wall Game.canvas",
+    "fleeting-notes/2024-09-10.md",
+    "fleeting-notes/2024-09-09.md",
+    "jeelizFaceExpressions.js.md",
+    "fleeting-notes/2024-09-08.md",
     "planning/Face wall game.canvas",
     "planning/Face wall game.md",
     "planning",
@@ -168,11 +189,6 @@
     "fleeting-notes/2024-09-01.md",
     "fleeting-notes/2024-08-31.md",
     "fleeting-notes/2024-08-30.md",
-    "fleeting-notes/2024-08-25.md",
-    "fleeting-notes/2024-08-24.md",
-    "fleeting-notes/2024-08-12.md",
-    "fleeting-notes/2024-08-13.md",
-    "fleeting-notes/2024-08-15.md",
     "attachments/Pasted image 20240115192642.jpg",
     "attachments/20230401_095655.jpg",
     "attachments/GOPR0183.jpg",
