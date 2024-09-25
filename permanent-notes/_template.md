@@ -10,3 +10,4 @@ tags:
   - netlify
 ---
 /typescript-and-netlify-functions
+/typescript-and-netlify-functions
