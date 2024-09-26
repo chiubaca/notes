@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/neovim-cheat-sheet.md",
+                "file": "fleeting-notes/2024-09-26.md",
                 "mode": "source",
                 "source": false
               }
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "permanent-notes/neovim-cheat-sheet.md",
+                "file": "fleeting-notes/2024-09-26.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -141,9 +141,10 @@
   },
   "active": "6f51491bd6c3aeaa",
   "lastOpenFiles": [
-    "permanent-notes/_template.md",
-    "permanent-notes/neovim-cheat-sheet.md",
     "fleeting-notes/2024-09-25.md",
+    "fleeting-notes/2024-09-26.md",
+    "permanent-notes/vscode-to-neovim-cheat-sheet.md",
+    "permanent-notes/_template.md",
     "fleeting-notes/2024-09-18.md",
     "fleeting-notes/2024-09-19.md",
     "fleeting-notes/2024-09-11.md",
@@ -168,7 +169,6 @@
     "fleeting-notes/2024-09-08.md",
     "fleeting-notes/2024-09-09.md",
     "fleeting-notes/2024-09-10.md",
-    "jeelizFaceExpressions.js.md",
     "planning/Face wall game.canvas",
     "planning",
     "attachments/Pasted image 20240115192642.jpg",
