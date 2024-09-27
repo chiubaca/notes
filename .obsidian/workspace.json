@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2024-09-26.md",
+                "file": "permanent-notes/vscode-to-neovim-cheat-sheet.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 303.5
+    "width": 303.5,
+    "collapsed": true
   },
   "right": {
     "id": "7d79c914da9cc99e",
@@ -101,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/2024-09-26.md",
+                "file": "permanent-notes/vscode-to-neovim-cheat-sheet.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -128,7 +129,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -141,34 +143,34 @@
   },
   "active": "6f51491bd6c3aeaa",
   "lastOpenFiles": [
-    "fleeting-notes/2024-09-25.md",
-    "fleeting-notes/2024-09-26.md",
+    "permanent-notes/using-javascript-to-write-postgresql-functions.md",
+    "permanent-notes/typescript-and-netlify-functions.md",
+    "permanent-notes/svelte-basics.md",
+    "permanent-notes/shiba-every-hour-a-twitter-bot-powered-by-github-actions.md",
+    "permanent-notes/remix-basics.md",
+    "permanent-notes/quick-look-at-react-use-hook.md",
+    "permanent-notes/principles-for-using-ai-to-write-code.md",
+    "permanent-notes/pragmatism-over-perfectionism.md",
+    "permanent-notes/nx-for-noobs.md",
+    "permanent-notes/my-over-engineered-blog.md",
+    "permanent-notes/must-have-mac-apps.md",
+    "permanent-notes/how-use-npm-modules-client-side-in-astrojs.md",
+    "permanent-notes/docker-commands-cheatsheet.md",
+    "permanent-notes/delete-fullstack-cloudflare-astro.md",
+    "permanent-notes/delete-fullstack-cloudflare.md",
     "permanent-notes/vscode-to-neovim-cheat-sheet.md",
+    "permanent-notes/everest-basecamp.md",
+    "permanent-notes/holograpic-cards-pt-1.md",
+    "permanent-notes/learning.md",
+    "permanent-notes/making-eco-friendly-websites.md",
+    "permanent-notes/managing-your-self-learning.md",
+    "fleeting-notes/2024-09-26.md",
+    "fleeting-notes/2024-09-25.md",
     "permanent-notes/_template.md",
     "fleeting-notes/2024-09-18.md",
     "fleeting-notes/2024-09-19.md",
-    "fleeting-notes/2024-09-11.md",
-    "fleeting-notes/2024-09-24.md",
-    "fleeting-notes/2024-09-23.md",
-    "fleeting-notes/2024-09-22.md",
-    "fleeting-notes/2024-09-21.md",
-    "fleeting-notes/2024-09-20.md",
-    "fleeting-notes/2024-09-17.md",
-    "fleeting-notes/2024-09-07.md",
-    "fleeting-notes/2024-09-13.md",
-    "fleeting-notes/2024-09-15.md",
-    "fleeting-notes/2024-09-16.md",
-    "fleeting-notes/2024-09-14.md",
-    "fleeting-notes/2024-09-12.md",
     "planning/TikTok Filters.canvas",
-    "planning/Untitled 1.md",
     "planning/Face Wall Game.canvas",
-    "planning/Untitled.md",
-    "fleeting-notes/2024-09-06.md",
-    "fleeting-notes/2024-08-21.md",
-    "fleeting-notes/2024-09-08.md",
-    "fleeting-notes/2024-09-09.md",
-    "fleeting-notes/2024-09-10.md",
     "planning/Face wall game.canvas",
     "planning",
     "attachments/Pasted image 20240115192642.jpg",

@@ -7,10 +7,13 @@ status: draft
 tags:
   - neovim
 ---
+## Prerequisites
+- [LazyVim](https://www.lazyvim.org)
+
 ## Navigation 
 
 ### Finding Files
-**vscode** - `cmd + p`
+**vscode** - `cmd` + `p`
 **neovim** - `/`
 
 ### Scrolling
@@ -19,6 +22,32 @@ tags:
   - `ctrl` + `u` / `d`
   - `j` / `k`
 
+### Goto definition
+**vscode** - `f12`
+**neovim** - `gd`
+
+### Back / Forward 
+**vscode** -  ui back/ forward buttons
+**neovim** - `ctrl` + `o` , `ctrl` + `o` 
+
+
+## Close file
+**vscode** -  `cmd` + `w`
+**neovim** - `:bd` (buffer delete)
+
+## Seach File
+**vscode** -   double-tap word to select all ,   `cmd` + `f`
+**neovim** -  `viw` (visual innner word) , `y` (yank) , `/` , `cmd` + `v`   (use `n` and `N` to navigate between matches)
+
+
+## Seach Codebase
+**vscode** -  `cmd` + `f`
+**neovim** -  `viw` (visual innner word),  `space` , `/` , `cmd` + `v`
+
+
+## Selecting blocks of text
+vscode - mouse lol
+neovim - 
 
 ## Refactoring
 
@@ -29,3 +58,25 @@ tags:
 ### Moving lines up and down
 
 **vscode** - `opt` +`up`/`down`
+**neovim** - 
+
+### Commenting blocks of code
+
+**vscode** - `cmd` + `/`
+**neovim** - `gc` or `ctrl` + `.`
+## Git
+
+**vscode** - built in source control panel
+
+**neovim**: lazgit?
+
+## Nx
+
+**vscode** - Nx extension
+
+**neovim**: 
+## Endpoint testing
+
+**vscode** - Thunder client extension
+
+**neovim**: 
