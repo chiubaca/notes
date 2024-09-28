@@ -47,8 +47,12 @@ tags:
 
 ## Selecting blocks of text
 vscode - mouse lol
-neovim - 
-
+neovim: 
+ - selecting text inside something  - `vi` + `<surrouding-character>` (e.g `(` , `{`)
+ - selecting text including wrapper chracter - `va` + `<surrouding-character>` (e.g `(` , `{`)
+ - select all text with same indentation - `vii`
+ - select all text with same including surrouding whitespace - `vai` (copy whole functions block)
+  
 ## Refactoring
 
 ### Multicursor editing 
@@ -60,9 +64,19 @@ neovim -
 **vscode** - `opt` +`up`/`down`
 **neovim** - 
 
+### Change symbol
+
+**vscode** - `f12`
+**neovim** - 
+
 ### Commenting blocks of code
 
 **vscode** - `cmd` + `/`
+**neovim** - `gc` or `ctrl` + `.`
+
+### Undo/ Redo
+
+**vscode** - `ctrl` + `z` / `ctrl` + `cmd` +`z`
 **neovim** - `gc` or `ctrl` + `.`
 ## Git
 
