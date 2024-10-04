@@ -30,6 +30,9 @@ tags:
 **vscode** -  ui back/ forward buttons
 **neovim** - `ctrl` + `o` , `ctrl` + `o` 
 
+## Save file
+**vscode** -  `cmd` + `s`
+**neovim** - `:w`
 
 ## Close file
 **vscode** -  `cmd` + `w`
@@ -48,6 +51,7 @@ tags:
 ## Selecting blocks of text
 vscode - mouse lol
 neovim: 
+- `cw` - change word
  - selecting text inside something  - `vi` + `<surrouding-character>` (e.g `(` , `{`)
  - selecting text including wrapper chracter - `va` + `<surrouding-character>` (e.g `(` , `{`)
  - select all text with same indentation - `vii`
