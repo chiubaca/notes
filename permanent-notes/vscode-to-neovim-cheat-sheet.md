@@ -81,7 +81,7 @@ neovim:
 ### Undo/ Redo
 
 **vscode** - `ctrl` + `z` / `ctrl` + `cmd` +`z`
-**neovim** - `gc` or `ctrl` + `.`
+**neovim** -
 ## Git
 
 **vscode** - built in source control panel
