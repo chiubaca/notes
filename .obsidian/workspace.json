@@ -21,7 +21,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2024-10-07.md",
+                "file": "permanent-notes/vscode-to-neovim-cheat-sheet.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fleeting-notes/2024-10-07.md",
+                "file": "permanent-notes/vscode-to-neovim-cheat-sheet.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -152,9 +152,18 @@
   },
   "active": "06c80fb743ef1cd4",
   "lastOpenFiles": [
+    "fleeting-notes/2024-10-09.md",
+    "fleeting-notes/2024-10-16.md",
+    "fleeting-notes/2024-10-15.md",
+    "fleeting-notes/2024-10-14.md",
+    "fleeting-notes/2024-10-13.md",
+    "fleeting-notes/2024-10-12.md",
+    "fleeting-notes/2024-10-08.md",
+    "fleeting-notes/2024-10-07.md",
+    "fleeting-notes/2024-10-11.md",
+    "fleeting-notes/2024-10-10.md",
     "fleeting-notes/2024-10-06.md",
     "fleeting-notes/2024-09-25.md",
-    "fleeting-notes/2024-10-07.md",
     "fleeting-notes/2024-10-05.md",
     "fleeting-notes/2024-09-26.md",
     "permanent-notes/vscode-to-neovim-cheat-sheet.md",
@@ -169,15 +178,6 @@
     "permanent-notes/using-javascript-to-write-postgresql-functions.md",
     "permanent-notes/typescript-and-netlify-functions.md",
     "permanent-notes/svelte-basics.md",
-    "permanent-notes/shiba-every-hour-a-twitter-bot-powered-by-github-actions.md",
-    "permanent-notes/remix-basics.md",
-    "permanent-notes/quick-look-at-react-use-hook.md",
-    "permanent-notes/principles-for-using-ai-to-write-code.md",
-    "permanent-notes/pragmatism-over-perfectionism.md",
-    "permanent-notes/nx-for-noobs.md",
-    "permanent-notes/my-over-engineered-blog.md",
-    "permanent-notes/must-have-mac-apps.md",
-    "permanent-notes/how-use-npm-modules-client-side-in-astrojs.md",
     "planning/TikTok Filters.canvas",
     "planning/Face Wall Game.canvas",
     "planning/Face wall game.canvas",

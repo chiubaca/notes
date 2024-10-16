@@ -22,15 +22,22 @@ tags:
   - `ctrl` + `u` / `d`
   - `j` / `k`
 
+### Start end of a line
+**vscode** - n/a
+**neovim**: 
+  - `shift` + `%` / `^`
+  - or just toggle `shift` + `%` (easier)
+
+
 ### Goto definition
 **vscode** - `f12`
 **neovim** - `gd`
 
 ### Back / Forward 
 **vscode** -  ui back/ forward buttons
-**neovim** - `ctrl` + `o` , `ctrl` + `o` 
+**neovim** - `ctrl` + `o` , `ctrl` + `i` 
 
-## Save file
+### Save file
 **vscode** -  `cmd` + `s`
 **neovim** - `:w`
 
