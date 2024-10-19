@@ -21,14 +21,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/vscode-to-neovim-cheat-sheet.md",
+                "file": "fleeting-notes/2024-10-07.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "240d6878ba118993",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "fleeting-notes/2024-10-19.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -110,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "permanent-notes/vscode-to-neovim-cheat-sheet.md",
+                "file": "fleeting-notes/2024-10-19.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -150,23 +162,26 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "06c80fb743ef1cd4",
+  "active": "240d6878ba118993",
   "lastOpenFiles": [
-    "fleeting-notes/2024-10-09.md",
-    "fleeting-notes/2024-10-16.md",
-    "fleeting-notes/2024-10-15.md",
-    "fleeting-notes/2024-10-14.md",
-    "fleeting-notes/2024-10-13.md",
-    "fleeting-notes/2024-10-12.md",
-    "fleeting-notes/2024-10-08.md",
     "fleeting-notes/2024-10-07.md",
-    "fleeting-notes/2024-10-11.md",
-    "fleeting-notes/2024-10-10.md",
+    "fleeting-notes/2024-10-08.md",
     "fleeting-notes/2024-10-06.md",
     "fleeting-notes/2024-09-25.md",
+    "fleeting-notes/2024-10-18.md",
+    "fleeting-notes/2024-10-10.md",
+    "fleeting-notes/2024-10-09.md",
+    "fleeting-notes/2024-10-19.md",
+    "fleeting-notes/2024-10-12.md",
+    "fleeting-notes/2024-10-13.md",
+    "fleeting-notes/2024-10-15.md",
+    "fleeting-notes/2024-10-16.md",
+    "permanent-notes/vscode-to-neovim-cheat-sheet.md",
+    "fleeting-notes/2024-10-17.md",
+    "fleeting-notes/2024-10-14.md",
+    "fleeting-notes/2024-10-11.md",
     "fleeting-notes/2024-10-05.md",
     "fleeting-notes/2024-09-26.md",
-    "permanent-notes/vscode-to-neovim-cheat-sheet.md",
     "fleeting-notes/2024-10-03.md",
     "fleeting-notes/2024-10-02.md",
     "fleeting-notes/2024-10-01.md",
@@ -175,9 +190,6 @@
     "fleeting-notes/2024-09-29.md",
     "fleeting-notes/2024-09-28.md",
     "fleeting-notes/2024-10-04.md",
-    "permanent-notes/using-javascript-to-write-postgresql-functions.md",
-    "permanent-notes/typescript-and-netlify-functions.md",
-    "permanent-notes/svelte-basics.md",
     "planning/TikTok Filters.canvas",
     "planning/Face Wall Game.canvas",
     "planning/Face wall game.canvas",
