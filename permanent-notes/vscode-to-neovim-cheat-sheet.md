@@ -80,6 +80,11 @@ neovim:
 **vscode** - `f12`
 **neovim** - 
 
+### Copy a whole lin
+
+**vscode** - mouse lol
+**neovim** - `yy`
+
 ### Commenting blocks of code
 
 **vscode** - `cmd` + `/`
@@ -88,7 +93,15 @@ neovim:
 ### Undo/ Redo
 
 **vscode** - `ctrl` + `z` / `ctrl` + `cmd` +`z`
-**neovim** -
+**neovim** - `u`  / `ctrl` + `r`
+
+## Terminal
+
+### Open terminal
+`cmd` + `j`
+
+
+
 ## Git
 
 **vscode** - built in source control panel
