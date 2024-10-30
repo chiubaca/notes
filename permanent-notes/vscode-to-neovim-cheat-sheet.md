@@ -75,12 +75,17 @@ neovim:
 **vscode** - `opt` +`up`/`down`
 **neovim** - 
 
+### Surround a  text block with something
+**vscode** - select text with mouse and `{` etc
+neovim - select tes
+
+
 ### Change symbol
 
 **vscode** - `f12`
 **neovim** - 
 
-### Copy a whole lin
+### Copy a whole line
 
 **vscode** - mouse lol
 **neovim** - `yy`
