@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2024-10-31.md",
+                "file": "fleeting-notes/2024-11-02.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2024-10-31"
+              "title": "2024-11-02"
             }
           }
         ],
@@ -174,9 +174,11 @@
   },
   "active": "5dc38b9bc7aaa0c6",
   "lastOpenFiles": [
-    "permanent-notes/vscode-to-neovim-cheat-sheet.md",
     "fleeting-notes/2024-10-31.md",
     "fleeting-notes/2024-10-29.md",
+    "fleeting-notes/2024-11-02.md",
+    "fleeting-notes/2024-11-01.md",
+    "permanent-notes/vscode-to-neovim-cheat-sheet.md",
     "permanent-notes/using-javascript-to-write-postgresql-functions.md",
     "permanent-notes/typescript-and-netlify-functions.md",
     "permanent-notes/swapping-react-for-preact-in-nextjs.md",
@@ -198,8 +200,6 @@
     "fleeting-notes/2024-10-25.md",
     "fleeting-notes/2024-10-24.md",
     "fleeting-notes/2024-10-23.md",
-    "fleeting-notes/2024-10-22.md",
-    "fleeting-notes/2024-10-08.md",
     "planning/TikTok Filters.canvas",
     "planning/Face Wall Game.canvas",
     "planning/Face wall game.canvas",
