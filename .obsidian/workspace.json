@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2024-11-02.md",
+                "file": "fleeting-notes/2024-10-31.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2024-11-02"
+              "title": "2024-10-31"
             }
           }
         ],
@@ -174,9 +174,9 @@
   },
   "active": "5dc38b9bc7aaa0c6",
   "lastOpenFiles": [
+    "fleeting-notes/2024-11-02.md",
     "fleeting-notes/2024-10-31.md",
     "fleeting-notes/2024-10-29.md",
-    "fleeting-notes/2024-11-02.md",
     "fleeting-notes/2024-11-01.md",
     "permanent-notes/vscode-to-neovim-cheat-sheet.md",
     "permanent-notes/using-javascript-to-write-postgresql-functions.md",
