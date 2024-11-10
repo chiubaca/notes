@@ -62,6 +62,7 @@ neovim:
  - selecting text inside something  - `vi` + `<surrouding-character>` (e.g `(` , `{`)
  - selecting text including wrapper chracter - `va` + `<surrouding-character>` (e.g `(` , `{`)
  - select all text with same indentation - `vii`
+ - select word cursor is on  -`viw` 
  - select all text with same including surrouding whitespace - `vai` (copy whole functions block)
   
 ## Refactoring
