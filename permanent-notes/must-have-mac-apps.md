@@ -9,8 +9,7 @@ tags:
 ---
 
 
+- https://www.raycast.com/
 - https://github.com/MonitorControl/MonitorControl
-- https://rectangleapp.com/
-- https://github.com/kyleneideck/BackgroundMusic
-- https://pilotmoon.com/scrollreverser/ (no longer need, disable natural scrolling on mouse settings)
-- https://github.com/quentinlesceller/macmediakeyforwarder
+- https://rectangleapp.com/ (built into Raycast)
+- https://pilotmoon.com/scrollreverser/ 
