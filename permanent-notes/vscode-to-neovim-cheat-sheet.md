@@ -8,7 +8,7 @@ tags:
   - neovim
 ---
 ## Prerequisites
-- [LazyVim](https://www.lazyvim.org)
+- [ ] [LazyVim](https://www.lazyvim.org)
 
 ## Navigation 
 
