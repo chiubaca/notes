@@ -65,6 +65,11 @@ neovim:
  - select word cursor is on  -`viw` 
  - select all text with same including surrouding whitespace - `vai` (copy whole functions block)
   
+## Selecting  a whole line
+vscode - mouse
+neovim - `V` (capital)
+
+  
 ## Refactoring
 
 ### Multicursor editing 
