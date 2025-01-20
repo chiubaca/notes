@@ -129,3 +129,13 @@ neovim - select tes
 **vscode** - Thunder client extension
 
 **neovim**: 
+
+
+
+### Most used vim commands
+
+`vai` - select all inside , useful selecting a string of text
+`V`  - select whole line and go into visual mode, useful selecting blocks of text
+
+`ci(` / `{` `[`  etc - select everything inside some brackats
+
