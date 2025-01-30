@@ -11,14 +11,13 @@
             "id": "8625d197131360b8",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "diff-view",
               "state": {
-                "file": "permanent-notes/to-calvin.md",
-                "mode": "source",
-                "source": false
+                "file": ".obsidian/workspace.json",
+                "staged": false
               },
-              "icon": "lucide-file",
-              "title": "to-calvin"
+              "icon": "git-pull-request",
+              "title": "Diff View (workspace.json)"
             }
           }
         ]
@@ -139,13 +138,23 @@
               "icon": "lucide-archive",
               "title": "All properties"
             }
+          },
+          {
+            "id": "ab9c46a34ad280f2",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 274.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -157,12 +166,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8625d197131360b8",
+  "active": "ab9c46a34ad280f2",
   "lastOpenFiles": [
+    "fleeting-notes/2025-01-26.md",
+    "fleeting-notes/2025-01-39.md",
+    "permanent-notes/to-calvin.md",
     "planning/TikTok Filters.canvas",
     "planning/Face Wall Game.canvas",
     "Untitled.md",
-    "fleeting-notes/2025-01-26.md",
     "permanent-notes/vscode-to-neovim-cheat-sheet.md",
     "fleeting-notes/2025-01-23.md",
     "fleeting-notes/2025-01-18.md",
@@ -170,7 +181,6 @@
     "fleeting-notes/2025-01-20.md",
     "fleeting-notes/2025-01-19.md",
     "permanent-notes/my-values.md",
-    "permanent-notes/to-calvin.md",
     "permanent-notes/zettelkasten.md",
     "fleeting-notes/2025-01-01.md",
     "fleeting-notes/2024-11-15.md",
