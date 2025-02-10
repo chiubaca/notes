@@ -1,0 +1,4 @@
+{
+  "folder": "fleeting-notes",
+  "template": "templates/{{date}}"
+}
