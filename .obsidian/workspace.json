@@ -4,20 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "64e8c920952919e7",
+        "id": "2315bda32e08a5a1",
         "type": "tabs",
         "children": [
           {
-            "id": "8cdfcc8f616d490a",
+            "id": "05cd97b3f42f9456",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
+              "type": "markdown",
               "state": {
-                "file": "templates/new-permanent-note.md",
-                "staged": false
+                "file": "fleeting-notes/2025-02-11.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "git-pull-request",
-              "title": "Diff View (new-permanent-note)"
+              "icon": "lucide-file",
+              "title": "2025-02-11"
             }
           }
         ]
@@ -113,6 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "fleeting-notes/2025-02-11.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -122,7 +124,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for 2025-02-11"
             }
           },
           {
@@ -149,12 +151,12 @@
               "title": "Source Control"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 274.5
+    "width": 274.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -168,8 +170,9 @@
       "daily-notes:Open today's daily note": false
     }
   },
-  "active": "8cdfcc8f616d490a",
+  "active": "05cd97b3f42f9456",
   "lastOpenFiles": [
+    "fleeting-notes/2025-02-11.md",
     "permanent-notes/everest-basecamp.md",
     "permanent-notes/Untitled.md",
     "templates/new-permanent-note.md",
@@ -195,7 +198,6 @@
     "permanent-notes/nx-for-noobs.md",
     "permanent-notes/my-values.md",
     "permanent-notes/my-over-engineered-blog.md",
-    "permanent-notes/must-have-mac-apps.md",
     "attachments/interative-hike-map.gif",
     "attachments/GX010518_1680688090641.jpg",
     "attachments/GOPR0564.jpg",
