@@ -13,12 +13,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2025-02-11.md",
+                "file": "fleeting-notes/2025-02-21.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-02-11"
+              "title": "2025-02-21"
+            }
+          },
+          {
+            "id": "90087e0ffc511fe0",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -172,7 +182,9 @@
   },
   "active": "05cd97b3f42f9456",
   "lastOpenFiles": [
+    "fleeting-notes/2025-02-21.md",
     "fleeting-notes/2025-02-11.md",
+    "retrospectives",
     "permanent-notes/everest-basecamp.md",
     "permanent-notes/Untitled.md",
     "templates/new-permanent-note.md",
@@ -197,7 +209,6 @@
     "permanent-notes/pragmatism-over-perfectionism.md",
     "permanent-notes/nx-for-noobs.md",
     "permanent-notes/my-values.md",
-    "permanent-notes/my-over-engineered-blog.md",
     "attachments/interative-hike-map.gif",
     "attachments/GX010518_1680688090641.jpg",
     "attachments/GOPR0564.jpg",
