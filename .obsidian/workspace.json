@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2025-02-21.md",
+                "file": "permanent-notes/success-is-a-skipping-rope.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-02-21"
+              "title": "success-is-a-skipping-rope"
             }
           },
           {
@@ -183,10 +183,10 @@
   "active": "05cd97b3f42f9456",
   "lastOpenFiles": [
     "fleeting-notes/2025-02-21.md",
+    "permanent-notes/success-is-a-skipping-rope.md",
     "fleeting-notes/2025-02-11.md",
     "retrospectives",
     "permanent-notes/everest-basecamp.md",
-    "permanent-notes/Untitled.md",
     "templates/new-permanent-note.md",
     "templates/{{date}}.md",
     "literature-notes/threejs-journey.md",
