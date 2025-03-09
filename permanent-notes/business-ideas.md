@@ -41,3 +41,10 @@ The Problem
 
 Effort
 - Medium / Big - building a timeline of friends feed should be straightforward. but collating pictures/ videos and merging them together in a job will be tricky. 
+
+---
+## Strava but backed by Atproto
+
+---
+
+## Physically print your WhatsApp stickers with a whatsapp chat bot
