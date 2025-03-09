@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2025-03-01.md",
+                "file": "fleeting-notes/2025-03-09.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-03-01"
+              "title": "2025-03-09"
             }
           },
           {
@@ -182,8 +182,10 @@
   },
   "active": "05cd97b3f42f9456",
   "lastOpenFiles": [
-    "fleeting-notes/2025-03-03.md",
+    "fleeting-notes/2025-03-04.md",
+    "fleeting-notes/2025-03-09.md",
     "fleeting-notes/2025-03-01.md",
+    "fleeting-notes/2025-03-03.md",
     "permanent-notes/success-is-a-skipping-rope.md",
     "fleeting-notes/2025-02-21.md",
     "fleeting-notes/2025-02-11.md",
@@ -207,8 +209,6 @@
     "permanent-notes/shiba-every-hour-a-twitter-bot-powered-by-github-actions.md",
     "permanent-notes/remix-basics.md",
     "permanent-notes/quick-look-at-react-use-hook.md",
-    "permanent-notes/principles-for-using-ai-to-write-code.md",
-    "permanent-notes/pragmatism-over-perfectionism.md",
     "attachments/interative-hike-map.gif",
     "attachments/GX010518_1680688090641.jpg",
     "attachments/GOPR0564.jpg",
