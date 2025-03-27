@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/business-ideas.md",
+                "file": "fleeting-notes/2025-03-27.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "business-ideas"
+              "title": "2025-03-27"
             }
           },
           {
@@ -182,6 +182,10 @@
   },
   "active": "05cd97b3f42f9456",
   "lastOpenFiles": [
+    "fleeting-notes/2025-03-25.md",
+    "fleeting-notes/2025-03-27.md",
+    "fleeting-notes/2025-03-14.md",
+    "permanent-notes/business-ideas.md",
     "fleeting-notes/2025-03-09.md",
     "fleeting-notes/2025-03-04.md",
     "fleeting-notes/2025-03-01.md",
@@ -205,10 +209,6 @@
     "permanent-notes/typescript-and-netlify-functions.md",
     "permanent-notes/to-calvin.md",
     "permanent-notes/swapping-react-for-preact-in-nextjs.md",
-    "permanent-notes/svelte-basics.md",
-    "permanent-notes/shiba-every-hour-a-twitter-bot-powered-by-github-actions.md",
-    "permanent-notes/remix-basics.md",
-    "permanent-notes/quick-look-at-react-use-hook.md",
     "attachments/interative-hike-map.gif",
     "attachments/GX010518_1680688090641.jpg",
     "attachments/GOPR0564.jpg",

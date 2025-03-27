@@ -47,4 +47,4 @@ Effort
 
 ---
 
-## Physically print your WhatsApp stickers with a whatsapp chat bot
+## Physically print your WhatsApp stickers with a WhatsApp chat bot
