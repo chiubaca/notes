@@ -4,31 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "2315bda32e08a5a1",
+        "id": "ad3d51bb981b3ef1",
         "type": "tabs",
         "children": [
           {
-            "id": "05cd97b3f42f9456",
+            "id": "ca7fbdce96e22a03",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2025-03-27.md",
+                "file": "fleeting-notes/2025-04-05.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-03-27"
-            }
-          },
-          {
-            "id": "90087e0ffc511fe0",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "title": "2025-04-05"
             }
           }
         ]
@@ -180,10 +170,21 @@
       "daily-notes:Open today's daily note": false
     }
   },
-  "active": "05cd97b3f42f9456",
+  "active": "ca7fbdce96e22a03",
   "lastOpenFiles": [
-    "fleeting-notes/2025-03-25.md",
     "fleeting-notes/2025-03-27.md",
+    "templates/new-permanent-note.md",
+    "literature-notes/total-typescript-react-notes.md",
+    "literature-notes/threejs-journey.md",
+    "literature-notes/paypal-sdk.md",
+    "literature-notes/does-edge-compute-replace-lambda-functions.md",
+    "literature-notes/docker-basics.md",
+    "literature-notes/total-typescript-notes.md",
+    "fleeting-notes/2022-11-06.md",
+    "fleeting-notes/2022-11-03.md",
+    "fleeting-notes/2022-09-21.md",
+    "fleeting-notes/2025-04-05.md",
+    "fleeting-notes/2025-03-25.md",
     "fleeting-notes/2025-03-14.md",
     "permanent-notes/business-ideas.md",
     "fleeting-notes/2025-03-09.md",
@@ -195,20 +196,9 @@
     "fleeting-notes/2025-02-11.md",
     "retrospectives",
     "permanent-notes/everest-basecamp.md",
-    "templates/new-permanent-note.md",
     "templates/{{date}}.md",
-    "literature-notes/threejs-journey.md",
     "literature-notes/Untitled.md",
-    "literature-notes/total-typescript-notes.md",
     "fleeting-notes/2023-01-11.md",
-    "permanent-notes/all-things-vector-tiles.md",
-    "fleeting-notes/2025-02-10.md",
-    "permanent-notes/building-my-new-blog-nuxt-vs-gridsome.md",
-    "permanent-notes/vscode-to-neovim-cheat-sheet.md",
-    "permanent-notes/using-javascript-to-write-postgresql-functions.md",
-    "permanent-notes/typescript-and-netlify-functions.md",
-    "permanent-notes/to-calvin.md",
-    "permanent-notes/swapping-react-for-preact-in-nextjs.md",
     "attachments/interative-hike-map.gif",
     "attachments/GX010518_1680688090641.jpg",
     "attachments/GOPR0564.jpg",
