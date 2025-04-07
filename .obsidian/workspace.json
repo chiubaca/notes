@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2025-04-05.md",
+                "file": "fleeting-notes/2025-04-07.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-04-05"
+              "title": "2025-04-07"
             }
           }
         ]
@@ -172,6 +172,8 @@
   },
   "active": "ca7fbdce96e22a03",
   "lastOpenFiles": [
+    "fleeting-notes/2025-04-05.md",
+    "fleeting-notes/2025-04-07.md",
     "fleeting-notes/2025-03-27.md",
     "templates/new-permanent-note.md",
     "literature-notes/total-typescript-react-notes.md",
@@ -183,7 +185,6 @@
     "fleeting-notes/2022-11-06.md",
     "fleeting-notes/2022-11-03.md",
     "fleeting-notes/2022-09-21.md",
-    "fleeting-notes/2025-04-05.md",
     "fleeting-notes/2025-03-25.md",
     "fleeting-notes/2025-03-14.md",
     "permanent-notes/business-ideas.md",
@@ -198,7 +199,6 @@
     "permanent-notes/everest-basecamp.md",
     "templates/{{date}}.md",
     "literature-notes/Untitled.md",
-    "fleeting-notes/2023-01-11.md",
     "attachments/interative-hike-map.gif",
     "attachments/GX010518_1680688090641.jpg",
     "attachments/GOPR0564.jpg",
