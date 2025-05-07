@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2025-05-05.md",
+                "file": "fleeting-notes/2025-05-07.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-05-05"
+              "title": "2025-05-07"
             }
           }
         ],
@@ -196,14 +196,18 @@
       "canvas:Create new canvas": false,
       "obsidian-git:Open Git source control": false,
       "templates:Insert template": false,
-      "daily-notes:Open today's daily note": false
+      "daily-notes:Open today's daily note": false,
+      "obsidian-kanban:Create new board": false
     }
   },
   "active": "7135f723ee19931f",
   "lastOpenFiles": [
-    "fleeting-notes/2025-05-03.md",
-    "fleeting-notes/2025-05-05.md",
+    "planning/Things I wanna build, write, do.md",
+    "fleeting-notes/2025-05-07.md",
+    "planning/Things I wanna build.md",
     "fleeting-notes/2025-04-24.md",
+    "fleeting-notes/2025-05-05.md",
+    "fleeting-notes/2025-05-03.md",
     "fleeting-notes/2025-04-23.md",
     "fleeting-notes/2025-04-20.md",
     "fleeting-notes/2025-04-19.md",
@@ -224,9 +228,6 @@
     "fleeting-notes/2022-11-03.md",
     "fleeting-notes/2022-09-21.md",
     "fleeting-notes/2025-03-25.md",
-    "fleeting-notes/2025-03-14.md",
-    "permanent-notes/business-ideas.md",
-    "fleeting-notes/2025-03-09.md",
     "retrospectives",
     "attachments/interative-hike-map.gif",
     "attachments/GX010518_1680688090641.jpg",
