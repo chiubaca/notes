@@ -127,7 +127,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 303.5
+    "width": 303.5,
+    "collapsed": true
   },
   "right": {
     "id": "7d79c914da9cc99e",
@@ -202,8 +203,9 @@
   },
   "active": "7135f723ee19931f",
   "lastOpenFiles": [
-    "planning/Things I wanna build, write, do.md",
+    "permanent-notes/pragmatism-over-perfectionism.md",
     "fleeting-notes/2025-05-07.md",
+    "planning/Things I wanna build, write, do.md",
     "planning/Things I wanna build.md",
     "fleeting-notes/2025-04-24.md",
     "fleeting-notes/2025-05-05.md",
@@ -227,7 +229,6 @@
     "fleeting-notes/2022-11-06.md",
     "fleeting-notes/2022-11-03.md",
     "fleeting-notes/2022-09-21.md",
-    "fleeting-notes/2025-03-25.md",
     "retrospectives",
     "attachments/interative-hike-map.gif",
     "attachments/GX010518_1680688090641.jpg",
