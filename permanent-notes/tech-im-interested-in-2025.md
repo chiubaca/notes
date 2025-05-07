@@ -41,3 +41,12 @@ Maybe a weird one to put on the list as I already know React. However, React 19 
 After a pub chat about Home Assistant, I got excited about it, but I don't really know anything about this at all. But, as I'm soon to be a homeowner, I love the idea of automating my house. Heck, when combined with a local AI and some MCP functionality I could create my own [JARVIS](https://en.wikipedia.org/wiki/J.A.R.V.I.S.).
 
 https://www.home-assistant.io/ 
+
+
+## Full stack Cloudflare
+
+Full stack Cloudflare is a concept that I've been thinking about for a while now, but is starting to gain more traction IRL.
+
+It's clear Cloudflare is starting to go _hard_ on developer tooling aside from being a really good WAF, DNS provider and caching service. I'm already using Cloudflare Pages for this blog, I got a good feel for D1 and R2 for shibes.lol. I want to explore other aspects of the Cloudflare stack such as Durable Objects, AI.
+
+https://blog.cloudflare.com/tag/full-stack/
