@@ -5,6 +5,7 @@ last_updated: 2025-02-26
 description: I'm still working on this metaphor
 status: draft
 tags:
+  - life
 ---
 
 It's hard to get going sometimes, the two most important traits that I have found so far is grit and discipline, but they're intertwined.
