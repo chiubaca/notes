@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/tech-im-interested-in-2025.md",
+                "file": "fleeting-notes/2025-05-14.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "tech-im-interested-in-2025"
+              "title": "2025-05-14"
             }
           }
         ],
@@ -188,6 +188,7 @@
   },
   "active": "883ddc2c476509e2",
   "lastOpenFiles": [
+    "permanent-notes/tech-im-interested-in-2025.md",
     "fleeting-notes/2025-05-07.md",
     "fleeting-notes/2024-11-03.md",
     "fleeting-notes/2025-05-13.md",
@@ -211,7 +212,6 @@
     "fleeting-notes/2025-03-09.md",
     "fleeting-notes/2025-03-27.md",
     "fleeting-notes/2025-03-25.md",
-    "permanent-notes/tech-im-interested-in-2025.md",
     "fleeting-notes/2025-03-14.md",
     "permanent-notes/success-is-a-skipping-rope.md",
     "retrospectives",

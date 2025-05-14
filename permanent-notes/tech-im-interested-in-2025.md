@@ -53,5 +53,5 @@ It's clear Cloudflare is starting to go _hard_ on developer tooling aside from b
 https://blog.cloudflare.com/tag/full-stack/
 
 I started building my own [Cloudlflare starter](https://github.com/chiubaca/fullstack-astro-cloudflare) with Astro. 
-However , I've noticed  Redwood which was the opinionated React framework using GraphQL ( now [Redwood.js GraphQL]() ) have made a big pivot into becoming a React framework for Cloudflare. This might be the way I do things going forward! 
+However, I've noticed  Redwood which was the opinionated React framework using GraphQL ( now [Redwood.js GraphQL]() ) have made a big pivot into becoming a React framework for Cloudflare. This might be the way I do things going forward! 
 
