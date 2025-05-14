@@ -6,6 +6,7 @@ description: Technologies that I want to explore deeper in 2025
 status: live
 tags:
   - dev-journal
+  - S
 ---
 There is an overwhelming amount of technologies I would at least like to try and dabble in 2025, maybe _too_ many. In no particular order, these are things I want to try to understand a bit better.
 
