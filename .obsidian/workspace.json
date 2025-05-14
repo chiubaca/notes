@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2025-03-14.md",
+                "file": "fleeting-notes/2025-03-27.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-03-14"
+              "title": "2025-03-27"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "03-14",
+                "query": "2025-03-27.md",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -175,6 +175,7 @@
   "active": "7135f723ee19931f",
   "lastOpenFiles": [
     "permanent-notes/tech-im-interested-in-2025.md",
+    "fleeting-notes/2025-03-14.md",
     "permanent-notes/success-is-a-skipping-rope.md",
     "fleeting-notes/2025-05-14.md",
     "fleeting-notes/2025-05-13.md",
@@ -199,7 +200,6 @@
     "fleeting-notes/2025-04-11.md",
     "fleeting-notes/2025-04-07.md",
     "fleeting-notes/2025-04-05.md",
-    "fleeting-notes/2025-03-27.md",
     "retrospectives",
     "attachments/interative-hike-map.gif",
     "attachments/GX010518_1680688090641.jpg",
