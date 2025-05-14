@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/success-is-a-skipping-rope.md",
+                "file": "permanent-notes/tech-im-interested-in-2025.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "success-is-a-skipping-rope"
+              "title": "tech-im-interested-in-2025"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "skipping",
+                "query": "interesting in",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -174,9 +174,9 @@
   },
   "active": "7135f723ee19931f",
   "lastOpenFiles": [
+    "permanent-notes/success-is-a-skipping-rope.md",
     "fleeting-notes/2025-05-14.md",
     "fleeting-notes/2025-05-13.md",
-    "permanent-notes/success-is-a-skipping-rope.md",
     "permanent-notes/svelte-basics.md",
     "fleeting-notes/2025-05-07.md",
     "permanent-notes/shiba-every-hour-a-twitter-bot-powered-by-github-actions.md",
