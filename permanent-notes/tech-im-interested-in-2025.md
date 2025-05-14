@@ -6,7 +6,6 @@ description: Technologies that I want to explore deeper in 2025
 status: live
 tags:
   - dev-journal
-  - S
 ---
 There is an overwhelming amount of technologies I would at least like to try and dabble in 2025, maybe _too_ many. In no particular order, these are things I want to try to understand a bit better.
 
@@ -47,8 +46,12 @@ https://www.home-assistant.io/
 
 ## Full stack Cloudflare
 
-Full stack Cloudflare is a concept that I've been thinking about for a while now, but is starting to gain more traction IRL.
+Full stack Cloudflare is a concept that I've been thinking about for a while now but is starting to gain more traction IRL.
 
-It's clear Cloudflare is starting to go _hard_ on developer tooling aside from being a really good WAF, DNS provider and caching service. I'm already using Cloudflare Pages for this blog, I got a good feel for D1 and R2 for shibes.lol. I want to explore other aspects of the Cloudflare stack such as Durable Objects, AI.
+It's clear Cloudflare is starting to go _hard_ on developer tooling aside from being a really good WAF, DNS provider and caching service. I'm already using Cloudflare Pages for this blog, I got a good feel for D1 and R2 for shibes.lol. I want to explore other aspects of the Cloudflare stack such as Durable Objects, AI. 
 
 https://blog.cloudflare.com/tag/full-stack/
+
+I started building my own [Cloudlflare starter](https://github.com/chiubaca/fullstack-astro-cloudflare) with Astro. 
+However , I've noticed  Redwood which was the opinionated React framework using GraphQL ( now [Redwood.js GraphQL]() ) have made a big pivot into becoming a React framework for Cloudflare. This might be the way I do things going forward! 
+
