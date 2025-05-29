@@ -1,0 +1,22 @@
+{
+  "id": "my-obsidian-plugin",
+  "name": "My Obsidian Plugin",
+  "version": "0.1.0",
+  "author": "Your Name",
+  "description": "A simple Hello World plugin for Obsidian.",
+  "minAppVersion": "0.12.0",
+  "main": "main.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/my-obsidian-plugin.git"
+  },
+  "keywords": [
+    "obsidian",
+    "plugin"
+  ],
+  "license": "MIT"
+}
