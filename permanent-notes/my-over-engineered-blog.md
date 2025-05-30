@@ -5,7 +5,7 @@ last_updated: 2024-01-15
 description: Build overegineered stuff for fun
 status: draft
 tags:
-  - "#astro"
+  - astro
   - programming
 ---
 New year, new blog. 

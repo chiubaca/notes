@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "",
+  "search": "astro",
   "showTags": true,
   "showAttachments": false,
   "hideUnresolved": false,
@@ -17,6 +17,6 @@
   "repelStrength": 11.3846153846154,
   "linkStrength": 1,
   "linkDistance": 60,
-  "scale": 0.301341085252802,
+  "scale": 0.9597417761001035,
   "close": false
 }
