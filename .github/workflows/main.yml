@@ -15,8 +15,8 @@ jobs:
       - name: Redeploy chiubaca.com
         run: |
           curl -X POST \
-            https://api.github.com/repos/chiubaca/chiubaca-monorepo/actions/workflows/deploy.yml/dispatches \
-            -H "Authorization: token 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" \
+            https://api.github.com/repos/chiubaca/chiubaca-monorepo/actions/workflows/deploy-chiubaca-com.yml/dispatches \
+            -H "Authorization: token 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" \
             -H "Accept: application/vnd.github.v3+json" \
             -H "Content-Type: application/json" \
             -d '{"ref":"main"}'
