@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2025-06-01.md",
+                "file": "permanent-notes/total-typescript-react-notes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-06-01"
+              "title": "total-typescript-react-notes"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#cloudflare",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -94,13 +94,11 @@
               "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 262.5,
-    "collapsed": true
+    "width": 262.5
   },
   "right": {
     "id": "7d79c914da9cc99e",
@@ -173,40 +171,40 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "2d0790ea156518ae",
+  "active": "cdd64a28cc6fe199",
   "lastOpenFiles": [
-    "fleeting-notes/2025-05-31.md",
-    "fleeting-notes/2025-06-01.md",
-    "fleeting-notes/2024-04-07.md",
-    "fleeting-notes/2024-04-15.md",
-    "fleeting-notes/2024-04-20.md",
-    "fleeting-notes/2024-04-21.md",
-    "fleeting-notes/2024-05-09.md",
+    "literature-notes/paypal-sdk.md",
+    "permanent-notes/threejs-journey.md",
+    "my-obsidian-plugin/Untitled.md",
+    "literature-notes/does-edge-compute-replace-lambda-functions.md",
+    "literature-notes/docker-basics.md",
+    "fleeting-notes/2024-05-13.md",
+    "fleeting-notes/2024-05-14.md",
+    "fleeting-notes/2024-05-19.md",
     "fleeting-notes/2024-05-26.md",
     "fleeting-notes/2024-05-27.md",
     "fleeting-notes/2024-05-29.md",
-    "fleeting-notes/2024-12-20.md",
-    "fleeting-notes/2025-04-07.md",
-    "permanent-notes/delete-fullstack-cloudflare.md",
-    "fleeting-notes/2020-09-14.md",
-    "permanent-notes/my-over-engineered-blog.md",
-    "fleeting-notes/2021-09-22.md",
-    "fleeting-notes/2020-09-13.md",
-    "fleeting-notes/2020-04-20.md",
-    "fleeting-notes/2020-09-10.md",
-    "permanent-notes/build-a-serverless-crud-app-using-vue-js-netlify-and-faunadb.md",
-    "fleeting-notes/2025-05-29.md",
-    "permanent-notes/tech-im-interested-in-2025.md",
+    "fleeting-notes/2024-05-31.md",
+    "fleeting-notes/2024-06-02.md",
+    "fleeting-notes/2024-06-08.md",
+    "fleeting-notes/2024-06-15.md",
+    "fleeting-notes/2024-06-30.md",
+    "fleeting-notes/2024-07-15.md",
+    "fleeting-notes/2024-07-19.md",
+    "fleeting-notes/2024-07-22.md",
+    "fleeting-notes/2024-08-08.md",
+    "fleeting-notes/2024-08-10.md",
+    "fleeting-notes/2024-08-11.md",
+    "fleeting-notes/2024-08-21.md",
+    "fleeting-notes/2024-09-06.md",
+    "fleeting-notes/2024-09-07.md",
+    "fleeting-notes/2024-09-11.md",
     "my-obsidian-plugin/src/main.ts",
     "my-obsidian-plugin/src",
-    "my-obsidian-plugin/README.md",
     "my-obsidian-plugin/tsconfig.json",
     "my-obsidian-plugin/package.json",
     "my-obsidian-plugin/manifest.json",
     "my-obsidian-plugin",
-    "fleeting-notes/2025-05-07.md",
-    "fleeting-notes/2025-05-14.md",
-    "fleeting-notes/2024-11-03.md",
     "retrospectives",
     "attachments/interative-hike-map.gif",
     "attachments/GX010518_1680688090641.jpg",
