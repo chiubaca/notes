@@ -7,9 +7,9 @@ status: draft
 tags:
   - calvin
 ---
-Hey Calvin, its Chinese new year today. You've been been part of our new family for 1 month and 3 days today. Its been a beautiful January having you here. You're small, but so mighty. You kick hard I need to take you MMA lessons when you're older I can tell you're going to be physically strong.
+Hey Calvin, it's Chinese New Year today. You've been part of our new family for 1 month and 3 days today. It's been a beautiful January having you here. You're small, but so mighty. You kick hard I need to take you MMA lessons when you're older I can tell you're going to be physically strong.
 
-You're so precious when I hold you in my arms. I cant but help think about your future when I look into you big eyes. Who you will you be, what will you do? If you ever feel lost I hope these words help you. 
+You're so precious when I hold you in my arms. I can't but help think about your future when I look into your big eyes. Who will you be, what will you do? If you ever feel lost I hope these words help you. 
 
 Your family are the most important people to you in the whole world.
 
