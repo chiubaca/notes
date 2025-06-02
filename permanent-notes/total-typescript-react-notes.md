@@ -3,6 +3,7 @@ title: Total Typescript React notes
 publish_date: 2023-05-18
 last_updated: 2023-05-18
 description: Notes from https://www.totaltypescript.com
+status: draft
 tags:
   - typescript
 ---
