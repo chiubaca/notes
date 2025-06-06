@@ -2,7 +2,7 @@
 title: Life is a skipping rope
 publish_date: 2025-02-26
 last_updated: 2025-06-06
-description: I'm still working on this metaphor
+description: I'm still working on this metaphor...
 status: draft
 tags:
   - life
