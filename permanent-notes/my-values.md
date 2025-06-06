@@ -2,13 +2,16 @@
 title: My Values
 publish_date: 2025-01-17
 last_updated: 2025-01-17
-description: Who I want to be as a person
+description: Rules I live by
 status: draft
 tags:
   - values
 ---
-# Be kind
-# Give praise, take blame  
+- Be kind
+- Give praise
+-  My family always comes first
+- Have strong opinions, but be willing to change
+
 
 
 

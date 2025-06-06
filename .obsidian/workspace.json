@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2025-06-05.md",
+                "file": "permanent-notes/my-values.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-06-05"
+              "title": "my-values"
             }
           }
         ]
@@ -173,24 +173,24 @@
   },
   "active": "8348e79006ab5d80",
   "lastOpenFiles": [
-    "permanent-notes/total-typescript-react-notes.md",
-    "fleeting-notes/2025-06-05.md",
-    "permanent-notes/all-things-vector-tiles.md",
-    "permanent-notes/anatomy-of-a-threejs-scene.md",
-    "permanent-notes/auto-js-sdk-for-any-rest-api.md",
-    "permanent-notes/build-a-serverless-crud-app-using-vue-js-netlify-and-faunadb.md",
-    "permanent-notes/building-my-new-blog-nuxt-vs-gridsome.md",
-    "permanent-notes/business-ideas.md",
-    "permanent-notes/controlling-my-anxiety-insomnia.md",
-    "permanent-notes/docker-commands-cheatsheet.md",
-    "permanent-notes/everest-basecamp.md",
-    "permanent-notes/holograpic-cards-pt-1.md",
-    "permanent-notes/how-use-npm-modules-client-side-in-astrojs.md",
-    "permanent-notes/learning.md",
-    "permanent-notes/making-eco-friendly-websites.md",
-    "permanent-notes/managing-your-self-learning.md",
-    "permanent-notes/must-have-mac-apps.md",
     "permanent-notes/my-over-engineered-blog.md",
+    "permanent-notes/must-have-mac-apps.md",
+    "permanent-notes/managing-your-self-learning.md",
+    "permanent-notes/making-eco-friendly-websites.md",
+    "permanent-notes/learning.md",
+    "permanent-notes/how-use-npm-modules-client-side-in-astrojs.md",
+    "permanent-notes/holograpic-cards-pt-1.md",
+    "permanent-notes/everest-basecamp.md",
+    "permanent-notes/docker-commands-cheatsheet.md",
+    "permanent-notes/controlling-my-anxiety-insomnia.md",
+    "permanent-notes/business-ideas.md",
+    "permanent-notes/building-my-new-blog-nuxt-vs-gridsome.md",
+    "permanent-notes/build-a-serverless-crud-app-using-vue-js-netlify-and-faunadb.md",
+    "permanent-notes/auto-js-sdk-for-any-rest-api.md",
+    "permanent-notes/anatomy-of-a-threejs-scene.md",
+    "permanent-notes/all-things-vector-tiles.md",
+    "fleeting-notes/2025-06-05.md",
+    "permanent-notes/total-typescript-react-notes.md",
     "permanent-notes/my-values.md",
     "permanent-notes/principles-for-using-ai-to-write-code.md",
     "permanent-notes/quick-look-at-react-use-hook.md",
