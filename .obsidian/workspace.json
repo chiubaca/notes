@@ -11,14 +11,18 @@
             "id": "8348e79006ab5d80",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "kanban",
               "state": {
-                "file": "permanent-notes/productivty-is-a-skipping-rope.md",
-                "mode": "source",
-                "source": false
+                "file": "planning/Things I wanna build, write, do.md",
+                "kanbanViewState": {
+                  "kanban-plugin": "board",
+                  "list-collapse": [
+                    false
+                  ]
+                }
               },
-              "icon": "lucide-file",
-              "title": "productivty-is-a-skipping-rope"
+              "icon": "lucide-trello",
+              "title": "Things I wanna build, write, do"
             }
           }
         ]
@@ -98,7 +102,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 262.5
+    "width": 820.5
   },
   "right": {
     "id": "7d79c914da9cc99e",
@@ -173,39 +177,44 @@
   },
   "active": "8348e79006ab5d80",
   "lastOpenFiles": [
-    "permanent-notes/shiba-every-hour-a-twitter-bot-powered-by-github-actions.md",
-    "permanent-notes/remix-basics.md",
-    "permanent-notes/quick-look-at-react-use-hook.md",
-    "permanent-notes/pragmatism-over-perfectionism.md",
-    "permanent-notes/principles-for-using-ai-to-write-code.md",
-    "permanent-notes/nx-for-noobs.md",
-    "permanent-notes/my-values.md",
-    "permanent-notes/my-over-engineered-blog.md",
-    "permanent-notes/must-have-mac-apps.md",
-    "permanent-notes/managing-your-self-learning.md",
-    "permanent-notes/making-eco-friendly-websites.md",
-    "permanent-notes/learning.md",
-    "permanent-notes/how-use-npm-modules-client-side-in-astrojs.md",
-    "permanent-notes/holograpic-cards-pt-1.md",
-    "permanent-notes/everest-basecamp.md",
-    "permanent-notes/docker-commands-cheatsheet.md",
-    "permanent-notes/controlling-my-anxiety-insomnia.md",
-    "permanent-notes/business-ideas.md",
-    "permanent-notes/building-my-new-blog-nuxt-vs-gridsome.md",
-    "permanent-notes/build-a-serverless-crud-app-using-vue-js-netlify-and-faunadb.md",
-    "permanent-notes/auto-js-sdk-for-any-rest-api.md",
-    "permanent-notes/anatomy-of-a-threejs-scene.md",
-    "permanent-notes/all-things-vector-tiles.md",
-    "fleeting-notes/2025-06-05.md",
-    "permanent-notes/total-typescript-react-notes.md",
-    "permanent-notes/svelte-basics.md",
-    "my-obsidian-plugin/src/main.ts",
-    "my-obsidian-plugin/src",
-    "my-obsidian-plugin/tsconfig.json",
-    "my-obsidian-plugin/package.json",
-    "my-obsidian-plugin/manifest.json",
-    "my-obsidian-plugin",
-    "retrospectives",
+    "planning/Face Wall Game.canvas",
+    "planning/TikTok Filters.canvas",
+    "planning/Things I wanna build, write, do.md",
+    "retrospectives/2019/eoy.md",
+    "retrospectives/home.md.md",
+    "to-learn/2020.md",
+    "to-learn/2019.md",
+    "to-learn",
+    "retrospectives/2019",
+    "templates/new-permanent-note.md",
+    "to-learn/2025 Things I Dont Know (But want to know!) 16ba59032b3c80edbe73c0f9259e9709.md",
+    "to-learn/2023 Things I Dont Know (But want to know!) ab1dc30a36694c2884e9d7daf6a464e2.md",
+    "to-learn/2021.md",
+    "retrospectives/2025/04.md",
+    "retrospectives/2025/Untitled.md",
+    "templates/{{MM}}.md",
+    "retrospectives/2025/01-02-03.md",
+    "retrospectives/2021/03.md",
+    "retrospectives/2021/02.md",
+    "retrospectives/2021/01.md",
+    "retrospectives/2020/eoy.md",
+    "retrospectives/2010-2020-a-10-year-retro.md",
+    "retrospectives/2023 Retrospectives 43846da628df4fa6a8e5c93474eee8b0.md",
+    "retrospectives/2022 Retrospectives e348996cfd2c4f0093a113c083ce9a3c.md",
+    "retrospectives/2024/08.md",
+    "retrospectives/2024/04-05.md",
+    "retrospectives/2023/03-04.md",
+    "retrospectives/2023/06.md",
+    "retrospectives/2023/07.md",
+    "retrospectives/2019 Retrospectives 3e7f916dddee49418383ccf4f93db27d/Untitled.png",
+    "retrospectives/2025",
+    "retrospectives/2024",
+    "retrospectives/2023",
+    "retrospectives/2022",
+    "retrospectives/2021",
+    "retrospectives/2020",
+    "retrospectives/2019 Retrospectives 3e7f916dddee49418383ccf4f93db27d",
+    "retrospectives/Retrospectives 0d7b81b2c95c490497b2bc78aebd14d4",
     "attachments/interative-hike-map.gif",
     "attachments/GX010518_1680688090641.jpg",
     "attachments/GOPR0564.jpg",
@@ -215,13 +224,7 @@
     "attachments/GOPR0424_1680172721833.jpg",
     "attachments/GOPR0333.jpg",
     "attachments/GOPR0254.jpg",
-    "attachments/GOPR0183.jpg",
     "Untitled.canvas",
-    "templates",
-    "planning/TikTok Filters.canvas",
-    "planning/Face Wall Game.canvas",
-    "planning/Face wall game.canvas",
-    "planning",
-    "index-notes"
+    "planning/Face wall game.canvas"
   ]
 }
