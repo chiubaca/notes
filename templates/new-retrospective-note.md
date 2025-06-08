@@ -1,4 +1,4 @@
-# {{MMMM}}
+# January
 
 ## 💪 What went well?
 

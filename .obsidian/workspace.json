@@ -11,20 +11,14 @@
             "id": "8348e79006ab5d80",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "planning/Things I wanna build, write, do.md",
-                "kanbanViewState": {
-                  "kanban-plugin": "board",
-                  "list-collapse": [
-                    false,
-                    false,
-                    false
-                  ]
-                }
+                "file": "retrospectives/2025/05.md",
+                "mode": "source",
+                "source": true
               },
-              "icon": "lucide-trello",
-              "title": "Things I wanna build, write, do"
+              "icon": "lucide-file",
+              "title": "05"
             }
           }
         ]
@@ -180,9 +174,11 @@
   },
   "active": "8348e79006ab5d80",
   "lastOpenFiles": [
+    "templates/new-retrospective-note.md",
+    "retrospectives/2025/05.md",
+    "planning/Things I wanna build, write, do.md",
     "planning/Face Wall Game.canvas",
     "planning/TikTok Filters.canvas",
-    "planning/Things I wanna build, write, do.md",
     "retrospectives/2019/eoy.md",
     "retrospectives/home.md.md",
     "to-learn/2020.md",
@@ -194,8 +190,6 @@
     "to-learn/2023 Things I Dont Know (But want to know!) ab1dc30a36694c2884e9d7daf6a464e2.md",
     "to-learn/2021.md",
     "retrospectives/2025/04.md",
-    "retrospectives/2025/Untitled.md",
-    "templates/{{MM}}.md",
     "retrospectives/2025/01-02-03.md",
     "retrospectives/2021/03.md",
     "retrospectives/2021/02.md",
