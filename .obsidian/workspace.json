@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "retrospectives/2025/05.md",
+                "file": "fleeting-notes/2025-06-11.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "05"
+              "title": "2025-06-11"
             }
           }
         ]
@@ -98,7 +98,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 820.5
+    "width": 286.5
   },
   "right": {
     "id": "7d79c914da9cc99e",
@@ -174,9 +174,13 @@
   },
   "active": "8348e79006ab5d80",
   "lastOpenFiles": [
+    "fleeting-notes/2025-06-05.md",
+    "fleeting-notes/2025-06-11.md",
+    "retrospectives/2025/05.md",
+    "Clippings/supermacroneverthrow Type-Safe Errors for JS & TypeScript.md",
+    "Clippings",
     "retrospectives/2025/04.md",
     "retrospectives/2025/01-02-03.md",
-    "retrospectives/2025/05.md",
     "templates/new-retrospective-note.md",
     "planning/Things I wanna build, write, do.md",
     "planning/Face Wall Game.canvas",
@@ -201,8 +205,6 @@
     "retrospectives/2024/08.md",
     "retrospectives/2024/04-05.md",
     "retrospectives/2023/03-04.md",
-    "retrospectives/2023/06.md",
-    "retrospectives/2023/07.md",
     "retrospectives/2019 Retrospectives 3e7f916dddee49418383ccf4f93db27d/Untitled.png",
     "retrospectives/2025",
     "retrospectives/2024",
@@ -211,7 +213,6 @@
     "retrospectives/2021",
     "retrospectives/2020",
     "retrospectives/2019 Retrospectives 3e7f916dddee49418383ccf4f93db27d",
-    "retrospectives/Retrospectives 0d7b81b2c95c490497b2bc78aebd14d4",
     "attachments/interative-hike-map.gif",
     "attachments/GX010518_1680688090641.jpg",
     "attachments/GOPR0564.jpg",
