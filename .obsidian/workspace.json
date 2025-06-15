@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2025-06-12.md",
+                "file": "fleeting-notes/2025-06-15.md",
                 "mode": "source",
                 "source": true,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-06-12"
+              "title": "2025-06-15"
             }
           }
         ]
@@ -157,8 +157,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
             }
           }
         ],
@@ -176,18 +176,19 @@
       "command-palette:Open command palette": false,
       "markdown-importer:Open format converter": false,
       "canvas:Create new canvas": false,
-      "obsidian-git:Open Git source control": false,
       "templates:Insert template": false,
       "daily-notes:Open today's daily note": false,
+      "obsidian-git:Open Git source control": false,
       "obsidian-kanban:Create new board": false
     }
   },
   "active": "8348e79006ab5d80",
   "lastOpenFiles": [
+    "fleeting-notes/2025-06-12.md",
+    "fleeting-notes/2025-06-15.md",
+    "fleeting-notes/2025-06-11.md",
     "permanent-notes/to-calvin.md",
     "permanent-notes/svelte-basics.md",
-    "fleeting-notes/2025-06-12.md",
-    "fleeting-notes/2025-06-11.md",
     "fleeting-notes/2025-06-05.md",
     "retrospectives/2025/05.md",
     "Clippings/supermacroneverthrow Type-Safe Errors for JS & TypeScript.md",
@@ -214,7 +215,6 @@
     "retrospectives/2020/eoy.md",
     "retrospectives/2010-2020-a-10-year-retro.md",
     "retrospectives/2023 Retrospectives 43846da628df4fa6a8e5c93474eee8b0.md",
-    "retrospectives/2022 Retrospectives e348996cfd2c4f0093a113c083ce9a3c.md",
     "retrospectives/2019 Retrospectives 3e7f916dddee49418383ccf4f93db27d/Untitled.png",
     "retrospectives/2025",
     "retrospectives/2024",
