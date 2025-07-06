@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/to-baby-calvin.md",
-                "mode": "preview",
+                "file": "permanent-notes/4am-hugs.md",
+                "mode": "source",
                 "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "to-baby-calvin"
+              "title": "4am-hugs"
             }
           }
         ]
@@ -184,9 +184,9 @@
   },
   "active": "8348e79006ab5d80",
   "lastOpenFiles": [
+    "permanent-notes/to-baby-calvin.md",
     "permanent-notes/shiba-every-hour-a-twitter-bot-powered-by-github-actions.md",
     "permanent-notes/remix-basics.md",
-    "permanent-notes/to-baby-calvin.md",
     "permanent-notes/svelte-basics.md",
     "permanent-notes/4am-hugs.md",
     "retrospectives/2025/06.md",
