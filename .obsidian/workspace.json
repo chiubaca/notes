@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2021-12-12.md",
-                "mode": "preview",
+                "file": "retrospectives/2025/06.md",
+                "mode": "source",
                 "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2021-12-12"
+              "title": "06"
             }
           }
         ]
@@ -104,8 +104,7 @@
               "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -183,8 +182,10 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "8348e79006ab5d80",
+  "active": "cdd64a28cc6fe199",
   "lastOpenFiles": [
+    "retrospectives/2025/05.md",
+    "retrospectives/2025/06.md",
     "permanent-notes/svelte-basics.md",
     "fleeting-notes/2021-12-12.md",
     "fleeting-notes/2025-06-16.md",
@@ -193,7 +194,6 @@
     "fleeting-notes/2025-06-11.md",
     "permanent-notes/to-calvin.md",
     "fleeting-notes/2025-06-05.md",
-    "retrospectives/2025/05.md",
     "Clippings/supermacroneverthrow Type-Safe Errors for JS & TypeScript.md",
     "Clippings",
     "retrospectives/2025/04.md",
@@ -215,7 +215,6 @@
     "retrospectives/2021/03.md",
     "retrospectives/2021/02.md",
     "retrospectives/2021/01.md",
-    "retrospectives/2020/eoy.md",
     "retrospectives/2019 Retrospectives 3e7f916dddee49418383ccf4f93db27d/Untitled.png",
     "retrospectives/2025",
     "retrospectives/2024",
