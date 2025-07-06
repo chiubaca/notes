@@ -2,7 +2,7 @@
 title: 4am Hugs
 publish_date: 2025-07-06
 last_updated: 2025-07-06
-description: thoughts from a tired new dad
+description: words from a tired but happy dad
 status: live
 tags:
   - life
@@ -21,6 +21,9 @@ Stars from your night light
 Lights from the street lights
 
 You suckle and you settle
+
 We hush and we kiss you
+
 Embrace the 4am hugs
+
 A small smile from you makes it all worth it.
