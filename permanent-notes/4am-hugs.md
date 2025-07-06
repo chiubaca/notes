@@ -3,7 +3,7 @@ title: 4am Hugs
 publish_date: 2025-07-06
 last_updated: 2025-07-06
 description: thoughts from a tired new dad
-status: draft
+status: live
 tags:
   - life
 ---
