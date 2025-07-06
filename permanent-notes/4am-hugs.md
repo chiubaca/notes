@@ -9,11 +9,17 @@ tags:
 ---
 
 You stir, you cry
+
 We wake and we deliberate
+
 "I'll take him"  
+
 "No I'll hold him, you have work in the morning"
+
 Stars from your night light
+
 Lights from the street lights
+
 You suckle and you settle
 We hush and we kiss you
 Embrace the 4am hugs
