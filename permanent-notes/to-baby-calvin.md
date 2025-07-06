@@ -3,7 +3,7 @@ title: To my baby boy
 publish_date: 2025-01-29
 last_updated: 2025-01-29
 description: A letter to my new son
-status: draft
+status: live
 tags:
   - calvin
 ---

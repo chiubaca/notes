@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "retrospectives/2025/06.md",
-                "mode": "source",
+                "file": "permanent-notes/to-baby-calvin.md",
+                "mode": "preview",
                 "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "06"
+              "title": "to-baby-calvin"
             }
           }
         ]
@@ -182,17 +182,20 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "cdd64a28cc6fe199",
+  "active": "8348e79006ab5d80",
   "lastOpenFiles": [
-    "retrospectives/2025/05.md",
-    "retrospectives/2025/06.md",
+    "permanent-notes/shiba-every-hour-a-twitter-bot-powered-by-github-actions.md",
+    "permanent-notes/remix-basics.md",
+    "permanent-notes/to-baby-calvin.md",
     "permanent-notes/svelte-basics.md",
+    "permanent-notes/4am-hugs.md",
+    "retrospectives/2025/06.md",
+    "retrospectives/2025/05.md",
     "fleeting-notes/2021-12-12.md",
     "fleeting-notes/2025-06-16.md",
     "fleeting-notes/2025-06-15.md",
     "fleeting-notes/2025-06-12.md",
     "fleeting-notes/2025-06-11.md",
-    "permanent-notes/to-calvin.md",
     "fleeting-notes/2025-06-05.md",
     "Clippings/supermacroneverthrow Type-Safe Errors for JS & TypeScript.md",
     "Clippings",
@@ -212,9 +215,6 @@
     "to-learn/2025 Things I Dont Know (But want to know!) 16ba59032b3c80edbe73c0f9259e9709.md",
     "to-learn/2023 Things I Dont Know (But want to know!) ab1dc30a36694c2884e9d7daf6a464e2.md",
     "to-learn/2021.md",
-    "retrospectives/2021/03.md",
-    "retrospectives/2021/02.md",
-    "retrospectives/2021/01.md",
     "retrospectives/2019 Retrospectives 3e7f916dddee49418383ccf4f93db27d/Untitled.png",
     "retrospectives/2025",
     "retrospectives/2024",
