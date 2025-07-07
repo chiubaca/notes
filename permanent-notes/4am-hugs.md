@@ -2,7 +2,7 @@
 title: 4am Hugs
 publish_date: 2025-07-06
 last_updated: 2025-07-06
-description: words from a tired happy dad
+description: a new dad and a newborn
 status: live
 tags:
   - life

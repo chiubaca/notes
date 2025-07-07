@@ -13,22 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/4am-hugs.md",
+                "file": "fleeting-notes/2025-07-07.md",
                 "mode": "source",
-                "source": true,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": true,
-                  "unlinkedCollapsed": true
-                }
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "4am-hugs"
+              "title": "2025-07-07"
             }
           }
         ]
@@ -184,15 +174,26 @@
   },
   "active": "8348e79006ab5d80",
   "lastOpenFiles": [
+    "fleeting-notes/2025-06-16.md",
+    "fleeting-notes/2025-07-07.md",
+    "attachments/Pasted image 20230109114133.png",
+    "attachments/Pasted image 20230109112631.png",
+    "attachments/Pasted image 20220905142930.png",
+    "attachments/Pasted image 20220711180651.png",
+    "attachments/GX010518_1680688090641.jpg",
+    "attachments/interative-hike-map.gif",
+    "attachments/GOPR0547.jpg",
+    "attachments/GOPR0564.jpg",
+    "attachments/20230327_161056.jpg",
+    "attachments/20230326_112558.jpg",
+    "permanent-notes/4am-hugs.md",
     "permanent-notes/to-baby-calvin.md",
     "permanent-notes/shiba-every-hour-a-twitter-bot-powered-by-github-actions.md",
     "permanent-notes/remix-basics.md",
     "permanent-notes/svelte-basics.md",
-    "permanent-notes/4am-hugs.md",
     "retrospectives/2025/06.md",
     "retrospectives/2025/05.md",
     "fleeting-notes/2021-12-12.md",
-    "fleeting-notes/2025-06-16.md",
     "fleeting-notes/2025-06-15.md",
     "fleeting-notes/2025-06-12.md",
     "fleeting-notes/2025-06-11.md",
@@ -213,9 +214,6 @@
     "retrospectives/2019",
     "templates/new-permanent-note.md",
     "to-learn/2025 Things I Dont Know (But want to know!) 16ba59032b3c80edbe73c0f9259e9709.md",
-    "to-learn/2023 Things I Dont Know (But want to know!) ab1dc30a36694c2884e9d7daf6a464e2.md",
-    "to-learn/2021.md",
-    "retrospectives/2019 Retrospectives 3e7f916dddee49418383ccf4f93db27d/Untitled.png",
     "retrospectives/2025",
     "retrospectives/2024",
     "retrospectives/2023",
@@ -223,15 +221,6 @@
     "retrospectives/2021",
     "retrospectives/2020",
     "retrospectives/2019 Retrospectives 3e7f916dddee49418383ccf4f93db27d",
-    "attachments/interative-hike-map.gif",
-    "attachments/GX010518_1680688090641.jpg",
-    "attachments/GOPR0564.jpg",
-    "attachments/GOPR0547.jpg",
-    "attachments/GOPR0496.jpg",
-    "attachments/GOPR0458.jpg",
-    "attachments/GOPR0424_1680172721833.jpg",
-    "attachments/GOPR0333.jpg",
-    "attachments/GOPR0254.jpg",
     "Untitled.canvas",
     "planning/Face wall game.canvas"
   ]
