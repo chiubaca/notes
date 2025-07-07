@@ -6,6 +6,7 @@ description: a new dad and a newborn
 status: live
 tags:
   - life
+  - parenting
 ---
 
 You stir, you cry
