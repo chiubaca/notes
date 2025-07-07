@@ -24,6 +24,6 @@ You suckle and you settle
 
 We hush and we kiss you
 
-Embrace the 4am hugs
+Embrace the 4 AM hugs
 
 A small smile from you makes it all worth it.
