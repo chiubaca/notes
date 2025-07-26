@@ -11,5 +11,5 @@ tags:
 
 - https://www.raycast.com/
 - https://github.com/MonitorControl/MonitorControl
-- https://rectangleapp.com/ (built into Raycast)
-- https://pilotmoon.com/scrollreverser/ 
+- https://rectangleapp.com/ 
+- https://pilotmoon.com/scrollreverser/
