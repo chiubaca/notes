@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2025-07-26.md",
+                "file": "retrospectives/2025/07.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-07-26"
+              "title": "07"
             }
           }
         ]
@@ -174,12 +174,13 @@
   },
   "active": "8348e79006ab5d80",
   "lastOpenFiles": [
+    "retrospectives/2025/06.md",
+    "retrospectives/2025/07.md",
+    "fleeting-notes/2025-07-26.md",
     "fleeting-notes/2025-07-07.md",
     "fleeting-notes/2025-06-16.md",
-    "fleeting-notes/2025-07-26.md",
     "fleeting-notes/2025-07-17.md",
     "permanent-notes/must-have-mac-apps.md",
-    "retrospectives/2025/06.md",
     "fleeting-notes/2024-10-06.md",
     "permanent-notes/4am-hugs.md",
     "attachments/Pasted image 20230109114133.png",
@@ -212,7 +213,6 @@
     "planning/TikTok Filters.canvas",
     "retrospectives/2019/eoy.md",
     "retrospectives/home.md.md",
-    "to-learn/2020.md",
     "to-learn",
     "retrospectives/2019",
     "retrospectives/2025",
