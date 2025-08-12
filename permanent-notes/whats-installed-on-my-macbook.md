@@ -8,22 +8,28 @@ tags:
   - macbook
 ---
 
-# Programming
+## Programming
 
-[Visual Studio Code](https://code.visualstudio.com/)
+[Visual Studio Code](https://code.visualstudio.com/)  -  writing code
 
-[Yaak](https://yaak.app/)
+[Yaak](https://yaak.app/) - api client
 
-[Ghostty](https://ghostty.org/)
+[Ghostty](https://ghostty.org/) - a modern terminal
 
-# Productivity
+## Productivity
 
-[Raycast](https://www.raycast.com/)
+[Raycast](https://www.raycast.com/) - macos spotlight, but way better
 
-# Utility
+[Obsidan](https://obsidian.md/) - note taking
+## Utility
 
-[MonitorControl](https://github.com/MonitorControl/MonitorControl)
+[MonitorControl](https://github.com/MonitorControl/MonitorControl) - contro
 
 [Rectangle](https://rectangleapp.com/)
 
-[Scroll Reverser](https://pilotmoon.com/scrollreverser/)
+[Scroll Reverser](https://pilotmoon.com/scrollreverser/) - natural scrolling on my trackpad should not invert my mouse scroll. this fixes this annoying behaviour which mac wont fix.
+
+[OneDrive](https://onedrive.live.com) - swapped from Google Drive from Google Drive because I got on 1TB of storage per user on the Microsoft 365 Family for £74. Can no longer get this plan.
+S
+## Entertainment
+
