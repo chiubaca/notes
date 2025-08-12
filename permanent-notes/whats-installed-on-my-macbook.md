@@ -3,7 +3,7 @@ title: Must have mac apps
 publish_date: 2022-01-23
 last_updated: 2025-08-12
 description: Everything installed on my Macbook
-status: draft
+status: live
 tags:
   - macbook
 ---
