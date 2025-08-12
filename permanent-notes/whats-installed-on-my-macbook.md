@@ -30,6 +30,5 @@ tags:
 [Scroll Reverser](https://pilotmoon.com/scrollreverser/) - natural scrolling on my trackpad should not invert my mouse scroll. this fixes this annoying behaviour which mac wont fix.
 
 [OneDrive](https://onedrive.live.com) - swapped from Google Drive from Google Drive because I got on 1TB of storage per user on the Microsoft 365 Family for £74. Can no longer get this plan.
-S
-## Entertainment
+
 
