@@ -8,11 +8,8 @@ tags:
   - macbook
 ---
 
-| Key | Description |
-| --- | ----------- |
-| ❗   | Important   |
-
 # Programming
+
 [Visual Studio Code](https://code.visualstudio.com/)
 
 [Yaak](https://yaak.app/)
@@ -20,12 +17,13 @@ tags:
 [Ghostty](https://ghostty.org/)
 
 # Productivity
- [Raycast](https://www.raycast.com/)
+
+[Raycast](https://www.raycast.com/)
 
 # Utility
-- https://github.com/MonitorControl/MonitorControl
-- https://rectangleapp.com/ 
-- https://pilotmoon.com/scrollreverser/
 
+[MonitorControl](https://github.com/MonitorControl/MonitorControl)
 
-\
+[Rectangle](https://rectangleapp.com/)
+
+[Scroll Reverser](https://pilotmoon.com/scrollreverser/)
