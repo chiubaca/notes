@@ -13,11 +13,14 @@ tags:
 | ❗   | Important   |
 
 # Programming
-VsCode
-Yaak
+[Visual Studio Code](https://code.visualstudio.com/)
+
+[Yaak](https://yaak.app/)
+
+[Ghostty](https://ghostty.org/)
 
 # Productivity
-- https://www.raycast.com/
+ [Raycast](https://www.raycast.com/)
 
 # Utility
 - https://github.com/MonitorControl/MonitorControl
@@ -25,3 +28,4 @@ Yaak
 - https://pilotmoon.com/scrollreverser/
 
 
+\
