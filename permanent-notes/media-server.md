@@ -1,13 +1,13 @@
 ---
-title: Setting up my media server
+title: How I self-host my media server for a free Netflix experience 
 publish_date: 2025-08-17
 last_updated: 2025-08-17
-description: A meaningful description for this note
-status: draft
+description: How I self-host my home media server
+status: live
 tags:
   - home-hacking
 ---
-Few notes on how I've setup my media server
+Few notes on how I've setup my media server and achieve that Netflix experience.
 
 ## Server
 
