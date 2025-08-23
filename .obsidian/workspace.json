@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/media-server.md",
+                "file": "fleeting-notes/2025-08-23.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "media-server"
+              "title": "2025-08-23"
             }
           }
         ]
@@ -118,7 +118,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 286.5
+    "width": 286.5,
+    "collapsed": true
   },
   "right": {
     "id": "7d79c914da9cc99e",
@@ -194,8 +195,9 @@
   },
   "active": "8348e79006ab5d80",
   "lastOpenFiles": [
-    "permanent-notes/whats-installed-on-my-macbook.md",
     "permanent-notes/media-server.md",
+    "fleeting-notes/2025-08-23.md",
+    "permanent-notes/whats-installed-on-my-macbook.md",
     "permanent-notes/managing-your-self-learning.md",
     "permanent-notes/to-baby-calvin.md",
     "permanent-notes/total-typescript-react-notes.md",
@@ -230,7 +232,6 @@
     "Clippings",
     "retrospectives/2025/04.md",
     "retrospectives/2025/01-02-03.md",
-    "templates/new-retrospective-note.md",
     "planning/Face Wall Game.canvas",
     "planning/TikTok Filters.canvas",
     "to-learn",
