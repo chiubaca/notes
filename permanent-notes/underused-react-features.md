@@ -341,7 +341,12 @@ To this type of logic without `useOptimistic` it would be quite a bit more compl
 
 ## `use`
 
-multi purpose api
+`use` is a React API that lets you read the value of a resource .
+
+But what is a resource? Current `use` supports reading either a  [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) or a React [context](https://react.dev/learn/passing-data-deeply-with-context). Maybe more coming soon? Just a prediction.
+
+
+
 
 
 ### `useSyncExternalStore`
