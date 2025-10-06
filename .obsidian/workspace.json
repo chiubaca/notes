@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "cefc7f05cc9e06f9",
+        "id": "4b0dc604cdf70323",
         "type": "tabs",
         "children": [
           {
-            "id": "fe8efd2ea200186d",
+            "id": "2ad3f572c2603809",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "retrospectives/2025/09.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "09"
             }
           }
         ]
@@ -49,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "mac",
+                "query": "home assis",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -143,8 +147,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin no longer active"
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
@@ -169,25 +173,36 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "fe8efd2ea200186d",
+  "active": "2ad3f572c2603809",
   "lastOpenFiles": [
+    "retrospectives/2025/08.md",
+    "retrospectives/2025/09.md",
+    "permanent-notes/underused-react-features.md",
+    "fleeting-notes/2025-09-19.md",
+    "fleeting-notes/Untitled.base",
+    "fleeting-notes/2025-09-17.md",
+    "fleeting-notes/2025-09-15.md",
+    "fleeting-notes/2025-09-12.md",
+    "fleeting-notes/2025-09-07.md",
+    "fleeting-notes/2025-08-23.md",
+    "permanent-notes/tech-im-interested-in-2025.md",
+    "permanent-notes/media-server.md",
+    "fleeting-notes/2025-09-05.md",
+    "retrospectives/2025/07.md",
+    "retrospectives/2025/06.md",
+    "retrospectives/2025/05.md",
+    "retrospectives/2025/Untitled",
     "fleeting-notes/2025-09-01.md",
     "fleeting-notes/2025-08-30.md",
-    "conflict-files-obsidian-git.md",
+    "fleeting-notes/2025-08-31.md",
     "fleeting-notes/2025-08-27.md",
-    "permanent-notes/whats-installed-on-my-macbook.md",
-    "permanent-notes/media-server.md",
-    "fleeting-notes/2025-08-23.md",
-    "retrospectives/2025/07.md",
     "fleeting-notes/2025-08-04.md",
-    "retrospectives/2025/06.md",
+    "conflict-files-obsidian-git.md",
+    "permanent-notes/whats-installed-on-my-macbook.md",
+    "permanent-notes/managing-your-self-learning.md",
+    "permanent-notes/to-baby-calvin.md",
+    "permanent-notes/total-typescript-react-notes.md",
     "fleeting-notes/2025-07-26.md",
-    "fleeting-notes/2025-07-07.md",
-    "fleeting-notes/2025-06-16.md",
-    "fleeting-notes/2025-07-17.md",
-    "permanent-notes/must-have-mac-apps.md",
-    "fleeting-notes/2024-10-06.md",
-    "permanent-notes/4am-hugs.md",
     "attachments/Pasted image 20230109114133.png",
     "attachments/Pasted image 20230109112631.png",
     "attachments/Pasted image 20220905142930.png",
@@ -198,15 +213,6 @@
     "attachments/GOPR0564.jpg",
     "attachments/20230327_161056.jpg",
     "attachments/20230326_112558.jpg",
-    "permanent-notes/to-baby-calvin.md",
-    "permanent-notes/shiba-every-hour-a-twitter-bot-powered-by-github-actions.md",
-    "permanent-notes/remix-basics.md",
-    "permanent-notes/svelte-basics.md",
-    "retrospectives/2025/05.md",
-    "fleeting-notes/2021-12-12.md",
-    "fleeting-notes/2025-06-15.md",
-    "fleeting-notes/2025-06-12.md",
-    "fleeting-notes/2025-06-11.md",
     "Clippings",
     "planning/Face Wall Game.canvas",
     "planning/TikTok Filters.canvas",
@@ -217,8 +223,6 @@
     "retrospectives/2023",
     "retrospectives/2022",
     "retrospectives/2021",
-    "retrospectives/2020",
-    "retrospectives/2019 Retrospectives 3e7f916dddee49418383ccf4f93db27d",
     "Untitled.canvas",
     "planning/Face wall game.canvas"
   ]
