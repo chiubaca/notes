@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/media-server.md",
+                "file": "retrospectives/2025/10.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "media-server"
+              "title": "10"
             }
           }
         ]
@@ -94,8 +94,7 @@
               "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -176,8 +175,10 @@
   },
   "active": "2ad3f572c2603809",
   "lastOpenFiles": [
-    "permanent-notes/learning.md",
     "retrospectives/2025/09.md",
+    "retrospectives/2025/10.md",
+    "permanent-notes/media-server.md",
+    "permanent-notes/learning.md",
     "retrospectives/2025/08.md",
     "permanent-notes/underused-react-features.md",
     "fleeting-notes/2025-09-19.md",
@@ -188,7 +189,6 @@
     "fleeting-notes/2025-09-07.md",
     "fleeting-notes/2025-08-23.md",
     "permanent-notes/tech-im-interested-in-2025.md",
-    "permanent-notes/media-server.md",
     "fleeting-notes/2025-09-05.md",
     "retrospectives/2025/07.md",
     "retrospectives/2025/06.md",
@@ -203,7 +203,6 @@
     "permanent-notes/whats-installed-on-my-macbook.md",
     "permanent-notes/managing-your-self-learning.md",
     "permanent-notes/to-baby-calvin.md",
-    "permanent-notes/total-typescript-react-notes.md",
     "attachments/Pasted image 20230109114133.png",
     "attachments/Pasted image 20230109112631.png",
     "attachments/Pasted image 20220905142930.png",

@@ -34,7 +34,7 @@ Don't use `apt` , don't use the the Ubuntu store. It will give you a messed up i
 
 installed [`qbittorrent-nox`](<https://github.com/qbittorrent/qBittorrent/wiki/Running-qBittorrent-without-X-server-(WebUI-only,-systemd-service-set-up,-Ubuntu-15.04-or-newer)>) which lets you run qbittorent in a headless mode, then connect to via web gui instead which means via tailscale I can remotely add magnet links and download my shows.
 
-*Bonus* : use [133x](https://github.com/v1k45/1337x-qBittorrent-search-plugin?utm_source=chatgpt.com) plugin for much more conveniant searching
+*Bonus* : use [133x](https://github.com/v1k45/1337x-qBittorrent-search-plugin?utm_source=chatgpt.com) plugin for much more convenient searching
 
 ## Amazon Firestick
 
