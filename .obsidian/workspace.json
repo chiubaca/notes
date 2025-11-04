@@ -11,10 +11,15 @@
             "id": "446f78c34b04822b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "type": "split-diff-view",
+              "state": {
+                "aFile": "retrospectives/2025/09.md",
+                "bFile": "retrospectives/2025/09.md",
+                "aRef": "HEAD",
+                "bRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: 09"
             }
           }
         ]
@@ -168,8 +173,11 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "ab9c46a34ad280f2",
+  "active": "446f78c34b04822b",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
+    "retrospectives/2025/10.md",
+    "fleeting-notes/2025-10-30.md",
     "permanent-notes/underused-react-features.md",
     "retrospectives/2025/09.md",
     "retrospectives/2025/08.md",
@@ -191,12 +199,9 @@
     "retrospectives/2022/07.md",
     "Untitled.md",
     "fleeting-notes/2025-08-30.md",
-    "conflict-files-obsidian-git.md",
     "fleeting-notes/2025-08-27.md",
     "permanent-notes/whats-installed-on-my-macbook.md",
     "permanent-notes/media-server.md",
-    "fleeting-notes/2025-08-23.md",
-    "retrospectives/2025/07.md",
     "attachments/Pasted image 20230109114133.png",
     "attachments/Pasted image 20230109112631.png",
     "attachments/Pasted image 20220905142930.png",
