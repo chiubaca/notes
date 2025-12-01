@@ -86,6 +86,13 @@ neovim - `V` (capital)
 neovim - select tes
 
 
+### add surrounding
+neovim -  `ysi((`
+S
+- `ys` - "you surround"
+- `i(` - "inside parentheses"
+- `(` - "with parentheses"
+
 ### Change symbol
 
 **vscode** - `f12`
