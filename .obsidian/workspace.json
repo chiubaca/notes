@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/media-server.md",
+                "file": "retrospectives/2025/11.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "media-server"
+              "title": "11"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "netfli",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -94,8 +94,7 @@
               "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -174,8 +173,12 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "88fc5548f8b88e11",
+  "active": "cdd64a28cc6fe199",
   "lastOpenFiles": [
+    "retrospectives/2025/10.md",
+    "retrospectives/2025/11.md",
+    "permanent-notes/ai-is-cool-but-also-meh.md",
+    "permanent-notes/media-server.md",
     "permanent-notes/business-ideas.md",
     "permanent-notes/build-a-serverless-crud-app-using-vue-js-netlify-and-faunadb.md",
     "permanent-notes/building-my-new-blog-nuxt-vs-gridsome.md",
@@ -183,9 +186,7 @@
     "fleeting-notes/2025-11-15.md",
     "fleeting-notes/2025-10-30.md",
     "fleeting-notes/2025-09-19.md",
-    "retrospectives/2025/10.md",
     "retrospectives/2025/09.md",
-    "permanent-notes/media-server.md",
     "permanent-notes/learning.md",
     "retrospectives/2025/08.md",
     "permanent-notes/underused-react-features.md",
@@ -202,8 +203,6 @@
     "retrospectives/2025/05.md",
     "retrospectives/2025/Untitled",
     "fleeting-notes/2025-09-01.md",
-    "fleeting-notes/2025-08-30.md",
-    "fleeting-notes/2025-08-31.md",
     "attachments/Pasted image 20230109114133.png",
     "attachments/Pasted image 20230109112631.png",
     "attachments/Pasted image 20220905142930.png",
