@@ -4,22 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "7eb2428509306957",
+        "id": "c1c90fd23361023c",
         "type": "tabs",
         "children": [
           {
-            "id": "446f78c34b04822b",
+            "id": "f26d3f3baad44d77",
             "type": "leaf",
             "state": {
               "type": "split-diff-view",
               "state": {
-                "aFile": "retrospectives/2025/09.md",
-                "bFile": "retrospectives/2025/09.md",
-                "aRef": "HEAD",
-                "bRef": ""
+                "aFile": ".obsidian/workspace.json",
+                "bFile": ".obsidian/workspace.json",
+                "aRef": ""
               },
               "icon": "diff",
-              "title": "Diff: 09"
+              "title": "Diff: workspace.json"
             }
           }
         ]
@@ -54,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "probably",
+                "query": "vim",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -95,7 +94,8 @@
               "title": "New tab"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -173,9 +173,15 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "446f78c34b04822b",
+  "active": "f26d3f3baad44d77",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
+    "fleeting-notes/2025-11-18.md",
+    "fleeting-notes/2025-11-15.md",
+    "permanent-notes/vscode-to-neovim-cheat-sheet.md",
+    "fleeting-notes/2025-01-19.md",
+    "fleeting-notes/2025-01-18.md",
+    "fleeting-notes/2024-10-06.md",
     "retrospectives/2025/10.md",
     "fleeting-notes/2025-10-30.md",
     "permanent-notes/underused-react-features.md",
@@ -196,12 +202,6 @@
     "fleeting-notes/2021-12-26.md",
     "fleeting-notes/2020-09-16.md",
     "retrospectives/2021/06.md",
-    "retrospectives/2022/07.md",
-    "Untitled.md",
-    "fleeting-notes/2025-08-30.md",
-    "fleeting-notes/2025-08-27.md",
-    "permanent-notes/whats-installed-on-my-macbook.md",
-    "permanent-notes/media-server.md",
     "attachments/Pasted image 20230109114133.png",
     "attachments/Pasted image 20230109112631.png",
     "attachments/Pasted image 20220905142930.png",
