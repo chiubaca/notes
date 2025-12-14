@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "retrospectives/2025/11.md",
+                "file": "fleeting-notes/2025-12-14.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "11"
+              "title": "2025-12-14"
             }
           }
         ],
@@ -189,8 +189,9 @@
   },
   "active": "d558276020b1f585",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
     "retrospectives/2025/11.md",
+    "fleeting-notes/2025-12-14.md",
+    "conflict-files-obsidian-git.md",
     "retrospectives/2025/10.md",
     "permanent-notes/ai-is-cool-but-also-meh.md",
     "permanent-notes/media-server.md",
@@ -215,7 +216,6 @@
     "fleeting-notes/2025-09-05.md",
     "retrospectives/2025/07.md",
     "retrospectives/2025/06.md",
-    "retrospectives/2025/05.md",
     "retrospectives/2025/Untitled",
     "attachments/Pasted image 20230109114133.png",
     "attachments/Pasted image 20230109112631.png",
