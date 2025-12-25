@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2025-12-14.md",
+                "file": "permanent-notes/no-regrets.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-12-14"
+              "title": "no-regrets"
             }
           }
         ],
@@ -171,7 +171,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 274.5
+    "width": 274.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -189,8 +190,11 @@
   },
   "active": "d558276020b1f585",
   "lastOpenFiles": [
-    "retrospectives/2025/11.md",
+    "permanent-notes/all-things-vector-tiles.md",
+    "permanent-notes/anatomy-of-a-threejs-scene.md",
+    "permanent-notes/no-regrets.md",
     "fleeting-notes/2025-12-14.md",
+    "retrospectives/2025/11.md",
     "conflict-files-obsidian-git.md",
     "retrospectives/2025/10.md",
     "permanent-notes/ai-is-cool-but-also-meh.md",
@@ -213,9 +217,6 @@
     "fleeting-notes/2025-09-07.md",
     "fleeting-notes/2025-08-23.md",
     "permanent-notes/tech-im-interested-in-2025.md",
-    "fleeting-notes/2025-09-05.md",
-    "retrospectives/2025/07.md",
-    "retrospectives/2025/06.md",
     "retrospectives/2025/Untitled",
     "attachments/Pasted image 20230109114133.png",
     "attachments/Pasted image 20230109112631.png",
