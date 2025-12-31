@@ -38,6 +38,10 @@ installed [`qbittorrent-nox`](<https://github.com/qbittorrent/qBittorrent/wiki/R
 
 Bonus Bonus: use https://github.com/VueTorrent/VueTorrent/wiki/Installation for darkmode theme
 
+## Automation
+
+Sonarr + Prowlar combo
+
 ## Amazon Firestick
 
 These lil things can run a Jellyfin client out-the-box. It's able to detect the instance of Jellyfin running on my local network without the need for Tailscale.
