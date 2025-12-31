@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2025-12-27.md",
+                "file": "permanent-notes/media-server.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-12-27"
+              "title": "media-server"
             }
           }
         ],
@@ -68,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "jellyfin",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -109,7 +109,8 @@
               "title": "New tab"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -190,8 +191,9 @@
   },
   "active": "d558276020b1f585",
   "lastOpenFiles": [
-    "retrospectives/2025/eoy.md",
+    "fleeting-notes/2025-09-05.md",
     "fleeting-notes/2025-12-27.md",
+    "retrospectives/2025/eoy.md",
     "permanent-notes/no-regrets.md",
     "retrospectives/2024/eoy.md",
     "retrospectives/2025/12.md",
@@ -216,7 +218,6 @@
     "permanent-notes/underused-react-features.md",
     "fleeting-notes/Untitled.base",
     "fleeting-notes/2025-09-17.md",
-    "fleeting-notes/2025-09-15.md",
     "retrospectives/2025/Untitled",
     "attachments/Pasted image 20230109114133.png",
     "attachments/Pasted image 20230109112631.png",
