@@ -86,7 +86,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       },
       {
         "id": "37cd3468875dc394",
@@ -258,12 +258,12 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "9ca3e69dca7c9eb1",
+  "active": "378be1d7fc1d5ad9",
   "lastOpenFiles": [
+    "permanent-notes/one-year-of-being-a-dad.md",
     "planning/Things I wanna build, write, do.md",
     "permanent-notes/tech-im-interested-in-2026.md",
     "permanent-notes/tech-im-interested-in-2025.md",
-    "permanent-notes/one-year-of-being-a-dad.md",
     "permanent-notes/underused-react-features.md",
     "planning/Face Wall Game.canvas",
     "retrospectives/2021/03.md",

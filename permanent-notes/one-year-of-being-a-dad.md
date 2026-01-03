@@ -26,3 +26,6 @@ I got promoted to senior dev and I shipped a lot of new features for work in 202
 ## Self  development
 I still love coding and learning new things, I cant cram as much but I've been finding moments late at night between 9-11PM to hack around on things. I'm tired but have been extra motivated. I went hard learning about fullstack Cloudflare this year. The whole ecosystem fascinates me for some reason. I also got around to learning the some of the Tan stack ecosystem and really enjoying it. My ambitions to build my SaSS still hasnt gone away. I just cant seem to find that spark of a idea still. I'll continue to hack in the meantime.
 
+
+## Gaming
+
