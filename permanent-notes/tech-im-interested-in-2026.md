@@ -1,5 +1,5 @@
 ---
-title: Tech I'm Interested in 2025
+title: Tech I'm Interested in 2026
 publish_date: 2026-01-02
 last_updated: 2026-01-02
 description: Technologies that I want to explore deeper in 2026

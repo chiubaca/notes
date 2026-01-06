@@ -1,0 +1,40 @@
+{
+	"nodes":[
+		{"id":"6874175cff82eeea","type":"text","text":"Bathroom\n10k all in?","x":-132,"y":-200,"width":250,"height":60},
+		{"id":"293d102d706a5d61","type":"text","text":"House Reno","x":-132,"y":-40,"width":250,"height":60},
+		{"id":"6e74081be6c89c20","x":-382,"y":-420,"width":250,"height":60,"type":"text","text":"Family Bathroom"},
+		{"id":"3a1d1b03f5ccdc8c","x":160,"y":-420,"width":250,"height":60,"type":"text","text":"Ensuite/ wetroom style"},
+		{"id":"c4fe8a2a50feb50e","x":410,"y":-170,"width":250,"height":60,"type":"text","text":"Central heating\n"},
+		{"id":"b7cc02b3d17c726d","type":"text","text":"Living room\n10k? ","x":-132,"y":190,"width":250,"height":60},
+		{"id":"6aded548ca39e7c5","x":-680,"y":270,"width":250,"height":60,"type":"text","text":"Kitchen / Diner"},
+		{"id":"f0b81c824c8c8dbf","x":158,"y":-700,"width":250,"height":60,"type":"text","text":"sink"},
+		{"id":"72dfc90bdf40de7c","x":-780,"y":-640,"width":250,"height":60,"type":"text","text":"Bathtub\n"},
+		{"id":"32ed44123bea0b9f","x":-430,"y":-700,"width":250,"height":60,"type":"text","text":"sink"},
+		{"id":"46dc190353a30603","x":-220,"y":-583,"width":250,"height":60,"type":"text","text":"toilet"},
+		{"id":"a57b89b1763e5445","x":443,"y":-613,"width":250,"height":60,"type":"text","text":"toilet\n"},
+		{"id":"8987110557ba2a61","x":-813,"y":-200,"width":316,"height":243,"type":"text","text":"New kitchen\n20-25k?\n\nWren can do the kitchen for 16k!"},
+		{"id":"8084ef5c226281d6","x":-676,"y":430,"width":250,"height":60,"type":"text","text":"sliding doors"},
+		{"id":"95990c026fb9b38c","x":-1192,"y":271,"width":250,"height":60,"type":"text","text":"Glass roof lantern"},
+		{"id":"e7fd907c7d7db9f2","x":480,"y":240,"width":275,"height":220,"type":"text","text":"Check insulation?\n\ncost around 250-650\n\nhttps://thermal-imaging-surveys.uk/near-me/greater-london-sidcup/"},
+		{"id":"1d0c0d9cffc888e1","x":720,"y":-68,"width":303,"height":176,"type":"text","text":"New radiators.\n\nroughly 5K\nhttps://gemini.google.com/share/e61b64472dd4"}
+	],
+	"edges":[
+		{"id":"b6e9c726ed52acff","fromNode":"6874175cff82eeea","fromSide":"bottom","toNode":"293d102d706a5d61","toSide":"top"},
+		{"id":"1a03da22d0f3c38b","fromNode":"b7cc02b3d17c726d","fromSide":"top","toNode":"293d102d706a5d61","toSide":"bottom"},
+		{"id":"c55a8835e6b4d0e4","fromNode":"6874175cff82eeea","fromSide":"top","toNode":"6e74081be6c89c20","toSide":"bottom"},
+		{"id":"135003dbccc625aa","fromNode":"6874175cff82eeea","fromSide":"top","toNode":"3a1d1b03f5ccdc8c","toSide":"bottom"},
+		{"id":"d7dfd59421e9dcbb","fromNode":"6e74081be6c89c20","fromSide":"top","toNode":"72dfc90bdf40de7c","toSide":"bottom"},
+		{"id":"bb53a01844554b2e","fromNode":"293d102d706a5d61","fromSide":"right","toNode":"c4fe8a2a50feb50e","toSide":"left"},
+		{"id":"aa33e6b5f54bfdbf","fromNode":"c4fe8a2a50feb50e","fromSide":"bottom","toNode":"e7fd907c7d7db9f2","toSide":"top"},
+		{"id":"79ecb06ff6468cad","fromNode":"b7cc02b3d17c726d","fromSide":"right","toNode":"e7fd907c7d7db9f2","toSide":"left"},
+		{"id":"dcb10a2fe1698cf2","fromNode":"c4fe8a2a50feb50e","fromSide":"right","toNode":"1d0c0d9cffc888e1","toSide":"left"},
+		{"id":"7723257466c5604b","fromNode":"293d102d706a5d61","fromSide":"left","toNode":"6aded548ca39e7c5","toSide":"right"},
+		{"id":"f1cccbe4c7d94bb2","fromNode":"6aded548ca39e7c5","fromSide":"top","toNode":"8987110557ba2a61","toSide":"bottom"},
+		{"id":"a3fc81164aeb08a3","fromNode":"3a1d1b03f5ccdc8c","fromSide":"top","toNode":"f0b81c824c8c8dbf","toSide":"bottom"},
+		{"id":"bbade563618d0968","fromNode":"6e74081be6c89c20","fromSide":"top","toNode":"32ed44123bea0b9f","toSide":"left"},
+		{"id":"87f5ba2051f2b400","fromNode":"6e74081be6c89c20","fromSide":"top","toNode":"46dc190353a30603","toSide":"left"},
+		{"id":"a920f12e67a4c4c6","fromNode":"3a1d1b03f5ccdc8c","fromSide":"top","toNode":"a57b89b1763e5445","toSide":"left"},
+		{"id":"3d1651cfe16524ec","fromNode":"6aded548ca39e7c5","fromSide":"bottom","toNode":"8084ef5c226281d6","toSide":"top"},
+		{"id":"cd78e0f9e5d8e6d5","fromNode":"6aded548ca39e7c5","fromSide":"left","toNode":"95990c026fb9b38c","toSide":"right"}
+	]
+}
