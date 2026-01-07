@@ -13,30 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "retrospectives/2025/11.md",
+                "file": "permanent-notes/tech-im-interested-in-2026.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "11"
-            }
-          },
-          {
-            "id": "d558276020b1f585",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "fleeting-notes/2026-01-06.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2026-01-06"
+              "title": "tech-im-interested-in-2026"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -113,8 +98,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 286.5,
-    "collapsed": true
+    "width": 286.5
   },
   "right": {
     "id": "7d79c914da9cc99e",
@@ -189,35 +173,36 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "d558276020b1f585",
+  "active": "88fc5548f8b88e11",
   "lastOpenFiles": [
-    "planning/House renovation.canvas",
-    "fleeting-notes/2026-01-06.md",
+    "permanent-notes/threejs-journey.md",
+    "permanent-notes/tech-im-interested-in-2026.md",
+    "permanent-notes/svelte-basics.md",
+    "permanent-notes/remix-basics.md",
+    "permanent-notes/productivty-is-a-skipping-rope.md",
+    "permanent-notes/pragmatism-over-perfectionism.md",
+    "permanent-notes/business-ideas.md",
+    "permanent-notes/building-my-new-blog-nuxt-vs-gridsome.md",
+    "permanent-notes/build-a-serverless-crud-app-using-vue-js-netlify-and-faunadb.md",
+    "permanent-notes/auto-js-sdk-for-any-rest-api.md",
+    "permanent-notes/anatomy-of-a-threejs-scene.md",
+    "permanent-notes/all-things-vector-tiles.md",
+    "permanent-notes/ai-is-cool-but-also-meh.md",
+    "permanent-notes/4am-hugs.md",
+    "permanent-notes/zettelkasten.md",
+    "permanent-notes/whats-installed-on-my-macbook.md",
+    "permanent-notes/vscode-to-neovim-cheat-sheet.md",
+    "permanent-notes/using-javascript-to-write-postgresql-functions.md",
+    "permanent-notes/underused-react-features.md",
+    "permanent-notes/tech-im-interested-in-2025.md",
     "retrospectives/2025/11.md",
+    "fleeting-notes/2026-01-06.md",
+    "planning/House renovation.canvas",
     "planning/Things I wanna build, write, do.md",
     "planning/Face Wall Game.canvas",
     "planning/House Renovation.md",
-    "permanent-notes/tech-im-interested-in-2025.md",
-    "permanent-notes/underused-react-features.md",
     "permanent-notes/one-year-of-being-a-dad.md",
-    "permanent-notes/tech-im-interested-in-2026.md",
     "retrospectives/2021/03.md",
-    "fleeting-notes/2022-04-07.md",
-    "permanent-notes/media-server.md",
-    "fleeting-notes/2025-09-05.md",
-    "fleeting-notes/2025-12-27.md",
-    "retrospectives/2025/eoy.md",
-    "permanent-notes/no-regrets.md",
-    "retrospectives/2024/eoy.md",
-    "retrospectives/2025/12.md",
-    "permanent-notes/all-things-vector-tiles.md",
-    "permanent-notes/anatomy-of-a-threejs-scene.md",
-    "fleeting-notes/2025-12-14.md",
-    "conflict-files-obsidian-git.md",
-    "retrospectives/2025/10.md",
-    "permanent-notes/ai-is-cool-but-also-meh.md",
-    "permanent-notes/business-ideas.md",
-    "permanent-notes/build-a-serverless-crud-app-using-vue-js-netlify-and-faunadb.md",
     "fleeting-notes/Untitled.base",
     "retrospectives/2025/Untitled",
     "attachments/Pasted image 20230109114133.png",
