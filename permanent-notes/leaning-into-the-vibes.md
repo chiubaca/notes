@@ -3,7 +3,7 @@ title: Leaning into the vibes
 publish_date: 2026-01-07
 last_updated: 2026-01-07
 description: Some notes on using these new AI tools in practice
-status: draft
+status: live
 tags:
 ---
 
