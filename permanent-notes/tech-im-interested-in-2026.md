@@ -42,3 +42,7 @@ i've been intimidated by 3D for long time, though I've dabbled with Three.js a t
 ## Tanstack 
 
 I've already been tinkering around with Tanstack Start, Query and Form a bit and the whole toolchain is airtight, but still so much to learn. Will continue to use these libs for future projects.
+
+## React Native
+
+Started doing a bit of react native at work and its opened my eyes. Its an awesome bit of technology and though I've been bullish on web for so long, the hard truth is , people love native apps and its a great way to make money!
