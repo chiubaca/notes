@@ -8,8 +8,11 @@ tags:
   - values
 ---
 - Be kind
+
 - Family first
-- Give praise publically
+  
+- Give praise publicly
+- 
 - Have strong opinions, but be willing to change.
 
 
