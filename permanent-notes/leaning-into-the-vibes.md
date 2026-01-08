@@ -5,6 +5,8 @@ last_updated: 2026-01-08
 description: Some notes on using these new AI tools in practice
 status: live
 tags:
+  - ai
+  - musings
 ---
 
 As with most developers right now, I've been feeling really anxious about the state of software engineering and AI impacts it. My colleagues and friends are on all spectrums with how they feel about how AI change things. Some totally skeptical and find it useless. Others are complete maximalist and are all in. So with me, I'm trying to strike somewhere in the middle.  
