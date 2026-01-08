@@ -15,9 +15,9 @@ Listening to [Ilya Sutskever](https://www.reddit.com/r/ControlProblem/comments/1
 
 Over the xmas break I've finally had some time to test Claude Code and Open Code with various models and truthfully, its been more fun than I thought it would be. The hype I've seen online is real. I've had my "oh-shit wow" moment , felt a bit scared but mostly impressed.
 
-I built my new app [chonk-poker](https://chonk-poker.chiubaca.com/). Its a planning poker game that uses the [chonk scale](https://www.reddit.com/r/cats/comments/99lc07/where_is_your_kitty_on_the_chonk_chart/). This is is how we size tickets at work now and its hilarious because every one keeps forgetting what size is what and  the way play planning poker  is via a google meet chat, we count to three and post it at the same time. This stupid app is to make our planning session just a little bit smoother. 
+I built my new app [chonk-poker](https://chonk-poker.chiubaca.com/). Its a planning poker game that uses the [chonk scale](https://www.reddit.com/r/cats/comments/99lc07/where_is_your_kitty_on_the_chonk_chart/). This is is how we size tickets at work now and its hilarious because every one keeps forgetting what size is what and  the way we play planning poker is via a google meet chat, we count to three and post it at the same time. This stupid app is to make our planning session just a little bit smoother. 
 
-It was good opportunity to appy [skill-stacking](permanent-notes/skill-stacking.md) and learn a bunch of new things, namely Tanstack Start/Query/Form, Cloudflare durable objects and revise state machine concepts with XState.
+It was good opportunity to apply [skill-stacking](permanent-notes/skill-stacking.md) and learn a bunch of new things, namely Tanstack Start/Query/Form, Cloudflare durable objects and revise state machine concepts with XState.
 
 I started slow. I scaffolded all the technology touch points by hand which I still think is invaluable. Though if you are to believe the noise on twitter, AI can do this well too. I personally just wanted to 100% understand and verify how my frontend connected to the cloudflare workers and durable objects and how these connect to the database. 
 
