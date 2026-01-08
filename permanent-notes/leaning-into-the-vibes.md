@@ -2,7 +2,7 @@
 title: Leaning into the vibes
 publish_date: 2026-01-07
 last_updated: 2026-01-08
-description: Some notes on using these new AI tools in practice
+description: Reflections embracing AI with side project
 status: live
 tags:
   - ai
