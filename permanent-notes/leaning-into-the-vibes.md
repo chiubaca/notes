@@ -23,7 +23,7 @@ I started slow. I scaffolded all the technology touch points by hand which I sti
 
 The next core mechanic was the state machine. I've used Xstate for my [big-two](https://github.com/chiubaca/big-two-app) card game. I used the Big Pickle model that is currently free in Open Code to verify my patterns used in that that project made sense here too, which it was. I'm really chuffed I figured all of the xstate mechanics in a different project all by myself pre-AI.  And on that point of being proud that you can figure something out and implement by hand. I'm slowly realising that mindset of being precious about code and the ego of wanting to do things by hand could be the very thing that might make some developers get left behind. Yes you can slog out writing code by hand and reading every error and hit your head against the wall until it works. Having the grit to persevere through hard bugs is a trait that I take pride in. But LLMs are so good at resolving errors now, you're just down right being stubborn to not take advantage of it. I'm a Dad with with a one year old now. I get very little sleep and I only have one or two hours in the middle of the night to tinker with this stuff. Even though I _want_ to code everything by hand and debug manually, I've learnt to swallow my pride and lean into these AI tools move the project along quicker. These AI tools are letting me build and ship things whilst totally sleep deprived. What a time to be alive...!(?).
 
-Over several weeks of tinkering with this stack on and off during my sacred two hours in the evening. I the core mechanics working, realtime, auth  some fugly UI. I used open code to  refactor  and organise the project architecture until I was happy and now i was ready to give the app the polish it needed. This is often the stage where my side projects go to die. I've done the hard bit and the last 20% I lose all motivation. This was when I decided to see what the fuss around Opus 4.5 was. So I topped up 5 British pounds of Anthropic credits, installed Claude Code and let Opus loose to polish off the rest of the app. I burnt through all the credits and it was worth every penny.  
+Over several weeks of tinkering with this stack on and off during my sacred two hours in the evening. The core mechanics were all working, realtime, auth ready to go. I used Open Code some more to refactor and organise the project architecture until I was happy and now I was ready to give the app the polish. This is often the stage where my side projects go to die. I've done the hard bits and the last 20% is often where I lose all motivation. This was when I decided to see what the fuss around Opus 4.5 was. So I topped up 5 British pounds of Anthropic credits, installed Claude Code and let Opus loose to polish the rest of the app. I burnt through all the credits and it was worth every penny.  
 
 This was my "holy-shit" moment. 
 
@@ -44,7 +44,7 @@ With that alone, was enough for it flesh out all of this UI and I love it. The p
 
 ![](attachments/rec_1.gif)
 
-But before I give too much praise and credit to Opus 4.5, I think its worth remembering I manually configured this project by hand. I chose to centralise the game logic within a state machine, this let me confidently know the LLM was working on UI logic only without unintentionally messing up the game logic. 
+But before I give too much praise to Opus 4.5, I think its worth remembering I manually configured this project by hand. I chose to centralise the game logic within a state machine, this let me confidently know the LLM was working on UI logic only without unintentionally messing up the game logic. 
 
 So that all being said, architecture _still matters_, organisation of code _still matters_ and seperation of concerns, gosh danm it, _still matters_! 
 
@@ -52,10 +52,12 @@ Maybe its skill issue, but If I didnt organise the project in a sane way, I feel
 
 Perhaps the way I built this was not the true definition of "vibe coding". I reviewed every diff and refined the organisation of the code too. But this is the first project I really leant into AI hard.
 
-I'm still forming my AI workflows in this new world we're living and even though a good chunk of the code was not written by me, I still enjoyed making this app. Like with a lot of developers right, [this feeling is complicated].
+I'm still forming my AI workflows in this new world we're living and even though a good chunk of the code was not written by me, I still enjoyed making this app. Like with a lot of developers righ now, [this feeling is complicated].
 
  Am I impressed with the current state of these tools, yes. 
+ 
  Am I still worried that AI is gonna take my job, yes. 
+ 
  Am I not going to stop using these AI tools, also yes. 
  
  Who knows what the future holds for all of our coding careers. What we can do is just carry on building, enjoy it whilst it lasts and maybe try to have some fun along the way.
