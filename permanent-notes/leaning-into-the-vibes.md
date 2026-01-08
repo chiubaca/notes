@@ -9,7 +9,7 @@ tags:
   - musings
 ---
 
-As with most developers right now, I've been feeling really anxious about the state of software engineering and . My colleagues and friends are on all spectrums with how they feel about how AI change things. Some totally skeptical and find it useless. Others are complete maximalist and are all in. So with me, I'm trying to strike somewhere in the middle.  
+As with most developers right now, I've been feeling really anxious about the state of software engineering and AI. My colleagues and friends are on all spectrums with how they think AI will change things. Some totally skeptical and find it useless. Others are complete maximalist and are all in. So with me, I'm trying to strike somewhere in the middle.  
 
 Listening to [Ilya Sutskever](https://www.reddit.com/r/ControlProblem/comments/1ptter6/ilya_sutskever_the_moment_ai_can_do_every_job/) on the subject matter. Now is the time to simply use these tools, build the intuition and understand the ergonomics. In some ways, nothing has changed. We look at problems and see how we can resolve them with sofware. It's just how we get there has significantly changed. 
 
