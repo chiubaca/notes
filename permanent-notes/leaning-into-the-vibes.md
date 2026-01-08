@@ -56,4 +56,4 @@ I'm still forming my AI workflows in this new world we're living and even though
  Am I still worried that AI is gonna take my job, yes. 
  Am I not going to stop using these AI tools, also yes. 
  
- Who knows what the future is going hold for all of our coding careers. What we can do is just carry on building for now, enjoy it whilst it lasts and maybe try to have some fun along the
+ Who knows what the future holds for all of our coding careers. What we can do is just carry on building, enjoy it whilst it lasts and maybe try to have some fun along the way.
