@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c1c90fd23361023c",
+        "id": "7f620cbd34c0473a",
         "type": "tabs",
         "children": [
           {
-            "id": "f26d3f3baad44d77",
+            "id": "81133076c49efff7",
             "type": "leaf",
             "state": {
               "type": "split-diff-view",
@@ -94,8 +94,7 @@
               "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -173,7 +172,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "f26d3f3baad44d77",
+  "active": "81133076c49efff7",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
     "fleeting-notes/2025-11-18.md",
