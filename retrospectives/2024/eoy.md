@@ -39,7 +39,7 @@ Lots of 5k this year and a 10k at mount Ephiram
 
 - Still not found a buisness idea yet
 
-# What I want from 2024 🔮
+# What I want from 2025 🔮
 
 - Buy a house and get settled with Calvin and becoming a father
 - Come up with a business idea

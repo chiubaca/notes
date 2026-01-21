@@ -20,8 +20,23 @@
               "icon": "diff",
               "title": "Diff: workspace.json"
             }
+          },
+          {
+            "id": "9a1fb9833289a316",
+            "type": "leaf",
+            "state": {
+              "type": "split-diff-view",
+              "state": {
+                "aFile": ".obsidian/workspace.json",
+                "bFile": ".obsidian/workspace.json",
+                "aRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: workspace.json"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -172,9 +187,28 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "81133076c49efff7",
+  "active": "9a1fb9833289a316",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
+    "retrospectives/2025/eoy.md",
+    "retrospectives/2025/12.md",
+    "retrospectives/2025/11.md",
+    "planning/House renovation.canvas",
+    "permanent-notes/tech-im-interested-in-2026.md",
+    "permanent-notes/one-year-of-being-a-dad.md",
+    "permanent-notes/no-regrets.md",
+    "permanent-notes/leaning-into-the-vibes.md",
+    "permanent-notes/ai-is-cool-but-also-meh.md",
+    "permanent-notes/Skill-stacking.md",
+    "fleeting-notes/2026-01-06.md",
+    "fleeting-notes/2025-12-27.md",
+    "fleeting-notes/2025-12-14.md",
+    "attachments/rec_1.gif",
+    "attachments/chonk-poker-sc-2.png",
+    "attachments/chonk-poker-sc-1.png",
+    "attachments/Untitled.md",
+    "attachments/Untitled.base",
+    "attachments/Untitled 1.base",
     "fleeting-notes/2025-11-18.md",
     "fleeting-notes/2025-11-15.md",
     "permanent-notes/vscode-to-neovim-cheat-sheet.md",
@@ -187,20 +221,7 @@
     "retrospectives/2025/09.md",
     "retrospectives/2025/08.md",
     "fleeting-notes/2025-09-01.md",
-    "fleeting-notes/2025-09-19.md",
-    "fleeting-notes/2025-09-17.md",
-    "fleeting-notes/2025-09-15.md",
-    "fleeting-notes/2025-09-12.md",
-    "fleeting-notes/2025-09-07.md",
-    "fleeting-notes/2025-09-05.md",
-    "fleeting-notes/2022-09-22.md",
     "Untitled.base",
-    "fleeting-notes/Untitled.md",
-    "fleeting-notes/2020-09-15.md",
-    "fleeting-notes/2020-09-14.md",
-    "fleeting-notes/2021-12-26.md",
-    "fleeting-notes/2020-09-16.md",
-    "retrospectives/2021/06.md",
     "attachments/Pasted image 20230109114133.png",
     "attachments/Pasted image 20230109112631.png",
     "attachments/Pasted image 20220905142930.png",
@@ -208,9 +229,6 @@
     "attachments/GX010518_1680688090641.jpg",
     "attachments/interative-hike-map.gif",
     "attachments/GOPR0547.jpg",
-    "attachments/GOPR0564.jpg",
-    "attachments/20230327_161056.jpg",
-    "attachments/20230326_112558.jpg",
     "Clippings",
     "planning/Face Wall Game.canvas",
     "planning/TikTok Filters.canvas",
@@ -220,8 +238,6 @@
     "retrospectives/2024",
     "retrospectives/2023",
     "retrospectives/2022",
-    "retrospectives/2021",
-    "retrospectives/2020",
     "Untitled.canvas",
     "planning/Face wall game.canvas"
   ]

@@ -14,12 +14,12 @@ kanban-plugin: board
 
 ## In progress
 
-- [ ] Blog 2025 refresh
-- [ ] Build big-2 multiplayer game
 
 
 ## Completed 2025
 
+- [ ] Blog 2025 refresh
+- [ ] Build big-2 multiplayer game
 
 
 

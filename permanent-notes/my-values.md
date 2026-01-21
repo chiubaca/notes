@@ -8,9 +8,12 @@ tags:
   - values
 ---
 - Be kind
-- Give praise
--  My family always comes first
-- Have strong opinions, but be willing to change
+
+- Family first
+  
+- Give praise publicly
+- 
+- Have strong opinions, but be willing to change.
 
 
 

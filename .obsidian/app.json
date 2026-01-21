@@ -41,7 +41,7 @@
   "newFileLocation": "current",
   "legacyEditor": false,
   "livePreview": true,
-  "promptDelete": true,
+  "promptDelete": false,
   "vimMode": false,
   "useTab": false,
   "tabSize": 2,
