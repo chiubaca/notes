@@ -25,14 +25,14 @@
             "id": "9a1fb9833289a316",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": ".obsidian/workspace.json",
-                "bFile": ".obsidian/workspace.json",
-                "aRef": ""
+                "file": "fleeting-notes/2026-01-21.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: workspace.json"
+              "icon": "lucide-file",
+              "title": "2026-01-21"
             }
           }
         ],
@@ -189,6 +189,7 @@
   },
   "active": "9a1fb9833289a316",
   "lastOpenFiles": [
+    "fleeting-notes/2026-01-21.md",
     "conflict-files-obsidian-git.md",
     "retrospectives/2025/eoy.md",
     "retrospectives/2025/12.md",
@@ -220,7 +221,6 @@
     "permanent-notes/underused-react-features.md",
     "retrospectives/2025/09.md",
     "retrospectives/2025/08.md",
-    "fleeting-notes/2025-09-01.md",
     "Untitled.base",
     "attachments/Pasted image 20230109114133.png",
     "attachments/Pasted image 20230109112631.png",
