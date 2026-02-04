@@ -46,9 +46,24 @@
               "icon": "lucide-file",
               "title": "2026-02-04"
             }
+          },
+          {
+            "id": "9dd41c78979b1c86",
+            "type": "leaf",
+            "state": {
+              "type": "split-diff-view",
+              "state": {
+                "aFile": "fleeting-notes/2026-01-21.md",
+                "bFile": "fleeting-notes/2026-01-21.md",
+                "aRef": "HEAD",
+                "bRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: 2026-01-21"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -199,9 +214,11 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "f9cf4c0c5b13fb58",
+  "active": "9dd41c78979b1c86",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
     "fleeting-notes/2026-02-04.md",
+    "fleeting-notes/2026-01-21.md",
     "permanent-notes/leaning-into-the-vibes.md",
     "permanent-notes/my-values.md",
     "permanent-notes/no-regrets.md",
@@ -232,8 +249,6 @@
     "permanent-notes/zettelkasten.md",
     "permanent-notes/whats-installed-on-my-macbook.md",
     "permanent-notes/vscode-to-neovim-cheat-sheet.md",
-    "permanent-notes/using-javascript-to-write-postgresql-functions.md",
-    "permanent-notes/underused-react-features.md",
     "planning/House renovation.canvas",
     "planning/Face Wall Game.canvas",
     "fleeting-notes/Untitled.base",
