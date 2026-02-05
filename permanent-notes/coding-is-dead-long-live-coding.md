@@ -8,7 +8,7 @@ tags:
   - ai
   - agentic-coding
 ---
-What is important about about good software engineering is even more important than even ever now with agentic coding.
+What was important about good software engineering before AI is even more important now with agentic coding.
 
 - Clear acceptance criteria. Can you articulate exactly what you want to build.
   
@@ -18,9 +18,7 @@ What is important about about good software engineering is even more important t
 
 - Seperation of concerns.  Context windows are getting bigger yes, but if you split your code at the right edges, LLMs can reason better with a more constrained context.
 
-- Simplicity. Weird abstractions don't help anyone.
 
-
-Were we not striving for all this before AI?
+Agentic coding is force multiplier in both directions which means, codebases that strived for these practices before AI are accelerated. Those that didn't are _even_ more hindered.
 
 
