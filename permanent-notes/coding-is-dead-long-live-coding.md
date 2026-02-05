@@ -18,3 +18,9 @@ What is important about about good software engineering is even more important t
 
 - Seperation of concerns.  Context windows are getting bigger yes, but if you split your code at the right edges, LLMs can reason better with a more constrained context.
 
+- Simplicity. Weird abstractions don't help anyone.
+
+
+Were we not striving for all this before AI?
+
+
