@@ -46,3 +46,8 @@ I've already been tinkering around with Tanstack Start, Query and Form a bit and
 ## React Native
 
 Started doing a bit of react native at work and its opened my eyes. Its an awesome bit of technology and though I've been bullish on web for so long, the hard truth is , people love native apps and its a great way to make money!
+
+## MCP apps
+
+Builds upon the MCP UI spec
+https://modelcontextprotocol.github.io/ext-apps/api/documents/Quickstart.html

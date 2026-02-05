@@ -27,16 +27,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2026-01-21.md",
+                "file": "fleeting-notes/2026-01-22.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-01-21"
+              "title": "2026-01-22"
+            }
+          },
+          {
+            "id": "e05eafd916708597",
+            "type": "leaf",
+            "state": {
+              "type": "split-diff-view",
+              "state": {
+                "aFile": "permanent-notes/tech-im-interested-in-2026.md",
+                "bFile": "permanent-notes/tech-im-interested-in-2026.md",
+                "aRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: tech-im-interested-in-2026"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -187,15 +201,17 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "9a1fb9833289a316",
+  "active": "e05eafd916708597",
   "lastOpenFiles": [
+    "permanent-notes/tech-im-interested-in-2026.md",
+    "permanent-notes/shiba-every-hour-a-twitter-bot-powered-by-github-actions.md",
     "fleeting-notes/2026-01-21.md",
+    "fleeting-notes/2026-01-22.md",
     "conflict-files-obsidian-git.md",
     "retrospectives/2025/eoy.md",
     "retrospectives/2025/12.md",
     "retrospectives/2025/11.md",
     "planning/House renovation.canvas",
-    "permanent-notes/tech-im-interested-in-2026.md",
     "permanent-notes/one-year-of-being-a-dad.md",
     "permanent-notes/no-regrets.md",
     "permanent-notes/leaning-into-the-vibes.md",
@@ -219,8 +235,6 @@
     "retrospectives/2025/10.md",
     "fleeting-notes/2025-10-30.md",
     "permanent-notes/underused-react-features.md",
-    "retrospectives/2025/09.md",
-    "retrospectives/2025/08.md",
     "Untitled.base",
     "attachments/Pasted image 20230109114133.png",
     "attachments/Pasted image 20230109112631.png",
