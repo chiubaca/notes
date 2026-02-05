@@ -8,12 +8,13 @@ tags:
   - ai
   - agentic-coding
 ---
-What is important about about good software engineering is even more important than even ever before with agentic coding.
+What is important about about good software engineering is even more important than even ever now with agentic coding.
 
-- Clear acceptance criteria. Can you articulate exactly what and how you want to build.
+- Clear acceptance criteria. Can you articulate exactly what you want to build.
   
-- Deterministic validation. a.k.a tests. How can you prove the new code does what its supposed to do. Did it break something else? 
+- Deterministic validation. a.k.a tests. How can you prove the new code does what its supposed to do. How can you prove it didn't break something?
 
 - Documentation. specifically in markdown. Your codebase architecture, patterns, do, dont's, everything needs to be written down, concisely.
 
-- Seperation of concerns.  Context windows are getting bigger yes, but if you split your code at the right edges, LLMs can reason better with a more constrained context which is only going to help.
+- Seperation of concerns.  Context windows are getting bigger yes, but if you split your code at the right edges, LLMs can reason better with a more constrained context.
+
