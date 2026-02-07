@@ -79,14 +79,15 @@
             "id": "d4c43c5a648d8eec",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
-                "mode": "source",
-                "source": false
+                "aFile": "fleeting-notes/2026-02-07.md",
+                "bFile": "fleeting-notes/2026-02-07.md",
+                "aRef": "HEAD",
+                "bRef": ""
               },
-              "icon": "lucide-file",
-              "title": "conflict-files-obsidian-git"
+              "icon": "diff",
+              "title": "Diff: 2026-02-07"
             }
           }
         ],
@@ -243,10 +244,10 @@
   },
   "active": "d4c43c5a648d8eec",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
     "permanent-notes/coding-is-dead-long-live-coding.md",
     "fleeting-notes/2026-01-22.md",
     "fleeting-notes/2026-02-07.md",
-    "conflict-files-obsidian-git.md",
     "fleeting-notes/2026-01-21.md",
     "fleeting-notes/2026-02-04.md",
     "permanent-notes/leaning-into-the-vibes.md",
