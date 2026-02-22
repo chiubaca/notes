@@ -10,6 +10,8 @@ kanban-plugin: board
 - [ ] Explore redwood.js
     
     and full stack cloudflare
+- [ ] "Living with Chiu" — personal blog for me and my wife, documenting raising a child, buying a house and renovations
+- [ ] clawed.club — blog/newsletter of cool OpenClaw things spotted around the internet
 
 
 ## In progress
