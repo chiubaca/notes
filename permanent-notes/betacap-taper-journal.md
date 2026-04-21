@@ -37,7 +37,7 @@ publish_date: 2026-04-21
 
 | Date | Applied? | Scalp State | Notes |
 |------|----------|-------------|-------|
-| 2026-04-21 | | | Day 1 — first 3-day gap |
+| 2026-04-21 | ✅ | Stable, no new plaques | Day 1 — first 3-day gap, already applied tonight |
 | 2026-04-24 | | | |
 | 2026-04-27 | | | |
 | 2026-04-30 | | | |
