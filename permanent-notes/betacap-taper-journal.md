@@ -33,6 +33,27 @@ publish_date: 2026-04-21
 
 ## Application Log
 
+### Phase 1 — Daily
+*(Approximate dates based on treatment summary shared 2026-04-06)*
+
+| Date | Applied? | Scalp State | Notes |
+|------|----------|-------------|-------|
+| ~Mar 9 — Mar 15 | ✅ (estimated) | Heavy scaling, redness, itch | Bad flare, started Betacap |
+| ~Mar 16 — Mar 22 | ✅ (estimated) | Rapid improvement | Redness reduced by Day 2–3; coal tar on Day 4 |
+
+### Phase 2 — Every 2nd Day
+
+| Date | Applied? | Scalp State | Notes |
+|------|----------|-------------|-------|
+| ~Mar 23 — Mar 29 | ✅ (estimated) | Controlled | Minimal redness, light flaking, no thick plaques |
+| ~Mar 30 — Apr 5 | ✅ (estimated) | Stable / near-clear | Switched to every 2 days; no rebound; mild pinkness only |
+| 2026-04-05 | ✅? | Near-clear / maintenance | Flat skin, no active plaques, occasional fine flaking |
+| 2026-04-07 | ✅? | Near-clear | Reminder fired at 21:40 UTC; no confirmation logged |
+| 2026-04-09 | ✅? | Near-clear | Reminder fired at 21:40 UTC; no confirmation logged |
+| 2026-04-11 — Apr 20 | ✅? | Stable | OpenClaw gateway down; no reminders logged. Continued every-2-day schedule per user |
+
+> **Note:** Specific daily confirmations weren't logged in Clawness. The ✅? entries indicate the reminder fired or schedule indicates an application day, but no explicit confirmation was recorded.
+
 ### Phase 3 — Every 3rd Day
 
 | Date | Applied? | Scalp State | Notes |
