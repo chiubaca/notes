@@ -59,7 +59,7 @@ publish_date: 2026-04-21
 | Date | Applied? | Scalp State | Notes |
 |------|----------|-------------|-------|
 | 2026-04-21 | ✅ | Stable, no new plaques | Day 1 — first 3-day gap, already applied tonight |
-| 2026-04-24 | | | |
+| 2026-04-24 | ✅ | Stable, dandruffy but no redness | Applied tonight; all under control |
 | 2026-04-27 | | | |
 | 2026-04-30 | | | |
 | 2026-05-03 | | | |
@@ -82,6 +82,13 @@ publish_date: 2026-04-21
 
 ## Check-in Notes
 
+### 2026-04-24 — Phase 3, Dose 2
+- Applied Betacap tonight
+- Scalp state: quite dandruffy, but **no real redness at all**
+- Feels stable and under control
+- No itch or thick scale reported
+- Next dose: 2026-04-27 (every 3rd day)
+
 ### 2026-04-21 — Starting Phase 3
 - Just completed 3 weeks on every-2-day schedule
 - Scalp felt stable throughout — no significant flares, occasional fine flaking only
@@ -101,4 +108,5 @@ Step back to previous phase if any of these appear:
 
 ---
 
-*Last updated: 2026-04-21*
+*Last updated: 2026-04-24*
+*Committed: 2026-04-24*
