@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "retrospectives/2026/01-02.md",
+                "file": "syz/betacap-taper-journal.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01-02"
+              "title": "betacap-taper-journal"
             }
           }
         ]
@@ -94,8 +94,7 @@
               "title": "New tab"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -115,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "retrospectives/2026/01-02.md",
+                "file": "syz/betacap-taper-journal.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -125,7 +124,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 01-02"
+              "title": "Backlinks for betacap-taper-journal"
             }
           },
           {
@@ -164,9 +163,22 @@
   },
   "active": "d57cf331be97a9d0",
   "lastOpenFiles": [
+    "retrospectives/2026/01-02.md",
+    "permanent-notes/betacap-taper-journal.md",
+    "syz/betacap-taper-journal.md",
+    "syz",
+    "retrospectives/2026/03.md",
+    "fleeting-notes/2026-04-30.md",
+    "fleeting-notes/2026-04-20.md",
+    "fleeting-notes/2026-04-19.md",
+    "fleeting-notes/2026-03-21.md",
+    "fleeting-notes/2026-03-19.md",
+    "fleeting-notes/2026-03-11.md",
+    "fleeting-notes/2026-03-10.md",
+    "fleeting-notes/2026-03-09.md",
+    "fleeting-notes/2026-03-08.md",
     "fleeting-notes/2026-02-21.md",
     "fleeting-notes/2026-02-19.md",
-    "retrospectives/2026/01-02.md",
     "retrospectives/2025/12.md",
     "retrospectives/2025/eoy.md",
     "retrospectives/2025/01-02-03.md",
@@ -182,25 +194,13 @@
     "fleeting-notes/2026-02-07.md",
     "fleeting-notes/2026-02-04.md",
     "permanent-notes/skill-stacking.md",
-    "fleeting-notes/2026-01-06.md",
-    "conflict-files-obsidian-git.md",
-    "permanent-notes/coding-is-dead-long-live-coding.md",
-    "fleeting-notes/2026-01-21.md",
-    "permanent-notes/leaning-into-the-vibes.md",
-    "permanent-notes/my-values.md",
-    "permanent-notes/no-regrets.md",
     "attachments/Untitled.base",
     "attachments/Untitled 1.base",
-    "attachments/Untitled.md",
     "attachments/rec_1.gif",
-    "permanent-notes/auto-js-sdk-for-any-rest-api.md",
     "assets",
-    "assets/Pasted image 20260107161211.png.md",
     "assets/Pasted image 20260107161211.png",
     "attachments/chonk-poker-sc-2.png",
     "attachments/chonk-poker-sc-1.png",
-    "permanent-notes/tech-im-interested-in-2026.md",
-    "permanent-notes/threejs-journey.md",
     "fleeting-notes/Untitled.base",
     "retrospectives/2025/Untitled",
     "attachments/Pasted image 20230109114133.png",
@@ -212,7 +212,6 @@
     "Clippings",
     "planning/TikTok Filters.canvas",
     "to-learn",
-    "retrospectives/2019",
     "Untitled.canvas",
     "planning/Face wall game.canvas"
   ]
