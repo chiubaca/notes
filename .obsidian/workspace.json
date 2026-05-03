@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "syz/betacap-taper-journal.md",
+                "file": "fleeting-notes/2026-05-03.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "betacap-taper-journal"
+              "title": "2026-05-03"
             }
           }
         ]
@@ -114,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "syz/betacap-taper-journal.md",
+                "file": "fleeting-notes/2026-05-03.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -124,7 +124,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for betacap-taper-journal"
+              "title": "Backlinks for 2026-05-03"
             }
           },
           {
@@ -163,9 +163,14 @@
   },
   "active": "d57cf331be97a9d0",
   "lastOpenFiles": [
+    "fleeting-notes/2020-09-20.md",
+    "fleeting-notes/2026-05-03.md",
+    "fleeting-notes/2020-09-14.md",
+    "fleeting-notes/2020-09-13.md",
+    "fleeting-notes/2020-09-11.md",
+    "syz/betacap-taper-journal.md",
     "retrospectives/2026/01-02.md",
     "permanent-notes/betacap-taper-journal.md",
-    "syz/betacap-taper-journal.md",
     "syz",
     "retrospectives/2026/03.md",
     "fleeting-notes/2026-04-30.md",
@@ -187,13 +192,8 @@
     "retrospectives/2026",
     "permanent-notes/ai-is-cool-but-also-meh.md",
     "permanent-notes/anatomy-of-a-threejs-scene.md",
-    "fleeting-notes/2026-01-22.md",
-    "planning/Things I wanna build, write, do.md",
     "planning/House renovation.canvas",
     "planning/Face Wall Game.canvas",
-    "fleeting-notes/2026-02-07.md",
-    "fleeting-notes/2026-02-04.md",
-    "permanent-notes/skill-stacking.md",
     "attachments/Untitled.base",
     "attachments/Untitled 1.base",
     "attachments/rec_1.gif",
