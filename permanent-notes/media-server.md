@@ -36,7 +36,7 @@ installed [`qbittorrent-nox`](<https://github.com/qbittorrent/qBittorrent/wiki/R
 
 *Bonus* : use [133x](https://github.com/v1k45/1337x-qBittorrent-search-plugin?utm_source=chatgpt.com) plugin for much more convenient searching
 
-Bonus Bonus: use https://github.com/VueTorrent/VueTorrent/wiki/Installation for darkmode theme
+Bonus Bonus: use [VueTorrent](https://github.com/VueTorrent/VueTorrent/wiki/Installation) for darkmode theme
 
 ## Automation
 
