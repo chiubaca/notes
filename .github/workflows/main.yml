@@ -14,9 +14,4 @@ jobs:
 
       - name: Redeploy chiubaca.com
         run: |
-          curl -X POST \
-            https://api.github.com/repos/chiubaca/chiubaca-monorepo/actions/workflows/deploy-chiubaca-com.yml/dispatches \
-            -H "Authorization: token ${{secrets.GHUB_PAT_FOR_CHIUBACA_COM_REDEPLOY_ACTION}}" \
-            -H "Accept: application/vnd.github.v3+json" \
-            -H "Content-Type: application/json" \
-            -d '{"ref":"main"}'
+          curl -X POST "https://api.cloudflare.com/client/v4/workers/builds/deploy_hooks/d39898a6-a6d6-4b74-a0dd-a320ce82e86e"
