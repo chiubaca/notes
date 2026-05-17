@@ -1,0 +1,21 @@
+.exif-editor-modal {
+  padding: 20px;
+}
+
+.exif-form {
+  margin: 20px 0;
+}
+
+.exif-form .setting-item {
+  margin-bottom: 10px;
+}
+
+.exif-json-editor {
+  width: 100%;
+  font-family: monospace;
+  margin: 10px 0;
+}
+
+.button-container button {
+  margin-right: 10px;
+}
