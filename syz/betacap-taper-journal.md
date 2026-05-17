@@ -20,7 +20,7 @@ publish_date: 2026-04-21
 | 1 — Daily | Every night | 2 weeks | ✅ Complete |
 | 2 — Alternate Day | Every 2 days | 3 weeks | ✅ Complete — stable |
 | 3 — Every 3rd Day | Every 3 days | 2–4 weeks | 🟡 **Started 2026-04-21** |
-| 4 — Every 4th Day | Every 4 days | 2–4 weeks | ⬜ Pending |
+| 4 — Every 4th Day | Every 4 days | 2–4 weeks | 🟡 **Started 2026-05-17** |
 | 5 — Weekly | Once per week | 4 weeks | ⬜ Pending |
 | 6 — Stop | Discontinue | — | ⬜ Pending |
 
@@ -67,9 +67,11 @@ publish_date: 2026-04-21
 | 2026-05-09 | ✅ | Stable, dandruffy | Reminder sent; confirmed retrospective |
 | 2026-05-12 | ✅ | Stable, dandruffy | No redness or itch |
 | 2026-05-15 | ✅ | Stable, flaky | No redness or itch; coal tar 1–2×/week |
-| 2026-05-18 | ⏳ | — | Next dose due |
-| 2026-05-21 | | | |
-| 2026-05-24 | | | |
+| 2026-05-18 | — | — | Phase 3 complete; stepping to every 4 days |
+| 2026-05-19 | ⏳ | — | Phase 4, Dose 1 — first 4-day gap |
+| 2026-05-23 | | | |
+| 2026-05-27 | | | |
+| 2026-05-31 | | | |
 
 ### Phase 4 — Every 4th Day
 *(Fill in when ready to advance)*
@@ -127,3 +129,11 @@ Step back to previous phase if any of these appear:
 
 *Last updated: 2026-05-17*
 *Committed: 2026-05-17*
+
+---
+
+## Phase 4 — Every 4th Day
+
+| Date | Applied? | Scalp State | Notes |
+|------|----------|-------------|-------|
+| 2026-05-19 | ⏳ | — | First 4-day gap dose |
