@@ -11,12 +11,14 @@
             "id": "2a51954a9163f6b9",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "attachments/GOPR0424_1680172721833.jpg"
+                "file": "syz/betacap-taper-journal.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "GOPR0424_1680172721833"
+              "icon": "lucide-file",
+              "title": "betacap-taper-journal"
             }
           }
         ]
@@ -51,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tech",
+                "query": "betacap",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -174,21 +176,21 @@
   "active": "2a51954a9163f6b9",
   "lastOpenFiles": [
     "permanent-notes/betacap-taper-journal.md",
+    "syz/betacap-taper-journal.md",
+    "photos/calvin-2026-04-18.jpg",
+    "photos/calvin-2026-05-06.jpg",
+    "photos/calvin-2026-05-07.jpg",
     "fleeting-notes/2026-05-16.md",
+    "attachments/GOPR0424_1680172721833.jpg",
     "attachments/GOPR0333.jpg",
     "attachments/GOPR0235.jpg",
     "attachments/GOPR0183.jpg",
     "attachments/GOPR0254.jpg",
-    "attachments/GOPR0424_1680172721833.jpg",
     "attachments/20230326_112558.jpg",
     "attachments/20230328_071246.jpg",
-    "attachments/20230328_103559.jpg",
-    "attachments/20230327_161056.jpg",
-    "attachments/Pasted image 20220905142930.png",
     "permanent-notes/anatomy-of-a-threejs-scene.md",
     "permanent-notes/all-things-vector-tiles.md",
     "README.md",
-    "syz/betacap-taper-journal.md",
     "photos/Untitled Kanban.md",
     "fleeting-notes/2026-05-06.md",
     "photos",
@@ -211,7 +213,6 @@
     "fleeting-notes/2026-03-10.md",
     "fleeting-notes/2026-03-09.md",
     "fleeting-notes/2026-03-08.md",
-    "fleeting-notes/2026-02-21.md",
     "retrospectives/2026/Untitled",
     "retrospectives/2026",
     "planning/House renovation.canvas",
