@@ -61,13 +61,13 @@ publish_date: 2026-04-21
 | 2026-04-21 | ✅ | Stable, no new plaques | Day 1 — first 3-day gap, already applied tonight |
 | 2026-04-24 | ✅ | Stable, dandruffy but no redness | Applied tonight; all under control |
 | 2026-04-27 | ✅ | Stable, dandruffy | No redness or itch |
-| 2026-04-30 | | | |
-| 2026-05-03 | | | |
-| 2026-05-06 | | | |
-| 2026-05-09 | ⏳ | — | Reminder sent; awaiting check-in |
-| 2026-05-12 | | | |
-| 2026-05-15 | | | |
-| 2026-05-18 | | | |
+| 2026-04-30 | ✅ | Stable, dandruffy | No redness or itch |
+| 2026-05-03 | ✅ | Stable, dandruffy | No redness or itch |
+| 2026-05-06 | ✅ | Stable, dandruffy | No redness or itch |
+| 2026-05-09 | ✅ | Stable, dandruffy | Reminder sent; confirmed retrospective |
+| 2026-05-12 | ✅ | Stable, dandruffy | No redness or itch |
+| 2026-05-15 | ✅ | Stable, flaky | No redness or itch; coal tar 1–2×/week |
+| 2026-05-18 | ⏳ | — | Next dose due |
 | 2026-05-21 | | | |
 | 2026-05-24 | | | |
 
@@ -81,6 +81,13 @@ publish_date: 2026-04-21
 ---
 
 ## Check-in Notes
+
+### 2026-05-17 — Phase 3, Check-in (Week 4)
+- **Scalp state:** Hairline clear, no redness or flareups. Rest of scalp still flaky with dead skin.
+- **Comfort:** Feeling much more comfortable in skin overall.
+- **Adjuncts:** Coal tar 1–2×/week — helps a little but not fully controlling flakiness.
+- **Stability:** No new plaques, no thick scale, no significant itch. Criteria met for Phase 3 stability.
+- **Next dose:** 2026-05-18
 
 ### 2026-04-29 — Phase 3, Check-in (Day 8)
 - Scalp state: **stable**, still dandruffy but no redness or itch
@@ -118,5 +125,5 @@ Step back to previous phase if any of these appear:
 
 ---
 
-*Last updated: 2026-04-29*
-*Committed: 2026-04-29*
+*Last updated: 2026-05-17*
+*Committed: 2026-05-17*
