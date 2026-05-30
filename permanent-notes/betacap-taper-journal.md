@@ -18,4 +18,5 @@
 
 *Log updated when Alex replies with his scalp check-in.*
 
-| 2026-05-25 | Every 3 days | Reminder sent | Awaiting response | Every-3-day taper continues. Reminder dispatched at 12:35 PM. |
+| 2026-05-25 | Every 3 days | ✅ | Hairline redness under control; rest of head itchy | Applied as scheduled. |
+| 2026-05-29 | Every 3 days | ✅ | Hairline redness totally under control; rest of head still quite itchy | Applied last night. Need to speak to GP about next steps. |
