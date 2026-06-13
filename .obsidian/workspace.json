@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "3b2802f1c225c934",
+        "id": "214090b0513810c5",
         "type": "tabs",
         "children": [
           {
-            "id": "2a51954a9163f6b9",
+            "id": "0ae09c6757a047f7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "syz/betacap-taper-journal.md",
-                "mode": "source",
-                "source": false
+                "file": "permanent-notes/electrician-in-training-notes.md",
+                "mode": "preview",
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "betacap-taper-journal"
-            }
-          },
-          {
-            "id": "35e6e9d39bd011d6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "retrospectives/2026/05.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "05"
+              "title": "electrician-in-training-notes"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -129,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "retrospectives/2026/05.md",
+                "file": "permanent-notes/electrician-in-training-notes.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +124,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 05"
+              "title": "Backlinks for electrician-in-training-notes"
             }
           },
           {
@@ -187,10 +172,15 @@
       "exif-editor:Edit EXIF": false
     }
   },
-  "active": "35e6e9d39bd011d6",
+  "active": "0ae09c6757a047f7",
   "lastOpenFiles": [
-    "retrospectives/2026/04.md",
+    "permanent-notes/4am-hugs.md",
+    "permanent-notes/electrician-in-training-notes.md",
+    "permanent",
+    "Untitled.md",
+    "syz/betacap-taper-journal.md",
     "retrospectives/2026/05.md",
+    "retrospectives/2026/04.md",
     "permanent-notes/betacap-taper-journal.md",
     "fleeting/2026-05-29-astro-6.4.md",
     "fleeting",
@@ -198,7 +188,6 @@
     "fleeting-notes/2026-05-24.md",
     "fleeting-notes/2026-05-22.md",
     "fleeting-notes/2026-05-18.md",
-    "syz/betacap-taper-journal.md",
     "photos/calvin-2026-04-18.jpg",
     "photos/calvin-2026-05-06.jpg",
     "photos/calvin-2026-05-07.jpg",
@@ -226,9 +215,6 @@
     "retrospectives/2026/01-02.md",
     "syz",
     "retrospectives/2026/03.md",
-    "fleeting-notes/2026-04-30.md",
-    "fleeting-notes/2026-04-20.md",
-    "fleeting-notes/2026-04-19.md",
     "retrospectives/2026/Untitled",
     "retrospectives/2026",
     "planning/House renovation.canvas",
@@ -236,7 +222,6 @@
     "attachments/Untitled.base",
     "attachments/Untitled 1.base",
     "assets",
-    "fleeting-notes/Untitled.base",
     "planning/TikTok Filters.canvas",
     "Untitled.canvas",
     "planning/Face wall game.canvas"

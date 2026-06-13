@@ -1,7 +1,13 @@
 ---
-aliases: [Electrical Trade Specialisms, ELV vs Other Electrical Trades]
-status: permanent
+title: 4am Hugs
+publish_date: 2025-07-06
+last_updated: 2025-07-06
+description: Note on how to become an electrian
+status: draft
+tags:
+  - career-pivot
 ---
+
 # Electrical Trade Specialisms: Landscape Analysis
 
 **Date:** 2026-06-13  
@@ -9,6 +15,8 @@ status: permanent
 **Context:** Day 1 of IoT career pivot. Mapping the landscape of the broader electrical trade to understand where Extra-Low Voltage (ELV) fits in terms of physical toll, safety risk, and cognitive style.
 
 ---
+Electrical Trade Specialisms, ELV vs Other Electrical Trades
+
 
 ## The Six Primary Specialisms
 
