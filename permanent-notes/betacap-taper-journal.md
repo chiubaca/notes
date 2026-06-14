@@ -20,3 +20,4 @@
 
 | 2026-05-25 | Every 3 days | ✅ | Hairline redness under control; rest of head itchy | Applied as scheduled. |
 | 2026-05-29 | Every 3 days | ✅ | Hairline redness totally under control; rest of head still quite itchy | Applied last night. Need to speak to GP about next steps. |
+| 2026-06-14 | Every 3 days | Reminder sent | Awaiting response | Taper continues. Reminder dispatched by cron job. |
