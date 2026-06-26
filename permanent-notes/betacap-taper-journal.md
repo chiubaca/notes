@@ -1,3 +1,13 @@
+---
+title: Betacap Taper Journal
+publish_date: 2026-05-21
+last_updated: 2026-06-18
+description: Betacap taper schedule and application log for scalp psoriasis
+status: live
+tags:
+  - wellbeing
+---
+
 # Betacap Taper Journal
 
 **Medication:** Betacap (betamethasone scalp application)  
