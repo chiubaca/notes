@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2026-05-27.md",
+                "file": "fleeting-notes/2026-05-06.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "2026-05-27"
+              "title": "2026-05-06"
             }
           }
         ],
@@ -205,10 +205,13 @@
   },
   "active": "dad196805a5223d8",
   "lastOpenFiles": [
+    "fleeting-notes/2026-05-18.md",
     "fleeting-notes/2026-05-24.md",
-    "fleeting-notes/2025-06-14.md",
+    "fleeting-notes/2026-06-26.md",
     "fleeting-notes/2025-06-20.md",
+    "fleeting-notes/2026-06-26-ghostty-openc.md",
     "fleeting-notes/2026-05-27.md",
+    "fleeting-notes/2025-06-14.md",
     "fleeting/2026-05-29-astro-6.4.md",
     "fleeting/20250613.md",
     "permanent-notes/Untitled.base",
@@ -226,7 +229,6 @@
     "retrospectives/2026/04.md",
     "fleeting",
     "fleeting-notes/2026-05-22.md",
-    "fleeting-notes/2026-05-18.md",
     "photos/calvin-2026-04-18.jpg",
     "photos/calvin-2026-05-06.jpg",
     "photos/calvin-2026-05-07.jpg",
@@ -242,7 +244,6 @@
     "permanent-notes/all-things-vector-tiles.md",
     "README.md",
     "photos/Untitled Kanban.md",
-    "fleeting-notes/2026-05-06.md",
     "photos",
     "photos/calvin",
     "syz",
