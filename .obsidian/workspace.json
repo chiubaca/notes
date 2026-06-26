@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2026-05-06.md",
+                "file": "fleeting-notes/2026-06-26.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "2026-05-06"
+              "title": "2026-06-26"
             }
           }
         ],
@@ -205,6 +205,7 @@
   },
   "active": "dad196805a5223d8",
   "lastOpenFiles": [
+    "fleeting-notes/2026-05-06.md",
     "fleeting-notes/2026-05-18.md",
     "fleeting-notes/2026-05-24.md",
     "fleeting-notes/2026-06-26.md",
@@ -243,7 +244,6 @@
     "permanent-notes/anatomy-of-a-threejs-scene.md",
     "permanent-notes/all-things-vector-tiles.md",
     "README.md",
-    "photos/Untitled Kanban.md",
     "photos",
     "photos/calvin",
     "syz",
