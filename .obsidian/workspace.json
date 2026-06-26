@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "syz/betacap-taper-journal.md",
-                "mode": "preview",
+                "file": "permanent-notes/skill-stacking.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "betacap-taper-journal"
+              "title": "skill-stacking"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "betacap",
+                "query": "stacking",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -94,7 +94,8 @@
               "title": "New tab"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -174,8 +175,11 @@
       "exif-editor:Edit EXIF": false
     }
   },
-  "active": "cdd64a28cc6fe199",
+  "active": "0ae09c6757a047f7",
   "lastOpenFiles": [
+    "permanent-notes/leaning-into-the-vibes.md",
+    "permanent-notes/4am-hugs.md",
+    "permanent-notes/betacap-taper-journal.md",
     "syz/betacap-taper-journal.md",
     "retrospectives/2026/06.md",
     "permanent-notes/Untitled.md",
@@ -183,12 +187,10 @@
     "fleeting/20250620.md",
     "fleeting/20250614.md",
     "fleeting/20250613.md",
-    "permanent-notes/4am-hugs.md",
     "permanent",
     "Untitled.md",
     "retrospectives/2026/05.md",
     "retrospectives/2026/04.md",
-    "permanent-notes/betacap-taper-journal.md",
     "fleeting/2026-05-29-astro-6.4.md",
     "fleeting",
     "fleeting-notes/2026-05-27.md",
@@ -215,7 +217,6 @@
     "photos/calvin",
     "fleeting-notes/2026-05-07.md",
     "fleeting-notes/2026-05-03.md",
-    "fleeting-notes/2020-09-20.md",
     "syz",
     "retrospectives/2026/Untitled",
     "retrospectives/2026",
