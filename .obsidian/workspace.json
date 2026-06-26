@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "permanent-notes/electrician-in-training-notes.md",
+                "file": "syz/betacap-taper-journal.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "electrician-in-training-notes"
+              "title": "betacap-taper-journal"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "05",
+                "query": "betacap",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -151,11 +151,13 @@
               "title": "EXIF Editor"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 582.5
+    "width": 582.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -172,13 +174,18 @@
       "exif-editor:Edit EXIF": false
     }
   },
-  "active": "0ae09c6757a047f7",
+  "active": "cdd64a28cc6fe199",
   "lastOpenFiles": [
-    "permanent-notes/4am-hugs.md",
+    "syz/betacap-taper-journal.md",
+    "retrospectives/2026/06.md",
+    "permanent-notes/Untitled.md",
     "permanent-notes/electrician-in-training-notes.md",
+    "fleeting/20250620.md",
+    "fleeting/20250614.md",
+    "fleeting/20250613.md",
+    "permanent-notes/4am-hugs.md",
     "permanent",
     "Untitled.md",
-    "syz/betacap-taper-journal.md",
     "retrospectives/2026/05.md",
     "retrospectives/2026/04.md",
     "permanent-notes/betacap-taper-journal.md",
@@ -209,12 +216,7 @@
     "fleeting-notes/2026-05-07.md",
     "fleeting-notes/2026-05-03.md",
     "fleeting-notes/2020-09-20.md",
-    "fleeting-notes/2020-09-14.md",
-    "fleeting-notes/2020-09-13.md",
-    "fleeting-notes/2020-09-11.md",
-    "retrospectives/2026/01-02.md",
     "syz",
-    "retrospectives/2026/03.md",
     "retrospectives/2026/Untitled",
     "retrospectives/2026",
     "planning/House renovation.canvas",

@@ -6,6 +6,7 @@ description: Note on how to become an electrian
 status: draft
 tags:
   - career-pivot
+  - electrician
 ---
 
 # Electrical Trade Specialisms: Landscape Analysis
