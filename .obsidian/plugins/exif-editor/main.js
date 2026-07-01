@@ -6,10 +6,39 @@ if you want to view the source, please visit the github repository of this plugi
 "use strict";
 var __create = Object.create;
 var __defProp = Object.defineProperty;
+var __defProps = Object.defineProperties;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
 var __getOwnPropNames = Object.getOwnPropertyNames;
+var __getOwnPropSymbols = Object.getOwnPropertySymbols;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __propIsEnum = Object.prototype.propertyIsEnumerable;
+var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues = (a, b) => {
+  for (var prop in b || (b = {}))
+    if (__hasOwnProp.call(b, prop))
+      __defNormalProp(a, prop, b[prop]);
+  if (__getOwnPropSymbols)
+    for (var prop of __getOwnPropSymbols(b)) {
+      if (__propIsEnum.call(b, prop))
+        __defNormalProp(a, prop, b[prop]);
+    }
+  return a;
+};
+var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
+var __objRest = (source, exclude) => {
+  var target = {};
+  for (var prop in source)
+    if (__hasOwnProp.call(source, prop) && exclude.indexOf(prop) < 0)
+      target[prop] = source[prop];
+  if (source != null && __getOwnPropSymbols)
+    for (var prop of __getOwnPropSymbols(source)) {
+      if (exclude.indexOf(prop) < 0 && __propIsEnum.call(source, prop))
+        target[prop] = source[prop];
+    }
+  return target;
+};
 var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
@@ -62,7 +91,7 @@ var require_piexif = __commonJS({
         var b64 = false;
         if (jpeg.slice(0, 2) == "\xFF\xD8") {
         } else if (jpeg.slice(0, 23) == "data:image/jpeg;base64," || jpeg.slice(0, 22) == "data:image/jpg;base64,") {
-          jpeg = atob(jpeg.split(",")[1]);
+          jpeg = atob2(jpeg.split(",")[1]);
           b64 = true;
         } else {
           throw new Error("Given data is not jpeg.");
@@ -73,7 +102,7 @@ var require_piexif = __commonJS({
         });
         var new_data = newSegments.join("");
         if (b64) {
-          new_data = "data:image/jpeg;base64," + btoa(new_data);
+          new_data = "data:image/jpeg;base64," + btoa2(new_data);
         }
         return new_data;
       };
@@ -84,7 +113,7 @@ var require_piexif = __commonJS({
         }
         if (jpeg.slice(0, 2) == "\xFF\xD8") {
         } else if (jpeg.slice(0, 23) == "data:image/jpeg;base64," || jpeg.slice(0, 22) == "data:image/jpg;base64,") {
-          jpeg = atob(jpeg.split(",")[1]);
+          jpeg = atob2(jpeg.split(",")[1]);
           b64 = true;
         } else {
           throw new Error("Given data is not jpeg.");
@@ -93,7 +122,7 @@ var require_piexif = __commonJS({
         var segments = splitIntoSegments(jpeg);
         var new_data = mergeSegments(segments, exifStr);
         if (b64) {
-          new_data = "data:image/jpeg;base64," + btoa(new_data);
+          new_data = "data:image/jpeg;base64," + btoa2(new_data);
         }
         return new_data;
       };
@@ -103,7 +132,7 @@ var require_piexif = __commonJS({
           if (data.slice(0, 2) == "\xFF\xD8") {
             input_data = data;
           } else if (data.slice(0, 23) == "data:image/jpeg;base64," || data.slice(0, 22) == "data:image/jpg;base64,") {
-            input_data = atob(data.split(",")[1]);
+            input_data = atob2(data.split(",")[1]);
           } else if (data.slice(0, 4) == "Exif") {
             input_data = data.slice(6);
           } else {
@@ -282,14 +311,14 @@ var require_piexif = __commonJS({
         }
         return segments.join("");
       }
-      function _pack_byte(array) {
-        return pack(">" + nStr("B", array.length), array);
+      function _pack_byte(array2) {
+        return pack(">" + nStr("B", array2.length), array2);
       }
-      function _pack_short(array) {
-        return pack(">" + nStr("H", array.length), array);
+      function _pack_short(array2) {
+        return pack(">" + nStr("H", array2.length), array2);
       }
-      function _pack_long(array) {
-        return pack(">" + nStr("L", array.length), array);
+      function _pack_long(array2) {
+        return pack(">" + nStr("L", array2.length), array2);
       }
       function _value_to_bytes(raw_value, value_type, offset) {
         var four_bytes_over = "";
@@ -609,10 +638,10 @@ var require_piexif = __commonJS({
         }
       };
       if (typeof window !== "undefined" && typeof window.btoa === "function") {
-        var btoa = window.btoa;
+        var btoa2 = window.btoa;
       }
-      if (typeof btoa === "undefined") {
-        var btoa = function(input) {
+      if (typeof btoa2 === "undefined") {
+        var btoa2 = function(input) {
           var output = "";
           var chr1, chr2, chr3, enc1, enc2, enc3, enc4;
           var i = 0;
@@ -636,10 +665,10 @@ var require_piexif = __commonJS({
         };
       }
       if (typeof window !== "undefined" && typeof window.atob === "function") {
-        var atob = window.atob;
+        var atob2 = window.atob;
       }
-      if (typeof atob === "undefined") {
-        var atob = function(input) {
+      if (typeof atob2 === "undefined") {
+        var atob2 = function(input) {
           var output = "";
           var chr1, chr2, chr3;
           var enc1, enc2, enc3, enc4;
@@ -678,12 +707,12 @@ var require_piexif = __commonJS({
         }
         return [width, height];
       }
-      function pack(mark, array) {
-        if (!(array instanceof Array)) {
+      function pack(mark, array2) {
+        if (!(array2 instanceof Array)) {
           throw new Error("'pack' error. Got invalid type argument.");
         }
-        if (mark.length - 1 != array.length) {
-          throw new Error("'pack' error. " + (mark.length - 1) + " marks, " + array.length + " elements.");
+        if (mark.length - 1 != array2.length) {
+          throw new Error("'pack' error. " + (mark.length - 1) + " marks, " + array2.length + " elements.");
         }
         var littleEndian;
         if (mark[0] == "<") {
@@ -700,7 +729,7 @@ var require_piexif = __commonJS({
         var valStr = null;
         while (c = mark[p]) {
           if (c.toLowerCase() == "b") {
-            val = array[p - 1];
+            val = array2[p - 1];
             if (c == "b" && val < 0) {
               val += 256;
             }
@@ -710,7 +739,7 @@ var require_piexif = __commonJS({
               valStr = String.fromCharCode(val);
             }
           } else if (c == "H") {
-            val = array[p - 1];
+            val = array2[p - 1];
             if (val > 65535 || val < 0) {
               throw new Error("'pack' error.");
             } else {
@@ -720,7 +749,7 @@ var require_piexif = __commonJS({
               }
             }
           } else if (c.toLowerCase() == "l") {
-            val = array[p - 1];
+            val = array2[p - 1];
             if (c == "l" && val < 0) {
               val += 4294967296;
             }
@@ -872,8 +901,8 @@ var require_piexif = __commonJS({
         var hexStr = "";
         for (var i = 0; i < str.length; i++) {
           var h = str.charCodeAt(i);
-          var hex = (h < 10 ? "0" : "") + h.toString(16);
-          hexStr += hex + " ";
+          var hex3 = (h < 10 ? "0" : "") + h.toString(16);
+          hexStr += hex3 + " ";
         }
         return hexStr;
       }
@@ -2372,6 +2401,8170 @@ var require_piexif = __commonJS({
   }
 });
 
+// node_modules/leaflet/dist/leaflet-src.js
+var require_leaflet_src = __commonJS({
+  "node_modules/leaflet/dist/leaflet-src.js"(exports, module2) {
+    (function(global, factory) {
+      typeof exports === "object" && typeof module2 !== "undefined" ? factory(exports) : typeof define === "function" && define.amd ? define(["exports"], factory) : (global = typeof globalThis !== "undefined" ? globalThis : global || self, factory(global.leaflet = {}));
+    })(exports, function(exports2) {
+      "use strict";
+      var version2 = "1.9.4";
+      function extend2(dest) {
+        var i, j, len, src;
+        for (j = 1, len = arguments.length; j < len; j++) {
+          src = arguments[j];
+          for (i in src) {
+            dest[i] = src[i];
+          }
+        }
+        return dest;
+      }
+      var create$2 = Object.create || function() {
+        function F() {
+        }
+        return function(proto) {
+          F.prototype = proto;
+          return new F();
+        };
+      }();
+      function bind(fn, obj) {
+        var slice = Array.prototype.slice;
+        if (fn.bind) {
+          return fn.bind.apply(fn, slice.call(arguments, 1));
+        }
+        var args = slice.call(arguments, 2);
+        return function() {
+          return fn.apply(obj, args.length ? args.concat(slice.call(arguments)) : arguments);
+        };
+      }
+      var lastId = 0;
+      function stamp(obj) {
+        if (!("_leaflet_id" in obj)) {
+          obj["_leaflet_id"] = ++lastId;
+        }
+        return obj._leaflet_id;
+      }
+      function throttle(fn, time3, context) {
+        var lock, args, wrapperFn, later;
+        later = function() {
+          lock = false;
+          if (args) {
+            wrapperFn.apply(context, args);
+            args = false;
+          }
+        };
+        wrapperFn = function() {
+          if (lock) {
+            args = arguments;
+          } else {
+            fn.apply(context, arguments);
+            setTimeout(later, time3);
+            lock = true;
+          }
+        };
+        return wrapperFn;
+      }
+      function wrapNum(x, range, includeMax) {
+        var max = range[1], min = range[0], d = max - min;
+        return x === max && includeMax ? x : ((x - min) % d + d) % d + min;
+      }
+      function falseFn() {
+        return false;
+      }
+      function formatNum(num, precision) {
+        if (precision === false) {
+          return num;
+        }
+        var pow = Math.pow(10, precision === void 0 ? 6 : precision);
+        return Math.round(num * pow) / pow;
+      }
+      function trim(str) {
+        return str.trim ? str.trim() : str.replace(/^\s+|\s+$/g, "");
+      }
+      function splitWords(str) {
+        return trim(str).split(/\s+/);
+      }
+      function setOptions(obj, options) {
+        if (!Object.prototype.hasOwnProperty.call(obj, "options")) {
+          obj.options = obj.options ? create$2(obj.options) : {};
+        }
+        for (var i in options) {
+          obj.options[i] = options[i];
+        }
+        return obj.options;
+      }
+      function getParamString(obj, existingUrl, uppercase2) {
+        var params = [];
+        for (var i in obj) {
+          params.push(encodeURIComponent(uppercase2 ? i.toUpperCase() : i) + "=" + encodeURIComponent(obj[i]));
+        }
+        return (!existingUrl || existingUrl.indexOf("?") === -1 ? "?" : "&") + params.join("&");
+      }
+      var templateRe = /\{ *([\w_ -]+) *\}/g;
+      function template(str, data) {
+        return str.replace(templateRe, function(str2, key) {
+          var value = data[key];
+          if (value === void 0) {
+            throw new Error("No value provided for variable " + str2);
+          } else if (typeof value === "function") {
+            value = value(data);
+          }
+          return value;
+        });
+      }
+      var isArray = Array.isArray || function(obj) {
+        return Object.prototype.toString.call(obj) === "[object Array]";
+      };
+      function indexOf(array2, el) {
+        for (var i = 0; i < array2.length; i++) {
+          if (array2[i] === el) {
+            return i;
+          }
+        }
+        return -1;
+      }
+      var emptyImageUrl = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
+      function getPrefixed(name) {
+        return window["webkit" + name] || window["moz" + name] || window["ms" + name];
+      }
+      var lastTime = 0;
+      function timeoutDefer(fn) {
+        var time3 = +new Date(), timeToCall = Math.max(0, 16 - (time3 - lastTime));
+        lastTime = time3 + timeToCall;
+        return window.setTimeout(fn, timeToCall);
+      }
+      var requestFn = window.requestAnimationFrame || getPrefixed("RequestAnimationFrame") || timeoutDefer;
+      var cancelFn = window.cancelAnimationFrame || getPrefixed("CancelAnimationFrame") || getPrefixed("CancelRequestAnimationFrame") || function(id) {
+        window.clearTimeout(id);
+      };
+      function requestAnimFrame(fn, context, immediate) {
+        if (immediate && requestFn === timeoutDefer) {
+          fn.call(context);
+        } else {
+          return requestFn.call(window, bind(fn, context));
+        }
+      }
+      function cancelAnimFrame(id) {
+        if (id) {
+          cancelFn.call(window, id);
+        }
+      }
+      var Util = {
+        __proto__: null,
+        extend: extend2,
+        create: create$2,
+        bind,
+        get lastId() {
+          return lastId;
+        },
+        stamp,
+        throttle,
+        wrapNum,
+        falseFn,
+        formatNum,
+        trim,
+        splitWords,
+        setOptions,
+        getParamString,
+        template,
+        isArray,
+        indexOf,
+        emptyImageUrl,
+        requestFn,
+        cancelFn,
+        requestAnimFrame,
+        cancelAnimFrame
+      };
+      function Class2() {
+      }
+      Class2.extend = function(props) {
+        var NewClass = function() {
+          setOptions(this);
+          if (this.initialize) {
+            this.initialize.apply(this, arguments);
+          }
+          this.callInitHooks();
+        };
+        var parentProto = NewClass.__super__ = this.prototype;
+        var proto = create$2(parentProto);
+        proto.constructor = NewClass;
+        NewClass.prototype = proto;
+        for (var i in this) {
+          if (Object.prototype.hasOwnProperty.call(this, i) && i !== "prototype" && i !== "__super__") {
+            NewClass[i] = this[i];
+          }
+        }
+        if (props.statics) {
+          extend2(NewClass, props.statics);
+        }
+        if (props.includes) {
+          checkDeprecatedMixinEvents(props.includes);
+          extend2.apply(null, [proto].concat(props.includes));
+        }
+        extend2(proto, props);
+        delete proto.statics;
+        delete proto.includes;
+        if (proto.options) {
+          proto.options = parentProto.options ? create$2(parentProto.options) : {};
+          extend2(proto.options, props.options);
+        }
+        proto._initHooks = [];
+        proto.callInitHooks = function() {
+          if (this._initHooksCalled) {
+            return;
+          }
+          if (parentProto.callInitHooks) {
+            parentProto.callInitHooks.call(this);
+          }
+          this._initHooksCalled = true;
+          for (var i2 = 0, len = proto._initHooks.length; i2 < len; i2++) {
+            proto._initHooks[i2].call(this);
+          }
+        };
+        return NewClass;
+      };
+      Class2.include = function(props) {
+        var parentOptions = this.prototype.options;
+        extend2(this.prototype, props);
+        if (props.options) {
+          this.prototype.options = parentOptions;
+          this.mergeOptions(props.options);
+        }
+        return this;
+      };
+      Class2.mergeOptions = function(options) {
+        extend2(this.prototype.options, options);
+        return this;
+      };
+      Class2.addInitHook = function(fn) {
+        var args = Array.prototype.slice.call(arguments, 1);
+        var init = typeof fn === "function" ? fn : function() {
+          this[fn].apply(this, args);
+        };
+        this.prototype._initHooks = this.prototype._initHooks || [];
+        this.prototype._initHooks.push(init);
+        return this;
+      };
+      function checkDeprecatedMixinEvents(includes) {
+        if (typeof L === "undefined" || !L || !L.Mixin) {
+          return;
+        }
+        includes = isArray(includes) ? includes : [includes];
+        for (var i = 0; i < includes.length; i++) {
+          if (includes[i] === L.Mixin.Events) {
+            console.warn("Deprecated include of L.Mixin.Events: this property will be removed in future releases, please inherit from L.Evented instead.", new Error().stack);
+          }
+        }
+      }
+      var Events = {
+        on: function(types, fn, context) {
+          if (typeof types === "object") {
+            for (var type in types) {
+              this._on(type, types[type], fn);
+            }
+          } else {
+            types = splitWords(types);
+            for (var i = 0, len = types.length; i < len; i++) {
+              this._on(types[i], fn, context);
+            }
+          }
+          return this;
+        },
+        off: function(types, fn, context) {
+          if (!arguments.length) {
+            delete this._events;
+          } else if (typeof types === "object") {
+            for (var type in types) {
+              this._off(type, types[type], fn);
+            }
+          } else {
+            types = splitWords(types);
+            var removeAll = arguments.length === 1;
+            for (var i = 0, len = types.length; i < len; i++) {
+              if (removeAll) {
+                this._off(types[i]);
+              } else {
+                this._off(types[i], fn, context);
+              }
+            }
+          }
+          return this;
+        },
+        _on: function(type, fn, context, _once) {
+          if (typeof fn !== "function") {
+            console.warn("wrong listener type: " + typeof fn);
+            return;
+          }
+          if (this._listens(type, fn, context) !== false) {
+            return;
+          }
+          if (context === this) {
+            context = void 0;
+          }
+          var newListener = { fn, ctx: context };
+          if (_once) {
+            newListener.once = true;
+          }
+          this._events = this._events || {};
+          this._events[type] = this._events[type] || [];
+          this._events[type].push(newListener);
+        },
+        _off: function(type, fn, context) {
+          var listeners, i, len;
+          if (!this._events) {
+            return;
+          }
+          listeners = this._events[type];
+          if (!listeners) {
+            return;
+          }
+          if (arguments.length === 1) {
+            if (this._firingCount) {
+              for (i = 0, len = listeners.length; i < len; i++) {
+                listeners[i].fn = falseFn;
+              }
+            }
+            delete this._events[type];
+            return;
+          }
+          if (typeof fn !== "function") {
+            console.warn("wrong listener type: " + typeof fn);
+            return;
+          }
+          var index2 = this._listens(type, fn, context);
+          if (index2 !== false) {
+            var listener = listeners[index2];
+            if (this._firingCount) {
+              listener.fn = falseFn;
+              this._events[type] = listeners = listeners.slice();
+            }
+            listeners.splice(index2, 1);
+          }
+        },
+        fire: function(type, data, propagate) {
+          if (!this.listens(type, propagate)) {
+            return this;
+          }
+          var event = extend2({}, data, {
+            type,
+            target: this,
+            sourceTarget: data && data.sourceTarget || this
+          });
+          if (this._events) {
+            var listeners = this._events[type];
+            if (listeners) {
+              this._firingCount = this._firingCount + 1 || 1;
+              for (var i = 0, len = listeners.length; i < len; i++) {
+                var l = listeners[i];
+                var fn = l.fn;
+                if (l.once) {
+                  this.off(type, fn, l.ctx);
+                }
+                fn.call(l.ctx || this, event);
+              }
+              this._firingCount--;
+            }
+          }
+          if (propagate) {
+            this._propagateEvent(event);
+          }
+          return this;
+        },
+        listens: function(type, fn, context, propagate) {
+          if (typeof type !== "string") {
+            console.warn('"string" type argument expected');
+          }
+          var _fn = fn;
+          if (typeof fn !== "function") {
+            propagate = !!fn;
+            _fn = void 0;
+            context = void 0;
+          }
+          var listeners = this._events && this._events[type];
+          if (listeners && listeners.length) {
+            if (this._listens(type, _fn, context) !== false) {
+              return true;
+            }
+          }
+          if (propagate) {
+            for (var id in this._eventParents) {
+              if (this._eventParents[id].listens(type, fn, context, propagate)) {
+                return true;
+              }
+            }
+          }
+          return false;
+        },
+        _listens: function(type, fn, context) {
+          if (!this._events) {
+            return false;
+          }
+          var listeners = this._events[type] || [];
+          if (!fn) {
+            return !!listeners.length;
+          }
+          if (context === this) {
+            context = void 0;
+          }
+          for (var i = 0, len = listeners.length; i < len; i++) {
+            if (listeners[i].fn === fn && listeners[i].ctx === context) {
+              return i;
+            }
+          }
+          return false;
+        },
+        once: function(types, fn, context) {
+          if (typeof types === "object") {
+            for (var type in types) {
+              this._on(type, types[type], fn, true);
+            }
+          } else {
+            types = splitWords(types);
+            for (var i = 0, len = types.length; i < len; i++) {
+              this._on(types[i], fn, context, true);
+            }
+          }
+          return this;
+        },
+        addEventParent: function(obj) {
+          this._eventParents = this._eventParents || {};
+          this._eventParents[stamp(obj)] = obj;
+          return this;
+        },
+        removeEventParent: function(obj) {
+          if (this._eventParents) {
+            delete this._eventParents[stamp(obj)];
+          }
+          return this;
+        },
+        _propagateEvent: function(e) {
+          for (var id in this._eventParents) {
+            this._eventParents[id].fire(e.type, extend2({
+              layer: e.target,
+              propagatedFrom: e.target
+            }, e), true);
+          }
+        }
+      };
+      Events.addEventListener = Events.on;
+      Events.removeEventListener = Events.clearAllEventListeners = Events.off;
+      Events.addOneTimeEventListener = Events.once;
+      Events.fireEvent = Events.fire;
+      Events.hasEventListeners = Events.listens;
+      var Evented = Class2.extend(Events);
+      function Point(x, y, round) {
+        this.x = round ? Math.round(x) : x;
+        this.y = round ? Math.round(y) : y;
+      }
+      var trunc = Math.trunc || function(v) {
+        return v > 0 ? Math.floor(v) : Math.ceil(v);
+      };
+      Point.prototype = {
+        clone: function() {
+          return new Point(this.x, this.y);
+        },
+        add: function(point) {
+          return this.clone()._add(toPoint(point));
+        },
+        _add: function(point) {
+          this.x += point.x;
+          this.y += point.y;
+          return this;
+        },
+        subtract: function(point) {
+          return this.clone()._subtract(toPoint(point));
+        },
+        _subtract: function(point) {
+          this.x -= point.x;
+          this.y -= point.y;
+          return this;
+        },
+        divideBy: function(num) {
+          return this.clone()._divideBy(num);
+        },
+        _divideBy: function(num) {
+          this.x /= num;
+          this.y /= num;
+          return this;
+        },
+        multiplyBy: function(num) {
+          return this.clone()._multiplyBy(num);
+        },
+        _multiplyBy: function(num) {
+          this.x *= num;
+          this.y *= num;
+          return this;
+        },
+        scaleBy: function(point) {
+          return new Point(this.x * point.x, this.y * point.y);
+        },
+        unscaleBy: function(point) {
+          return new Point(this.x / point.x, this.y / point.y);
+        },
+        round: function() {
+          return this.clone()._round();
+        },
+        _round: function() {
+          this.x = Math.round(this.x);
+          this.y = Math.round(this.y);
+          return this;
+        },
+        floor: function() {
+          return this.clone()._floor();
+        },
+        _floor: function() {
+          this.x = Math.floor(this.x);
+          this.y = Math.floor(this.y);
+          return this;
+        },
+        ceil: function() {
+          return this.clone()._ceil();
+        },
+        _ceil: function() {
+          this.x = Math.ceil(this.x);
+          this.y = Math.ceil(this.y);
+          return this;
+        },
+        trunc: function() {
+          return this.clone()._trunc();
+        },
+        _trunc: function() {
+          this.x = trunc(this.x);
+          this.y = trunc(this.y);
+          return this;
+        },
+        distanceTo: function(point) {
+          point = toPoint(point);
+          var x = point.x - this.x, y = point.y - this.y;
+          return Math.sqrt(x * x + y * y);
+        },
+        equals: function(point) {
+          point = toPoint(point);
+          return point.x === this.x && point.y === this.y;
+        },
+        contains: function(point) {
+          point = toPoint(point);
+          return Math.abs(point.x) <= Math.abs(this.x) && Math.abs(point.y) <= Math.abs(this.y);
+        },
+        toString: function() {
+          return "Point(" + formatNum(this.x) + ", " + formatNum(this.y) + ")";
+        }
+      };
+      function toPoint(x, y, round) {
+        if (x instanceof Point) {
+          return x;
+        }
+        if (isArray(x)) {
+          return new Point(x[0], x[1]);
+        }
+        if (x === void 0 || x === null) {
+          return x;
+        }
+        if (typeof x === "object" && "x" in x && "y" in x) {
+          return new Point(x.x, x.y);
+        }
+        return new Point(x, y, round);
+      }
+      function Bounds(a, b) {
+        if (!a) {
+          return;
+        }
+        var points = b ? [a, b] : a;
+        for (var i = 0, len = points.length; i < len; i++) {
+          this.extend(points[i]);
+        }
+      }
+      Bounds.prototype = {
+        extend: function(obj) {
+          var min2, max2;
+          if (!obj) {
+            return this;
+          }
+          if (obj instanceof Point || typeof obj[0] === "number" || "x" in obj) {
+            min2 = max2 = toPoint(obj);
+          } else {
+            obj = toBounds(obj);
+            min2 = obj.min;
+            max2 = obj.max;
+            if (!min2 || !max2) {
+              return this;
+            }
+          }
+          if (!this.min && !this.max) {
+            this.min = min2.clone();
+            this.max = max2.clone();
+          } else {
+            this.min.x = Math.min(min2.x, this.min.x);
+            this.max.x = Math.max(max2.x, this.max.x);
+            this.min.y = Math.min(min2.y, this.min.y);
+            this.max.y = Math.max(max2.y, this.max.y);
+          }
+          return this;
+        },
+        getCenter: function(round) {
+          return toPoint(
+            (this.min.x + this.max.x) / 2,
+            (this.min.y + this.max.y) / 2,
+            round
+          );
+        },
+        getBottomLeft: function() {
+          return toPoint(this.min.x, this.max.y);
+        },
+        getTopRight: function() {
+          return toPoint(this.max.x, this.min.y);
+        },
+        getTopLeft: function() {
+          return this.min;
+        },
+        getBottomRight: function() {
+          return this.max;
+        },
+        getSize: function() {
+          return this.max.subtract(this.min);
+        },
+        contains: function(obj) {
+          var min, max;
+          if (typeof obj[0] === "number" || obj instanceof Point) {
+            obj = toPoint(obj);
+          } else {
+            obj = toBounds(obj);
+          }
+          if (obj instanceof Bounds) {
+            min = obj.min;
+            max = obj.max;
+          } else {
+            min = max = obj;
+          }
+          return min.x >= this.min.x && max.x <= this.max.x && min.y >= this.min.y && max.y <= this.max.y;
+        },
+        intersects: function(bounds) {
+          bounds = toBounds(bounds);
+          var min = this.min, max = this.max, min2 = bounds.min, max2 = bounds.max, xIntersects = max2.x >= min.x && min2.x <= max.x, yIntersects = max2.y >= min.y && min2.y <= max.y;
+          return xIntersects && yIntersects;
+        },
+        overlaps: function(bounds) {
+          bounds = toBounds(bounds);
+          var min = this.min, max = this.max, min2 = bounds.min, max2 = bounds.max, xOverlaps = max2.x > min.x && min2.x < max.x, yOverlaps = max2.y > min.y && min2.y < max.y;
+          return xOverlaps && yOverlaps;
+        },
+        isValid: function() {
+          return !!(this.min && this.max);
+        },
+        pad: function(bufferRatio) {
+          var min = this.min, max = this.max, heightBuffer = Math.abs(min.x - max.x) * bufferRatio, widthBuffer = Math.abs(min.y - max.y) * bufferRatio;
+          return toBounds(
+            toPoint(min.x - heightBuffer, min.y - widthBuffer),
+            toPoint(max.x + heightBuffer, max.y + widthBuffer)
+          );
+        },
+        equals: function(bounds) {
+          if (!bounds) {
+            return false;
+          }
+          bounds = toBounds(bounds);
+          return this.min.equals(bounds.getTopLeft()) && this.max.equals(bounds.getBottomRight());
+        }
+      };
+      function toBounds(a, b) {
+        if (!a || a instanceof Bounds) {
+          return a;
+        }
+        return new Bounds(a, b);
+      }
+      function LatLngBounds(corner1, corner2) {
+        if (!corner1) {
+          return;
+        }
+        var latlngs = corner2 ? [corner1, corner2] : corner1;
+        for (var i = 0, len = latlngs.length; i < len; i++) {
+          this.extend(latlngs[i]);
+        }
+      }
+      LatLngBounds.prototype = {
+        extend: function(obj) {
+          var sw = this._southWest, ne = this._northEast, sw2, ne2;
+          if (obj instanceof LatLng) {
+            sw2 = obj;
+            ne2 = obj;
+          } else if (obj instanceof LatLngBounds) {
+            sw2 = obj._southWest;
+            ne2 = obj._northEast;
+            if (!sw2 || !ne2) {
+              return this;
+            }
+          } else {
+            return obj ? this.extend(toLatLng(obj) || toLatLngBounds(obj)) : this;
+          }
+          if (!sw && !ne) {
+            this._southWest = new LatLng(sw2.lat, sw2.lng);
+            this._northEast = new LatLng(ne2.lat, ne2.lng);
+          } else {
+            sw.lat = Math.min(sw2.lat, sw.lat);
+            sw.lng = Math.min(sw2.lng, sw.lng);
+            ne.lat = Math.max(ne2.lat, ne.lat);
+            ne.lng = Math.max(ne2.lng, ne.lng);
+          }
+          return this;
+        },
+        pad: function(bufferRatio) {
+          var sw = this._southWest, ne = this._northEast, heightBuffer = Math.abs(sw.lat - ne.lat) * bufferRatio, widthBuffer = Math.abs(sw.lng - ne.lng) * bufferRatio;
+          return new LatLngBounds(
+            new LatLng(sw.lat - heightBuffer, sw.lng - widthBuffer),
+            new LatLng(ne.lat + heightBuffer, ne.lng + widthBuffer)
+          );
+        },
+        getCenter: function() {
+          return new LatLng(
+            (this._southWest.lat + this._northEast.lat) / 2,
+            (this._southWest.lng + this._northEast.lng) / 2
+          );
+        },
+        getSouthWest: function() {
+          return this._southWest;
+        },
+        getNorthEast: function() {
+          return this._northEast;
+        },
+        getNorthWest: function() {
+          return new LatLng(this.getNorth(), this.getWest());
+        },
+        getSouthEast: function() {
+          return new LatLng(this.getSouth(), this.getEast());
+        },
+        getWest: function() {
+          return this._southWest.lng;
+        },
+        getSouth: function() {
+          return this._southWest.lat;
+        },
+        getEast: function() {
+          return this._northEast.lng;
+        },
+        getNorth: function() {
+          return this._northEast.lat;
+        },
+        contains: function(obj) {
+          if (typeof obj[0] === "number" || obj instanceof LatLng || "lat" in obj) {
+            obj = toLatLng(obj);
+          } else {
+            obj = toLatLngBounds(obj);
+          }
+          var sw = this._southWest, ne = this._northEast, sw2, ne2;
+          if (obj instanceof LatLngBounds) {
+            sw2 = obj.getSouthWest();
+            ne2 = obj.getNorthEast();
+          } else {
+            sw2 = ne2 = obj;
+          }
+          return sw2.lat >= sw.lat && ne2.lat <= ne.lat && sw2.lng >= sw.lng && ne2.lng <= ne.lng;
+        },
+        intersects: function(bounds) {
+          bounds = toLatLngBounds(bounds);
+          var sw = this._southWest, ne = this._northEast, sw2 = bounds.getSouthWest(), ne2 = bounds.getNorthEast(), latIntersects = ne2.lat >= sw.lat && sw2.lat <= ne.lat, lngIntersects = ne2.lng >= sw.lng && sw2.lng <= ne.lng;
+          return latIntersects && lngIntersects;
+        },
+        overlaps: function(bounds) {
+          bounds = toLatLngBounds(bounds);
+          var sw = this._southWest, ne = this._northEast, sw2 = bounds.getSouthWest(), ne2 = bounds.getNorthEast(), latOverlaps = ne2.lat > sw.lat && sw2.lat < ne.lat, lngOverlaps = ne2.lng > sw.lng && sw2.lng < ne.lng;
+          return latOverlaps && lngOverlaps;
+        },
+        toBBoxString: function() {
+          return [this.getWest(), this.getSouth(), this.getEast(), this.getNorth()].join(",");
+        },
+        equals: function(bounds, maxMargin) {
+          if (!bounds) {
+            return false;
+          }
+          bounds = toLatLngBounds(bounds);
+          return this._southWest.equals(bounds.getSouthWest(), maxMargin) && this._northEast.equals(bounds.getNorthEast(), maxMargin);
+        },
+        isValid: function() {
+          return !!(this._southWest && this._northEast);
+        }
+      };
+      function toLatLngBounds(a, b) {
+        if (a instanceof LatLngBounds) {
+          return a;
+        }
+        return new LatLngBounds(a, b);
+      }
+      function LatLng(lat, lng, alt) {
+        if (isNaN(lat) || isNaN(lng)) {
+          throw new Error("Invalid LatLng object: (" + lat + ", " + lng + ")");
+        }
+        this.lat = +lat;
+        this.lng = +lng;
+        if (alt !== void 0) {
+          this.alt = +alt;
+        }
+      }
+      LatLng.prototype = {
+        equals: function(obj, maxMargin) {
+          if (!obj) {
+            return false;
+          }
+          obj = toLatLng(obj);
+          var margin = Math.max(
+            Math.abs(this.lat - obj.lat),
+            Math.abs(this.lng - obj.lng)
+          );
+          return margin <= (maxMargin === void 0 ? 1e-9 : maxMargin);
+        },
+        toString: function(precision) {
+          return "LatLng(" + formatNum(this.lat, precision) + ", " + formatNum(this.lng, precision) + ")";
+        },
+        distanceTo: function(other) {
+          return Earth.distance(this, toLatLng(other));
+        },
+        wrap: function() {
+          return Earth.wrapLatLng(this);
+        },
+        toBounds: function(sizeInMeters) {
+          var latAccuracy = 180 * sizeInMeters / 40075017, lngAccuracy = latAccuracy / Math.cos(Math.PI / 180 * this.lat);
+          return toLatLngBounds(
+            [this.lat - latAccuracy, this.lng - lngAccuracy],
+            [this.lat + latAccuracy, this.lng + lngAccuracy]
+          );
+        },
+        clone: function() {
+          return new LatLng(this.lat, this.lng, this.alt);
+        }
+      };
+      function toLatLng(a, b, c) {
+        if (a instanceof LatLng) {
+          return a;
+        }
+        if (isArray(a) && typeof a[0] !== "object") {
+          if (a.length === 3) {
+            return new LatLng(a[0], a[1], a[2]);
+          }
+          if (a.length === 2) {
+            return new LatLng(a[0], a[1]);
+          }
+          return null;
+        }
+        if (a === void 0 || a === null) {
+          return a;
+        }
+        if (typeof a === "object" && "lat" in a) {
+          return new LatLng(a.lat, "lng" in a ? a.lng : a.lon, a.alt);
+        }
+        if (b === void 0) {
+          return null;
+        }
+        return new LatLng(a, b, c);
+      }
+      var CRS = {
+        latLngToPoint: function(latlng, zoom2) {
+          var projectedPoint = this.projection.project(latlng), scale2 = this.scale(zoom2);
+          return this.transformation._transform(projectedPoint, scale2);
+        },
+        pointToLatLng: function(point, zoom2) {
+          var scale2 = this.scale(zoom2), untransformedPoint = this.transformation.untransform(point, scale2);
+          return this.projection.unproject(untransformedPoint);
+        },
+        project: function(latlng) {
+          return this.projection.project(latlng);
+        },
+        unproject: function(point) {
+          return this.projection.unproject(point);
+        },
+        scale: function(zoom2) {
+          return 256 * Math.pow(2, zoom2);
+        },
+        zoom: function(scale2) {
+          return Math.log(scale2 / 256) / Math.LN2;
+        },
+        getProjectedBounds: function(zoom2) {
+          if (this.infinite) {
+            return null;
+          }
+          var b = this.projection.bounds, s = this.scale(zoom2), min = this.transformation.transform(b.min, s), max = this.transformation.transform(b.max, s);
+          return new Bounds(min, max);
+        },
+        infinite: false,
+        wrapLatLng: function(latlng) {
+          var lng = this.wrapLng ? wrapNum(latlng.lng, this.wrapLng, true) : latlng.lng, lat = this.wrapLat ? wrapNum(latlng.lat, this.wrapLat, true) : latlng.lat, alt = latlng.alt;
+          return new LatLng(lat, lng, alt);
+        },
+        wrapLatLngBounds: function(bounds) {
+          var center = bounds.getCenter(), newCenter = this.wrapLatLng(center), latShift = center.lat - newCenter.lat, lngShift = center.lng - newCenter.lng;
+          if (latShift === 0 && lngShift === 0) {
+            return bounds;
+          }
+          var sw = bounds.getSouthWest(), ne = bounds.getNorthEast(), newSw = new LatLng(sw.lat - latShift, sw.lng - lngShift), newNe = new LatLng(ne.lat - latShift, ne.lng - lngShift);
+          return new LatLngBounds(newSw, newNe);
+        }
+      };
+      var Earth = extend2({}, CRS, {
+        wrapLng: [-180, 180],
+        R: 6371e3,
+        distance: function(latlng1, latlng2) {
+          var rad = Math.PI / 180, lat1 = latlng1.lat * rad, lat2 = latlng2.lat * rad, sinDLat = Math.sin((latlng2.lat - latlng1.lat) * rad / 2), sinDLon = Math.sin((latlng2.lng - latlng1.lng) * rad / 2), a = sinDLat * sinDLat + Math.cos(lat1) * Math.cos(lat2) * sinDLon * sinDLon, c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+          return this.R * c;
+        }
+      });
+      var earthRadius = 6378137;
+      var SphericalMercator = {
+        R: earthRadius,
+        MAX_LATITUDE: 85.0511287798,
+        project: function(latlng) {
+          var d = Math.PI / 180, max = this.MAX_LATITUDE, lat = Math.max(Math.min(max, latlng.lat), -max), sin = Math.sin(lat * d);
+          return new Point(
+            this.R * latlng.lng * d,
+            this.R * Math.log((1 + sin) / (1 - sin)) / 2
+          );
+        },
+        unproject: function(point) {
+          var d = 180 / Math.PI;
+          return new LatLng(
+            (2 * Math.atan(Math.exp(point.y / this.R)) - Math.PI / 2) * d,
+            point.x * d / this.R
+          );
+        },
+        bounds: function() {
+          var d = earthRadius * Math.PI;
+          return new Bounds([-d, -d], [d, d]);
+        }()
+      };
+      function Transformation(a, b, c, d) {
+        if (isArray(a)) {
+          this._a = a[0];
+          this._b = a[1];
+          this._c = a[2];
+          this._d = a[3];
+          return;
+        }
+        this._a = a;
+        this._b = b;
+        this._c = c;
+        this._d = d;
+      }
+      Transformation.prototype = {
+        transform: function(point, scale2) {
+          return this._transform(point.clone(), scale2);
+        },
+        _transform: function(point, scale2) {
+          scale2 = scale2 || 1;
+          point.x = scale2 * (this._a * point.x + this._b);
+          point.y = scale2 * (this._c * point.y + this._d);
+          return point;
+        },
+        untransform: function(point, scale2) {
+          scale2 = scale2 || 1;
+          return new Point(
+            (point.x / scale2 - this._b) / this._a,
+            (point.y / scale2 - this._d) / this._c
+          );
+        }
+      };
+      function toTransformation(a, b, c, d) {
+        return new Transformation(a, b, c, d);
+      }
+      var EPSG3857 = extend2({}, Earth, {
+        code: "EPSG:3857",
+        projection: SphericalMercator,
+        transformation: function() {
+          var scale2 = 0.5 / (Math.PI * SphericalMercator.R);
+          return toTransformation(scale2, 0.5, -scale2, 0.5);
+        }()
+      });
+      var EPSG900913 = extend2({}, EPSG3857, {
+        code: "EPSG:900913"
+      });
+      function svgCreate(name) {
+        return document.createElementNS("http://www.w3.org/2000/svg", name);
+      }
+      function pointsToPath(rings, closed) {
+        var str = "", i, j, len, len2, points, p;
+        for (i = 0, len = rings.length; i < len; i++) {
+          points = rings[i];
+          for (j = 0, len2 = points.length; j < len2; j++) {
+            p = points[j];
+            str += (j ? "L" : "M") + p.x + " " + p.y;
+          }
+          str += closed ? Browser.svg ? "z" : "x" : "";
+        }
+        return str || "M0 0";
+      }
+      var style = document.documentElement.style;
+      var ie = "ActiveXObject" in window;
+      var ielt9 = ie && !document.addEventListener;
+      var edge = "msLaunchUri" in navigator && !("documentMode" in document);
+      var webkit = userAgentContains("webkit");
+      var android = userAgentContains("android");
+      var android23 = userAgentContains("android 2") || userAgentContains("android 3");
+      var webkitVer = parseInt(/WebKit\/([0-9]+)|$/.exec(navigator.userAgent)[1], 10);
+      var androidStock = android && userAgentContains("Google") && webkitVer < 537 && !("AudioNode" in window);
+      var opera = !!window.opera;
+      var chrome = !edge && userAgentContains("chrome");
+      var gecko = userAgentContains("gecko") && !webkit && !opera && !ie;
+      var safari = !chrome && userAgentContains("safari");
+      var phantom = userAgentContains("phantom");
+      var opera12 = "OTransition" in style;
+      var win = navigator.platform.indexOf("Win") === 0;
+      var ie3d = ie && "transition" in style;
+      var webkit3d = "WebKitCSSMatrix" in window && "m11" in new window.WebKitCSSMatrix() && !android23;
+      var gecko3d = "MozPerspective" in style;
+      var any3d = !window.L_DISABLE_3D && (ie3d || webkit3d || gecko3d) && !opera12 && !phantom;
+      var mobile = typeof orientation !== "undefined" || userAgentContains("mobile");
+      var mobileWebkit = mobile && webkit;
+      var mobileWebkit3d = mobile && webkit3d;
+      var msPointer = !window.PointerEvent && window.MSPointerEvent;
+      var pointer = !!(window.PointerEvent || msPointer);
+      var touchNative = "ontouchstart" in window || !!window.TouchEvent;
+      var touch = !window.L_NO_TOUCH && (touchNative || pointer);
+      var mobileOpera = mobile && opera;
+      var mobileGecko = mobile && gecko;
+      var retina = (window.devicePixelRatio || window.screen.deviceXDPI / window.screen.logicalXDPI) > 1;
+      var passiveEvents = function() {
+        var supportsPassiveOption = false;
+        try {
+          var opts = Object.defineProperty({}, "passive", {
+            get: function() {
+              supportsPassiveOption = true;
+            }
+          });
+          window.addEventListener("testPassiveEventSupport", falseFn, opts);
+          window.removeEventListener("testPassiveEventSupport", falseFn, opts);
+        } catch (e) {
+        }
+        return supportsPassiveOption;
+      }();
+      var canvas$1 = function() {
+        return !!document.createElement("canvas").getContext;
+      }();
+      var svg$1 = !!(document.createElementNS && svgCreate("svg").createSVGRect);
+      var inlineSvg = !!svg$1 && function() {
+        var div = document.createElement("div");
+        div.innerHTML = "<svg/>";
+        return (div.firstChild && div.firstChild.namespaceURI) === "http://www.w3.org/2000/svg";
+      }();
+      var vml = !svg$1 && function() {
+        try {
+          var div = document.createElement("div");
+          div.innerHTML = '<v:shape adj="1"/>';
+          var shape = div.firstChild;
+          shape.style.behavior = "url(#default#VML)";
+          return shape && typeof shape.adj === "object";
+        } catch (e) {
+          return false;
+        }
+      }();
+      var mac3 = navigator.platform.indexOf("Mac") === 0;
+      var linux = navigator.platform.indexOf("Linux") === 0;
+      function userAgentContains(str) {
+        return navigator.userAgent.toLowerCase().indexOf(str) >= 0;
+      }
+      var Browser = {
+        ie,
+        ielt9,
+        edge,
+        webkit,
+        android,
+        android23,
+        androidStock,
+        opera,
+        chrome,
+        gecko,
+        safari,
+        phantom,
+        opera12,
+        win,
+        ie3d,
+        webkit3d,
+        gecko3d,
+        any3d,
+        mobile,
+        mobileWebkit,
+        mobileWebkit3d,
+        msPointer,
+        pointer,
+        touch,
+        touchNative,
+        mobileOpera,
+        mobileGecko,
+        retina,
+        passiveEvents,
+        canvas: canvas$1,
+        svg: svg$1,
+        vml,
+        inlineSvg,
+        mac: mac3,
+        linux
+      };
+      var POINTER_DOWN = Browser.msPointer ? "MSPointerDown" : "pointerdown";
+      var POINTER_MOVE = Browser.msPointer ? "MSPointerMove" : "pointermove";
+      var POINTER_UP = Browser.msPointer ? "MSPointerUp" : "pointerup";
+      var POINTER_CANCEL = Browser.msPointer ? "MSPointerCancel" : "pointercancel";
+      var pEvent = {
+        touchstart: POINTER_DOWN,
+        touchmove: POINTER_MOVE,
+        touchend: POINTER_UP,
+        touchcancel: POINTER_CANCEL
+      };
+      var handle = {
+        touchstart: _onPointerStart,
+        touchmove: _handlePointer,
+        touchend: _handlePointer,
+        touchcancel: _handlePointer
+      };
+      var _pointers = {};
+      var _pointerDocListener = false;
+      function addPointerListener(obj, type, handler) {
+        if (type === "touchstart") {
+          _addPointerDocListener();
+        }
+        if (!handle[type]) {
+          console.warn("wrong event specified:", type);
+          return falseFn;
+        }
+        handler = handle[type].bind(this, handler);
+        obj.addEventListener(pEvent[type], handler, false);
+        return handler;
+      }
+      function removePointerListener(obj, type, handler) {
+        if (!pEvent[type]) {
+          console.warn("wrong event specified:", type);
+          return;
+        }
+        obj.removeEventListener(pEvent[type], handler, false);
+      }
+      function _globalPointerDown(e) {
+        _pointers[e.pointerId] = e;
+      }
+      function _globalPointerMove(e) {
+        if (_pointers[e.pointerId]) {
+          _pointers[e.pointerId] = e;
+        }
+      }
+      function _globalPointerUp(e) {
+        delete _pointers[e.pointerId];
+      }
+      function _addPointerDocListener() {
+        if (!_pointerDocListener) {
+          document.addEventListener(POINTER_DOWN, _globalPointerDown, true);
+          document.addEventListener(POINTER_MOVE, _globalPointerMove, true);
+          document.addEventListener(POINTER_UP, _globalPointerUp, true);
+          document.addEventListener(POINTER_CANCEL, _globalPointerUp, true);
+          _pointerDocListener = true;
+        }
+      }
+      function _handlePointer(handler, e) {
+        if (e.pointerType === (e.MSPOINTER_TYPE_MOUSE || "mouse")) {
+          return;
+        }
+        e.touches = [];
+        for (var i in _pointers) {
+          e.touches.push(_pointers[i]);
+        }
+        e.changedTouches = [e];
+        handler(e);
+      }
+      function _onPointerStart(handler, e) {
+        if (e.MSPOINTER_TYPE_TOUCH && e.pointerType === e.MSPOINTER_TYPE_TOUCH) {
+          preventDefault(e);
+        }
+        _handlePointer(handler, e);
+      }
+      function makeDblclick(event) {
+        var newEvent = {}, prop, i;
+        for (i in event) {
+          prop = event[i];
+          newEvent[i] = prop && prop.bind ? prop.bind(event) : prop;
+        }
+        event = newEvent;
+        newEvent.type = "dblclick";
+        newEvent.detail = 2;
+        newEvent.isTrusted = false;
+        newEvent._simulated = true;
+        return newEvent;
+      }
+      var delay = 200;
+      function addDoubleTapListener(obj, handler) {
+        obj.addEventListener("dblclick", handler);
+        var last = 0, detail;
+        function simDblclick(e) {
+          if (e.detail !== 1) {
+            detail = e.detail;
+            return;
+          }
+          if (e.pointerType === "mouse" || e.sourceCapabilities && !e.sourceCapabilities.firesTouchEvents) {
+            return;
+          }
+          var path = getPropagationPath(e);
+          if (path.some(function(el) {
+            return el instanceof HTMLLabelElement && el.attributes.for;
+          }) && !path.some(function(el) {
+            return el instanceof HTMLInputElement || el instanceof HTMLSelectElement;
+          })) {
+            return;
+          }
+          var now = Date.now();
+          if (now - last <= delay) {
+            detail++;
+            if (detail === 2) {
+              handler(makeDblclick(e));
+            }
+          } else {
+            detail = 1;
+          }
+          last = now;
+        }
+        obj.addEventListener("click", simDblclick);
+        return {
+          dblclick: handler,
+          simDblclick
+        };
+      }
+      function removeDoubleTapListener(obj, handlers) {
+        obj.removeEventListener("dblclick", handlers.dblclick);
+        obj.removeEventListener("click", handlers.simDblclick);
+      }
+      var TRANSFORM = testProp(
+        ["transform", "webkitTransform", "OTransform", "MozTransform", "msTransform"]
+      );
+      var TRANSITION = testProp(
+        ["webkitTransition", "transition", "OTransition", "MozTransition", "msTransition"]
+      );
+      var TRANSITION_END = TRANSITION === "webkitTransition" || TRANSITION === "OTransition" ? TRANSITION + "End" : "transitionend";
+      function get(id) {
+        return typeof id === "string" ? document.getElementById(id) : id;
+      }
+      function getStyle(el, style2) {
+        var value = el.style[style2] || el.currentStyle && el.currentStyle[style2];
+        if ((!value || value === "auto") && document.defaultView) {
+          var css = document.defaultView.getComputedStyle(el, null);
+          value = css ? css[style2] : null;
+        }
+        return value === "auto" ? null : value;
+      }
+      function create$1(tagName, className, container) {
+        var el = document.createElement(tagName);
+        el.className = className || "";
+        if (container) {
+          container.appendChild(el);
+        }
+        return el;
+      }
+      function remove(el) {
+        var parent = el.parentNode;
+        if (parent) {
+          parent.removeChild(el);
+        }
+      }
+      function empty(el) {
+        while (el.firstChild) {
+          el.removeChild(el.firstChild);
+        }
+      }
+      function toFront(el) {
+        var parent = el.parentNode;
+        if (parent && parent.lastChild !== el) {
+          parent.appendChild(el);
+        }
+      }
+      function toBack(el) {
+        var parent = el.parentNode;
+        if (parent && parent.firstChild !== el) {
+          parent.insertBefore(el, parent.firstChild);
+        }
+      }
+      function hasClass(el, name) {
+        if (el.classList !== void 0) {
+          return el.classList.contains(name);
+        }
+        var className = getClass(el);
+        return className.length > 0 && new RegExp("(^|\\s)" + name + "(\\s|$)").test(className);
+      }
+      function addClass(el, name) {
+        if (el.classList !== void 0) {
+          var classes = splitWords(name);
+          for (var i = 0, len = classes.length; i < len; i++) {
+            el.classList.add(classes[i]);
+          }
+        } else if (!hasClass(el, name)) {
+          var className = getClass(el);
+          setClass(el, (className ? className + " " : "") + name);
+        }
+      }
+      function removeClass(el, name) {
+        if (el.classList !== void 0) {
+          el.classList.remove(name);
+        } else {
+          setClass(el, trim((" " + getClass(el) + " ").replace(" " + name + " ", " ")));
+        }
+      }
+      function setClass(el, name) {
+        if (el.className.baseVal === void 0) {
+          el.className = name;
+        } else {
+          el.className.baseVal = name;
+        }
+      }
+      function getClass(el) {
+        if (el.correspondingElement) {
+          el = el.correspondingElement;
+        }
+        return el.className.baseVal === void 0 ? el.className : el.className.baseVal;
+      }
+      function setOpacity(el, value) {
+        if ("opacity" in el.style) {
+          el.style.opacity = value;
+        } else if ("filter" in el.style) {
+          _setOpacityIE(el, value);
+        }
+      }
+      function _setOpacityIE(el, value) {
+        var filter = false, filterName = "DXImageTransform.Microsoft.Alpha";
+        try {
+          filter = el.filters.item(filterName);
+        } catch (e) {
+          if (value === 1) {
+            return;
+          }
+        }
+        value = Math.round(value * 100);
+        if (filter) {
+          filter.Enabled = value !== 100;
+          filter.Opacity = value;
+        } else {
+          el.style.filter += " progid:" + filterName + "(opacity=" + value + ")";
+        }
+      }
+      function testProp(props) {
+        var style2 = document.documentElement.style;
+        for (var i = 0; i < props.length; i++) {
+          if (props[i] in style2) {
+            return props[i];
+          }
+        }
+        return false;
+      }
+      function setTransform(el, offset, scale2) {
+        var pos = offset || new Point(0, 0);
+        el.style[TRANSFORM] = (Browser.ie3d ? "translate(" + pos.x + "px," + pos.y + "px)" : "translate3d(" + pos.x + "px," + pos.y + "px,0)") + (scale2 ? " scale(" + scale2 + ")" : "");
+      }
+      function setPosition(el, point) {
+        el._leaflet_pos = point;
+        if (Browser.any3d) {
+          setTransform(el, point);
+        } else {
+          el.style.left = point.x + "px";
+          el.style.top = point.y + "px";
+        }
+      }
+      function getPosition(el) {
+        return el._leaflet_pos || new Point(0, 0);
+      }
+      var disableTextSelection;
+      var enableTextSelection;
+      var _userSelect;
+      if ("onselectstart" in document) {
+        disableTextSelection = function() {
+          on(window, "selectstart", preventDefault);
+        };
+        enableTextSelection = function() {
+          off(window, "selectstart", preventDefault);
+        };
+      } else {
+        var userSelectProperty = testProp(
+          ["userSelect", "WebkitUserSelect", "OUserSelect", "MozUserSelect", "msUserSelect"]
+        );
+        disableTextSelection = function() {
+          if (userSelectProperty) {
+            var style2 = document.documentElement.style;
+            _userSelect = style2[userSelectProperty];
+            style2[userSelectProperty] = "none";
+          }
+        };
+        enableTextSelection = function() {
+          if (userSelectProperty) {
+            document.documentElement.style[userSelectProperty] = _userSelect;
+            _userSelect = void 0;
+          }
+        };
+      }
+      function disableImageDrag() {
+        on(window, "dragstart", preventDefault);
+      }
+      function enableImageDrag() {
+        off(window, "dragstart", preventDefault);
+      }
+      var _outlineElement, _outlineStyle;
+      function preventOutline(element) {
+        while (element.tabIndex === -1) {
+          element = element.parentNode;
+        }
+        if (!element.style) {
+          return;
+        }
+        restoreOutline();
+        _outlineElement = element;
+        _outlineStyle = element.style.outlineStyle;
+        element.style.outlineStyle = "none";
+        on(window, "keydown", restoreOutline);
+      }
+      function restoreOutline() {
+        if (!_outlineElement) {
+          return;
+        }
+        _outlineElement.style.outlineStyle = _outlineStyle;
+        _outlineElement = void 0;
+        _outlineStyle = void 0;
+        off(window, "keydown", restoreOutline);
+      }
+      function getSizedParentNode(element) {
+        do {
+          element = element.parentNode;
+        } while ((!element.offsetWidth || !element.offsetHeight) && element !== document.body);
+        return element;
+      }
+      function getScale(element) {
+        var rect = element.getBoundingClientRect();
+        return {
+          x: rect.width / element.offsetWidth || 1,
+          y: rect.height / element.offsetHeight || 1,
+          boundingClientRect: rect
+        };
+      }
+      var DomUtil = {
+        __proto__: null,
+        TRANSFORM,
+        TRANSITION,
+        TRANSITION_END,
+        get,
+        getStyle,
+        create: create$1,
+        remove,
+        empty,
+        toFront,
+        toBack,
+        hasClass,
+        addClass,
+        removeClass,
+        setClass,
+        getClass,
+        setOpacity,
+        testProp,
+        setTransform,
+        setPosition,
+        getPosition,
+        get disableTextSelection() {
+          return disableTextSelection;
+        },
+        get enableTextSelection() {
+          return enableTextSelection;
+        },
+        disableImageDrag,
+        enableImageDrag,
+        preventOutline,
+        restoreOutline,
+        getSizedParentNode,
+        getScale
+      };
+      function on(obj, types, fn, context) {
+        if (types && typeof types === "object") {
+          for (var type in types) {
+            addOne(obj, type, types[type], fn);
+          }
+        } else {
+          types = splitWords(types);
+          for (var i = 0, len = types.length; i < len; i++) {
+            addOne(obj, types[i], fn, context);
+          }
+        }
+        return this;
+      }
+      var eventsKey = "_leaflet_events";
+      function off(obj, types, fn, context) {
+        if (arguments.length === 1) {
+          batchRemove(obj);
+          delete obj[eventsKey];
+        } else if (types && typeof types === "object") {
+          for (var type in types) {
+            removeOne(obj, type, types[type], fn);
+          }
+        } else {
+          types = splitWords(types);
+          if (arguments.length === 2) {
+            batchRemove(obj, function(type2) {
+              return indexOf(types, type2) !== -1;
+            });
+          } else {
+            for (var i = 0, len = types.length; i < len; i++) {
+              removeOne(obj, types[i], fn, context);
+            }
+          }
+        }
+        return this;
+      }
+      function batchRemove(obj, filterFn) {
+        for (var id in obj[eventsKey]) {
+          var type = id.split(/\d/)[0];
+          if (!filterFn || filterFn(type)) {
+            removeOne(obj, type, null, null, id);
+          }
+        }
+      }
+      var mouseSubst = {
+        mouseenter: "mouseover",
+        mouseleave: "mouseout",
+        wheel: !("onwheel" in window) && "mousewheel"
+      };
+      function addOne(obj, type, fn, context) {
+        var id = type + stamp(fn) + (context ? "_" + stamp(context) : "");
+        if (obj[eventsKey] && obj[eventsKey][id]) {
+          return this;
+        }
+        var handler = function(e) {
+          return fn.call(context || obj, e || window.event);
+        };
+        var originalHandler = handler;
+        if (!Browser.touchNative && Browser.pointer && type.indexOf("touch") === 0) {
+          handler = addPointerListener(obj, type, handler);
+        } else if (Browser.touch && type === "dblclick") {
+          handler = addDoubleTapListener(obj, handler);
+        } else if ("addEventListener" in obj) {
+          if (type === "touchstart" || type === "touchmove" || type === "wheel" || type === "mousewheel") {
+            obj.addEventListener(mouseSubst[type] || type, handler, Browser.passiveEvents ? { passive: false } : false);
+          } else if (type === "mouseenter" || type === "mouseleave") {
+            handler = function(e) {
+              e = e || window.event;
+              if (isExternalTarget(obj, e)) {
+                originalHandler(e);
+              }
+            };
+            obj.addEventListener(mouseSubst[type], handler, false);
+          } else {
+            obj.addEventListener(type, originalHandler, false);
+          }
+        } else {
+          obj.attachEvent("on" + type, handler);
+        }
+        obj[eventsKey] = obj[eventsKey] || {};
+        obj[eventsKey][id] = handler;
+      }
+      function removeOne(obj, type, fn, context, id) {
+        id = id || type + stamp(fn) + (context ? "_" + stamp(context) : "");
+        var handler = obj[eventsKey] && obj[eventsKey][id];
+        if (!handler) {
+          return this;
+        }
+        if (!Browser.touchNative && Browser.pointer && type.indexOf("touch") === 0) {
+          removePointerListener(obj, type, handler);
+        } else if (Browser.touch && type === "dblclick") {
+          removeDoubleTapListener(obj, handler);
+        } else if ("removeEventListener" in obj) {
+          obj.removeEventListener(mouseSubst[type] || type, handler, false);
+        } else {
+          obj.detachEvent("on" + type, handler);
+        }
+        obj[eventsKey][id] = null;
+      }
+      function stopPropagation(e) {
+        if (e.stopPropagation) {
+          e.stopPropagation();
+        } else if (e.originalEvent) {
+          e.originalEvent._stopped = true;
+        } else {
+          e.cancelBubble = true;
+        }
+        return this;
+      }
+      function disableScrollPropagation(el) {
+        addOne(el, "wheel", stopPropagation);
+        return this;
+      }
+      function disableClickPropagation(el) {
+        on(el, "mousedown touchstart dblclick contextmenu", stopPropagation);
+        el["_leaflet_disable_click"] = true;
+        return this;
+      }
+      function preventDefault(e) {
+        if (e.preventDefault) {
+          e.preventDefault();
+        } else {
+          e.returnValue = false;
+        }
+        return this;
+      }
+      function stop(e) {
+        preventDefault(e);
+        stopPropagation(e);
+        return this;
+      }
+      function getPropagationPath(ev) {
+        if (ev.composedPath) {
+          return ev.composedPath();
+        }
+        var path = [];
+        var el = ev.target;
+        while (el) {
+          path.push(el);
+          el = el.parentNode;
+        }
+        return path;
+      }
+      function getMousePosition(e, container) {
+        if (!container) {
+          return new Point(e.clientX, e.clientY);
+        }
+        var scale2 = getScale(container), offset = scale2.boundingClientRect;
+        return new Point(
+          (e.clientX - offset.left) / scale2.x - container.clientLeft,
+          (e.clientY - offset.top) / scale2.y - container.clientTop
+        );
+      }
+      var wheelPxFactor = Browser.linux && Browser.chrome ? window.devicePixelRatio : Browser.mac ? window.devicePixelRatio * 3 : window.devicePixelRatio > 0 ? 2 * window.devicePixelRatio : 1;
+      function getWheelDelta(e) {
+        return Browser.edge ? e.wheelDeltaY / 2 : e.deltaY && e.deltaMode === 0 ? -e.deltaY / wheelPxFactor : e.deltaY && e.deltaMode === 1 ? -e.deltaY * 20 : e.deltaY && e.deltaMode === 2 ? -e.deltaY * 60 : e.deltaX || e.deltaZ ? 0 : e.wheelDelta ? (e.wheelDeltaY || e.wheelDelta) / 2 : e.detail && Math.abs(e.detail) < 32765 ? -e.detail * 20 : e.detail ? e.detail / -32765 * 60 : 0;
+      }
+      function isExternalTarget(el, e) {
+        var related = e.relatedTarget;
+        if (!related) {
+          return true;
+        }
+        try {
+          while (related && related !== el) {
+            related = related.parentNode;
+          }
+        } catch (err) {
+          return false;
+        }
+        return related !== el;
+      }
+      var DomEvent = {
+        __proto__: null,
+        on,
+        off,
+        stopPropagation,
+        disableScrollPropagation,
+        disableClickPropagation,
+        preventDefault,
+        stop,
+        getPropagationPath,
+        getMousePosition,
+        getWheelDelta,
+        isExternalTarget,
+        addListener: on,
+        removeListener: off
+      };
+      var PosAnimation = Evented.extend({
+        run: function(el, newPos, duration3, easeLinearity) {
+          this.stop();
+          this._el = el;
+          this._inProgress = true;
+          this._duration = duration3 || 0.25;
+          this._easeOutPower = 1 / Math.max(easeLinearity || 0.5, 0.2);
+          this._startPos = getPosition(el);
+          this._offset = newPos.subtract(this._startPos);
+          this._startTime = +new Date();
+          this.fire("start");
+          this._animate();
+        },
+        stop: function() {
+          if (!this._inProgress) {
+            return;
+          }
+          this._step(true);
+          this._complete();
+        },
+        _animate: function() {
+          this._animId = requestAnimFrame(this._animate, this);
+          this._step();
+        },
+        _step: function(round) {
+          var elapsed = +new Date() - this._startTime, duration3 = this._duration * 1e3;
+          if (elapsed < duration3) {
+            this._runFrame(this._easeOut(elapsed / duration3), round);
+          } else {
+            this._runFrame(1);
+            this._complete();
+          }
+        },
+        _runFrame: function(progress, round) {
+          var pos = this._startPos.add(this._offset.multiplyBy(progress));
+          if (round) {
+            pos._round();
+          }
+          setPosition(this._el, pos);
+          this.fire("step");
+        },
+        _complete: function() {
+          cancelAnimFrame(this._animId);
+          this._inProgress = false;
+          this.fire("end");
+        },
+        _easeOut: function(t) {
+          return 1 - Math.pow(1 - t, this._easeOutPower);
+        }
+      });
+      var Map2 = Evented.extend({
+        options: {
+          crs: EPSG3857,
+          center: void 0,
+          zoom: void 0,
+          minZoom: void 0,
+          maxZoom: void 0,
+          layers: [],
+          maxBounds: void 0,
+          renderer: void 0,
+          zoomAnimation: true,
+          zoomAnimationThreshold: 4,
+          fadeAnimation: true,
+          markerZoomAnimation: true,
+          transform3DLimit: 8388608,
+          zoomSnap: 1,
+          zoomDelta: 1,
+          trackResize: true
+        },
+        initialize: function(id, options) {
+          options = setOptions(this, options);
+          this._handlers = [];
+          this._layers = {};
+          this._zoomBoundLayers = {};
+          this._sizeChanged = true;
+          this._initContainer(id);
+          this._initLayout();
+          this._onResize = bind(this._onResize, this);
+          this._initEvents();
+          if (options.maxBounds) {
+            this.setMaxBounds(options.maxBounds);
+          }
+          if (options.zoom !== void 0) {
+            this._zoom = this._limitZoom(options.zoom);
+          }
+          if (options.center && options.zoom !== void 0) {
+            this.setView(toLatLng(options.center), options.zoom, { reset: true });
+          }
+          this.callInitHooks();
+          this._zoomAnimated = TRANSITION && Browser.any3d && !Browser.mobileOpera && this.options.zoomAnimation;
+          if (this._zoomAnimated) {
+            this._createAnimProxy();
+            on(this._proxy, TRANSITION_END, this._catchTransitionEnd, this);
+          }
+          this._addLayers(this.options.layers);
+        },
+        setView: function(center, zoom2, options) {
+          zoom2 = zoom2 === void 0 ? this._zoom : this._limitZoom(zoom2);
+          center = this._limitCenter(toLatLng(center), zoom2, this.options.maxBounds);
+          options = options || {};
+          this._stop();
+          if (this._loaded && !options.reset && options !== true) {
+            if (options.animate !== void 0) {
+              options.zoom = extend2({ animate: options.animate }, options.zoom);
+              options.pan = extend2({ animate: options.animate, duration: options.duration }, options.pan);
+            }
+            var moved = this._zoom !== zoom2 ? this._tryAnimatedZoom && this._tryAnimatedZoom(center, zoom2, options.zoom) : this._tryAnimatedPan(center, options.pan);
+            if (moved) {
+              clearTimeout(this._sizeTimer);
+              return this;
+            }
+          }
+          this._resetView(center, zoom2, options.pan && options.pan.noMoveStart);
+          return this;
+        },
+        setZoom: function(zoom2, options) {
+          if (!this._loaded) {
+            this._zoom = zoom2;
+            return this;
+          }
+          return this.setView(this.getCenter(), zoom2, { zoom: options });
+        },
+        zoomIn: function(delta, options) {
+          delta = delta || (Browser.any3d ? this.options.zoomDelta : 1);
+          return this.setZoom(this._zoom + delta, options);
+        },
+        zoomOut: function(delta, options) {
+          delta = delta || (Browser.any3d ? this.options.zoomDelta : 1);
+          return this.setZoom(this._zoom - delta, options);
+        },
+        setZoomAround: function(latlng, zoom2, options) {
+          var scale2 = this.getZoomScale(zoom2), viewHalf = this.getSize().divideBy(2), containerPoint = latlng instanceof Point ? latlng : this.latLngToContainerPoint(latlng), centerOffset = containerPoint.subtract(viewHalf).multiplyBy(1 - 1 / scale2), newCenter = this.containerPointToLatLng(viewHalf.add(centerOffset));
+          return this.setView(newCenter, zoom2, { zoom: options });
+        },
+        _getBoundsCenterZoom: function(bounds, options) {
+          options = options || {};
+          bounds = bounds.getBounds ? bounds.getBounds() : toLatLngBounds(bounds);
+          var paddingTL = toPoint(options.paddingTopLeft || options.padding || [0, 0]), paddingBR = toPoint(options.paddingBottomRight || options.padding || [0, 0]), zoom2 = this.getBoundsZoom(bounds, false, paddingTL.add(paddingBR));
+          zoom2 = typeof options.maxZoom === "number" ? Math.min(options.maxZoom, zoom2) : zoom2;
+          if (zoom2 === Infinity) {
+            return {
+              center: bounds.getCenter(),
+              zoom: zoom2
+            };
+          }
+          var paddingOffset = paddingBR.subtract(paddingTL).divideBy(2), swPoint = this.project(bounds.getSouthWest(), zoom2), nePoint = this.project(bounds.getNorthEast(), zoom2), center = this.unproject(swPoint.add(nePoint).divideBy(2).add(paddingOffset), zoom2);
+          return {
+            center,
+            zoom: zoom2
+          };
+        },
+        fitBounds: function(bounds, options) {
+          bounds = toLatLngBounds(bounds);
+          if (!bounds.isValid()) {
+            throw new Error("Bounds are not valid.");
+          }
+          var target = this._getBoundsCenterZoom(bounds, options);
+          return this.setView(target.center, target.zoom, options);
+        },
+        fitWorld: function(options) {
+          return this.fitBounds([[-90, -180], [90, 180]], options);
+        },
+        panTo: function(center, options) {
+          return this.setView(center, this._zoom, { pan: options });
+        },
+        panBy: function(offset, options) {
+          offset = toPoint(offset).round();
+          options = options || {};
+          if (!offset.x && !offset.y) {
+            return this.fire("moveend");
+          }
+          if (options.animate !== true && !this.getSize().contains(offset)) {
+            this._resetView(this.unproject(this.project(this.getCenter()).add(offset)), this.getZoom());
+            return this;
+          }
+          if (!this._panAnim) {
+            this._panAnim = new PosAnimation();
+            this._panAnim.on({
+              "step": this._onPanTransitionStep,
+              "end": this._onPanTransitionEnd
+            }, this);
+          }
+          if (!options.noMoveStart) {
+            this.fire("movestart");
+          }
+          if (options.animate !== false) {
+            addClass(this._mapPane, "leaflet-pan-anim");
+            var newPos = this._getMapPanePos().subtract(offset).round();
+            this._panAnim.run(this._mapPane, newPos, options.duration || 0.25, options.easeLinearity);
+          } else {
+            this._rawPanBy(offset);
+            this.fire("move").fire("moveend");
+          }
+          return this;
+        },
+        flyTo: function(targetCenter, targetZoom, options) {
+          options = options || {};
+          if (options.animate === false || !Browser.any3d) {
+            return this.setView(targetCenter, targetZoom, options);
+          }
+          this._stop();
+          var from = this.project(this.getCenter()), to = this.project(targetCenter), size = this.getSize(), startZoom = this._zoom;
+          targetCenter = toLatLng(targetCenter);
+          targetZoom = targetZoom === void 0 ? startZoom : targetZoom;
+          var w0 = Math.max(size.x, size.y), w1 = w0 * this.getZoomScale(startZoom, targetZoom), u1 = to.distanceTo(from) || 1, rho = 1.42, rho2 = rho * rho;
+          function r(i) {
+            var s1 = i ? -1 : 1, s2 = i ? w1 : w0, t1 = w1 * w1 - w0 * w0 + s1 * rho2 * rho2 * u1 * u1, b1 = 2 * s2 * rho2 * u1, b = t1 / b1, sq = Math.sqrt(b * b + 1) - b;
+            var log = sq < 1e-9 ? -18 : Math.log(sq);
+            return log;
+          }
+          function sinh(n) {
+            return (Math.exp(n) - Math.exp(-n)) / 2;
+          }
+          function cosh(n) {
+            return (Math.exp(n) + Math.exp(-n)) / 2;
+          }
+          function tanh(n) {
+            return sinh(n) / cosh(n);
+          }
+          var r0 = r(0);
+          function w(s) {
+            return w0 * (cosh(r0) / cosh(r0 + rho * s));
+          }
+          function u(s) {
+            return w0 * (cosh(r0) * tanh(r0 + rho * s) - sinh(r0)) / rho2;
+          }
+          function easeOut(t) {
+            return 1 - Math.pow(1 - t, 1.5);
+          }
+          var start = Date.now(), S = (r(1) - r0) / rho, duration3 = options.duration ? 1e3 * options.duration : 1e3 * S * 0.8;
+          function frame() {
+            var t = (Date.now() - start) / duration3, s = easeOut(t) * S;
+            if (t <= 1) {
+              this._flyToFrame = requestAnimFrame(frame, this);
+              this._move(
+                this.unproject(from.add(to.subtract(from).multiplyBy(u(s) / u1)), startZoom),
+                this.getScaleZoom(w0 / w(s), startZoom),
+                { flyTo: true }
+              );
+            } else {
+              this._move(targetCenter, targetZoom)._moveEnd(true);
+            }
+          }
+          this._moveStart(true, options.noMoveStart);
+          frame.call(this);
+          return this;
+        },
+        flyToBounds: function(bounds, options) {
+          var target = this._getBoundsCenterZoom(bounds, options);
+          return this.flyTo(target.center, target.zoom, options);
+        },
+        setMaxBounds: function(bounds) {
+          bounds = toLatLngBounds(bounds);
+          if (this.listens("moveend", this._panInsideMaxBounds)) {
+            this.off("moveend", this._panInsideMaxBounds);
+          }
+          if (!bounds.isValid()) {
+            this.options.maxBounds = null;
+            return this;
+          }
+          this.options.maxBounds = bounds;
+          if (this._loaded) {
+            this._panInsideMaxBounds();
+          }
+          return this.on("moveend", this._panInsideMaxBounds);
+        },
+        setMinZoom: function(zoom2) {
+          var oldZoom = this.options.minZoom;
+          this.options.minZoom = zoom2;
+          if (this._loaded && oldZoom !== zoom2) {
+            this.fire("zoomlevelschange");
+            if (this.getZoom() < this.options.minZoom) {
+              return this.setZoom(zoom2);
+            }
+          }
+          return this;
+        },
+        setMaxZoom: function(zoom2) {
+          var oldZoom = this.options.maxZoom;
+          this.options.maxZoom = zoom2;
+          if (this._loaded && oldZoom !== zoom2) {
+            this.fire("zoomlevelschange");
+            if (this.getZoom() > this.options.maxZoom) {
+              return this.setZoom(zoom2);
+            }
+          }
+          return this;
+        },
+        panInsideBounds: function(bounds, options) {
+          this._enforcingBounds = true;
+          var center = this.getCenter(), newCenter = this._limitCenter(center, this._zoom, toLatLngBounds(bounds));
+          if (!center.equals(newCenter)) {
+            this.panTo(newCenter, options);
+          }
+          this._enforcingBounds = false;
+          return this;
+        },
+        panInside: function(latlng, options) {
+          options = options || {};
+          var paddingTL = toPoint(options.paddingTopLeft || options.padding || [0, 0]), paddingBR = toPoint(options.paddingBottomRight || options.padding || [0, 0]), pixelCenter = this.project(this.getCenter()), pixelPoint = this.project(latlng), pixelBounds = this.getPixelBounds(), paddedBounds = toBounds([pixelBounds.min.add(paddingTL), pixelBounds.max.subtract(paddingBR)]), paddedSize = paddedBounds.getSize();
+          if (!paddedBounds.contains(pixelPoint)) {
+            this._enforcingBounds = true;
+            var centerOffset = pixelPoint.subtract(paddedBounds.getCenter());
+            var offset = paddedBounds.extend(pixelPoint).getSize().subtract(paddedSize);
+            pixelCenter.x += centerOffset.x < 0 ? -offset.x : offset.x;
+            pixelCenter.y += centerOffset.y < 0 ? -offset.y : offset.y;
+            this.panTo(this.unproject(pixelCenter), options);
+            this._enforcingBounds = false;
+          }
+          return this;
+        },
+        invalidateSize: function(options) {
+          if (!this._loaded) {
+            return this;
+          }
+          options = extend2({
+            animate: false,
+            pan: true
+          }, options === true ? { animate: true } : options);
+          var oldSize = this.getSize();
+          this._sizeChanged = true;
+          this._lastCenter = null;
+          var newSize = this.getSize(), oldCenter = oldSize.divideBy(2).round(), newCenter = newSize.divideBy(2).round(), offset = oldCenter.subtract(newCenter);
+          if (!offset.x && !offset.y) {
+            return this;
+          }
+          if (options.animate && options.pan) {
+            this.panBy(offset);
+          } else {
+            if (options.pan) {
+              this._rawPanBy(offset);
+            }
+            this.fire("move");
+            if (options.debounceMoveend) {
+              clearTimeout(this._sizeTimer);
+              this._sizeTimer = setTimeout(bind(this.fire, this, "moveend"), 200);
+            } else {
+              this.fire("moveend");
+            }
+          }
+          return this.fire("resize", {
+            oldSize,
+            newSize
+          });
+        },
+        stop: function() {
+          this.setZoom(this._limitZoom(this._zoom));
+          if (!this.options.zoomSnap) {
+            this.fire("viewreset");
+          }
+          return this._stop();
+        },
+        locate: function(options) {
+          options = this._locateOptions = extend2({
+            timeout: 1e4,
+            watch: false
+          }, options);
+          if (!("geolocation" in navigator)) {
+            this._handleGeolocationError({
+              code: 0,
+              message: "Geolocation not supported."
+            });
+            return this;
+          }
+          var onResponse = bind(this._handleGeolocationResponse, this), onError = bind(this._handleGeolocationError, this);
+          if (options.watch) {
+            this._locationWatchId = navigator.geolocation.watchPosition(onResponse, onError, options);
+          } else {
+            navigator.geolocation.getCurrentPosition(onResponse, onError, options);
+          }
+          return this;
+        },
+        stopLocate: function() {
+          if (navigator.geolocation && navigator.geolocation.clearWatch) {
+            navigator.geolocation.clearWatch(this._locationWatchId);
+          }
+          if (this._locateOptions) {
+            this._locateOptions.setView = false;
+          }
+          return this;
+        },
+        _handleGeolocationError: function(error51) {
+          if (!this._container._leaflet_id) {
+            return;
+          }
+          var c = error51.code, message = error51.message || (c === 1 ? "permission denied" : c === 2 ? "position unavailable" : "timeout");
+          if (this._locateOptions.setView && !this._loaded) {
+            this.fitWorld();
+          }
+          this.fire("locationerror", {
+            code: c,
+            message: "Geolocation error: " + message + "."
+          });
+        },
+        _handleGeolocationResponse: function(pos) {
+          if (!this._container._leaflet_id) {
+            return;
+          }
+          var lat = pos.coords.latitude, lng = pos.coords.longitude, latlng = new LatLng(lat, lng), bounds = latlng.toBounds(pos.coords.accuracy * 2), options = this._locateOptions;
+          if (options.setView) {
+            var zoom2 = this.getBoundsZoom(bounds);
+            this.setView(latlng, options.maxZoom ? Math.min(zoom2, options.maxZoom) : zoom2);
+          }
+          var data = {
+            latlng,
+            bounds,
+            timestamp: pos.timestamp
+          };
+          for (var i in pos.coords) {
+            if (typeof pos.coords[i] === "number") {
+              data[i] = pos.coords[i];
+            }
+          }
+          this.fire("locationfound", data);
+        },
+        addHandler: function(name, HandlerClass) {
+          if (!HandlerClass) {
+            return this;
+          }
+          var handler = this[name] = new HandlerClass(this);
+          this._handlers.push(handler);
+          if (this.options[name]) {
+            handler.enable();
+          }
+          return this;
+        },
+        remove: function() {
+          this._initEvents(true);
+          if (this.options.maxBounds) {
+            this.off("moveend", this._panInsideMaxBounds);
+          }
+          if (this._containerId !== this._container._leaflet_id) {
+            throw new Error("Map container is being reused by another instance");
+          }
+          try {
+            delete this._container._leaflet_id;
+            delete this._containerId;
+          } catch (e) {
+            this._container._leaflet_id = void 0;
+            this._containerId = void 0;
+          }
+          if (this._locationWatchId !== void 0) {
+            this.stopLocate();
+          }
+          this._stop();
+          remove(this._mapPane);
+          if (this._clearControlPos) {
+            this._clearControlPos();
+          }
+          if (this._resizeRequest) {
+            cancelAnimFrame(this._resizeRequest);
+            this._resizeRequest = null;
+          }
+          this._clearHandlers();
+          if (this._loaded) {
+            this.fire("unload");
+          }
+          var i;
+          for (i in this._layers) {
+            this._layers[i].remove();
+          }
+          for (i in this._panes) {
+            remove(this._panes[i]);
+          }
+          this._layers = [];
+          this._panes = [];
+          delete this._mapPane;
+          delete this._renderer;
+          return this;
+        },
+        createPane: function(name, container) {
+          var className = "leaflet-pane" + (name ? " leaflet-" + name.replace("Pane", "") + "-pane" : ""), pane = create$1("div", className, container || this._mapPane);
+          if (name) {
+            this._panes[name] = pane;
+          }
+          return pane;
+        },
+        getCenter: function() {
+          this._checkIfLoaded();
+          if (this._lastCenter && !this._moved()) {
+            return this._lastCenter.clone();
+          }
+          return this.layerPointToLatLng(this._getCenterLayerPoint());
+        },
+        getZoom: function() {
+          return this._zoom;
+        },
+        getBounds: function() {
+          var bounds = this.getPixelBounds(), sw = this.unproject(bounds.getBottomLeft()), ne = this.unproject(bounds.getTopRight());
+          return new LatLngBounds(sw, ne);
+        },
+        getMinZoom: function() {
+          return this.options.minZoom === void 0 ? this._layersMinZoom || 0 : this.options.minZoom;
+        },
+        getMaxZoom: function() {
+          return this.options.maxZoom === void 0 ? this._layersMaxZoom === void 0 ? Infinity : this._layersMaxZoom : this.options.maxZoom;
+        },
+        getBoundsZoom: function(bounds, inside, padding) {
+          bounds = toLatLngBounds(bounds);
+          padding = toPoint(padding || [0, 0]);
+          var zoom2 = this.getZoom() || 0, min = this.getMinZoom(), max = this.getMaxZoom(), nw = bounds.getNorthWest(), se = bounds.getSouthEast(), size = this.getSize().subtract(padding), boundsSize = toBounds(this.project(se, zoom2), this.project(nw, zoom2)).getSize(), snap = Browser.any3d ? this.options.zoomSnap : 1, scalex = size.x / boundsSize.x, scaley = size.y / boundsSize.y, scale2 = inside ? Math.max(scalex, scaley) : Math.min(scalex, scaley);
+          zoom2 = this.getScaleZoom(scale2, zoom2);
+          if (snap) {
+            zoom2 = Math.round(zoom2 / (snap / 100)) * (snap / 100);
+            zoom2 = inside ? Math.ceil(zoom2 / snap) * snap : Math.floor(zoom2 / snap) * snap;
+          }
+          return Math.max(min, Math.min(max, zoom2));
+        },
+        getSize: function() {
+          if (!this._size || this._sizeChanged) {
+            this._size = new Point(
+              this._container.clientWidth || 0,
+              this._container.clientHeight || 0
+            );
+            this._sizeChanged = false;
+          }
+          return this._size.clone();
+        },
+        getPixelBounds: function(center, zoom2) {
+          var topLeftPoint = this._getTopLeftPoint(center, zoom2);
+          return new Bounds(topLeftPoint, topLeftPoint.add(this.getSize()));
+        },
+        getPixelOrigin: function() {
+          this._checkIfLoaded();
+          return this._pixelOrigin;
+        },
+        getPixelWorldBounds: function(zoom2) {
+          return this.options.crs.getProjectedBounds(zoom2 === void 0 ? this.getZoom() : zoom2);
+        },
+        getPane: function(pane) {
+          return typeof pane === "string" ? this._panes[pane] : pane;
+        },
+        getPanes: function() {
+          return this._panes;
+        },
+        getContainer: function() {
+          return this._container;
+        },
+        getZoomScale: function(toZoom, fromZoom) {
+          var crs = this.options.crs;
+          fromZoom = fromZoom === void 0 ? this._zoom : fromZoom;
+          return crs.scale(toZoom) / crs.scale(fromZoom);
+        },
+        getScaleZoom: function(scale2, fromZoom) {
+          var crs = this.options.crs;
+          fromZoom = fromZoom === void 0 ? this._zoom : fromZoom;
+          var zoom2 = crs.zoom(scale2 * crs.scale(fromZoom));
+          return isNaN(zoom2) ? Infinity : zoom2;
+        },
+        project: function(latlng, zoom2) {
+          zoom2 = zoom2 === void 0 ? this._zoom : zoom2;
+          return this.options.crs.latLngToPoint(toLatLng(latlng), zoom2);
+        },
+        unproject: function(point, zoom2) {
+          zoom2 = zoom2 === void 0 ? this._zoom : zoom2;
+          return this.options.crs.pointToLatLng(toPoint(point), zoom2);
+        },
+        layerPointToLatLng: function(point) {
+          var projectedPoint = toPoint(point).add(this.getPixelOrigin());
+          return this.unproject(projectedPoint);
+        },
+        latLngToLayerPoint: function(latlng) {
+          var projectedPoint = this.project(toLatLng(latlng))._round();
+          return projectedPoint._subtract(this.getPixelOrigin());
+        },
+        wrapLatLng: function(latlng) {
+          return this.options.crs.wrapLatLng(toLatLng(latlng));
+        },
+        wrapLatLngBounds: function(latlng) {
+          return this.options.crs.wrapLatLngBounds(toLatLngBounds(latlng));
+        },
+        distance: function(latlng1, latlng2) {
+          return this.options.crs.distance(toLatLng(latlng1), toLatLng(latlng2));
+        },
+        containerPointToLayerPoint: function(point) {
+          return toPoint(point).subtract(this._getMapPanePos());
+        },
+        layerPointToContainerPoint: function(point) {
+          return toPoint(point).add(this._getMapPanePos());
+        },
+        containerPointToLatLng: function(point) {
+          var layerPoint = this.containerPointToLayerPoint(toPoint(point));
+          return this.layerPointToLatLng(layerPoint);
+        },
+        latLngToContainerPoint: function(latlng) {
+          return this.layerPointToContainerPoint(this.latLngToLayerPoint(toLatLng(latlng)));
+        },
+        mouseEventToContainerPoint: function(e) {
+          return getMousePosition(e, this._container);
+        },
+        mouseEventToLayerPoint: function(e) {
+          return this.containerPointToLayerPoint(this.mouseEventToContainerPoint(e));
+        },
+        mouseEventToLatLng: function(e) {
+          return this.layerPointToLatLng(this.mouseEventToLayerPoint(e));
+        },
+        _initContainer: function(id) {
+          var container = this._container = get(id);
+          if (!container) {
+            throw new Error("Map container not found.");
+          } else if (container._leaflet_id) {
+            throw new Error("Map container is already initialized.");
+          }
+          on(container, "scroll", this._onScroll, this);
+          this._containerId = stamp(container);
+        },
+        _initLayout: function() {
+          var container = this._container;
+          this._fadeAnimated = this.options.fadeAnimation && Browser.any3d;
+          addClass(container, "leaflet-container" + (Browser.touch ? " leaflet-touch" : "") + (Browser.retina ? " leaflet-retina" : "") + (Browser.ielt9 ? " leaflet-oldie" : "") + (Browser.safari ? " leaflet-safari" : "") + (this._fadeAnimated ? " leaflet-fade-anim" : ""));
+          var position = getStyle(container, "position");
+          if (position !== "absolute" && position !== "relative" && position !== "fixed" && position !== "sticky") {
+            container.style.position = "relative";
+          }
+          this._initPanes();
+          if (this._initControlPos) {
+            this._initControlPos();
+          }
+        },
+        _initPanes: function() {
+          var panes = this._panes = {};
+          this._paneRenderers = {};
+          this._mapPane = this.createPane("mapPane", this._container);
+          setPosition(this._mapPane, new Point(0, 0));
+          this.createPane("tilePane");
+          this.createPane("overlayPane");
+          this.createPane("shadowPane");
+          this.createPane("markerPane");
+          this.createPane("tooltipPane");
+          this.createPane("popupPane");
+          if (!this.options.markerZoomAnimation) {
+            addClass(panes.markerPane, "leaflet-zoom-hide");
+            addClass(panes.shadowPane, "leaflet-zoom-hide");
+          }
+        },
+        _resetView: function(center, zoom2, noMoveStart) {
+          setPosition(this._mapPane, new Point(0, 0));
+          var loading = !this._loaded;
+          this._loaded = true;
+          zoom2 = this._limitZoom(zoom2);
+          this.fire("viewprereset");
+          var zoomChanged = this._zoom !== zoom2;
+          this._moveStart(zoomChanged, noMoveStart)._move(center, zoom2)._moveEnd(zoomChanged);
+          this.fire("viewreset");
+          if (loading) {
+            this.fire("load");
+          }
+        },
+        _moveStart: function(zoomChanged, noMoveStart) {
+          if (zoomChanged) {
+            this.fire("zoomstart");
+          }
+          if (!noMoveStart) {
+            this.fire("movestart");
+          }
+          return this;
+        },
+        _move: function(center, zoom2, data, supressEvent) {
+          if (zoom2 === void 0) {
+            zoom2 = this._zoom;
+          }
+          var zoomChanged = this._zoom !== zoom2;
+          this._zoom = zoom2;
+          this._lastCenter = center;
+          this._pixelOrigin = this._getNewPixelOrigin(center);
+          if (!supressEvent) {
+            if (zoomChanged || data && data.pinch) {
+              this.fire("zoom", data);
+            }
+            this.fire("move", data);
+          } else if (data && data.pinch) {
+            this.fire("zoom", data);
+          }
+          return this;
+        },
+        _moveEnd: function(zoomChanged) {
+          if (zoomChanged) {
+            this.fire("zoomend");
+          }
+          return this.fire("moveend");
+        },
+        _stop: function() {
+          cancelAnimFrame(this._flyToFrame);
+          if (this._panAnim) {
+            this._panAnim.stop();
+          }
+          return this;
+        },
+        _rawPanBy: function(offset) {
+          setPosition(this._mapPane, this._getMapPanePos().subtract(offset));
+        },
+        _getZoomSpan: function() {
+          return this.getMaxZoom() - this.getMinZoom();
+        },
+        _panInsideMaxBounds: function() {
+          if (!this._enforcingBounds) {
+            this.panInsideBounds(this.options.maxBounds);
+          }
+        },
+        _checkIfLoaded: function() {
+          if (!this._loaded) {
+            throw new Error("Set map center and zoom first.");
+          }
+        },
+        _initEvents: function(remove2) {
+          this._targets = {};
+          this._targets[stamp(this._container)] = this;
+          var onOff = remove2 ? off : on;
+          onOff(this._container, "click dblclick mousedown mouseup mouseover mouseout mousemove contextmenu keypress keydown keyup", this._handleDOMEvent, this);
+          if (this.options.trackResize) {
+            onOff(window, "resize", this._onResize, this);
+          }
+          if (Browser.any3d && this.options.transform3DLimit) {
+            (remove2 ? this.off : this.on).call(this, "moveend", this._onMoveEnd);
+          }
+        },
+        _onResize: function() {
+          cancelAnimFrame(this._resizeRequest);
+          this._resizeRequest = requestAnimFrame(
+            function() {
+              this.invalidateSize({ debounceMoveend: true });
+            },
+            this
+          );
+        },
+        _onScroll: function() {
+          this._container.scrollTop = 0;
+          this._container.scrollLeft = 0;
+        },
+        _onMoveEnd: function() {
+          var pos = this._getMapPanePos();
+          if (Math.max(Math.abs(pos.x), Math.abs(pos.y)) >= this.options.transform3DLimit) {
+            this._resetView(this.getCenter(), this.getZoom());
+          }
+        },
+        _findEventTargets: function(e, type) {
+          var targets = [], target, isHover = type === "mouseout" || type === "mouseover", src = e.target || e.srcElement, dragging = false;
+          while (src) {
+            target = this._targets[stamp(src)];
+            if (target && (type === "click" || type === "preclick") && this._draggableMoved(target)) {
+              dragging = true;
+              break;
+            }
+            if (target && target.listens(type, true)) {
+              if (isHover && !isExternalTarget(src, e)) {
+                break;
+              }
+              targets.push(target);
+              if (isHover) {
+                break;
+              }
+            }
+            if (src === this._container) {
+              break;
+            }
+            src = src.parentNode;
+          }
+          if (!targets.length && !dragging && !isHover && this.listens(type, true)) {
+            targets = [this];
+          }
+          return targets;
+        },
+        _isClickDisabled: function(el) {
+          while (el && el !== this._container) {
+            if (el["_leaflet_disable_click"]) {
+              return true;
+            }
+            el = el.parentNode;
+          }
+        },
+        _handleDOMEvent: function(e) {
+          var el = e.target || e.srcElement;
+          if (!this._loaded || el["_leaflet_disable_events"] || e.type === "click" && this._isClickDisabled(el)) {
+            return;
+          }
+          var type = e.type;
+          if (type === "mousedown") {
+            preventOutline(el);
+          }
+          this._fireDOMEvent(e, type);
+        },
+        _mouseEvents: ["click", "dblclick", "mouseover", "mouseout", "contextmenu"],
+        _fireDOMEvent: function(e, type, canvasTargets) {
+          if (e.type === "click") {
+            var synth = extend2({}, e);
+            synth.type = "preclick";
+            this._fireDOMEvent(synth, synth.type, canvasTargets);
+          }
+          var targets = this._findEventTargets(e, type);
+          if (canvasTargets) {
+            var filtered = [];
+            for (var i = 0; i < canvasTargets.length; i++) {
+              if (canvasTargets[i].listens(type, true)) {
+                filtered.push(canvasTargets[i]);
+              }
+            }
+            targets = filtered.concat(targets);
+          }
+          if (!targets.length) {
+            return;
+          }
+          if (type === "contextmenu") {
+            preventDefault(e);
+          }
+          var target = targets[0];
+          var data = {
+            originalEvent: e
+          };
+          if (e.type !== "keypress" && e.type !== "keydown" && e.type !== "keyup") {
+            var isMarker = target.getLatLng && (!target._radius || target._radius <= 10);
+            data.containerPoint = isMarker ? this.latLngToContainerPoint(target.getLatLng()) : this.mouseEventToContainerPoint(e);
+            data.layerPoint = this.containerPointToLayerPoint(data.containerPoint);
+            data.latlng = isMarker ? target.getLatLng() : this.layerPointToLatLng(data.layerPoint);
+          }
+          for (i = 0; i < targets.length; i++) {
+            targets[i].fire(type, data, true);
+            if (data.originalEvent._stopped || targets[i].options.bubblingMouseEvents === false && indexOf(this._mouseEvents, type) !== -1) {
+              return;
+            }
+          }
+        },
+        _draggableMoved: function(obj) {
+          obj = obj.dragging && obj.dragging.enabled() ? obj : this;
+          return obj.dragging && obj.dragging.moved() || this.boxZoom && this.boxZoom.moved();
+        },
+        _clearHandlers: function() {
+          for (var i = 0, len = this._handlers.length; i < len; i++) {
+            this._handlers[i].disable();
+          }
+        },
+        whenReady: function(callback, context) {
+          if (this._loaded) {
+            callback.call(context || this, { target: this });
+          } else {
+            this.on("load", callback, context);
+          }
+          return this;
+        },
+        _getMapPanePos: function() {
+          return getPosition(this._mapPane) || new Point(0, 0);
+        },
+        _moved: function() {
+          var pos = this._getMapPanePos();
+          return pos && !pos.equals([0, 0]);
+        },
+        _getTopLeftPoint: function(center, zoom2) {
+          var pixelOrigin = center && zoom2 !== void 0 ? this._getNewPixelOrigin(center, zoom2) : this.getPixelOrigin();
+          return pixelOrigin.subtract(this._getMapPanePos());
+        },
+        _getNewPixelOrigin: function(center, zoom2) {
+          var viewHalf = this.getSize()._divideBy(2);
+          return this.project(center, zoom2)._subtract(viewHalf)._add(this._getMapPanePos())._round();
+        },
+        _latLngToNewLayerPoint: function(latlng, zoom2, center) {
+          var topLeft = this._getNewPixelOrigin(center, zoom2);
+          return this.project(latlng, zoom2)._subtract(topLeft);
+        },
+        _latLngBoundsToNewLayerBounds: function(latLngBounds, zoom2, center) {
+          var topLeft = this._getNewPixelOrigin(center, zoom2);
+          return toBounds([
+            this.project(latLngBounds.getSouthWest(), zoom2)._subtract(topLeft),
+            this.project(latLngBounds.getNorthWest(), zoom2)._subtract(topLeft),
+            this.project(latLngBounds.getSouthEast(), zoom2)._subtract(topLeft),
+            this.project(latLngBounds.getNorthEast(), zoom2)._subtract(topLeft)
+          ]);
+        },
+        _getCenterLayerPoint: function() {
+          return this.containerPointToLayerPoint(this.getSize()._divideBy(2));
+        },
+        _getCenterOffset: function(latlng) {
+          return this.latLngToLayerPoint(latlng).subtract(this._getCenterLayerPoint());
+        },
+        _limitCenter: function(center, zoom2, bounds) {
+          if (!bounds) {
+            return center;
+          }
+          var centerPoint = this.project(center, zoom2), viewHalf = this.getSize().divideBy(2), viewBounds = new Bounds(centerPoint.subtract(viewHalf), centerPoint.add(viewHalf)), offset = this._getBoundsOffset(viewBounds, bounds, zoom2);
+          if (Math.abs(offset.x) <= 1 && Math.abs(offset.y) <= 1) {
+            return center;
+          }
+          return this.unproject(centerPoint.add(offset), zoom2);
+        },
+        _limitOffset: function(offset, bounds) {
+          if (!bounds) {
+            return offset;
+          }
+          var viewBounds = this.getPixelBounds(), newBounds = new Bounds(viewBounds.min.add(offset), viewBounds.max.add(offset));
+          return offset.add(this._getBoundsOffset(newBounds, bounds));
+        },
+        _getBoundsOffset: function(pxBounds, maxBounds, zoom2) {
+          var projectedMaxBounds = toBounds(
+            this.project(maxBounds.getNorthEast(), zoom2),
+            this.project(maxBounds.getSouthWest(), zoom2)
+          ), minOffset = projectedMaxBounds.min.subtract(pxBounds.min), maxOffset = projectedMaxBounds.max.subtract(pxBounds.max), dx = this._rebound(minOffset.x, -maxOffset.x), dy = this._rebound(minOffset.y, -maxOffset.y);
+          return new Point(dx, dy);
+        },
+        _rebound: function(left, right) {
+          return left + right > 0 ? Math.round(left - right) / 2 : Math.max(0, Math.ceil(left)) - Math.max(0, Math.floor(right));
+        },
+        _limitZoom: function(zoom2) {
+          var min = this.getMinZoom(), max = this.getMaxZoom(), snap = Browser.any3d ? this.options.zoomSnap : 1;
+          if (snap) {
+            zoom2 = Math.round(zoom2 / snap) * snap;
+          }
+          return Math.max(min, Math.min(max, zoom2));
+        },
+        _onPanTransitionStep: function() {
+          this.fire("move");
+        },
+        _onPanTransitionEnd: function() {
+          removeClass(this._mapPane, "leaflet-pan-anim");
+          this.fire("moveend");
+        },
+        _tryAnimatedPan: function(center, options) {
+          var offset = this._getCenterOffset(center)._trunc();
+          if ((options && options.animate) !== true && !this.getSize().contains(offset)) {
+            return false;
+          }
+          this.panBy(offset, options);
+          return true;
+        },
+        _createAnimProxy: function() {
+          var proxy = this._proxy = create$1("div", "leaflet-proxy leaflet-zoom-animated");
+          this._panes.mapPane.appendChild(proxy);
+          this.on("zoomanim", function(e) {
+            var prop = TRANSFORM, transform2 = this._proxy.style[prop];
+            setTransform(this._proxy, this.project(e.center, e.zoom), this.getZoomScale(e.zoom, 1));
+            if (transform2 === this._proxy.style[prop] && this._animatingZoom) {
+              this._onZoomTransitionEnd();
+            }
+          }, this);
+          this.on("load moveend", this._animMoveEnd, this);
+          this._on("unload", this._destroyAnimProxy, this);
+        },
+        _destroyAnimProxy: function() {
+          remove(this._proxy);
+          this.off("load moveend", this._animMoveEnd, this);
+          delete this._proxy;
+        },
+        _animMoveEnd: function() {
+          var c = this.getCenter(), z2 = this.getZoom();
+          setTransform(this._proxy, this.project(c, z2), this.getZoomScale(z2, 1));
+        },
+        _catchTransitionEnd: function(e) {
+          if (this._animatingZoom && e.propertyName.indexOf("transform") >= 0) {
+            this._onZoomTransitionEnd();
+          }
+        },
+        _nothingToAnimate: function() {
+          return !this._container.getElementsByClassName("leaflet-zoom-animated").length;
+        },
+        _tryAnimatedZoom: function(center, zoom2, options) {
+          if (this._animatingZoom) {
+            return true;
+          }
+          options = options || {};
+          if (!this._zoomAnimated || options.animate === false || this._nothingToAnimate() || Math.abs(zoom2 - this._zoom) > this.options.zoomAnimationThreshold) {
+            return false;
+          }
+          var scale2 = this.getZoomScale(zoom2), offset = this._getCenterOffset(center)._divideBy(1 - 1 / scale2);
+          if (options.animate !== true && !this.getSize().contains(offset)) {
+            return false;
+          }
+          requestAnimFrame(function() {
+            this._moveStart(true, options.noMoveStart || false)._animateZoom(center, zoom2, true);
+          }, this);
+          return true;
+        },
+        _animateZoom: function(center, zoom2, startAnim, noUpdate) {
+          if (!this._mapPane) {
+            return;
+          }
+          if (startAnim) {
+            this._animatingZoom = true;
+            this._animateToCenter = center;
+            this._animateToZoom = zoom2;
+            addClass(this._mapPane, "leaflet-zoom-anim");
+          }
+          this.fire("zoomanim", {
+            center,
+            zoom: zoom2,
+            noUpdate
+          });
+          if (!this._tempFireZoomEvent) {
+            this._tempFireZoomEvent = this._zoom !== this._animateToZoom;
+          }
+          this._move(this._animateToCenter, this._animateToZoom, void 0, true);
+          setTimeout(bind(this._onZoomTransitionEnd, this), 250);
+        },
+        _onZoomTransitionEnd: function() {
+          if (!this._animatingZoom) {
+            return;
+          }
+          if (this._mapPane) {
+            removeClass(this._mapPane, "leaflet-zoom-anim");
+          }
+          this._animatingZoom = false;
+          this._move(this._animateToCenter, this._animateToZoom, void 0, true);
+          if (this._tempFireZoomEvent) {
+            this.fire("zoom");
+          }
+          delete this._tempFireZoomEvent;
+          this.fire("move");
+          this._moveEnd(true);
+        }
+      });
+      function createMap(id, options) {
+        return new Map2(id, options);
+      }
+      var Control = Class2.extend({
+        options: {
+          position: "topright"
+        },
+        initialize: function(options) {
+          setOptions(this, options);
+        },
+        getPosition: function() {
+          return this.options.position;
+        },
+        setPosition: function(position) {
+          var map3 = this._map;
+          if (map3) {
+            map3.removeControl(this);
+          }
+          this.options.position = position;
+          if (map3) {
+            map3.addControl(this);
+          }
+          return this;
+        },
+        getContainer: function() {
+          return this._container;
+        },
+        addTo: function(map3) {
+          this.remove();
+          this._map = map3;
+          var container = this._container = this.onAdd(map3), pos = this.getPosition(), corner = map3._controlCorners[pos];
+          addClass(container, "leaflet-control");
+          if (pos.indexOf("bottom") !== -1) {
+            corner.insertBefore(container, corner.firstChild);
+          } else {
+            corner.appendChild(container);
+          }
+          this._map.on("unload", this.remove, this);
+          return this;
+        },
+        remove: function() {
+          if (!this._map) {
+            return this;
+          }
+          remove(this._container);
+          if (this.onRemove) {
+            this.onRemove(this._map);
+          }
+          this._map.off("unload", this.remove, this);
+          this._map = null;
+          return this;
+        },
+        _refocusOnMap: function(e) {
+          if (this._map && e && e.screenX > 0 && e.screenY > 0) {
+            this._map.getContainer().focus();
+          }
+        }
+      });
+      var control = function(options) {
+        return new Control(options);
+      };
+      Map2.include({
+        addControl: function(control2) {
+          control2.addTo(this);
+          return this;
+        },
+        removeControl: function(control2) {
+          control2.remove();
+          return this;
+        },
+        _initControlPos: function() {
+          var corners = this._controlCorners = {}, l = "leaflet-", container = this._controlContainer = create$1("div", l + "control-container", this._container);
+          function createCorner(vSide, hSide) {
+            var className = l + vSide + " " + l + hSide;
+            corners[vSide + hSide] = create$1("div", className, container);
+          }
+          createCorner("top", "left");
+          createCorner("top", "right");
+          createCorner("bottom", "left");
+          createCorner("bottom", "right");
+        },
+        _clearControlPos: function() {
+          for (var i in this._controlCorners) {
+            remove(this._controlCorners[i]);
+          }
+          remove(this._controlContainer);
+          delete this._controlCorners;
+          delete this._controlContainer;
+        }
+      });
+      var Layers = Control.extend({
+        options: {
+          collapsed: true,
+          position: "topright",
+          autoZIndex: true,
+          hideSingleBase: false,
+          sortLayers: false,
+          sortFunction: function(layerA, layerB, nameA, nameB) {
+            return nameA < nameB ? -1 : nameB < nameA ? 1 : 0;
+          }
+        },
+        initialize: function(baseLayers, overlays, options) {
+          setOptions(this, options);
+          this._layerControlInputs = [];
+          this._layers = [];
+          this._lastZIndex = 0;
+          this._handlingClick = false;
+          this._preventClick = false;
+          for (var i in baseLayers) {
+            this._addLayer(baseLayers[i], i);
+          }
+          for (i in overlays) {
+            this._addLayer(overlays[i], i, true);
+          }
+        },
+        onAdd: function(map3) {
+          this._initLayout();
+          this._update();
+          this._map = map3;
+          map3.on("zoomend", this._checkDisabledLayers, this);
+          for (var i = 0; i < this._layers.length; i++) {
+            this._layers[i].layer.on("add remove", this._onLayerChange, this);
+          }
+          return this._container;
+        },
+        addTo: function(map3) {
+          Control.prototype.addTo.call(this, map3);
+          return this._expandIfNotCollapsed();
+        },
+        onRemove: function() {
+          this._map.off("zoomend", this._checkDisabledLayers, this);
+          for (var i = 0; i < this._layers.length; i++) {
+            this._layers[i].layer.off("add remove", this._onLayerChange, this);
+          }
+        },
+        addBaseLayer: function(layer, name) {
+          this._addLayer(layer, name);
+          return this._map ? this._update() : this;
+        },
+        addOverlay: function(layer, name) {
+          this._addLayer(layer, name, true);
+          return this._map ? this._update() : this;
+        },
+        removeLayer: function(layer) {
+          layer.off("add remove", this._onLayerChange, this);
+          var obj = this._getLayer(stamp(layer));
+          if (obj) {
+            this._layers.splice(this._layers.indexOf(obj), 1);
+          }
+          return this._map ? this._update() : this;
+        },
+        expand: function() {
+          addClass(this._container, "leaflet-control-layers-expanded");
+          this._section.style.height = null;
+          var acceptableHeight = this._map.getSize().y - (this._container.offsetTop + 50);
+          if (acceptableHeight < this._section.clientHeight) {
+            addClass(this._section, "leaflet-control-layers-scrollbar");
+            this._section.style.height = acceptableHeight + "px";
+          } else {
+            removeClass(this._section, "leaflet-control-layers-scrollbar");
+          }
+          this._checkDisabledLayers();
+          return this;
+        },
+        collapse: function() {
+          removeClass(this._container, "leaflet-control-layers-expanded");
+          return this;
+        },
+        _initLayout: function() {
+          var className = "leaflet-control-layers", container = this._container = create$1("div", className), collapsed = this.options.collapsed;
+          container.setAttribute("aria-haspopup", true);
+          disableClickPropagation(container);
+          disableScrollPropagation(container);
+          var section = this._section = create$1("section", className + "-list");
+          if (collapsed) {
+            this._map.on("click", this.collapse, this);
+            on(container, {
+              mouseenter: this._expandSafely,
+              mouseleave: this.collapse
+            }, this);
+          }
+          var link = this._layersLink = create$1("a", className + "-toggle", container);
+          link.href = "#";
+          link.title = "Layers";
+          link.setAttribute("role", "button");
+          on(link, {
+            keydown: function(e) {
+              if (e.keyCode === 13) {
+                this._expandSafely();
+              }
+            },
+            click: function(e) {
+              preventDefault(e);
+              this._expandSafely();
+            }
+          }, this);
+          if (!collapsed) {
+            this.expand();
+          }
+          this._baseLayersList = create$1("div", className + "-base", section);
+          this._separator = create$1("div", className + "-separator", section);
+          this._overlaysList = create$1("div", className + "-overlays", section);
+          container.appendChild(section);
+        },
+        _getLayer: function(id) {
+          for (var i = 0; i < this._layers.length; i++) {
+            if (this._layers[i] && stamp(this._layers[i].layer) === id) {
+              return this._layers[i];
+            }
+          }
+        },
+        _addLayer: function(layer, name, overlay) {
+          if (this._map) {
+            layer.on("add remove", this._onLayerChange, this);
+          }
+          this._layers.push({
+            layer,
+            name,
+            overlay
+          });
+          if (this.options.sortLayers) {
+            this._layers.sort(bind(function(a, b) {
+              return this.options.sortFunction(a.layer, b.layer, a.name, b.name);
+            }, this));
+          }
+          if (this.options.autoZIndex && layer.setZIndex) {
+            this._lastZIndex++;
+            layer.setZIndex(this._lastZIndex);
+          }
+          this._expandIfNotCollapsed();
+        },
+        _update: function() {
+          if (!this._container) {
+            return this;
+          }
+          empty(this._baseLayersList);
+          empty(this._overlaysList);
+          this._layerControlInputs = [];
+          var baseLayersPresent, overlaysPresent, i, obj, baseLayersCount = 0;
+          for (i = 0; i < this._layers.length; i++) {
+            obj = this._layers[i];
+            this._addItem(obj);
+            overlaysPresent = overlaysPresent || obj.overlay;
+            baseLayersPresent = baseLayersPresent || !obj.overlay;
+            baseLayersCount += !obj.overlay ? 1 : 0;
+          }
+          if (this.options.hideSingleBase) {
+            baseLayersPresent = baseLayersPresent && baseLayersCount > 1;
+            this._baseLayersList.style.display = baseLayersPresent ? "" : "none";
+          }
+          this._separator.style.display = overlaysPresent && baseLayersPresent ? "" : "none";
+          return this;
+        },
+        _onLayerChange: function(e) {
+          if (!this._handlingClick) {
+            this._update();
+          }
+          var obj = this._getLayer(stamp(e.target));
+          var type = obj.overlay ? e.type === "add" ? "overlayadd" : "overlayremove" : e.type === "add" ? "baselayerchange" : null;
+          if (type) {
+            this._map.fire(type, obj);
+          }
+        },
+        _createRadioElement: function(name, checked) {
+          var radioHtml = '<input type="radio" class="leaflet-control-layers-selector" name="' + name + '"' + (checked ? ' checked="checked"' : "") + "/>";
+          var radioFragment = document.createElement("div");
+          radioFragment.innerHTML = radioHtml;
+          return radioFragment.firstChild;
+        },
+        _addItem: function(obj) {
+          var label = document.createElement("label"), checked = this._map.hasLayer(obj.layer), input;
+          if (obj.overlay) {
+            input = document.createElement("input");
+            input.type = "checkbox";
+            input.className = "leaflet-control-layers-selector";
+            input.defaultChecked = checked;
+          } else {
+            input = this._createRadioElement("leaflet-base-layers_" + stamp(this), checked);
+          }
+          this._layerControlInputs.push(input);
+          input.layerId = stamp(obj.layer);
+          on(input, "click", this._onInputClick, this);
+          var name = document.createElement("span");
+          name.innerHTML = " " + obj.name;
+          var holder = document.createElement("span");
+          label.appendChild(holder);
+          holder.appendChild(input);
+          holder.appendChild(name);
+          var container = obj.overlay ? this._overlaysList : this._baseLayersList;
+          container.appendChild(label);
+          this._checkDisabledLayers();
+          return label;
+        },
+        _onInputClick: function() {
+          if (this._preventClick) {
+            return;
+          }
+          var inputs = this._layerControlInputs, input, layer;
+          var addedLayers = [], removedLayers = [];
+          this._handlingClick = true;
+          for (var i = inputs.length - 1; i >= 0; i--) {
+            input = inputs[i];
+            layer = this._getLayer(input.layerId).layer;
+            if (input.checked) {
+              addedLayers.push(layer);
+            } else if (!input.checked) {
+              removedLayers.push(layer);
+            }
+          }
+          for (i = 0; i < removedLayers.length; i++) {
+            if (this._map.hasLayer(removedLayers[i])) {
+              this._map.removeLayer(removedLayers[i]);
+            }
+          }
+          for (i = 0; i < addedLayers.length; i++) {
+            if (!this._map.hasLayer(addedLayers[i])) {
+              this._map.addLayer(addedLayers[i]);
+            }
+          }
+          this._handlingClick = false;
+          this._refocusOnMap();
+        },
+        _checkDisabledLayers: function() {
+          var inputs = this._layerControlInputs, input, layer, zoom2 = this._map.getZoom();
+          for (var i = inputs.length - 1; i >= 0; i--) {
+            input = inputs[i];
+            layer = this._getLayer(input.layerId).layer;
+            input.disabled = layer.options.minZoom !== void 0 && zoom2 < layer.options.minZoom || layer.options.maxZoom !== void 0 && zoom2 > layer.options.maxZoom;
+          }
+        },
+        _expandIfNotCollapsed: function() {
+          if (this._map && !this.options.collapsed) {
+            this.expand();
+          }
+          return this;
+        },
+        _expandSafely: function() {
+          var section = this._section;
+          this._preventClick = true;
+          on(section, "click", preventDefault);
+          this.expand();
+          var that = this;
+          setTimeout(function() {
+            off(section, "click", preventDefault);
+            that._preventClick = false;
+          });
+        }
+      });
+      var layers = function(baseLayers, overlays, options) {
+        return new Layers(baseLayers, overlays, options);
+      };
+      var Zoom = Control.extend({
+        options: {
+          position: "topleft",
+          zoomInText: '<span aria-hidden="true">+</span>',
+          zoomInTitle: "Zoom in",
+          zoomOutText: '<span aria-hidden="true">&#x2212;</span>',
+          zoomOutTitle: "Zoom out"
+        },
+        onAdd: function(map3) {
+          var zoomName = "leaflet-control-zoom", container = create$1("div", zoomName + " leaflet-bar"), options = this.options;
+          this._zoomInButton = this._createButton(
+            options.zoomInText,
+            options.zoomInTitle,
+            zoomName + "-in",
+            container,
+            this._zoomIn
+          );
+          this._zoomOutButton = this._createButton(
+            options.zoomOutText,
+            options.zoomOutTitle,
+            zoomName + "-out",
+            container,
+            this._zoomOut
+          );
+          this._updateDisabled();
+          map3.on("zoomend zoomlevelschange", this._updateDisabled, this);
+          return container;
+        },
+        onRemove: function(map3) {
+          map3.off("zoomend zoomlevelschange", this._updateDisabled, this);
+        },
+        disable: function() {
+          this._disabled = true;
+          this._updateDisabled();
+          return this;
+        },
+        enable: function() {
+          this._disabled = false;
+          this._updateDisabled();
+          return this;
+        },
+        _zoomIn: function(e) {
+          if (!this._disabled && this._map._zoom < this._map.getMaxZoom()) {
+            this._map.zoomIn(this._map.options.zoomDelta * (e.shiftKey ? 3 : 1));
+          }
+        },
+        _zoomOut: function(e) {
+          if (!this._disabled && this._map._zoom > this._map.getMinZoom()) {
+            this._map.zoomOut(this._map.options.zoomDelta * (e.shiftKey ? 3 : 1));
+          }
+        },
+        _createButton: function(html, title, className, container, fn) {
+          var link = create$1("a", className, container);
+          link.innerHTML = html;
+          link.href = "#";
+          link.title = title;
+          link.setAttribute("role", "button");
+          link.setAttribute("aria-label", title);
+          disableClickPropagation(link);
+          on(link, "click", stop);
+          on(link, "click", fn, this);
+          on(link, "click", this._refocusOnMap, this);
+          return link;
+        },
+        _updateDisabled: function() {
+          var map3 = this._map, className = "leaflet-disabled";
+          removeClass(this._zoomInButton, className);
+          removeClass(this._zoomOutButton, className);
+          this._zoomInButton.setAttribute("aria-disabled", "false");
+          this._zoomOutButton.setAttribute("aria-disabled", "false");
+          if (this._disabled || map3._zoom === map3.getMinZoom()) {
+            addClass(this._zoomOutButton, className);
+            this._zoomOutButton.setAttribute("aria-disabled", "true");
+          }
+          if (this._disabled || map3._zoom === map3.getMaxZoom()) {
+            addClass(this._zoomInButton, className);
+            this._zoomInButton.setAttribute("aria-disabled", "true");
+          }
+        }
+      });
+      Map2.mergeOptions({
+        zoomControl: true
+      });
+      Map2.addInitHook(function() {
+        if (this.options.zoomControl) {
+          this.zoomControl = new Zoom();
+          this.addControl(this.zoomControl);
+        }
+      });
+      var zoom = function(options) {
+        return new Zoom(options);
+      };
+      var Scale = Control.extend({
+        options: {
+          position: "bottomleft",
+          maxWidth: 100,
+          metric: true,
+          imperial: true
+        },
+        onAdd: function(map3) {
+          var className = "leaflet-control-scale", container = create$1("div", className), options = this.options;
+          this._addScales(options, className + "-line", container);
+          map3.on(options.updateWhenIdle ? "moveend" : "move", this._update, this);
+          map3.whenReady(this._update, this);
+          return container;
+        },
+        onRemove: function(map3) {
+          map3.off(this.options.updateWhenIdle ? "moveend" : "move", this._update, this);
+        },
+        _addScales: function(options, className, container) {
+          if (options.metric) {
+            this._mScale = create$1("div", className, container);
+          }
+          if (options.imperial) {
+            this._iScale = create$1("div", className, container);
+          }
+        },
+        _update: function() {
+          var map3 = this._map, y = map3.getSize().y / 2;
+          var maxMeters = map3.distance(
+            map3.containerPointToLatLng([0, y]),
+            map3.containerPointToLatLng([this.options.maxWidth, y])
+          );
+          this._updateScales(maxMeters);
+        },
+        _updateScales: function(maxMeters) {
+          if (this.options.metric && maxMeters) {
+            this._updateMetric(maxMeters);
+          }
+          if (this.options.imperial && maxMeters) {
+            this._updateImperial(maxMeters);
+          }
+        },
+        _updateMetric: function(maxMeters) {
+          var meters = this._getRoundNum(maxMeters), label = meters < 1e3 ? meters + " m" : meters / 1e3 + " km";
+          this._updateScale(this._mScale, label, meters / maxMeters);
+        },
+        _updateImperial: function(maxMeters) {
+          var maxFeet = maxMeters * 3.2808399, maxMiles, miles, feet;
+          if (maxFeet > 5280) {
+            maxMiles = maxFeet / 5280;
+            miles = this._getRoundNum(maxMiles);
+            this._updateScale(this._iScale, miles + " mi", miles / maxMiles);
+          } else {
+            feet = this._getRoundNum(maxFeet);
+            this._updateScale(this._iScale, feet + " ft", feet / maxFeet);
+          }
+        },
+        _updateScale: function(scale2, text, ratio) {
+          scale2.style.width = Math.round(this.options.maxWidth * ratio) + "px";
+          scale2.innerHTML = text;
+        },
+        _getRoundNum: function(num) {
+          var pow10 = Math.pow(10, (Math.floor(num) + "").length - 1), d = num / pow10;
+          d = d >= 10 ? 10 : d >= 5 ? 5 : d >= 3 ? 3 : d >= 2 ? 2 : 1;
+          return pow10 * d;
+        }
+      });
+      var scale = function(options) {
+        return new Scale(options);
+      };
+      var ukrainianFlag = '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" class="leaflet-attribution-flag"><path fill="#4C7BE1" d="M0 0h12v4H0z"/><path fill="#FFD500" d="M0 4h12v3H0z"/><path fill="#E0BC00" d="M0 7h12v1H0z"/></svg>';
+      var Attribution = Control.extend({
+        options: {
+          position: "bottomright",
+          prefix: '<a href="https://leafletjs.com" title="A JavaScript library for interactive maps">' + (Browser.inlineSvg ? ukrainianFlag + " " : "") + "Leaflet</a>"
+        },
+        initialize: function(options) {
+          setOptions(this, options);
+          this._attributions = {};
+        },
+        onAdd: function(map3) {
+          map3.attributionControl = this;
+          this._container = create$1("div", "leaflet-control-attribution");
+          disableClickPropagation(this._container);
+          for (var i in map3._layers) {
+            if (map3._layers[i].getAttribution) {
+              this.addAttribution(map3._layers[i].getAttribution());
+            }
+          }
+          this._update();
+          map3.on("layeradd", this._addAttribution, this);
+          return this._container;
+        },
+        onRemove: function(map3) {
+          map3.off("layeradd", this._addAttribution, this);
+        },
+        _addAttribution: function(ev) {
+          if (ev.layer.getAttribution) {
+            this.addAttribution(ev.layer.getAttribution());
+            ev.layer.once("remove", function() {
+              this.removeAttribution(ev.layer.getAttribution());
+            }, this);
+          }
+        },
+        setPrefix: function(prefix) {
+          this.options.prefix = prefix;
+          this._update();
+          return this;
+        },
+        addAttribution: function(text) {
+          if (!text) {
+            return this;
+          }
+          if (!this._attributions[text]) {
+            this._attributions[text] = 0;
+          }
+          this._attributions[text]++;
+          this._update();
+          return this;
+        },
+        removeAttribution: function(text) {
+          if (!text) {
+            return this;
+          }
+          if (this._attributions[text]) {
+            this._attributions[text]--;
+            this._update();
+          }
+          return this;
+        },
+        _update: function() {
+          if (!this._map) {
+            return;
+          }
+          var attribs = [];
+          for (var i in this._attributions) {
+            if (this._attributions[i]) {
+              attribs.push(i);
+            }
+          }
+          var prefixAndAttribs = [];
+          if (this.options.prefix) {
+            prefixAndAttribs.push(this.options.prefix);
+          }
+          if (attribs.length) {
+            prefixAndAttribs.push(attribs.join(", "));
+          }
+          this._container.innerHTML = prefixAndAttribs.join(' <span aria-hidden="true">|</span> ');
+        }
+      });
+      Map2.mergeOptions({
+        attributionControl: true
+      });
+      Map2.addInitHook(function() {
+        if (this.options.attributionControl) {
+          new Attribution().addTo(this);
+        }
+      });
+      var attribution = function(options) {
+        return new Attribution(options);
+      };
+      Control.Layers = Layers;
+      Control.Zoom = Zoom;
+      Control.Scale = Scale;
+      Control.Attribution = Attribution;
+      control.layers = layers;
+      control.zoom = zoom;
+      control.scale = scale;
+      control.attribution = attribution;
+      var Handler = Class2.extend({
+        initialize: function(map3) {
+          this._map = map3;
+        },
+        enable: function() {
+          if (this._enabled) {
+            return this;
+          }
+          this._enabled = true;
+          this.addHooks();
+          return this;
+        },
+        disable: function() {
+          if (!this._enabled) {
+            return this;
+          }
+          this._enabled = false;
+          this.removeHooks();
+          return this;
+        },
+        enabled: function() {
+          return !!this._enabled;
+        }
+      });
+      Handler.addTo = function(map3, name) {
+        map3.addHandler(name, this);
+        return this;
+      };
+      var Mixin = { Events };
+      var START = Browser.touch ? "touchstart mousedown" : "mousedown";
+      var Draggable = Evented.extend({
+        options: {
+          clickTolerance: 3
+        },
+        initialize: function(element, dragStartTarget, preventOutline2, options) {
+          setOptions(this, options);
+          this._element = element;
+          this._dragStartTarget = dragStartTarget || element;
+          this._preventOutline = preventOutline2;
+        },
+        enable: function() {
+          if (this._enabled) {
+            return;
+          }
+          on(this._dragStartTarget, START, this._onDown, this);
+          this._enabled = true;
+        },
+        disable: function() {
+          if (!this._enabled) {
+            return;
+          }
+          if (Draggable._dragging === this) {
+            this.finishDrag(true);
+          }
+          off(this._dragStartTarget, START, this._onDown, this);
+          this._enabled = false;
+          this._moved = false;
+        },
+        _onDown: function(e) {
+          if (!this._enabled) {
+            return;
+          }
+          this._moved = false;
+          if (hasClass(this._element, "leaflet-zoom-anim")) {
+            return;
+          }
+          if (e.touches && e.touches.length !== 1) {
+            if (Draggable._dragging === this) {
+              this.finishDrag();
+            }
+            return;
+          }
+          if (Draggable._dragging || e.shiftKey || e.which !== 1 && e.button !== 1 && !e.touches) {
+            return;
+          }
+          Draggable._dragging = this;
+          if (this._preventOutline) {
+            preventOutline(this._element);
+          }
+          disableImageDrag();
+          disableTextSelection();
+          if (this._moving) {
+            return;
+          }
+          this.fire("down");
+          var first = e.touches ? e.touches[0] : e, sizedParent = getSizedParentNode(this._element);
+          this._startPoint = new Point(first.clientX, first.clientY);
+          this._startPos = getPosition(this._element);
+          this._parentScale = getScale(sizedParent);
+          var mouseevent = e.type === "mousedown";
+          on(document, mouseevent ? "mousemove" : "touchmove", this._onMove, this);
+          on(document, mouseevent ? "mouseup" : "touchend touchcancel", this._onUp, this);
+        },
+        _onMove: function(e) {
+          if (!this._enabled) {
+            return;
+          }
+          if (e.touches && e.touches.length > 1) {
+            this._moved = true;
+            return;
+          }
+          var first = e.touches && e.touches.length === 1 ? e.touches[0] : e, offset = new Point(first.clientX, first.clientY)._subtract(this._startPoint);
+          if (!offset.x && !offset.y) {
+            return;
+          }
+          if (Math.abs(offset.x) + Math.abs(offset.y) < this.options.clickTolerance) {
+            return;
+          }
+          offset.x /= this._parentScale.x;
+          offset.y /= this._parentScale.y;
+          preventDefault(e);
+          if (!this._moved) {
+            this.fire("dragstart");
+            this._moved = true;
+            addClass(document.body, "leaflet-dragging");
+            this._lastTarget = e.target || e.srcElement;
+            if (window.SVGElementInstance && this._lastTarget instanceof window.SVGElementInstance) {
+              this._lastTarget = this._lastTarget.correspondingUseElement;
+            }
+            addClass(this._lastTarget, "leaflet-drag-target");
+          }
+          this._newPos = this._startPos.add(offset);
+          this._moving = true;
+          this._lastEvent = e;
+          this._updatePosition();
+        },
+        _updatePosition: function() {
+          var e = { originalEvent: this._lastEvent };
+          this.fire("predrag", e);
+          setPosition(this._element, this._newPos);
+          this.fire("drag", e);
+        },
+        _onUp: function() {
+          if (!this._enabled) {
+            return;
+          }
+          this.finishDrag();
+        },
+        finishDrag: function(noInertia) {
+          removeClass(document.body, "leaflet-dragging");
+          if (this._lastTarget) {
+            removeClass(this._lastTarget, "leaflet-drag-target");
+            this._lastTarget = null;
+          }
+          off(document, "mousemove touchmove", this._onMove, this);
+          off(document, "mouseup touchend touchcancel", this._onUp, this);
+          enableImageDrag();
+          enableTextSelection();
+          var fireDragend = this._moved && this._moving;
+          this._moving = false;
+          Draggable._dragging = false;
+          if (fireDragend) {
+            this.fire("dragend", {
+              noInertia,
+              distance: this._newPos.distanceTo(this._startPos)
+            });
+          }
+        }
+      });
+      function clipPolygon(points, bounds, round) {
+        var clippedPoints, edges = [1, 4, 2, 8], i, j, k, a, b, len, edge2, p;
+        for (i = 0, len = points.length; i < len; i++) {
+          points[i]._code = _getBitCode(points[i], bounds);
+        }
+        for (k = 0; k < 4; k++) {
+          edge2 = edges[k];
+          clippedPoints = [];
+          for (i = 0, len = points.length, j = len - 1; i < len; j = i++) {
+            a = points[i];
+            b = points[j];
+            if (!(a._code & edge2)) {
+              if (b._code & edge2) {
+                p = _getEdgeIntersection(b, a, edge2, bounds, round);
+                p._code = _getBitCode(p, bounds);
+                clippedPoints.push(p);
+              }
+              clippedPoints.push(a);
+            } else if (!(b._code & edge2)) {
+              p = _getEdgeIntersection(b, a, edge2, bounds, round);
+              p._code = _getBitCode(p, bounds);
+              clippedPoints.push(p);
+            }
+          }
+          points = clippedPoints;
+        }
+        return points;
+      }
+      function polygonCenter(latlngs, crs) {
+        var i, j, p1, p2, f, area, x, y, center;
+        if (!latlngs || latlngs.length === 0) {
+          throw new Error("latlngs not passed");
+        }
+        if (!isFlat(latlngs)) {
+          console.warn("latlngs are not flat! Only the first ring will be used");
+          latlngs = latlngs[0];
+        }
+        var centroidLatLng = toLatLng([0, 0]);
+        var bounds = toLatLngBounds(latlngs);
+        var areaBounds = bounds.getNorthWest().distanceTo(bounds.getSouthWest()) * bounds.getNorthEast().distanceTo(bounds.getNorthWest());
+        if (areaBounds < 1700) {
+          centroidLatLng = centroid(latlngs);
+        }
+        var len = latlngs.length;
+        var points = [];
+        for (i = 0; i < len; i++) {
+          var latlng = toLatLng(latlngs[i]);
+          points.push(crs.project(toLatLng([latlng.lat - centroidLatLng.lat, latlng.lng - centroidLatLng.lng])));
+        }
+        area = x = y = 0;
+        for (i = 0, j = len - 1; i < len; j = i++) {
+          p1 = points[i];
+          p2 = points[j];
+          f = p1.y * p2.x - p2.y * p1.x;
+          x += (p1.x + p2.x) * f;
+          y += (p1.y + p2.y) * f;
+          area += f * 3;
+        }
+        if (area === 0) {
+          center = points[0];
+        } else {
+          center = [x / area, y / area];
+        }
+        var latlngCenter = crs.unproject(toPoint(center));
+        return toLatLng([latlngCenter.lat + centroidLatLng.lat, latlngCenter.lng + centroidLatLng.lng]);
+      }
+      function centroid(coords) {
+        var latSum = 0;
+        var lngSum = 0;
+        var len = 0;
+        for (var i = 0; i < coords.length; i++) {
+          var latlng = toLatLng(coords[i]);
+          latSum += latlng.lat;
+          lngSum += latlng.lng;
+          len++;
+        }
+        return toLatLng([latSum / len, lngSum / len]);
+      }
+      var PolyUtil = {
+        __proto__: null,
+        clipPolygon,
+        polygonCenter,
+        centroid
+      };
+      function simplify(points, tolerance) {
+        if (!tolerance || !points.length) {
+          return points.slice();
+        }
+        var sqTolerance = tolerance * tolerance;
+        points = _reducePoints(points, sqTolerance);
+        points = _simplifyDP(points, sqTolerance);
+        return points;
+      }
+      function pointToSegmentDistance(p, p1, p2) {
+        return Math.sqrt(_sqClosestPointOnSegment(p, p1, p2, true));
+      }
+      function closestPointOnSegment(p, p1, p2) {
+        return _sqClosestPointOnSegment(p, p1, p2);
+      }
+      function _simplifyDP(points, sqTolerance) {
+        var len = points.length, ArrayConstructor = typeof Uint8Array !== void 0 + "" ? Uint8Array : Array, markers = new ArrayConstructor(len);
+        markers[0] = markers[len - 1] = 1;
+        _simplifyDPStep(points, markers, sqTolerance, 0, len - 1);
+        var i, newPoints = [];
+        for (i = 0; i < len; i++) {
+          if (markers[i]) {
+            newPoints.push(points[i]);
+          }
+        }
+        return newPoints;
+      }
+      function _simplifyDPStep(points, markers, sqTolerance, first, last) {
+        var maxSqDist = 0, index2, i, sqDist;
+        for (i = first + 1; i <= last - 1; i++) {
+          sqDist = _sqClosestPointOnSegment(points[i], points[first], points[last], true);
+          if (sqDist > maxSqDist) {
+            index2 = i;
+            maxSqDist = sqDist;
+          }
+        }
+        if (maxSqDist > sqTolerance) {
+          markers[index2] = 1;
+          _simplifyDPStep(points, markers, sqTolerance, first, index2);
+          _simplifyDPStep(points, markers, sqTolerance, index2, last);
+        }
+      }
+      function _reducePoints(points, sqTolerance) {
+        var reducedPoints = [points[0]];
+        for (var i = 1, prev = 0, len = points.length; i < len; i++) {
+          if (_sqDist(points[i], points[prev]) > sqTolerance) {
+            reducedPoints.push(points[i]);
+            prev = i;
+          }
+        }
+        if (prev < len - 1) {
+          reducedPoints.push(points[len - 1]);
+        }
+        return reducedPoints;
+      }
+      var _lastCode;
+      function clipSegment(a, b, bounds, useLastCode, round) {
+        var codeA = useLastCode ? _lastCode : _getBitCode(a, bounds), codeB = _getBitCode(b, bounds), codeOut, p, newCode;
+        _lastCode = codeB;
+        while (true) {
+          if (!(codeA | codeB)) {
+            return [a, b];
+          }
+          if (codeA & codeB) {
+            return false;
+          }
+          codeOut = codeA || codeB;
+          p = _getEdgeIntersection(a, b, codeOut, bounds, round);
+          newCode = _getBitCode(p, bounds);
+          if (codeOut === codeA) {
+            a = p;
+            codeA = newCode;
+          } else {
+            b = p;
+            codeB = newCode;
+          }
+        }
+      }
+      function _getEdgeIntersection(a, b, code, bounds, round) {
+        var dx = b.x - a.x, dy = b.y - a.y, min = bounds.min, max = bounds.max, x, y;
+        if (code & 8) {
+          x = a.x + dx * (max.y - a.y) / dy;
+          y = max.y;
+        } else if (code & 4) {
+          x = a.x + dx * (min.y - a.y) / dy;
+          y = min.y;
+        } else if (code & 2) {
+          x = max.x;
+          y = a.y + dy * (max.x - a.x) / dx;
+        } else if (code & 1) {
+          x = min.x;
+          y = a.y + dy * (min.x - a.x) / dx;
+        }
+        return new Point(x, y, round);
+      }
+      function _getBitCode(p, bounds) {
+        var code = 0;
+        if (p.x < bounds.min.x) {
+          code |= 1;
+        } else if (p.x > bounds.max.x) {
+          code |= 2;
+        }
+        if (p.y < bounds.min.y) {
+          code |= 4;
+        } else if (p.y > bounds.max.y) {
+          code |= 8;
+        }
+        return code;
+      }
+      function _sqDist(p1, p2) {
+        var dx = p2.x - p1.x, dy = p2.y - p1.y;
+        return dx * dx + dy * dy;
+      }
+      function _sqClosestPointOnSegment(p, p1, p2, sqDist) {
+        var x = p1.x, y = p1.y, dx = p2.x - x, dy = p2.y - y, dot = dx * dx + dy * dy, t;
+        if (dot > 0) {
+          t = ((p.x - x) * dx + (p.y - y) * dy) / dot;
+          if (t > 1) {
+            x = p2.x;
+            y = p2.y;
+          } else if (t > 0) {
+            x += dx * t;
+            y += dy * t;
+          }
+        }
+        dx = p.x - x;
+        dy = p.y - y;
+        return sqDist ? dx * dx + dy * dy : new Point(x, y);
+      }
+      function isFlat(latlngs) {
+        return !isArray(latlngs[0]) || typeof latlngs[0][0] !== "object" && typeof latlngs[0][0] !== "undefined";
+      }
+      function _flat(latlngs) {
+        console.warn("Deprecated use of _flat, please use L.LineUtil.isFlat instead.");
+        return isFlat(latlngs);
+      }
+      function polylineCenter(latlngs, crs) {
+        var i, halfDist, segDist, dist, p1, p2, ratio, center;
+        if (!latlngs || latlngs.length === 0) {
+          throw new Error("latlngs not passed");
+        }
+        if (!isFlat(latlngs)) {
+          console.warn("latlngs are not flat! Only the first ring will be used");
+          latlngs = latlngs[0];
+        }
+        var centroidLatLng = toLatLng([0, 0]);
+        var bounds = toLatLngBounds(latlngs);
+        var areaBounds = bounds.getNorthWest().distanceTo(bounds.getSouthWest()) * bounds.getNorthEast().distanceTo(bounds.getNorthWest());
+        if (areaBounds < 1700) {
+          centroidLatLng = centroid(latlngs);
+        }
+        var len = latlngs.length;
+        var points = [];
+        for (i = 0; i < len; i++) {
+          var latlng = toLatLng(latlngs[i]);
+          points.push(crs.project(toLatLng([latlng.lat - centroidLatLng.lat, latlng.lng - centroidLatLng.lng])));
+        }
+        for (i = 0, halfDist = 0; i < len - 1; i++) {
+          halfDist += points[i].distanceTo(points[i + 1]) / 2;
+        }
+        if (halfDist === 0) {
+          center = points[0];
+        } else {
+          for (i = 0, dist = 0; i < len - 1; i++) {
+            p1 = points[i];
+            p2 = points[i + 1];
+            segDist = p1.distanceTo(p2);
+            dist += segDist;
+            if (dist > halfDist) {
+              ratio = (dist - halfDist) / segDist;
+              center = [
+                p2.x - ratio * (p2.x - p1.x),
+                p2.y - ratio * (p2.y - p1.y)
+              ];
+              break;
+            }
+          }
+        }
+        var latlngCenter = crs.unproject(toPoint(center));
+        return toLatLng([latlngCenter.lat + centroidLatLng.lat, latlngCenter.lng + centroidLatLng.lng]);
+      }
+      var LineUtil = {
+        __proto__: null,
+        simplify,
+        pointToSegmentDistance,
+        closestPointOnSegment,
+        clipSegment,
+        _getEdgeIntersection,
+        _getBitCode,
+        _sqClosestPointOnSegment,
+        isFlat,
+        _flat,
+        polylineCenter
+      };
+      var LonLat = {
+        project: function(latlng) {
+          return new Point(latlng.lng, latlng.lat);
+        },
+        unproject: function(point) {
+          return new LatLng(point.y, point.x);
+        },
+        bounds: new Bounds([-180, -90], [180, 90])
+      };
+      var Mercator = {
+        R: 6378137,
+        R_MINOR: 6356752314245179e-9,
+        bounds: new Bounds([-2003750834279e-5, -1549657073972e-5], [2003750834279e-5, 1876465623138e-5]),
+        project: function(latlng) {
+          var d = Math.PI / 180, r = this.R, y = latlng.lat * d, tmp = this.R_MINOR / r, e = Math.sqrt(1 - tmp * tmp), con = e * Math.sin(y);
+          var ts = Math.tan(Math.PI / 4 - y / 2) / Math.pow((1 - con) / (1 + con), e / 2);
+          y = -r * Math.log(Math.max(ts, 1e-10));
+          return new Point(latlng.lng * d * r, y);
+        },
+        unproject: function(point) {
+          var d = 180 / Math.PI, r = this.R, tmp = this.R_MINOR / r, e = Math.sqrt(1 - tmp * tmp), ts = Math.exp(-point.y / r), phi = Math.PI / 2 - 2 * Math.atan(ts);
+          for (var i = 0, dphi = 0.1, con; i < 15 && Math.abs(dphi) > 1e-7; i++) {
+            con = e * Math.sin(phi);
+            con = Math.pow((1 - con) / (1 + con), e / 2);
+            dphi = Math.PI / 2 - 2 * Math.atan(ts * con) - phi;
+            phi += dphi;
+          }
+          return new LatLng(phi * d, point.x * d / r);
+        }
+      };
+      var index = {
+        __proto__: null,
+        LonLat,
+        Mercator,
+        SphericalMercator
+      };
+      var EPSG3395 = extend2({}, Earth, {
+        code: "EPSG:3395",
+        projection: Mercator,
+        transformation: function() {
+          var scale2 = 0.5 / (Math.PI * Mercator.R);
+          return toTransformation(scale2, 0.5, -scale2, 0.5);
+        }()
+      });
+      var EPSG4326 = extend2({}, Earth, {
+        code: "EPSG:4326",
+        projection: LonLat,
+        transformation: toTransformation(1 / 180, 1, -1 / 180, 0.5)
+      });
+      var Simple = extend2({}, CRS, {
+        projection: LonLat,
+        transformation: toTransformation(1, 0, -1, 0),
+        scale: function(zoom2) {
+          return Math.pow(2, zoom2);
+        },
+        zoom: function(scale2) {
+          return Math.log(scale2) / Math.LN2;
+        },
+        distance: function(latlng1, latlng2) {
+          var dx = latlng2.lng - latlng1.lng, dy = latlng2.lat - latlng1.lat;
+          return Math.sqrt(dx * dx + dy * dy);
+        },
+        infinite: true
+      });
+      CRS.Earth = Earth;
+      CRS.EPSG3395 = EPSG3395;
+      CRS.EPSG3857 = EPSG3857;
+      CRS.EPSG900913 = EPSG900913;
+      CRS.EPSG4326 = EPSG4326;
+      CRS.Simple = Simple;
+      var Layer = Evented.extend({
+        options: {
+          pane: "overlayPane",
+          attribution: null,
+          bubblingMouseEvents: true
+        },
+        addTo: function(map3) {
+          map3.addLayer(this);
+          return this;
+        },
+        remove: function() {
+          return this.removeFrom(this._map || this._mapToAdd);
+        },
+        removeFrom: function(obj) {
+          if (obj) {
+            obj.removeLayer(this);
+          }
+          return this;
+        },
+        getPane: function(name) {
+          return this._map.getPane(name ? this.options[name] || name : this.options.pane);
+        },
+        addInteractiveTarget: function(targetEl) {
+          this._map._targets[stamp(targetEl)] = this;
+          return this;
+        },
+        removeInteractiveTarget: function(targetEl) {
+          delete this._map._targets[stamp(targetEl)];
+          return this;
+        },
+        getAttribution: function() {
+          return this.options.attribution;
+        },
+        _layerAdd: function(e) {
+          var map3 = e.target;
+          if (!map3.hasLayer(this)) {
+            return;
+          }
+          this._map = map3;
+          this._zoomAnimated = map3._zoomAnimated;
+          if (this.getEvents) {
+            var events = this.getEvents();
+            map3.on(events, this);
+            this.once("remove", function() {
+              map3.off(events, this);
+            }, this);
+          }
+          this.onAdd(map3);
+          this.fire("add");
+          map3.fire("layeradd", { layer: this });
+        }
+      });
+      Map2.include({
+        addLayer: function(layer) {
+          if (!layer._layerAdd) {
+            throw new Error("The provided object is not a Layer.");
+          }
+          var id = stamp(layer);
+          if (this._layers[id]) {
+            return this;
+          }
+          this._layers[id] = layer;
+          layer._mapToAdd = this;
+          if (layer.beforeAdd) {
+            layer.beforeAdd(this);
+          }
+          this.whenReady(layer._layerAdd, layer);
+          return this;
+        },
+        removeLayer: function(layer) {
+          var id = stamp(layer);
+          if (!this._layers[id]) {
+            return this;
+          }
+          if (this._loaded) {
+            layer.onRemove(this);
+          }
+          delete this._layers[id];
+          if (this._loaded) {
+            this.fire("layerremove", { layer });
+            layer.fire("remove");
+          }
+          layer._map = layer._mapToAdd = null;
+          return this;
+        },
+        hasLayer: function(layer) {
+          return stamp(layer) in this._layers;
+        },
+        eachLayer: function(method, context) {
+          for (var i in this._layers) {
+            method.call(context, this._layers[i]);
+          }
+          return this;
+        },
+        _addLayers: function(layers2) {
+          layers2 = layers2 ? isArray(layers2) ? layers2 : [layers2] : [];
+          for (var i = 0, len = layers2.length; i < len; i++) {
+            this.addLayer(layers2[i]);
+          }
+        },
+        _addZoomLimit: function(layer) {
+          if (!isNaN(layer.options.maxZoom) || !isNaN(layer.options.minZoom)) {
+            this._zoomBoundLayers[stamp(layer)] = layer;
+            this._updateZoomLevels();
+          }
+        },
+        _removeZoomLimit: function(layer) {
+          var id = stamp(layer);
+          if (this._zoomBoundLayers[id]) {
+            delete this._zoomBoundLayers[id];
+            this._updateZoomLevels();
+          }
+        },
+        _updateZoomLevels: function() {
+          var minZoom = Infinity, maxZoom = -Infinity, oldZoomSpan = this._getZoomSpan();
+          for (var i in this._zoomBoundLayers) {
+            var options = this._zoomBoundLayers[i].options;
+            minZoom = options.minZoom === void 0 ? minZoom : Math.min(minZoom, options.minZoom);
+            maxZoom = options.maxZoom === void 0 ? maxZoom : Math.max(maxZoom, options.maxZoom);
+          }
+          this._layersMaxZoom = maxZoom === -Infinity ? void 0 : maxZoom;
+          this._layersMinZoom = minZoom === Infinity ? void 0 : minZoom;
+          if (oldZoomSpan !== this._getZoomSpan()) {
+            this.fire("zoomlevelschange");
+          }
+          if (this.options.maxZoom === void 0 && this._layersMaxZoom && this.getZoom() > this._layersMaxZoom) {
+            this.setZoom(this._layersMaxZoom);
+          }
+          if (this.options.minZoom === void 0 && this._layersMinZoom && this.getZoom() < this._layersMinZoom) {
+            this.setZoom(this._layersMinZoom);
+          }
+        }
+      });
+      var LayerGroup = Layer.extend({
+        initialize: function(layers2, options) {
+          setOptions(this, options);
+          this._layers = {};
+          var i, len;
+          if (layers2) {
+            for (i = 0, len = layers2.length; i < len; i++) {
+              this.addLayer(layers2[i]);
+            }
+          }
+        },
+        addLayer: function(layer) {
+          var id = this.getLayerId(layer);
+          this._layers[id] = layer;
+          if (this._map) {
+            this._map.addLayer(layer);
+          }
+          return this;
+        },
+        removeLayer: function(layer) {
+          var id = layer in this._layers ? layer : this.getLayerId(layer);
+          if (this._map && this._layers[id]) {
+            this._map.removeLayer(this._layers[id]);
+          }
+          delete this._layers[id];
+          return this;
+        },
+        hasLayer: function(layer) {
+          var layerId = typeof layer === "number" ? layer : this.getLayerId(layer);
+          return layerId in this._layers;
+        },
+        clearLayers: function() {
+          return this.eachLayer(this.removeLayer, this);
+        },
+        invoke: function(methodName) {
+          var args = Array.prototype.slice.call(arguments, 1), i, layer;
+          for (i in this._layers) {
+            layer = this._layers[i];
+            if (layer[methodName]) {
+              layer[methodName].apply(layer, args);
+            }
+          }
+          return this;
+        },
+        onAdd: function(map3) {
+          this.eachLayer(map3.addLayer, map3);
+        },
+        onRemove: function(map3) {
+          this.eachLayer(map3.removeLayer, map3);
+        },
+        eachLayer: function(method, context) {
+          for (var i in this._layers) {
+            method.call(context, this._layers[i]);
+          }
+          return this;
+        },
+        getLayer: function(id) {
+          return this._layers[id];
+        },
+        getLayers: function() {
+          var layers2 = [];
+          this.eachLayer(layers2.push, layers2);
+          return layers2;
+        },
+        setZIndex: function(zIndex) {
+          return this.invoke("setZIndex", zIndex);
+        },
+        getLayerId: function(layer) {
+          return stamp(layer);
+        }
+      });
+      var layerGroup = function(layers2, options) {
+        return new LayerGroup(layers2, options);
+      };
+      var FeatureGroup = LayerGroup.extend({
+        addLayer: function(layer) {
+          if (this.hasLayer(layer)) {
+            return this;
+          }
+          layer.addEventParent(this);
+          LayerGroup.prototype.addLayer.call(this, layer);
+          return this.fire("layeradd", { layer });
+        },
+        removeLayer: function(layer) {
+          if (!this.hasLayer(layer)) {
+            return this;
+          }
+          if (layer in this._layers) {
+            layer = this._layers[layer];
+          }
+          layer.removeEventParent(this);
+          LayerGroup.prototype.removeLayer.call(this, layer);
+          return this.fire("layerremove", { layer });
+        },
+        setStyle: function(style2) {
+          return this.invoke("setStyle", style2);
+        },
+        bringToFront: function() {
+          return this.invoke("bringToFront");
+        },
+        bringToBack: function() {
+          return this.invoke("bringToBack");
+        },
+        getBounds: function() {
+          var bounds = new LatLngBounds();
+          for (var id in this._layers) {
+            var layer = this._layers[id];
+            bounds.extend(layer.getBounds ? layer.getBounds() : layer.getLatLng());
+          }
+          return bounds;
+        }
+      });
+      var featureGroup = function(layers2, options) {
+        return new FeatureGroup(layers2, options);
+      };
+      var Icon = Class2.extend({
+        options: {
+          popupAnchor: [0, 0],
+          tooltipAnchor: [0, 0],
+          crossOrigin: false
+        },
+        initialize: function(options) {
+          setOptions(this, options);
+        },
+        createIcon: function(oldIcon) {
+          return this._createIcon("icon", oldIcon);
+        },
+        createShadow: function(oldIcon) {
+          return this._createIcon("shadow", oldIcon);
+        },
+        _createIcon: function(name, oldIcon) {
+          var src = this._getIconUrl(name);
+          if (!src) {
+            if (name === "icon") {
+              throw new Error("iconUrl not set in Icon options (see the docs).");
+            }
+            return null;
+          }
+          var img = this._createImg(src, oldIcon && oldIcon.tagName === "IMG" ? oldIcon : null);
+          this._setIconStyles(img, name);
+          if (this.options.crossOrigin || this.options.crossOrigin === "") {
+            img.crossOrigin = this.options.crossOrigin === true ? "" : this.options.crossOrigin;
+          }
+          return img;
+        },
+        _setIconStyles: function(img, name) {
+          var options = this.options;
+          var sizeOption = options[name + "Size"];
+          if (typeof sizeOption === "number") {
+            sizeOption = [sizeOption, sizeOption];
+          }
+          var size = toPoint(sizeOption), anchor = toPoint(name === "shadow" && options.shadowAnchor || options.iconAnchor || size && size.divideBy(2, true));
+          img.className = "leaflet-marker-" + name + " " + (options.className || "");
+          if (anchor) {
+            img.style.marginLeft = -anchor.x + "px";
+            img.style.marginTop = -anchor.y + "px";
+          }
+          if (size) {
+            img.style.width = size.x + "px";
+            img.style.height = size.y + "px";
+          }
+        },
+        _createImg: function(src, el) {
+          el = el || document.createElement("img");
+          el.src = src;
+          return el;
+        },
+        _getIconUrl: function(name) {
+          return Browser.retina && this.options[name + "RetinaUrl"] || this.options[name + "Url"];
+        }
+      });
+      function icon(options) {
+        return new Icon(options);
+      }
+      var IconDefault = Icon.extend({
+        options: {
+          iconUrl: "marker-icon.png",
+          iconRetinaUrl: "marker-icon-2x.png",
+          shadowUrl: "marker-shadow.png",
+          iconSize: [25, 41],
+          iconAnchor: [12, 41],
+          popupAnchor: [1, -34],
+          tooltipAnchor: [16, -28],
+          shadowSize: [41, 41]
+        },
+        _getIconUrl: function(name) {
+          if (typeof IconDefault.imagePath !== "string") {
+            IconDefault.imagePath = this._detectIconPath();
+          }
+          return (this.options.imagePath || IconDefault.imagePath) + Icon.prototype._getIconUrl.call(this, name);
+        },
+        _stripUrl: function(path) {
+          var strip = function(str, re, idx) {
+            var match = re.exec(str);
+            return match && match[idx];
+          };
+          path = strip(path, /^url\((['"])?(.+)\1\)$/, 2);
+          return path && strip(path, /^(.*)marker-icon\.png$/, 1);
+        },
+        _detectIconPath: function() {
+          var el = create$1("div", "leaflet-default-icon-path", document.body);
+          var path = getStyle(el, "background-image") || getStyle(el, "backgroundImage");
+          document.body.removeChild(el);
+          path = this._stripUrl(path);
+          if (path) {
+            return path;
+          }
+          var link = document.querySelector('link[href$="leaflet.css"]');
+          if (!link) {
+            return "";
+          }
+          return link.href.substring(0, link.href.length - "leaflet.css".length - 1);
+        }
+      });
+      var MarkerDrag = Handler.extend({
+        initialize: function(marker3) {
+          this._marker = marker3;
+        },
+        addHooks: function() {
+          var icon2 = this._marker._icon;
+          if (!this._draggable) {
+            this._draggable = new Draggable(icon2, icon2, true);
+          }
+          this._draggable.on({
+            dragstart: this._onDragStart,
+            predrag: this._onPreDrag,
+            drag: this._onDrag,
+            dragend: this._onDragEnd
+          }, this).enable();
+          addClass(icon2, "leaflet-marker-draggable");
+        },
+        removeHooks: function() {
+          this._draggable.off({
+            dragstart: this._onDragStart,
+            predrag: this._onPreDrag,
+            drag: this._onDrag,
+            dragend: this._onDragEnd
+          }, this).disable();
+          if (this._marker._icon) {
+            removeClass(this._marker._icon, "leaflet-marker-draggable");
+          }
+        },
+        moved: function() {
+          return this._draggable && this._draggable._moved;
+        },
+        _adjustPan: function(e) {
+          var marker3 = this._marker, map3 = marker3._map, speed = this._marker.options.autoPanSpeed, padding = this._marker.options.autoPanPadding, iconPos = getPosition(marker3._icon), bounds = map3.getPixelBounds(), origin = map3.getPixelOrigin();
+          var panBounds = toBounds(
+            bounds.min._subtract(origin).add(padding),
+            bounds.max._subtract(origin).subtract(padding)
+          );
+          if (!panBounds.contains(iconPos)) {
+            var movement = toPoint(
+              (Math.max(panBounds.max.x, iconPos.x) - panBounds.max.x) / (bounds.max.x - panBounds.max.x) - (Math.min(panBounds.min.x, iconPos.x) - panBounds.min.x) / (bounds.min.x - panBounds.min.x),
+              (Math.max(panBounds.max.y, iconPos.y) - panBounds.max.y) / (bounds.max.y - panBounds.max.y) - (Math.min(panBounds.min.y, iconPos.y) - panBounds.min.y) / (bounds.min.y - panBounds.min.y)
+            ).multiplyBy(speed);
+            map3.panBy(movement, { animate: false });
+            this._draggable._newPos._add(movement);
+            this._draggable._startPos._add(movement);
+            setPosition(marker3._icon, this._draggable._newPos);
+            this._onDrag(e);
+            this._panRequest = requestAnimFrame(this._adjustPan.bind(this, e));
+          }
+        },
+        _onDragStart: function() {
+          this._oldLatLng = this._marker.getLatLng();
+          this._marker.closePopup && this._marker.closePopup();
+          this._marker.fire("movestart").fire("dragstart");
+        },
+        _onPreDrag: function(e) {
+          if (this._marker.options.autoPan) {
+            cancelAnimFrame(this._panRequest);
+            this._panRequest = requestAnimFrame(this._adjustPan.bind(this, e));
+          }
+        },
+        _onDrag: function(e) {
+          var marker3 = this._marker, shadow = marker3._shadow, iconPos = getPosition(marker3._icon), latlng = marker3._map.layerPointToLatLng(iconPos);
+          if (shadow) {
+            setPosition(shadow, iconPos);
+          }
+          marker3._latlng = latlng;
+          e.latlng = latlng;
+          e.oldLatLng = this._oldLatLng;
+          marker3.fire("move", e).fire("drag", e);
+        },
+        _onDragEnd: function(e) {
+          cancelAnimFrame(this._panRequest);
+          delete this._oldLatLng;
+          this._marker.fire("moveend").fire("dragend", e);
+        }
+      });
+      var Marker = Layer.extend({
+        options: {
+          icon: new IconDefault(),
+          interactive: true,
+          keyboard: true,
+          title: "",
+          alt: "Marker",
+          zIndexOffset: 0,
+          opacity: 1,
+          riseOnHover: false,
+          riseOffset: 250,
+          pane: "markerPane",
+          shadowPane: "shadowPane",
+          bubblingMouseEvents: false,
+          autoPanOnFocus: true,
+          draggable: false,
+          autoPan: false,
+          autoPanPadding: [50, 50],
+          autoPanSpeed: 10
+        },
+        initialize: function(latlng, options) {
+          setOptions(this, options);
+          this._latlng = toLatLng(latlng);
+        },
+        onAdd: function(map3) {
+          this._zoomAnimated = this._zoomAnimated && map3.options.markerZoomAnimation;
+          if (this._zoomAnimated) {
+            map3.on("zoomanim", this._animateZoom, this);
+          }
+          this._initIcon();
+          this.update();
+        },
+        onRemove: function(map3) {
+          if (this.dragging && this.dragging.enabled()) {
+            this.options.draggable = true;
+            this.dragging.removeHooks();
+          }
+          delete this.dragging;
+          if (this._zoomAnimated) {
+            map3.off("zoomanim", this._animateZoom, this);
+          }
+          this._removeIcon();
+          this._removeShadow();
+        },
+        getEvents: function() {
+          return {
+            zoom: this.update,
+            viewreset: this.update
+          };
+        },
+        getLatLng: function() {
+          return this._latlng;
+        },
+        setLatLng: function(latlng) {
+          var oldLatLng = this._latlng;
+          this._latlng = toLatLng(latlng);
+          this.update();
+          return this.fire("move", { oldLatLng, latlng: this._latlng });
+        },
+        setZIndexOffset: function(offset) {
+          this.options.zIndexOffset = offset;
+          return this.update();
+        },
+        getIcon: function() {
+          return this.options.icon;
+        },
+        setIcon: function(icon2) {
+          this.options.icon = icon2;
+          if (this._map) {
+            this._initIcon();
+            this.update();
+          }
+          if (this._popup) {
+            this.bindPopup(this._popup, this._popup.options);
+          }
+          return this;
+        },
+        getElement: function() {
+          return this._icon;
+        },
+        update: function() {
+          if (this._icon && this._map) {
+            var pos = this._map.latLngToLayerPoint(this._latlng).round();
+            this._setPos(pos);
+          }
+          return this;
+        },
+        _initIcon: function() {
+          var options = this.options, classToAdd = "leaflet-zoom-" + (this._zoomAnimated ? "animated" : "hide");
+          var icon2 = options.icon.createIcon(this._icon), addIcon = false;
+          if (icon2 !== this._icon) {
+            if (this._icon) {
+              this._removeIcon();
+            }
+            addIcon = true;
+            if (options.title) {
+              icon2.title = options.title;
+            }
+            if (icon2.tagName === "IMG") {
+              icon2.alt = options.alt || "";
+            }
+          }
+          addClass(icon2, classToAdd);
+          if (options.keyboard) {
+            icon2.tabIndex = "0";
+            icon2.setAttribute("role", "button");
+          }
+          this._icon = icon2;
+          if (options.riseOnHover) {
+            this.on({
+              mouseover: this._bringToFront,
+              mouseout: this._resetZIndex
+            });
+          }
+          if (this.options.autoPanOnFocus) {
+            on(icon2, "focus", this._panOnFocus, this);
+          }
+          var newShadow = options.icon.createShadow(this._shadow), addShadow = false;
+          if (newShadow !== this._shadow) {
+            this._removeShadow();
+            addShadow = true;
+          }
+          if (newShadow) {
+            addClass(newShadow, classToAdd);
+            newShadow.alt = "";
+          }
+          this._shadow = newShadow;
+          if (options.opacity < 1) {
+            this._updateOpacity();
+          }
+          if (addIcon) {
+            this.getPane().appendChild(this._icon);
+          }
+          this._initInteraction();
+          if (newShadow && addShadow) {
+            this.getPane(options.shadowPane).appendChild(this._shadow);
+          }
+        },
+        _removeIcon: function() {
+          if (this.options.riseOnHover) {
+            this.off({
+              mouseover: this._bringToFront,
+              mouseout: this._resetZIndex
+            });
+          }
+          if (this.options.autoPanOnFocus) {
+            off(this._icon, "focus", this._panOnFocus, this);
+          }
+          remove(this._icon);
+          this.removeInteractiveTarget(this._icon);
+          this._icon = null;
+        },
+        _removeShadow: function() {
+          if (this._shadow) {
+            remove(this._shadow);
+          }
+          this._shadow = null;
+        },
+        _setPos: function(pos) {
+          if (this._icon) {
+            setPosition(this._icon, pos);
+          }
+          if (this._shadow) {
+            setPosition(this._shadow, pos);
+          }
+          this._zIndex = pos.y + this.options.zIndexOffset;
+          this._resetZIndex();
+        },
+        _updateZIndex: function(offset) {
+          if (this._icon) {
+            this._icon.style.zIndex = this._zIndex + offset;
+          }
+        },
+        _animateZoom: function(opt) {
+          var pos = this._map._latLngToNewLayerPoint(this._latlng, opt.zoom, opt.center).round();
+          this._setPos(pos);
+        },
+        _initInteraction: function() {
+          if (!this.options.interactive) {
+            return;
+          }
+          addClass(this._icon, "leaflet-interactive");
+          this.addInteractiveTarget(this._icon);
+          if (MarkerDrag) {
+            var draggable = this.options.draggable;
+            if (this.dragging) {
+              draggable = this.dragging.enabled();
+              this.dragging.disable();
+            }
+            this.dragging = new MarkerDrag(this);
+            if (draggable) {
+              this.dragging.enable();
+            }
+          }
+        },
+        setOpacity: function(opacity) {
+          this.options.opacity = opacity;
+          if (this._map) {
+            this._updateOpacity();
+          }
+          return this;
+        },
+        _updateOpacity: function() {
+          var opacity = this.options.opacity;
+          if (this._icon) {
+            setOpacity(this._icon, opacity);
+          }
+          if (this._shadow) {
+            setOpacity(this._shadow, opacity);
+          }
+        },
+        _bringToFront: function() {
+          this._updateZIndex(this.options.riseOffset);
+        },
+        _resetZIndex: function() {
+          this._updateZIndex(0);
+        },
+        _panOnFocus: function() {
+          var map3 = this._map;
+          if (!map3) {
+            return;
+          }
+          var iconOpts = this.options.icon.options;
+          var size = iconOpts.iconSize ? toPoint(iconOpts.iconSize) : toPoint(0, 0);
+          var anchor = iconOpts.iconAnchor ? toPoint(iconOpts.iconAnchor) : toPoint(0, 0);
+          map3.panInside(this._latlng, {
+            paddingTopLeft: anchor,
+            paddingBottomRight: size.subtract(anchor)
+          });
+        },
+        _getPopupAnchor: function() {
+          return this.options.icon.options.popupAnchor;
+        },
+        _getTooltipAnchor: function() {
+          return this.options.icon.options.tooltipAnchor;
+        }
+      });
+      function marker2(latlng, options) {
+        return new Marker(latlng, options);
+      }
+      var Path = Layer.extend({
+        options: {
+          stroke: true,
+          color: "#3388ff",
+          weight: 3,
+          opacity: 1,
+          lineCap: "round",
+          lineJoin: "round",
+          dashArray: null,
+          dashOffset: null,
+          fill: false,
+          fillColor: null,
+          fillOpacity: 0.2,
+          fillRule: "evenodd",
+          interactive: true,
+          bubblingMouseEvents: true
+        },
+        beforeAdd: function(map3) {
+          this._renderer = map3.getRenderer(this);
+        },
+        onAdd: function() {
+          this._renderer._initPath(this);
+          this._reset();
+          this._renderer._addPath(this);
+        },
+        onRemove: function() {
+          this._renderer._removePath(this);
+        },
+        redraw: function() {
+          if (this._map) {
+            this._renderer._updatePath(this);
+          }
+          return this;
+        },
+        setStyle: function(style2) {
+          setOptions(this, style2);
+          if (this._renderer) {
+            this._renderer._updateStyle(this);
+            if (this.options.stroke && style2 && Object.prototype.hasOwnProperty.call(style2, "weight")) {
+              this._updateBounds();
+            }
+          }
+          return this;
+        },
+        bringToFront: function() {
+          if (this._renderer) {
+            this._renderer._bringToFront(this);
+          }
+          return this;
+        },
+        bringToBack: function() {
+          if (this._renderer) {
+            this._renderer._bringToBack(this);
+          }
+          return this;
+        },
+        getElement: function() {
+          return this._path;
+        },
+        _reset: function() {
+          this._project();
+          this._update();
+        },
+        _clickTolerance: function() {
+          return (this.options.stroke ? this.options.weight / 2 : 0) + (this._renderer.options.tolerance || 0);
+        }
+      });
+      var CircleMarker = Path.extend({
+        options: {
+          fill: true,
+          radius: 10
+        },
+        initialize: function(latlng, options) {
+          setOptions(this, options);
+          this._latlng = toLatLng(latlng);
+          this._radius = this.options.radius;
+        },
+        setLatLng: function(latlng) {
+          var oldLatLng = this._latlng;
+          this._latlng = toLatLng(latlng);
+          this.redraw();
+          return this.fire("move", { oldLatLng, latlng: this._latlng });
+        },
+        getLatLng: function() {
+          return this._latlng;
+        },
+        setRadius: function(radius) {
+          this.options.radius = this._radius = radius;
+          return this.redraw();
+        },
+        getRadius: function() {
+          return this._radius;
+        },
+        setStyle: function(options) {
+          var radius = options && options.radius || this._radius;
+          Path.prototype.setStyle.call(this, options);
+          this.setRadius(radius);
+          return this;
+        },
+        _project: function() {
+          this._point = this._map.latLngToLayerPoint(this._latlng);
+          this._updateBounds();
+        },
+        _updateBounds: function() {
+          var r = this._radius, r2 = this._radiusY || r, w = this._clickTolerance(), p = [r + w, r2 + w];
+          this._pxBounds = new Bounds(this._point.subtract(p), this._point.add(p));
+        },
+        _update: function() {
+          if (this._map) {
+            this._updatePath();
+          }
+        },
+        _updatePath: function() {
+          this._renderer._updateCircle(this);
+        },
+        _empty: function() {
+          return this._radius && !this._renderer._bounds.intersects(this._pxBounds);
+        },
+        _containsPoint: function(p) {
+          return p.distanceTo(this._point) <= this._radius + this._clickTolerance();
+        }
+      });
+      function circleMarker2(latlng, options) {
+        return new CircleMarker(latlng, options);
+      }
+      var Circle = CircleMarker.extend({
+        initialize: function(latlng, options, legacyOptions) {
+          if (typeof options === "number") {
+            options = extend2({}, legacyOptions, { radius: options });
+          }
+          setOptions(this, options);
+          this._latlng = toLatLng(latlng);
+          if (isNaN(this.options.radius)) {
+            throw new Error("Circle radius cannot be NaN");
+          }
+          this._mRadius = this.options.radius;
+        },
+        setRadius: function(radius) {
+          this._mRadius = radius;
+          return this.redraw();
+        },
+        getRadius: function() {
+          return this._mRadius;
+        },
+        getBounds: function() {
+          var half = [this._radius, this._radiusY || this._radius];
+          return new LatLngBounds(
+            this._map.layerPointToLatLng(this._point.subtract(half)),
+            this._map.layerPointToLatLng(this._point.add(half))
+          );
+        },
+        setStyle: Path.prototype.setStyle,
+        _project: function() {
+          var lng = this._latlng.lng, lat = this._latlng.lat, map3 = this._map, crs = map3.options.crs;
+          if (crs.distance === Earth.distance) {
+            var d = Math.PI / 180, latR = this._mRadius / Earth.R / d, top = map3.project([lat + latR, lng]), bottom = map3.project([lat - latR, lng]), p = top.add(bottom).divideBy(2), lat2 = map3.unproject(p).lat, lngR = Math.acos((Math.cos(latR * d) - Math.sin(lat * d) * Math.sin(lat2 * d)) / (Math.cos(lat * d) * Math.cos(lat2 * d))) / d;
+            if (isNaN(lngR) || lngR === 0) {
+              lngR = latR / Math.cos(Math.PI / 180 * lat);
+            }
+            this._point = p.subtract(map3.getPixelOrigin());
+            this._radius = isNaN(lngR) ? 0 : p.x - map3.project([lat2, lng - lngR]).x;
+            this._radiusY = p.y - top.y;
+          } else {
+            var latlng2 = crs.unproject(crs.project(this._latlng).subtract([this._mRadius, 0]));
+            this._point = map3.latLngToLayerPoint(this._latlng);
+            this._radius = this._point.x - map3.latLngToLayerPoint(latlng2).x;
+          }
+          this._updateBounds();
+        }
+      });
+      function circle(latlng, options, legacyOptions) {
+        return new Circle(latlng, options, legacyOptions);
+      }
+      var Polyline = Path.extend({
+        options: {
+          smoothFactor: 1,
+          noClip: false
+        },
+        initialize: function(latlngs, options) {
+          setOptions(this, options);
+          this._setLatLngs(latlngs);
+        },
+        getLatLngs: function() {
+          return this._latlngs;
+        },
+        setLatLngs: function(latlngs) {
+          this._setLatLngs(latlngs);
+          return this.redraw();
+        },
+        isEmpty: function() {
+          return !this._latlngs.length;
+        },
+        closestLayerPoint: function(p) {
+          var minDistance = Infinity, minPoint = null, closest = _sqClosestPointOnSegment, p1, p2;
+          for (var j = 0, jLen = this._parts.length; j < jLen; j++) {
+            var points = this._parts[j];
+            for (var i = 1, len = points.length; i < len; i++) {
+              p1 = points[i - 1];
+              p2 = points[i];
+              var sqDist = closest(p, p1, p2, true);
+              if (sqDist < minDistance) {
+                minDistance = sqDist;
+                minPoint = closest(p, p1, p2);
+              }
+            }
+          }
+          if (minPoint) {
+            minPoint.distance = Math.sqrt(minDistance);
+          }
+          return minPoint;
+        },
+        getCenter: function() {
+          if (!this._map) {
+            throw new Error("Must add layer to map before using getCenter()");
+          }
+          return polylineCenter(this._defaultShape(), this._map.options.crs);
+        },
+        getBounds: function() {
+          return this._bounds;
+        },
+        addLatLng: function(latlng, latlngs) {
+          latlngs = latlngs || this._defaultShape();
+          latlng = toLatLng(latlng);
+          latlngs.push(latlng);
+          this._bounds.extend(latlng);
+          return this.redraw();
+        },
+        _setLatLngs: function(latlngs) {
+          this._bounds = new LatLngBounds();
+          this._latlngs = this._convertLatLngs(latlngs);
+        },
+        _defaultShape: function() {
+          return isFlat(this._latlngs) ? this._latlngs : this._latlngs[0];
+        },
+        _convertLatLngs: function(latlngs) {
+          var result = [], flat = isFlat(latlngs);
+          for (var i = 0, len = latlngs.length; i < len; i++) {
+            if (flat) {
+              result[i] = toLatLng(latlngs[i]);
+              this._bounds.extend(result[i]);
+            } else {
+              result[i] = this._convertLatLngs(latlngs[i]);
+            }
+          }
+          return result;
+        },
+        _project: function() {
+          var pxBounds = new Bounds();
+          this._rings = [];
+          this._projectLatlngs(this._latlngs, this._rings, pxBounds);
+          if (this._bounds.isValid() && pxBounds.isValid()) {
+            this._rawPxBounds = pxBounds;
+            this._updateBounds();
+          }
+        },
+        _updateBounds: function() {
+          var w = this._clickTolerance(), p = new Point(w, w);
+          if (!this._rawPxBounds) {
+            return;
+          }
+          this._pxBounds = new Bounds([
+            this._rawPxBounds.min.subtract(p),
+            this._rawPxBounds.max.add(p)
+          ]);
+        },
+        _projectLatlngs: function(latlngs, result, projectedBounds) {
+          var flat = latlngs[0] instanceof LatLng, len = latlngs.length, i, ring;
+          if (flat) {
+            ring = [];
+            for (i = 0; i < len; i++) {
+              ring[i] = this._map.latLngToLayerPoint(latlngs[i]);
+              projectedBounds.extend(ring[i]);
+            }
+            result.push(ring);
+          } else {
+            for (i = 0; i < len; i++) {
+              this._projectLatlngs(latlngs[i], result, projectedBounds);
+            }
+          }
+        },
+        _clipPoints: function() {
+          var bounds = this._renderer._bounds;
+          this._parts = [];
+          if (!this._pxBounds || !this._pxBounds.intersects(bounds)) {
+            return;
+          }
+          if (this.options.noClip) {
+            this._parts = this._rings;
+            return;
+          }
+          var parts = this._parts, i, j, k, len, len2, segment, points;
+          for (i = 0, k = 0, len = this._rings.length; i < len; i++) {
+            points = this._rings[i];
+            for (j = 0, len2 = points.length; j < len2 - 1; j++) {
+              segment = clipSegment(points[j], points[j + 1], bounds, j, true);
+              if (!segment) {
+                continue;
+              }
+              parts[k] = parts[k] || [];
+              parts[k].push(segment[0]);
+              if (segment[1] !== points[j + 1] || j === len2 - 2) {
+                parts[k].push(segment[1]);
+                k++;
+              }
+            }
+          }
+        },
+        _simplifyPoints: function() {
+          var parts = this._parts, tolerance = this.options.smoothFactor;
+          for (var i = 0, len = parts.length; i < len; i++) {
+            parts[i] = simplify(parts[i], tolerance);
+          }
+        },
+        _update: function() {
+          if (!this._map) {
+            return;
+          }
+          this._clipPoints();
+          this._simplifyPoints();
+          this._updatePath();
+        },
+        _updatePath: function() {
+          this._renderer._updatePoly(this);
+        },
+        _containsPoint: function(p, closed) {
+          var i, j, k, len, len2, part, w = this._clickTolerance();
+          if (!this._pxBounds || !this._pxBounds.contains(p)) {
+            return false;
+          }
+          for (i = 0, len = this._parts.length; i < len; i++) {
+            part = this._parts[i];
+            for (j = 0, len2 = part.length, k = len2 - 1; j < len2; k = j++) {
+              if (!closed && j === 0) {
+                continue;
+              }
+              if (pointToSegmentDistance(p, part[k], part[j]) <= w) {
+                return true;
+              }
+            }
+          }
+          return false;
+        }
+      });
+      function polyline(latlngs, options) {
+        return new Polyline(latlngs, options);
+      }
+      Polyline._flat = _flat;
+      var Polygon = Polyline.extend({
+        options: {
+          fill: true
+        },
+        isEmpty: function() {
+          return !this._latlngs.length || !this._latlngs[0].length;
+        },
+        getCenter: function() {
+          if (!this._map) {
+            throw new Error("Must add layer to map before using getCenter()");
+          }
+          return polygonCenter(this._defaultShape(), this._map.options.crs);
+        },
+        _convertLatLngs: function(latlngs) {
+          var result = Polyline.prototype._convertLatLngs.call(this, latlngs), len = result.length;
+          if (len >= 2 && result[0] instanceof LatLng && result[0].equals(result[len - 1])) {
+            result.pop();
+          }
+          return result;
+        },
+        _setLatLngs: function(latlngs) {
+          Polyline.prototype._setLatLngs.call(this, latlngs);
+          if (isFlat(this._latlngs)) {
+            this._latlngs = [this._latlngs];
+          }
+        },
+        _defaultShape: function() {
+          return isFlat(this._latlngs[0]) ? this._latlngs[0] : this._latlngs[0][0];
+        },
+        _clipPoints: function() {
+          var bounds = this._renderer._bounds, w = this.options.weight, p = new Point(w, w);
+          bounds = new Bounds(bounds.min.subtract(p), bounds.max.add(p));
+          this._parts = [];
+          if (!this._pxBounds || !this._pxBounds.intersects(bounds)) {
+            return;
+          }
+          if (this.options.noClip) {
+            this._parts = this._rings;
+            return;
+          }
+          for (var i = 0, len = this._rings.length, clipped; i < len; i++) {
+            clipped = clipPolygon(this._rings[i], bounds, true);
+            if (clipped.length) {
+              this._parts.push(clipped);
+            }
+          }
+        },
+        _updatePath: function() {
+          this._renderer._updatePoly(this, true);
+        },
+        _containsPoint: function(p) {
+          var inside = false, part, p1, p2, i, j, k, len, len2;
+          if (!this._pxBounds || !this._pxBounds.contains(p)) {
+            return false;
+          }
+          for (i = 0, len = this._parts.length; i < len; i++) {
+            part = this._parts[i];
+            for (j = 0, len2 = part.length, k = len2 - 1; j < len2; k = j++) {
+              p1 = part[j];
+              p2 = part[k];
+              if (p1.y > p.y !== p2.y > p.y && p.x < (p2.x - p1.x) * (p.y - p1.y) / (p2.y - p1.y) + p1.x) {
+                inside = !inside;
+              }
+            }
+          }
+          return inside || Polyline.prototype._containsPoint.call(this, p, true);
+        }
+      });
+      function polygon(latlngs, options) {
+        return new Polygon(latlngs, options);
+      }
+      var GeoJSON = FeatureGroup.extend({
+        initialize: function(geojson, options) {
+          setOptions(this, options);
+          this._layers = {};
+          if (geojson) {
+            this.addData(geojson);
+          }
+        },
+        addData: function(geojson) {
+          var features = isArray(geojson) ? geojson : geojson.features, i, len, feature;
+          if (features) {
+            for (i = 0, len = features.length; i < len; i++) {
+              feature = features[i];
+              if (feature.geometries || feature.geometry || feature.features || feature.coordinates) {
+                this.addData(feature);
+              }
+            }
+            return this;
+          }
+          var options = this.options;
+          if (options.filter && !options.filter(geojson)) {
+            return this;
+          }
+          var layer = geometryToLayer(geojson, options);
+          if (!layer) {
+            return this;
+          }
+          layer.feature = asFeature(geojson);
+          layer.defaultOptions = layer.options;
+          this.resetStyle(layer);
+          if (options.onEachFeature) {
+            options.onEachFeature(geojson, layer);
+          }
+          return this.addLayer(layer);
+        },
+        resetStyle: function(layer) {
+          if (layer === void 0) {
+            return this.eachLayer(this.resetStyle, this);
+          }
+          layer.options = extend2({}, layer.defaultOptions);
+          this._setLayerStyle(layer, this.options.style);
+          return this;
+        },
+        setStyle: function(style2) {
+          return this.eachLayer(function(layer) {
+            this._setLayerStyle(layer, style2);
+          }, this);
+        },
+        _setLayerStyle: function(layer, style2) {
+          if (layer.setStyle) {
+            if (typeof style2 === "function") {
+              style2 = style2(layer.feature);
+            }
+            layer.setStyle(style2);
+          }
+        }
+      });
+      function geometryToLayer(geojson, options) {
+        var geometry = geojson.type === "Feature" ? geojson.geometry : geojson, coords = geometry ? geometry.coordinates : null, layers2 = [], pointToLayer = options && options.pointToLayer, _coordsToLatLng = options && options.coordsToLatLng || coordsToLatLng, latlng, latlngs, i, len;
+        if (!coords && !geometry) {
+          return null;
+        }
+        switch (geometry.type) {
+          case "Point":
+            latlng = _coordsToLatLng(coords);
+            return _pointToLayer(pointToLayer, geojson, latlng, options);
+          case "MultiPoint":
+            for (i = 0, len = coords.length; i < len; i++) {
+              latlng = _coordsToLatLng(coords[i]);
+              layers2.push(_pointToLayer(pointToLayer, geojson, latlng, options));
+            }
+            return new FeatureGroup(layers2);
+          case "LineString":
+          case "MultiLineString":
+            latlngs = coordsToLatLngs(coords, geometry.type === "LineString" ? 0 : 1, _coordsToLatLng);
+            return new Polyline(latlngs, options);
+          case "Polygon":
+          case "MultiPolygon":
+            latlngs = coordsToLatLngs(coords, geometry.type === "Polygon" ? 1 : 2, _coordsToLatLng);
+            return new Polygon(latlngs, options);
+          case "GeometryCollection":
+            for (i = 0, len = geometry.geometries.length; i < len; i++) {
+              var geoLayer = geometryToLayer({
+                geometry: geometry.geometries[i],
+                type: "Feature",
+                properties: geojson.properties
+              }, options);
+              if (geoLayer) {
+                layers2.push(geoLayer);
+              }
+            }
+            return new FeatureGroup(layers2);
+          case "FeatureCollection":
+            for (i = 0, len = geometry.features.length; i < len; i++) {
+              var featureLayer = geometryToLayer(geometry.features[i], options);
+              if (featureLayer) {
+                layers2.push(featureLayer);
+              }
+            }
+            return new FeatureGroup(layers2);
+          default:
+            throw new Error("Invalid GeoJSON object.");
+        }
+      }
+      function _pointToLayer(pointToLayerFn, geojson, latlng, options) {
+        return pointToLayerFn ? pointToLayerFn(geojson, latlng) : new Marker(latlng, options && options.markersInheritOptions && options);
+      }
+      function coordsToLatLng(coords) {
+        return new LatLng(coords[1], coords[0], coords[2]);
+      }
+      function coordsToLatLngs(coords, levelsDeep, _coordsToLatLng) {
+        var latlngs = [];
+        for (var i = 0, len = coords.length, latlng; i < len; i++) {
+          latlng = levelsDeep ? coordsToLatLngs(coords[i], levelsDeep - 1, _coordsToLatLng) : (_coordsToLatLng || coordsToLatLng)(coords[i]);
+          latlngs.push(latlng);
+        }
+        return latlngs;
+      }
+      function latLngToCoords(latlng, precision) {
+        latlng = toLatLng(latlng);
+        return latlng.alt !== void 0 ? [formatNum(latlng.lng, precision), formatNum(latlng.lat, precision), formatNum(latlng.alt, precision)] : [formatNum(latlng.lng, precision), formatNum(latlng.lat, precision)];
+      }
+      function latLngsToCoords(latlngs, levelsDeep, closed, precision) {
+        var coords = [];
+        for (var i = 0, len = latlngs.length; i < len; i++) {
+          coords.push(levelsDeep ? latLngsToCoords(latlngs[i], isFlat(latlngs[i]) ? 0 : levelsDeep - 1, closed, precision) : latLngToCoords(latlngs[i], precision));
+        }
+        if (!levelsDeep && closed && coords.length > 0) {
+          coords.push(coords[0].slice());
+        }
+        return coords;
+      }
+      function getFeature(layer, newGeometry) {
+        return layer.feature ? extend2({}, layer.feature, { geometry: newGeometry }) : asFeature(newGeometry);
+      }
+      function asFeature(geojson) {
+        if (geojson.type === "Feature" || geojson.type === "FeatureCollection") {
+          return geojson;
+        }
+        return {
+          type: "Feature",
+          properties: {},
+          geometry: geojson
+        };
+      }
+      var PointToGeoJSON = {
+        toGeoJSON: function(precision) {
+          return getFeature(this, {
+            type: "Point",
+            coordinates: latLngToCoords(this.getLatLng(), precision)
+          });
+        }
+      };
+      Marker.include(PointToGeoJSON);
+      Circle.include(PointToGeoJSON);
+      CircleMarker.include(PointToGeoJSON);
+      Polyline.include({
+        toGeoJSON: function(precision) {
+          var multi = !isFlat(this._latlngs);
+          var coords = latLngsToCoords(this._latlngs, multi ? 1 : 0, false, precision);
+          return getFeature(this, {
+            type: (multi ? "Multi" : "") + "LineString",
+            coordinates: coords
+          });
+        }
+      });
+      Polygon.include({
+        toGeoJSON: function(precision) {
+          var holes = !isFlat(this._latlngs), multi = holes && !isFlat(this._latlngs[0]);
+          var coords = latLngsToCoords(this._latlngs, multi ? 2 : holes ? 1 : 0, true, precision);
+          if (!holes) {
+            coords = [coords];
+          }
+          return getFeature(this, {
+            type: (multi ? "Multi" : "") + "Polygon",
+            coordinates: coords
+          });
+        }
+      });
+      LayerGroup.include({
+        toMultiPoint: function(precision) {
+          var coords = [];
+          this.eachLayer(function(layer) {
+            coords.push(layer.toGeoJSON(precision).geometry.coordinates);
+          });
+          return getFeature(this, {
+            type: "MultiPoint",
+            coordinates: coords
+          });
+        },
+        toGeoJSON: function(precision) {
+          var type = this.feature && this.feature.geometry && this.feature.geometry.type;
+          if (type === "MultiPoint") {
+            return this.toMultiPoint(precision);
+          }
+          var isGeometryCollection = type === "GeometryCollection", jsons = [];
+          this.eachLayer(function(layer) {
+            if (layer.toGeoJSON) {
+              var json2 = layer.toGeoJSON(precision);
+              if (isGeometryCollection) {
+                jsons.push(json2.geometry);
+              } else {
+                var feature = asFeature(json2);
+                if (feature.type === "FeatureCollection") {
+                  jsons.push.apply(jsons, feature.features);
+                } else {
+                  jsons.push(feature);
+                }
+              }
+            }
+          });
+          if (isGeometryCollection) {
+            return getFeature(this, {
+              geometries: jsons,
+              type: "GeometryCollection"
+            });
+          }
+          return {
+            type: "FeatureCollection",
+            features: jsons
+          };
+        }
+      });
+      function geoJSON(geojson, options) {
+        return new GeoJSON(geojson, options);
+      }
+      var geoJson = geoJSON;
+      var ImageOverlay = Layer.extend({
+        options: {
+          opacity: 1,
+          alt: "",
+          interactive: false,
+          crossOrigin: false,
+          errorOverlayUrl: "",
+          zIndex: 1,
+          className: ""
+        },
+        initialize: function(url2, bounds, options) {
+          this._url = url2;
+          this._bounds = toLatLngBounds(bounds);
+          setOptions(this, options);
+        },
+        onAdd: function() {
+          if (!this._image) {
+            this._initImage();
+            if (this.options.opacity < 1) {
+              this._updateOpacity();
+            }
+          }
+          if (this.options.interactive) {
+            addClass(this._image, "leaflet-interactive");
+            this.addInteractiveTarget(this._image);
+          }
+          this.getPane().appendChild(this._image);
+          this._reset();
+        },
+        onRemove: function() {
+          remove(this._image);
+          if (this.options.interactive) {
+            this.removeInteractiveTarget(this._image);
+          }
+        },
+        setOpacity: function(opacity) {
+          this.options.opacity = opacity;
+          if (this._image) {
+            this._updateOpacity();
+          }
+          return this;
+        },
+        setStyle: function(styleOpts) {
+          if (styleOpts.opacity) {
+            this.setOpacity(styleOpts.opacity);
+          }
+          return this;
+        },
+        bringToFront: function() {
+          if (this._map) {
+            toFront(this._image);
+          }
+          return this;
+        },
+        bringToBack: function() {
+          if (this._map) {
+            toBack(this._image);
+          }
+          return this;
+        },
+        setUrl: function(url2) {
+          this._url = url2;
+          if (this._image) {
+            this._image.src = url2;
+          }
+          return this;
+        },
+        setBounds: function(bounds) {
+          this._bounds = toLatLngBounds(bounds);
+          if (this._map) {
+            this._reset();
+          }
+          return this;
+        },
+        getEvents: function() {
+          var events = {
+            zoom: this._reset,
+            viewreset: this._reset
+          };
+          if (this._zoomAnimated) {
+            events.zoomanim = this._animateZoom;
+          }
+          return events;
+        },
+        setZIndex: function(value) {
+          this.options.zIndex = value;
+          this._updateZIndex();
+          return this;
+        },
+        getBounds: function() {
+          return this._bounds;
+        },
+        getElement: function() {
+          return this._image;
+        },
+        _initImage: function() {
+          var wasElementSupplied = this._url.tagName === "IMG";
+          var img = this._image = wasElementSupplied ? this._url : create$1("img");
+          addClass(img, "leaflet-image-layer");
+          if (this._zoomAnimated) {
+            addClass(img, "leaflet-zoom-animated");
+          }
+          if (this.options.className) {
+            addClass(img, this.options.className);
+          }
+          img.onselectstart = falseFn;
+          img.onmousemove = falseFn;
+          img.onload = bind(this.fire, this, "load");
+          img.onerror = bind(this._overlayOnError, this, "error");
+          if (this.options.crossOrigin || this.options.crossOrigin === "") {
+            img.crossOrigin = this.options.crossOrigin === true ? "" : this.options.crossOrigin;
+          }
+          if (this.options.zIndex) {
+            this._updateZIndex();
+          }
+          if (wasElementSupplied) {
+            this._url = img.src;
+            return;
+          }
+          img.src = this._url;
+          img.alt = this.options.alt;
+        },
+        _animateZoom: function(e) {
+          var scale2 = this._map.getZoomScale(e.zoom), offset = this._map._latLngBoundsToNewLayerBounds(this._bounds, e.zoom, e.center).min;
+          setTransform(this._image, offset, scale2);
+        },
+        _reset: function() {
+          var image = this._image, bounds = new Bounds(
+            this._map.latLngToLayerPoint(this._bounds.getNorthWest()),
+            this._map.latLngToLayerPoint(this._bounds.getSouthEast())
+          ), size = bounds.getSize();
+          setPosition(image, bounds.min);
+          image.style.width = size.x + "px";
+          image.style.height = size.y + "px";
+        },
+        _updateOpacity: function() {
+          setOpacity(this._image, this.options.opacity);
+        },
+        _updateZIndex: function() {
+          if (this._image && this.options.zIndex !== void 0 && this.options.zIndex !== null) {
+            this._image.style.zIndex = this.options.zIndex;
+          }
+        },
+        _overlayOnError: function() {
+          this.fire("error");
+          var errorUrl = this.options.errorOverlayUrl;
+          if (errorUrl && this._url !== errorUrl) {
+            this._url = errorUrl;
+            this._image.src = errorUrl;
+          }
+        },
+        getCenter: function() {
+          return this._bounds.getCenter();
+        }
+      });
+      var imageOverlay = function(url2, bounds, options) {
+        return new ImageOverlay(url2, bounds, options);
+      };
+      var VideoOverlay = ImageOverlay.extend({
+        options: {
+          autoplay: true,
+          loop: true,
+          keepAspectRatio: true,
+          muted: false,
+          playsInline: true
+        },
+        _initImage: function() {
+          var wasElementSupplied = this._url.tagName === "VIDEO";
+          var vid = this._image = wasElementSupplied ? this._url : create$1("video");
+          addClass(vid, "leaflet-image-layer");
+          if (this._zoomAnimated) {
+            addClass(vid, "leaflet-zoom-animated");
+          }
+          if (this.options.className) {
+            addClass(vid, this.options.className);
+          }
+          vid.onselectstart = falseFn;
+          vid.onmousemove = falseFn;
+          vid.onloadeddata = bind(this.fire, this, "load");
+          if (wasElementSupplied) {
+            var sourceElements = vid.getElementsByTagName("source");
+            var sources = [];
+            for (var j = 0; j < sourceElements.length; j++) {
+              sources.push(sourceElements[j].src);
+            }
+            this._url = sourceElements.length > 0 ? sources : [vid.src];
+            return;
+          }
+          if (!isArray(this._url)) {
+            this._url = [this._url];
+          }
+          if (!this.options.keepAspectRatio && Object.prototype.hasOwnProperty.call(vid.style, "objectFit")) {
+            vid.style["objectFit"] = "fill";
+          }
+          vid.autoplay = !!this.options.autoplay;
+          vid.loop = !!this.options.loop;
+          vid.muted = !!this.options.muted;
+          vid.playsInline = !!this.options.playsInline;
+          for (var i = 0; i < this._url.length; i++) {
+            var source = create$1("source");
+            source.src = this._url[i];
+            vid.appendChild(source);
+          }
+        }
+      });
+      function videoOverlay(video, bounds, options) {
+        return new VideoOverlay(video, bounds, options);
+      }
+      var SVGOverlay = ImageOverlay.extend({
+        _initImage: function() {
+          var el = this._image = this._url;
+          addClass(el, "leaflet-image-layer");
+          if (this._zoomAnimated) {
+            addClass(el, "leaflet-zoom-animated");
+          }
+          if (this.options.className) {
+            addClass(el, this.options.className);
+          }
+          el.onselectstart = falseFn;
+          el.onmousemove = falseFn;
+        }
+      });
+      function svgOverlay(el, bounds, options) {
+        return new SVGOverlay(el, bounds, options);
+      }
+      var DivOverlay = Layer.extend({
+        options: {
+          interactive: false,
+          offset: [0, 0],
+          className: "",
+          pane: void 0,
+          content: ""
+        },
+        initialize: function(options, source) {
+          if (options && (options instanceof LatLng || isArray(options))) {
+            this._latlng = toLatLng(options);
+            setOptions(this, source);
+          } else {
+            setOptions(this, options);
+            this._source = source;
+          }
+          if (this.options.content) {
+            this._content = this.options.content;
+          }
+        },
+        openOn: function(map3) {
+          map3 = arguments.length ? map3 : this._source._map;
+          if (!map3.hasLayer(this)) {
+            map3.addLayer(this);
+          }
+          return this;
+        },
+        close: function() {
+          if (this._map) {
+            this._map.removeLayer(this);
+          }
+          return this;
+        },
+        toggle: function(layer) {
+          if (this._map) {
+            this.close();
+          } else {
+            if (arguments.length) {
+              this._source = layer;
+            } else {
+              layer = this._source;
+            }
+            this._prepareOpen();
+            this.openOn(layer._map);
+          }
+          return this;
+        },
+        onAdd: function(map3) {
+          this._zoomAnimated = map3._zoomAnimated;
+          if (!this._container) {
+            this._initLayout();
+          }
+          if (map3._fadeAnimated) {
+            setOpacity(this._container, 0);
+          }
+          clearTimeout(this._removeTimeout);
+          this.getPane().appendChild(this._container);
+          this.update();
+          if (map3._fadeAnimated) {
+            setOpacity(this._container, 1);
+          }
+          this.bringToFront();
+          if (this.options.interactive) {
+            addClass(this._container, "leaflet-interactive");
+            this.addInteractiveTarget(this._container);
+          }
+        },
+        onRemove: function(map3) {
+          if (map3._fadeAnimated) {
+            setOpacity(this._container, 0);
+            this._removeTimeout = setTimeout(bind(remove, void 0, this._container), 200);
+          } else {
+            remove(this._container);
+          }
+          if (this.options.interactive) {
+            removeClass(this._container, "leaflet-interactive");
+            this.removeInteractiveTarget(this._container);
+          }
+        },
+        getLatLng: function() {
+          return this._latlng;
+        },
+        setLatLng: function(latlng) {
+          this._latlng = toLatLng(latlng);
+          if (this._map) {
+            this._updatePosition();
+            this._adjustPan();
+          }
+          return this;
+        },
+        getContent: function() {
+          return this._content;
+        },
+        setContent: function(content) {
+          this._content = content;
+          this.update();
+          return this;
+        },
+        getElement: function() {
+          return this._container;
+        },
+        update: function() {
+          if (!this._map) {
+            return;
+          }
+          this._container.style.visibility = "hidden";
+          this._updateContent();
+          this._updateLayout();
+          this._updatePosition();
+          this._container.style.visibility = "";
+          this._adjustPan();
+        },
+        getEvents: function() {
+          var events = {
+            zoom: this._updatePosition,
+            viewreset: this._updatePosition
+          };
+          if (this._zoomAnimated) {
+            events.zoomanim = this._animateZoom;
+          }
+          return events;
+        },
+        isOpen: function() {
+          return !!this._map && this._map.hasLayer(this);
+        },
+        bringToFront: function() {
+          if (this._map) {
+            toFront(this._container);
+          }
+          return this;
+        },
+        bringToBack: function() {
+          if (this._map) {
+            toBack(this._container);
+          }
+          return this;
+        },
+        _prepareOpen: function(latlng) {
+          var source = this._source;
+          if (!source._map) {
+            return false;
+          }
+          if (source instanceof FeatureGroup) {
+            source = null;
+            var layers2 = this._source._layers;
+            for (var id in layers2) {
+              if (layers2[id]._map) {
+                source = layers2[id];
+                break;
+              }
+            }
+            if (!source) {
+              return false;
+            }
+            this._source = source;
+          }
+          if (!latlng) {
+            if (source.getCenter) {
+              latlng = source.getCenter();
+            } else if (source.getLatLng) {
+              latlng = source.getLatLng();
+            } else if (source.getBounds) {
+              latlng = source.getBounds().getCenter();
+            } else {
+              throw new Error("Unable to get source layer LatLng.");
+            }
+          }
+          this.setLatLng(latlng);
+          if (this._map) {
+            this.update();
+          }
+          return true;
+        },
+        _updateContent: function() {
+          if (!this._content) {
+            return;
+          }
+          var node = this._contentNode;
+          var content = typeof this._content === "function" ? this._content(this._source || this) : this._content;
+          if (typeof content === "string") {
+            node.innerHTML = content;
+          } else {
+            while (node.hasChildNodes()) {
+              node.removeChild(node.firstChild);
+            }
+            node.appendChild(content);
+          }
+          this.fire("contentupdate");
+        },
+        _updatePosition: function() {
+          if (!this._map) {
+            return;
+          }
+          var pos = this._map.latLngToLayerPoint(this._latlng), offset = toPoint(this.options.offset), anchor = this._getAnchor();
+          if (this._zoomAnimated) {
+            setPosition(this._container, pos.add(anchor));
+          } else {
+            offset = offset.add(pos).add(anchor);
+          }
+          var bottom = this._containerBottom = -offset.y, left = this._containerLeft = -Math.round(this._containerWidth / 2) + offset.x;
+          this._container.style.bottom = bottom + "px";
+          this._container.style.left = left + "px";
+        },
+        _getAnchor: function() {
+          return [0, 0];
+        }
+      });
+      Map2.include({
+        _initOverlay: function(OverlayClass, content, latlng, options) {
+          var overlay = content;
+          if (!(overlay instanceof OverlayClass)) {
+            overlay = new OverlayClass(options).setContent(content);
+          }
+          if (latlng) {
+            overlay.setLatLng(latlng);
+          }
+          return overlay;
+        }
+      });
+      Layer.include({
+        _initOverlay: function(OverlayClass, old, content, options) {
+          var overlay = content;
+          if (overlay instanceof OverlayClass) {
+            setOptions(overlay, options);
+            overlay._source = this;
+          } else {
+            overlay = old && !options ? old : new OverlayClass(options, this);
+            overlay.setContent(content);
+          }
+          return overlay;
+        }
+      });
+      var Popup = DivOverlay.extend({
+        options: {
+          pane: "popupPane",
+          offset: [0, 7],
+          maxWidth: 300,
+          minWidth: 50,
+          maxHeight: null,
+          autoPan: true,
+          autoPanPaddingTopLeft: null,
+          autoPanPaddingBottomRight: null,
+          autoPanPadding: [5, 5],
+          keepInView: false,
+          closeButton: true,
+          autoClose: true,
+          closeOnEscapeKey: true,
+          className: ""
+        },
+        openOn: function(map3) {
+          map3 = arguments.length ? map3 : this._source._map;
+          if (!map3.hasLayer(this) && map3._popup && map3._popup.options.autoClose) {
+            map3.removeLayer(map3._popup);
+          }
+          map3._popup = this;
+          return DivOverlay.prototype.openOn.call(this, map3);
+        },
+        onAdd: function(map3) {
+          DivOverlay.prototype.onAdd.call(this, map3);
+          map3.fire("popupopen", { popup: this });
+          if (this._source) {
+            this._source.fire("popupopen", { popup: this }, true);
+            if (!(this._source instanceof Path)) {
+              this._source.on("preclick", stopPropagation);
+            }
+          }
+        },
+        onRemove: function(map3) {
+          DivOverlay.prototype.onRemove.call(this, map3);
+          map3.fire("popupclose", { popup: this });
+          if (this._source) {
+            this._source.fire("popupclose", { popup: this }, true);
+            if (!(this._source instanceof Path)) {
+              this._source.off("preclick", stopPropagation);
+            }
+          }
+        },
+        getEvents: function() {
+          var events = DivOverlay.prototype.getEvents.call(this);
+          if (this.options.closeOnClick !== void 0 ? this.options.closeOnClick : this._map.options.closePopupOnClick) {
+            events.preclick = this.close;
+          }
+          if (this.options.keepInView) {
+            events.moveend = this._adjustPan;
+          }
+          return events;
+        },
+        _initLayout: function() {
+          var prefix = "leaflet-popup", container = this._container = create$1(
+            "div",
+            prefix + " " + (this.options.className || "") + " leaflet-zoom-animated"
+          );
+          var wrapper = this._wrapper = create$1("div", prefix + "-content-wrapper", container);
+          this._contentNode = create$1("div", prefix + "-content", wrapper);
+          disableClickPropagation(container);
+          disableScrollPropagation(this._contentNode);
+          on(container, "contextmenu", stopPropagation);
+          this._tipContainer = create$1("div", prefix + "-tip-container", container);
+          this._tip = create$1("div", prefix + "-tip", this._tipContainer);
+          if (this.options.closeButton) {
+            var closeButton = this._closeButton = create$1("a", prefix + "-close-button", container);
+            closeButton.setAttribute("role", "button");
+            closeButton.setAttribute("aria-label", "Close popup");
+            closeButton.href = "#close";
+            closeButton.innerHTML = '<span aria-hidden="true">&#215;</span>';
+            on(closeButton, "click", function(ev) {
+              preventDefault(ev);
+              this.close();
+            }, this);
+          }
+        },
+        _updateLayout: function() {
+          var container = this._contentNode, style2 = container.style;
+          style2.width = "";
+          style2.whiteSpace = "nowrap";
+          var width = container.offsetWidth;
+          width = Math.min(width, this.options.maxWidth);
+          width = Math.max(width, this.options.minWidth);
+          style2.width = width + 1 + "px";
+          style2.whiteSpace = "";
+          style2.height = "";
+          var height = container.offsetHeight, maxHeight = this.options.maxHeight, scrolledClass = "leaflet-popup-scrolled";
+          if (maxHeight && height > maxHeight) {
+            style2.height = maxHeight + "px";
+            addClass(container, scrolledClass);
+          } else {
+            removeClass(container, scrolledClass);
+          }
+          this._containerWidth = this._container.offsetWidth;
+        },
+        _animateZoom: function(e) {
+          var pos = this._map._latLngToNewLayerPoint(this._latlng, e.zoom, e.center), anchor = this._getAnchor();
+          setPosition(this._container, pos.add(anchor));
+        },
+        _adjustPan: function() {
+          if (!this.options.autoPan) {
+            return;
+          }
+          if (this._map._panAnim) {
+            this._map._panAnim.stop();
+          }
+          if (this._autopanning) {
+            this._autopanning = false;
+            return;
+          }
+          var map3 = this._map, marginBottom = parseInt(getStyle(this._container, "marginBottom"), 10) || 0, containerHeight = this._container.offsetHeight + marginBottom, containerWidth = this._containerWidth, layerPos = new Point(this._containerLeft, -containerHeight - this._containerBottom);
+          layerPos._add(getPosition(this._container));
+          var containerPos = map3.layerPointToContainerPoint(layerPos), padding = toPoint(this.options.autoPanPadding), paddingTL = toPoint(this.options.autoPanPaddingTopLeft || padding), paddingBR = toPoint(this.options.autoPanPaddingBottomRight || padding), size = map3.getSize(), dx = 0, dy = 0;
+          if (containerPos.x + containerWidth + paddingBR.x > size.x) {
+            dx = containerPos.x + containerWidth - size.x + paddingBR.x;
+          }
+          if (containerPos.x - dx - paddingTL.x < 0) {
+            dx = containerPos.x - paddingTL.x;
+          }
+          if (containerPos.y + containerHeight + paddingBR.y > size.y) {
+            dy = containerPos.y + containerHeight - size.y + paddingBR.y;
+          }
+          if (containerPos.y - dy - paddingTL.y < 0) {
+            dy = containerPos.y - paddingTL.y;
+          }
+          if (dx || dy) {
+            if (this.options.keepInView) {
+              this._autopanning = true;
+            }
+            map3.fire("autopanstart").panBy([dx, dy]);
+          }
+        },
+        _getAnchor: function() {
+          return toPoint(this._source && this._source._getPopupAnchor ? this._source._getPopupAnchor() : [0, 0]);
+        }
+      });
+      var popup = function(options, source) {
+        return new Popup(options, source);
+      };
+      Map2.mergeOptions({
+        closePopupOnClick: true
+      });
+      Map2.include({
+        openPopup: function(popup2, latlng, options) {
+          this._initOverlay(Popup, popup2, latlng, options).openOn(this);
+          return this;
+        },
+        closePopup: function(popup2) {
+          popup2 = arguments.length ? popup2 : this._popup;
+          if (popup2) {
+            popup2.close();
+          }
+          return this;
+        }
+      });
+      Layer.include({
+        bindPopup: function(content, options) {
+          this._popup = this._initOverlay(Popup, this._popup, content, options);
+          if (!this._popupHandlersAdded) {
+            this.on({
+              click: this._openPopup,
+              keypress: this._onKeyPress,
+              remove: this.closePopup,
+              move: this._movePopup
+            });
+            this._popupHandlersAdded = true;
+          }
+          return this;
+        },
+        unbindPopup: function() {
+          if (this._popup) {
+            this.off({
+              click: this._openPopup,
+              keypress: this._onKeyPress,
+              remove: this.closePopup,
+              move: this._movePopup
+            });
+            this._popupHandlersAdded = false;
+            this._popup = null;
+          }
+          return this;
+        },
+        openPopup: function(latlng) {
+          if (this._popup) {
+            if (!(this instanceof FeatureGroup)) {
+              this._popup._source = this;
+            }
+            if (this._popup._prepareOpen(latlng || this._latlng)) {
+              this._popup.openOn(this._map);
+            }
+          }
+          return this;
+        },
+        closePopup: function() {
+          if (this._popup) {
+            this._popup.close();
+          }
+          return this;
+        },
+        togglePopup: function() {
+          if (this._popup) {
+            this._popup.toggle(this);
+          }
+          return this;
+        },
+        isPopupOpen: function() {
+          return this._popup ? this._popup.isOpen() : false;
+        },
+        setPopupContent: function(content) {
+          if (this._popup) {
+            this._popup.setContent(content);
+          }
+          return this;
+        },
+        getPopup: function() {
+          return this._popup;
+        },
+        _openPopup: function(e) {
+          if (!this._popup || !this._map) {
+            return;
+          }
+          stop(e);
+          var target = e.layer || e.target;
+          if (this._popup._source === target && !(target instanceof Path)) {
+            if (this._map.hasLayer(this._popup)) {
+              this.closePopup();
+            } else {
+              this.openPopup(e.latlng);
+            }
+            return;
+          }
+          this._popup._source = target;
+          this.openPopup(e.latlng);
+        },
+        _movePopup: function(e) {
+          this._popup.setLatLng(e.latlng);
+        },
+        _onKeyPress: function(e) {
+          if (e.originalEvent.keyCode === 13) {
+            this._openPopup(e);
+          }
+        }
+      });
+      var Tooltip = DivOverlay.extend({
+        options: {
+          pane: "tooltipPane",
+          offset: [0, 0],
+          direction: "auto",
+          permanent: false,
+          sticky: false,
+          opacity: 0.9
+        },
+        onAdd: function(map3) {
+          DivOverlay.prototype.onAdd.call(this, map3);
+          this.setOpacity(this.options.opacity);
+          map3.fire("tooltipopen", { tooltip: this });
+          if (this._source) {
+            this.addEventParent(this._source);
+            this._source.fire("tooltipopen", { tooltip: this }, true);
+          }
+        },
+        onRemove: function(map3) {
+          DivOverlay.prototype.onRemove.call(this, map3);
+          map3.fire("tooltipclose", { tooltip: this });
+          if (this._source) {
+            this.removeEventParent(this._source);
+            this._source.fire("tooltipclose", { tooltip: this }, true);
+          }
+        },
+        getEvents: function() {
+          var events = DivOverlay.prototype.getEvents.call(this);
+          if (!this.options.permanent) {
+            events.preclick = this.close;
+          }
+          return events;
+        },
+        _initLayout: function() {
+          var prefix = "leaflet-tooltip", className = prefix + " " + (this.options.className || "") + " leaflet-zoom-" + (this._zoomAnimated ? "animated" : "hide");
+          this._contentNode = this._container = create$1("div", className);
+          this._container.setAttribute("role", "tooltip");
+          this._container.setAttribute("id", "leaflet-tooltip-" + stamp(this));
+        },
+        _updateLayout: function() {
+        },
+        _adjustPan: function() {
+        },
+        _setPosition: function(pos) {
+          var subX, subY, map3 = this._map, container = this._container, centerPoint = map3.latLngToContainerPoint(map3.getCenter()), tooltipPoint = map3.layerPointToContainerPoint(pos), direction = this.options.direction, tooltipWidth = container.offsetWidth, tooltipHeight = container.offsetHeight, offset = toPoint(this.options.offset), anchor = this._getAnchor();
+          if (direction === "top") {
+            subX = tooltipWidth / 2;
+            subY = tooltipHeight;
+          } else if (direction === "bottom") {
+            subX = tooltipWidth / 2;
+            subY = 0;
+          } else if (direction === "center") {
+            subX = tooltipWidth / 2;
+            subY = tooltipHeight / 2;
+          } else if (direction === "right") {
+            subX = 0;
+            subY = tooltipHeight / 2;
+          } else if (direction === "left") {
+            subX = tooltipWidth;
+            subY = tooltipHeight / 2;
+          } else if (tooltipPoint.x < centerPoint.x) {
+            direction = "right";
+            subX = 0;
+            subY = tooltipHeight / 2;
+          } else {
+            direction = "left";
+            subX = tooltipWidth + (offset.x + anchor.x) * 2;
+            subY = tooltipHeight / 2;
+          }
+          pos = pos.subtract(toPoint(subX, subY, true)).add(offset).add(anchor);
+          removeClass(container, "leaflet-tooltip-right");
+          removeClass(container, "leaflet-tooltip-left");
+          removeClass(container, "leaflet-tooltip-top");
+          removeClass(container, "leaflet-tooltip-bottom");
+          addClass(container, "leaflet-tooltip-" + direction);
+          setPosition(container, pos);
+        },
+        _updatePosition: function() {
+          var pos = this._map.latLngToLayerPoint(this._latlng);
+          this._setPosition(pos);
+        },
+        setOpacity: function(opacity) {
+          this.options.opacity = opacity;
+          if (this._container) {
+            setOpacity(this._container, opacity);
+          }
+        },
+        _animateZoom: function(e) {
+          var pos = this._map._latLngToNewLayerPoint(this._latlng, e.zoom, e.center);
+          this._setPosition(pos);
+        },
+        _getAnchor: function() {
+          return toPoint(this._source && this._source._getTooltipAnchor && !this.options.sticky ? this._source._getTooltipAnchor() : [0, 0]);
+        }
+      });
+      var tooltip = function(options, source) {
+        return new Tooltip(options, source);
+      };
+      Map2.include({
+        openTooltip: function(tooltip2, latlng, options) {
+          this._initOverlay(Tooltip, tooltip2, latlng, options).openOn(this);
+          return this;
+        },
+        closeTooltip: function(tooltip2) {
+          tooltip2.close();
+          return this;
+        }
+      });
+      Layer.include({
+        bindTooltip: function(content, options) {
+          if (this._tooltip && this.isTooltipOpen()) {
+            this.unbindTooltip();
+          }
+          this._tooltip = this._initOverlay(Tooltip, this._tooltip, content, options);
+          this._initTooltipInteractions();
+          if (this._tooltip.options.permanent && this._map && this._map.hasLayer(this)) {
+            this.openTooltip();
+          }
+          return this;
+        },
+        unbindTooltip: function() {
+          if (this._tooltip) {
+            this._initTooltipInteractions(true);
+            this.closeTooltip();
+            this._tooltip = null;
+          }
+          return this;
+        },
+        _initTooltipInteractions: function(remove2) {
+          if (!remove2 && this._tooltipHandlersAdded) {
+            return;
+          }
+          var onOff = remove2 ? "off" : "on", events = {
+            remove: this.closeTooltip,
+            move: this._moveTooltip
+          };
+          if (!this._tooltip.options.permanent) {
+            events.mouseover = this._openTooltip;
+            events.mouseout = this.closeTooltip;
+            events.click = this._openTooltip;
+            if (this._map) {
+              this._addFocusListeners();
+            } else {
+              events.add = this._addFocusListeners;
+            }
+          } else {
+            events.add = this._openTooltip;
+          }
+          if (this._tooltip.options.sticky) {
+            events.mousemove = this._moveTooltip;
+          }
+          this[onOff](events);
+          this._tooltipHandlersAdded = !remove2;
+        },
+        openTooltip: function(latlng) {
+          if (this._tooltip) {
+            if (!(this instanceof FeatureGroup)) {
+              this._tooltip._source = this;
+            }
+            if (this._tooltip._prepareOpen(latlng)) {
+              this._tooltip.openOn(this._map);
+              if (this.getElement) {
+                this._setAriaDescribedByOnLayer(this);
+              } else if (this.eachLayer) {
+                this.eachLayer(this._setAriaDescribedByOnLayer, this);
+              }
+            }
+          }
+          return this;
+        },
+        closeTooltip: function() {
+          if (this._tooltip) {
+            return this._tooltip.close();
+          }
+        },
+        toggleTooltip: function() {
+          if (this._tooltip) {
+            this._tooltip.toggle(this);
+          }
+          return this;
+        },
+        isTooltipOpen: function() {
+          return this._tooltip.isOpen();
+        },
+        setTooltipContent: function(content) {
+          if (this._tooltip) {
+            this._tooltip.setContent(content);
+          }
+          return this;
+        },
+        getTooltip: function() {
+          return this._tooltip;
+        },
+        _addFocusListeners: function() {
+          if (this.getElement) {
+            this._addFocusListenersOnLayer(this);
+          } else if (this.eachLayer) {
+            this.eachLayer(this._addFocusListenersOnLayer, this);
+          }
+        },
+        _addFocusListenersOnLayer: function(layer) {
+          var el = typeof layer.getElement === "function" && layer.getElement();
+          if (el) {
+            on(el, "focus", function() {
+              this._tooltip._source = layer;
+              this.openTooltip();
+            }, this);
+            on(el, "blur", this.closeTooltip, this);
+          }
+        },
+        _setAriaDescribedByOnLayer: function(layer) {
+          var el = typeof layer.getElement === "function" && layer.getElement();
+          if (el) {
+            el.setAttribute("aria-describedby", this._tooltip._container.id);
+          }
+        },
+        _openTooltip: function(e) {
+          if (!this._tooltip || !this._map) {
+            return;
+          }
+          if (this._map.dragging && this._map.dragging.moving() && !this._openOnceFlag) {
+            this._openOnceFlag = true;
+            var that = this;
+            this._map.once("moveend", function() {
+              that._openOnceFlag = false;
+              that._openTooltip(e);
+            });
+            return;
+          }
+          this._tooltip._source = e.layer || e.target;
+          this.openTooltip(this._tooltip.options.sticky ? e.latlng : void 0);
+        },
+        _moveTooltip: function(e) {
+          var latlng = e.latlng, containerPoint, layerPoint;
+          if (this._tooltip.options.sticky && e.originalEvent) {
+            containerPoint = this._map.mouseEventToContainerPoint(e.originalEvent);
+            layerPoint = this._map.containerPointToLayerPoint(containerPoint);
+            latlng = this._map.layerPointToLatLng(layerPoint);
+          }
+          this._tooltip.setLatLng(latlng);
+        }
+      });
+      var DivIcon = Icon.extend({
+        options: {
+          iconSize: [12, 12],
+          html: false,
+          bgPos: null,
+          className: "leaflet-div-icon"
+        },
+        createIcon: function(oldIcon) {
+          var div = oldIcon && oldIcon.tagName === "DIV" ? oldIcon : document.createElement("div"), options = this.options;
+          if (options.html instanceof Element) {
+            empty(div);
+            div.appendChild(options.html);
+          } else {
+            div.innerHTML = options.html !== false ? options.html : "";
+          }
+          if (options.bgPos) {
+            var bgPos = toPoint(options.bgPos);
+            div.style.backgroundPosition = -bgPos.x + "px " + -bgPos.y + "px";
+          }
+          this._setIconStyles(div, "icon");
+          return div;
+        },
+        createShadow: function() {
+          return null;
+        }
+      });
+      function divIcon2(options) {
+        return new DivIcon(options);
+      }
+      Icon.Default = IconDefault;
+      var GridLayer = Layer.extend({
+        options: {
+          tileSize: 256,
+          opacity: 1,
+          updateWhenIdle: Browser.mobile,
+          updateWhenZooming: true,
+          updateInterval: 200,
+          zIndex: 1,
+          bounds: null,
+          minZoom: 0,
+          maxZoom: void 0,
+          maxNativeZoom: void 0,
+          minNativeZoom: void 0,
+          noWrap: false,
+          pane: "tilePane",
+          className: "",
+          keepBuffer: 2
+        },
+        initialize: function(options) {
+          setOptions(this, options);
+        },
+        onAdd: function() {
+          this._initContainer();
+          this._levels = {};
+          this._tiles = {};
+          this._resetView();
+        },
+        beforeAdd: function(map3) {
+          map3._addZoomLimit(this);
+        },
+        onRemove: function(map3) {
+          this._removeAllTiles();
+          remove(this._container);
+          map3._removeZoomLimit(this);
+          this._container = null;
+          this._tileZoom = void 0;
+        },
+        bringToFront: function() {
+          if (this._map) {
+            toFront(this._container);
+            this._setAutoZIndex(Math.max);
+          }
+          return this;
+        },
+        bringToBack: function() {
+          if (this._map) {
+            toBack(this._container);
+            this._setAutoZIndex(Math.min);
+          }
+          return this;
+        },
+        getContainer: function() {
+          return this._container;
+        },
+        setOpacity: function(opacity) {
+          this.options.opacity = opacity;
+          this._updateOpacity();
+          return this;
+        },
+        setZIndex: function(zIndex) {
+          this.options.zIndex = zIndex;
+          this._updateZIndex();
+          return this;
+        },
+        isLoading: function() {
+          return this._loading;
+        },
+        redraw: function() {
+          if (this._map) {
+            this._removeAllTiles();
+            var tileZoom = this._clampZoom(this._map.getZoom());
+            if (tileZoom !== this._tileZoom) {
+              this._tileZoom = tileZoom;
+              this._updateLevels();
+            }
+            this._update();
+          }
+          return this;
+        },
+        getEvents: function() {
+          var events = {
+            viewprereset: this._invalidateAll,
+            viewreset: this._resetView,
+            zoom: this._resetView,
+            moveend: this._onMoveEnd
+          };
+          if (!this.options.updateWhenIdle) {
+            if (!this._onMove) {
+              this._onMove = throttle(this._onMoveEnd, this.options.updateInterval, this);
+            }
+            events.move = this._onMove;
+          }
+          if (this._zoomAnimated) {
+            events.zoomanim = this._animateZoom;
+          }
+          return events;
+        },
+        createTile: function() {
+          return document.createElement("div");
+        },
+        getTileSize: function() {
+          var s = this.options.tileSize;
+          return s instanceof Point ? s : new Point(s, s);
+        },
+        _updateZIndex: function() {
+          if (this._container && this.options.zIndex !== void 0 && this.options.zIndex !== null) {
+            this._container.style.zIndex = this.options.zIndex;
+          }
+        },
+        _setAutoZIndex: function(compare) {
+          var layers2 = this.getPane().children, edgeZIndex = -compare(-Infinity, Infinity);
+          for (var i = 0, len = layers2.length, zIndex; i < len; i++) {
+            zIndex = layers2[i].style.zIndex;
+            if (layers2[i] !== this._container && zIndex) {
+              edgeZIndex = compare(edgeZIndex, +zIndex);
+            }
+          }
+          if (isFinite(edgeZIndex)) {
+            this.options.zIndex = edgeZIndex + compare(-1, 1);
+            this._updateZIndex();
+          }
+        },
+        _updateOpacity: function() {
+          if (!this._map) {
+            return;
+          }
+          if (Browser.ielt9) {
+            return;
+          }
+          setOpacity(this._container, this.options.opacity);
+          var now = +new Date(), nextFrame = false, willPrune = false;
+          for (var key in this._tiles) {
+            var tile = this._tiles[key];
+            if (!tile.current || !tile.loaded) {
+              continue;
+            }
+            var fade = Math.min(1, (now - tile.loaded) / 200);
+            setOpacity(tile.el, fade);
+            if (fade < 1) {
+              nextFrame = true;
+            } else {
+              if (tile.active) {
+                willPrune = true;
+              } else {
+                this._onOpaqueTile(tile);
+              }
+              tile.active = true;
+            }
+          }
+          if (willPrune && !this._noPrune) {
+            this._pruneTiles();
+          }
+          if (nextFrame) {
+            cancelAnimFrame(this._fadeFrame);
+            this._fadeFrame = requestAnimFrame(this._updateOpacity, this);
+          }
+        },
+        _onOpaqueTile: falseFn,
+        _initContainer: function() {
+          if (this._container) {
+            return;
+          }
+          this._container = create$1("div", "leaflet-layer " + (this.options.className || ""));
+          this._updateZIndex();
+          if (this.options.opacity < 1) {
+            this._updateOpacity();
+          }
+          this.getPane().appendChild(this._container);
+        },
+        _updateLevels: function() {
+          var zoom2 = this._tileZoom, maxZoom = this.options.maxZoom;
+          if (zoom2 === void 0) {
+            return void 0;
+          }
+          for (var z2 in this._levels) {
+            z2 = Number(z2);
+            if (this._levels[z2].el.children.length || z2 === zoom2) {
+              this._levels[z2].el.style.zIndex = maxZoom - Math.abs(zoom2 - z2);
+              this._onUpdateLevel(z2);
+            } else {
+              remove(this._levels[z2].el);
+              this._removeTilesAtZoom(z2);
+              this._onRemoveLevel(z2);
+              delete this._levels[z2];
+            }
+          }
+          var level = this._levels[zoom2], map3 = this._map;
+          if (!level) {
+            level = this._levels[zoom2] = {};
+            level.el = create$1("div", "leaflet-tile-container leaflet-zoom-animated", this._container);
+            level.el.style.zIndex = maxZoom;
+            level.origin = map3.project(map3.unproject(map3.getPixelOrigin()), zoom2).round();
+            level.zoom = zoom2;
+            this._setZoomTransform(level, map3.getCenter(), map3.getZoom());
+            falseFn(level.el.offsetWidth);
+            this._onCreateLevel(level);
+          }
+          this._level = level;
+          return level;
+        },
+        _onUpdateLevel: falseFn,
+        _onRemoveLevel: falseFn,
+        _onCreateLevel: falseFn,
+        _pruneTiles: function() {
+          if (!this._map) {
+            return;
+          }
+          var key, tile;
+          var zoom2 = this._map.getZoom();
+          if (zoom2 > this.options.maxZoom || zoom2 < this.options.minZoom) {
+            this._removeAllTiles();
+            return;
+          }
+          for (key in this._tiles) {
+            tile = this._tiles[key];
+            tile.retain = tile.current;
+          }
+          for (key in this._tiles) {
+            tile = this._tiles[key];
+            if (tile.current && !tile.active) {
+              var coords = tile.coords;
+              if (!this._retainParent(coords.x, coords.y, coords.z, coords.z - 5)) {
+                this._retainChildren(coords.x, coords.y, coords.z, coords.z + 2);
+              }
+            }
+          }
+          for (key in this._tiles) {
+            if (!this._tiles[key].retain) {
+              this._removeTile(key);
+            }
+          }
+        },
+        _removeTilesAtZoom: function(zoom2) {
+          for (var key in this._tiles) {
+            if (this._tiles[key].coords.z !== zoom2) {
+              continue;
+            }
+            this._removeTile(key);
+          }
+        },
+        _removeAllTiles: function() {
+          for (var key in this._tiles) {
+            this._removeTile(key);
+          }
+        },
+        _invalidateAll: function() {
+          for (var z2 in this._levels) {
+            remove(this._levels[z2].el);
+            this._onRemoveLevel(Number(z2));
+            delete this._levels[z2];
+          }
+          this._removeAllTiles();
+          this._tileZoom = void 0;
+        },
+        _retainParent: function(x, y, z2, minZoom) {
+          var x2 = Math.floor(x / 2), y2 = Math.floor(y / 2), z22 = z2 - 1, coords2 = new Point(+x2, +y2);
+          coords2.z = +z22;
+          var key = this._tileCoordsToKey(coords2), tile = this._tiles[key];
+          if (tile && tile.active) {
+            tile.retain = true;
+            return true;
+          } else if (tile && tile.loaded) {
+            tile.retain = true;
+          }
+          if (z22 > minZoom) {
+            return this._retainParent(x2, y2, z22, minZoom);
+          }
+          return false;
+        },
+        _retainChildren: function(x, y, z2, maxZoom) {
+          for (var i = 2 * x; i < 2 * x + 2; i++) {
+            for (var j = 2 * y; j < 2 * y + 2; j++) {
+              var coords = new Point(i, j);
+              coords.z = z2 + 1;
+              var key = this._tileCoordsToKey(coords), tile = this._tiles[key];
+              if (tile && tile.active) {
+                tile.retain = true;
+                continue;
+              } else if (tile && tile.loaded) {
+                tile.retain = true;
+              }
+              if (z2 + 1 < maxZoom) {
+                this._retainChildren(i, j, z2 + 1, maxZoom);
+              }
+            }
+          }
+        },
+        _resetView: function(e) {
+          var animating = e && (e.pinch || e.flyTo);
+          this._setView(this._map.getCenter(), this._map.getZoom(), animating, animating);
+        },
+        _animateZoom: function(e) {
+          this._setView(e.center, e.zoom, true, e.noUpdate);
+        },
+        _clampZoom: function(zoom2) {
+          var options = this.options;
+          if (void 0 !== options.minNativeZoom && zoom2 < options.minNativeZoom) {
+            return options.minNativeZoom;
+          }
+          if (void 0 !== options.maxNativeZoom && options.maxNativeZoom < zoom2) {
+            return options.maxNativeZoom;
+          }
+          return zoom2;
+        },
+        _setView: function(center, zoom2, noPrune, noUpdate) {
+          var tileZoom = Math.round(zoom2);
+          if (this.options.maxZoom !== void 0 && tileZoom > this.options.maxZoom || this.options.minZoom !== void 0 && tileZoom < this.options.minZoom) {
+            tileZoom = void 0;
+          } else {
+            tileZoom = this._clampZoom(tileZoom);
+          }
+          var tileZoomChanged = this.options.updateWhenZooming && tileZoom !== this._tileZoom;
+          if (!noUpdate || tileZoomChanged) {
+            this._tileZoom = tileZoom;
+            if (this._abortLoading) {
+              this._abortLoading();
+            }
+            this._updateLevels();
+            this._resetGrid();
+            if (tileZoom !== void 0) {
+              this._update(center);
+            }
+            if (!noPrune) {
+              this._pruneTiles();
+            }
+            this._noPrune = !!noPrune;
+          }
+          this._setZoomTransforms(center, zoom2);
+        },
+        _setZoomTransforms: function(center, zoom2) {
+          for (var i in this._levels) {
+            this._setZoomTransform(this._levels[i], center, zoom2);
+          }
+        },
+        _setZoomTransform: function(level, center, zoom2) {
+          var scale2 = this._map.getZoomScale(zoom2, level.zoom), translate = level.origin.multiplyBy(scale2).subtract(this._map._getNewPixelOrigin(center, zoom2)).round();
+          if (Browser.any3d) {
+            setTransform(level.el, translate, scale2);
+          } else {
+            setPosition(level.el, translate);
+          }
+        },
+        _resetGrid: function() {
+          var map3 = this._map, crs = map3.options.crs, tileSize = this._tileSize = this.getTileSize(), tileZoom = this._tileZoom;
+          var bounds = this._map.getPixelWorldBounds(this._tileZoom);
+          if (bounds) {
+            this._globalTileRange = this._pxBoundsToTileRange(bounds);
+          }
+          this._wrapX = crs.wrapLng && !this.options.noWrap && [
+            Math.floor(map3.project([0, crs.wrapLng[0]], tileZoom).x / tileSize.x),
+            Math.ceil(map3.project([0, crs.wrapLng[1]], tileZoom).x / tileSize.y)
+          ];
+          this._wrapY = crs.wrapLat && !this.options.noWrap && [
+            Math.floor(map3.project([crs.wrapLat[0], 0], tileZoom).y / tileSize.x),
+            Math.ceil(map3.project([crs.wrapLat[1], 0], tileZoom).y / tileSize.y)
+          ];
+        },
+        _onMoveEnd: function() {
+          if (!this._map || this._map._animatingZoom) {
+            return;
+          }
+          this._update();
+        },
+        _getTiledPixelBounds: function(center) {
+          var map3 = this._map, mapZoom = map3._animatingZoom ? Math.max(map3._animateToZoom, map3.getZoom()) : map3.getZoom(), scale2 = map3.getZoomScale(mapZoom, this._tileZoom), pixelCenter = map3.project(center, this._tileZoom).floor(), halfSize = map3.getSize().divideBy(scale2 * 2);
+          return new Bounds(pixelCenter.subtract(halfSize), pixelCenter.add(halfSize));
+        },
+        _update: function(center) {
+          var map3 = this._map;
+          if (!map3) {
+            return;
+          }
+          var zoom2 = this._clampZoom(map3.getZoom());
+          if (center === void 0) {
+            center = map3.getCenter();
+          }
+          if (this._tileZoom === void 0) {
+            return;
+          }
+          var pixelBounds = this._getTiledPixelBounds(center), tileRange = this._pxBoundsToTileRange(pixelBounds), tileCenter = tileRange.getCenter(), queue = [], margin = this.options.keepBuffer, noPruneRange = new Bounds(
+            tileRange.getBottomLeft().subtract([margin, -margin]),
+            tileRange.getTopRight().add([margin, -margin])
+          );
+          if (!(isFinite(tileRange.min.x) && isFinite(tileRange.min.y) && isFinite(tileRange.max.x) && isFinite(tileRange.max.y))) {
+            throw new Error("Attempted to load an infinite number of tiles");
+          }
+          for (var key in this._tiles) {
+            var c = this._tiles[key].coords;
+            if (c.z !== this._tileZoom || !noPruneRange.contains(new Point(c.x, c.y))) {
+              this._tiles[key].current = false;
+            }
+          }
+          if (Math.abs(zoom2 - this._tileZoom) > 1) {
+            this._setView(center, zoom2);
+            return;
+          }
+          for (var j = tileRange.min.y; j <= tileRange.max.y; j++) {
+            for (var i = tileRange.min.x; i <= tileRange.max.x; i++) {
+              var coords = new Point(i, j);
+              coords.z = this._tileZoom;
+              if (!this._isValidTile(coords)) {
+                continue;
+              }
+              var tile = this._tiles[this._tileCoordsToKey(coords)];
+              if (tile) {
+                tile.current = true;
+              } else {
+                queue.push(coords);
+              }
+            }
+          }
+          queue.sort(function(a, b) {
+            return a.distanceTo(tileCenter) - b.distanceTo(tileCenter);
+          });
+          if (queue.length !== 0) {
+            if (!this._loading) {
+              this._loading = true;
+              this.fire("loading");
+            }
+            var fragment = document.createDocumentFragment();
+            for (i = 0; i < queue.length; i++) {
+              this._addTile(queue[i], fragment);
+            }
+            this._level.el.appendChild(fragment);
+          }
+        },
+        _isValidTile: function(coords) {
+          var crs = this._map.options.crs;
+          if (!crs.infinite) {
+            var bounds = this._globalTileRange;
+            if (!crs.wrapLng && (coords.x < bounds.min.x || coords.x > bounds.max.x) || !crs.wrapLat && (coords.y < bounds.min.y || coords.y > bounds.max.y)) {
+              return false;
+            }
+          }
+          if (!this.options.bounds) {
+            return true;
+          }
+          var tileBounds = this._tileCoordsToBounds(coords);
+          return toLatLngBounds(this.options.bounds).overlaps(tileBounds);
+        },
+        _keyToBounds: function(key) {
+          return this._tileCoordsToBounds(this._keyToTileCoords(key));
+        },
+        _tileCoordsToNwSe: function(coords) {
+          var map3 = this._map, tileSize = this.getTileSize(), nwPoint = coords.scaleBy(tileSize), sePoint = nwPoint.add(tileSize), nw = map3.unproject(nwPoint, coords.z), se = map3.unproject(sePoint, coords.z);
+          return [nw, se];
+        },
+        _tileCoordsToBounds: function(coords) {
+          var bp = this._tileCoordsToNwSe(coords), bounds = new LatLngBounds(bp[0], bp[1]);
+          if (!this.options.noWrap) {
+            bounds = this._map.wrapLatLngBounds(bounds);
+          }
+          return bounds;
+        },
+        _tileCoordsToKey: function(coords) {
+          return coords.x + ":" + coords.y + ":" + coords.z;
+        },
+        _keyToTileCoords: function(key) {
+          var k = key.split(":"), coords = new Point(+k[0], +k[1]);
+          coords.z = +k[2];
+          return coords;
+        },
+        _removeTile: function(key) {
+          var tile = this._tiles[key];
+          if (!tile) {
+            return;
+          }
+          remove(tile.el);
+          delete this._tiles[key];
+          this.fire("tileunload", {
+            tile: tile.el,
+            coords: this._keyToTileCoords(key)
+          });
+        },
+        _initTile: function(tile) {
+          addClass(tile, "leaflet-tile");
+          var tileSize = this.getTileSize();
+          tile.style.width = tileSize.x + "px";
+          tile.style.height = tileSize.y + "px";
+          tile.onselectstart = falseFn;
+          tile.onmousemove = falseFn;
+          if (Browser.ielt9 && this.options.opacity < 1) {
+            setOpacity(tile, this.options.opacity);
+          }
+        },
+        _addTile: function(coords, container) {
+          var tilePos = this._getTilePos(coords), key = this._tileCoordsToKey(coords);
+          var tile = this.createTile(this._wrapCoords(coords), bind(this._tileReady, this, coords));
+          this._initTile(tile);
+          if (this.createTile.length < 2) {
+            requestAnimFrame(bind(this._tileReady, this, coords, null, tile));
+          }
+          setPosition(tile, tilePos);
+          this._tiles[key] = {
+            el: tile,
+            coords,
+            current: true
+          };
+          container.appendChild(tile);
+          this.fire("tileloadstart", {
+            tile,
+            coords
+          });
+        },
+        _tileReady: function(coords, err, tile) {
+          if (err) {
+            this.fire("tileerror", {
+              error: err,
+              tile,
+              coords
+            });
+          }
+          var key = this._tileCoordsToKey(coords);
+          tile = this._tiles[key];
+          if (!tile) {
+            return;
+          }
+          tile.loaded = +new Date();
+          if (this._map._fadeAnimated) {
+            setOpacity(tile.el, 0);
+            cancelAnimFrame(this._fadeFrame);
+            this._fadeFrame = requestAnimFrame(this._updateOpacity, this);
+          } else {
+            tile.active = true;
+            this._pruneTiles();
+          }
+          if (!err) {
+            addClass(tile.el, "leaflet-tile-loaded");
+            this.fire("tileload", {
+              tile: tile.el,
+              coords
+            });
+          }
+          if (this._noTilesToLoad()) {
+            this._loading = false;
+            this.fire("load");
+            if (Browser.ielt9 || !this._map._fadeAnimated) {
+              requestAnimFrame(this._pruneTiles, this);
+            } else {
+              setTimeout(bind(this._pruneTiles, this), 250);
+            }
+          }
+        },
+        _getTilePos: function(coords) {
+          return coords.scaleBy(this.getTileSize()).subtract(this._level.origin);
+        },
+        _wrapCoords: function(coords) {
+          var newCoords = new Point(
+            this._wrapX ? wrapNum(coords.x, this._wrapX) : coords.x,
+            this._wrapY ? wrapNum(coords.y, this._wrapY) : coords.y
+          );
+          newCoords.z = coords.z;
+          return newCoords;
+        },
+        _pxBoundsToTileRange: function(bounds) {
+          var tileSize = this.getTileSize();
+          return new Bounds(
+            bounds.min.unscaleBy(tileSize).floor(),
+            bounds.max.unscaleBy(tileSize).ceil().subtract([1, 1])
+          );
+        },
+        _noTilesToLoad: function() {
+          for (var key in this._tiles) {
+            if (!this._tiles[key].loaded) {
+              return false;
+            }
+          }
+          return true;
+        }
+      });
+      function gridLayer(options) {
+        return new GridLayer(options);
+      }
+      var TileLayer = GridLayer.extend({
+        options: {
+          minZoom: 0,
+          maxZoom: 18,
+          subdomains: "abc",
+          errorTileUrl: "",
+          zoomOffset: 0,
+          tms: false,
+          zoomReverse: false,
+          detectRetina: false,
+          crossOrigin: false,
+          referrerPolicy: false
+        },
+        initialize: function(url2, options) {
+          this._url = url2;
+          options = setOptions(this, options);
+          if (options.detectRetina && Browser.retina && options.maxZoom > 0) {
+            options.tileSize = Math.floor(options.tileSize / 2);
+            if (!options.zoomReverse) {
+              options.zoomOffset++;
+              options.maxZoom = Math.max(options.minZoom, options.maxZoom - 1);
+            } else {
+              options.zoomOffset--;
+              options.minZoom = Math.min(options.maxZoom, options.minZoom + 1);
+            }
+            options.minZoom = Math.max(0, options.minZoom);
+          } else if (!options.zoomReverse) {
+            options.maxZoom = Math.max(options.minZoom, options.maxZoom);
+          } else {
+            options.minZoom = Math.min(options.maxZoom, options.minZoom);
+          }
+          if (typeof options.subdomains === "string") {
+            options.subdomains = options.subdomains.split("");
+          }
+          this.on("tileunload", this._onTileRemove);
+        },
+        setUrl: function(url2, noRedraw) {
+          if (this._url === url2 && noRedraw === void 0) {
+            noRedraw = true;
+          }
+          this._url = url2;
+          if (!noRedraw) {
+            this.redraw();
+          }
+          return this;
+        },
+        createTile: function(coords, done) {
+          var tile = document.createElement("img");
+          on(tile, "load", bind(this._tileOnLoad, this, done, tile));
+          on(tile, "error", bind(this._tileOnError, this, done, tile));
+          if (this.options.crossOrigin || this.options.crossOrigin === "") {
+            tile.crossOrigin = this.options.crossOrigin === true ? "" : this.options.crossOrigin;
+          }
+          if (typeof this.options.referrerPolicy === "string") {
+            tile.referrerPolicy = this.options.referrerPolicy;
+          }
+          tile.alt = "";
+          tile.src = this.getTileUrl(coords);
+          return tile;
+        },
+        getTileUrl: function(coords) {
+          var data = {
+            r: Browser.retina ? "@2x" : "",
+            s: this._getSubdomain(coords),
+            x: coords.x,
+            y: coords.y,
+            z: this._getZoomForUrl()
+          };
+          if (this._map && !this._map.options.crs.infinite) {
+            var invertedY = this._globalTileRange.max.y - coords.y;
+            if (this.options.tms) {
+              data["y"] = invertedY;
+            }
+            data["-y"] = invertedY;
+          }
+          return template(this._url, extend2(data, this.options));
+        },
+        _tileOnLoad: function(done, tile) {
+          if (Browser.ielt9) {
+            setTimeout(bind(done, this, null, tile), 0);
+          } else {
+            done(null, tile);
+          }
+        },
+        _tileOnError: function(done, tile, e) {
+          var errorUrl = this.options.errorTileUrl;
+          if (errorUrl && tile.getAttribute("src") !== errorUrl) {
+            tile.src = errorUrl;
+          }
+          done(e, tile);
+        },
+        _onTileRemove: function(e) {
+          e.tile.onload = null;
+        },
+        _getZoomForUrl: function() {
+          var zoom2 = this._tileZoom, maxZoom = this.options.maxZoom, zoomReverse = this.options.zoomReverse, zoomOffset = this.options.zoomOffset;
+          if (zoomReverse) {
+            zoom2 = maxZoom - zoom2;
+          }
+          return zoom2 + zoomOffset;
+        },
+        _getSubdomain: function(tilePoint) {
+          var index2 = Math.abs(tilePoint.x + tilePoint.y) % this.options.subdomains.length;
+          return this.options.subdomains[index2];
+        },
+        _abortLoading: function() {
+          var i, tile;
+          for (i in this._tiles) {
+            if (this._tiles[i].coords.z !== this._tileZoom) {
+              tile = this._tiles[i].el;
+              tile.onload = falseFn;
+              tile.onerror = falseFn;
+              if (!tile.complete) {
+                tile.src = emptyImageUrl;
+                var coords = this._tiles[i].coords;
+                remove(tile);
+                delete this._tiles[i];
+                this.fire("tileabort", {
+                  tile,
+                  coords
+                });
+              }
+            }
+          }
+        },
+        _removeTile: function(key) {
+          var tile = this._tiles[key];
+          if (!tile) {
+            return;
+          }
+          tile.el.setAttribute("src", emptyImageUrl);
+          return GridLayer.prototype._removeTile.call(this, key);
+        },
+        _tileReady: function(coords, err, tile) {
+          if (!this._map || tile && tile.getAttribute("src") === emptyImageUrl) {
+            return;
+          }
+          return GridLayer.prototype._tileReady.call(this, coords, err, tile);
+        }
+      });
+      function tileLayer2(url2, options) {
+        return new TileLayer(url2, options);
+      }
+      var TileLayerWMS = TileLayer.extend({
+        defaultWmsParams: {
+          service: "WMS",
+          request: "GetMap",
+          layers: "",
+          styles: "",
+          format: "image/jpeg",
+          transparent: false,
+          version: "1.1.1"
+        },
+        options: {
+          crs: null,
+          uppercase: false
+        },
+        initialize: function(url2, options) {
+          this._url = url2;
+          var wmsParams = extend2({}, this.defaultWmsParams);
+          for (var i in options) {
+            if (!(i in this.options)) {
+              wmsParams[i] = options[i];
+            }
+          }
+          options = setOptions(this, options);
+          var realRetina = options.detectRetina && Browser.retina ? 2 : 1;
+          var tileSize = this.getTileSize();
+          wmsParams.width = tileSize.x * realRetina;
+          wmsParams.height = tileSize.y * realRetina;
+          this.wmsParams = wmsParams;
+        },
+        onAdd: function(map3) {
+          this._crs = this.options.crs || map3.options.crs;
+          this._wmsVersion = parseFloat(this.wmsParams.version);
+          var projectionKey = this._wmsVersion >= 1.3 ? "crs" : "srs";
+          this.wmsParams[projectionKey] = this._crs.code;
+          TileLayer.prototype.onAdd.call(this, map3);
+        },
+        getTileUrl: function(coords) {
+          var tileBounds = this._tileCoordsToNwSe(coords), crs = this._crs, bounds = toBounds(crs.project(tileBounds[0]), crs.project(tileBounds[1])), min = bounds.min, max = bounds.max, bbox = (this._wmsVersion >= 1.3 && this._crs === EPSG4326 ? [min.y, min.x, max.y, max.x] : [min.x, min.y, max.x, max.y]).join(","), url2 = TileLayer.prototype.getTileUrl.call(this, coords);
+          return url2 + getParamString(this.wmsParams, url2, this.options.uppercase) + (this.options.uppercase ? "&BBOX=" : "&bbox=") + bbox;
+        },
+        setParams: function(params, noRedraw) {
+          extend2(this.wmsParams, params);
+          if (!noRedraw) {
+            this.redraw();
+          }
+          return this;
+        }
+      });
+      function tileLayerWMS(url2, options) {
+        return new TileLayerWMS(url2, options);
+      }
+      TileLayer.WMS = TileLayerWMS;
+      tileLayer2.wms = tileLayerWMS;
+      var Renderer = Layer.extend({
+        options: {
+          padding: 0.1
+        },
+        initialize: function(options) {
+          setOptions(this, options);
+          stamp(this);
+          this._layers = this._layers || {};
+        },
+        onAdd: function() {
+          if (!this._container) {
+            this._initContainer();
+            addClass(this._container, "leaflet-zoom-animated");
+          }
+          this.getPane().appendChild(this._container);
+          this._update();
+          this.on("update", this._updatePaths, this);
+        },
+        onRemove: function() {
+          this.off("update", this._updatePaths, this);
+          this._destroyContainer();
+        },
+        getEvents: function() {
+          var events = {
+            viewreset: this._reset,
+            zoom: this._onZoom,
+            moveend: this._update,
+            zoomend: this._onZoomEnd
+          };
+          if (this._zoomAnimated) {
+            events.zoomanim = this._onAnimZoom;
+          }
+          return events;
+        },
+        _onAnimZoom: function(ev) {
+          this._updateTransform(ev.center, ev.zoom);
+        },
+        _onZoom: function() {
+          this._updateTransform(this._map.getCenter(), this._map.getZoom());
+        },
+        _updateTransform: function(center, zoom2) {
+          var scale2 = this._map.getZoomScale(zoom2, this._zoom), viewHalf = this._map.getSize().multiplyBy(0.5 + this.options.padding), currentCenterPoint = this._map.project(this._center, zoom2), topLeftOffset = viewHalf.multiplyBy(-scale2).add(currentCenterPoint).subtract(this._map._getNewPixelOrigin(center, zoom2));
+          if (Browser.any3d) {
+            setTransform(this._container, topLeftOffset, scale2);
+          } else {
+            setPosition(this._container, topLeftOffset);
+          }
+        },
+        _reset: function() {
+          this._update();
+          this._updateTransform(this._center, this._zoom);
+          for (var id in this._layers) {
+            this._layers[id]._reset();
+          }
+        },
+        _onZoomEnd: function() {
+          for (var id in this._layers) {
+            this._layers[id]._project();
+          }
+        },
+        _updatePaths: function() {
+          for (var id in this._layers) {
+            this._layers[id]._update();
+          }
+        },
+        _update: function() {
+          var p = this.options.padding, size = this._map.getSize(), min = this._map.containerPointToLayerPoint(size.multiplyBy(-p)).round();
+          this._bounds = new Bounds(min, min.add(size.multiplyBy(1 + p * 2)).round());
+          this._center = this._map.getCenter();
+          this._zoom = this._map.getZoom();
+        }
+      });
+      var Canvas = Renderer.extend({
+        options: {
+          tolerance: 0
+        },
+        getEvents: function() {
+          var events = Renderer.prototype.getEvents.call(this);
+          events.viewprereset = this._onViewPreReset;
+          return events;
+        },
+        _onViewPreReset: function() {
+          this._postponeUpdatePaths = true;
+        },
+        onAdd: function() {
+          Renderer.prototype.onAdd.call(this);
+          this._draw();
+        },
+        _initContainer: function() {
+          var container = this._container = document.createElement("canvas");
+          on(container, "mousemove", this._onMouseMove, this);
+          on(container, "click dblclick mousedown mouseup contextmenu", this._onClick, this);
+          on(container, "mouseout", this._handleMouseOut, this);
+          container["_leaflet_disable_events"] = true;
+          this._ctx = container.getContext("2d");
+        },
+        _destroyContainer: function() {
+          cancelAnimFrame(this._redrawRequest);
+          delete this._ctx;
+          remove(this._container);
+          off(this._container);
+          delete this._container;
+        },
+        _updatePaths: function() {
+          if (this._postponeUpdatePaths) {
+            return;
+          }
+          var layer;
+          this._redrawBounds = null;
+          for (var id in this._layers) {
+            layer = this._layers[id];
+            layer._update();
+          }
+          this._redraw();
+        },
+        _update: function() {
+          if (this._map._animatingZoom && this._bounds) {
+            return;
+          }
+          Renderer.prototype._update.call(this);
+          var b = this._bounds, container = this._container, size = b.getSize(), m = Browser.retina ? 2 : 1;
+          setPosition(container, b.min);
+          container.width = m * size.x;
+          container.height = m * size.y;
+          container.style.width = size.x + "px";
+          container.style.height = size.y + "px";
+          if (Browser.retina) {
+            this._ctx.scale(2, 2);
+          }
+          this._ctx.translate(-b.min.x, -b.min.y);
+          this.fire("update");
+        },
+        _reset: function() {
+          Renderer.prototype._reset.call(this);
+          if (this._postponeUpdatePaths) {
+            this._postponeUpdatePaths = false;
+            this._updatePaths();
+          }
+        },
+        _initPath: function(layer) {
+          this._updateDashArray(layer);
+          this._layers[stamp(layer)] = layer;
+          var order = layer._order = {
+            layer,
+            prev: this._drawLast,
+            next: null
+          };
+          if (this._drawLast) {
+            this._drawLast.next = order;
+          }
+          this._drawLast = order;
+          this._drawFirst = this._drawFirst || this._drawLast;
+        },
+        _addPath: function(layer) {
+          this._requestRedraw(layer);
+        },
+        _removePath: function(layer) {
+          var order = layer._order;
+          var next = order.next;
+          var prev = order.prev;
+          if (next) {
+            next.prev = prev;
+          } else {
+            this._drawLast = prev;
+          }
+          if (prev) {
+            prev.next = next;
+          } else {
+            this._drawFirst = next;
+          }
+          delete layer._order;
+          delete this._layers[stamp(layer)];
+          this._requestRedraw(layer);
+        },
+        _updatePath: function(layer) {
+          this._extendRedrawBounds(layer);
+          layer._project();
+          layer._update();
+          this._requestRedraw(layer);
+        },
+        _updateStyle: function(layer) {
+          this._updateDashArray(layer);
+          this._requestRedraw(layer);
+        },
+        _updateDashArray: function(layer) {
+          if (typeof layer.options.dashArray === "string") {
+            var parts = layer.options.dashArray.split(/[, ]+/), dashArray = [], dashValue, i;
+            for (i = 0; i < parts.length; i++) {
+              dashValue = Number(parts[i]);
+              if (isNaN(dashValue)) {
+                return;
+              }
+              dashArray.push(dashValue);
+            }
+            layer.options._dashArray = dashArray;
+          } else {
+            layer.options._dashArray = layer.options.dashArray;
+          }
+        },
+        _requestRedraw: function(layer) {
+          if (!this._map) {
+            return;
+          }
+          this._extendRedrawBounds(layer);
+          this._redrawRequest = this._redrawRequest || requestAnimFrame(this._redraw, this);
+        },
+        _extendRedrawBounds: function(layer) {
+          if (layer._pxBounds) {
+            var padding = (layer.options.weight || 0) + 1;
+            this._redrawBounds = this._redrawBounds || new Bounds();
+            this._redrawBounds.extend(layer._pxBounds.min.subtract([padding, padding]));
+            this._redrawBounds.extend(layer._pxBounds.max.add([padding, padding]));
+          }
+        },
+        _redraw: function() {
+          this._redrawRequest = null;
+          if (this._redrawBounds) {
+            this._redrawBounds.min._floor();
+            this._redrawBounds.max._ceil();
+          }
+          this._clear();
+          this._draw();
+          this._redrawBounds = null;
+        },
+        _clear: function() {
+          var bounds = this._redrawBounds;
+          if (bounds) {
+            var size = bounds.getSize();
+            this._ctx.clearRect(bounds.min.x, bounds.min.y, size.x, size.y);
+          } else {
+            this._ctx.save();
+            this._ctx.setTransform(1, 0, 0, 1, 0, 0);
+            this._ctx.clearRect(0, 0, this._container.width, this._container.height);
+            this._ctx.restore();
+          }
+        },
+        _draw: function() {
+          var layer, bounds = this._redrawBounds;
+          this._ctx.save();
+          if (bounds) {
+            var size = bounds.getSize();
+            this._ctx.beginPath();
+            this._ctx.rect(bounds.min.x, bounds.min.y, size.x, size.y);
+            this._ctx.clip();
+          }
+          this._drawing = true;
+          for (var order = this._drawFirst; order; order = order.next) {
+            layer = order.layer;
+            if (!bounds || layer._pxBounds && layer._pxBounds.intersects(bounds)) {
+              layer._updatePath();
+            }
+          }
+          this._drawing = false;
+          this._ctx.restore();
+        },
+        _updatePoly: function(layer, closed) {
+          if (!this._drawing) {
+            return;
+          }
+          var i, j, len2, p, parts = layer._parts, len = parts.length, ctx = this._ctx;
+          if (!len) {
+            return;
+          }
+          ctx.beginPath();
+          for (i = 0; i < len; i++) {
+            for (j = 0, len2 = parts[i].length; j < len2; j++) {
+              p = parts[i][j];
+              ctx[j ? "lineTo" : "moveTo"](p.x, p.y);
+            }
+            if (closed) {
+              ctx.closePath();
+            }
+          }
+          this._fillStroke(ctx, layer);
+        },
+        _updateCircle: function(layer) {
+          if (!this._drawing || layer._empty()) {
+            return;
+          }
+          var p = layer._point, ctx = this._ctx, r = Math.max(Math.round(layer._radius), 1), s = (Math.max(Math.round(layer._radiusY), 1) || r) / r;
+          if (s !== 1) {
+            ctx.save();
+            ctx.scale(1, s);
+          }
+          ctx.beginPath();
+          ctx.arc(p.x, p.y / s, r, 0, Math.PI * 2, false);
+          if (s !== 1) {
+            ctx.restore();
+          }
+          this._fillStroke(ctx, layer);
+        },
+        _fillStroke: function(ctx, layer) {
+          var options = layer.options;
+          if (options.fill) {
+            ctx.globalAlpha = options.fillOpacity;
+            ctx.fillStyle = options.fillColor || options.color;
+            ctx.fill(options.fillRule || "evenodd");
+          }
+          if (options.stroke && options.weight !== 0) {
+            if (ctx.setLineDash) {
+              ctx.setLineDash(layer.options && layer.options._dashArray || []);
+            }
+            ctx.globalAlpha = options.opacity;
+            ctx.lineWidth = options.weight;
+            ctx.strokeStyle = options.color;
+            ctx.lineCap = options.lineCap;
+            ctx.lineJoin = options.lineJoin;
+            ctx.stroke();
+          }
+        },
+        _onClick: function(e) {
+          var point = this._map.mouseEventToLayerPoint(e), layer, clickedLayer;
+          for (var order = this._drawFirst; order; order = order.next) {
+            layer = order.layer;
+            if (layer.options.interactive && layer._containsPoint(point)) {
+              if (!(e.type === "click" || e.type === "preclick") || !this._map._draggableMoved(layer)) {
+                clickedLayer = layer;
+              }
+            }
+          }
+          this._fireEvent(clickedLayer ? [clickedLayer] : false, e);
+        },
+        _onMouseMove: function(e) {
+          if (!this._map || this._map.dragging.moving() || this._map._animatingZoom) {
+            return;
+          }
+          var point = this._map.mouseEventToLayerPoint(e);
+          this._handleMouseHover(e, point);
+        },
+        _handleMouseOut: function(e) {
+          var layer = this._hoveredLayer;
+          if (layer) {
+            removeClass(this._container, "leaflet-interactive");
+            this._fireEvent([layer], e, "mouseout");
+            this._hoveredLayer = null;
+            this._mouseHoverThrottled = false;
+          }
+        },
+        _handleMouseHover: function(e, point) {
+          if (this._mouseHoverThrottled) {
+            return;
+          }
+          var layer, candidateHoveredLayer;
+          for (var order = this._drawFirst; order; order = order.next) {
+            layer = order.layer;
+            if (layer.options.interactive && layer._containsPoint(point)) {
+              candidateHoveredLayer = layer;
+            }
+          }
+          if (candidateHoveredLayer !== this._hoveredLayer) {
+            this._handleMouseOut(e);
+            if (candidateHoveredLayer) {
+              addClass(this._container, "leaflet-interactive");
+              this._fireEvent([candidateHoveredLayer], e, "mouseover");
+              this._hoveredLayer = candidateHoveredLayer;
+            }
+          }
+          this._fireEvent(this._hoveredLayer ? [this._hoveredLayer] : false, e);
+          this._mouseHoverThrottled = true;
+          setTimeout(bind(function() {
+            this._mouseHoverThrottled = false;
+          }, this), 32);
+        },
+        _fireEvent: function(layers2, e, type) {
+          this._map._fireDOMEvent(e, type || e.type, layers2);
+        },
+        _bringToFront: function(layer) {
+          var order = layer._order;
+          if (!order) {
+            return;
+          }
+          var next = order.next;
+          var prev = order.prev;
+          if (next) {
+            next.prev = prev;
+          } else {
+            return;
+          }
+          if (prev) {
+            prev.next = next;
+          } else if (next) {
+            this._drawFirst = next;
+          }
+          order.prev = this._drawLast;
+          this._drawLast.next = order;
+          order.next = null;
+          this._drawLast = order;
+          this._requestRedraw(layer);
+        },
+        _bringToBack: function(layer) {
+          var order = layer._order;
+          if (!order) {
+            return;
+          }
+          var next = order.next;
+          var prev = order.prev;
+          if (prev) {
+            prev.next = next;
+          } else {
+            return;
+          }
+          if (next) {
+            next.prev = prev;
+          } else if (prev) {
+            this._drawLast = prev;
+          }
+          order.prev = null;
+          order.next = this._drawFirst;
+          this._drawFirst.prev = order;
+          this._drawFirst = order;
+          this._requestRedraw(layer);
+        }
+      });
+      function canvas(options) {
+        return Browser.canvas ? new Canvas(options) : null;
+      }
+      var vmlCreate = function() {
+        try {
+          document.namespaces.add("lvml", "urn:schemas-microsoft-com:vml");
+          return function(name) {
+            return document.createElement("<lvml:" + name + ' class="lvml">');
+          };
+        } catch (e) {
+        }
+        return function(name) {
+          return document.createElement("<" + name + ' xmlns="urn:schemas-microsoft.com:vml" class="lvml">');
+        };
+      }();
+      var vmlMixin = {
+        _initContainer: function() {
+          this._container = create$1("div", "leaflet-vml-container");
+        },
+        _update: function() {
+          if (this._map._animatingZoom) {
+            return;
+          }
+          Renderer.prototype._update.call(this);
+          this.fire("update");
+        },
+        _initPath: function(layer) {
+          var container = layer._container = vmlCreate("shape");
+          addClass(container, "leaflet-vml-shape " + (this.options.className || ""));
+          container.coordsize = "1 1";
+          layer._path = vmlCreate("path");
+          container.appendChild(layer._path);
+          this._updateStyle(layer);
+          this._layers[stamp(layer)] = layer;
+        },
+        _addPath: function(layer) {
+          var container = layer._container;
+          this._container.appendChild(container);
+          if (layer.options.interactive) {
+            layer.addInteractiveTarget(container);
+          }
+        },
+        _removePath: function(layer) {
+          var container = layer._container;
+          remove(container);
+          layer.removeInteractiveTarget(container);
+          delete this._layers[stamp(layer)];
+        },
+        _updateStyle: function(layer) {
+          var stroke = layer._stroke, fill = layer._fill, options = layer.options, container = layer._container;
+          container.stroked = !!options.stroke;
+          container.filled = !!options.fill;
+          if (options.stroke) {
+            if (!stroke) {
+              stroke = layer._stroke = vmlCreate("stroke");
+            }
+            container.appendChild(stroke);
+            stroke.weight = options.weight + "px";
+            stroke.color = options.color;
+            stroke.opacity = options.opacity;
+            if (options.dashArray) {
+              stroke.dashStyle = isArray(options.dashArray) ? options.dashArray.join(" ") : options.dashArray.replace(/( *, *)/g, " ");
+            } else {
+              stroke.dashStyle = "";
+            }
+            stroke.endcap = options.lineCap.replace("butt", "flat");
+            stroke.joinstyle = options.lineJoin;
+          } else if (stroke) {
+            container.removeChild(stroke);
+            layer._stroke = null;
+          }
+          if (options.fill) {
+            if (!fill) {
+              fill = layer._fill = vmlCreate("fill");
+            }
+            container.appendChild(fill);
+            fill.color = options.fillColor || options.color;
+            fill.opacity = options.fillOpacity;
+          } else if (fill) {
+            container.removeChild(fill);
+            layer._fill = null;
+          }
+        },
+        _updateCircle: function(layer) {
+          var p = layer._point.round(), r = Math.round(layer._radius), r2 = Math.round(layer._radiusY || r);
+          this._setPath(layer, layer._empty() ? "M0 0" : "AL " + p.x + "," + p.y + " " + r + "," + r2 + " 0," + 65535 * 360);
+        },
+        _setPath: function(layer, path) {
+          layer._path.v = path;
+        },
+        _bringToFront: function(layer) {
+          toFront(layer._container);
+        },
+        _bringToBack: function(layer) {
+          toBack(layer._container);
+        }
+      };
+      var create = Browser.vml ? vmlCreate : svgCreate;
+      var SVG = Renderer.extend({
+        _initContainer: function() {
+          this._container = create("svg");
+          this._container.setAttribute("pointer-events", "none");
+          this._rootGroup = create("g");
+          this._container.appendChild(this._rootGroup);
+        },
+        _destroyContainer: function() {
+          remove(this._container);
+          off(this._container);
+          delete this._container;
+          delete this._rootGroup;
+          delete this._svgSize;
+        },
+        _update: function() {
+          if (this._map._animatingZoom && this._bounds) {
+            return;
+          }
+          Renderer.prototype._update.call(this);
+          var b = this._bounds, size = b.getSize(), container = this._container;
+          if (!this._svgSize || !this._svgSize.equals(size)) {
+            this._svgSize = size;
+            container.setAttribute("width", size.x);
+            container.setAttribute("height", size.y);
+          }
+          setPosition(container, b.min);
+          container.setAttribute("viewBox", [b.min.x, b.min.y, size.x, size.y].join(" "));
+          this.fire("update");
+        },
+        _initPath: function(layer) {
+          var path = layer._path = create("path");
+          if (layer.options.className) {
+            addClass(path, layer.options.className);
+          }
+          if (layer.options.interactive) {
+            addClass(path, "leaflet-interactive");
+          }
+          this._updateStyle(layer);
+          this._layers[stamp(layer)] = layer;
+        },
+        _addPath: function(layer) {
+          if (!this._rootGroup) {
+            this._initContainer();
+          }
+          this._rootGroup.appendChild(layer._path);
+          layer.addInteractiveTarget(layer._path);
+        },
+        _removePath: function(layer) {
+          remove(layer._path);
+          layer.removeInteractiveTarget(layer._path);
+          delete this._layers[stamp(layer)];
+        },
+        _updatePath: function(layer) {
+          layer._project();
+          layer._update();
+        },
+        _updateStyle: function(layer) {
+          var path = layer._path, options = layer.options;
+          if (!path) {
+            return;
+          }
+          if (options.stroke) {
+            path.setAttribute("stroke", options.color);
+            path.setAttribute("stroke-opacity", options.opacity);
+            path.setAttribute("stroke-width", options.weight);
+            path.setAttribute("stroke-linecap", options.lineCap);
+            path.setAttribute("stroke-linejoin", options.lineJoin);
+            if (options.dashArray) {
+              path.setAttribute("stroke-dasharray", options.dashArray);
+            } else {
+              path.removeAttribute("stroke-dasharray");
+            }
+            if (options.dashOffset) {
+              path.setAttribute("stroke-dashoffset", options.dashOffset);
+            } else {
+              path.removeAttribute("stroke-dashoffset");
+            }
+          } else {
+            path.setAttribute("stroke", "none");
+          }
+          if (options.fill) {
+            path.setAttribute("fill", options.fillColor || options.color);
+            path.setAttribute("fill-opacity", options.fillOpacity);
+            path.setAttribute("fill-rule", options.fillRule || "evenodd");
+          } else {
+            path.setAttribute("fill", "none");
+          }
+        },
+        _updatePoly: function(layer, closed) {
+          this._setPath(layer, pointsToPath(layer._parts, closed));
+        },
+        _updateCircle: function(layer) {
+          var p = layer._point, r = Math.max(Math.round(layer._radius), 1), r2 = Math.max(Math.round(layer._radiusY), 1) || r, arc = "a" + r + "," + r2 + " 0 1,0 ";
+          var d = layer._empty() ? "M0 0" : "M" + (p.x - r) + "," + p.y + arc + r * 2 + ",0 " + arc + -r * 2 + ",0 ";
+          this._setPath(layer, d);
+        },
+        _setPath: function(layer, path) {
+          layer._path.setAttribute("d", path);
+        },
+        _bringToFront: function(layer) {
+          toFront(layer._path);
+        },
+        _bringToBack: function(layer) {
+          toBack(layer._path);
+        }
+      });
+      if (Browser.vml) {
+        SVG.include(vmlMixin);
+      }
+      function svg(options) {
+        return Browser.svg || Browser.vml ? new SVG(options) : null;
+      }
+      Map2.include({
+        getRenderer: function(layer) {
+          var renderer = layer.options.renderer || this._getPaneRenderer(layer.options.pane) || this.options.renderer || this._renderer;
+          if (!renderer) {
+            renderer = this._renderer = this._createRenderer();
+          }
+          if (!this.hasLayer(renderer)) {
+            this.addLayer(renderer);
+          }
+          return renderer;
+        },
+        _getPaneRenderer: function(name) {
+          if (name === "overlayPane" || name === void 0) {
+            return false;
+          }
+          var renderer = this._paneRenderers[name];
+          if (renderer === void 0) {
+            renderer = this._createRenderer({ pane: name });
+            this._paneRenderers[name] = renderer;
+          }
+          return renderer;
+        },
+        _createRenderer: function(options) {
+          return this.options.preferCanvas && canvas(options) || svg(options);
+        }
+      });
+      var Rectangle = Polygon.extend({
+        initialize: function(latLngBounds, options) {
+          Polygon.prototype.initialize.call(this, this._boundsToLatLngs(latLngBounds), options);
+        },
+        setBounds: function(latLngBounds) {
+          return this.setLatLngs(this._boundsToLatLngs(latLngBounds));
+        },
+        _boundsToLatLngs: function(latLngBounds) {
+          latLngBounds = toLatLngBounds(latLngBounds);
+          return [
+            latLngBounds.getSouthWest(),
+            latLngBounds.getNorthWest(),
+            latLngBounds.getNorthEast(),
+            latLngBounds.getSouthEast()
+          ];
+        }
+      });
+      function rectangle(latLngBounds, options) {
+        return new Rectangle(latLngBounds, options);
+      }
+      SVG.create = create;
+      SVG.pointsToPath = pointsToPath;
+      GeoJSON.geometryToLayer = geometryToLayer;
+      GeoJSON.coordsToLatLng = coordsToLatLng;
+      GeoJSON.coordsToLatLngs = coordsToLatLngs;
+      GeoJSON.latLngToCoords = latLngToCoords;
+      GeoJSON.latLngsToCoords = latLngsToCoords;
+      GeoJSON.getFeature = getFeature;
+      GeoJSON.asFeature = asFeature;
+      Map2.mergeOptions({
+        boxZoom: true
+      });
+      var BoxZoom = Handler.extend({
+        initialize: function(map3) {
+          this._map = map3;
+          this._container = map3._container;
+          this._pane = map3._panes.overlayPane;
+          this._resetStateTimeout = 0;
+          map3.on("unload", this._destroy, this);
+        },
+        addHooks: function() {
+          on(this._container, "mousedown", this._onMouseDown, this);
+        },
+        removeHooks: function() {
+          off(this._container, "mousedown", this._onMouseDown, this);
+        },
+        moved: function() {
+          return this._moved;
+        },
+        _destroy: function() {
+          remove(this._pane);
+          delete this._pane;
+        },
+        _resetState: function() {
+          this._resetStateTimeout = 0;
+          this._moved = false;
+        },
+        _clearDeferredResetState: function() {
+          if (this._resetStateTimeout !== 0) {
+            clearTimeout(this._resetStateTimeout);
+            this._resetStateTimeout = 0;
+          }
+        },
+        _onMouseDown: function(e) {
+          if (!e.shiftKey || e.which !== 1 && e.button !== 1) {
+            return false;
+          }
+          this._clearDeferredResetState();
+          this._resetState();
+          disableTextSelection();
+          disableImageDrag();
+          this._startPoint = this._map.mouseEventToContainerPoint(e);
+          on(document, {
+            contextmenu: stop,
+            mousemove: this._onMouseMove,
+            mouseup: this._onMouseUp,
+            keydown: this._onKeyDown
+          }, this);
+        },
+        _onMouseMove: function(e) {
+          if (!this._moved) {
+            this._moved = true;
+            this._box = create$1("div", "leaflet-zoom-box", this._container);
+            addClass(this._container, "leaflet-crosshair");
+            this._map.fire("boxzoomstart");
+          }
+          this._point = this._map.mouseEventToContainerPoint(e);
+          var bounds = new Bounds(this._point, this._startPoint), size = bounds.getSize();
+          setPosition(this._box, bounds.min);
+          this._box.style.width = size.x + "px";
+          this._box.style.height = size.y + "px";
+        },
+        _finish: function() {
+          if (this._moved) {
+            remove(this._box);
+            removeClass(this._container, "leaflet-crosshair");
+          }
+          enableTextSelection();
+          enableImageDrag();
+          off(document, {
+            contextmenu: stop,
+            mousemove: this._onMouseMove,
+            mouseup: this._onMouseUp,
+            keydown: this._onKeyDown
+          }, this);
+        },
+        _onMouseUp: function(e) {
+          if (e.which !== 1 && e.button !== 1) {
+            return;
+          }
+          this._finish();
+          if (!this._moved) {
+            return;
+          }
+          this._clearDeferredResetState();
+          this._resetStateTimeout = setTimeout(bind(this._resetState, this), 0);
+          var bounds = new LatLngBounds(
+            this._map.containerPointToLatLng(this._startPoint),
+            this._map.containerPointToLatLng(this._point)
+          );
+          this._map.fitBounds(bounds).fire("boxzoomend", { boxZoomBounds: bounds });
+        },
+        _onKeyDown: function(e) {
+          if (e.keyCode === 27) {
+            this._finish();
+            this._clearDeferredResetState();
+            this._resetState();
+          }
+        }
+      });
+      Map2.addInitHook("addHandler", "boxZoom", BoxZoom);
+      Map2.mergeOptions({
+        doubleClickZoom: true
+      });
+      var DoubleClickZoom = Handler.extend({
+        addHooks: function() {
+          this._map.on("dblclick", this._onDoubleClick, this);
+        },
+        removeHooks: function() {
+          this._map.off("dblclick", this._onDoubleClick, this);
+        },
+        _onDoubleClick: function(e) {
+          var map3 = this._map, oldZoom = map3.getZoom(), delta = map3.options.zoomDelta, zoom2 = e.originalEvent.shiftKey ? oldZoom - delta : oldZoom + delta;
+          if (map3.options.doubleClickZoom === "center") {
+            map3.setZoom(zoom2);
+          } else {
+            map3.setZoomAround(e.containerPoint, zoom2);
+          }
+        }
+      });
+      Map2.addInitHook("addHandler", "doubleClickZoom", DoubleClickZoom);
+      Map2.mergeOptions({
+        dragging: true,
+        inertia: true,
+        inertiaDeceleration: 3400,
+        inertiaMaxSpeed: Infinity,
+        easeLinearity: 0.2,
+        worldCopyJump: false,
+        maxBoundsViscosity: 0
+      });
+      var Drag = Handler.extend({
+        addHooks: function() {
+          if (!this._draggable) {
+            var map3 = this._map;
+            this._draggable = new Draggable(map3._mapPane, map3._container);
+            this._draggable.on({
+              dragstart: this._onDragStart,
+              drag: this._onDrag,
+              dragend: this._onDragEnd
+            }, this);
+            this._draggable.on("predrag", this._onPreDragLimit, this);
+            if (map3.options.worldCopyJump) {
+              this._draggable.on("predrag", this._onPreDragWrap, this);
+              map3.on("zoomend", this._onZoomEnd, this);
+              map3.whenReady(this._onZoomEnd, this);
+            }
+          }
+          addClass(this._map._container, "leaflet-grab leaflet-touch-drag");
+          this._draggable.enable();
+          this._positions = [];
+          this._times = [];
+        },
+        removeHooks: function() {
+          removeClass(this._map._container, "leaflet-grab");
+          removeClass(this._map._container, "leaflet-touch-drag");
+          this._draggable.disable();
+        },
+        moved: function() {
+          return this._draggable && this._draggable._moved;
+        },
+        moving: function() {
+          return this._draggable && this._draggable._moving;
+        },
+        _onDragStart: function() {
+          var map3 = this._map;
+          map3._stop();
+          if (this._map.options.maxBounds && this._map.options.maxBoundsViscosity) {
+            var bounds = toLatLngBounds(this._map.options.maxBounds);
+            this._offsetLimit = toBounds(
+              this._map.latLngToContainerPoint(bounds.getNorthWest()).multiplyBy(-1),
+              this._map.latLngToContainerPoint(bounds.getSouthEast()).multiplyBy(-1).add(this._map.getSize())
+            );
+            this._viscosity = Math.min(1, Math.max(0, this._map.options.maxBoundsViscosity));
+          } else {
+            this._offsetLimit = null;
+          }
+          map3.fire("movestart").fire("dragstart");
+          if (map3.options.inertia) {
+            this._positions = [];
+            this._times = [];
+          }
+        },
+        _onDrag: function(e) {
+          if (this._map.options.inertia) {
+            var time3 = this._lastTime = +new Date(), pos = this._lastPos = this._draggable._absPos || this._draggable._newPos;
+            this._positions.push(pos);
+            this._times.push(time3);
+            this._prunePositions(time3);
+          }
+          this._map.fire("move", e).fire("drag", e);
+        },
+        _prunePositions: function(time3) {
+          while (this._positions.length > 1 && time3 - this._times[0] > 50) {
+            this._positions.shift();
+            this._times.shift();
+          }
+        },
+        _onZoomEnd: function() {
+          var pxCenter = this._map.getSize().divideBy(2), pxWorldCenter = this._map.latLngToLayerPoint([0, 0]);
+          this._initialWorldOffset = pxWorldCenter.subtract(pxCenter).x;
+          this._worldWidth = this._map.getPixelWorldBounds().getSize().x;
+        },
+        _viscousLimit: function(value, threshold) {
+          return value - (value - threshold) * this._viscosity;
+        },
+        _onPreDragLimit: function() {
+          if (!this._viscosity || !this._offsetLimit) {
+            return;
+          }
+          var offset = this._draggable._newPos.subtract(this._draggable._startPos);
+          var limit = this._offsetLimit;
+          if (offset.x < limit.min.x) {
+            offset.x = this._viscousLimit(offset.x, limit.min.x);
+          }
+          if (offset.y < limit.min.y) {
+            offset.y = this._viscousLimit(offset.y, limit.min.y);
+          }
+          if (offset.x > limit.max.x) {
+            offset.x = this._viscousLimit(offset.x, limit.max.x);
+          }
+          if (offset.y > limit.max.y) {
+            offset.y = this._viscousLimit(offset.y, limit.max.y);
+          }
+          this._draggable._newPos = this._draggable._startPos.add(offset);
+        },
+        _onPreDragWrap: function() {
+          var worldWidth = this._worldWidth, halfWidth = Math.round(worldWidth / 2), dx = this._initialWorldOffset, x = this._draggable._newPos.x, newX1 = (x - halfWidth + dx) % worldWidth + halfWidth - dx, newX2 = (x + halfWidth + dx) % worldWidth - halfWidth - dx, newX = Math.abs(newX1 + dx) < Math.abs(newX2 + dx) ? newX1 : newX2;
+          this._draggable._absPos = this._draggable._newPos.clone();
+          this._draggable._newPos.x = newX;
+        },
+        _onDragEnd: function(e) {
+          var map3 = this._map, options = map3.options, noInertia = !options.inertia || e.noInertia || this._times.length < 2;
+          map3.fire("dragend", e);
+          if (noInertia) {
+            map3.fire("moveend");
+          } else {
+            this._prunePositions(+new Date());
+            var direction = this._lastPos.subtract(this._positions[0]), duration3 = (this._lastTime - this._times[0]) / 1e3, ease = options.easeLinearity, speedVector = direction.multiplyBy(ease / duration3), speed = speedVector.distanceTo([0, 0]), limitedSpeed = Math.min(options.inertiaMaxSpeed, speed), limitedSpeedVector = speedVector.multiplyBy(limitedSpeed / speed), decelerationDuration = limitedSpeed / (options.inertiaDeceleration * ease), offset = limitedSpeedVector.multiplyBy(-decelerationDuration / 2).round();
+            if (!offset.x && !offset.y) {
+              map3.fire("moveend");
+            } else {
+              offset = map3._limitOffset(offset, map3.options.maxBounds);
+              requestAnimFrame(function() {
+                map3.panBy(offset, {
+                  duration: decelerationDuration,
+                  easeLinearity: ease,
+                  noMoveStart: true,
+                  animate: true
+                });
+              });
+            }
+          }
+        }
+      });
+      Map2.addInitHook("addHandler", "dragging", Drag);
+      Map2.mergeOptions({
+        keyboard: true,
+        keyboardPanDelta: 80
+      });
+      var Keyboard = Handler.extend({
+        keyCodes: {
+          left: [37],
+          right: [39],
+          down: [40],
+          up: [38],
+          zoomIn: [187, 107, 61, 171],
+          zoomOut: [189, 109, 54, 173]
+        },
+        initialize: function(map3) {
+          this._map = map3;
+          this._setPanDelta(map3.options.keyboardPanDelta);
+          this._setZoomDelta(map3.options.zoomDelta);
+        },
+        addHooks: function() {
+          var container = this._map._container;
+          if (container.tabIndex <= 0) {
+            container.tabIndex = "0";
+          }
+          on(container, {
+            focus: this._onFocus,
+            blur: this._onBlur,
+            mousedown: this._onMouseDown
+          }, this);
+          this._map.on({
+            focus: this._addHooks,
+            blur: this._removeHooks
+          }, this);
+        },
+        removeHooks: function() {
+          this._removeHooks();
+          off(this._map._container, {
+            focus: this._onFocus,
+            blur: this._onBlur,
+            mousedown: this._onMouseDown
+          }, this);
+          this._map.off({
+            focus: this._addHooks,
+            blur: this._removeHooks
+          }, this);
+        },
+        _onMouseDown: function() {
+          if (this._focused) {
+            return;
+          }
+          var body = document.body, docEl = document.documentElement, top = body.scrollTop || docEl.scrollTop, left = body.scrollLeft || docEl.scrollLeft;
+          this._map._container.focus();
+          window.scrollTo(left, top);
+        },
+        _onFocus: function() {
+          this._focused = true;
+          this._map.fire("focus");
+        },
+        _onBlur: function() {
+          this._focused = false;
+          this._map.fire("blur");
+        },
+        _setPanDelta: function(panDelta) {
+          var keys = this._panKeys = {}, codes = this.keyCodes, i, len;
+          for (i = 0, len = codes.left.length; i < len; i++) {
+            keys[codes.left[i]] = [-1 * panDelta, 0];
+          }
+          for (i = 0, len = codes.right.length; i < len; i++) {
+            keys[codes.right[i]] = [panDelta, 0];
+          }
+          for (i = 0, len = codes.down.length; i < len; i++) {
+            keys[codes.down[i]] = [0, panDelta];
+          }
+          for (i = 0, len = codes.up.length; i < len; i++) {
+            keys[codes.up[i]] = [0, -1 * panDelta];
+          }
+        },
+        _setZoomDelta: function(zoomDelta) {
+          var keys = this._zoomKeys = {}, codes = this.keyCodes, i, len;
+          for (i = 0, len = codes.zoomIn.length; i < len; i++) {
+            keys[codes.zoomIn[i]] = zoomDelta;
+          }
+          for (i = 0, len = codes.zoomOut.length; i < len; i++) {
+            keys[codes.zoomOut[i]] = -zoomDelta;
+          }
+        },
+        _addHooks: function() {
+          on(document, "keydown", this._onKeyDown, this);
+        },
+        _removeHooks: function() {
+          off(document, "keydown", this._onKeyDown, this);
+        },
+        _onKeyDown: function(e) {
+          if (e.altKey || e.ctrlKey || e.metaKey) {
+            return;
+          }
+          var key = e.keyCode, map3 = this._map, offset;
+          if (key in this._panKeys) {
+            if (!map3._panAnim || !map3._panAnim._inProgress) {
+              offset = this._panKeys[key];
+              if (e.shiftKey) {
+                offset = toPoint(offset).multiplyBy(3);
+              }
+              if (map3.options.maxBounds) {
+                offset = map3._limitOffset(toPoint(offset), map3.options.maxBounds);
+              }
+              if (map3.options.worldCopyJump) {
+                var newLatLng = map3.wrapLatLng(map3.unproject(map3.project(map3.getCenter()).add(offset)));
+                map3.panTo(newLatLng);
+              } else {
+                map3.panBy(offset);
+              }
+            }
+          } else if (key in this._zoomKeys) {
+            map3.setZoom(map3.getZoom() + (e.shiftKey ? 3 : 1) * this._zoomKeys[key]);
+          } else if (key === 27 && map3._popup && map3._popup.options.closeOnEscapeKey) {
+            map3.closePopup();
+          } else {
+            return;
+          }
+          stop(e);
+        }
+      });
+      Map2.addInitHook("addHandler", "keyboard", Keyboard);
+      Map2.mergeOptions({
+        scrollWheelZoom: true,
+        wheelDebounceTime: 40,
+        wheelPxPerZoomLevel: 60
+      });
+      var ScrollWheelZoom = Handler.extend({
+        addHooks: function() {
+          on(this._map._container, "wheel", this._onWheelScroll, this);
+          this._delta = 0;
+        },
+        removeHooks: function() {
+          off(this._map._container, "wheel", this._onWheelScroll, this);
+        },
+        _onWheelScroll: function(e) {
+          var delta = getWheelDelta(e);
+          var debounce = this._map.options.wheelDebounceTime;
+          this._delta += delta;
+          this._lastMousePos = this._map.mouseEventToContainerPoint(e);
+          if (!this._startTime) {
+            this._startTime = +new Date();
+          }
+          var left = Math.max(debounce - (+new Date() - this._startTime), 0);
+          clearTimeout(this._timer);
+          this._timer = setTimeout(bind(this._performZoom, this), left);
+          stop(e);
+        },
+        _performZoom: function() {
+          var map3 = this._map, zoom2 = map3.getZoom(), snap = this._map.options.zoomSnap || 0;
+          map3._stop();
+          var d2 = this._delta / (this._map.options.wheelPxPerZoomLevel * 4), d3 = 4 * Math.log(2 / (1 + Math.exp(-Math.abs(d2)))) / Math.LN2, d4 = snap ? Math.ceil(d3 / snap) * snap : d3, delta = map3._limitZoom(zoom2 + (this._delta > 0 ? d4 : -d4)) - zoom2;
+          this._delta = 0;
+          this._startTime = null;
+          if (!delta) {
+            return;
+          }
+          if (map3.options.scrollWheelZoom === "center") {
+            map3.setZoom(zoom2 + delta);
+          } else {
+            map3.setZoomAround(this._lastMousePos, zoom2 + delta);
+          }
+        }
+      });
+      Map2.addInitHook("addHandler", "scrollWheelZoom", ScrollWheelZoom);
+      var tapHoldDelay = 600;
+      Map2.mergeOptions({
+        tapHold: Browser.touchNative && Browser.safari && Browser.mobile,
+        tapTolerance: 15
+      });
+      var TapHold = Handler.extend({
+        addHooks: function() {
+          on(this._map._container, "touchstart", this._onDown, this);
+        },
+        removeHooks: function() {
+          off(this._map._container, "touchstart", this._onDown, this);
+        },
+        _onDown: function(e) {
+          clearTimeout(this._holdTimeout);
+          if (e.touches.length !== 1) {
+            return;
+          }
+          var first = e.touches[0];
+          this._startPos = this._newPos = new Point(first.clientX, first.clientY);
+          this._holdTimeout = setTimeout(bind(function() {
+            this._cancel();
+            if (!this._isTapValid()) {
+              return;
+            }
+            on(document, "touchend", preventDefault);
+            on(document, "touchend touchcancel", this._cancelClickPrevent);
+            this._simulateEvent("contextmenu", first);
+          }, this), tapHoldDelay);
+          on(document, "touchend touchcancel contextmenu", this._cancel, this);
+          on(document, "touchmove", this._onMove, this);
+        },
+        _cancelClickPrevent: function cancelClickPrevent() {
+          off(document, "touchend", preventDefault);
+          off(document, "touchend touchcancel", cancelClickPrevent);
+        },
+        _cancel: function() {
+          clearTimeout(this._holdTimeout);
+          off(document, "touchend touchcancel contextmenu", this._cancel, this);
+          off(document, "touchmove", this._onMove, this);
+        },
+        _onMove: function(e) {
+          var first = e.touches[0];
+          this._newPos = new Point(first.clientX, first.clientY);
+        },
+        _isTapValid: function() {
+          return this._newPos.distanceTo(this._startPos) <= this._map.options.tapTolerance;
+        },
+        _simulateEvent: function(type, e) {
+          var simulatedEvent = new MouseEvent(type, {
+            bubbles: true,
+            cancelable: true,
+            view: window,
+            screenX: e.screenX,
+            screenY: e.screenY,
+            clientX: e.clientX,
+            clientY: e.clientY
+          });
+          simulatedEvent._simulated = true;
+          e.target.dispatchEvent(simulatedEvent);
+        }
+      });
+      Map2.addInitHook("addHandler", "tapHold", TapHold);
+      Map2.mergeOptions({
+        touchZoom: Browser.touch,
+        bounceAtZoomLimits: true
+      });
+      var TouchZoom = Handler.extend({
+        addHooks: function() {
+          addClass(this._map._container, "leaflet-touch-zoom");
+          on(this._map._container, "touchstart", this._onTouchStart, this);
+        },
+        removeHooks: function() {
+          removeClass(this._map._container, "leaflet-touch-zoom");
+          off(this._map._container, "touchstart", this._onTouchStart, this);
+        },
+        _onTouchStart: function(e) {
+          var map3 = this._map;
+          if (!e.touches || e.touches.length !== 2 || map3._animatingZoom || this._zooming) {
+            return;
+          }
+          var p1 = map3.mouseEventToContainerPoint(e.touches[0]), p2 = map3.mouseEventToContainerPoint(e.touches[1]);
+          this._centerPoint = map3.getSize()._divideBy(2);
+          this._startLatLng = map3.containerPointToLatLng(this._centerPoint);
+          if (map3.options.touchZoom !== "center") {
+            this._pinchStartLatLng = map3.containerPointToLatLng(p1.add(p2)._divideBy(2));
+          }
+          this._startDist = p1.distanceTo(p2);
+          this._startZoom = map3.getZoom();
+          this._moved = false;
+          this._zooming = true;
+          map3._stop();
+          on(document, "touchmove", this._onTouchMove, this);
+          on(document, "touchend touchcancel", this._onTouchEnd, this);
+          preventDefault(e);
+        },
+        _onTouchMove: function(e) {
+          if (!e.touches || e.touches.length !== 2 || !this._zooming) {
+            return;
+          }
+          var map3 = this._map, p1 = map3.mouseEventToContainerPoint(e.touches[0]), p2 = map3.mouseEventToContainerPoint(e.touches[1]), scale2 = p1.distanceTo(p2) / this._startDist;
+          this._zoom = map3.getScaleZoom(scale2, this._startZoom);
+          if (!map3.options.bounceAtZoomLimits && (this._zoom < map3.getMinZoom() && scale2 < 1 || this._zoom > map3.getMaxZoom() && scale2 > 1)) {
+            this._zoom = map3._limitZoom(this._zoom);
+          }
+          if (map3.options.touchZoom === "center") {
+            this._center = this._startLatLng;
+            if (scale2 === 1) {
+              return;
+            }
+          } else {
+            var delta = p1._add(p2)._divideBy(2)._subtract(this._centerPoint);
+            if (scale2 === 1 && delta.x === 0 && delta.y === 0) {
+              return;
+            }
+            this._center = map3.unproject(map3.project(this._pinchStartLatLng, this._zoom).subtract(delta), this._zoom);
+          }
+          if (!this._moved) {
+            map3._moveStart(true, false);
+            this._moved = true;
+          }
+          cancelAnimFrame(this._animRequest);
+          var moveFn = bind(map3._move, map3, this._center, this._zoom, { pinch: true, round: false }, void 0);
+          this._animRequest = requestAnimFrame(moveFn, this, true);
+          preventDefault(e);
+        },
+        _onTouchEnd: function() {
+          if (!this._moved || !this._zooming) {
+            this._zooming = false;
+            return;
+          }
+          this._zooming = false;
+          cancelAnimFrame(this._animRequest);
+          off(document, "touchmove", this._onTouchMove, this);
+          off(document, "touchend touchcancel", this._onTouchEnd, this);
+          if (this._map.options.zoomAnimation) {
+            this._map._animateZoom(this._center, this._map._limitZoom(this._zoom), true, this._map.options.zoomSnap);
+          } else {
+            this._map._resetView(this._center, this._map._limitZoom(this._zoom));
+          }
+        }
+      });
+      Map2.addInitHook("addHandler", "touchZoom", TouchZoom);
+      Map2.BoxZoom = BoxZoom;
+      Map2.DoubleClickZoom = DoubleClickZoom;
+      Map2.Drag = Drag;
+      Map2.Keyboard = Keyboard;
+      Map2.ScrollWheelZoom = ScrollWheelZoom;
+      Map2.TapHold = TapHold;
+      Map2.TouchZoom = TouchZoom;
+      exports2.Bounds = Bounds;
+      exports2.Browser = Browser;
+      exports2.CRS = CRS;
+      exports2.Canvas = Canvas;
+      exports2.Circle = Circle;
+      exports2.CircleMarker = CircleMarker;
+      exports2.Class = Class2;
+      exports2.Control = Control;
+      exports2.DivIcon = DivIcon;
+      exports2.DivOverlay = DivOverlay;
+      exports2.DomEvent = DomEvent;
+      exports2.DomUtil = DomUtil;
+      exports2.Draggable = Draggable;
+      exports2.Evented = Evented;
+      exports2.FeatureGroup = FeatureGroup;
+      exports2.GeoJSON = GeoJSON;
+      exports2.GridLayer = GridLayer;
+      exports2.Handler = Handler;
+      exports2.Icon = Icon;
+      exports2.ImageOverlay = ImageOverlay;
+      exports2.LatLng = LatLng;
+      exports2.LatLngBounds = LatLngBounds;
+      exports2.Layer = Layer;
+      exports2.LayerGroup = LayerGroup;
+      exports2.LineUtil = LineUtil;
+      exports2.Map = Map2;
+      exports2.Marker = Marker;
+      exports2.Mixin = Mixin;
+      exports2.Path = Path;
+      exports2.Point = Point;
+      exports2.PolyUtil = PolyUtil;
+      exports2.Polygon = Polygon;
+      exports2.Polyline = Polyline;
+      exports2.Popup = Popup;
+      exports2.PosAnimation = PosAnimation;
+      exports2.Projection = index;
+      exports2.Rectangle = Rectangle;
+      exports2.Renderer = Renderer;
+      exports2.SVG = SVG;
+      exports2.SVGOverlay = SVGOverlay;
+      exports2.TileLayer = TileLayer;
+      exports2.Tooltip = Tooltip;
+      exports2.Transformation = Transformation;
+      exports2.Util = Util;
+      exports2.VideoOverlay = VideoOverlay;
+      exports2.bind = bind;
+      exports2.bounds = toBounds;
+      exports2.canvas = canvas;
+      exports2.circle = circle;
+      exports2.circleMarker = circleMarker2;
+      exports2.control = control;
+      exports2.divIcon = divIcon2;
+      exports2.extend = extend2;
+      exports2.featureGroup = featureGroup;
+      exports2.geoJSON = geoJSON;
+      exports2.geoJson = geoJson;
+      exports2.gridLayer = gridLayer;
+      exports2.icon = icon;
+      exports2.imageOverlay = imageOverlay;
+      exports2.latLng = toLatLng;
+      exports2.latLngBounds = toLatLngBounds;
+      exports2.layerGroup = layerGroup;
+      exports2.map = createMap;
+      exports2.marker = marker2;
+      exports2.point = toPoint;
+      exports2.polygon = polygon;
+      exports2.polyline = polyline;
+      exports2.popup = popup;
+      exports2.rectangle = rectangle;
+      exports2.setOptions = setOptions;
+      exports2.stamp = stamp;
+      exports2.svg = svg;
+      exports2.svgOverlay = svgOverlay;
+      exports2.tileLayer = tileLayer2;
+      exports2.tooltip = tooltip;
+      exports2.transformation = toTransformation;
+      exports2.version = version2;
+      exports2.videoOverlay = videoOverlay;
+      var oldL = window.L;
+      exports2.noConflict = function() {
+        window.L = oldL;
+        return this;
+      };
+      window.L = exports2;
+    });
+  }
+});
+
 // src/main.ts
 var main_exports = {};
 __export(main_exports, {
@@ -2381,7 +10574,15098 @@ __export(main_exports, {
 });
 module.exports = __toCommonJS(main_exports);
 var import_obsidian = require("obsidian");
+var piexif2 = __toESM(require_piexif());
+
+// node_modules/zod/v4/classic/external.js
+var external_exports = {};
+__export(external_exports, {
+  $brand: () => $brand,
+  $input: () => $input,
+  $output: () => $output,
+  NEVER: () => NEVER,
+  TimePrecision: () => TimePrecision,
+  ZodAny: () => ZodAny,
+  ZodArray: () => ZodArray,
+  ZodBase64: () => ZodBase64,
+  ZodBase64URL: () => ZodBase64URL,
+  ZodBigInt: () => ZodBigInt,
+  ZodBigIntFormat: () => ZodBigIntFormat,
+  ZodBoolean: () => ZodBoolean,
+  ZodCIDRv4: () => ZodCIDRv4,
+  ZodCIDRv6: () => ZodCIDRv6,
+  ZodCUID: () => ZodCUID,
+  ZodCUID2: () => ZodCUID2,
+  ZodCatch: () => ZodCatch,
+  ZodCodec: () => ZodCodec,
+  ZodCustom: () => ZodCustom,
+  ZodCustomStringFormat: () => ZodCustomStringFormat,
+  ZodDate: () => ZodDate,
+  ZodDefault: () => ZodDefault,
+  ZodDiscriminatedUnion: () => ZodDiscriminatedUnion,
+  ZodE164: () => ZodE164,
+  ZodEmail: () => ZodEmail,
+  ZodEmoji: () => ZodEmoji,
+  ZodEnum: () => ZodEnum,
+  ZodError: () => ZodError,
+  ZodExactOptional: () => ZodExactOptional,
+  ZodFile: () => ZodFile,
+  ZodFirstPartyTypeKind: () => ZodFirstPartyTypeKind,
+  ZodFunction: () => ZodFunction,
+  ZodGUID: () => ZodGUID,
+  ZodIPv4: () => ZodIPv4,
+  ZodIPv6: () => ZodIPv6,
+  ZodISODate: () => ZodISODate,
+  ZodISODateTime: () => ZodISODateTime,
+  ZodISODuration: () => ZodISODuration,
+  ZodISOTime: () => ZodISOTime,
+  ZodIntersection: () => ZodIntersection,
+  ZodIssueCode: () => ZodIssueCode,
+  ZodJWT: () => ZodJWT,
+  ZodKSUID: () => ZodKSUID,
+  ZodLazy: () => ZodLazy,
+  ZodLiteral: () => ZodLiteral,
+  ZodMAC: () => ZodMAC,
+  ZodMap: () => ZodMap,
+  ZodNaN: () => ZodNaN,
+  ZodNanoID: () => ZodNanoID,
+  ZodNever: () => ZodNever,
+  ZodNonOptional: () => ZodNonOptional,
+  ZodNull: () => ZodNull,
+  ZodNullable: () => ZodNullable,
+  ZodNumber: () => ZodNumber,
+  ZodNumberFormat: () => ZodNumberFormat,
+  ZodObject: () => ZodObject,
+  ZodOptional: () => ZodOptional,
+  ZodPipe: () => ZodPipe,
+  ZodPrefault: () => ZodPrefault,
+  ZodPreprocess: () => ZodPreprocess,
+  ZodPromise: () => ZodPromise,
+  ZodReadonly: () => ZodReadonly,
+  ZodRealError: () => ZodRealError,
+  ZodRecord: () => ZodRecord,
+  ZodSet: () => ZodSet,
+  ZodString: () => ZodString,
+  ZodStringFormat: () => ZodStringFormat,
+  ZodSuccess: () => ZodSuccess,
+  ZodSymbol: () => ZodSymbol,
+  ZodTemplateLiteral: () => ZodTemplateLiteral,
+  ZodTransform: () => ZodTransform,
+  ZodTuple: () => ZodTuple,
+  ZodType: () => ZodType,
+  ZodULID: () => ZodULID,
+  ZodURL: () => ZodURL,
+  ZodUUID: () => ZodUUID,
+  ZodUndefined: () => ZodUndefined,
+  ZodUnion: () => ZodUnion,
+  ZodUnknown: () => ZodUnknown,
+  ZodVoid: () => ZodVoid,
+  ZodXID: () => ZodXID,
+  ZodXor: () => ZodXor,
+  _ZodString: () => _ZodString,
+  _default: () => _default2,
+  _function: () => _function,
+  any: () => any,
+  array: () => array,
+  base64: () => base642,
+  base64url: () => base64url2,
+  bigint: () => bigint2,
+  boolean: () => boolean2,
+  catch: () => _catch2,
+  check: () => check,
+  cidrv4: () => cidrv42,
+  cidrv6: () => cidrv62,
+  clone: () => clone,
+  codec: () => codec,
+  coerce: () => coerce_exports,
+  config: () => config,
+  core: () => core_exports2,
+  cuid: () => cuid3,
+  cuid2: () => cuid22,
+  custom: () => custom,
+  date: () => date3,
+  decode: () => decode2,
+  decodeAsync: () => decodeAsync2,
+  describe: () => describe2,
+  discriminatedUnion: () => discriminatedUnion,
+  e164: () => e1642,
+  email: () => email2,
+  emoji: () => emoji2,
+  encode: () => encode2,
+  encodeAsync: () => encodeAsync2,
+  endsWith: () => _endsWith,
+  enum: () => _enum2,
+  exactOptional: () => exactOptional,
+  file: () => file,
+  flattenError: () => flattenError,
+  float32: () => float32,
+  float64: () => float64,
+  formatError: () => formatError,
+  fromJSONSchema: () => fromJSONSchema,
+  function: () => _function,
+  getErrorMap: () => getErrorMap,
+  globalRegistry: () => globalRegistry,
+  gt: () => _gt,
+  gte: () => _gte,
+  guid: () => guid2,
+  hash: () => hash,
+  hex: () => hex2,
+  hostname: () => hostname2,
+  httpUrl: () => httpUrl,
+  includes: () => _includes,
+  instanceof: () => _instanceof,
+  int: () => int,
+  int32: () => int32,
+  int64: () => int64,
+  intersection: () => intersection,
+  invertCodec: () => invertCodec,
+  ipv4: () => ipv42,
+  ipv6: () => ipv62,
+  iso: () => iso_exports,
+  json: () => json,
+  jwt: () => jwt,
+  keyof: () => keyof,
+  ksuid: () => ksuid2,
+  lazy: () => lazy,
+  length: () => _length,
+  literal: () => literal,
+  locales: () => locales_exports,
+  looseObject: () => looseObject,
+  looseRecord: () => looseRecord,
+  lowercase: () => _lowercase,
+  lt: () => _lt,
+  lte: () => _lte,
+  mac: () => mac2,
+  map: () => map,
+  maxLength: () => _maxLength,
+  maxSize: () => _maxSize,
+  meta: () => meta2,
+  mime: () => _mime,
+  minLength: () => _minLength,
+  minSize: () => _minSize,
+  multipleOf: () => _multipleOf,
+  nan: () => nan,
+  nanoid: () => nanoid2,
+  nativeEnum: () => nativeEnum,
+  negative: () => _negative,
+  never: () => never,
+  nonnegative: () => _nonnegative,
+  nonoptional: () => nonoptional,
+  nonpositive: () => _nonpositive,
+  normalize: () => _normalize,
+  null: () => _null3,
+  nullable: () => nullable,
+  nullish: () => nullish2,
+  number: () => number2,
+  object: () => object,
+  optional: () => optional,
+  overwrite: () => _overwrite,
+  parse: () => parse2,
+  parseAsync: () => parseAsync2,
+  partialRecord: () => partialRecord,
+  pipe: () => pipe,
+  positive: () => _positive,
+  prefault: () => prefault,
+  preprocess: () => preprocess,
+  prettifyError: () => prettifyError,
+  promise: () => promise,
+  property: () => _property,
+  readonly: () => readonly,
+  record: () => record,
+  refine: () => refine,
+  regex: () => _regex,
+  regexes: () => regexes_exports,
+  registry: () => registry,
+  safeDecode: () => safeDecode2,
+  safeDecodeAsync: () => safeDecodeAsync2,
+  safeEncode: () => safeEncode2,
+  safeEncodeAsync: () => safeEncodeAsync2,
+  safeParse: () => safeParse2,
+  safeParseAsync: () => safeParseAsync2,
+  set: () => set,
+  setErrorMap: () => setErrorMap,
+  size: () => _size,
+  slugify: () => _slugify,
+  startsWith: () => _startsWith,
+  strictObject: () => strictObject,
+  string: () => string2,
+  stringFormat: () => stringFormat,
+  stringbool: () => stringbool,
+  success: () => success,
+  superRefine: () => superRefine,
+  symbol: () => symbol,
+  templateLiteral: () => templateLiteral,
+  toJSONSchema: () => toJSONSchema,
+  toLowerCase: () => _toLowerCase,
+  toUpperCase: () => _toUpperCase,
+  transform: () => transform,
+  treeifyError: () => treeifyError,
+  trim: () => _trim,
+  tuple: () => tuple,
+  uint32: () => uint32,
+  uint64: () => uint64,
+  ulid: () => ulid2,
+  undefined: () => _undefined3,
+  union: () => union,
+  unknown: () => unknown,
+  uppercase: () => _uppercase,
+  url: () => url,
+  util: () => util_exports,
+  uuid: () => uuid2,
+  uuidv4: () => uuidv4,
+  uuidv6: () => uuidv6,
+  uuidv7: () => uuidv7,
+  void: () => _void2,
+  xid: () => xid2,
+  xor: () => xor
+});
+
+// node_modules/zod/v4/core/index.js
+var core_exports2 = {};
+__export(core_exports2, {
+  $ZodAny: () => $ZodAny,
+  $ZodArray: () => $ZodArray,
+  $ZodAsyncError: () => $ZodAsyncError,
+  $ZodBase64: () => $ZodBase64,
+  $ZodBase64URL: () => $ZodBase64URL,
+  $ZodBigInt: () => $ZodBigInt,
+  $ZodBigIntFormat: () => $ZodBigIntFormat,
+  $ZodBoolean: () => $ZodBoolean,
+  $ZodCIDRv4: () => $ZodCIDRv4,
+  $ZodCIDRv6: () => $ZodCIDRv6,
+  $ZodCUID: () => $ZodCUID,
+  $ZodCUID2: () => $ZodCUID2,
+  $ZodCatch: () => $ZodCatch,
+  $ZodCheck: () => $ZodCheck,
+  $ZodCheckBigIntFormat: () => $ZodCheckBigIntFormat,
+  $ZodCheckEndsWith: () => $ZodCheckEndsWith,
+  $ZodCheckGreaterThan: () => $ZodCheckGreaterThan,
+  $ZodCheckIncludes: () => $ZodCheckIncludes,
+  $ZodCheckLengthEquals: () => $ZodCheckLengthEquals,
+  $ZodCheckLessThan: () => $ZodCheckLessThan,
+  $ZodCheckLowerCase: () => $ZodCheckLowerCase,
+  $ZodCheckMaxLength: () => $ZodCheckMaxLength,
+  $ZodCheckMaxSize: () => $ZodCheckMaxSize,
+  $ZodCheckMimeType: () => $ZodCheckMimeType,
+  $ZodCheckMinLength: () => $ZodCheckMinLength,
+  $ZodCheckMinSize: () => $ZodCheckMinSize,
+  $ZodCheckMultipleOf: () => $ZodCheckMultipleOf,
+  $ZodCheckNumberFormat: () => $ZodCheckNumberFormat,
+  $ZodCheckOverwrite: () => $ZodCheckOverwrite,
+  $ZodCheckProperty: () => $ZodCheckProperty,
+  $ZodCheckRegex: () => $ZodCheckRegex,
+  $ZodCheckSizeEquals: () => $ZodCheckSizeEquals,
+  $ZodCheckStartsWith: () => $ZodCheckStartsWith,
+  $ZodCheckStringFormat: () => $ZodCheckStringFormat,
+  $ZodCheckUpperCase: () => $ZodCheckUpperCase,
+  $ZodCodec: () => $ZodCodec,
+  $ZodCustom: () => $ZodCustom,
+  $ZodCustomStringFormat: () => $ZodCustomStringFormat,
+  $ZodDate: () => $ZodDate,
+  $ZodDefault: () => $ZodDefault,
+  $ZodDiscriminatedUnion: () => $ZodDiscriminatedUnion,
+  $ZodE164: () => $ZodE164,
+  $ZodEmail: () => $ZodEmail,
+  $ZodEmoji: () => $ZodEmoji,
+  $ZodEncodeError: () => $ZodEncodeError,
+  $ZodEnum: () => $ZodEnum,
+  $ZodError: () => $ZodError,
+  $ZodExactOptional: () => $ZodExactOptional,
+  $ZodFile: () => $ZodFile,
+  $ZodFunction: () => $ZodFunction,
+  $ZodGUID: () => $ZodGUID,
+  $ZodIPv4: () => $ZodIPv4,
+  $ZodIPv6: () => $ZodIPv6,
+  $ZodISODate: () => $ZodISODate,
+  $ZodISODateTime: () => $ZodISODateTime,
+  $ZodISODuration: () => $ZodISODuration,
+  $ZodISOTime: () => $ZodISOTime,
+  $ZodIntersection: () => $ZodIntersection,
+  $ZodJWT: () => $ZodJWT,
+  $ZodKSUID: () => $ZodKSUID,
+  $ZodLazy: () => $ZodLazy,
+  $ZodLiteral: () => $ZodLiteral,
+  $ZodMAC: () => $ZodMAC,
+  $ZodMap: () => $ZodMap,
+  $ZodNaN: () => $ZodNaN,
+  $ZodNanoID: () => $ZodNanoID,
+  $ZodNever: () => $ZodNever,
+  $ZodNonOptional: () => $ZodNonOptional,
+  $ZodNull: () => $ZodNull,
+  $ZodNullable: () => $ZodNullable,
+  $ZodNumber: () => $ZodNumber,
+  $ZodNumberFormat: () => $ZodNumberFormat,
+  $ZodObject: () => $ZodObject,
+  $ZodObjectJIT: () => $ZodObjectJIT,
+  $ZodOptional: () => $ZodOptional,
+  $ZodPipe: () => $ZodPipe,
+  $ZodPrefault: () => $ZodPrefault,
+  $ZodPreprocess: () => $ZodPreprocess,
+  $ZodPromise: () => $ZodPromise,
+  $ZodReadonly: () => $ZodReadonly,
+  $ZodRealError: () => $ZodRealError,
+  $ZodRecord: () => $ZodRecord,
+  $ZodRegistry: () => $ZodRegistry,
+  $ZodSet: () => $ZodSet,
+  $ZodString: () => $ZodString,
+  $ZodStringFormat: () => $ZodStringFormat,
+  $ZodSuccess: () => $ZodSuccess,
+  $ZodSymbol: () => $ZodSymbol,
+  $ZodTemplateLiteral: () => $ZodTemplateLiteral,
+  $ZodTransform: () => $ZodTransform,
+  $ZodTuple: () => $ZodTuple,
+  $ZodType: () => $ZodType,
+  $ZodULID: () => $ZodULID,
+  $ZodURL: () => $ZodURL,
+  $ZodUUID: () => $ZodUUID,
+  $ZodUndefined: () => $ZodUndefined,
+  $ZodUnion: () => $ZodUnion,
+  $ZodUnknown: () => $ZodUnknown,
+  $ZodVoid: () => $ZodVoid,
+  $ZodXID: () => $ZodXID,
+  $ZodXor: () => $ZodXor,
+  $brand: () => $brand,
+  $constructor: () => $constructor,
+  $input: () => $input,
+  $output: () => $output,
+  Doc: () => Doc,
+  JSONSchema: () => json_schema_exports,
+  JSONSchemaGenerator: () => JSONSchemaGenerator,
+  NEVER: () => NEVER,
+  TimePrecision: () => TimePrecision,
+  _any: () => _any,
+  _array: () => _array,
+  _base64: () => _base64,
+  _base64url: () => _base64url,
+  _bigint: () => _bigint,
+  _boolean: () => _boolean,
+  _catch: () => _catch,
+  _check: () => _check,
+  _cidrv4: () => _cidrv4,
+  _cidrv6: () => _cidrv6,
+  _coercedBigint: () => _coercedBigint,
+  _coercedBoolean: () => _coercedBoolean,
+  _coercedDate: () => _coercedDate,
+  _coercedNumber: () => _coercedNumber,
+  _coercedString: () => _coercedString,
+  _cuid: () => _cuid,
+  _cuid2: () => _cuid2,
+  _custom: () => _custom,
+  _date: () => _date,
+  _decode: () => _decode,
+  _decodeAsync: () => _decodeAsync,
+  _default: () => _default,
+  _discriminatedUnion: () => _discriminatedUnion,
+  _e164: () => _e164,
+  _email: () => _email,
+  _emoji: () => _emoji2,
+  _encode: () => _encode,
+  _encodeAsync: () => _encodeAsync,
+  _endsWith: () => _endsWith,
+  _enum: () => _enum,
+  _file: () => _file,
+  _float32: () => _float32,
+  _float64: () => _float64,
+  _gt: () => _gt,
+  _gte: () => _gte,
+  _guid: () => _guid,
+  _includes: () => _includes,
+  _int: () => _int,
+  _int32: () => _int32,
+  _int64: () => _int64,
+  _intersection: () => _intersection,
+  _ipv4: () => _ipv4,
+  _ipv6: () => _ipv6,
+  _isoDate: () => _isoDate,
+  _isoDateTime: () => _isoDateTime,
+  _isoDuration: () => _isoDuration,
+  _isoTime: () => _isoTime,
+  _jwt: () => _jwt,
+  _ksuid: () => _ksuid,
+  _lazy: () => _lazy,
+  _length: () => _length,
+  _literal: () => _literal,
+  _lowercase: () => _lowercase,
+  _lt: () => _lt,
+  _lte: () => _lte,
+  _mac: () => _mac,
+  _map: () => _map,
+  _max: () => _lte,
+  _maxLength: () => _maxLength,
+  _maxSize: () => _maxSize,
+  _mime: () => _mime,
+  _min: () => _gte,
+  _minLength: () => _minLength,
+  _minSize: () => _minSize,
+  _multipleOf: () => _multipleOf,
+  _nan: () => _nan,
+  _nanoid: () => _nanoid,
+  _nativeEnum: () => _nativeEnum,
+  _negative: () => _negative,
+  _never: () => _never,
+  _nonnegative: () => _nonnegative,
+  _nonoptional: () => _nonoptional,
+  _nonpositive: () => _nonpositive,
+  _normalize: () => _normalize,
+  _null: () => _null2,
+  _nullable: () => _nullable,
+  _number: () => _number,
+  _optional: () => _optional,
+  _overwrite: () => _overwrite,
+  _parse: () => _parse,
+  _parseAsync: () => _parseAsync,
+  _pipe: () => _pipe,
+  _positive: () => _positive,
+  _promise: () => _promise,
+  _property: () => _property,
+  _readonly: () => _readonly,
+  _record: () => _record,
+  _refine: () => _refine,
+  _regex: () => _regex,
+  _safeDecode: () => _safeDecode,
+  _safeDecodeAsync: () => _safeDecodeAsync,
+  _safeEncode: () => _safeEncode,
+  _safeEncodeAsync: () => _safeEncodeAsync,
+  _safeParse: () => _safeParse,
+  _safeParseAsync: () => _safeParseAsync,
+  _set: () => _set,
+  _size: () => _size,
+  _slugify: () => _slugify,
+  _startsWith: () => _startsWith,
+  _string: () => _string,
+  _stringFormat: () => _stringFormat,
+  _stringbool: () => _stringbool,
+  _success: () => _success,
+  _superRefine: () => _superRefine,
+  _symbol: () => _symbol,
+  _templateLiteral: () => _templateLiteral,
+  _toLowerCase: () => _toLowerCase,
+  _toUpperCase: () => _toUpperCase,
+  _transform: () => _transform,
+  _trim: () => _trim,
+  _tuple: () => _tuple,
+  _uint32: () => _uint32,
+  _uint64: () => _uint64,
+  _ulid: () => _ulid,
+  _undefined: () => _undefined2,
+  _union: () => _union,
+  _unknown: () => _unknown,
+  _uppercase: () => _uppercase,
+  _url: () => _url,
+  _uuid: () => _uuid,
+  _uuidv4: () => _uuidv4,
+  _uuidv6: () => _uuidv6,
+  _uuidv7: () => _uuidv7,
+  _void: () => _void,
+  _xid: () => _xid,
+  _xor: () => _xor,
+  clone: () => clone,
+  config: () => config,
+  createStandardJSONSchemaMethod: () => createStandardJSONSchemaMethod,
+  createToJSONSchemaMethod: () => createToJSONSchemaMethod,
+  decode: () => decode,
+  decodeAsync: () => decodeAsync,
+  describe: () => describe,
+  encode: () => encode,
+  encodeAsync: () => encodeAsync,
+  extractDefs: () => extractDefs,
+  finalize: () => finalize,
+  flattenError: () => flattenError,
+  formatError: () => formatError,
+  globalConfig: () => globalConfig,
+  globalRegistry: () => globalRegistry,
+  initializeContext: () => initializeContext,
+  isValidBase64: () => isValidBase64,
+  isValidBase64URL: () => isValidBase64URL,
+  isValidJWT: () => isValidJWT,
+  locales: () => locales_exports,
+  meta: () => meta,
+  parse: () => parse,
+  parseAsync: () => parseAsync,
+  prettifyError: () => prettifyError,
+  process: () => process,
+  regexes: () => regexes_exports,
+  registry: () => registry,
+  safeDecode: () => safeDecode,
+  safeDecodeAsync: () => safeDecodeAsync,
+  safeEncode: () => safeEncode,
+  safeEncodeAsync: () => safeEncodeAsync,
+  safeParse: () => safeParse,
+  safeParseAsync: () => safeParseAsync,
+  toDotPath: () => toDotPath,
+  toJSONSchema: () => toJSONSchema,
+  treeifyError: () => treeifyError,
+  util: () => util_exports,
+  version: () => version
+});
+
+// node_modules/zod/v4/core/core.js
+var _a;
+var NEVER = /* @__PURE__ */ Object.freeze({
+  status: "aborted"
+});
+function $constructor(name, initializer3, params) {
+  var _a5;
+  function init(inst, def) {
+    if (!inst._zod) {
+      Object.defineProperty(inst, "_zod", {
+        value: {
+          def,
+          constr: _,
+          traits: /* @__PURE__ */ new Set()
+        },
+        enumerable: false
+      });
+    }
+    if (inst._zod.traits.has(name)) {
+      return;
+    }
+    inst._zod.traits.add(name);
+    initializer3(inst, def);
+    const proto = _.prototype;
+    const keys = Object.keys(proto);
+    for (let i = 0; i < keys.length; i++) {
+      const k = keys[i];
+      if (!(k in inst)) {
+        inst[k] = proto[k].bind(inst);
+      }
+    }
+  }
+  const Parent = (_a5 = params == null ? void 0 : params.Parent) != null ? _a5 : Object;
+  class Definition extends Parent {
+  }
+  Object.defineProperty(Definition, "name", { value: name });
+  function _(def) {
+    var _a7;
+    var _a6;
+    const inst = (params == null ? void 0 : params.Parent) ? new Definition() : this;
+    init(inst, def);
+    (_a7 = (_a6 = inst._zod).deferred) != null ? _a7 : _a6.deferred = [];
+    for (const fn of inst._zod.deferred) {
+      fn();
+    }
+    return inst;
+  }
+  Object.defineProperty(_, "init", { value: init });
+  Object.defineProperty(_, Symbol.hasInstance, {
+    value: (inst) => {
+      var _a6, _b;
+      if ((params == null ? void 0 : params.Parent) && inst instanceof params.Parent)
+        return true;
+      return (_b = (_a6 = inst == null ? void 0 : inst._zod) == null ? void 0 : _a6.traits) == null ? void 0 : _b.has(name);
+    }
+  });
+  Object.defineProperty(_, "name", { value: name });
+  return _;
+}
+var $brand = Symbol("zod_brand");
+var $ZodAsyncError = class extends Error {
+  constructor() {
+    super(`Encountered Promise during synchronous parse. Use .parseAsync() instead.`);
+  }
+};
+var $ZodEncodeError = class extends Error {
+  constructor(name) {
+    super(`Encountered unidirectional transform during encode: ${name}`);
+    this.name = "ZodEncodeError";
+  }
+};
+var _a2;
+(_a2 = (_a = globalThis).__zod_globalConfig) != null ? _a2 : _a.__zod_globalConfig = {};
+var globalConfig = globalThis.__zod_globalConfig;
+function config(newConfig) {
+  if (newConfig)
+    Object.assign(globalConfig, newConfig);
+  return globalConfig;
+}
+
+// node_modules/zod/v4/core/util.js
+var util_exports = {};
+__export(util_exports, {
+  BIGINT_FORMAT_RANGES: () => BIGINT_FORMAT_RANGES,
+  Class: () => Class,
+  NUMBER_FORMAT_RANGES: () => NUMBER_FORMAT_RANGES,
+  aborted: () => aborted,
+  allowsEval: () => allowsEval,
+  assert: () => assert,
+  assertEqual: () => assertEqual,
+  assertIs: () => assertIs,
+  assertNever: () => assertNever,
+  assertNotEqual: () => assertNotEqual,
+  assignProp: () => assignProp,
+  base64ToUint8Array: () => base64ToUint8Array,
+  base64urlToUint8Array: () => base64urlToUint8Array,
+  cached: () => cached,
+  captureStackTrace: () => captureStackTrace,
+  cleanEnum: () => cleanEnum,
+  cleanRegex: () => cleanRegex,
+  clone: () => clone,
+  cloneDef: () => cloneDef,
+  createTransparentProxy: () => createTransparentProxy,
+  defineLazy: () => defineLazy,
+  esc: () => esc,
+  escapeRegex: () => escapeRegex,
+  explicitlyAborted: () => explicitlyAborted,
+  extend: () => extend,
+  finalizeIssue: () => finalizeIssue,
+  floatSafeRemainder: () => floatSafeRemainder,
+  getElementAtPath: () => getElementAtPath,
+  getEnumValues: () => getEnumValues,
+  getLengthableOrigin: () => getLengthableOrigin,
+  getParsedType: () => getParsedType,
+  getSizableOrigin: () => getSizableOrigin,
+  hexToUint8Array: () => hexToUint8Array,
+  isObject: () => isObject,
+  isPlainObject: () => isPlainObject,
+  issue: () => issue,
+  joinValues: () => joinValues,
+  jsonStringifyReplacer: () => jsonStringifyReplacer,
+  merge: () => merge,
+  mergeDefs: () => mergeDefs,
+  normalizeParams: () => normalizeParams,
+  nullish: () => nullish,
+  numKeys: () => numKeys,
+  objectClone: () => objectClone,
+  omit: () => omit,
+  optionalKeys: () => optionalKeys,
+  parsedType: () => parsedType,
+  partial: () => partial,
+  pick: () => pick,
+  prefixIssues: () => prefixIssues,
+  primitiveTypes: () => primitiveTypes,
+  promiseAllObject: () => promiseAllObject,
+  propertyKeyTypes: () => propertyKeyTypes,
+  randomString: () => randomString,
+  required: () => required,
+  safeExtend: () => safeExtend,
+  shallowClone: () => shallowClone,
+  slugify: () => slugify,
+  stringifyPrimitive: () => stringifyPrimitive,
+  uint8ArrayToBase64: () => uint8ArrayToBase64,
+  uint8ArrayToBase64url: () => uint8ArrayToBase64url,
+  uint8ArrayToHex: () => uint8ArrayToHex,
+  unwrapMessage: () => unwrapMessage
+});
+function assertEqual(val) {
+  return val;
+}
+function assertNotEqual(val) {
+  return val;
+}
+function assertIs(_arg) {
+}
+function assertNever(_x) {
+  throw new Error("Unexpected value in exhaustive check");
+}
+function assert(_) {
+}
+function getEnumValues(entries) {
+  const numericValues = Object.values(entries).filter((v) => typeof v === "number");
+  const values = Object.entries(entries).filter(([k, _]) => numericValues.indexOf(+k) === -1).map(([_, v]) => v);
+  return values;
+}
+function joinValues(array2, separator = "|") {
+  return array2.map((val) => stringifyPrimitive(val)).join(separator);
+}
+function jsonStringifyReplacer(_, value) {
+  if (typeof value === "bigint")
+    return value.toString();
+  return value;
+}
+function cached(getter) {
+  const set2 = false;
+  return {
+    get value() {
+      if (!set2) {
+        const value = getter();
+        Object.defineProperty(this, "value", { value });
+        return value;
+      }
+      throw new Error("cached value already set");
+    }
+  };
+}
+function nullish(input) {
+  return input === null || input === void 0;
+}
+function cleanRegex(source) {
+  const start = source.startsWith("^") ? 1 : 0;
+  const end = source.endsWith("$") ? source.length - 1 : source.length;
+  return source.slice(start, end);
+}
+function floatSafeRemainder(val, step) {
+  const ratio = val / step;
+  const roundedRatio = Math.round(ratio);
+  const tolerance = Number.EPSILON * Math.max(Math.abs(ratio), 1);
+  if (Math.abs(ratio - roundedRatio) < tolerance)
+    return 0;
+  return ratio - roundedRatio;
+}
+var EVALUATING = /* @__PURE__ */ Symbol("evaluating");
+function defineLazy(object2, key, getter) {
+  let value = void 0;
+  Object.defineProperty(object2, key, {
+    get() {
+      if (value === EVALUATING) {
+        return void 0;
+      }
+      if (value === void 0) {
+        value = EVALUATING;
+        value = getter();
+      }
+      return value;
+    },
+    set(v) {
+      Object.defineProperty(object2, key, {
+        value: v
+      });
+    },
+    configurable: true
+  });
+}
+function objectClone(obj) {
+  return Object.create(Object.getPrototypeOf(obj), Object.getOwnPropertyDescriptors(obj));
+}
+function assignProp(target, prop, value) {
+  Object.defineProperty(target, prop, {
+    value,
+    writable: true,
+    enumerable: true,
+    configurable: true
+  });
+}
+function mergeDefs(...defs) {
+  const mergedDescriptors = {};
+  for (const def of defs) {
+    const descriptors = Object.getOwnPropertyDescriptors(def);
+    Object.assign(mergedDescriptors, descriptors);
+  }
+  return Object.defineProperties({}, mergedDescriptors);
+}
+function cloneDef(schema) {
+  return mergeDefs(schema._zod.def);
+}
+function getElementAtPath(obj, path) {
+  if (!path)
+    return obj;
+  return path.reduce((acc, key) => acc == null ? void 0 : acc[key], obj);
+}
+function promiseAllObject(promisesObj) {
+  const keys = Object.keys(promisesObj);
+  const promises = keys.map((key) => promisesObj[key]);
+  return Promise.all(promises).then((results) => {
+    const resolvedObj = {};
+    for (let i = 0; i < keys.length; i++) {
+      resolvedObj[keys[i]] = results[i];
+    }
+    return resolvedObj;
+  });
+}
+function randomString(length = 10) {
+  const chars = "abcdefghijklmnopqrstuvwxyz";
+  let str = "";
+  for (let i = 0; i < length; i++) {
+    str += chars[Math.floor(Math.random() * chars.length)];
+  }
+  return str;
+}
+function esc(str) {
+  return JSON.stringify(str);
+}
+function slugify(input) {
+  return input.toLowerCase().trim().replace(/[^\w\s-]/g, "").replace(/[\s_-]+/g, "-").replace(/^-+|-+$/g, "");
+}
+var captureStackTrace = "captureStackTrace" in Error ? Error.captureStackTrace : (..._args) => {
+};
+function isObject(data) {
+  return typeof data === "object" && data !== null && !Array.isArray(data);
+}
+var allowsEval = /* @__PURE__ */ cached(() => {
+  var _a5;
+  if (globalConfig.jitless) {
+    return false;
+  }
+  if (typeof navigator !== "undefined" && ((_a5 = navigator == null ? void 0 : navigator.userAgent) == null ? void 0 : _a5.includes("Cloudflare"))) {
+    return false;
+  }
+  try {
+    const F = Function;
+    new F("");
+    return true;
+  } catch (_) {
+    return false;
+  }
+});
+function isPlainObject(o) {
+  if (isObject(o) === false)
+    return false;
+  const ctor = o.constructor;
+  if (ctor === void 0)
+    return true;
+  if (typeof ctor !== "function")
+    return true;
+  const prot = ctor.prototype;
+  if (isObject(prot) === false)
+    return false;
+  if (Object.prototype.hasOwnProperty.call(prot, "isPrototypeOf") === false) {
+    return false;
+  }
+  return true;
+}
+function shallowClone(o) {
+  if (isPlainObject(o))
+    return __spreadValues({}, o);
+  if (Array.isArray(o))
+    return [...o];
+  if (o instanceof Map)
+    return new Map(o);
+  if (o instanceof Set)
+    return new Set(o);
+  return o;
+}
+function numKeys(data) {
+  let keyCount = 0;
+  for (const key in data) {
+    if (Object.prototype.hasOwnProperty.call(data, key)) {
+      keyCount++;
+    }
+  }
+  return keyCount;
+}
+var getParsedType = (data) => {
+  const t = typeof data;
+  switch (t) {
+    case "undefined":
+      return "undefined";
+    case "string":
+      return "string";
+    case "number":
+      return Number.isNaN(data) ? "nan" : "number";
+    case "boolean":
+      return "boolean";
+    case "function":
+      return "function";
+    case "bigint":
+      return "bigint";
+    case "symbol":
+      return "symbol";
+    case "object":
+      if (Array.isArray(data)) {
+        return "array";
+      }
+      if (data === null) {
+        return "null";
+      }
+      if (data.then && typeof data.then === "function" && data.catch && typeof data.catch === "function") {
+        return "promise";
+      }
+      if (typeof Map !== "undefined" && data instanceof Map) {
+        return "map";
+      }
+      if (typeof Set !== "undefined" && data instanceof Set) {
+        return "set";
+      }
+      if (typeof Date !== "undefined" && data instanceof Date) {
+        return "date";
+      }
+      if (typeof File !== "undefined" && data instanceof File) {
+        return "file";
+      }
+      return "object";
+    default:
+      throw new Error(`Unknown data type: ${t}`);
+  }
+};
+var propertyKeyTypes = /* @__PURE__ */ new Set(["string", "number", "symbol"]);
+var primitiveTypes = /* @__PURE__ */ new Set([
+  "string",
+  "number",
+  "bigint",
+  "boolean",
+  "symbol",
+  "undefined"
+]);
+function escapeRegex(str) {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+function clone(inst, def, params) {
+  const cl = new inst._zod.constr(def != null ? def : inst._zod.def);
+  if (!def || (params == null ? void 0 : params.parent))
+    cl._zod.parent = inst;
+  return cl;
+}
+function normalizeParams(_params) {
+  const params = _params;
+  if (!params)
+    return {};
+  if (typeof params === "string")
+    return { error: () => params };
+  if ((params == null ? void 0 : params.message) !== void 0) {
+    if ((params == null ? void 0 : params.error) !== void 0)
+      throw new Error("Cannot specify both `message` and `error` params");
+    params.error = params.message;
+  }
+  delete params.message;
+  if (typeof params.error === "string")
+    return __spreadProps(__spreadValues({}, params), { error: () => params.error });
+  return params;
+}
+function createTransparentProxy(getter) {
+  let target;
+  return new Proxy({}, {
+    get(_, prop, receiver) {
+      target != null ? target : target = getter();
+      return Reflect.get(target, prop, receiver);
+    },
+    set(_, prop, value, receiver) {
+      target != null ? target : target = getter();
+      return Reflect.set(target, prop, value, receiver);
+    },
+    has(_, prop) {
+      target != null ? target : target = getter();
+      return Reflect.has(target, prop);
+    },
+    deleteProperty(_, prop) {
+      target != null ? target : target = getter();
+      return Reflect.deleteProperty(target, prop);
+    },
+    ownKeys(_) {
+      target != null ? target : target = getter();
+      return Reflect.ownKeys(target);
+    },
+    getOwnPropertyDescriptor(_, prop) {
+      target != null ? target : target = getter();
+      return Reflect.getOwnPropertyDescriptor(target, prop);
+    },
+    defineProperty(_, prop, descriptor) {
+      target != null ? target : target = getter();
+      return Reflect.defineProperty(target, prop, descriptor);
+    }
+  });
+}
+function stringifyPrimitive(value) {
+  if (typeof value === "bigint")
+    return value.toString() + "n";
+  if (typeof value === "string")
+    return `"${value}"`;
+  return `${value}`;
+}
+function optionalKeys(shape) {
+  return Object.keys(shape).filter((k) => {
+    return shape[k]._zod.optin === "optional" && shape[k]._zod.optout === "optional";
+  });
+}
+var NUMBER_FORMAT_RANGES = {
+  safeint: [Number.MIN_SAFE_INTEGER, Number.MAX_SAFE_INTEGER],
+  int32: [-2147483648, 2147483647],
+  uint32: [0, 4294967295],
+  float32: [-34028234663852886e22, 34028234663852886e22],
+  float64: [-Number.MAX_VALUE, Number.MAX_VALUE]
+};
+var BIGINT_FORMAT_RANGES = {
+  int64: [/* @__PURE__ */ BigInt("-9223372036854775808"), /* @__PURE__ */ BigInt("9223372036854775807")],
+  uint64: [/* @__PURE__ */ BigInt(0), /* @__PURE__ */ BigInt("18446744073709551615")]
+};
+function pick(schema, mask) {
+  const currDef = schema._zod.def;
+  const checks = currDef.checks;
+  const hasChecks = checks && checks.length > 0;
+  if (hasChecks) {
+    throw new Error(".pick() cannot be used on object schemas containing refinements");
+  }
+  const def = mergeDefs(schema._zod.def, {
+    get shape() {
+      const newShape = {};
+      for (const key in mask) {
+        if (!(key in currDef.shape)) {
+          throw new Error(`Unrecognized key: "${key}"`);
+        }
+        if (!mask[key])
+          continue;
+        newShape[key] = currDef.shape[key];
+      }
+      assignProp(this, "shape", newShape);
+      return newShape;
+    },
+    checks: []
+  });
+  return clone(schema, def);
+}
+function omit(schema, mask) {
+  const currDef = schema._zod.def;
+  const checks = currDef.checks;
+  const hasChecks = checks && checks.length > 0;
+  if (hasChecks) {
+    throw new Error(".omit() cannot be used on object schemas containing refinements");
+  }
+  const def = mergeDefs(schema._zod.def, {
+    get shape() {
+      const newShape = __spreadValues({}, schema._zod.def.shape);
+      for (const key in mask) {
+        if (!(key in currDef.shape)) {
+          throw new Error(`Unrecognized key: "${key}"`);
+        }
+        if (!mask[key])
+          continue;
+        delete newShape[key];
+      }
+      assignProp(this, "shape", newShape);
+      return newShape;
+    },
+    checks: []
+  });
+  return clone(schema, def);
+}
+function extend(schema, shape) {
+  if (!isPlainObject(shape)) {
+    throw new Error("Invalid input to extend: expected a plain object");
+  }
+  const checks = schema._zod.def.checks;
+  const hasChecks = checks && checks.length > 0;
+  if (hasChecks) {
+    const existingShape = schema._zod.def.shape;
+    for (const key in shape) {
+      if (Object.getOwnPropertyDescriptor(existingShape, key) !== void 0) {
+        throw new Error("Cannot overwrite keys on object schemas containing refinements. Use `.safeExtend()` instead.");
+      }
+    }
+  }
+  const def = mergeDefs(schema._zod.def, {
+    get shape() {
+      const _shape = __spreadValues(__spreadValues({}, schema._zod.def.shape), shape);
+      assignProp(this, "shape", _shape);
+      return _shape;
+    }
+  });
+  return clone(schema, def);
+}
+function safeExtend(schema, shape) {
+  if (!isPlainObject(shape)) {
+    throw new Error("Invalid input to safeExtend: expected a plain object");
+  }
+  const def = mergeDefs(schema._zod.def, {
+    get shape() {
+      const _shape = __spreadValues(__spreadValues({}, schema._zod.def.shape), shape);
+      assignProp(this, "shape", _shape);
+      return _shape;
+    }
+  });
+  return clone(schema, def);
+}
+function merge(a, b) {
+  var _a5, _b;
+  if ((_a5 = a._zod.def.checks) == null ? void 0 : _a5.length) {
+    throw new Error(".merge() cannot be used on object schemas containing refinements. Use .safeExtend() instead.");
+  }
+  const def = mergeDefs(a._zod.def, {
+    get shape() {
+      const _shape = __spreadValues(__spreadValues({}, a._zod.def.shape), b._zod.def.shape);
+      assignProp(this, "shape", _shape);
+      return _shape;
+    },
+    get catchall() {
+      return b._zod.def.catchall;
+    },
+    checks: (_b = b._zod.def.checks) != null ? _b : []
+  });
+  return clone(a, def);
+}
+function partial(Class2, schema, mask) {
+  const currDef = schema._zod.def;
+  const checks = currDef.checks;
+  const hasChecks = checks && checks.length > 0;
+  if (hasChecks) {
+    throw new Error(".partial() cannot be used on object schemas containing refinements");
+  }
+  const def = mergeDefs(schema._zod.def, {
+    get shape() {
+      const oldShape = schema._zod.def.shape;
+      const shape = __spreadValues({}, oldShape);
+      if (mask) {
+        for (const key in mask) {
+          if (!(key in oldShape)) {
+            throw new Error(`Unrecognized key: "${key}"`);
+          }
+          if (!mask[key])
+            continue;
+          shape[key] = Class2 ? new Class2({
+            type: "optional",
+            innerType: oldShape[key]
+          }) : oldShape[key];
+        }
+      } else {
+        for (const key in oldShape) {
+          shape[key] = Class2 ? new Class2({
+            type: "optional",
+            innerType: oldShape[key]
+          }) : oldShape[key];
+        }
+      }
+      assignProp(this, "shape", shape);
+      return shape;
+    },
+    checks: []
+  });
+  return clone(schema, def);
+}
+function required(Class2, schema, mask) {
+  const def = mergeDefs(schema._zod.def, {
+    get shape() {
+      const oldShape = schema._zod.def.shape;
+      const shape = __spreadValues({}, oldShape);
+      if (mask) {
+        for (const key in mask) {
+          if (!(key in shape)) {
+            throw new Error(`Unrecognized key: "${key}"`);
+          }
+          if (!mask[key])
+            continue;
+          shape[key] = new Class2({
+            type: "nonoptional",
+            innerType: oldShape[key]
+          });
+        }
+      } else {
+        for (const key in oldShape) {
+          shape[key] = new Class2({
+            type: "nonoptional",
+            innerType: oldShape[key]
+          });
+        }
+      }
+      assignProp(this, "shape", shape);
+      return shape;
+    }
+  });
+  return clone(schema, def);
+}
+function aborted(x, startIndex = 0) {
+  var _a5;
+  if (x.aborted === true)
+    return true;
+  for (let i = startIndex; i < x.issues.length; i++) {
+    if (((_a5 = x.issues[i]) == null ? void 0 : _a5.continue) !== true) {
+      return true;
+    }
+  }
+  return false;
+}
+function explicitlyAborted(x, startIndex = 0) {
+  var _a5;
+  if (x.aborted === true)
+    return true;
+  for (let i = startIndex; i < x.issues.length; i++) {
+    if (((_a5 = x.issues[i]) == null ? void 0 : _a5.continue) === false) {
+      return true;
+    }
+  }
+  return false;
+}
+function prefixIssues(path, issues) {
+  return issues.map((iss) => {
+    var _a6;
+    var _a5;
+    (_a6 = (_a5 = iss).path) != null ? _a6 : _a5.path = [];
+    iss.path.unshift(path);
+    return iss;
+  });
+}
+function unwrapMessage(message) {
+  return typeof message === "string" ? message : message == null ? void 0 : message.message;
+}
+function finalizeIssue(iss, ctx, config2) {
+  var _a5, _b, _c, _d, _e, _f, _g, _h, _i, _j, _l;
+  const message = iss.message ? iss.message : (_j = (_i = (_g = (_e = unwrapMessage((_c = (_b = (_a5 = iss.inst) == null ? void 0 : _a5._zod.def) == null ? void 0 : _b.error) == null ? void 0 : _c.call(_b, iss))) != null ? _e : unwrapMessage((_d = ctx == null ? void 0 : ctx.error) == null ? void 0 : _d.call(ctx, iss))) != null ? _g : unwrapMessage((_f = config2.customError) == null ? void 0 : _f.call(config2, iss))) != null ? _i : unwrapMessage((_h = config2.localeError) == null ? void 0 : _h.call(config2, iss))) != null ? _j : "Invalid input";
+  const _k = iss, { inst: _inst, continue: _continue, input: _input } = _k, rest = __objRest(_k, ["inst", "continue", "input"]);
+  (_l = rest.path) != null ? _l : rest.path = [];
+  rest.message = message;
+  if (ctx == null ? void 0 : ctx.reportInput) {
+    rest.input = _input;
+  }
+  return rest;
+}
+function getSizableOrigin(input) {
+  if (input instanceof Set)
+    return "set";
+  if (input instanceof Map)
+    return "map";
+  if (input instanceof File)
+    return "file";
+  return "unknown";
+}
+function getLengthableOrigin(input) {
+  if (Array.isArray(input))
+    return "array";
+  if (typeof input === "string")
+    return "string";
+  return "unknown";
+}
+function parsedType(data) {
+  const t = typeof data;
+  switch (t) {
+    case "number": {
+      return Number.isNaN(data) ? "nan" : "number";
+    }
+    case "object": {
+      if (data === null) {
+        return "null";
+      }
+      if (Array.isArray(data)) {
+        return "array";
+      }
+      const obj = data;
+      if (obj && Object.getPrototypeOf(obj) !== Object.prototype && "constructor" in obj && obj.constructor) {
+        return obj.constructor.name;
+      }
+    }
+  }
+  return t;
+}
+function issue(...args) {
+  const [iss, input, inst] = args;
+  if (typeof iss === "string") {
+    return {
+      message: iss,
+      code: "custom",
+      input,
+      inst
+    };
+  }
+  return __spreadValues({}, iss);
+}
+function cleanEnum(obj) {
+  return Object.entries(obj).filter(([k, _]) => {
+    return Number.isNaN(Number.parseInt(k, 10));
+  }).map((el) => el[1]);
+}
+function base64ToUint8Array(base643) {
+  const binaryString = atob(base643);
+  const bytes = new Uint8Array(binaryString.length);
+  for (let i = 0; i < binaryString.length; i++) {
+    bytes[i] = binaryString.charCodeAt(i);
+  }
+  return bytes;
+}
+function uint8ArrayToBase64(bytes) {
+  let binaryString = "";
+  for (let i = 0; i < bytes.length; i++) {
+    binaryString += String.fromCharCode(bytes[i]);
+  }
+  return btoa(binaryString);
+}
+function base64urlToUint8Array(base64url3) {
+  const base643 = base64url3.replace(/-/g, "+").replace(/_/g, "/");
+  const padding = "=".repeat((4 - base643.length % 4) % 4);
+  return base64ToUint8Array(base643 + padding);
+}
+function uint8ArrayToBase64url(bytes) {
+  return uint8ArrayToBase64(bytes).replace(/\+/g, "-").replace(/\//g, "_").replace(/=/g, "");
+}
+function hexToUint8Array(hex3) {
+  const cleanHex = hex3.replace(/^0x/, "");
+  if (cleanHex.length % 2 !== 0) {
+    throw new Error("Invalid hex string length");
+  }
+  const bytes = new Uint8Array(cleanHex.length / 2);
+  for (let i = 0; i < cleanHex.length; i += 2) {
+    bytes[i / 2] = Number.parseInt(cleanHex.slice(i, i + 2), 16);
+  }
+  return bytes;
+}
+function uint8ArrayToHex(bytes) {
+  return Array.from(bytes).map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+var Class = class {
+  constructor(..._args) {
+  }
+};
+
+// node_modules/zod/v4/core/errors.js
+var initializer = (inst, def) => {
+  inst.name = "$ZodError";
+  Object.defineProperty(inst, "_zod", {
+    value: inst._zod,
+    enumerable: false
+  });
+  Object.defineProperty(inst, "issues", {
+    value: def,
+    enumerable: false
+  });
+  inst.message = JSON.stringify(def, jsonStringifyReplacer, 2);
+  Object.defineProperty(inst, "toString", {
+    value: () => inst.message,
+    enumerable: false
+  });
+};
+var $ZodError = $constructor("$ZodError", initializer);
+var $ZodRealError = $constructor("$ZodError", initializer, { Parent: Error });
+function flattenError(error51, mapper = (issue2) => issue2.message) {
+  const fieldErrors = {};
+  const formErrors = [];
+  for (const sub of error51.issues) {
+    if (sub.path.length > 0) {
+      fieldErrors[sub.path[0]] = fieldErrors[sub.path[0]] || [];
+      fieldErrors[sub.path[0]].push(mapper(sub));
+    } else {
+      formErrors.push(mapper(sub));
+    }
+  }
+  return { formErrors, fieldErrors };
+}
+function formatError(error51, mapper = (issue2) => issue2.message) {
+  const fieldErrors = { _errors: [] };
+  const processError = (error52, path = []) => {
+    for (const issue2 of error52.issues) {
+      if (issue2.code === "invalid_union" && issue2.errors.length) {
+        issue2.errors.map((issues) => processError({ issues }, [...path, ...issue2.path]));
+      } else if (issue2.code === "invalid_key") {
+        processError({ issues: issue2.issues }, [...path, ...issue2.path]);
+      } else if (issue2.code === "invalid_element") {
+        processError({ issues: issue2.issues }, [...path, ...issue2.path]);
+      } else {
+        const fullpath = [...path, ...issue2.path];
+        if (fullpath.length === 0) {
+          fieldErrors._errors.push(mapper(issue2));
+        } else {
+          let curr = fieldErrors;
+          let i = 0;
+          while (i < fullpath.length) {
+            const el = fullpath[i];
+            const terminal = i === fullpath.length - 1;
+            if (!terminal) {
+              curr[el] = curr[el] || { _errors: [] };
+            } else {
+              curr[el] = curr[el] || { _errors: [] };
+              curr[el]._errors.push(mapper(issue2));
+            }
+            curr = curr[el];
+            i++;
+          }
+        }
+      }
+    }
+  };
+  processError(error51);
+  return fieldErrors;
+}
+function treeifyError(error51, mapper = (issue2) => issue2.message) {
+  const result = { errors: [] };
+  const processError = (error52, path = []) => {
+    var _a6, _b2, _c, _d;
+    var _a5, _b;
+    for (const issue2 of error52.issues) {
+      if (issue2.code === "invalid_union" && issue2.errors.length) {
+        issue2.errors.map((issues) => processError({ issues }, [...path, ...issue2.path]));
+      } else if (issue2.code === "invalid_key") {
+        processError({ issues: issue2.issues }, [...path, ...issue2.path]);
+      } else if (issue2.code === "invalid_element") {
+        processError({ issues: issue2.issues }, [...path, ...issue2.path]);
+      } else {
+        const fullpath = [...path, ...issue2.path];
+        if (fullpath.length === 0) {
+          result.errors.push(mapper(issue2));
+          continue;
+        }
+        let curr = result;
+        let i = 0;
+        while (i < fullpath.length) {
+          const el = fullpath[i];
+          const terminal = i === fullpath.length - 1;
+          if (typeof el === "string") {
+            (_a6 = curr.properties) != null ? _a6 : curr.properties = {};
+            (_b2 = (_a5 = curr.properties)[el]) != null ? _b2 : _a5[el] = { errors: [] };
+            curr = curr.properties[el];
+          } else {
+            (_c = curr.items) != null ? _c : curr.items = [];
+            (_d = (_b = curr.items)[el]) != null ? _d : _b[el] = { errors: [] };
+            curr = curr.items[el];
+          }
+          if (terminal) {
+            curr.errors.push(mapper(issue2));
+          }
+          i++;
+        }
+      }
+    }
+  };
+  processError(error51);
+  return result;
+}
+function toDotPath(_path) {
+  const segs = [];
+  const path = _path.map((seg) => typeof seg === "object" ? seg.key : seg);
+  for (const seg of path) {
+    if (typeof seg === "number")
+      segs.push(`[${seg}]`);
+    else if (typeof seg === "symbol")
+      segs.push(`[${JSON.stringify(String(seg))}]`);
+    else if (/[^\w$]/.test(seg))
+      segs.push(`[${JSON.stringify(seg)}]`);
+    else {
+      if (segs.length)
+        segs.push(".");
+      segs.push(seg);
+    }
+  }
+  return segs.join("");
+}
+function prettifyError(error51) {
+  var _a5;
+  const lines = [];
+  const issues = [...error51.issues].sort((a, b) => {
+    var _a6, _b;
+    return ((_a6 = a.path) != null ? _a6 : []).length - ((_b = b.path) != null ? _b : []).length;
+  });
+  for (const issue2 of issues) {
+    lines.push(`\u2716 ${issue2.message}`);
+    if ((_a5 = issue2.path) == null ? void 0 : _a5.length)
+      lines.push(`  \u2192 at ${toDotPath(issue2.path)}`);
+  }
+  return lines.join("\n");
+}
+
+// node_modules/zod/v4/core/parse.js
+var _parse = (_Err) => (schema, value, _ctx, _params) => {
+  var _a5;
+  const ctx = _ctx ? __spreadProps(__spreadValues({}, _ctx), { async: false }) : { async: false };
+  const result = schema._zod.run({ value, issues: [] }, ctx);
+  if (result instanceof Promise) {
+    throw new $ZodAsyncError();
+  }
+  if (result.issues.length) {
+    const e = new ((_a5 = _params == null ? void 0 : _params.Err) != null ? _a5 : _Err)(result.issues.map((iss) => finalizeIssue(iss, ctx, config())));
+    captureStackTrace(e, _params == null ? void 0 : _params.callee);
+    throw e;
+  }
+  return result.value;
+};
+var parse = /* @__PURE__ */ _parse($ZodRealError);
+var _parseAsync = (_Err) => (schema, value, _ctx, params) => __async(void 0, null, function* () {
+  var _a5;
+  const ctx = _ctx ? __spreadProps(__spreadValues({}, _ctx), { async: true }) : { async: true };
+  let result = schema._zod.run({ value, issues: [] }, ctx);
+  if (result instanceof Promise)
+    result = yield result;
+  if (result.issues.length) {
+    const e = new ((_a5 = params == null ? void 0 : params.Err) != null ? _a5 : _Err)(result.issues.map((iss) => finalizeIssue(iss, ctx, config())));
+    captureStackTrace(e, params == null ? void 0 : params.callee);
+    throw e;
+  }
+  return result.value;
+});
+var parseAsync = /* @__PURE__ */ _parseAsync($ZodRealError);
+var _safeParse = (_Err) => (schema, value, _ctx) => {
+  const ctx = _ctx ? __spreadProps(__spreadValues({}, _ctx), { async: false }) : { async: false };
+  const result = schema._zod.run({ value, issues: [] }, ctx);
+  if (result instanceof Promise) {
+    throw new $ZodAsyncError();
+  }
+  return result.issues.length ? {
+    success: false,
+    error: new (_Err != null ? _Err : $ZodError)(result.issues.map((iss) => finalizeIssue(iss, ctx, config())))
+  } : { success: true, data: result.value };
+};
+var safeParse = /* @__PURE__ */ _safeParse($ZodRealError);
+var _safeParseAsync = (_Err) => (schema, value, _ctx) => __async(void 0, null, function* () {
+  const ctx = _ctx ? __spreadProps(__spreadValues({}, _ctx), { async: true }) : { async: true };
+  let result = schema._zod.run({ value, issues: [] }, ctx);
+  if (result instanceof Promise)
+    result = yield result;
+  return result.issues.length ? {
+    success: false,
+    error: new _Err(result.issues.map((iss) => finalizeIssue(iss, ctx, config())))
+  } : { success: true, data: result.value };
+});
+var safeParseAsync = /* @__PURE__ */ _safeParseAsync($ZodRealError);
+var _encode = (_Err) => (schema, value, _ctx) => {
+  const ctx = _ctx ? __spreadProps(__spreadValues({}, _ctx), { direction: "backward" }) : { direction: "backward" };
+  return _parse(_Err)(schema, value, ctx);
+};
+var encode = /* @__PURE__ */ _encode($ZodRealError);
+var _decode = (_Err) => (schema, value, _ctx) => {
+  return _parse(_Err)(schema, value, _ctx);
+};
+var decode = /* @__PURE__ */ _decode($ZodRealError);
+var _encodeAsync = (_Err) => (schema, value, _ctx) => __async(void 0, null, function* () {
+  const ctx = _ctx ? __spreadProps(__spreadValues({}, _ctx), { direction: "backward" }) : { direction: "backward" };
+  return _parseAsync(_Err)(schema, value, ctx);
+});
+var encodeAsync = /* @__PURE__ */ _encodeAsync($ZodRealError);
+var _decodeAsync = (_Err) => (schema, value, _ctx) => __async(void 0, null, function* () {
+  return _parseAsync(_Err)(schema, value, _ctx);
+});
+var decodeAsync = /* @__PURE__ */ _decodeAsync($ZodRealError);
+var _safeEncode = (_Err) => (schema, value, _ctx) => {
+  const ctx = _ctx ? __spreadProps(__spreadValues({}, _ctx), { direction: "backward" }) : { direction: "backward" };
+  return _safeParse(_Err)(schema, value, ctx);
+};
+var safeEncode = /* @__PURE__ */ _safeEncode($ZodRealError);
+var _safeDecode = (_Err) => (schema, value, _ctx) => {
+  return _safeParse(_Err)(schema, value, _ctx);
+};
+var safeDecode = /* @__PURE__ */ _safeDecode($ZodRealError);
+var _safeEncodeAsync = (_Err) => (schema, value, _ctx) => __async(void 0, null, function* () {
+  const ctx = _ctx ? __spreadProps(__spreadValues({}, _ctx), { direction: "backward" }) : { direction: "backward" };
+  return _safeParseAsync(_Err)(schema, value, ctx);
+});
+var safeEncodeAsync = /* @__PURE__ */ _safeEncodeAsync($ZodRealError);
+var _safeDecodeAsync = (_Err) => (schema, value, _ctx) => __async(void 0, null, function* () {
+  return _safeParseAsync(_Err)(schema, value, _ctx);
+});
+var safeDecodeAsync = /* @__PURE__ */ _safeDecodeAsync($ZodRealError);
+
+// node_modules/zod/v4/core/regexes.js
+var regexes_exports = {};
+__export(regexes_exports, {
+  base64: () => base64,
+  base64url: () => base64url,
+  bigint: () => bigint,
+  boolean: () => boolean,
+  browserEmail: () => browserEmail,
+  cidrv4: () => cidrv4,
+  cidrv6: () => cidrv6,
+  cuid: () => cuid,
+  cuid2: () => cuid2,
+  date: () => date,
+  datetime: () => datetime,
+  domain: () => domain,
+  duration: () => duration,
+  e164: () => e164,
+  email: () => email,
+  emoji: () => emoji,
+  extendedDuration: () => extendedDuration,
+  guid: () => guid,
+  hex: () => hex,
+  hostname: () => hostname,
+  html5Email: () => html5Email,
+  httpProtocol: () => httpProtocol,
+  idnEmail: () => idnEmail,
+  integer: () => integer,
+  ipv4: () => ipv4,
+  ipv6: () => ipv6,
+  ksuid: () => ksuid,
+  lowercase: () => lowercase,
+  mac: () => mac,
+  md5_base64: () => md5_base64,
+  md5_base64url: () => md5_base64url,
+  md5_hex: () => md5_hex,
+  nanoid: () => nanoid,
+  null: () => _null,
+  number: () => number,
+  rfc5322Email: () => rfc5322Email,
+  sha1_base64: () => sha1_base64,
+  sha1_base64url: () => sha1_base64url,
+  sha1_hex: () => sha1_hex,
+  sha256_base64: () => sha256_base64,
+  sha256_base64url: () => sha256_base64url,
+  sha256_hex: () => sha256_hex,
+  sha384_base64: () => sha384_base64,
+  sha384_base64url: () => sha384_base64url,
+  sha384_hex: () => sha384_hex,
+  sha512_base64: () => sha512_base64,
+  sha512_base64url: () => sha512_base64url,
+  sha512_hex: () => sha512_hex,
+  string: () => string,
+  time: () => time,
+  ulid: () => ulid,
+  undefined: () => _undefined,
+  unicodeEmail: () => unicodeEmail,
+  uppercase: () => uppercase,
+  uuid: () => uuid,
+  uuid4: () => uuid4,
+  uuid6: () => uuid6,
+  uuid7: () => uuid7,
+  xid: () => xid
+});
+var cuid = /^[cC][0-9a-z]{6,}$/;
+var cuid2 = /^[0-9a-z]+$/;
+var ulid = /^[0-9A-HJKMNP-TV-Za-hjkmnp-tv-z]{26}$/;
+var xid = /^[0-9a-vA-V]{20}$/;
+var ksuid = /^[A-Za-z0-9]{27}$/;
+var nanoid = /^[a-zA-Z0-9_-]{21}$/;
+var duration = /^P(?:(\d+W)|(?!.*W)(?=\d|T\d)(\d+Y)?(\d+M)?(\d+D)?(T(?=\d)(\d+H)?(\d+M)?(\d+([.,]\d+)?S)?)?)$/;
+var extendedDuration = /^[-+]?P(?!$)(?:(?:[-+]?\d+Y)|(?:[-+]?\d+[.,]\d+Y$))?(?:(?:[-+]?\d+M)|(?:[-+]?\d+[.,]\d+M$))?(?:(?:[-+]?\d+W)|(?:[-+]?\d+[.,]\d+W$))?(?:(?:[-+]?\d+D)|(?:[-+]?\d+[.,]\d+D$))?(?:T(?=[\d+-])(?:(?:[-+]?\d+H)|(?:[-+]?\d+[.,]\d+H$))?(?:(?:[-+]?\d+M)|(?:[-+]?\d+[.,]\d+M$))?(?:[-+]?\d+(?:[.,]\d+)?S)?)??$/;
+var guid = /^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$/;
+var uuid = (version2) => {
+  if (!version2)
+    return /^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$/;
+  return new RegExp(`^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-${version2}[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$`);
+};
+var uuid4 = /* @__PURE__ */ uuid(4);
+var uuid6 = /* @__PURE__ */ uuid(6);
+var uuid7 = /* @__PURE__ */ uuid(7);
+var email = /^(?!\.)(?!.*\.\.)([A-Za-z0-9_'+\-\.]*)[A-Za-z0-9_+-]@([A-Za-z0-9][A-Za-z0-9\-]*\.)+[A-Za-z]{2,}$/;
+var html5Email = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+var rfc5322Email = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+var unicodeEmail = /^[^\s@"]{1,64}@[^\s@]{1,255}$/u;
+var idnEmail = unicodeEmail;
+var browserEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+var _emoji = `^(\\p{Extended_Pictographic}|\\p{Emoji_Component})+$`;
+function emoji() {
+  return new RegExp(_emoji, "u");
+}
+var ipv4 = /^(?:(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])$/;
+var ipv6 = /^(([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:))$/;
+var mac = (delimiter) => {
+  const escapedDelim = escapeRegex(delimiter != null ? delimiter : ":");
+  return new RegExp(`^(?:[0-9A-F]{2}${escapedDelim}){5}[0-9A-F]{2}$|^(?:[0-9a-f]{2}${escapedDelim}){5}[0-9a-f]{2}$`);
+};
+var cidrv4 = /^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\/([0-9]|[1-2][0-9]|3[0-2])$/;
+var cidrv6 = /^(([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|::|([0-9a-fA-F]{1,4})?::([0-9a-fA-F]{1,4}:?){0,6})\/(12[0-8]|1[01][0-9]|[1-9]?[0-9])$/;
+var base64 = /^$|^(?:[0-9a-zA-Z+/]{4})*(?:(?:[0-9a-zA-Z+/]{2}==)|(?:[0-9a-zA-Z+/]{3}=))?$/;
+var base64url = /^[A-Za-z0-9_-]*$/;
+var hostname = /^(?=.{1,253}\.?$)[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[-0-9a-zA-Z]{0,61}[0-9a-zA-Z])?)*\.?$/;
+var domain = /^([a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}$/;
+var httpProtocol = /^https?$/;
+var e164 = /^\+[1-9]\d{6,14}$/;
+var dateSource = `(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))`;
+var date = /* @__PURE__ */ new RegExp(`^${dateSource}$`);
+function timeSource(args) {
+  const hhmm = `(?:[01]\\d|2[0-3]):[0-5]\\d`;
+  const regex = typeof args.precision === "number" ? args.precision === -1 ? `${hhmm}` : args.precision === 0 ? `${hhmm}:[0-5]\\d` : `${hhmm}:[0-5]\\d\\.\\d{${args.precision}}` : `${hhmm}(?::[0-5]\\d(?:\\.\\d+)?)?`;
+  return regex;
+}
+function time(args) {
+  return new RegExp(`^${timeSource(args)}$`);
+}
+function datetime(args) {
+  const time3 = timeSource({ precision: args.precision });
+  const opts = ["Z"];
+  if (args.local)
+    opts.push("");
+  if (args.offset)
+    opts.push(`([+-](?:[01]\\d|2[0-3]):[0-5]\\d)`);
+  const timeRegex = `${time3}(?:${opts.join("|")})`;
+  return new RegExp(`^${dateSource}T(?:${timeRegex})$`);
+}
+var string = (params) => {
+  var _a5, _b;
+  const regex = params ? `[\\s\\S]{${(_a5 = params == null ? void 0 : params.minimum) != null ? _a5 : 0},${(_b = params == null ? void 0 : params.maximum) != null ? _b : ""}}` : `[\\s\\S]*`;
+  return new RegExp(`^${regex}$`);
+};
+var bigint = /^-?\d+n?$/;
+var integer = /^-?\d+$/;
+var number = /^-?\d+(?:\.\d+)?$/;
+var boolean = /^(?:true|false)$/i;
+var _null = /^null$/i;
+var _undefined = /^undefined$/i;
+var lowercase = /^[^A-Z]*$/;
+var uppercase = /^[^a-z]*$/;
+var hex = /^[0-9a-fA-F]*$/;
+function fixedBase64(bodyLength, padding) {
+  return new RegExp(`^[A-Za-z0-9+/]{${bodyLength}}${padding}$`);
+}
+function fixedBase64url(length) {
+  return new RegExp(`^[A-Za-z0-9_-]{${length}}$`);
+}
+var md5_hex = /^[0-9a-fA-F]{32}$/;
+var md5_base64 = /* @__PURE__ */ fixedBase64(22, "==");
+var md5_base64url = /* @__PURE__ */ fixedBase64url(22);
+var sha1_hex = /^[0-9a-fA-F]{40}$/;
+var sha1_base64 = /* @__PURE__ */ fixedBase64(27, "=");
+var sha1_base64url = /* @__PURE__ */ fixedBase64url(27);
+var sha256_hex = /^[0-9a-fA-F]{64}$/;
+var sha256_base64 = /* @__PURE__ */ fixedBase64(43, "=");
+var sha256_base64url = /* @__PURE__ */ fixedBase64url(43);
+var sha384_hex = /^[0-9a-fA-F]{96}$/;
+var sha384_base64 = /* @__PURE__ */ fixedBase64(64, "");
+var sha384_base64url = /* @__PURE__ */ fixedBase64url(64);
+var sha512_hex = /^[0-9a-fA-F]{128}$/;
+var sha512_base64 = /* @__PURE__ */ fixedBase64(86, "==");
+var sha512_base64url = /* @__PURE__ */ fixedBase64url(86);
+
+// node_modules/zod/v4/core/checks.js
+var $ZodCheck = /* @__PURE__ */ $constructor("$ZodCheck", (inst, def) => {
+  var _a6, _b;
+  var _a5;
+  (_a6 = inst._zod) != null ? _a6 : inst._zod = {};
+  inst._zod.def = def;
+  (_b = (_a5 = inst._zod).onattach) != null ? _b : _a5.onattach = [];
+});
+var numericOriginMap = {
+  number: "number",
+  bigint: "bigint",
+  object: "date"
+};
+var $ZodCheckLessThan = /* @__PURE__ */ $constructor("$ZodCheckLessThan", (inst, def) => {
+  $ZodCheck.init(inst, def);
+  const origin = numericOriginMap[typeof def.value];
+  inst._zod.onattach.push((inst2) => {
+    var _a5;
+    const bag = inst2._zod.bag;
+    const curr = (_a5 = def.inclusive ? bag.maximum : bag.exclusiveMaximum) != null ? _a5 : Number.POSITIVE_INFINITY;
+    if (def.value < curr) {
+      if (def.inclusive)
+        bag.maximum = def.value;
+      else
+        bag.exclusiveMaximum = def.value;
+    }
+  });
+  inst._zod.check = (payload) => {
+    if (def.inclusive ? payload.value <= def.value : payload.value < def.value) {
+      return;
+    }
+    payload.issues.push({
+      origin,
+      code: "too_big",
+      maximum: typeof def.value === "object" ? def.value.getTime() : def.value,
+      input: payload.value,
+      inclusive: def.inclusive,
+      inst,
+      continue: !def.abort
+    });
+  };
+});
+var $ZodCheckGreaterThan = /* @__PURE__ */ $constructor("$ZodCheckGreaterThan", (inst, def) => {
+  $ZodCheck.init(inst, def);
+  const origin = numericOriginMap[typeof def.value];
+  inst._zod.onattach.push((inst2) => {
+    var _a5;
+    const bag = inst2._zod.bag;
+    const curr = (_a5 = def.inclusive ? bag.minimum : bag.exclusiveMinimum) != null ? _a5 : Number.NEGATIVE_INFINITY;
+    if (def.value > curr) {
+      if (def.inclusive)
+        bag.minimum = def.value;
+      else
+        bag.exclusiveMinimum = def.value;
+    }
+  });
+  inst._zod.check = (payload) => {
+    if (def.inclusive ? payload.value >= def.value : payload.value > def.value) {
+      return;
+    }
+    payload.issues.push({
+      origin,
+      code: "too_small",
+      minimum: typeof def.value === "object" ? def.value.getTime() : def.value,
+      input: payload.value,
+      inclusive: def.inclusive,
+      inst,
+      continue: !def.abort
+    });
+  };
+});
+var $ZodCheckMultipleOf = /* @__PURE__ */ $constructor("$ZodCheckMultipleOf", (inst, def) => {
+  $ZodCheck.init(inst, def);
+  inst._zod.onattach.push((inst2) => {
+    var _a6;
+    var _a5;
+    (_a6 = (_a5 = inst2._zod.bag).multipleOf) != null ? _a6 : _a5.multipleOf = def.value;
+  });
+  inst._zod.check = (payload) => {
+    if (typeof payload.value !== typeof def.value)
+      throw new Error("Cannot mix number and bigint in multiple_of check.");
+    const isMultiple = typeof payload.value === "bigint" ? payload.value % def.value === BigInt(0) : floatSafeRemainder(payload.value, def.value) === 0;
+    if (isMultiple)
+      return;
+    payload.issues.push({
+      origin: typeof payload.value,
+      code: "not_multiple_of",
+      divisor: def.value,
+      input: payload.value,
+      inst,
+      continue: !def.abort
+    });
+  };
+});
+var $ZodCheckNumberFormat = /* @__PURE__ */ $constructor("$ZodCheckNumberFormat", (inst, def) => {
+  var _a5;
+  $ZodCheck.init(inst, def);
+  def.format = def.format || "float64";
+  const isInt = (_a5 = def.format) == null ? void 0 : _a5.includes("int");
+  const origin = isInt ? "int" : "number";
+  const [minimum, maximum] = NUMBER_FORMAT_RANGES[def.format];
+  inst._zod.onattach.push((inst2) => {
+    const bag = inst2._zod.bag;
+    bag.format = def.format;
+    bag.minimum = minimum;
+    bag.maximum = maximum;
+    if (isInt)
+      bag.pattern = integer;
+  });
+  inst._zod.check = (payload) => {
+    const input = payload.value;
+    if (isInt) {
+      if (!Number.isInteger(input)) {
+        payload.issues.push({
+          expected: origin,
+          format: def.format,
+          code: "invalid_type",
+          continue: false,
+          input,
+          inst
+        });
+        return;
+      }
+      if (!Number.isSafeInteger(input)) {
+        if (input > 0) {
+          payload.issues.push({
+            input,
+            code: "too_big",
+            maximum: Number.MAX_SAFE_INTEGER,
+            note: "Integers must be within the safe integer range.",
+            inst,
+            origin,
+            inclusive: true,
+            continue: !def.abort
+          });
+        } else {
+          payload.issues.push({
+            input,
+            code: "too_small",
+            minimum: Number.MIN_SAFE_INTEGER,
+            note: "Integers must be within the safe integer range.",
+            inst,
+            origin,
+            inclusive: true,
+            continue: !def.abort
+          });
+        }
+        return;
+      }
+    }
+    if (input < minimum) {
+      payload.issues.push({
+        origin: "number",
+        input,
+        code: "too_small",
+        minimum,
+        inclusive: true,
+        inst,
+        continue: !def.abort
+      });
+    }
+    if (input > maximum) {
+      payload.issues.push({
+        origin: "number",
+        input,
+        code: "too_big",
+        maximum,
+        inclusive: true,
+        inst,
+        continue: !def.abort
+      });
+    }
+  };
+});
+var $ZodCheckBigIntFormat = /* @__PURE__ */ $constructor("$ZodCheckBigIntFormat", (inst, def) => {
+  $ZodCheck.init(inst, def);
+  const [minimum, maximum] = BIGINT_FORMAT_RANGES[def.format];
+  inst._zod.onattach.push((inst2) => {
+    const bag = inst2._zod.bag;
+    bag.format = def.format;
+    bag.minimum = minimum;
+    bag.maximum = maximum;
+  });
+  inst._zod.check = (payload) => {
+    const input = payload.value;
+    if (input < minimum) {
+      payload.issues.push({
+        origin: "bigint",
+        input,
+        code: "too_small",
+        minimum,
+        inclusive: true,
+        inst,
+        continue: !def.abort
+      });
+    }
+    if (input > maximum) {
+      payload.issues.push({
+        origin: "bigint",
+        input,
+        code: "too_big",
+        maximum,
+        inclusive: true,
+        inst,
+        continue: !def.abort
+      });
+    }
+  };
+});
+var $ZodCheckMaxSize = /* @__PURE__ */ $constructor("$ZodCheckMaxSize", (inst, def) => {
+  var _a6;
+  var _a5;
+  $ZodCheck.init(inst, def);
+  (_a6 = (_a5 = inst._zod.def).when) != null ? _a6 : _a5.when = (payload) => {
+    const val = payload.value;
+    return !nullish(val) && val.size !== void 0;
+  };
+  inst._zod.onattach.push((inst2) => {
+    var _a7;
+    const curr = (_a7 = inst2._zod.bag.maximum) != null ? _a7 : Number.POSITIVE_INFINITY;
+    if (def.maximum < curr)
+      inst2._zod.bag.maximum = def.maximum;
+  });
+  inst._zod.check = (payload) => {
+    const input = payload.value;
+    const size = input.size;
+    if (size <= def.maximum)
+      return;
+    payload.issues.push({
+      origin: getSizableOrigin(input),
+      code: "too_big",
+      maximum: def.maximum,
+      inclusive: true,
+      input,
+      inst,
+      continue: !def.abort
+    });
+  };
+});
+var $ZodCheckMinSize = /* @__PURE__ */ $constructor("$ZodCheckMinSize", (inst, def) => {
+  var _a6;
+  var _a5;
+  $ZodCheck.init(inst, def);
+  (_a6 = (_a5 = inst._zod.def).when) != null ? _a6 : _a5.when = (payload) => {
+    const val = payload.value;
+    return !nullish(val) && val.size !== void 0;
+  };
+  inst._zod.onattach.push((inst2) => {
+    var _a7;
+    const curr = (_a7 = inst2._zod.bag.minimum) != null ? _a7 : Number.NEGATIVE_INFINITY;
+    if (def.minimum > curr)
+      inst2._zod.bag.minimum = def.minimum;
+  });
+  inst._zod.check = (payload) => {
+    const input = payload.value;
+    const size = input.size;
+    if (size >= def.minimum)
+      return;
+    payload.issues.push({
+      origin: getSizableOrigin(input),
+      code: "too_small",
+      minimum: def.minimum,
+      inclusive: true,
+      input,
+      inst,
+      continue: !def.abort
+    });
+  };
+});
+var $ZodCheckSizeEquals = /* @__PURE__ */ $constructor("$ZodCheckSizeEquals", (inst, def) => {
+  var _a6;
+  var _a5;
+  $ZodCheck.init(inst, def);
+  (_a6 = (_a5 = inst._zod.def).when) != null ? _a6 : _a5.when = (payload) => {
+    const val = payload.value;
+    return !nullish(val) && val.size !== void 0;
+  };
+  inst._zod.onattach.push((inst2) => {
+    const bag = inst2._zod.bag;
+    bag.minimum = def.size;
+    bag.maximum = def.size;
+    bag.size = def.size;
+  });
+  inst._zod.check = (payload) => {
+    const input = payload.value;
+    const size = input.size;
+    if (size === def.size)
+      return;
+    const tooBig = size > def.size;
+    payload.issues.push(__spreadProps(__spreadValues({
+      origin: getSizableOrigin(input)
+    }, tooBig ? { code: "too_big", maximum: def.size } : { code: "too_small", minimum: def.size }), {
+      inclusive: true,
+      exact: true,
+      input: payload.value,
+      inst,
+      continue: !def.abort
+    }));
+  };
+});
+var $ZodCheckMaxLength = /* @__PURE__ */ $constructor("$ZodCheckMaxLength", (inst, def) => {
+  var _a6;
+  var _a5;
+  $ZodCheck.init(inst, def);
+  (_a6 = (_a5 = inst._zod.def).when) != null ? _a6 : _a5.when = (payload) => {
+    const val = payload.value;
+    return !nullish(val) && val.length !== void 0;
+  };
+  inst._zod.onattach.push((inst2) => {
+    var _a7;
+    const curr = (_a7 = inst2._zod.bag.maximum) != null ? _a7 : Number.POSITIVE_INFINITY;
+    if (def.maximum < curr)
+      inst2._zod.bag.maximum = def.maximum;
+  });
+  inst._zod.check = (payload) => {
+    const input = payload.value;
+    const length = input.length;
+    if (length <= def.maximum)
+      return;
+    const origin = getLengthableOrigin(input);
+    payload.issues.push({
+      origin,
+      code: "too_big",
+      maximum: def.maximum,
+      inclusive: true,
+      input,
+      inst,
+      continue: !def.abort
+    });
+  };
+});
+var $ZodCheckMinLength = /* @__PURE__ */ $constructor("$ZodCheckMinLength", (inst, def) => {
+  var _a6;
+  var _a5;
+  $ZodCheck.init(inst, def);
+  (_a6 = (_a5 = inst._zod.def).when) != null ? _a6 : _a5.when = (payload) => {
+    const val = payload.value;
+    return !nullish(val) && val.length !== void 0;
+  };
+  inst._zod.onattach.push((inst2) => {
+    var _a7;
+    const curr = (_a7 = inst2._zod.bag.minimum) != null ? _a7 : Number.NEGATIVE_INFINITY;
+    if (def.minimum > curr)
+      inst2._zod.bag.minimum = def.minimum;
+  });
+  inst._zod.check = (payload) => {
+    const input = payload.value;
+    const length = input.length;
+    if (length >= def.minimum)
+      return;
+    const origin = getLengthableOrigin(input);
+    payload.issues.push({
+      origin,
+      code: "too_small",
+      minimum: def.minimum,
+      inclusive: true,
+      input,
+      inst,
+      continue: !def.abort
+    });
+  };
+});
+var $ZodCheckLengthEquals = /* @__PURE__ */ $constructor("$ZodCheckLengthEquals", (inst, def) => {
+  var _a6;
+  var _a5;
+  $ZodCheck.init(inst, def);
+  (_a6 = (_a5 = inst._zod.def).when) != null ? _a6 : _a5.when = (payload) => {
+    const val = payload.value;
+    return !nullish(val) && val.length !== void 0;
+  };
+  inst._zod.onattach.push((inst2) => {
+    const bag = inst2._zod.bag;
+    bag.minimum = def.length;
+    bag.maximum = def.length;
+    bag.length = def.length;
+  });
+  inst._zod.check = (payload) => {
+    const input = payload.value;
+    const length = input.length;
+    if (length === def.length)
+      return;
+    const origin = getLengthableOrigin(input);
+    const tooBig = length > def.length;
+    payload.issues.push(__spreadProps(__spreadValues({
+      origin
+    }, tooBig ? { code: "too_big", maximum: def.length } : { code: "too_small", minimum: def.length }), {
+      inclusive: true,
+      exact: true,
+      input: payload.value,
+      inst,
+      continue: !def.abort
+    }));
+  };
+});
+var $ZodCheckStringFormat = /* @__PURE__ */ $constructor("$ZodCheckStringFormat", (inst, def) => {
+  var _a6, _b2;
+  var _a5, _b;
+  $ZodCheck.init(inst, def);
+  inst._zod.onattach.push((inst2) => {
+    var _a7;
+    const bag = inst2._zod.bag;
+    bag.format = def.format;
+    if (def.pattern) {
+      (_a7 = bag.patterns) != null ? _a7 : bag.patterns = /* @__PURE__ */ new Set();
+      bag.patterns.add(def.pattern);
+    }
+  });
+  if (def.pattern)
+    (_a6 = (_a5 = inst._zod).check) != null ? _a6 : _a5.check = (payload) => {
+      def.pattern.lastIndex = 0;
+      if (def.pattern.test(payload.value))
+        return;
+      payload.issues.push(__spreadProps(__spreadValues({
+        origin: "string",
+        code: "invalid_format",
+        format: def.format,
+        input: payload.value
+      }, def.pattern ? { pattern: def.pattern.toString() } : {}), {
+        inst,
+        continue: !def.abort
+      }));
+    };
+  else
+    (_b2 = (_b = inst._zod).check) != null ? _b2 : _b.check = () => {
+    };
+});
+var $ZodCheckRegex = /* @__PURE__ */ $constructor("$ZodCheckRegex", (inst, def) => {
+  $ZodCheckStringFormat.init(inst, def);
+  inst._zod.check = (payload) => {
+    def.pattern.lastIndex = 0;
+    if (def.pattern.test(payload.value))
+      return;
+    payload.issues.push({
+      origin: "string",
+      code: "invalid_format",
+      format: "regex",
+      input: payload.value,
+      pattern: def.pattern.toString(),
+      inst,
+      continue: !def.abort
+    });
+  };
+});
+var $ZodCheckLowerCase = /* @__PURE__ */ $constructor("$ZodCheckLowerCase", (inst, def) => {
+  var _a5;
+  (_a5 = def.pattern) != null ? _a5 : def.pattern = lowercase;
+  $ZodCheckStringFormat.init(inst, def);
+});
+var $ZodCheckUpperCase = /* @__PURE__ */ $constructor("$ZodCheckUpperCase", (inst, def) => {
+  var _a5;
+  (_a5 = def.pattern) != null ? _a5 : def.pattern = uppercase;
+  $ZodCheckStringFormat.init(inst, def);
+});
+var $ZodCheckIncludes = /* @__PURE__ */ $constructor("$ZodCheckIncludes", (inst, def) => {
+  $ZodCheck.init(inst, def);
+  const escapedRegex = escapeRegex(def.includes);
+  const pattern = new RegExp(typeof def.position === "number" ? `^.{${def.position}}${escapedRegex}` : escapedRegex);
+  def.pattern = pattern;
+  inst._zod.onattach.push((inst2) => {
+    var _a5;
+    const bag = inst2._zod.bag;
+    (_a5 = bag.patterns) != null ? _a5 : bag.patterns = /* @__PURE__ */ new Set();
+    bag.patterns.add(pattern);
+  });
+  inst._zod.check = (payload) => {
+    if (payload.value.includes(def.includes, def.position))
+      return;
+    payload.issues.push({
+      origin: "string",
+      code: "invalid_format",
+      format: "includes",
+      includes: def.includes,
+      input: payload.value,
+      inst,
+      continue: !def.abort
+    });
+  };
+});
+var $ZodCheckStartsWith = /* @__PURE__ */ $constructor("$ZodCheckStartsWith", (inst, def) => {
+  var _a5;
+  $ZodCheck.init(inst, def);
+  const pattern = new RegExp(`^${escapeRegex(def.prefix)}.*`);
+  (_a5 = def.pattern) != null ? _a5 : def.pattern = pattern;
+  inst._zod.onattach.push((inst2) => {
+    var _a6;
+    const bag = inst2._zod.bag;
+    (_a6 = bag.patterns) != null ? _a6 : bag.patterns = /* @__PURE__ */ new Set();
+    bag.patterns.add(pattern);
+  });
+  inst._zod.check = (payload) => {
+    if (payload.value.startsWith(def.prefix))
+      return;
+    payload.issues.push({
+      origin: "string",
+      code: "invalid_format",
+      format: "starts_with",
+      prefix: def.prefix,
+      input: payload.value,
+      inst,
+      continue: !def.abort
+    });
+  };
+});
+var $ZodCheckEndsWith = /* @__PURE__ */ $constructor("$ZodCheckEndsWith", (inst, def) => {
+  var _a5;
+  $ZodCheck.init(inst, def);
+  const pattern = new RegExp(`.*${escapeRegex(def.suffix)}$`);
+  (_a5 = def.pattern) != null ? _a5 : def.pattern = pattern;
+  inst._zod.onattach.push((inst2) => {
+    var _a6;
+    const bag = inst2._zod.bag;
+    (_a6 = bag.patterns) != null ? _a6 : bag.patterns = /* @__PURE__ */ new Set();
+    bag.patterns.add(pattern);
+  });
+  inst._zod.check = (payload) => {
+    if (payload.value.endsWith(def.suffix))
+      return;
+    payload.issues.push({
+      origin: "string",
+      code: "invalid_format",
+      format: "ends_with",
+      suffix: def.suffix,
+      input: payload.value,
+      inst,
+      continue: !def.abort
+    });
+  };
+});
+function handleCheckPropertyResult(result, payload, property) {
+  if (result.issues.length) {
+    payload.issues.push(...prefixIssues(property, result.issues));
+  }
+}
+var $ZodCheckProperty = /* @__PURE__ */ $constructor("$ZodCheckProperty", (inst, def) => {
+  $ZodCheck.init(inst, def);
+  inst._zod.check = (payload) => {
+    const result = def.schema._zod.run({
+      value: payload.value[def.property],
+      issues: []
+    }, {});
+    if (result instanceof Promise) {
+      return result.then((result2) => handleCheckPropertyResult(result2, payload, def.property));
+    }
+    handleCheckPropertyResult(result, payload, def.property);
+    return;
+  };
+});
+var $ZodCheckMimeType = /* @__PURE__ */ $constructor("$ZodCheckMimeType", (inst, def) => {
+  $ZodCheck.init(inst, def);
+  const mimeSet = new Set(def.mime);
+  inst._zod.onattach.push((inst2) => {
+    inst2._zod.bag.mime = def.mime;
+  });
+  inst._zod.check = (payload) => {
+    if (mimeSet.has(payload.value.type))
+      return;
+    payload.issues.push({
+      code: "invalid_value",
+      values: def.mime,
+      input: payload.value.type,
+      inst,
+      continue: !def.abort
+    });
+  };
+});
+var $ZodCheckOverwrite = /* @__PURE__ */ $constructor("$ZodCheckOverwrite", (inst, def) => {
+  $ZodCheck.init(inst, def);
+  inst._zod.check = (payload) => {
+    payload.value = def.tx(payload.value);
+  };
+});
+
+// node_modules/zod/v4/core/doc.js
+var Doc = class {
+  constructor(args = []) {
+    this.content = [];
+    this.indent = 0;
+    if (this)
+      this.args = args;
+  }
+  indented(fn) {
+    this.indent += 1;
+    fn(this);
+    this.indent -= 1;
+  }
+  write(arg) {
+    if (typeof arg === "function") {
+      arg(this, { execution: "sync" });
+      arg(this, { execution: "async" });
+      return;
+    }
+    const content = arg;
+    const lines = content.split("\n").filter((x) => x);
+    const minIndent = Math.min(...lines.map((x) => x.length - x.trimStart().length));
+    const dedented = lines.map((x) => x.slice(minIndent)).map((x) => " ".repeat(this.indent * 2) + x);
+    for (const line of dedented) {
+      this.content.push(line);
+    }
+  }
+  compile() {
+    var _a5;
+    const F = Function;
+    const args = this == null ? void 0 : this.args;
+    const content = (_a5 = this == null ? void 0 : this.content) != null ? _a5 : [``];
+    const lines = [...content.map((x) => `  ${x}`)];
+    return new F(...args, lines.join("\n"));
+  }
+};
+
+// node_modules/zod/v4/core/versions.js
+var version = {
+  major: 4,
+  minor: 4,
+  patch: 3
+};
+
+// node_modules/zod/v4/core/schemas.js
+var $ZodType = /* @__PURE__ */ $constructor("$ZodType", (inst, def) => {
+  var _a6, _b, _c;
+  var _a5;
+  inst != null ? inst : inst = {};
+  inst._zod.def = def;
+  inst._zod.bag = inst._zod.bag || {};
+  inst._zod.version = version;
+  const checks = [...(_a6 = inst._zod.def.checks) != null ? _a6 : []];
+  if (inst._zod.traits.has("$ZodCheck")) {
+    checks.unshift(inst);
+  }
+  for (const ch of checks) {
+    for (const fn of ch._zod.onattach) {
+      fn(inst);
+    }
+  }
+  if (checks.length === 0) {
+    (_b = (_a5 = inst._zod).deferred) != null ? _b : _a5.deferred = [];
+    (_c = inst._zod.deferred) == null ? void 0 : _c.push(() => {
+      inst._zod.run = inst._zod.parse;
+    });
+  } else {
+    const runChecks = (payload, checks2, ctx) => {
+      let isAborted = aborted(payload);
+      let asyncResult;
+      for (const ch of checks2) {
+        if (ch._zod.def.when) {
+          if (explicitlyAborted(payload))
+            continue;
+          const shouldRun = ch._zod.def.when(payload);
+          if (!shouldRun)
+            continue;
+        } else if (isAborted) {
+          continue;
+        }
+        const currLen = payload.issues.length;
+        const _ = ch._zod.check(payload);
+        if (_ instanceof Promise && (ctx == null ? void 0 : ctx.async) === false) {
+          throw new $ZodAsyncError();
+        }
+        if (asyncResult || _ instanceof Promise) {
+          asyncResult = (asyncResult != null ? asyncResult : Promise.resolve()).then(() => __async(void 0, null, function* () {
+            yield _;
+            const nextLen = payload.issues.length;
+            if (nextLen === currLen)
+              return;
+            if (!isAborted)
+              isAborted = aborted(payload, currLen);
+          }));
+        } else {
+          const nextLen = payload.issues.length;
+          if (nextLen === currLen)
+            continue;
+          if (!isAborted)
+            isAborted = aborted(payload, currLen);
+        }
+      }
+      if (asyncResult) {
+        return asyncResult.then(() => {
+          return payload;
+        });
+      }
+      return payload;
+    };
+    const handleCanaryResult = (canary, payload, ctx) => {
+      if (aborted(canary)) {
+        canary.aborted = true;
+        return canary;
+      }
+      const checkResult = runChecks(payload, checks, ctx);
+      if (checkResult instanceof Promise) {
+        if (ctx.async === false)
+          throw new $ZodAsyncError();
+        return checkResult.then((checkResult2) => inst._zod.parse(checkResult2, ctx));
+      }
+      return inst._zod.parse(checkResult, ctx);
+    };
+    inst._zod.run = (payload, ctx) => {
+      if (ctx.skipChecks) {
+        return inst._zod.parse(payload, ctx);
+      }
+      if (ctx.direction === "backward") {
+        const canary = inst._zod.parse({ value: payload.value, issues: [] }, __spreadProps(__spreadValues({}, ctx), { skipChecks: true }));
+        if (canary instanceof Promise) {
+          return canary.then((canary2) => {
+            return handleCanaryResult(canary2, payload, ctx);
+          });
+        }
+        return handleCanaryResult(canary, payload, ctx);
+      }
+      const result = inst._zod.parse(payload, ctx);
+      if (result instanceof Promise) {
+        if (ctx.async === false)
+          throw new $ZodAsyncError();
+        return result.then((result2) => runChecks(result2, checks, ctx));
+      }
+      return runChecks(result, checks, ctx);
+    };
+  }
+  defineLazy(inst, "~standard", () => ({
+    validate: (value) => {
+      var _a7;
+      try {
+        const r = safeParse(inst, value);
+        return r.success ? { value: r.data } : { issues: (_a7 = r.error) == null ? void 0 : _a7.issues };
+      } catch (_) {
+        return safeParseAsync(inst, value).then((r) => {
+          var _a8;
+          return r.success ? { value: r.data } : { issues: (_a8 = r.error) == null ? void 0 : _a8.issues };
+        });
+      }
+    },
+    vendor: "zod",
+    version: 1
+  }));
+});
+var $ZodString = /* @__PURE__ */ $constructor("$ZodString", (inst, def) => {
+  var _a5, _b, _c;
+  $ZodType.init(inst, def);
+  inst._zod.pattern = (_c = [...(_b = (_a5 = inst == null ? void 0 : inst._zod.bag) == null ? void 0 : _a5.patterns) != null ? _b : []].pop()) != null ? _c : string(inst._zod.bag);
+  inst._zod.parse = (payload, _) => {
+    if (def.coerce)
+      try {
+        payload.value = String(payload.value);
+      } catch (_2) {
+      }
+    if (typeof payload.value === "string")
+      return payload;
+    payload.issues.push({
+      expected: "string",
+      code: "invalid_type",
+      input: payload.value,
+      inst
+    });
+    return payload;
+  };
+});
+var $ZodStringFormat = /* @__PURE__ */ $constructor("$ZodStringFormat", (inst, def) => {
+  $ZodCheckStringFormat.init(inst, def);
+  $ZodString.init(inst, def);
+});
+var $ZodGUID = /* @__PURE__ */ $constructor("$ZodGUID", (inst, def) => {
+  var _a5;
+  (_a5 = def.pattern) != null ? _a5 : def.pattern = guid;
+  $ZodStringFormat.init(inst, def);
+});
+var $ZodUUID = /* @__PURE__ */ $constructor("$ZodUUID", (inst, def) => {
+  var _a5, _b;
+  if (def.version) {
+    const versionMap = {
+      v1: 1,
+      v2: 2,
+      v3: 3,
+      v4: 4,
+      v5: 5,
+      v6: 6,
+      v7: 7,
+      v8: 8
+    };
+    const v = versionMap[def.version];
+    if (v === void 0)
+      throw new Error(`Invalid UUID version: "${def.version}"`);
+    (_a5 = def.pattern) != null ? _a5 : def.pattern = uuid(v);
+  } else
+    (_b = def.pattern) != null ? _b : def.pattern = uuid();
+  $ZodStringFormat.init(inst, def);
+});
+var $ZodEmail = /* @__PURE__ */ $constructor("$ZodEmail", (inst, def) => {
+  var _a5;
+  (_a5 = def.pattern) != null ? _a5 : def.pattern = email;
+  $ZodStringFormat.init(inst, def);
+});
+var $ZodURL = /* @__PURE__ */ $constructor("$ZodURL", (inst, def) => {
+  $ZodStringFormat.init(inst, def);
+  inst._zod.check = (payload) => {
+    var _a5;
+    try {
+      const trimmed = payload.value.trim();
+      if (!def.normalize && ((_a5 = def.protocol) == null ? void 0 : _a5.source) === httpProtocol.source) {
+        if (!/^https?:\/\//i.test(trimmed)) {
+          payload.issues.push({
+            code: "invalid_format",
+            format: "url",
+            note: "Invalid URL format",
+            input: payload.value,
+            inst,
+            continue: !def.abort
+          });
+          return;
+        }
+      }
+      const url2 = new URL(trimmed);
+      if (def.hostname) {
+        def.hostname.lastIndex = 0;
+        if (!def.hostname.test(url2.hostname)) {
+          payload.issues.push({
+            code: "invalid_format",
+            format: "url",
+            note: "Invalid hostname",
+            pattern: def.hostname.source,
+            input: payload.value,
+            inst,
+            continue: !def.abort
+          });
+        }
+      }
+      if (def.protocol) {
+        def.protocol.lastIndex = 0;
+        if (!def.protocol.test(url2.protocol.endsWith(":") ? url2.protocol.slice(0, -1) : url2.protocol)) {
+          payload.issues.push({
+            code: "invalid_format",
+            format: "url",
+            note: "Invalid protocol",
+            pattern: def.protocol.source,
+            input: payload.value,
+            inst,
+            continue: !def.abort
+          });
+        }
+      }
+      if (def.normalize) {
+        payload.value = url2.href;
+      } else {
+        payload.value = trimmed;
+      }
+      return;
+    } catch (_) {
+      payload.issues.push({
+        code: "invalid_format",
+        format: "url",
+        input: payload.value,
+        inst,
+        continue: !def.abort
+      });
+    }
+  };
+});
+var $ZodEmoji = /* @__PURE__ */ $constructor("$ZodEmoji", (inst, def) => {
+  var _a5;
+  (_a5 = def.pattern) != null ? _a5 : def.pattern = emoji();
+  $ZodStringFormat.init(inst, def);
+});
+var $ZodNanoID = /* @__PURE__ */ $constructor("$ZodNanoID", (inst, def) => {
+  var _a5;
+  (_a5 = def.pattern) != null ? _a5 : def.pattern = nanoid;
+  $ZodStringFormat.init(inst, def);
+});
+var $ZodCUID = /* @__PURE__ */ $constructor("$ZodCUID", (inst, def) => {
+  var _a5;
+  (_a5 = def.pattern) != null ? _a5 : def.pattern = cuid;
+  $ZodStringFormat.init(inst, def);
+});
+var $ZodCUID2 = /* @__PURE__ */ $constructor("$ZodCUID2", (inst, def) => {
+  var _a5;
+  (_a5 = def.pattern) != null ? _a5 : def.pattern = cuid2;
+  $ZodStringFormat.init(inst, def);
+});
+var $ZodULID = /* @__PURE__ */ $constructor("$ZodULID", (inst, def) => {
+  var _a5;
+  (_a5 = def.pattern) != null ? _a5 : def.pattern = ulid;
+  $ZodStringFormat.init(inst, def);
+});
+var $ZodXID = /* @__PURE__ */ $constructor("$ZodXID", (inst, def) => {
+  var _a5;
+  (_a5 = def.pattern) != null ? _a5 : def.pattern = xid;
+  $ZodStringFormat.init(inst, def);
+});
+var $ZodKSUID = /* @__PURE__ */ $constructor("$ZodKSUID", (inst, def) => {
+  var _a5;
+  (_a5 = def.pattern) != null ? _a5 : def.pattern = ksuid;
+  $ZodStringFormat.init(inst, def);
+});
+var $ZodISODateTime = /* @__PURE__ */ $constructor("$ZodISODateTime", (inst, def) => {
+  var _a5;
+  (_a5 = def.pattern) != null ? _a5 : def.pattern = datetime(def);
+  $ZodStringFormat.init(inst, def);
+});
+var $ZodISODate = /* @__PURE__ */ $constructor("$ZodISODate", (inst, def) => {
+  var _a5;
+  (_a5 = def.pattern) != null ? _a5 : def.pattern = date;
+  $ZodStringFormat.init(inst, def);
+});
+var $ZodISOTime = /* @__PURE__ */ $constructor("$ZodISOTime", (inst, def) => {
+  var _a5;
+  (_a5 = def.pattern) != null ? _a5 : def.pattern = time(def);
+  $ZodStringFormat.init(inst, def);
+});
+var $ZodISODuration = /* @__PURE__ */ $constructor("$ZodISODuration", (inst, def) => {
+  var _a5;
+  (_a5 = def.pattern) != null ? _a5 : def.pattern = duration;
+  $ZodStringFormat.init(inst, def);
+});
+var $ZodIPv4 = /* @__PURE__ */ $constructor("$ZodIPv4", (inst, def) => {
+  var _a5;
+  (_a5 = def.pattern) != null ? _a5 : def.pattern = ipv4;
+  $ZodStringFormat.init(inst, def);
+  inst._zod.bag.format = `ipv4`;
+});
+var $ZodIPv6 = /* @__PURE__ */ $constructor("$ZodIPv6", (inst, def) => {
+  var _a5;
+  (_a5 = def.pattern) != null ? _a5 : def.pattern = ipv6;
+  $ZodStringFormat.init(inst, def);
+  inst._zod.bag.format = `ipv6`;
+  inst._zod.check = (payload) => {
+    try {
+      new URL(`http://[${payload.value}]`);
+    } catch (e) {
+      payload.issues.push({
+        code: "invalid_format",
+        format: "ipv6",
+        input: payload.value,
+        inst,
+        continue: !def.abort
+      });
+    }
+  };
+});
+var $ZodMAC = /* @__PURE__ */ $constructor("$ZodMAC", (inst, def) => {
+  var _a5;
+  (_a5 = def.pattern) != null ? _a5 : def.pattern = mac(def.delimiter);
+  $ZodStringFormat.init(inst, def);
+  inst._zod.bag.format = `mac`;
+});
+var $ZodCIDRv4 = /* @__PURE__ */ $constructor("$ZodCIDRv4", (inst, def) => {
+  var _a5;
+  (_a5 = def.pattern) != null ? _a5 : def.pattern = cidrv4;
+  $ZodStringFormat.init(inst, def);
+});
+var $ZodCIDRv6 = /* @__PURE__ */ $constructor("$ZodCIDRv6", (inst, def) => {
+  var _a5;
+  (_a5 = def.pattern) != null ? _a5 : def.pattern = cidrv6;
+  $ZodStringFormat.init(inst, def);
+  inst._zod.check = (payload) => {
+    const parts = payload.value.split("/");
+    try {
+      if (parts.length !== 2)
+        throw new Error();
+      const [address, prefix] = parts;
+      if (!prefix)
+        throw new Error();
+      const prefixNum = Number(prefix);
+      if (`${prefixNum}` !== prefix)
+        throw new Error();
+      if (prefixNum < 0 || prefixNum > 128)
+        throw new Error();
+      new URL(`http://[${address}]`);
+    } catch (e) {
+      payload.issues.push({
+        code: "invalid_format",
+        format: "cidrv6",
+        input: payload.value,
+        inst,
+        continue: !def.abort
+      });
+    }
+  };
+});
+function isValidBase64(data) {
+  if (data === "")
+    return true;
+  if (/\s/.test(data))
+    return false;
+  if (data.length % 4 !== 0)
+    return false;
+  try {
+    atob(data);
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+var $ZodBase64 = /* @__PURE__ */ $constructor("$ZodBase64", (inst, def) => {
+  var _a5;
+  (_a5 = def.pattern) != null ? _a5 : def.pattern = base64;
+  $ZodStringFormat.init(inst, def);
+  inst._zod.bag.contentEncoding = "base64";
+  inst._zod.check = (payload) => {
+    if (isValidBase64(payload.value))
+      return;
+    payload.issues.push({
+      code: "invalid_format",
+      format: "base64",
+      input: payload.value,
+      inst,
+      continue: !def.abort
+    });
+  };
+});
+function isValidBase64URL(data) {
+  if (!base64url.test(data))
+    return false;
+  const base643 = data.replace(/[-_]/g, (c) => c === "-" ? "+" : "/");
+  const padded = base643.padEnd(Math.ceil(base643.length / 4) * 4, "=");
+  return isValidBase64(padded);
+}
+var $ZodBase64URL = /* @__PURE__ */ $constructor("$ZodBase64URL", (inst, def) => {
+  var _a5;
+  (_a5 = def.pattern) != null ? _a5 : def.pattern = base64url;
+  $ZodStringFormat.init(inst, def);
+  inst._zod.bag.contentEncoding = "base64url";
+  inst._zod.check = (payload) => {
+    if (isValidBase64URL(payload.value))
+      return;
+    payload.issues.push({
+      code: "invalid_format",
+      format: "base64url",
+      input: payload.value,
+      inst,
+      continue: !def.abort
+    });
+  };
+});
+var $ZodE164 = /* @__PURE__ */ $constructor("$ZodE164", (inst, def) => {
+  var _a5;
+  (_a5 = def.pattern) != null ? _a5 : def.pattern = e164;
+  $ZodStringFormat.init(inst, def);
+});
+function isValidJWT(token, algorithm = null) {
+  try {
+    const tokensParts = token.split(".");
+    if (tokensParts.length !== 3)
+      return false;
+    const [header] = tokensParts;
+    if (!header)
+      return false;
+    const parsedHeader = JSON.parse(atob(header));
+    if ("typ" in parsedHeader && (parsedHeader == null ? void 0 : parsedHeader.typ) !== "JWT")
+      return false;
+    if (!parsedHeader.alg)
+      return false;
+    if (algorithm && (!("alg" in parsedHeader) || parsedHeader.alg !== algorithm))
+      return false;
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+var $ZodJWT = /* @__PURE__ */ $constructor("$ZodJWT", (inst, def) => {
+  $ZodStringFormat.init(inst, def);
+  inst._zod.check = (payload) => {
+    if (isValidJWT(payload.value, def.alg))
+      return;
+    payload.issues.push({
+      code: "invalid_format",
+      format: "jwt",
+      input: payload.value,
+      inst,
+      continue: !def.abort
+    });
+  };
+});
+var $ZodCustomStringFormat = /* @__PURE__ */ $constructor("$ZodCustomStringFormat", (inst, def) => {
+  $ZodStringFormat.init(inst, def);
+  inst._zod.check = (payload) => {
+    if (def.fn(payload.value))
+      return;
+    payload.issues.push({
+      code: "invalid_format",
+      format: def.format,
+      input: payload.value,
+      inst,
+      continue: !def.abort
+    });
+  };
+});
+var $ZodNumber = /* @__PURE__ */ $constructor("$ZodNumber", (inst, def) => {
+  var _a5;
+  $ZodType.init(inst, def);
+  inst._zod.pattern = (_a5 = inst._zod.bag.pattern) != null ? _a5 : number;
+  inst._zod.parse = (payload, _ctx) => {
+    if (def.coerce)
+      try {
+        payload.value = Number(payload.value);
+      } catch (_) {
+      }
+    const input = payload.value;
+    if (typeof input === "number" && !Number.isNaN(input) && Number.isFinite(input)) {
+      return payload;
+    }
+    const received = typeof input === "number" ? Number.isNaN(input) ? "NaN" : !Number.isFinite(input) ? "Infinity" : void 0 : void 0;
+    payload.issues.push(__spreadValues({
+      expected: "number",
+      code: "invalid_type",
+      input,
+      inst
+    }, received ? { received } : {}));
+    return payload;
+  };
+});
+var $ZodNumberFormat = /* @__PURE__ */ $constructor("$ZodNumberFormat", (inst, def) => {
+  $ZodCheckNumberFormat.init(inst, def);
+  $ZodNumber.init(inst, def);
+});
+var $ZodBoolean = /* @__PURE__ */ $constructor("$ZodBoolean", (inst, def) => {
+  $ZodType.init(inst, def);
+  inst._zod.pattern = boolean;
+  inst._zod.parse = (payload, _ctx) => {
+    if (def.coerce)
+      try {
+        payload.value = Boolean(payload.value);
+      } catch (_) {
+      }
+    const input = payload.value;
+    if (typeof input === "boolean")
+      return payload;
+    payload.issues.push({
+      expected: "boolean",
+      code: "invalid_type",
+      input,
+      inst
+    });
+    return payload;
+  };
+});
+var $ZodBigInt = /* @__PURE__ */ $constructor("$ZodBigInt", (inst, def) => {
+  $ZodType.init(inst, def);
+  inst._zod.pattern = bigint;
+  inst._zod.parse = (payload, _ctx) => {
+    if (def.coerce)
+      try {
+        payload.value = BigInt(payload.value);
+      } catch (_) {
+      }
+    if (typeof payload.value === "bigint")
+      return payload;
+    payload.issues.push({
+      expected: "bigint",
+      code: "invalid_type",
+      input: payload.value,
+      inst
+    });
+    return payload;
+  };
+});
+var $ZodBigIntFormat = /* @__PURE__ */ $constructor("$ZodBigIntFormat", (inst, def) => {
+  $ZodCheckBigIntFormat.init(inst, def);
+  $ZodBigInt.init(inst, def);
+});
+var $ZodSymbol = /* @__PURE__ */ $constructor("$ZodSymbol", (inst, def) => {
+  $ZodType.init(inst, def);
+  inst._zod.parse = (payload, _ctx) => {
+    const input = payload.value;
+    if (typeof input === "symbol")
+      return payload;
+    payload.issues.push({
+      expected: "symbol",
+      code: "invalid_type",
+      input,
+      inst
+    });
+    return payload;
+  };
+});
+var $ZodUndefined = /* @__PURE__ */ $constructor("$ZodUndefined", (inst, def) => {
+  $ZodType.init(inst, def);
+  inst._zod.pattern = _undefined;
+  inst._zod.values = /* @__PURE__ */ new Set([void 0]);
+  inst._zod.parse = (payload, _ctx) => {
+    const input = payload.value;
+    if (typeof input === "undefined")
+      return payload;
+    payload.issues.push({
+      expected: "undefined",
+      code: "invalid_type",
+      input,
+      inst
+    });
+    return payload;
+  };
+});
+var $ZodNull = /* @__PURE__ */ $constructor("$ZodNull", (inst, def) => {
+  $ZodType.init(inst, def);
+  inst._zod.pattern = _null;
+  inst._zod.values = /* @__PURE__ */ new Set([null]);
+  inst._zod.parse = (payload, _ctx) => {
+    const input = payload.value;
+    if (input === null)
+      return payload;
+    payload.issues.push({
+      expected: "null",
+      code: "invalid_type",
+      input,
+      inst
+    });
+    return payload;
+  };
+});
+var $ZodAny = /* @__PURE__ */ $constructor("$ZodAny", (inst, def) => {
+  $ZodType.init(inst, def);
+  inst._zod.parse = (payload) => payload;
+});
+var $ZodUnknown = /* @__PURE__ */ $constructor("$ZodUnknown", (inst, def) => {
+  $ZodType.init(inst, def);
+  inst._zod.parse = (payload) => payload;
+});
+var $ZodNever = /* @__PURE__ */ $constructor("$ZodNever", (inst, def) => {
+  $ZodType.init(inst, def);
+  inst._zod.parse = (payload, _ctx) => {
+    payload.issues.push({
+      expected: "never",
+      code: "invalid_type",
+      input: payload.value,
+      inst
+    });
+    return payload;
+  };
+});
+var $ZodVoid = /* @__PURE__ */ $constructor("$ZodVoid", (inst, def) => {
+  $ZodType.init(inst, def);
+  inst._zod.parse = (payload, _ctx) => {
+    const input = payload.value;
+    if (typeof input === "undefined")
+      return payload;
+    payload.issues.push({
+      expected: "void",
+      code: "invalid_type",
+      input,
+      inst
+    });
+    return payload;
+  };
+});
+var $ZodDate = /* @__PURE__ */ $constructor("$ZodDate", (inst, def) => {
+  $ZodType.init(inst, def);
+  inst._zod.parse = (payload, _ctx) => {
+    if (def.coerce) {
+      try {
+        payload.value = new Date(payload.value);
+      } catch (_err) {
+      }
+    }
+    const input = payload.value;
+    const isDate = input instanceof Date;
+    const isValidDate = isDate && !Number.isNaN(input.getTime());
+    if (isValidDate)
+      return payload;
+    payload.issues.push(__spreadProps(__spreadValues({
+      expected: "date",
+      code: "invalid_type",
+      input
+    }, isDate ? { received: "Invalid Date" } : {}), {
+      inst
+    }));
+    return payload;
+  };
+});
+function handleArrayResult(result, final, index) {
+  if (result.issues.length) {
+    final.issues.push(...prefixIssues(index, result.issues));
+  }
+  final.value[index] = result.value;
+}
+var $ZodArray = /* @__PURE__ */ $constructor("$ZodArray", (inst, def) => {
+  $ZodType.init(inst, def);
+  inst._zod.parse = (payload, ctx) => {
+    const input = payload.value;
+    if (!Array.isArray(input)) {
+      payload.issues.push({
+        expected: "array",
+        code: "invalid_type",
+        input,
+        inst
+      });
+      return payload;
+    }
+    payload.value = Array(input.length);
+    const proms = [];
+    for (let i = 0; i < input.length; i++) {
+      const item = input[i];
+      const result = def.element._zod.run({
+        value: item,
+        issues: []
+      }, ctx);
+      if (result instanceof Promise) {
+        proms.push(result.then((result2) => handleArrayResult(result2, payload, i)));
+      } else {
+        handleArrayResult(result, payload, i);
+      }
+    }
+    if (proms.length) {
+      return Promise.all(proms).then(() => payload);
+    }
+    return payload;
+  };
+});
+function handlePropertyResult(result, final, key, input, isOptionalIn, isOptionalOut) {
+  const isPresent = key in input;
+  if (result.issues.length) {
+    if (isOptionalIn && isOptionalOut && !isPresent) {
+      return;
+    }
+    final.issues.push(...prefixIssues(key, result.issues));
+  }
+  if (!isPresent && !isOptionalIn) {
+    if (!result.issues.length) {
+      final.issues.push({
+        code: "invalid_type",
+        expected: "nonoptional",
+        input: void 0,
+        path: [key]
+      });
+    }
+    return;
+  }
+  if (result.value === void 0) {
+    if (isPresent) {
+      final.value[key] = void 0;
+    }
+  } else {
+    final.value[key] = result.value;
+  }
+}
+function normalizeDef(def) {
+  var _a5, _b, _c, _d;
+  const keys = Object.keys(def.shape);
+  for (const k of keys) {
+    if (!((_d = (_c = (_b = (_a5 = def.shape) == null ? void 0 : _a5[k]) == null ? void 0 : _b._zod) == null ? void 0 : _c.traits) == null ? void 0 : _d.has("$ZodType"))) {
+      throw new Error(`Invalid element at key "${k}": expected a Zod schema`);
+    }
+  }
+  const okeys = optionalKeys(def.shape);
+  return __spreadProps(__spreadValues({}, def), {
+    keys,
+    keySet: new Set(keys),
+    numKeys: keys.length,
+    optionalKeys: new Set(okeys)
+  });
+}
+function handleCatchall(proms, input, payload, ctx, def, inst) {
+  const unrecognized = [];
+  const keySet = def.keySet;
+  const _catchall = def.catchall._zod;
+  const t = _catchall.def.type;
+  const isOptionalIn = _catchall.optin === "optional";
+  const isOptionalOut = _catchall.optout === "optional";
+  for (const key in input) {
+    if (key === "__proto__")
+      continue;
+    if (keySet.has(key))
+      continue;
+    if (t === "never") {
+      unrecognized.push(key);
+      continue;
+    }
+    const r = _catchall.run({ value: input[key], issues: [] }, ctx);
+    if (r instanceof Promise) {
+      proms.push(r.then((r2) => handlePropertyResult(r2, payload, key, input, isOptionalIn, isOptionalOut)));
+    } else {
+      handlePropertyResult(r, payload, key, input, isOptionalIn, isOptionalOut);
+    }
+  }
+  if (unrecognized.length) {
+    payload.issues.push({
+      code: "unrecognized_keys",
+      keys: unrecognized,
+      input,
+      inst
+    });
+  }
+  if (!proms.length)
+    return payload;
+  return Promise.all(proms).then(() => {
+    return payload;
+  });
+}
+var $ZodObject = /* @__PURE__ */ $constructor("$ZodObject", (inst, def) => {
+  $ZodType.init(inst, def);
+  const desc = Object.getOwnPropertyDescriptor(def, "shape");
+  if (!(desc == null ? void 0 : desc.get)) {
+    const sh = def.shape;
+    Object.defineProperty(def, "shape", {
+      get: () => {
+        const newSh = __spreadValues({}, sh);
+        Object.defineProperty(def, "shape", {
+          value: newSh
+        });
+        return newSh;
+      }
+    });
+  }
+  const _normalized = cached(() => normalizeDef(def));
+  defineLazy(inst._zod, "propValues", () => {
+    var _a5;
+    const shape = def.shape;
+    const propValues = {};
+    for (const key in shape) {
+      const field = shape[key]._zod;
+      if (field.values) {
+        (_a5 = propValues[key]) != null ? _a5 : propValues[key] = /* @__PURE__ */ new Set();
+        for (const v of field.values)
+          propValues[key].add(v);
+      }
+    }
+    return propValues;
+  });
+  const isObject2 = isObject;
+  const catchall = def.catchall;
+  let value;
+  inst._zod.parse = (payload, ctx) => {
+    value != null ? value : value = _normalized.value;
+    const input = payload.value;
+    if (!isObject2(input)) {
+      payload.issues.push({
+        expected: "object",
+        code: "invalid_type",
+        input,
+        inst
+      });
+      return payload;
+    }
+    payload.value = {};
+    const proms = [];
+    const shape = value.shape;
+    for (const key of value.keys) {
+      const el = shape[key];
+      const isOptionalIn = el._zod.optin === "optional";
+      const isOptionalOut = el._zod.optout === "optional";
+      const r = el._zod.run({ value: input[key], issues: [] }, ctx);
+      if (r instanceof Promise) {
+        proms.push(r.then((r2) => handlePropertyResult(r2, payload, key, input, isOptionalIn, isOptionalOut)));
+      } else {
+        handlePropertyResult(r, payload, key, input, isOptionalIn, isOptionalOut);
+      }
+    }
+    if (!catchall) {
+      return proms.length ? Promise.all(proms).then(() => payload) : payload;
+    }
+    return handleCatchall(proms, input, payload, ctx, _normalized.value, inst);
+  };
+});
+var $ZodObjectJIT = /* @__PURE__ */ $constructor("$ZodObjectJIT", (inst, def) => {
+  $ZodObject.init(inst, def);
+  const superParse = inst._zod.parse;
+  const _normalized = cached(() => normalizeDef(def));
+  const generateFastpass = (shape) => {
+    var _a5, _b;
+    const doc = new Doc(["shape", "payload", "ctx"]);
+    const normalized = _normalized.value;
+    const parseStr = (key) => {
+      const k = esc(key);
+      return `shape[${k}]._zod.run({ value: input[${k}], issues: [] }, ctx)`;
+    };
+    doc.write(`const input = payload.value;`);
+    const ids = /* @__PURE__ */ Object.create(null);
+    let counter = 0;
+    for (const key of normalized.keys) {
+      ids[key] = `key_${counter++}`;
+    }
+    doc.write(`const newResult = {};`);
+    for (const key of normalized.keys) {
+      const id = ids[key];
+      const k = esc(key);
+      const schema = shape[key];
+      const isOptionalIn = ((_a5 = schema == null ? void 0 : schema._zod) == null ? void 0 : _a5.optin) === "optional";
+      const isOptionalOut = ((_b = schema == null ? void 0 : schema._zod) == null ? void 0 : _b.optout) === "optional";
+      doc.write(`const ${id} = ${parseStr(key)};`);
+      if (isOptionalIn && isOptionalOut) {
+        doc.write(`
+        if (${id}.issues.length) {
+          if (${k} in input) {
+            payload.issues = payload.issues.concat(${id}.issues.map(iss => ({
+              ...iss,
+              path: iss.path ? [${k}, ...iss.path] : [${k}]
+            })));
+          }
+        }
+        
+        if (${id}.value === undefined) {
+          if (${k} in input) {
+            newResult[${k}] = undefined;
+          }
+        } else {
+          newResult[${k}] = ${id}.value;
+        }
+        
+      `);
+      } else if (!isOptionalIn) {
+        doc.write(`
+        const ${id}_present = ${k} in input;
+        if (${id}.issues.length) {
+          payload.issues = payload.issues.concat(${id}.issues.map(iss => ({
+            ...iss,
+            path: iss.path ? [${k}, ...iss.path] : [${k}]
+          })));
+        }
+        if (!${id}_present && !${id}.issues.length) {
+          payload.issues.push({
+            code: "invalid_type",
+            expected: "nonoptional",
+            input: undefined,
+            path: [${k}]
+          });
+        }
+
+        if (${id}_present) {
+          if (${id}.value === undefined) {
+            newResult[${k}] = undefined;
+          } else {
+            newResult[${k}] = ${id}.value;
+          }
+        }
+
+      `);
+      } else {
+        doc.write(`
+        if (${id}.issues.length) {
+          payload.issues = payload.issues.concat(${id}.issues.map(iss => ({
+            ...iss,
+            path: iss.path ? [${k}, ...iss.path] : [${k}]
+          })));
+        }
+        
+        if (${id}.value === undefined) {
+          if (${k} in input) {
+            newResult[${k}] = undefined;
+          }
+        } else {
+          newResult[${k}] = ${id}.value;
+        }
+        
+      `);
+      }
+    }
+    doc.write(`payload.value = newResult;`);
+    doc.write(`return payload;`);
+    const fn = doc.compile();
+    return (payload, ctx) => fn(shape, payload, ctx);
+  };
+  let fastpass;
+  const isObject2 = isObject;
+  const jit = !globalConfig.jitless;
+  const allowsEval2 = allowsEval;
+  const fastEnabled = jit && allowsEval2.value;
+  const catchall = def.catchall;
+  let value;
+  inst._zod.parse = (payload, ctx) => {
+    value != null ? value : value = _normalized.value;
+    const input = payload.value;
+    if (!isObject2(input)) {
+      payload.issues.push({
+        expected: "object",
+        code: "invalid_type",
+        input,
+        inst
+      });
+      return payload;
+    }
+    if (jit && fastEnabled && (ctx == null ? void 0 : ctx.async) === false && ctx.jitless !== true) {
+      if (!fastpass)
+        fastpass = generateFastpass(def.shape);
+      payload = fastpass(payload, ctx);
+      if (!catchall)
+        return payload;
+      return handleCatchall([], input, payload, ctx, value, inst);
+    }
+    return superParse(payload, ctx);
+  };
+});
+function handleUnionResults(results, final, inst, ctx) {
+  for (const result of results) {
+    if (result.issues.length === 0) {
+      final.value = result.value;
+      return final;
+    }
+  }
+  const nonaborted = results.filter((r) => !aborted(r));
+  if (nonaborted.length === 1) {
+    final.value = nonaborted[0].value;
+    return nonaborted[0];
+  }
+  final.issues.push({
+    code: "invalid_union",
+    input: final.value,
+    inst,
+    errors: results.map((result) => result.issues.map((iss) => finalizeIssue(iss, ctx, config())))
+  });
+  return final;
+}
+var $ZodUnion = /* @__PURE__ */ $constructor("$ZodUnion", (inst, def) => {
+  $ZodType.init(inst, def);
+  defineLazy(inst._zod, "optin", () => def.options.some((o) => o._zod.optin === "optional") ? "optional" : void 0);
+  defineLazy(inst._zod, "optout", () => def.options.some((o) => o._zod.optout === "optional") ? "optional" : void 0);
+  defineLazy(inst._zod, "values", () => {
+    if (def.options.every((o) => o._zod.values)) {
+      return new Set(def.options.flatMap((option) => Array.from(option._zod.values)));
+    }
+    return void 0;
+  });
+  defineLazy(inst._zod, "pattern", () => {
+    if (def.options.every((o) => o._zod.pattern)) {
+      const patterns = def.options.map((o) => o._zod.pattern);
+      return new RegExp(`^(${patterns.map((p) => cleanRegex(p.source)).join("|")})$`);
+    }
+    return void 0;
+  });
+  const first = def.options.length === 1 ? def.options[0]._zod.run : null;
+  inst._zod.parse = (payload, ctx) => {
+    if (first) {
+      return first(payload, ctx);
+    }
+    let async = false;
+    const results = [];
+    for (const option of def.options) {
+      const result = option._zod.run({
+        value: payload.value,
+        issues: []
+      }, ctx);
+      if (result instanceof Promise) {
+        results.push(result);
+        async = true;
+      } else {
+        if (result.issues.length === 0)
+          return result;
+        results.push(result);
+      }
+    }
+    if (!async)
+      return handleUnionResults(results, payload, inst, ctx);
+    return Promise.all(results).then((results2) => {
+      return handleUnionResults(results2, payload, inst, ctx);
+    });
+  };
+});
+function handleExclusiveUnionResults(results, final, inst, ctx) {
+  const successes = results.filter((r) => r.issues.length === 0);
+  if (successes.length === 1) {
+    final.value = successes[0].value;
+    return final;
+  }
+  if (successes.length === 0) {
+    final.issues.push({
+      code: "invalid_union",
+      input: final.value,
+      inst,
+      errors: results.map((result) => result.issues.map((iss) => finalizeIssue(iss, ctx, config())))
+    });
+  } else {
+    final.issues.push({
+      code: "invalid_union",
+      input: final.value,
+      inst,
+      errors: [],
+      inclusive: false
+    });
+  }
+  return final;
+}
+var $ZodXor = /* @__PURE__ */ $constructor("$ZodXor", (inst, def) => {
+  $ZodUnion.init(inst, def);
+  def.inclusive = false;
+  const first = def.options.length === 1 ? def.options[0]._zod.run : null;
+  inst._zod.parse = (payload, ctx) => {
+    if (first) {
+      return first(payload, ctx);
+    }
+    let async = false;
+    const results = [];
+    for (const option of def.options) {
+      const result = option._zod.run({
+        value: payload.value,
+        issues: []
+      }, ctx);
+      if (result instanceof Promise) {
+        results.push(result);
+        async = true;
+      } else {
+        results.push(result);
+      }
+    }
+    if (!async)
+      return handleExclusiveUnionResults(results, payload, inst, ctx);
+    return Promise.all(results).then((results2) => {
+      return handleExclusiveUnionResults(results2, payload, inst, ctx);
+    });
+  };
+});
+var $ZodDiscriminatedUnion = /* @__PURE__ */ $constructor("$ZodDiscriminatedUnion", (inst, def) => {
+  def.inclusive = false;
+  $ZodUnion.init(inst, def);
+  const _super = inst._zod.parse;
+  defineLazy(inst._zod, "propValues", () => {
+    const propValues = {};
+    for (const option of def.options) {
+      const pv = option._zod.propValues;
+      if (!pv || Object.keys(pv).length === 0)
+        throw new Error(`Invalid discriminated union option at index "${def.options.indexOf(option)}"`);
+      for (const [k, v] of Object.entries(pv)) {
+        if (!propValues[k])
+          propValues[k] = /* @__PURE__ */ new Set();
+        for (const val of v) {
+          propValues[k].add(val);
+        }
+      }
+    }
+    return propValues;
+  });
+  const disc = cached(() => {
+    var _a5;
+    const opts = def.options;
+    const map3 = /* @__PURE__ */ new Map();
+    for (const o of opts) {
+      const values = (_a5 = o._zod.propValues) == null ? void 0 : _a5[def.discriminator];
+      if (!values || values.size === 0)
+        throw new Error(`Invalid discriminated union option at index "${def.options.indexOf(o)}"`);
+      for (const v of values) {
+        if (map3.has(v)) {
+          throw new Error(`Duplicate discriminator value "${String(v)}"`);
+        }
+        map3.set(v, o);
+      }
+    }
+    return map3;
+  });
+  inst._zod.parse = (payload, ctx) => {
+    const input = payload.value;
+    if (!isObject(input)) {
+      payload.issues.push({
+        code: "invalid_type",
+        expected: "object",
+        input,
+        inst
+      });
+      return payload;
+    }
+    const opt = disc.value.get(input == null ? void 0 : input[def.discriminator]);
+    if (opt) {
+      return opt._zod.run(payload, ctx);
+    }
+    if (def.unionFallback || ctx.direction === "backward") {
+      return _super(payload, ctx);
+    }
+    payload.issues.push({
+      code: "invalid_union",
+      errors: [],
+      note: "No matching discriminator",
+      discriminator: def.discriminator,
+      options: Array.from(disc.value.keys()),
+      input,
+      path: [def.discriminator],
+      inst
+    });
+    return payload;
+  };
+});
+var $ZodIntersection = /* @__PURE__ */ $constructor("$ZodIntersection", (inst, def) => {
+  $ZodType.init(inst, def);
+  inst._zod.parse = (payload, ctx) => {
+    const input = payload.value;
+    const left = def.left._zod.run({ value: input, issues: [] }, ctx);
+    const right = def.right._zod.run({ value: input, issues: [] }, ctx);
+    const async = left instanceof Promise || right instanceof Promise;
+    if (async) {
+      return Promise.all([left, right]).then(([left2, right2]) => {
+        return handleIntersectionResults(payload, left2, right2);
+      });
+    }
+    return handleIntersectionResults(payload, left, right);
+  };
+});
+function mergeValues(a, b) {
+  if (a === b) {
+    return { valid: true, data: a };
+  }
+  if (a instanceof Date && b instanceof Date && +a === +b) {
+    return { valid: true, data: a };
+  }
+  if (isPlainObject(a) && isPlainObject(b)) {
+    const bKeys = Object.keys(b);
+    const sharedKeys = Object.keys(a).filter((key) => bKeys.indexOf(key) !== -1);
+    const newObj = __spreadValues(__spreadValues({}, a), b);
+    for (const key of sharedKeys) {
+      const sharedValue = mergeValues(a[key], b[key]);
+      if (!sharedValue.valid) {
+        return {
+          valid: false,
+          mergeErrorPath: [key, ...sharedValue.mergeErrorPath]
+        };
+      }
+      newObj[key] = sharedValue.data;
+    }
+    return { valid: true, data: newObj };
+  }
+  if (Array.isArray(a) && Array.isArray(b)) {
+    if (a.length !== b.length) {
+      return { valid: false, mergeErrorPath: [] };
+    }
+    const newArray = [];
+    for (let index = 0; index < a.length; index++) {
+      const itemA = a[index];
+      const itemB = b[index];
+      const sharedValue = mergeValues(itemA, itemB);
+      if (!sharedValue.valid) {
+        return {
+          valid: false,
+          mergeErrorPath: [index, ...sharedValue.mergeErrorPath]
+        };
+      }
+      newArray.push(sharedValue.data);
+    }
+    return { valid: true, data: newArray };
+  }
+  return { valid: false, mergeErrorPath: [] };
+}
+function handleIntersectionResults(result, left, right) {
+  const unrecKeys = /* @__PURE__ */ new Map();
+  let unrecIssue;
+  for (const iss of left.issues) {
+    if (iss.code === "unrecognized_keys") {
+      unrecIssue != null ? unrecIssue : unrecIssue = iss;
+      for (const k of iss.keys) {
+        if (!unrecKeys.has(k))
+          unrecKeys.set(k, {});
+        unrecKeys.get(k).l = true;
+      }
+    } else {
+      result.issues.push(iss);
+    }
+  }
+  for (const iss of right.issues) {
+    if (iss.code === "unrecognized_keys") {
+      for (const k of iss.keys) {
+        if (!unrecKeys.has(k))
+          unrecKeys.set(k, {});
+        unrecKeys.get(k).r = true;
+      }
+    } else {
+      result.issues.push(iss);
+    }
+  }
+  const bothKeys = [...unrecKeys].filter(([, f]) => f.l && f.r).map(([k]) => k);
+  if (bothKeys.length && unrecIssue) {
+    result.issues.push(__spreadProps(__spreadValues({}, unrecIssue), { keys: bothKeys }));
+  }
+  if (aborted(result))
+    return result;
+  const merged = mergeValues(left.value, right.value);
+  if (!merged.valid) {
+    throw new Error(`Unmergable intersection. Error path: ${JSON.stringify(merged.mergeErrorPath)}`);
+  }
+  result.value = merged.data;
+  return result;
+}
+var $ZodTuple = /* @__PURE__ */ $constructor("$ZodTuple", (inst, def) => {
+  $ZodType.init(inst, def);
+  const items = def.items;
+  inst._zod.parse = (payload, ctx) => {
+    const input = payload.value;
+    if (!Array.isArray(input)) {
+      payload.issues.push({
+        input,
+        inst,
+        expected: "tuple",
+        code: "invalid_type"
+      });
+      return payload;
+    }
+    payload.value = [];
+    const proms = [];
+    const optinStart = getTupleOptStart(items, "optin");
+    const optoutStart = getTupleOptStart(items, "optout");
+    if (!def.rest) {
+      if (input.length < optinStart) {
+        payload.issues.push({
+          code: "too_small",
+          minimum: optinStart,
+          inclusive: true,
+          input,
+          inst,
+          origin: "array"
+        });
+        return payload;
+      }
+      if (input.length > items.length) {
+        payload.issues.push({
+          code: "too_big",
+          maximum: items.length,
+          inclusive: true,
+          input,
+          inst,
+          origin: "array"
+        });
+      }
+    }
+    const itemResults = new Array(items.length);
+    for (let i = 0; i < items.length; i++) {
+      const r = items[i]._zod.run({ value: input[i], issues: [] }, ctx);
+      if (r instanceof Promise) {
+        proms.push(r.then((rr) => {
+          itemResults[i] = rr;
+        }));
+      } else {
+        itemResults[i] = r;
+      }
+    }
+    if (def.rest) {
+      let i = items.length - 1;
+      const rest = input.slice(items.length);
+      for (const el of rest) {
+        i++;
+        const result = def.rest._zod.run({ value: el, issues: [] }, ctx);
+        if (result instanceof Promise) {
+          proms.push(result.then((r) => handleTupleResult(r, payload, i)));
+        } else {
+          handleTupleResult(result, payload, i);
+        }
+      }
+    }
+    if (proms.length) {
+      return Promise.all(proms).then(() => handleTupleResults(itemResults, payload, items, input, optoutStart));
+    }
+    return handleTupleResults(itemResults, payload, items, input, optoutStart);
+  };
+});
+function getTupleOptStart(items, key) {
+  for (let i = items.length - 1; i >= 0; i--) {
+    if (items[i]._zod[key] !== "optional")
+      return i + 1;
+  }
+  return 0;
+}
+function handleTupleResult(result, final, index) {
+  if (result.issues.length) {
+    final.issues.push(...prefixIssues(index, result.issues));
+  }
+  final.value[index] = result.value;
+}
+function handleTupleResults(itemResults, final, items, input, optoutStart) {
+  for (let i = 0; i < items.length; i++) {
+    const r = itemResults[i];
+    const isPresent = i < input.length;
+    if (r.issues.length) {
+      if (!isPresent && i >= optoutStart) {
+        final.value.length = i;
+        break;
+      }
+      final.issues.push(...prefixIssues(i, r.issues));
+    }
+    final.value[i] = r.value;
+  }
+  for (let i = final.value.length - 1; i >= input.length; i--) {
+    if (items[i]._zod.optout === "optional" && final.value[i] === void 0) {
+      final.value.length = i;
+    } else {
+      break;
+    }
+  }
+  return final;
+}
+var $ZodRecord = /* @__PURE__ */ $constructor("$ZodRecord", (inst, def) => {
+  $ZodType.init(inst, def);
+  inst._zod.parse = (payload, ctx) => {
+    const input = payload.value;
+    if (!isPlainObject(input)) {
+      payload.issues.push({
+        expected: "record",
+        code: "invalid_type",
+        input,
+        inst
+      });
+      return payload;
+    }
+    const proms = [];
+    const values = def.keyType._zod.values;
+    if (values) {
+      payload.value = {};
+      const recordKeys = /* @__PURE__ */ new Set();
+      for (const key of values) {
+        if (typeof key === "string" || typeof key === "number" || typeof key === "symbol") {
+          recordKeys.add(typeof key === "number" ? key.toString() : key);
+          const keyResult = def.keyType._zod.run({ value: key, issues: [] }, ctx);
+          if (keyResult instanceof Promise) {
+            throw new Error("Async schemas not supported in object keys currently");
+          }
+          if (keyResult.issues.length) {
+            payload.issues.push({
+              code: "invalid_key",
+              origin: "record",
+              issues: keyResult.issues.map((iss) => finalizeIssue(iss, ctx, config())),
+              input: key,
+              path: [key],
+              inst
+            });
+            continue;
+          }
+          const outKey = keyResult.value;
+          const result = def.valueType._zod.run({ value: input[key], issues: [] }, ctx);
+          if (result instanceof Promise) {
+            proms.push(result.then((result2) => {
+              if (result2.issues.length) {
+                payload.issues.push(...prefixIssues(key, result2.issues));
+              }
+              payload.value[outKey] = result2.value;
+            }));
+          } else {
+            if (result.issues.length) {
+              payload.issues.push(...prefixIssues(key, result.issues));
+            }
+            payload.value[outKey] = result.value;
+          }
+        }
+      }
+      let unrecognized;
+      for (const key in input) {
+        if (!recordKeys.has(key)) {
+          unrecognized = unrecognized != null ? unrecognized : [];
+          unrecognized.push(key);
+        }
+      }
+      if (unrecognized && unrecognized.length > 0) {
+        payload.issues.push({
+          code: "unrecognized_keys",
+          input,
+          inst,
+          keys: unrecognized
+        });
+      }
+    } else {
+      payload.value = {};
+      for (const key of Reflect.ownKeys(input)) {
+        if (key === "__proto__")
+          continue;
+        if (!Object.prototype.propertyIsEnumerable.call(input, key))
+          continue;
+        let keyResult = def.keyType._zod.run({ value: key, issues: [] }, ctx);
+        if (keyResult instanceof Promise) {
+          throw new Error("Async schemas not supported in object keys currently");
+        }
+        const checkNumericKey = typeof key === "string" && number.test(key) && keyResult.issues.length;
+        if (checkNumericKey) {
+          const retryResult = def.keyType._zod.run({ value: Number(key), issues: [] }, ctx);
+          if (retryResult instanceof Promise) {
+            throw new Error("Async schemas not supported in object keys currently");
+          }
+          if (retryResult.issues.length === 0) {
+            keyResult = retryResult;
+          }
+        }
+        if (keyResult.issues.length) {
+          if (def.mode === "loose") {
+            payload.value[key] = input[key];
+          } else {
+            payload.issues.push({
+              code: "invalid_key",
+              origin: "record",
+              issues: keyResult.issues.map((iss) => finalizeIssue(iss, ctx, config())),
+              input: key,
+              path: [key],
+              inst
+            });
+          }
+          continue;
+        }
+        const result = def.valueType._zod.run({ value: input[key], issues: [] }, ctx);
+        if (result instanceof Promise) {
+          proms.push(result.then((result2) => {
+            if (result2.issues.length) {
+              payload.issues.push(...prefixIssues(key, result2.issues));
+            }
+            payload.value[keyResult.value] = result2.value;
+          }));
+        } else {
+          if (result.issues.length) {
+            payload.issues.push(...prefixIssues(key, result.issues));
+          }
+          payload.value[keyResult.value] = result.value;
+        }
+      }
+    }
+    if (proms.length) {
+      return Promise.all(proms).then(() => payload);
+    }
+    return payload;
+  };
+});
+var $ZodMap = /* @__PURE__ */ $constructor("$ZodMap", (inst, def) => {
+  $ZodType.init(inst, def);
+  inst._zod.parse = (payload, ctx) => {
+    const input = payload.value;
+    if (!(input instanceof Map)) {
+      payload.issues.push({
+        expected: "map",
+        code: "invalid_type",
+        input,
+        inst
+      });
+      return payload;
+    }
+    const proms = [];
+    payload.value = /* @__PURE__ */ new Map();
+    for (const [key, value] of input) {
+      const keyResult = def.keyType._zod.run({ value: key, issues: [] }, ctx);
+      const valueResult = def.valueType._zod.run({ value, issues: [] }, ctx);
+      if (keyResult instanceof Promise || valueResult instanceof Promise) {
+        proms.push(Promise.all([keyResult, valueResult]).then(([keyResult2, valueResult2]) => {
+          handleMapResult(keyResult2, valueResult2, payload, key, input, inst, ctx);
+        }));
+      } else {
+        handleMapResult(keyResult, valueResult, payload, key, input, inst, ctx);
+      }
+    }
+    if (proms.length)
+      return Promise.all(proms).then(() => payload);
+    return payload;
+  };
+});
+function handleMapResult(keyResult, valueResult, final, key, input, inst, ctx) {
+  if (keyResult.issues.length) {
+    if (propertyKeyTypes.has(typeof key)) {
+      final.issues.push(...prefixIssues(key, keyResult.issues));
+    } else {
+      final.issues.push({
+        code: "invalid_key",
+        origin: "map",
+        input,
+        inst,
+        issues: keyResult.issues.map((iss) => finalizeIssue(iss, ctx, config()))
+      });
+    }
+  }
+  if (valueResult.issues.length) {
+    if (propertyKeyTypes.has(typeof key)) {
+      final.issues.push(...prefixIssues(key, valueResult.issues));
+    } else {
+      final.issues.push({
+        origin: "map",
+        code: "invalid_element",
+        input,
+        inst,
+        key,
+        issues: valueResult.issues.map((iss) => finalizeIssue(iss, ctx, config()))
+      });
+    }
+  }
+  final.value.set(keyResult.value, valueResult.value);
+}
+var $ZodSet = /* @__PURE__ */ $constructor("$ZodSet", (inst, def) => {
+  $ZodType.init(inst, def);
+  inst._zod.parse = (payload, ctx) => {
+    const input = payload.value;
+    if (!(input instanceof Set)) {
+      payload.issues.push({
+        input,
+        inst,
+        expected: "set",
+        code: "invalid_type"
+      });
+      return payload;
+    }
+    const proms = [];
+    payload.value = /* @__PURE__ */ new Set();
+    for (const item of input) {
+      const result = def.valueType._zod.run({ value: item, issues: [] }, ctx);
+      if (result instanceof Promise) {
+        proms.push(result.then((result2) => handleSetResult(result2, payload)));
+      } else
+        handleSetResult(result, payload);
+    }
+    if (proms.length)
+      return Promise.all(proms).then(() => payload);
+    return payload;
+  };
+});
+function handleSetResult(result, final) {
+  if (result.issues.length) {
+    final.issues.push(...result.issues);
+  }
+  final.value.add(result.value);
+}
+var $ZodEnum = /* @__PURE__ */ $constructor("$ZodEnum", (inst, def) => {
+  $ZodType.init(inst, def);
+  const values = getEnumValues(def.entries);
+  const valuesSet = new Set(values);
+  inst._zod.values = valuesSet;
+  inst._zod.pattern = new RegExp(`^(${values.filter((k) => propertyKeyTypes.has(typeof k)).map((o) => typeof o === "string" ? escapeRegex(o) : o.toString()).join("|")})$`);
+  inst._zod.parse = (payload, _ctx) => {
+    const input = payload.value;
+    if (valuesSet.has(input)) {
+      return payload;
+    }
+    payload.issues.push({
+      code: "invalid_value",
+      values,
+      input,
+      inst
+    });
+    return payload;
+  };
+});
+var $ZodLiteral = /* @__PURE__ */ $constructor("$ZodLiteral", (inst, def) => {
+  $ZodType.init(inst, def);
+  if (def.values.length === 0) {
+    throw new Error("Cannot create literal schema with no valid values");
+  }
+  const values = new Set(def.values);
+  inst._zod.values = values;
+  inst._zod.pattern = new RegExp(`^(${def.values.map((o) => typeof o === "string" ? escapeRegex(o) : o ? escapeRegex(o.toString()) : String(o)).join("|")})$`);
+  inst._zod.parse = (payload, _ctx) => {
+    const input = payload.value;
+    if (values.has(input)) {
+      return payload;
+    }
+    payload.issues.push({
+      code: "invalid_value",
+      values: def.values,
+      input,
+      inst
+    });
+    return payload;
+  };
+});
+var $ZodFile = /* @__PURE__ */ $constructor("$ZodFile", (inst, def) => {
+  $ZodType.init(inst, def);
+  inst._zod.parse = (payload, _ctx) => {
+    const input = payload.value;
+    if (input instanceof File)
+      return payload;
+    payload.issues.push({
+      expected: "file",
+      code: "invalid_type",
+      input,
+      inst
+    });
+    return payload;
+  };
+});
+var $ZodTransform = /* @__PURE__ */ $constructor("$ZodTransform", (inst, def) => {
+  $ZodType.init(inst, def);
+  inst._zod.optin = "optional";
+  inst._zod.parse = (payload, ctx) => {
+    if (ctx.direction === "backward") {
+      throw new $ZodEncodeError(inst.constructor.name);
+    }
+    const _out = def.transform(payload.value, payload);
+    if (ctx.async) {
+      const output = _out instanceof Promise ? _out : Promise.resolve(_out);
+      return output.then((output2) => {
+        payload.value = output2;
+        payload.fallback = true;
+        return payload;
+      });
+    }
+    if (_out instanceof Promise) {
+      throw new $ZodAsyncError();
+    }
+    payload.value = _out;
+    payload.fallback = true;
+    return payload;
+  };
+});
+function handleOptionalResult(result, input) {
+  if (input === void 0 && (result.issues.length || result.fallback)) {
+    return { issues: [], value: void 0 };
+  }
+  return result;
+}
+var $ZodOptional = /* @__PURE__ */ $constructor("$ZodOptional", (inst, def) => {
+  $ZodType.init(inst, def);
+  inst._zod.optin = "optional";
+  inst._zod.optout = "optional";
+  defineLazy(inst._zod, "values", () => {
+    return def.innerType._zod.values ? /* @__PURE__ */ new Set([...def.innerType._zod.values, void 0]) : void 0;
+  });
+  defineLazy(inst._zod, "pattern", () => {
+    const pattern = def.innerType._zod.pattern;
+    return pattern ? new RegExp(`^(${cleanRegex(pattern.source)})?$`) : void 0;
+  });
+  inst._zod.parse = (payload, ctx) => {
+    if (def.innerType._zod.optin === "optional") {
+      const input = payload.value;
+      const result = def.innerType._zod.run(payload, ctx);
+      if (result instanceof Promise)
+        return result.then((r) => handleOptionalResult(r, input));
+      return handleOptionalResult(result, input);
+    }
+    if (payload.value === void 0) {
+      return payload;
+    }
+    return def.innerType._zod.run(payload, ctx);
+  };
+});
+var $ZodExactOptional = /* @__PURE__ */ $constructor("$ZodExactOptional", (inst, def) => {
+  $ZodOptional.init(inst, def);
+  defineLazy(inst._zod, "values", () => def.innerType._zod.values);
+  defineLazy(inst._zod, "pattern", () => def.innerType._zod.pattern);
+  inst._zod.parse = (payload, ctx) => {
+    return def.innerType._zod.run(payload, ctx);
+  };
+});
+var $ZodNullable = /* @__PURE__ */ $constructor("$ZodNullable", (inst, def) => {
+  $ZodType.init(inst, def);
+  defineLazy(inst._zod, "optin", () => def.innerType._zod.optin);
+  defineLazy(inst._zod, "optout", () => def.innerType._zod.optout);
+  defineLazy(inst._zod, "pattern", () => {
+    const pattern = def.innerType._zod.pattern;
+    return pattern ? new RegExp(`^(${cleanRegex(pattern.source)}|null)$`) : void 0;
+  });
+  defineLazy(inst._zod, "values", () => {
+    return def.innerType._zod.values ? /* @__PURE__ */ new Set([...def.innerType._zod.values, null]) : void 0;
+  });
+  inst._zod.parse = (payload, ctx) => {
+    if (payload.value === null)
+      return payload;
+    return def.innerType._zod.run(payload, ctx);
+  };
+});
+var $ZodDefault = /* @__PURE__ */ $constructor("$ZodDefault", (inst, def) => {
+  $ZodType.init(inst, def);
+  inst._zod.optin = "optional";
+  defineLazy(inst._zod, "values", () => def.innerType._zod.values);
+  inst._zod.parse = (payload, ctx) => {
+    if (ctx.direction === "backward") {
+      return def.innerType._zod.run(payload, ctx);
+    }
+    if (payload.value === void 0) {
+      payload.value = def.defaultValue;
+      return payload;
+    }
+    const result = def.innerType._zod.run(payload, ctx);
+    if (result instanceof Promise) {
+      return result.then((result2) => handleDefaultResult(result2, def));
+    }
+    return handleDefaultResult(result, def);
+  };
+});
+function handleDefaultResult(payload, def) {
+  if (payload.value === void 0) {
+    payload.value = def.defaultValue;
+  }
+  return payload;
+}
+var $ZodPrefault = /* @__PURE__ */ $constructor("$ZodPrefault", (inst, def) => {
+  $ZodType.init(inst, def);
+  inst._zod.optin = "optional";
+  defineLazy(inst._zod, "values", () => def.innerType._zod.values);
+  inst._zod.parse = (payload, ctx) => {
+    if (ctx.direction === "backward") {
+      return def.innerType._zod.run(payload, ctx);
+    }
+    if (payload.value === void 0) {
+      payload.value = def.defaultValue;
+    }
+    return def.innerType._zod.run(payload, ctx);
+  };
+});
+var $ZodNonOptional = /* @__PURE__ */ $constructor("$ZodNonOptional", (inst, def) => {
+  $ZodType.init(inst, def);
+  defineLazy(inst._zod, "values", () => {
+    const v = def.innerType._zod.values;
+    return v ? new Set([...v].filter((x) => x !== void 0)) : void 0;
+  });
+  inst._zod.parse = (payload, ctx) => {
+    const result = def.innerType._zod.run(payload, ctx);
+    if (result instanceof Promise) {
+      return result.then((result2) => handleNonOptionalResult(result2, inst));
+    }
+    return handleNonOptionalResult(result, inst);
+  };
+});
+function handleNonOptionalResult(payload, inst) {
+  if (!payload.issues.length && payload.value === void 0) {
+    payload.issues.push({
+      code: "invalid_type",
+      expected: "nonoptional",
+      input: payload.value,
+      inst
+    });
+  }
+  return payload;
+}
+var $ZodSuccess = /* @__PURE__ */ $constructor("$ZodSuccess", (inst, def) => {
+  $ZodType.init(inst, def);
+  inst._zod.parse = (payload, ctx) => {
+    if (ctx.direction === "backward") {
+      throw new $ZodEncodeError("ZodSuccess");
+    }
+    const result = def.innerType._zod.run(payload, ctx);
+    if (result instanceof Promise) {
+      return result.then((result2) => {
+        payload.value = result2.issues.length === 0;
+        return payload;
+      });
+    }
+    payload.value = result.issues.length === 0;
+    return payload;
+  };
+});
+var $ZodCatch = /* @__PURE__ */ $constructor("$ZodCatch", (inst, def) => {
+  $ZodType.init(inst, def);
+  inst._zod.optin = "optional";
+  defineLazy(inst._zod, "optout", () => def.innerType._zod.optout);
+  defineLazy(inst._zod, "values", () => def.innerType._zod.values);
+  inst._zod.parse = (payload, ctx) => {
+    if (ctx.direction === "backward") {
+      return def.innerType._zod.run(payload, ctx);
+    }
+    const result = def.innerType._zod.run(payload, ctx);
+    if (result instanceof Promise) {
+      return result.then((result2) => {
+        payload.value = result2.value;
+        if (result2.issues.length) {
+          payload.value = def.catchValue(__spreadProps(__spreadValues({}, payload), {
+            error: {
+              issues: result2.issues.map((iss) => finalizeIssue(iss, ctx, config()))
+            },
+            input: payload.value
+          }));
+          payload.issues = [];
+          payload.fallback = true;
+        }
+        return payload;
+      });
+    }
+    payload.value = result.value;
+    if (result.issues.length) {
+      payload.value = def.catchValue(__spreadProps(__spreadValues({}, payload), {
+        error: {
+          issues: result.issues.map((iss) => finalizeIssue(iss, ctx, config()))
+        },
+        input: payload.value
+      }));
+      payload.issues = [];
+      payload.fallback = true;
+    }
+    return payload;
+  };
+});
+var $ZodNaN = /* @__PURE__ */ $constructor("$ZodNaN", (inst, def) => {
+  $ZodType.init(inst, def);
+  inst._zod.parse = (payload, _ctx) => {
+    if (typeof payload.value !== "number" || !Number.isNaN(payload.value)) {
+      payload.issues.push({
+        input: payload.value,
+        inst,
+        expected: "nan",
+        code: "invalid_type"
+      });
+      return payload;
+    }
+    return payload;
+  };
+});
+var $ZodPipe = /* @__PURE__ */ $constructor("$ZodPipe", (inst, def) => {
+  $ZodType.init(inst, def);
+  defineLazy(inst._zod, "values", () => def.in._zod.values);
+  defineLazy(inst._zod, "optin", () => def.in._zod.optin);
+  defineLazy(inst._zod, "optout", () => def.out._zod.optout);
+  defineLazy(inst._zod, "propValues", () => def.in._zod.propValues);
+  inst._zod.parse = (payload, ctx) => {
+    if (ctx.direction === "backward") {
+      const right = def.out._zod.run(payload, ctx);
+      if (right instanceof Promise) {
+        return right.then((right2) => handlePipeResult(right2, def.in, ctx));
+      }
+      return handlePipeResult(right, def.in, ctx);
+    }
+    const left = def.in._zod.run(payload, ctx);
+    if (left instanceof Promise) {
+      return left.then((left2) => handlePipeResult(left2, def.out, ctx));
+    }
+    return handlePipeResult(left, def.out, ctx);
+  };
+});
+function handlePipeResult(left, next, ctx) {
+  if (left.issues.length) {
+    left.aborted = true;
+    return left;
+  }
+  return next._zod.run({ value: left.value, issues: left.issues, fallback: left.fallback }, ctx);
+}
+var $ZodCodec = /* @__PURE__ */ $constructor("$ZodCodec", (inst, def) => {
+  $ZodType.init(inst, def);
+  defineLazy(inst._zod, "values", () => def.in._zod.values);
+  defineLazy(inst._zod, "optin", () => def.in._zod.optin);
+  defineLazy(inst._zod, "optout", () => def.out._zod.optout);
+  defineLazy(inst._zod, "propValues", () => def.in._zod.propValues);
+  inst._zod.parse = (payload, ctx) => {
+    const direction = ctx.direction || "forward";
+    if (direction === "forward") {
+      const left = def.in._zod.run(payload, ctx);
+      if (left instanceof Promise) {
+        return left.then((left2) => handleCodecAResult(left2, def, ctx));
+      }
+      return handleCodecAResult(left, def, ctx);
+    } else {
+      const right = def.out._zod.run(payload, ctx);
+      if (right instanceof Promise) {
+        return right.then((right2) => handleCodecAResult(right2, def, ctx));
+      }
+      return handleCodecAResult(right, def, ctx);
+    }
+  };
+});
+function handleCodecAResult(result, def, ctx) {
+  if (result.issues.length) {
+    result.aborted = true;
+    return result;
+  }
+  const direction = ctx.direction || "forward";
+  if (direction === "forward") {
+    const transformed = def.transform(result.value, result);
+    if (transformed instanceof Promise) {
+      return transformed.then((value) => handleCodecTxResult(result, value, def.out, ctx));
+    }
+    return handleCodecTxResult(result, transformed, def.out, ctx);
+  } else {
+    const transformed = def.reverseTransform(result.value, result);
+    if (transformed instanceof Promise) {
+      return transformed.then((value) => handleCodecTxResult(result, value, def.in, ctx));
+    }
+    return handleCodecTxResult(result, transformed, def.in, ctx);
+  }
+}
+function handleCodecTxResult(left, value, nextSchema, ctx) {
+  if (left.issues.length) {
+    left.aborted = true;
+    return left;
+  }
+  return nextSchema._zod.run({ value, issues: left.issues }, ctx);
+}
+var $ZodPreprocess = /* @__PURE__ */ $constructor("$ZodPreprocess", (inst, def) => {
+  $ZodPipe.init(inst, def);
+});
+var $ZodReadonly = /* @__PURE__ */ $constructor("$ZodReadonly", (inst, def) => {
+  $ZodType.init(inst, def);
+  defineLazy(inst._zod, "propValues", () => def.innerType._zod.propValues);
+  defineLazy(inst._zod, "values", () => def.innerType._zod.values);
+  defineLazy(inst._zod, "optin", () => {
+    var _a5, _b;
+    return (_b = (_a5 = def.innerType) == null ? void 0 : _a5._zod) == null ? void 0 : _b.optin;
+  });
+  defineLazy(inst._zod, "optout", () => {
+    var _a5, _b;
+    return (_b = (_a5 = def.innerType) == null ? void 0 : _a5._zod) == null ? void 0 : _b.optout;
+  });
+  inst._zod.parse = (payload, ctx) => {
+    if (ctx.direction === "backward") {
+      return def.innerType._zod.run(payload, ctx);
+    }
+    const result = def.innerType._zod.run(payload, ctx);
+    if (result instanceof Promise) {
+      return result.then(handleReadonlyResult);
+    }
+    return handleReadonlyResult(result);
+  };
+});
+function handleReadonlyResult(payload) {
+  payload.value = Object.freeze(payload.value);
+  return payload;
+}
+var $ZodTemplateLiteral = /* @__PURE__ */ $constructor("$ZodTemplateLiteral", (inst, def) => {
+  $ZodType.init(inst, def);
+  const regexParts = [];
+  for (const part of def.parts) {
+    if (typeof part === "object" && part !== null) {
+      if (!part._zod.pattern) {
+        throw new Error(`Invalid template literal part, no pattern found: ${[...part._zod.traits].shift()}`);
+      }
+      const source = part._zod.pattern instanceof RegExp ? part._zod.pattern.source : part._zod.pattern;
+      if (!source)
+        throw new Error(`Invalid template literal part: ${part._zod.traits}`);
+      const start = source.startsWith("^") ? 1 : 0;
+      const end = source.endsWith("$") ? source.length - 1 : source.length;
+      regexParts.push(source.slice(start, end));
+    } else if (part === null || primitiveTypes.has(typeof part)) {
+      regexParts.push(escapeRegex(`${part}`));
+    } else {
+      throw new Error(`Invalid template literal part: ${part}`);
+    }
+  }
+  inst._zod.pattern = new RegExp(`^${regexParts.join("")}$`);
+  inst._zod.parse = (payload, _ctx) => {
+    var _a5;
+    if (typeof payload.value !== "string") {
+      payload.issues.push({
+        input: payload.value,
+        inst,
+        expected: "string",
+        code: "invalid_type"
+      });
+      return payload;
+    }
+    inst._zod.pattern.lastIndex = 0;
+    if (!inst._zod.pattern.test(payload.value)) {
+      payload.issues.push({
+        input: payload.value,
+        inst,
+        code: "invalid_format",
+        format: (_a5 = def.format) != null ? _a5 : "template_literal",
+        pattern: inst._zod.pattern.source
+      });
+      return payload;
+    }
+    return payload;
+  };
+});
+var $ZodFunction = /* @__PURE__ */ $constructor("$ZodFunction", (inst, def) => {
+  $ZodType.init(inst, def);
+  inst._def = def;
+  inst._zod.def = def;
+  inst.implement = (func) => {
+    if (typeof func !== "function") {
+      throw new Error("implement() must be called with a function");
+    }
+    return function(...args) {
+      const parsedArgs = inst._def.input ? parse(inst._def.input, args) : args;
+      const result = Reflect.apply(func, this, parsedArgs);
+      if (inst._def.output) {
+        return parse(inst._def.output, result);
+      }
+      return result;
+    };
+  };
+  inst.implementAsync = (func) => {
+    if (typeof func !== "function") {
+      throw new Error("implementAsync() must be called with a function");
+    }
+    return function(...args) {
+      return __async(this, null, function* () {
+        const parsedArgs = inst._def.input ? yield parseAsync(inst._def.input, args) : args;
+        const result = yield Reflect.apply(func, this, parsedArgs);
+        if (inst._def.output) {
+          return yield parseAsync(inst._def.output, result);
+        }
+        return result;
+      });
+    };
+  };
+  inst._zod.parse = (payload, _ctx) => {
+    if (typeof payload.value !== "function") {
+      payload.issues.push({
+        code: "invalid_type",
+        expected: "function",
+        input: payload.value,
+        inst
+      });
+      return payload;
+    }
+    const hasPromiseOutput = inst._def.output && inst._def.output._zod.def.type === "promise";
+    if (hasPromiseOutput) {
+      payload.value = inst.implementAsync(payload.value);
+    } else {
+      payload.value = inst.implement(payload.value);
+    }
+    return payload;
+  };
+  inst.input = (...args) => {
+    const F = inst.constructor;
+    if (Array.isArray(args[0])) {
+      return new F({
+        type: "function",
+        input: new $ZodTuple({
+          type: "tuple",
+          items: args[0],
+          rest: args[1]
+        }),
+        output: inst._def.output
+      });
+    }
+    return new F({
+      type: "function",
+      input: args[0],
+      output: inst._def.output
+    });
+  };
+  inst.output = (output) => {
+    const F = inst.constructor;
+    return new F({
+      type: "function",
+      input: inst._def.input,
+      output
+    });
+  };
+  return inst;
+});
+var $ZodPromise = /* @__PURE__ */ $constructor("$ZodPromise", (inst, def) => {
+  $ZodType.init(inst, def);
+  inst._zod.parse = (payload, ctx) => {
+    return Promise.resolve(payload.value).then((inner) => def.innerType._zod.run({ value: inner, issues: [] }, ctx));
+  };
+});
+var $ZodLazy = /* @__PURE__ */ $constructor("$ZodLazy", (inst, def) => {
+  $ZodType.init(inst, def);
+  defineLazy(inst._zod, "innerType", () => {
+    const d = def;
+    if (!d._cachedInner)
+      d._cachedInner = def.getter();
+    return d._cachedInner;
+  });
+  defineLazy(inst._zod, "pattern", () => {
+    var _a5, _b;
+    return (_b = (_a5 = inst._zod.innerType) == null ? void 0 : _a5._zod) == null ? void 0 : _b.pattern;
+  });
+  defineLazy(inst._zod, "propValues", () => {
+    var _a5, _b;
+    return (_b = (_a5 = inst._zod.innerType) == null ? void 0 : _a5._zod) == null ? void 0 : _b.propValues;
+  });
+  defineLazy(inst._zod, "optin", () => {
+    var _a5, _b, _c;
+    return (_c = (_b = (_a5 = inst._zod.innerType) == null ? void 0 : _a5._zod) == null ? void 0 : _b.optin) != null ? _c : void 0;
+  });
+  defineLazy(inst._zod, "optout", () => {
+    var _a5, _b, _c;
+    return (_c = (_b = (_a5 = inst._zod.innerType) == null ? void 0 : _a5._zod) == null ? void 0 : _b.optout) != null ? _c : void 0;
+  });
+  inst._zod.parse = (payload, ctx) => {
+    const inner = inst._zod.innerType;
+    return inner._zod.run(payload, ctx);
+  };
+});
+var $ZodCustom = /* @__PURE__ */ $constructor("$ZodCustom", (inst, def) => {
+  $ZodCheck.init(inst, def);
+  $ZodType.init(inst, def);
+  inst._zod.parse = (payload, _) => {
+    return payload;
+  };
+  inst._zod.check = (payload) => {
+    const input = payload.value;
+    const r = def.fn(input);
+    if (r instanceof Promise) {
+      return r.then((r2) => handleRefineResult(r2, payload, input, inst));
+    }
+    handleRefineResult(r, payload, input, inst);
+    return;
+  };
+});
+function handleRefineResult(result, payload, input, inst) {
+  var _a5;
+  if (!result) {
+    const _iss = {
+      code: "custom",
+      input,
+      inst,
+      path: [...(_a5 = inst._zod.def.path) != null ? _a5 : []],
+      continue: !inst._zod.def.abort
+    };
+    if (inst._zod.def.params)
+      _iss.params = inst._zod.def.params;
+    payload.issues.push(issue(_iss));
+  }
+}
+
+// node_modules/zod/v4/locales/index.js
+var locales_exports = {};
+__export(locales_exports, {
+  ar: () => ar_default,
+  az: () => az_default,
+  be: () => be_default,
+  bg: () => bg_default,
+  ca: () => ca_default,
+  cs: () => cs_default,
+  da: () => da_default,
+  de: () => de_default,
+  el: () => el_default,
+  en: () => en_default,
+  eo: () => eo_default,
+  es: () => es_default,
+  fa: () => fa_default,
+  fi: () => fi_default,
+  fr: () => fr_default,
+  frCA: () => fr_CA_default,
+  he: () => he_default,
+  hr: () => hr_default,
+  hu: () => hu_default,
+  hy: () => hy_default,
+  id: () => id_default,
+  is: () => is_default,
+  it: () => it_default,
+  ja: () => ja_default,
+  ka: () => ka_default,
+  kh: () => kh_default,
+  km: () => km_default,
+  ko: () => ko_default,
+  lt: () => lt_default,
+  mk: () => mk_default,
+  ms: () => ms_default,
+  nl: () => nl_default,
+  no: () => no_default,
+  ota: () => ota_default,
+  pl: () => pl_default,
+  ps: () => ps_default,
+  pt: () => pt_default,
+  ro: () => ro_default,
+  ru: () => ru_default,
+  sl: () => sl_default,
+  sv: () => sv_default,
+  ta: () => ta_default,
+  th: () => th_default,
+  tr: () => tr_default,
+  ua: () => ua_default,
+  uk: () => uk_default,
+  ur: () => ur_default,
+  uz: () => uz_default,
+  vi: () => vi_default,
+  yo: () => yo_default,
+  zhCN: () => zh_CN_default,
+  zhTW: () => zh_TW_default
+});
+
+// node_modules/zod/v4/locales/ar.js
+var error = () => {
+  const Sizable = {
+    string: { unit: "\u062D\u0631\u0641", verb: "\u0623\u0646 \u064A\u062D\u0648\u064A" },
+    file: { unit: "\u0628\u0627\u064A\u062A", verb: "\u0623\u0646 \u064A\u062D\u0648\u064A" },
+    array: { unit: "\u0639\u0646\u0635\u0631", verb: "\u0623\u0646 \u064A\u062D\u0648\u064A" },
+    set: { unit: "\u0639\u0646\u0635\u0631", verb: "\u0623\u0646 \u064A\u062D\u0648\u064A" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "\u0645\u062F\u062E\u0644",
+    email: "\u0628\u0631\u064A\u062F \u0625\u0644\u0643\u062A\u0631\u0648\u0646\u064A",
+    url: "\u0631\u0627\u0628\u0637",
+    emoji: "\u0625\u064A\u0645\u0648\u062C\u064A",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "\u062A\u0627\u0631\u064A\u062E \u0648\u0648\u0642\u062A \u0628\u0645\u0639\u064A\u0627\u0631 ISO",
+    date: "\u062A\u0627\u0631\u064A\u062E \u0628\u0645\u0639\u064A\u0627\u0631 ISO",
+    time: "\u0648\u0642\u062A \u0628\u0645\u0639\u064A\u0627\u0631 ISO",
+    duration: "\u0645\u062F\u0629 \u0628\u0645\u0639\u064A\u0627\u0631 ISO",
+    ipv4: "\u0639\u0646\u0648\u0627\u0646 IPv4",
+    ipv6: "\u0639\u0646\u0648\u0627\u0646 IPv6",
+    cidrv4: "\u0645\u062F\u0649 \u0639\u0646\u0627\u0648\u064A\u0646 \u0628\u0635\u064A\u063A\u0629 IPv4",
+    cidrv6: "\u0645\u062F\u0649 \u0639\u0646\u0627\u0648\u064A\u0646 \u0628\u0635\u064A\u063A\u0629 IPv6",
+    base64: "\u0646\u064E\u0635 \u0628\u062A\u0631\u0645\u064A\u0632 base64-encoded",
+    base64url: "\u0646\u064E\u0635 \u0628\u062A\u0631\u0645\u064A\u0632 base64url-encoded",
+    json_string: "\u0646\u064E\u0635 \u0639\u0644\u0649 \u0647\u064A\u0626\u0629 JSON",
+    e164: "\u0631\u0642\u0645 \u0647\u0627\u062A\u0641 \u0628\u0645\u0639\u064A\u0627\u0631 E.164",
+    jwt: "JWT",
+    template_literal: "\u0645\u062F\u062E\u0644"
+  };
+  const TypeDictionary = {
+    nan: "NaN"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `\u0645\u062F\u062E\u0644\u0627\u062A \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644\u0629: \u064A\u0641\u062A\u0631\u0636 \u0625\u062F\u062E\u0627\u0644 instanceof ${issue2.expected}\u060C \u0648\u0644\u0643\u0646 \u062A\u0645 \u0625\u062F\u062E\u0627\u0644 ${received}`;
+        }
+        return `\u0645\u062F\u062E\u0644\u0627\u062A \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644\u0629: \u064A\u0641\u062A\u0631\u0636 \u0625\u062F\u062E\u0627\u0644 ${expected}\u060C \u0648\u0644\u0643\u0646 \u062A\u0645 \u0625\u062F\u062E\u0627\u0644 ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `\u0645\u062F\u062E\u0644\u0627\u062A \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644\u0629: \u064A\u0641\u062A\u0631\u0636 \u0625\u062F\u062E\u0627\u0644 ${stringifyPrimitive(issue2.values[0])}`;
+        return `\u0627\u062E\u062A\u064A\u0627\u0631 \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644: \u064A\u062A\u0648\u0642\u0639 \u0627\u0646\u062A\u0642\u0627\u0621 \u0623\u062D\u062F \u0647\u0630\u0647 \u0627\u0644\u062E\u064A\u0627\u0631\u0627\u062A: ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return ` \u0623\u0643\u0628\u0631 \u0645\u0646 \u0627\u0644\u0644\u0627\u0632\u0645: \u064A\u0641\u062A\u0631\u0636 \u0623\u0646 \u062A\u0643\u0648\u0646 ${(_c = issue2.origin) != null ? _c : "\u0627\u0644\u0642\u064A\u0645\u0629"} ${adj} ${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "\u0639\u0646\u0635\u0631"}`;
+        return `\u0623\u0643\u0628\u0631 \u0645\u0646 \u0627\u0644\u0644\u0627\u0632\u0645: \u064A\u0641\u062A\u0631\u0636 \u0623\u0646 \u062A\u0643\u0648\u0646 ${(_e = issue2.origin) != null ? _e : "\u0627\u0644\u0642\u064A\u0645\u0629"} ${adj} ${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `\u0623\u0635\u063A\u0631 \u0645\u0646 \u0627\u0644\u0644\u0627\u0632\u0645: \u064A\u0641\u062A\u0631\u0636 \u0644\u0640 ${issue2.origin} \u0623\u0646 \u064A\u0643\u0648\u0646 ${adj} ${issue2.minimum.toString()} ${sizing.unit}`;
+        }
+        return `\u0623\u0635\u063A\u0631 \u0645\u0646 \u0627\u0644\u0644\u0627\u0632\u0645: \u064A\u0641\u062A\u0631\u0636 \u0644\u0640 ${issue2.origin} \u0623\u0646 \u064A\u0643\u0648\u0646 ${adj} ${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with")
+          return `\u0646\u064E\u0635 \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644: \u064A\u062C\u0628 \u0623\u0646 \u064A\u0628\u062F\u0623 \u0628\u0640 "${issue2.prefix}"`;
+        if (_issue.format === "ends_with")
+          return `\u0646\u064E\u0635 \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644: \u064A\u062C\u0628 \u0623\u0646 \u064A\u0646\u062A\u0647\u064A \u0628\u0640 "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `\u0646\u064E\u0635 \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644: \u064A\u062C\u0628 \u0623\u0646 \u064A\u062A\u0636\u0645\u0651\u064E\u0646 "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `\u0646\u064E\u0635 \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644: \u064A\u062C\u0628 \u0623\u0646 \u064A\u0637\u0627\u0628\u0642 \u0627\u0644\u0646\u0645\u0637 ${_issue.pattern}`;
+        return `${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format} \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644`;
+      }
+      case "not_multiple_of":
+        return `\u0631\u0642\u0645 \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644: \u064A\u062C\u0628 \u0623\u0646 \u064A\u0643\u0648\u0646 \u0645\u0646 \u0645\u0636\u0627\u0639\u0641\u0627\u062A ${issue2.divisor}`;
+      case "unrecognized_keys":
+        return `\u0645\u0639\u0631\u0641${issue2.keys.length > 1 ? "\u0627\u062A" : ""} \u063A\u0631\u064A\u0628${issue2.keys.length > 1 ? "\u0629" : ""}: ${joinValues(issue2.keys, "\u060C ")}`;
+      case "invalid_key":
+        return `\u0645\u0639\u0631\u0641 \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644 \u0641\u064A ${issue2.origin}`;
+      case "invalid_union":
+        return "\u0645\u062F\u062E\u0644 \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644";
+      case "invalid_element":
+        return `\u0645\u062F\u062E\u0644 \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644 \u0641\u064A ${issue2.origin}`;
+      default:
+        return "\u0645\u062F\u062E\u0644 \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644";
+    }
+  };
+};
+function ar_default() {
+  return {
+    localeError: error()
+  };
+}
+
+// node_modules/zod/v4/locales/az.js
+var error2 = () => {
+  const Sizable = {
+    string: { unit: "simvol", verb: "olmal\u0131d\u0131r" },
+    file: { unit: "bayt", verb: "olmal\u0131d\u0131r" },
+    array: { unit: "element", verb: "olmal\u0131d\u0131r" },
+    set: { unit: "element", verb: "olmal\u0131d\u0131r" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "input",
+    email: "email address",
+    url: "URL",
+    emoji: "emoji",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "ISO datetime",
+    date: "ISO date",
+    time: "ISO time",
+    duration: "ISO duration",
+    ipv4: "IPv4 address",
+    ipv6: "IPv6 address",
+    cidrv4: "IPv4 range",
+    cidrv6: "IPv6 range",
+    base64: "base64-encoded string",
+    base64url: "base64url-encoded string",
+    json_string: "JSON string",
+    e164: "E.164 number",
+    jwt: "JWT",
+    template_literal: "input"
+  };
+  const TypeDictionary = {
+    nan: "NaN"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `Yanl\u0131\u015F d\u0259y\u0259r: g\xF6zl\u0259nil\u0259n instanceof ${issue2.expected}, daxil olan ${received}`;
+        }
+        return `Yanl\u0131\u015F d\u0259y\u0259r: g\xF6zl\u0259nil\u0259n ${expected}, daxil olan ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `Yanl\u0131\u015F d\u0259y\u0259r: g\xF6zl\u0259nil\u0259n ${stringifyPrimitive(issue2.values[0])}`;
+        return `Yanl\u0131\u015F se\xE7im: a\u015Fa\u011F\u0131dak\u0131lardan biri olmal\u0131d\u0131r: ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `\xC7ox b\xF6y\xFCk: g\xF6zl\u0259nil\u0259n ${(_c = issue2.origin) != null ? _c : "d\u0259y\u0259r"} ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "element"}`;
+        return `\xC7ox b\xF6y\xFCk: g\xF6zl\u0259nil\u0259n ${(_e = issue2.origin) != null ? _e : "d\u0259y\u0259r"} ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `\xC7ox ki\xE7ik: g\xF6zl\u0259nil\u0259n ${issue2.origin} ${adj}${issue2.minimum.toString()} ${sizing.unit}`;
+        return `\xC7ox ki\xE7ik: g\xF6zl\u0259nil\u0259n ${issue2.origin} ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with")
+          return `Yanl\u0131\u015F m\u0259tn: "${_issue.prefix}" il\u0259 ba\u015Flamal\u0131d\u0131r`;
+        if (_issue.format === "ends_with")
+          return `Yanl\u0131\u015F m\u0259tn: "${_issue.suffix}" il\u0259 bitm\u0259lidir`;
+        if (_issue.format === "includes")
+          return `Yanl\u0131\u015F m\u0259tn: "${_issue.includes}" daxil olmal\u0131d\u0131r`;
+        if (_issue.format === "regex")
+          return `Yanl\u0131\u015F m\u0259tn: ${_issue.pattern} \u015Fablonuna uy\u011Fun olmal\u0131d\u0131r`;
+        return `Yanl\u0131\u015F ${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `Yanl\u0131\u015F \u0259d\u0259d: ${issue2.divisor} il\u0259 b\xF6l\xFCn\u0259 bil\u0259n olmal\u0131d\u0131r`;
+      case "unrecognized_keys":
+        return `Tan\u0131nmayan a\xE7ar${issue2.keys.length > 1 ? "lar" : ""}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `${issue2.origin} daxilind\u0259 yanl\u0131\u015F a\xE7ar`;
+      case "invalid_union":
+        return "Yanl\u0131\u015F d\u0259y\u0259r";
+      case "invalid_element":
+        return `${issue2.origin} daxilind\u0259 yanl\u0131\u015F d\u0259y\u0259r`;
+      default:
+        return `Yanl\u0131\u015F d\u0259y\u0259r`;
+    }
+  };
+};
+function az_default() {
+  return {
+    localeError: error2()
+  };
+}
+
+// node_modules/zod/v4/locales/be.js
+function getBelarusianPlural(count, one, few, many) {
+  const absCount = Math.abs(count);
+  const lastDigit = absCount % 10;
+  const lastTwoDigits = absCount % 100;
+  if (lastTwoDigits >= 11 && lastTwoDigits <= 19) {
+    return many;
+  }
+  if (lastDigit === 1) {
+    return one;
+  }
+  if (lastDigit >= 2 && lastDigit <= 4) {
+    return few;
+  }
+  return many;
+}
+var error3 = () => {
+  const Sizable = {
+    string: {
+      unit: {
+        one: "\u0441\u0456\u043C\u0432\u0430\u043B",
+        few: "\u0441\u0456\u043C\u0432\u0430\u043B\u044B",
+        many: "\u0441\u0456\u043C\u0432\u0430\u043B\u0430\u045E"
+      },
+      verb: "\u043C\u0435\u0446\u044C"
+    },
+    array: {
+      unit: {
+        one: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442",
+        few: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u044B",
+        many: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u0430\u045E"
+      },
+      verb: "\u043C\u0435\u0446\u044C"
+    },
+    set: {
+      unit: {
+        one: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442",
+        few: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u044B",
+        many: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u0430\u045E"
+      },
+      verb: "\u043C\u0435\u0446\u044C"
+    },
+    file: {
+      unit: {
+        one: "\u0431\u0430\u0439\u0442",
+        few: "\u0431\u0430\u0439\u0442\u044B",
+        many: "\u0431\u0430\u0439\u0442\u0430\u045E"
+      },
+      verb: "\u043C\u0435\u0446\u044C"
+    }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "\u0443\u0432\u043E\u0434",
+    email: "email \u0430\u0434\u0440\u0430\u0441",
+    url: "URL",
+    emoji: "\u044D\u043C\u043E\u0434\u0437\u0456",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "ISO \u0434\u0430\u0442\u0430 \u0456 \u0447\u0430\u0441",
+    date: "ISO \u0434\u0430\u0442\u0430",
+    time: "ISO \u0447\u0430\u0441",
+    duration: "ISO \u043F\u0440\u0430\u0446\u044F\u0433\u043B\u0430\u0441\u0446\u044C",
+    ipv4: "IPv4 \u0430\u0434\u0440\u0430\u0441",
+    ipv6: "IPv6 \u0430\u0434\u0440\u0430\u0441",
+    cidrv4: "IPv4 \u0434\u044B\u044F\u043F\u0430\u0437\u043E\u043D",
+    cidrv6: "IPv6 \u0434\u044B\u044F\u043F\u0430\u0437\u043E\u043D",
+    base64: "\u0440\u0430\u0434\u043E\u043A \u0443 \u0444\u0430\u0440\u043C\u0430\u0446\u0435 base64",
+    base64url: "\u0440\u0430\u0434\u043E\u043A \u0443 \u0444\u0430\u0440\u043C\u0430\u0446\u0435 base64url",
+    json_string: "JSON \u0440\u0430\u0434\u043E\u043A",
+    e164: "\u043D\u0443\u043C\u0430\u0440 E.164",
+    jwt: "JWT",
+    template_literal: "\u0443\u0432\u043E\u0434"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "\u043B\u0456\u043A",
+    array: "\u043C\u0430\u0441\u0456\u045E"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B \u045E\u0432\u043E\u0434: \u0447\u0430\u043A\u0430\u045E\u0441\u044F instanceof ${issue2.expected}, \u0430\u0442\u0440\u044B\u043C\u0430\u043D\u0430 ${received}`;
+        }
+        return `\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B \u045E\u0432\u043E\u0434: \u0447\u0430\u043A\u0430\u045E\u0441\u044F ${expected}, \u0430\u0442\u0440\u044B\u043C\u0430\u043D\u0430 ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B \u045E\u0432\u043E\u0434: \u0447\u0430\u043A\u0430\u043B\u0430\u0441\u044F ${stringifyPrimitive(issue2.values[0])}`;
+        return `\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B \u0432\u0430\u0440\u044B\u044F\u043D\u0442: \u0447\u0430\u043A\u0430\u045E\u0441\u044F \u0430\u0434\u0437\u0456\u043D \u0437 ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          const maxValue = Number(issue2.maximum);
+          const unit = getBelarusianPlural(maxValue, sizing.unit.one, sizing.unit.few, sizing.unit.many);
+          return `\u0417\u0430\u043D\u0430\u0434\u0442\u0430 \u0432\u044F\u043B\u0456\u043A\u0456: \u0447\u0430\u043A\u0430\u043B\u0430\u0441\u044F, \u0448\u0442\u043E ${(_c = issue2.origin) != null ? _c : "\u0437\u043D\u0430\u0447\u044D\u043D\u043D\u0435"} \u043F\u0430\u0432\u0456\u043D\u043D\u0430 ${sizing.verb} ${adj}${issue2.maximum.toString()} ${unit}`;
+        }
+        return `\u0417\u0430\u043D\u0430\u0434\u0442\u0430 \u0432\u044F\u043B\u0456\u043A\u0456: \u0447\u0430\u043A\u0430\u043B\u0430\u0441\u044F, \u0448\u0442\u043E ${(_d = issue2.origin) != null ? _d : "\u0437\u043D\u0430\u0447\u044D\u043D\u043D\u0435"} \u043F\u0430\u0432\u0456\u043D\u043D\u0430 \u0431\u044B\u0446\u044C ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          const minValue = Number(issue2.minimum);
+          const unit = getBelarusianPlural(minValue, sizing.unit.one, sizing.unit.few, sizing.unit.many);
+          return `\u0417\u0430\u043D\u0430\u0434\u0442\u0430 \u043C\u0430\u043B\u044B: \u0447\u0430\u043A\u0430\u043B\u0430\u0441\u044F, \u0448\u0442\u043E ${issue2.origin} \u043F\u0430\u0432\u0456\u043D\u043D\u0430 ${sizing.verb} ${adj}${issue2.minimum.toString()} ${unit}`;
+        }
+        return `\u0417\u0430\u043D\u0430\u0434\u0442\u0430 \u043C\u0430\u043B\u044B: \u0447\u0430\u043A\u0430\u043B\u0430\u0441\u044F, \u0448\u0442\u043E ${issue2.origin} \u043F\u0430\u0432\u0456\u043D\u043D\u0430 \u0431\u044B\u0446\u044C ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with")
+          return `\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B \u0440\u0430\u0434\u043E\u043A: \u043F\u0430\u0432\u0456\u043D\u0435\u043D \u043F\u0430\u0447\u044B\u043D\u0430\u0446\u0446\u0430 \u0437 "${_issue.prefix}"`;
+        if (_issue.format === "ends_with")
+          return `\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B \u0440\u0430\u0434\u043E\u043A: \u043F\u0430\u0432\u0456\u043D\u0435\u043D \u0437\u0430\u043A\u0430\u043D\u0447\u0432\u0430\u0446\u0446\u0430 \u043D\u0430 "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B \u0440\u0430\u0434\u043E\u043A: \u043F\u0430\u0432\u0456\u043D\u0435\u043D \u0437\u043C\u044F\u0448\u0447\u0430\u0446\u044C "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B \u0440\u0430\u0434\u043E\u043A: \u043F\u0430\u0432\u0456\u043D\u0435\u043D \u0430\u0434\u043F\u0430\u0432\u044F\u0434\u0430\u0446\u044C \u0448\u0430\u0431\u043B\u043E\u043D\u0443 ${_issue.pattern}`;
+        return `\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B ${(_e = FormatDictionary[_issue.format]) != null ? _e : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B \u043B\u0456\u043A: \u043F\u0430\u0432\u0456\u043D\u0435\u043D \u0431\u044B\u0446\u044C \u043A\u0440\u0430\u0442\u043D\u044B\u043C ${issue2.divisor}`;
+      case "unrecognized_keys":
+        return `\u041D\u0435\u0440\u0430\u0441\u043F\u0430\u0437\u043D\u0430\u043D\u044B ${issue2.keys.length > 1 ? "\u043A\u043B\u044E\u0447\u044B" : "\u043A\u043B\u044E\u0447"}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B \u043A\u043B\u044E\u0447 \u0443 ${issue2.origin}`;
+      case "invalid_union":
+        return "\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B \u045E\u0432\u043E\u0434";
+      case "invalid_element":
+        return `\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u0430\u0435 \u0437\u043D\u0430\u0447\u044D\u043D\u043D\u0435 \u045E ${issue2.origin}`;
+      default:
+        return `\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B \u045E\u0432\u043E\u0434`;
+    }
+  };
+};
+function be_default() {
+  return {
+    localeError: error3()
+  };
+}
+
+// node_modules/zod/v4/locales/bg.js
+var error4 = () => {
+  const Sizable = {
+    string: { unit: "\u0441\u0438\u043C\u0432\u043E\u043B\u0430", verb: "\u0434\u0430 \u0441\u044A\u0434\u044A\u0440\u0436\u0430" },
+    file: { unit: "\u0431\u0430\u0439\u0442\u0430", verb: "\u0434\u0430 \u0441\u044A\u0434\u044A\u0440\u0436\u0430" },
+    array: { unit: "\u0435\u043B\u0435\u043C\u0435\u043D\u0442\u0430", verb: "\u0434\u0430 \u0441\u044A\u0434\u044A\u0440\u0436\u0430" },
+    set: { unit: "\u0435\u043B\u0435\u043C\u0435\u043D\u0442\u0430", verb: "\u0434\u0430 \u0441\u044A\u0434\u044A\u0440\u0436\u0430" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "\u0432\u0445\u043E\u0434",
+    email: "\u0438\u043C\u0435\u0439\u043B \u0430\u0434\u0440\u0435\u0441",
+    url: "URL",
+    emoji: "\u0435\u043C\u043E\u0434\u0436\u0438",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "ISO \u0432\u0440\u0435\u043C\u0435",
+    date: "ISO \u0434\u0430\u0442\u0430",
+    time: "ISO \u0432\u0440\u0435\u043C\u0435",
+    duration: "ISO \u043F\u0440\u043E\u0434\u044A\u043B\u0436\u0438\u0442\u0435\u043B\u043D\u043E\u0441\u0442",
+    ipv4: "IPv4 \u0430\u0434\u0440\u0435\u0441",
+    ipv6: "IPv6 \u0430\u0434\u0440\u0435\u0441",
+    cidrv4: "IPv4 \u0434\u0438\u0430\u043F\u0430\u0437\u043E\u043D",
+    cidrv6: "IPv6 \u0434\u0438\u0430\u043F\u0430\u0437\u043E\u043D",
+    base64: "base64-\u043A\u043E\u0434\u0438\u0440\u0430\u043D \u043D\u0438\u0437",
+    base64url: "base64url-\u043A\u043E\u0434\u0438\u0440\u0430\u043D \u043D\u0438\u0437",
+    json_string: "JSON \u043D\u0438\u0437",
+    e164: "E.164 \u043D\u043E\u043C\u0435\u0440",
+    jwt: "JWT",
+    template_literal: "\u0432\u0445\u043E\u0434"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "\u0447\u0438\u0441\u043B\u043E",
+    array: "\u043C\u0430\u0441\u0438\u0432"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u0435\u043D \u0432\u0445\u043E\u0434: \u043E\u0447\u0430\u043A\u0432\u0430\u043D instanceof ${issue2.expected}, \u043F\u043E\u043B\u0443\u0447\u0435\u043D ${received}`;
+        }
+        return `\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u0435\u043D \u0432\u0445\u043E\u0434: \u043E\u0447\u0430\u043A\u0432\u0430\u043D ${expected}, \u043F\u043E\u043B\u0443\u0447\u0435\u043D ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u0435\u043D \u0432\u0445\u043E\u0434: \u043E\u0447\u0430\u043A\u0432\u0430\u043D ${stringifyPrimitive(issue2.values[0])}`;
+        return `\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u043D\u0430 \u043E\u043F\u0446\u0438\u044F: \u043E\u0447\u0430\u043A\u0432\u0430\u043D\u043E \u0435\u0434\u043D\u043E \u043E\u0442 ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `\u0422\u0432\u044A\u0440\u0434\u0435 \u0433\u043E\u043B\u044F\u043C\u043E: \u043E\u0447\u0430\u043A\u0432\u0430 \u0441\u0435 ${(_c = issue2.origin) != null ? _c : "\u0441\u0442\u043E\u0439\u043D\u043E\u0441\u0442"} \u0434\u0430 \u0441\u044A\u0434\u044A\u0440\u0436\u0430 ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "\u0435\u043B\u0435\u043C\u0435\u043D\u0442\u0430"}`;
+        return `\u0422\u0432\u044A\u0440\u0434\u0435 \u0433\u043E\u043B\u044F\u043C\u043E: \u043E\u0447\u0430\u043A\u0432\u0430 \u0441\u0435 ${(_e = issue2.origin) != null ? _e : "\u0441\u0442\u043E\u0439\u043D\u043E\u0441\u0442"} \u0434\u0430 \u0431\u044A\u0434\u0435 ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `\u0422\u0432\u044A\u0440\u0434\u0435 \u043C\u0430\u043B\u043A\u043E: \u043E\u0447\u0430\u043A\u0432\u0430 \u0441\u0435 ${issue2.origin} \u0434\u0430 \u0441\u044A\u0434\u044A\u0440\u0436\u0430 ${adj}${issue2.minimum.toString()} ${sizing.unit}`;
+        }
+        return `\u0422\u0432\u044A\u0440\u0434\u0435 \u043C\u0430\u043B\u043A\u043E: \u043E\u0447\u0430\u043A\u0432\u0430 \u0441\u0435 ${issue2.origin} \u0434\u0430 \u0431\u044A\u0434\u0435 ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with") {
+          return `\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u0435\u043D \u043D\u0438\u0437: \u0442\u0440\u044F\u0431\u0432\u0430 \u0434\u0430 \u0437\u0430\u043F\u043E\u0447\u0432\u0430 \u0441 "${_issue.prefix}"`;
+        }
+        if (_issue.format === "ends_with")
+          return `\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u0435\u043D \u043D\u0438\u0437: \u0442\u0440\u044F\u0431\u0432\u0430 \u0434\u0430 \u0437\u0430\u0432\u044A\u0440\u0448\u0432\u0430 \u0441 "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u0435\u043D \u043D\u0438\u0437: \u0442\u0440\u044F\u0431\u0432\u0430 \u0434\u0430 \u0432\u043A\u043B\u044E\u0447\u0432\u0430 "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u0435\u043D \u043D\u0438\u0437: \u0442\u0440\u044F\u0431\u0432\u0430 \u0434\u0430 \u0441\u044A\u0432\u043F\u0430\u0434\u0430 \u0441 ${_issue.pattern}`;
+        let invalid_adj = "\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u0435\u043D";
+        if (_issue.format === "emoji")
+          invalid_adj = "\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u043D\u043E";
+        if (_issue.format === "datetime")
+          invalid_adj = "\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u043D\u043E";
+        if (_issue.format === "date")
+          invalid_adj = "\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u043D\u0430";
+        if (_issue.format === "time")
+          invalid_adj = "\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u043D\u043E";
+        if (_issue.format === "duration")
+          invalid_adj = "\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u043D\u0430";
+        return `${invalid_adj} ${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u043D\u043E \u0447\u0438\u0441\u043B\u043E: \u0442\u0440\u044F\u0431\u0432\u0430 \u0434\u0430 \u0431\u044A\u0434\u0435 \u043A\u0440\u0430\u0442\u043D\u043E \u043D\u0430 ${issue2.divisor}`;
+      case "unrecognized_keys":
+        return `\u041D\u0435\u0440\u0430\u0437\u043F\u043E\u0437\u043D\u0430\u0442${issue2.keys.length > 1 ? "\u0438" : ""} \u043A\u043B\u044E\u0447${issue2.keys.length > 1 ? "\u043E\u0432\u0435" : ""}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u0435\u043D \u043A\u043B\u044E\u0447 \u0432 ${issue2.origin}`;
+      case "invalid_union":
+        return "\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u0435\u043D \u0432\u0445\u043E\u0434";
+      case "invalid_element":
+        return `\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u043D\u0430 \u0441\u0442\u043E\u0439\u043D\u043E\u0441\u0442 \u0432 ${issue2.origin}`;
+      default:
+        return `\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u0435\u043D \u0432\u0445\u043E\u0434`;
+    }
+  };
+};
+function bg_default() {
+  return {
+    localeError: error4()
+  };
+}
+
+// node_modules/zod/v4/locales/ca.js
+var error5 = () => {
+  const Sizable = {
+    string: { unit: "car\xE0cters", verb: "contenir" },
+    file: { unit: "bytes", verb: "contenir" },
+    array: { unit: "elements", verb: "contenir" },
+    set: { unit: "elements", verb: "contenir" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "entrada",
+    email: "adre\xE7a electr\xF2nica",
+    url: "URL",
+    emoji: "emoji",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "data i hora ISO",
+    date: "data ISO",
+    time: "hora ISO",
+    duration: "durada ISO",
+    ipv4: "adre\xE7a IPv4",
+    ipv6: "adre\xE7a IPv6",
+    cidrv4: "rang IPv4",
+    cidrv6: "rang IPv6",
+    base64: "cadena codificada en base64",
+    base64url: "cadena codificada en base64url",
+    json_string: "cadena JSON",
+    e164: "n\xFAmero E.164",
+    jwt: "JWT",
+    template_literal: "entrada"
+  };
+  const TypeDictionary = {
+    nan: "NaN"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `Tipus inv\xE0lid: s'esperava instanceof ${issue2.expected}, s'ha rebut ${received}`;
+        }
+        return `Tipus inv\xE0lid: s'esperava ${expected}, s'ha rebut ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `Valor inv\xE0lid: s'esperava ${stringifyPrimitive(issue2.values[0])}`;
+        return `Opci\xF3 inv\xE0lida: s'esperava una de ${joinValues(issue2.values, " o ")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "com a m\xE0xim" : "menys de";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `Massa gran: s'esperava que ${(_c = issue2.origin) != null ? _c : "el valor"} contingu\xE9s ${adj} ${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "elements"}`;
+        return `Massa gran: s'esperava que ${(_e = issue2.origin) != null ? _e : "el valor"} fos ${adj} ${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? "com a m\xEDnim" : "m\xE9s de";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `Massa petit: s'esperava que ${issue2.origin} contingu\xE9s ${adj} ${issue2.minimum.toString()} ${sizing.unit}`;
+        }
+        return `Massa petit: s'esperava que ${issue2.origin} fos ${adj} ${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with") {
+          return `Format inv\xE0lid: ha de comen\xE7ar amb "${_issue.prefix}"`;
+        }
+        if (_issue.format === "ends_with")
+          return `Format inv\xE0lid: ha d'acabar amb "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `Format inv\xE0lid: ha d'incloure "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `Format inv\xE0lid: ha de coincidir amb el patr\xF3 ${_issue.pattern}`;
+        return `Format inv\xE0lid per a ${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `N\xFAmero inv\xE0lid: ha de ser m\xFAltiple de ${issue2.divisor}`;
+      case "unrecognized_keys":
+        return `Clau${issue2.keys.length > 1 ? "s" : ""} no reconeguda${issue2.keys.length > 1 ? "s" : ""}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `Clau inv\xE0lida a ${issue2.origin}`;
+      case "invalid_union":
+        return "Entrada inv\xE0lida";
+      case "invalid_element":
+        return `Element inv\xE0lid a ${issue2.origin}`;
+      default:
+        return `Entrada inv\xE0lida`;
+    }
+  };
+};
+function ca_default() {
+  return {
+    localeError: error5()
+  };
+}
+
+// node_modules/zod/v4/locales/cs.js
+var error6 = () => {
+  const Sizable = {
+    string: { unit: "znak\u016F", verb: "m\xEDt" },
+    file: { unit: "bajt\u016F", verb: "m\xEDt" },
+    array: { unit: "prvk\u016F", verb: "m\xEDt" },
+    set: { unit: "prvk\u016F", verb: "m\xEDt" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "regul\xE1rn\xED v\xFDraz",
+    email: "e-mailov\xE1 adresa",
+    url: "URL",
+    emoji: "emoji",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "datum a \u010Das ve form\xE1tu ISO",
+    date: "datum ve form\xE1tu ISO",
+    time: "\u010Das ve form\xE1tu ISO",
+    duration: "doba trv\xE1n\xED ISO",
+    ipv4: "IPv4 adresa",
+    ipv6: "IPv6 adresa",
+    cidrv4: "rozsah IPv4",
+    cidrv6: "rozsah IPv6",
+    base64: "\u0159et\u011Bzec zak\xF3dovan\xFD ve form\xE1tu base64",
+    base64url: "\u0159et\u011Bzec zak\xF3dovan\xFD ve form\xE1tu base64url",
+    json_string: "\u0159et\u011Bzec ve form\xE1tu JSON",
+    e164: "\u010D\xEDslo E.164",
+    jwt: "JWT",
+    template_literal: "vstup"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "\u010D\xEDslo",
+    string: "\u0159et\u011Bzec",
+    function: "funkce",
+    array: "pole"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f, _g, _h, _i;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `Neplatn\xFD vstup: o\u010Dek\xE1v\xE1no instanceof ${issue2.expected}, obdr\u017Eeno ${received}`;
+        }
+        return `Neplatn\xFD vstup: o\u010Dek\xE1v\xE1no ${expected}, obdr\u017Eeno ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `Neplatn\xFD vstup: o\u010Dek\xE1v\xE1no ${stringifyPrimitive(issue2.values[0])}`;
+        return `Neplatn\xE1 mo\u017Enost: o\u010Dek\xE1v\xE1na jedna z hodnot ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `Hodnota je p\u0159\xEDli\u0161 velk\xE1: ${(_c = issue2.origin) != null ? _c : "hodnota"} mus\xED m\xEDt ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "prvk\u016F"}`;
+        }
+        return `Hodnota je p\u0159\xEDli\u0161 velk\xE1: ${(_e = issue2.origin) != null ? _e : "hodnota"} mus\xED b\xFDt ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `Hodnota je p\u0159\xEDli\u0161 mal\xE1: ${(_f = issue2.origin) != null ? _f : "hodnota"} mus\xED m\xEDt ${adj}${issue2.minimum.toString()} ${(_g = sizing.unit) != null ? _g : "prvk\u016F"}`;
+        }
+        return `Hodnota je p\u0159\xEDli\u0161 mal\xE1: ${(_h = issue2.origin) != null ? _h : "hodnota"} mus\xED b\xFDt ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with")
+          return `Neplatn\xFD \u0159et\u011Bzec: mus\xED za\u010D\xEDnat na "${_issue.prefix}"`;
+        if (_issue.format === "ends_with")
+          return `Neplatn\xFD \u0159et\u011Bzec: mus\xED kon\u010Dit na "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `Neplatn\xFD \u0159et\u011Bzec: mus\xED obsahovat "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `Neplatn\xFD \u0159et\u011Bzec: mus\xED odpov\xEDdat vzoru ${_issue.pattern}`;
+        return `Neplatn\xFD form\xE1t ${(_i = FormatDictionary[_issue.format]) != null ? _i : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `Neplatn\xE9 \u010D\xEDslo: mus\xED b\xFDt n\xE1sobkem ${issue2.divisor}`;
+      case "unrecognized_keys":
+        return `Nezn\xE1m\xE9 kl\xED\u010De: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `Neplatn\xFD kl\xED\u010D v ${issue2.origin}`;
+      case "invalid_union":
+        return "Neplatn\xFD vstup";
+      case "invalid_element":
+        return `Neplatn\xE1 hodnota v ${issue2.origin}`;
+      default:
+        return `Neplatn\xFD vstup`;
+    }
+  };
+};
+function cs_default() {
+  return {
+    localeError: error6()
+  };
+}
+
+// node_modules/zod/v4/locales/da.js
+var error7 = () => {
+  const Sizable = {
+    string: { unit: "tegn", verb: "havde" },
+    file: { unit: "bytes", verb: "havde" },
+    array: { unit: "elementer", verb: "indeholdt" },
+    set: { unit: "elementer", verb: "indeholdt" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "input",
+    email: "e-mailadresse",
+    url: "URL",
+    emoji: "emoji",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "ISO dato- og klokkesl\xE6t",
+    date: "ISO-dato",
+    time: "ISO-klokkesl\xE6t",
+    duration: "ISO-varighed",
+    ipv4: "IPv4-omr\xE5de",
+    ipv6: "IPv6-omr\xE5de",
+    cidrv4: "IPv4-spektrum",
+    cidrv6: "IPv6-spektrum",
+    base64: "base64-kodet streng",
+    base64url: "base64url-kodet streng",
+    json_string: "JSON-streng",
+    e164: "E.164-nummer",
+    jwt: "JWT",
+    template_literal: "input"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    string: "streng",
+    number: "tal",
+    boolean: "boolean",
+    array: "liste",
+    object: "objekt",
+    set: "s\xE6t",
+    file: "fil"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `Ugyldigt input: forventede instanceof ${issue2.expected}, fik ${received}`;
+        }
+        return `Ugyldigt input: forventede ${expected}, fik ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `Ugyldig v\xE6rdi: forventede ${stringifyPrimitive(issue2.values[0])}`;
+        return `Ugyldigt valg: forventede en af f\xF8lgende ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        const origin = (_c = TypeDictionary[issue2.origin]) != null ? _c : issue2.origin;
+        if (sizing)
+          return `For stor: forventede ${origin != null ? origin : "value"} ${sizing.verb} ${adj} ${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "elementer"}`;
+        return `For stor: forventede ${origin != null ? origin : "value"} havde ${adj} ${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        const origin = (_e = TypeDictionary[issue2.origin]) != null ? _e : issue2.origin;
+        if (sizing) {
+          return `For lille: forventede ${origin} ${sizing.verb} ${adj} ${issue2.minimum.toString()} ${sizing.unit}`;
+        }
+        return `For lille: forventede ${origin} havde ${adj} ${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with")
+          return `Ugyldig streng: skal starte med "${_issue.prefix}"`;
+        if (_issue.format === "ends_with")
+          return `Ugyldig streng: skal ende med "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `Ugyldig streng: skal indeholde "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `Ugyldig streng: skal matche m\xF8nsteret ${_issue.pattern}`;
+        return `Ugyldig ${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `Ugyldigt tal: skal v\xE6re deleligt med ${issue2.divisor}`;
+      case "unrecognized_keys":
+        return `${issue2.keys.length > 1 ? "Ukendte n\xF8gler" : "Ukendt n\xF8gle"}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `Ugyldig n\xF8gle i ${issue2.origin}`;
+      case "invalid_union":
+        return "Ugyldigt input: matcher ingen af de tilladte typer";
+      case "invalid_element":
+        return `Ugyldig v\xE6rdi i ${issue2.origin}`;
+      default:
+        return `Ugyldigt input`;
+    }
+  };
+};
+function da_default() {
+  return {
+    localeError: error7()
+  };
+}
+
+// node_modules/zod/v4/locales/de.js
+var error8 = () => {
+  const Sizable = {
+    string: { unit: "Zeichen", verb: "zu haben" },
+    file: { unit: "Bytes", verb: "zu haben" },
+    array: { unit: "Elemente", verb: "zu haben" },
+    set: { unit: "Elemente", verb: "zu haben" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "Eingabe",
+    email: "E-Mail-Adresse",
+    url: "URL",
+    emoji: "Emoji",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "ISO-Datum und -Uhrzeit",
+    date: "ISO-Datum",
+    time: "ISO-Uhrzeit",
+    duration: "ISO-Dauer",
+    ipv4: "IPv4-Adresse",
+    ipv6: "IPv6-Adresse",
+    cidrv4: "IPv4-Bereich",
+    cidrv6: "IPv6-Bereich",
+    base64: "Base64-codierter String",
+    base64url: "Base64-URL-codierter String",
+    json_string: "JSON-String",
+    e164: "E.164-Nummer",
+    jwt: "JWT",
+    template_literal: "Eingabe"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "Zahl",
+    array: "Array"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `Ung\xFCltige Eingabe: erwartet instanceof ${issue2.expected}, erhalten ${received}`;
+        }
+        return `Ung\xFCltige Eingabe: erwartet ${expected}, erhalten ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `Ung\xFCltige Eingabe: erwartet ${stringifyPrimitive(issue2.values[0])}`;
+        return `Ung\xFCltige Option: erwartet eine von ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `Zu gro\xDF: erwartet, dass ${(_c = issue2.origin) != null ? _c : "Wert"} ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "Elemente"} hat`;
+        return `Zu gro\xDF: erwartet, dass ${(_e = issue2.origin) != null ? _e : "Wert"} ${adj}${issue2.maximum.toString()} ist`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `Zu klein: erwartet, dass ${issue2.origin} ${adj}${issue2.minimum.toString()} ${sizing.unit} hat`;
+        }
+        return `Zu klein: erwartet, dass ${issue2.origin} ${adj}${issue2.minimum.toString()} ist`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with")
+          return `Ung\xFCltiger String: muss mit "${_issue.prefix}" beginnen`;
+        if (_issue.format === "ends_with")
+          return `Ung\xFCltiger String: muss mit "${_issue.suffix}" enden`;
+        if (_issue.format === "includes")
+          return `Ung\xFCltiger String: muss "${_issue.includes}" enthalten`;
+        if (_issue.format === "regex")
+          return `Ung\xFCltiger String: muss dem Muster ${_issue.pattern} entsprechen`;
+        return `Ung\xFCltig: ${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `Ung\xFCltige Zahl: muss ein Vielfaches von ${issue2.divisor} sein`;
+      case "unrecognized_keys":
+        return `${issue2.keys.length > 1 ? "Unbekannte Schl\xFCssel" : "Unbekannter Schl\xFCssel"}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `Ung\xFCltiger Schl\xFCssel in ${issue2.origin}`;
+      case "invalid_union":
+        return "Ung\xFCltige Eingabe";
+      case "invalid_element":
+        return `Ung\xFCltiger Wert in ${issue2.origin}`;
+      default:
+        return `Ung\xFCltige Eingabe`;
+    }
+  };
+};
+function de_default() {
+  return {
+    localeError: error8()
+  };
+}
+
+// node_modules/zod/v4/locales/el.js
+var error9 = () => {
+  const Sizable = {
+    string: { unit: "\u03C7\u03B1\u03C1\u03B1\u03BA\u03C4\u03AE\u03C1\u03B5\u03C2", verb: "\u03BD\u03B1 \u03AD\u03C7\u03B5\u03B9" },
+    file: { unit: "bytes", verb: "\u03BD\u03B1 \u03AD\u03C7\u03B5\u03B9" },
+    array: { unit: "\u03C3\u03C4\u03BF\u03B9\u03C7\u03B5\u03AF\u03B1", verb: "\u03BD\u03B1 \u03AD\u03C7\u03B5\u03B9" },
+    set: { unit: "\u03C3\u03C4\u03BF\u03B9\u03C7\u03B5\u03AF\u03B1", verb: "\u03BD\u03B1 \u03AD\u03C7\u03B5\u03B9" },
+    map: { unit: "\u03BA\u03B1\u03C4\u03B1\u03C7\u03C9\u03C1\u03AE\u03C3\u03B5\u03B9\u03C2", verb: "\u03BD\u03B1 \u03AD\u03C7\u03B5\u03B9" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "\u03B5\u03AF\u03C3\u03BF\u03B4\u03BF\u03C2",
+    email: "\u03B4\u03B9\u03B5\u03CD\u03B8\u03C5\u03BD\u03C3\u03B7 email",
+    url: "URL",
+    emoji: "emoji",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "ISO \u03B7\u03BC\u03B5\u03C1\u03BF\u03BC\u03B7\u03BD\u03AF\u03B1 \u03BA\u03B1\u03B9 \u03CE\u03C1\u03B1",
+    date: "ISO \u03B7\u03BC\u03B5\u03C1\u03BF\u03BC\u03B7\u03BD\u03AF\u03B1",
+    time: "ISO \u03CE\u03C1\u03B1",
+    duration: "ISO \u03B4\u03B9\u03AC\u03C1\u03BA\u03B5\u03B9\u03B1",
+    ipv4: "\u03B4\u03B9\u03B5\u03CD\u03B8\u03C5\u03BD\u03C3\u03B7 IPv4",
+    ipv6: "\u03B4\u03B9\u03B5\u03CD\u03B8\u03C5\u03BD\u03C3\u03B7 IPv6",
+    mac: "\u03B4\u03B9\u03B5\u03CD\u03B8\u03C5\u03BD\u03C3\u03B7 MAC",
+    cidrv4: "\u03B5\u03CD\u03C1\u03BF\u03C2 IPv4",
+    cidrv6: "\u03B5\u03CD\u03C1\u03BF\u03C2 IPv6",
+    base64: "\u03C3\u03C5\u03BC\u03B2\u03BF\u03BB\u03BF\u03C3\u03B5\u03B9\u03C1\u03AC \u03BA\u03C9\u03B4\u03B9\u03BA\u03BF\u03C0\u03BF\u03B9\u03B7\u03BC\u03AD\u03BD\u03B7 \u03C3\u03B5 base64",
+    base64url: "\u03C3\u03C5\u03BC\u03B2\u03BF\u03BB\u03BF\u03C3\u03B5\u03B9\u03C1\u03AC \u03BA\u03C9\u03B4\u03B9\u03BA\u03BF\u03C0\u03BF\u03B9\u03B7\u03BC\u03AD\u03BD\u03B7 \u03C3\u03B5 base64url",
+    json_string: "\u03C3\u03C5\u03BC\u03B2\u03BF\u03BB\u03BF\u03C3\u03B5\u03B9\u03C1\u03AC JSON",
+    e164: "\u03B1\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2 E.164",
+    jwt: "JWT",
+    template_literal: "\u03B5\u03AF\u03C3\u03BF\u03B4\u03BF\u03C2"
+  };
+  const TypeDictionary = {
+    nan: "NaN"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (typeof issue2.expected === "string" && /^[A-Z]/.test(issue2.expected)) {
+          return `\u039C\u03B7 \u03AD\u03B3\u03BA\u03C5\u03C1\u03B7 \u03B5\u03AF\u03C3\u03BF\u03B4\u03BF\u03C2: \u03B1\u03BD\u03B1\u03BC\u03B5\u03BD\u03CC\u03C4\u03B1\u03BD instanceof ${issue2.expected}, \u03BB\u03AE\u03C6\u03B8\u03B7\u03BA\u03B5 ${received}`;
+        }
+        return `\u039C\u03B7 \u03AD\u03B3\u03BA\u03C5\u03C1\u03B7 \u03B5\u03AF\u03C3\u03BF\u03B4\u03BF\u03C2: \u03B1\u03BD\u03B1\u03BC\u03B5\u03BD\u03CC\u03C4\u03B1\u03BD ${expected}, \u03BB\u03AE\u03C6\u03B8\u03B7\u03BA\u03B5 ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `\u039C\u03B7 \u03AD\u03B3\u03BA\u03C5\u03C1\u03B7 \u03B5\u03AF\u03C3\u03BF\u03B4\u03BF\u03C2: \u03B1\u03BD\u03B1\u03BC\u03B5\u03BD\u03CC\u03C4\u03B1\u03BD ${stringifyPrimitive(issue2.values[0])}`;
+        return `\u039C\u03B7 \u03AD\u03B3\u03BA\u03C5\u03C1\u03B7 \u03B5\u03C0\u03B9\u03BB\u03BF\u03B3\u03AE: \u03B1\u03BD\u03B1\u03BC\u03B5\u03BD\u03CC\u03C4\u03B1\u03BD \u03AD\u03BD\u03B1 \u03B1\u03C0\u03CC ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `\u03A0\u03BF\u03BB\u03CD \u03BC\u03B5\u03B3\u03AC\u03BB\u03BF: \u03B1\u03BD\u03B1\u03BC\u03B5\u03BD\u03CC\u03C4\u03B1\u03BD ${(_c = issue2.origin) != null ? _c : "\u03C4\u03B9\u03BC\u03AE"} \u03BD\u03B1 \u03AD\u03C7\u03B5\u03B9 ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "\u03C3\u03C4\u03BF\u03B9\u03C7\u03B5\u03AF\u03B1"}`;
+        return `\u03A0\u03BF\u03BB\u03CD \u03BC\u03B5\u03B3\u03AC\u03BB\u03BF: \u03B1\u03BD\u03B1\u03BC\u03B5\u03BD\u03CC\u03C4\u03B1\u03BD ${(_e = issue2.origin) != null ? _e : "\u03C4\u03B9\u03BC\u03AE"} \u03BD\u03B1 \u03B5\u03AF\u03BD\u03B1\u03B9 ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `\u03A0\u03BF\u03BB\u03CD \u03BC\u03B9\u03BA\u03C1\u03CC: \u03B1\u03BD\u03B1\u03BC\u03B5\u03BD\u03CC\u03C4\u03B1\u03BD ${issue2.origin} \u03BD\u03B1 \u03AD\u03C7\u03B5\u03B9 ${adj}${issue2.minimum.toString()} ${sizing.unit}`;
+        }
+        return `\u03A0\u03BF\u03BB\u03CD \u03BC\u03B9\u03BA\u03C1\u03CC: \u03B1\u03BD\u03B1\u03BC\u03B5\u03BD\u03CC\u03C4\u03B1\u03BD ${issue2.origin} \u03BD\u03B1 \u03B5\u03AF\u03BD\u03B1\u03B9 ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with") {
+          return `\u039C\u03B7 \u03AD\u03B3\u03BA\u03C5\u03C1\u03B7 \u03C3\u03C5\u03BC\u03B2\u03BF\u03BB\u03BF\u03C3\u03B5\u03B9\u03C1\u03AC: \u03C0\u03C1\u03AD\u03C0\u03B5\u03B9 \u03BD\u03B1 \u03BE\u03B5\u03BA\u03B9\u03BD\u03AC \u03BC\u03B5 "${_issue.prefix}"`;
+        }
+        if (_issue.format === "ends_with")
+          return `\u039C\u03B7 \u03AD\u03B3\u03BA\u03C5\u03C1\u03B7 \u03C3\u03C5\u03BC\u03B2\u03BF\u03BB\u03BF\u03C3\u03B5\u03B9\u03C1\u03AC: \u03C0\u03C1\u03AD\u03C0\u03B5\u03B9 \u03BD\u03B1 \u03C4\u03B5\u03BB\u03B5\u03B9\u03CE\u03BD\u03B5\u03B9 \u03BC\u03B5 "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `\u039C\u03B7 \u03AD\u03B3\u03BA\u03C5\u03C1\u03B7 \u03C3\u03C5\u03BC\u03B2\u03BF\u03BB\u03BF\u03C3\u03B5\u03B9\u03C1\u03AC: \u03C0\u03C1\u03AD\u03C0\u03B5\u03B9 \u03BD\u03B1 \u03C0\u03B5\u03C1\u03B9\u03AD\u03C7\u03B5\u03B9 "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `\u039C\u03B7 \u03AD\u03B3\u03BA\u03C5\u03C1\u03B7 \u03C3\u03C5\u03BC\u03B2\u03BF\u03BB\u03BF\u03C3\u03B5\u03B9\u03C1\u03AC: \u03C0\u03C1\u03AD\u03C0\u03B5\u03B9 \u03BD\u03B1 \u03C4\u03B1\u03B9\u03C1\u03B9\u03AC\u03B6\u03B5\u03B9 \u03BC\u03B5 \u03C4\u03BF \u03BC\u03BF\u03C4\u03AF\u03B2\u03BF ${_issue.pattern}`;
+        return `\u039C\u03B7 \u03AD\u03B3\u03BA\u03C5\u03C1\u03BF: ${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `\u039C\u03B7 \u03AD\u03B3\u03BA\u03C5\u03C1\u03BF\u03C2 \u03B1\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2: \u03C0\u03C1\u03AD\u03C0\u03B5\u03B9 \u03BD\u03B1 \u03B5\u03AF\u03BD\u03B1\u03B9 \u03C0\u03BF\u03BB\u03BB\u03B1\u03C0\u03BB\u03AC\u03C3\u03B9\u03BF \u03C4\u03BF\u03C5 ${issue2.divisor}`;
+      case "unrecognized_keys":
+        return `\u0386\u03B3\u03BD\u03C9\u03C3\u03C4${issue2.keys.length > 1 ? "\u03B1" : "\u03BF"} \u03BA\u03BB\u03B5\u03B9\u03B4${issue2.keys.length > 1 ? "\u03B9\u03AC" : "\u03AF"}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `\u039C\u03B7 \u03AD\u03B3\u03BA\u03C5\u03C1\u03BF \u03BA\u03BB\u03B5\u03B9\u03B4\u03AF \u03C3\u03C4\u03BF ${issue2.origin}`;
+      case "invalid_union":
+        return "\u039C\u03B7 \u03AD\u03B3\u03BA\u03C5\u03C1\u03B7 \u03B5\u03AF\u03C3\u03BF\u03B4\u03BF\u03C2";
+      case "invalid_element":
+        return `\u039C\u03B7 \u03AD\u03B3\u03BA\u03C5\u03C1\u03B7 \u03C4\u03B9\u03BC\u03AE \u03C3\u03C4\u03BF ${issue2.origin}`;
+      default:
+        return `\u039C\u03B7 \u03AD\u03B3\u03BA\u03C5\u03C1\u03B7 \u03B5\u03AF\u03C3\u03BF\u03B4\u03BF\u03C2`;
+    }
+  };
+};
+function el_default() {
+  return {
+    localeError: error9()
+  };
+}
+
+// node_modules/zod/v4/locales/en.js
+var error10 = () => {
+  const Sizable = {
+    string: { unit: "characters", verb: "to have" },
+    file: { unit: "bytes", verb: "to have" },
+    array: { unit: "items", verb: "to have" },
+    set: { unit: "items", verb: "to have" },
+    map: { unit: "entries", verb: "to have" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "input",
+    email: "email address",
+    url: "URL",
+    emoji: "emoji",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "ISO datetime",
+    date: "ISO date",
+    time: "ISO time",
+    duration: "ISO duration",
+    ipv4: "IPv4 address",
+    ipv6: "IPv6 address",
+    mac: "MAC address",
+    cidrv4: "IPv4 range",
+    cidrv6: "IPv6 range",
+    base64: "base64-encoded string",
+    base64url: "base64url-encoded string",
+    json_string: "JSON string",
+    e164: "E.164 number",
+    jwt: "JWT",
+    template_literal: "input"
+  };
+  const TypeDictionary = {
+    nan: "NaN"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        return `Invalid input: expected ${expected}, received ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `Invalid input: expected ${stringifyPrimitive(issue2.values[0])}`;
+        return `Invalid option: expected one of ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `Too big: expected ${(_c = issue2.origin) != null ? _c : "value"} to have ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "elements"}`;
+        return `Too big: expected ${(_e = issue2.origin) != null ? _e : "value"} to be ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `Too small: expected ${issue2.origin} to have ${adj}${issue2.minimum.toString()} ${sizing.unit}`;
+        }
+        return `Too small: expected ${issue2.origin} to be ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with") {
+          return `Invalid string: must start with "${_issue.prefix}"`;
+        }
+        if (_issue.format === "ends_with")
+          return `Invalid string: must end with "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `Invalid string: must include "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `Invalid string: must match pattern ${_issue.pattern}`;
+        return `Invalid ${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `Invalid number: must be a multiple of ${issue2.divisor}`;
+      case "unrecognized_keys":
+        return `Unrecognized key${issue2.keys.length > 1 ? "s" : ""}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `Invalid key in ${issue2.origin}`;
+      case "invalid_union":
+        if (issue2.options && Array.isArray(issue2.options) && issue2.options.length > 0) {
+          const opts = issue2.options.map((o) => `'${o}'`).join(" | ");
+          return `Invalid discriminator value. Expected ${opts}`;
+        }
+        return "Invalid input";
+      case "invalid_element":
+        return `Invalid value in ${issue2.origin}`;
+      default:
+        return `Invalid input`;
+    }
+  };
+};
+function en_default() {
+  return {
+    localeError: error10()
+  };
+}
+
+// node_modules/zod/v4/locales/eo.js
+var error11 = () => {
+  const Sizable = {
+    string: { unit: "karaktrojn", verb: "havi" },
+    file: { unit: "bajtojn", verb: "havi" },
+    array: { unit: "elementojn", verb: "havi" },
+    set: { unit: "elementojn", verb: "havi" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "enigo",
+    email: "retadreso",
+    url: "URL",
+    emoji: "emo\u011Dio",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "ISO-datotempo",
+    date: "ISO-dato",
+    time: "ISO-tempo",
+    duration: "ISO-da\u016Dro",
+    ipv4: "IPv4-adreso",
+    ipv6: "IPv6-adreso",
+    cidrv4: "IPv4-rango",
+    cidrv6: "IPv6-rango",
+    base64: "64-ume kodita karaktraro",
+    base64url: "URL-64-ume kodita karaktraro",
+    json_string: "JSON-karaktraro",
+    e164: "E.164-nombro",
+    jwt: "JWT",
+    template_literal: "enigo"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "nombro",
+    array: "tabelo",
+    null: "senvalora"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `Nevalida enigo: atendi\u011Dis instanceof ${issue2.expected}, ricevi\u011Dis ${received}`;
+        }
+        return `Nevalida enigo: atendi\u011Dis ${expected}, ricevi\u011Dis ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `Nevalida enigo: atendi\u011Dis ${stringifyPrimitive(issue2.values[0])}`;
+        return `Nevalida opcio: atendi\u011Dis unu el ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `Tro granda: atendi\u011Dis ke ${(_c = issue2.origin) != null ? _c : "valoro"} havu ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "elementojn"}`;
+        return `Tro granda: atendi\u011Dis ke ${(_e = issue2.origin) != null ? _e : "valoro"} havu ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `Tro malgranda: atendi\u011Dis ke ${issue2.origin} havu ${adj}${issue2.minimum.toString()} ${sizing.unit}`;
+        }
+        return `Tro malgranda: atendi\u011Dis ke ${issue2.origin} estu ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with")
+          return `Nevalida karaktraro: devas komenci\u011Di per "${_issue.prefix}"`;
+        if (_issue.format === "ends_with")
+          return `Nevalida karaktraro: devas fini\u011Di per "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `Nevalida karaktraro: devas inkluzivi "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `Nevalida karaktraro: devas kongrui kun la modelo ${_issue.pattern}`;
+        return `Nevalida ${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `Nevalida nombro: devas esti oblo de ${issue2.divisor}`;
+      case "unrecognized_keys":
+        return `Nekonata${issue2.keys.length > 1 ? "j" : ""} \u015Dlosilo${issue2.keys.length > 1 ? "j" : ""}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `Nevalida \u015Dlosilo en ${issue2.origin}`;
+      case "invalid_union":
+        return "Nevalida enigo";
+      case "invalid_element":
+        return `Nevalida valoro en ${issue2.origin}`;
+      default:
+        return `Nevalida enigo`;
+    }
+  };
+};
+function eo_default() {
+  return {
+    localeError: error11()
+  };
+}
+
+// node_modules/zod/v4/locales/es.js
+var error12 = () => {
+  const Sizable = {
+    string: { unit: "caracteres", verb: "tener" },
+    file: { unit: "bytes", verb: "tener" },
+    array: { unit: "elementos", verb: "tener" },
+    set: { unit: "elementos", verb: "tener" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "entrada",
+    email: "direcci\xF3n de correo electr\xF3nico",
+    url: "URL",
+    emoji: "emoji",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "fecha y hora ISO",
+    date: "fecha ISO",
+    time: "hora ISO",
+    duration: "duraci\xF3n ISO",
+    ipv4: "direcci\xF3n IPv4",
+    ipv6: "direcci\xF3n IPv6",
+    cidrv4: "rango IPv4",
+    cidrv6: "rango IPv6",
+    base64: "cadena codificada en base64",
+    base64url: "URL codificada en base64",
+    json_string: "cadena JSON",
+    e164: "n\xFAmero E.164",
+    jwt: "JWT",
+    template_literal: "entrada"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    string: "texto",
+    number: "n\xFAmero",
+    boolean: "booleano",
+    array: "arreglo",
+    object: "objeto",
+    set: "conjunto",
+    file: "archivo",
+    date: "fecha",
+    bigint: "n\xFAmero grande",
+    symbol: "s\xEDmbolo",
+    undefined: "indefinido",
+    null: "nulo",
+    function: "funci\xF3n",
+    map: "mapa",
+    record: "registro",
+    tuple: "tupla",
+    enum: "enumeraci\xF3n",
+    union: "uni\xF3n",
+    literal: "literal",
+    promise: "promesa",
+    void: "vac\xEDo",
+    never: "nunca",
+    unknown: "desconocido",
+    any: "cualquiera"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f, _g, _h;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `Entrada inv\xE1lida: se esperaba instanceof ${issue2.expected}, recibido ${received}`;
+        }
+        return `Entrada inv\xE1lida: se esperaba ${expected}, recibido ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `Entrada inv\xE1lida: se esperaba ${stringifyPrimitive(issue2.values[0])}`;
+        return `Opci\xF3n inv\xE1lida: se esperaba una de ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        const origin = (_c = TypeDictionary[issue2.origin]) != null ? _c : issue2.origin;
+        if (sizing)
+          return `Demasiado grande: se esperaba que ${origin != null ? origin : "valor"} tuviera ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "elementos"}`;
+        return `Demasiado grande: se esperaba que ${origin != null ? origin : "valor"} fuera ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        const origin = (_e = TypeDictionary[issue2.origin]) != null ? _e : issue2.origin;
+        if (sizing) {
+          return `Demasiado peque\xF1o: se esperaba que ${origin} tuviera ${adj}${issue2.minimum.toString()} ${sizing.unit}`;
+        }
+        return `Demasiado peque\xF1o: se esperaba que ${origin} fuera ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with")
+          return `Cadena inv\xE1lida: debe comenzar con "${_issue.prefix}"`;
+        if (_issue.format === "ends_with")
+          return `Cadena inv\xE1lida: debe terminar en "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `Cadena inv\xE1lida: debe incluir "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `Cadena inv\xE1lida: debe coincidir con el patr\xF3n ${_issue.pattern}`;
+        return `Inv\xE1lido ${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `N\xFAmero inv\xE1lido: debe ser m\xFAltiplo de ${issue2.divisor}`;
+      case "unrecognized_keys":
+        return `Llave${issue2.keys.length > 1 ? "s" : ""} desconocida${issue2.keys.length > 1 ? "s" : ""}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `Llave inv\xE1lida en ${(_g = TypeDictionary[issue2.origin]) != null ? _g : issue2.origin}`;
+      case "invalid_union":
+        return "Entrada inv\xE1lida";
+      case "invalid_element":
+        return `Valor inv\xE1lido en ${(_h = TypeDictionary[issue2.origin]) != null ? _h : issue2.origin}`;
+      default:
+        return `Entrada inv\xE1lida`;
+    }
+  };
+};
+function es_default() {
+  return {
+    localeError: error12()
+  };
+}
+
+// node_modules/zod/v4/locales/fa.js
+var error13 = () => {
+  const Sizable = {
+    string: { unit: "\u06A9\u0627\u0631\u0627\u06A9\u062A\u0631", verb: "\u062F\u0627\u0634\u062A\u0647 \u0628\u0627\u0634\u062F" },
+    file: { unit: "\u0628\u0627\u06CC\u062A", verb: "\u062F\u0627\u0634\u062A\u0647 \u0628\u0627\u0634\u062F" },
+    array: { unit: "\u0622\u06CC\u062A\u0645", verb: "\u062F\u0627\u0634\u062A\u0647 \u0628\u0627\u0634\u062F" },
+    set: { unit: "\u0622\u06CC\u062A\u0645", verb: "\u062F\u0627\u0634\u062A\u0647 \u0628\u0627\u0634\u062F" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "\u0648\u0631\u0648\u062F\u06CC",
+    email: "\u0622\u062F\u0631\u0633 \u0627\u06CC\u0645\u06CC\u0644",
+    url: "URL",
+    emoji: "\u0627\u06CC\u0645\u0648\u062C\u06CC",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "\u062A\u0627\u0631\u06CC\u062E \u0648 \u0632\u0645\u0627\u0646 \u0627\u06CC\u0632\u0648",
+    date: "\u062A\u0627\u0631\u06CC\u062E \u0627\u06CC\u0632\u0648",
+    time: "\u0632\u0645\u0627\u0646 \u0627\u06CC\u0632\u0648",
+    duration: "\u0645\u062F\u062A \u0632\u0645\u0627\u0646 \u0627\u06CC\u0632\u0648",
+    ipv4: "IPv4 \u0622\u062F\u0631\u0633",
+    ipv6: "IPv6 \u0622\u062F\u0631\u0633",
+    cidrv4: "IPv4 \u062F\u0627\u0645\u0646\u0647",
+    cidrv6: "IPv6 \u062F\u0627\u0645\u0646\u0647",
+    base64: "base64-encoded \u0631\u0634\u062A\u0647",
+    base64url: "base64url-encoded \u0631\u0634\u062A\u0647",
+    json_string: "JSON \u0631\u0634\u062A\u0647",
+    e164: "E.164 \u0639\u062F\u062F",
+    jwt: "JWT",
+    template_literal: "\u0648\u0631\u0648\u062F\u06CC"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "\u0639\u062F\u062F",
+    array: "\u0622\u0631\u0627\u06CC\u0647"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `\u0648\u0631\u0648\u062F\u06CC \u0646\u0627\u0645\u0639\u062A\u0628\u0631: \u0645\u06CC\u200C\u0628\u0627\u06CC\u0633\u062A instanceof ${issue2.expected} \u0645\u06CC\u200C\u0628\u0648\u062F\u060C ${received} \u062F\u0631\u06CC\u0627\u0641\u062A \u0634\u062F`;
+        }
+        return `\u0648\u0631\u0648\u062F\u06CC \u0646\u0627\u0645\u0639\u062A\u0628\u0631: \u0645\u06CC\u200C\u0628\u0627\u06CC\u0633\u062A ${expected} \u0645\u06CC\u200C\u0628\u0648\u062F\u060C ${received} \u062F\u0631\u06CC\u0627\u0641\u062A \u0634\u062F`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1) {
+          return `\u0648\u0631\u0648\u062F\u06CC \u0646\u0627\u0645\u0639\u062A\u0628\u0631: \u0645\u06CC\u200C\u0628\u0627\u06CC\u0633\u062A ${stringifyPrimitive(issue2.values[0])} \u0645\u06CC\u200C\u0628\u0648\u062F`;
+        }
+        return `\u06AF\u0632\u06CC\u0646\u0647 \u0646\u0627\u0645\u0639\u062A\u0628\u0631: \u0645\u06CC\u200C\u0628\u0627\u06CC\u0633\u062A \u06CC\u06A9\u06CC \u0627\u0632 ${joinValues(issue2.values, "|")} \u0645\u06CC\u200C\u0628\u0648\u062F`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `\u062E\u06CC\u0644\u06CC \u0628\u0632\u0631\u06AF: ${(_c = issue2.origin) != null ? _c : "\u0645\u0642\u062F\u0627\u0631"} \u0628\u0627\u06CC\u062F ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "\u0639\u0646\u0635\u0631"} \u0628\u0627\u0634\u062F`;
+        }
+        return `\u062E\u06CC\u0644\u06CC \u0628\u0632\u0631\u06AF: ${(_e = issue2.origin) != null ? _e : "\u0645\u0642\u062F\u0627\u0631"} \u0628\u0627\u06CC\u062F ${adj}${issue2.maximum.toString()} \u0628\u0627\u0634\u062F`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `\u062E\u06CC\u0644\u06CC \u06A9\u0648\u0686\u06A9: ${issue2.origin} \u0628\u0627\u06CC\u062F ${adj}${issue2.minimum.toString()} ${sizing.unit} \u0628\u0627\u0634\u062F`;
+        }
+        return `\u062E\u06CC\u0644\u06CC \u06A9\u0648\u0686\u06A9: ${issue2.origin} \u0628\u0627\u06CC\u062F ${adj}${issue2.minimum.toString()} \u0628\u0627\u0634\u062F`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with") {
+          return `\u0631\u0634\u062A\u0647 \u0646\u0627\u0645\u0639\u062A\u0628\u0631: \u0628\u0627\u06CC\u062F \u0628\u0627 "${_issue.prefix}" \u0634\u0631\u0648\u0639 \u0634\u0648\u062F`;
+        }
+        if (_issue.format === "ends_with") {
+          return `\u0631\u0634\u062A\u0647 \u0646\u0627\u0645\u0639\u062A\u0628\u0631: \u0628\u0627\u06CC\u062F \u0628\u0627 "${_issue.suffix}" \u062A\u0645\u0627\u0645 \u0634\u0648\u062F`;
+        }
+        if (_issue.format === "includes") {
+          return `\u0631\u0634\u062A\u0647 \u0646\u0627\u0645\u0639\u062A\u0628\u0631: \u0628\u0627\u06CC\u062F \u0634\u0627\u0645\u0644 "${_issue.includes}" \u0628\u0627\u0634\u062F`;
+        }
+        if (_issue.format === "regex") {
+          return `\u0631\u0634\u062A\u0647 \u0646\u0627\u0645\u0639\u062A\u0628\u0631: \u0628\u0627\u06CC\u062F \u0628\u0627 \u0627\u0644\u06AF\u0648\u06CC ${_issue.pattern} \u0645\u0637\u0627\u0628\u0642\u062A \u062F\u0627\u0634\u062A\u0647 \u0628\u0627\u0634\u062F`;
+        }
+        return `${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format} \u0646\u0627\u0645\u0639\u062A\u0628\u0631`;
+      }
+      case "not_multiple_of":
+        return `\u0639\u062F\u062F \u0646\u0627\u0645\u0639\u062A\u0628\u0631: \u0628\u0627\u06CC\u062F \u0645\u0636\u0631\u0628 ${issue2.divisor} \u0628\u0627\u0634\u062F`;
+      case "unrecognized_keys":
+        return `\u06A9\u0644\u06CC\u062F${issue2.keys.length > 1 ? "\u0647\u0627\u06CC" : ""} \u0646\u0627\u0634\u0646\u0627\u0633: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `\u06A9\u0644\u06CC\u062F \u0646\u0627\u0634\u0646\u0627\u0633 \u062F\u0631 ${issue2.origin}`;
+      case "invalid_union":
+        return `\u0648\u0631\u0648\u062F\u06CC \u0646\u0627\u0645\u0639\u062A\u0628\u0631`;
+      case "invalid_element":
+        return `\u0645\u0642\u062F\u0627\u0631 \u0646\u0627\u0645\u0639\u062A\u0628\u0631 \u062F\u0631 ${issue2.origin}`;
+      default:
+        return `\u0648\u0631\u0648\u062F\u06CC \u0646\u0627\u0645\u0639\u062A\u0628\u0631`;
+    }
+  };
+};
+function fa_default() {
+  return {
+    localeError: error13()
+  };
+}
+
+// node_modules/zod/v4/locales/fi.js
+var error14 = () => {
+  const Sizable = {
+    string: { unit: "merkki\xE4", subject: "merkkijonon" },
+    file: { unit: "tavua", subject: "tiedoston" },
+    array: { unit: "alkiota", subject: "listan" },
+    set: { unit: "alkiota", subject: "joukon" },
+    number: { unit: "", subject: "luvun" },
+    bigint: { unit: "", subject: "suuren kokonaisluvun" },
+    int: { unit: "", subject: "kokonaisluvun" },
+    date: { unit: "", subject: "p\xE4iv\xE4m\xE4\xE4r\xE4n" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "s\xE4\xE4nn\xF6llinen lauseke",
+    email: "s\xE4hk\xF6postiosoite",
+    url: "URL-osoite",
+    emoji: "emoji",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "ISO-aikaleima",
+    date: "ISO-p\xE4iv\xE4m\xE4\xE4r\xE4",
+    time: "ISO-aika",
+    duration: "ISO-kesto",
+    ipv4: "IPv4-osoite",
+    ipv6: "IPv6-osoite",
+    cidrv4: "IPv4-alue",
+    cidrv6: "IPv6-alue",
+    base64: "base64-koodattu merkkijono",
+    base64url: "base64url-koodattu merkkijono",
+    json_string: "JSON-merkkijono",
+    e164: "E.164-luku",
+    jwt: "JWT",
+    template_literal: "templaattimerkkijono"
+  };
+  const TypeDictionary = {
+    nan: "NaN"
+  };
+  return (issue2) => {
+    var _a5, _b, _c;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `Virheellinen tyyppi: odotettiin instanceof ${issue2.expected}, oli ${received}`;
+        }
+        return `Virheellinen tyyppi: odotettiin ${expected}, oli ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `Virheellinen sy\xF6te: t\xE4ytyy olla ${stringifyPrimitive(issue2.values[0])}`;
+        return `Virheellinen valinta: t\xE4ytyy olla yksi seuraavista: ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `Liian suuri: ${sizing.subject} t\xE4ytyy olla ${adj}${issue2.maximum.toString()} ${sizing.unit}`.trim();
+        }
+        return `Liian suuri: arvon t\xE4ytyy olla ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `Liian pieni: ${sizing.subject} t\xE4ytyy olla ${adj}${issue2.minimum.toString()} ${sizing.unit}`.trim();
+        }
+        return `Liian pieni: arvon t\xE4ytyy olla ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with")
+          return `Virheellinen sy\xF6te: t\xE4ytyy alkaa "${_issue.prefix}"`;
+        if (_issue.format === "ends_with")
+          return `Virheellinen sy\xF6te: t\xE4ytyy loppua "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `Virheellinen sy\xF6te: t\xE4ytyy sis\xE4lt\xE4\xE4 "${_issue.includes}"`;
+        if (_issue.format === "regex") {
+          return `Virheellinen sy\xF6te: t\xE4ytyy vastata s\xE4\xE4nn\xF6llist\xE4 lauseketta ${_issue.pattern}`;
+        }
+        return `Virheellinen ${(_c = FormatDictionary[_issue.format]) != null ? _c : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `Virheellinen luku: t\xE4ytyy olla luvun ${issue2.divisor} monikerta`;
+      case "unrecognized_keys":
+        return `${issue2.keys.length > 1 ? "Tuntemattomat avaimet" : "Tuntematon avain"}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return "Virheellinen avain tietueessa";
+      case "invalid_union":
+        return "Virheellinen unioni";
+      case "invalid_element":
+        return "Virheellinen arvo joukossa";
+      default:
+        return `Virheellinen sy\xF6te`;
+    }
+  };
+};
+function fi_default() {
+  return {
+    localeError: error14()
+  };
+}
+
+// node_modules/zod/v4/locales/fr.js
+var error15 = () => {
+  const Sizable = {
+    string: { unit: "caract\xE8res", verb: "avoir" },
+    file: { unit: "octets", verb: "avoir" },
+    array: { unit: "\xE9l\xE9ments", verb: "avoir" },
+    set: { unit: "\xE9l\xE9ments", verb: "avoir" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "entr\xE9e",
+    email: "adresse e-mail",
+    url: "URL",
+    emoji: "emoji",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "date et heure ISO",
+    date: "date ISO",
+    time: "heure ISO",
+    duration: "dur\xE9e ISO",
+    ipv4: "adresse IPv4",
+    ipv6: "adresse IPv6",
+    cidrv4: "plage IPv4",
+    cidrv6: "plage IPv6",
+    base64: "cha\xEEne encod\xE9e en base64",
+    base64url: "cha\xEEne encod\xE9e en base64url",
+    json_string: "cha\xEEne JSON",
+    e164: "num\xE9ro E.164",
+    jwt: "JWT",
+    template_literal: "entr\xE9e"
+  };
+  const TypeDictionary = {
+    string: "cha\xEEne",
+    number: "nombre",
+    int: "entier",
+    boolean: "bool\xE9en",
+    bigint: "grand entier",
+    symbol: "symbole",
+    undefined: "ind\xE9fini",
+    null: "null",
+    never: "jamais",
+    void: "vide",
+    date: "date",
+    array: "tableau",
+    object: "objet",
+    tuple: "tuple",
+    record: "enregistrement",
+    map: "carte",
+    set: "ensemble",
+    file: "fichier",
+    nonoptional: "non-optionnel",
+    nan: "NaN",
+    function: "fonction"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f, _g, _h;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `Entr\xE9e invalide : instanceof ${issue2.expected} attendu, ${received} re\xE7u`;
+        }
+        return `Entr\xE9e invalide : ${expected} attendu, ${received} re\xE7u`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `Entr\xE9e invalide : ${stringifyPrimitive(issue2.values[0])} attendu`;
+        return `Option invalide : une valeur parmi ${joinValues(issue2.values, "|")} attendue`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `Trop grand : ${(_c = TypeDictionary[issue2.origin]) != null ? _c : "valeur"} doit ${sizing.verb} ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "\xE9l\xE9ment(s)"}`;
+        return `Trop grand : ${(_e = TypeDictionary[issue2.origin]) != null ? _e : "valeur"} doit \xEAtre ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `Trop petit : ${(_f = TypeDictionary[issue2.origin]) != null ? _f : "valeur"} doit ${sizing.verb} ${adj}${issue2.minimum.toString()} ${sizing.unit}`;
+        return `Trop petit : ${(_g = TypeDictionary[issue2.origin]) != null ? _g : "valeur"} doit \xEAtre ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with")
+          return `Cha\xEEne invalide : doit commencer par "${_issue.prefix}"`;
+        if (_issue.format === "ends_with")
+          return `Cha\xEEne invalide : doit se terminer par "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `Cha\xEEne invalide : doit inclure "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `Cha\xEEne invalide : doit correspondre au mod\xE8le ${_issue.pattern}`;
+        return `${(_h = FormatDictionary[_issue.format]) != null ? _h : issue2.format} invalide`;
+      }
+      case "not_multiple_of":
+        return `Nombre invalide : doit \xEAtre un multiple de ${issue2.divisor}`;
+      case "unrecognized_keys":
+        return `Cl\xE9${issue2.keys.length > 1 ? "s" : ""} non reconnue${issue2.keys.length > 1 ? "s" : ""} : ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `Cl\xE9 invalide dans ${issue2.origin}`;
+      case "invalid_union":
+        return "Entr\xE9e invalide";
+      case "invalid_element":
+        return `Valeur invalide dans ${issue2.origin}`;
+      default:
+        return `Entr\xE9e invalide`;
+    }
+  };
+};
+function fr_default() {
+  return {
+    localeError: error15()
+  };
+}
+
+// node_modules/zod/v4/locales/fr-CA.js
+var error16 = () => {
+  const Sizable = {
+    string: { unit: "caract\xE8res", verb: "avoir" },
+    file: { unit: "octets", verb: "avoir" },
+    array: { unit: "\xE9l\xE9ments", verb: "avoir" },
+    set: { unit: "\xE9l\xE9ments", verb: "avoir" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "entr\xE9e",
+    email: "adresse courriel",
+    url: "URL",
+    emoji: "emoji",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "date-heure ISO",
+    date: "date ISO",
+    time: "heure ISO",
+    duration: "dur\xE9e ISO",
+    ipv4: "adresse IPv4",
+    ipv6: "adresse IPv6",
+    cidrv4: "plage IPv4",
+    cidrv6: "plage IPv6",
+    base64: "cha\xEEne encod\xE9e en base64",
+    base64url: "cha\xEEne encod\xE9e en base64url",
+    json_string: "cha\xEEne JSON",
+    e164: "num\xE9ro E.164",
+    jwt: "JWT",
+    template_literal: "entr\xE9e"
+  };
+  const TypeDictionary = {
+    nan: "NaN"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `Entr\xE9e invalide : attendu instanceof ${issue2.expected}, re\xE7u ${received}`;
+        }
+        return `Entr\xE9e invalide : attendu ${expected}, re\xE7u ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `Entr\xE9e invalide : attendu ${stringifyPrimitive(issue2.values[0])}`;
+        return `Option invalide : attendu l'une des valeurs suivantes ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "\u2264" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `Trop grand : attendu que ${(_c = issue2.origin) != null ? _c : "la valeur"} ait ${adj}${issue2.maximum.toString()} ${sizing.unit}`;
+        return `Trop grand : attendu que ${(_d = issue2.origin) != null ? _d : "la valeur"} soit ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? "\u2265" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `Trop petit : attendu que ${issue2.origin} ait ${adj}${issue2.minimum.toString()} ${sizing.unit}`;
+        }
+        return `Trop petit : attendu que ${issue2.origin} soit ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with") {
+          return `Cha\xEEne invalide : doit commencer par "${_issue.prefix}"`;
+        }
+        if (_issue.format === "ends_with")
+          return `Cha\xEEne invalide : doit se terminer par "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `Cha\xEEne invalide : doit inclure "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `Cha\xEEne invalide : doit correspondre au motif ${_issue.pattern}`;
+        return `${(_e = FormatDictionary[_issue.format]) != null ? _e : issue2.format} invalide`;
+      }
+      case "not_multiple_of":
+        return `Nombre invalide : doit \xEAtre un multiple de ${issue2.divisor}`;
+      case "unrecognized_keys":
+        return `Cl\xE9${issue2.keys.length > 1 ? "s" : ""} non reconnue${issue2.keys.length > 1 ? "s" : ""} : ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `Cl\xE9 invalide dans ${issue2.origin}`;
+      case "invalid_union":
+        return "Entr\xE9e invalide";
+      case "invalid_element":
+        return `Valeur invalide dans ${issue2.origin}`;
+      default:
+        return `Entr\xE9e invalide`;
+    }
+  };
+};
+function fr_CA_default() {
+  return {
+    localeError: error16()
+  };
+}
+
+// node_modules/zod/v4/locales/he.js
+var error17 = () => {
+  const TypeNames = {
+    string: { label: "\u05DE\u05D7\u05E8\u05D5\u05D6\u05EA", gender: "f" },
+    number: { label: "\u05DE\u05E1\u05E4\u05E8", gender: "m" },
+    boolean: { label: "\u05E2\u05E8\u05DA \u05D1\u05D5\u05DC\u05D9\u05D0\u05E0\u05D9", gender: "m" },
+    bigint: { label: "BigInt", gender: "m" },
+    date: { label: "\u05EA\u05D0\u05E8\u05D9\u05DA", gender: "m" },
+    array: { label: "\u05DE\u05E2\u05E8\u05DA", gender: "m" },
+    object: { label: "\u05D0\u05D5\u05D1\u05D9\u05D9\u05E7\u05D8", gender: "m" },
+    null: { label: "\u05E2\u05E8\u05DA \u05E8\u05D9\u05E7 (null)", gender: "m" },
+    undefined: { label: "\u05E2\u05E8\u05DA \u05DC\u05D0 \u05DE\u05D5\u05D2\u05D3\u05E8 (undefined)", gender: "m" },
+    symbol: { label: "\u05E1\u05D9\u05DE\u05D1\u05D5\u05DC (Symbol)", gender: "m" },
+    function: { label: "\u05E4\u05D5\u05E0\u05E7\u05E6\u05D9\u05D4", gender: "f" },
+    map: { label: "\u05DE\u05E4\u05D4 (Map)", gender: "f" },
+    set: { label: "\u05E7\u05D1\u05D5\u05E6\u05D4 (Set)", gender: "f" },
+    file: { label: "\u05E7\u05D5\u05D1\u05E5", gender: "m" },
+    promise: { label: "Promise", gender: "m" },
+    NaN: { label: "NaN", gender: "m" },
+    unknown: { label: "\u05E2\u05E8\u05DA \u05DC\u05D0 \u05D9\u05D3\u05D5\u05E2", gender: "m" },
+    value: { label: "\u05E2\u05E8\u05DA", gender: "m" }
+  };
+  const Sizable = {
+    string: { unit: "\u05EA\u05D5\u05D5\u05D9\u05DD", shortLabel: "\u05E7\u05E6\u05E8", longLabel: "\u05D0\u05E8\u05D5\u05DA" },
+    file: { unit: "\u05D1\u05D9\u05D9\u05D8\u05D9\u05DD", shortLabel: "\u05E7\u05D8\u05DF", longLabel: "\u05D2\u05D3\u05D5\u05DC" },
+    array: { unit: "\u05E4\u05E8\u05D9\u05D8\u05D9\u05DD", shortLabel: "\u05E7\u05D8\u05DF", longLabel: "\u05D2\u05D3\u05D5\u05DC" },
+    set: { unit: "\u05E4\u05E8\u05D9\u05D8\u05D9\u05DD", shortLabel: "\u05E7\u05D8\u05DF", longLabel: "\u05D2\u05D3\u05D5\u05DC" },
+    number: { unit: "", shortLabel: "\u05E7\u05D8\u05DF", longLabel: "\u05D2\u05D3\u05D5\u05DC" }
+  };
+  const typeEntry = (t) => t ? TypeNames[t] : void 0;
+  const typeLabel = (t) => {
+    const e = typeEntry(t);
+    if (e)
+      return e.label;
+    return t != null ? t : TypeNames.unknown.label;
+  };
+  const withDefinite = (t) => `\u05D4${typeLabel(t)}`;
+  const verbFor = (t) => {
+    var _a5;
+    const e = typeEntry(t);
+    const gender = (_a5 = e == null ? void 0 : e.gender) != null ? _a5 : "m";
+    return gender === "f" ? "\u05E6\u05E8\u05D9\u05DB\u05D4 \u05DC\u05D4\u05D9\u05D5\u05EA" : "\u05E6\u05E8\u05D9\u05DA \u05DC\u05D4\u05D9\u05D5\u05EA";
+  };
+  const getSizing = (origin) => {
+    var _a5;
+    if (!origin)
+      return null;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  };
+  const FormatDictionary = {
+    regex: { label: "\u05E7\u05DC\u05D8", gender: "m" },
+    email: { label: "\u05DB\u05EA\u05D5\u05D1\u05EA \u05D0\u05D9\u05DE\u05D9\u05D9\u05DC", gender: "f" },
+    url: { label: "\u05DB\u05EA\u05D5\u05D1\u05EA \u05E8\u05E9\u05EA", gender: "f" },
+    emoji: { label: "\u05D0\u05D9\u05DE\u05D5\u05D2'\u05D9", gender: "m" },
+    uuid: { label: "UUID", gender: "m" },
+    nanoid: { label: "nanoid", gender: "m" },
+    guid: { label: "GUID", gender: "m" },
+    cuid: { label: "cuid", gender: "m" },
+    cuid2: { label: "cuid2", gender: "m" },
+    ulid: { label: "ULID", gender: "m" },
+    xid: { label: "XID", gender: "m" },
+    ksuid: { label: "KSUID", gender: "m" },
+    datetime: { label: "\u05EA\u05D0\u05E8\u05D9\u05DA \u05D5\u05D6\u05DE\u05DF ISO", gender: "m" },
+    date: { label: "\u05EA\u05D0\u05E8\u05D9\u05DA ISO", gender: "m" },
+    time: { label: "\u05D6\u05DE\u05DF ISO", gender: "m" },
+    duration: { label: "\u05DE\u05E9\u05DA \u05D6\u05DE\u05DF ISO", gender: "m" },
+    ipv4: { label: "\u05DB\u05EA\u05D5\u05D1\u05EA IPv4", gender: "f" },
+    ipv6: { label: "\u05DB\u05EA\u05D5\u05D1\u05EA IPv6", gender: "f" },
+    cidrv4: { label: "\u05D8\u05D5\u05D5\u05D7 IPv4", gender: "m" },
+    cidrv6: { label: "\u05D8\u05D5\u05D5\u05D7 IPv6", gender: "m" },
+    base64: { label: "\u05DE\u05D7\u05E8\u05D5\u05D6\u05EA \u05D1\u05D1\u05E1\u05D9\u05E1 64", gender: "f" },
+    base64url: { label: "\u05DE\u05D7\u05E8\u05D5\u05D6\u05EA \u05D1\u05D1\u05E1\u05D9\u05E1 64 \u05DC\u05DB\u05EA\u05D5\u05D1\u05D5\u05EA \u05E8\u05E9\u05EA", gender: "f" },
+    json_string: { label: "\u05DE\u05D7\u05E8\u05D5\u05D6\u05EA JSON", gender: "f" },
+    e164: { label: "\u05DE\u05E1\u05E4\u05E8 E.164", gender: "m" },
+    jwt: { label: "JWT", gender: "m" },
+    ends_with: { label: "\u05E7\u05DC\u05D8", gender: "m" },
+    includes: { label: "\u05E7\u05DC\u05D8", gender: "m" },
+    lowercase: { label: "\u05E7\u05DC\u05D8", gender: "m" },
+    starts_with: { label: "\u05E7\u05DC\u05D8", gender: "m" },
+    uppercase: { label: "\u05E7\u05DC\u05D8", gender: "m" }
+  };
+  const TypeDictionary = {
+    nan: "NaN"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l, _m, _n, _o, _p, _q, _r, _s, _t, _u;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expectedKey = issue2.expected;
+        const expected = (_a5 = TypeDictionary[expectedKey != null ? expectedKey : ""]) != null ? _a5 : typeLabel(expectedKey);
+        const receivedType = parsedType(issue2.input);
+        const received = (_d = (_c = TypeDictionary[receivedType]) != null ? _c : (_b = TypeNames[receivedType]) == null ? void 0 : _b.label) != null ? _d : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `\u05E7\u05DC\u05D8 \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF: \u05E6\u05E8\u05D9\u05DA \u05DC\u05D4\u05D9\u05D5\u05EA instanceof ${issue2.expected}, \u05D4\u05EA\u05E7\u05D1\u05DC ${received}`;
+        }
+        return `\u05E7\u05DC\u05D8 \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF: \u05E6\u05E8\u05D9\u05DA \u05DC\u05D4\u05D9\u05D5\u05EA ${expected}, \u05D4\u05EA\u05E7\u05D1\u05DC ${received}`;
+      }
+      case "invalid_value": {
+        if (issue2.values.length === 1) {
+          return `\u05E2\u05E8\u05DA \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF: \u05D4\u05E2\u05E8\u05DA \u05D7\u05D9\u05D9\u05D1 \u05DC\u05D4\u05D9\u05D5\u05EA ${stringifyPrimitive(issue2.values[0])}`;
+        }
+        const stringified = issue2.values.map((v) => stringifyPrimitive(v));
+        if (issue2.values.length === 2) {
+          return `\u05E2\u05E8\u05DA \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF: \u05D4\u05D0\u05E4\u05E9\u05E8\u05D5\u05D9\u05D5\u05EA \u05D4\u05DE\u05EA\u05D0\u05D9\u05DE\u05D5\u05EA \u05D4\u05DF ${stringified[0]} \u05D0\u05D5 ${stringified[1]}`;
+        }
+        const lastValue = stringified[stringified.length - 1];
+        const restValues = stringified.slice(0, -1).join(", ");
+        return `\u05E2\u05E8\u05DA \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF: \u05D4\u05D0\u05E4\u05E9\u05E8\u05D5\u05D9\u05D5\u05EA \u05D4\u05DE\u05EA\u05D0\u05D9\u05DE\u05D5\u05EA \u05D4\u05DF ${restValues} \u05D0\u05D5 ${lastValue}`;
+      }
+      case "too_big": {
+        const sizing = getSizing(issue2.origin);
+        const subject = withDefinite((_e = issue2.origin) != null ? _e : "value");
+        if (issue2.origin === "string") {
+          return `${(_f = sizing == null ? void 0 : sizing.longLabel) != null ? _f : "\u05D0\u05E8\u05D5\u05DA"} \u05DE\u05D3\u05D9: ${subject} \u05E6\u05E8\u05D9\u05DB\u05D4 \u05DC\u05D4\u05DB\u05D9\u05DC ${issue2.maximum.toString()} ${(_g = sizing == null ? void 0 : sizing.unit) != null ? _g : ""} ${issue2.inclusive ? "\u05D0\u05D5 \u05E4\u05D7\u05D5\u05EA" : "\u05DC\u05DB\u05DC \u05D4\u05D9\u05D5\u05EA\u05E8"}`.trim();
+        }
+        if (issue2.origin === "number") {
+          const comparison = issue2.inclusive ? `\u05E7\u05D8\u05DF \u05D0\u05D5 \u05E9\u05D5\u05D5\u05D4 \u05DC-${issue2.maximum}` : `\u05E7\u05D8\u05DF \u05DE-${issue2.maximum}`;
+          return `\u05D2\u05D3\u05D5\u05DC \u05DE\u05D3\u05D9: ${subject} \u05E6\u05E8\u05D9\u05DA \u05DC\u05D4\u05D9\u05D5\u05EA ${comparison}`;
+        }
+        if (issue2.origin === "array" || issue2.origin === "set") {
+          const verb = issue2.origin === "set" ? "\u05E6\u05E8\u05D9\u05DB\u05D4" : "\u05E6\u05E8\u05D9\u05DA";
+          const comparison = issue2.inclusive ? `${issue2.maximum} ${(_h = sizing == null ? void 0 : sizing.unit) != null ? _h : ""} \u05D0\u05D5 \u05E4\u05D7\u05D5\u05EA` : `\u05E4\u05D7\u05D5\u05EA \u05DE-${issue2.maximum} ${(_i = sizing == null ? void 0 : sizing.unit) != null ? _i : ""}`;
+          return `\u05D2\u05D3\u05D5\u05DC \u05DE\u05D3\u05D9: ${subject} ${verb} \u05DC\u05D4\u05DB\u05D9\u05DC ${comparison}`.trim();
+        }
+        const adj = issue2.inclusive ? "<=" : "<";
+        const be = verbFor((_j = issue2.origin) != null ? _j : "value");
+        if (sizing == null ? void 0 : sizing.unit) {
+          return `${sizing.longLabel} \u05DE\u05D3\u05D9: ${subject} ${be} ${adj}${issue2.maximum.toString()} ${sizing.unit}`;
+        }
+        return `${(_k = sizing == null ? void 0 : sizing.longLabel) != null ? _k : "\u05D2\u05D3\u05D5\u05DC"} \u05DE\u05D3\u05D9: ${subject} ${be} ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const sizing = getSizing(issue2.origin);
+        const subject = withDefinite((_l = issue2.origin) != null ? _l : "value");
+        if (issue2.origin === "string") {
+          return `${(_m = sizing == null ? void 0 : sizing.shortLabel) != null ? _m : "\u05E7\u05E6\u05E8"} \u05DE\u05D3\u05D9: ${subject} \u05E6\u05E8\u05D9\u05DB\u05D4 \u05DC\u05D4\u05DB\u05D9\u05DC ${issue2.minimum.toString()} ${(_n = sizing == null ? void 0 : sizing.unit) != null ? _n : ""} ${issue2.inclusive ? "\u05D0\u05D5 \u05D9\u05D5\u05EA\u05E8" : "\u05DC\u05E4\u05D7\u05D5\u05EA"}`.trim();
+        }
+        if (issue2.origin === "number") {
+          const comparison = issue2.inclusive ? `\u05D2\u05D3\u05D5\u05DC \u05D0\u05D5 \u05E9\u05D5\u05D5\u05D4 \u05DC-${issue2.minimum}` : `\u05D2\u05D3\u05D5\u05DC \u05DE-${issue2.minimum}`;
+          return `\u05E7\u05D8\u05DF \u05DE\u05D3\u05D9: ${subject} \u05E6\u05E8\u05D9\u05DA \u05DC\u05D4\u05D9\u05D5\u05EA ${comparison}`;
+        }
+        if (issue2.origin === "array" || issue2.origin === "set") {
+          const verb = issue2.origin === "set" ? "\u05E6\u05E8\u05D9\u05DB\u05D4" : "\u05E6\u05E8\u05D9\u05DA";
+          if (issue2.minimum === 1 && issue2.inclusive) {
+            const singularPhrase = issue2.origin === "set" ? "\u05DC\u05E4\u05D7\u05D5\u05EA \u05E4\u05E8\u05D9\u05D8 \u05D0\u05D7\u05D3" : "\u05DC\u05E4\u05D7\u05D5\u05EA \u05E4\u05E8\u05D9\u05D8 \u05D0\u05D7\u05D3";
+            return `\u05E7\u05D8\u05DF \u05DE\u05D3\u05D9: ${subject} ${verb} \u05DC\u05D4\u05DB\u05D9\u05DC ${singularPhrase}`;
+          }
+          const comparison = issue2.inclusive ? `${issue2.minimum} ${(_o = sizing == null ? void 0 : sizing.unit) != null ? _o : ""} \u05D0\u05D5 \u05D9\u05D5\u05EA\u05E8` : `\u05D9\u05D5\u05EA\u05E8 \u05DE-${issue2.minimum} ${(_p = sizing == null ? void 0 : sizing.unit) != null ? _p : ""}`;
+          return `\u05E7\u05D8\u05DF \u05DE\u05D3\u05D9: ${subject} ${verb} \u05DC\u05D4\u05DB\u05D9\u05DC ${comparison}`.trim();
+        }
+        const adj = issue2.inclusive ? ">=" : ">";
+        const be = verbFor((_q = issue2.origin) != null ? _q : "value");
+        if (sizing == null ? void 0 : sizing.unit) {
+          return `${sizing.shortLabel} \u05DE\u05D3\u05D9: ${subject} ${be} ${adj}${issue2.minimum.toString()} ${sizing.unit}`;
+        }
+        return `${(_r = sizing == null ? void 0 : sizing.shortLabel) != null ? _r : "\u05E7\u05D8\u05DF"} \u05DE\u05D3\u05D9: ${subject} ${be} ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with")
+          return `\u05D4\u05DE\u05D7\u05E8\u05D5\u05D6\u05EA \u05D7\u05D9\u05D9\u05D1\u05EA \u05DC\u05D4\u05EA\u05D7\u05D9\u05DC \u05D1 "${_issue.prefix}"`;
+        if (_issue.format === "ends_with")
+          return `\u05D4\u05DE\u05D7\u05E8\u05D5\u05D6\u05EA \u05D7\u05D9\u05D9\u05D1\u05EA \u05DC\u05D4\u05E1\u05EA\u05D9\u05D9\u05DD \u05D1 "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `\u05D4\u05DE\u05D7\u05E8\u05D5\u05D6\u05EA \u05D7\u05D9\u05D9\u05D1\u05EA \u05DC\u05DB\u05DC\u05D5\u05DC "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `\u05D4\u05DE\u05D7\u05E8\u05D5\u05D6\u05EA \u05D7\u05D9\u05D9\u05D1\u05EA \u05DC\u05D4\u05EA\u05D0\u05D9\u05DD \u05DC\u05EA\u05D1\u05E0\u05D9\u05EA ${_issue.pattern}`;
+        const nounEntry = FormatDictionary[_issue.format];
+        const noun = (_s = nounEntry == null ? void 0 : nounEntry.label) != null ? _s : _issue.format;
+        const gender = (_t = nounEntry == null ? void 0 : nounEntry.gender) != null ? _t : "m";
+        const adjective = gender === "f" ? "\u05EA\u05E7\u05D9\u05E0\u05D4" : "\u05EA\u05E7\u05D9\u05DF";
+        return `${noun} \u05DC\u05D0 ${adjective}`;
+      }
+      case "not_multiple_of":
+        return `\u05DE\u05E1\u05E4\u05E8 \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF: \u05D7\u05D9\u05D9\u05D1 \u05DC\u05D4\u05D9\u05D5\u05EA \u05DE\u05DB\u05E4\u05DC\u05D4 \u05E9\u05DC ${issue2.divisor}`;
+      case "unrecognized_keys":
+        return `\u05DE\u05E4\u05EA\u05D7${issue2.keys.length > 1 ? "\u05D5\u05EA" : ""} \u05DC\u05D0 \u05DE\u05D6\u05D5\u05D4${issue2.keys.length > 1 ? "\u05D9\u05DD" : "\u05D4"}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key": {
+        return `\u05E9\u05D3\u05D4 \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF \u05D1\u05D0\u05D5\u05D1\u05D9\u05D9\u05E7\u05D8`;
+      }
+      case "invalid_union":
+        return "\u05E7\u05DC\u05D8 \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF";
+      case "invalid_element": {
+        const place = withDefinite((_u = issue2.origin) != null ? _u : "array");
+        return `\u05E2\u05E8\u05DA \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF \u05D1${place}`;
+      }
+      default:
+        return `\u05E7\u05DC\u05D8 \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF`;
+    }
+  };
+};
+function he_default() {
+  return {
+    localeError: error17()
+  };
+}
+
+// node_modules/zod/v4/locales/hr.js
+var error18 = () => {
+  const Sizable = {
+    string: { unit: "znakova", verb: "imati" },
+    file: { unit: "bajtova", verb: "imati" },
+    array: { unit: "stavki", verb: "imati" },
+    set: { unit: "stavki", verb: "imati" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "unos",
+    email: "email adresa",
+    url: "URL",
+    emoji: "emoji",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "ISO datum i vrijeme",
+    date: "ISO datum",
+    time: "ISO vrijeme",
+    duration: "ISO trajanje",
+    ipv4: "IPv4 adresa",
+    ipv6: "IPv6 adresa",
+    cidrv4: "IPv4 raspon",
+    cidrv6: "IPv6 raspon",
+    base64: "base64 kodirani tekst",
+    base64url: "base64url kodirani tekst",
+    json_string: "JSON tekst",
+    e164: "E.164 broj",
+    jwt: "JWT",
+    template_literal: "unos"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    string: "tekst",
+    number: "broj",
+    boolean: "boolean",
+    array: "niz",
+    object: "objekt",
+    set: "skup",
+    file: "datoteka",
+    date: "datum",
+    bigint: "bigint",
+    symbol: "simbol",
+    undefined: "undefined",
+    null: "null",
+    function: "funkcija",
+    map: "mapa"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f, _g, _h;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `Neispravan unos: o\u010Dekuje se instanceof ${issue2.expected}, a primljeno je ${received}`;
+        }
+        return `Neispravan unos: o\u010Dekuje se ${expected}, a primljeno je ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `Neispravna vrijednost: o\u010Dekivano ${stringifyPrimitive(issue2.values[0])}`;
+        return `Neispravna opcija: o\u010Dekivano jedno od ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        const origin = (_c = TypeDictionary[issue2.origin]) != null ? _c : issue2.origin;
+        if (sizing)
+          return `Preveliko: o\u010Dekivano da ${origin != null ? origin : "vrijednost"} ima ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "elemenata"}`;
+        return `Preveliko: o\u010Dekivano da ${origin != null ? origin : "vrijednost"} bude ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        const origin = (_e = TypeDictionary[issue2.origin]) != null ? _e : issue2.origin;
+        if (sizing) {
+          return `Premalo: o\u010Dekivano da ${origin} ima ${adj}${issue2.minimum.toString()} ${sizing.unit}`;
+        }
+        return `Premalo: o\u010Dekivano da ${origin} bude ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with")
+          return `Neispravan tekst: mora zapo\u010Dinjati s "${_issue.prefix}"`;
+        if (_issue.format === "ends_with")
+          return `Neispravan tekst: mora zavr\u0161avati s "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `Neispravan tekst: mora sadr\u017Eavati "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `Neispravan tekst: mora odgovarati uzorku ${_issue.pattern}`;
+        return `Neispravna ${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `Neispravan broj: mora biti vi\u0161ekratnik od ${issue2.divisor}`;
+      case "unrecognized_keys":
+        return `Neprepoznat${issue2.keys.length > 1 ? "i klju\u010Devi" : " klju\u010D"}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `Neispravan klju\u010D u ${(_g = TypeDictionary[issue2.origin]) != null ? _g : issue2.origin}`;
+      case "invalid_union":
+        return "Neispravan unos";
+      case "invalid_element":
+        return `Neispravna vrijednost u ${(_h = TypeDictionary[issue2.origin]) != null ? _h : issue2.origin}`;
+      default:
+        return `Neispravan unos`;
+    }
+  };
+};
+function hr_default() {
+  return {
+    localeError: error18()
+  };
+}
+
+// node_modules/zod/v4/locales/hu.js
+var error19 = () => {
+  const Sizable = {
+    string: { unit: "karakter", verb: "legyen" },
+    file: { unit: "byte", verb: "legyen" },
+    array: { unit: "elem", verb: "legyen" },
+    set: { unit: "elem", verb: "legyen" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "bemenet",
+    email: "email c\xEDm",
+    url: "URL",
+    emoji: "emoji",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "ISO id\u0151b\xE9lyeg",
+    date: "ISO d\xE1tum",
+    time: "ISO id\u0151",
+    duration: "ISO id\u0151intervallum",
+    ipv4: "IPv4 c\xEDm",
+    ipv6: "IPv6 c\xEDm",
+    cidrv4: "IPv4 tartom\xE1ny",
+    cidrv6: "IPv6 tartom\xE1ny",
+    base64: "base64-k\xF3dolt string",
+    base64url: "base64url-k\xF3dolt string",
+    json_string: "JSON string",
+    e164: "E.164 sz\xE1m",
+    jwt: "JWT",
+    template_literal: "bemenet"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "sz\xE1m",
+    array: "t\xF6mb"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `\xC9rv\xE9nytelen bemenet: a v\xE1rt \xE9rt\xE9k instanceof ${issue2.expected}, a kapott \xE9rt\xE9k ${received}`;
+        }
+        return `\xC9rv\xE9nytelen bemenet: a v\xE1rt \xE9rt\xE9k ${expected}, a kapott \xE9rt\xE9k ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `\xC9rv\xE9nytelen bemenet: a v\xE1rt \xE9rt\xE9k ${stringifyPrimitive(issue2.values[0])}`;
+        return `\xC9rv\xE9nytelen opci\xF3: valamelyik \xE9rt\xE9k v\xE1rt ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `T\xFAl nagy: ${(_c = issue2.origin) != null ? _c : "\xE9rt\xE9k"} m\xE9rete t\xFAl nagy ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "elem"}`;
+        return `T\xFAl nagy: a bemeneti \xE9rt\xE9k ${(_e = issue2.origin) != null ? _e : "\xE9rt\xE9k"} t\xFAl nagy: ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `T\xFAl kicsi: a bemeneti \xE9rt\xE9k ${issue2.origin} m\xE9rete t\xFAl kicsi ${adj}${issue2.minimum.toString()} ${sizing.unit}`;
+        }
+        return `T\xFAl kicsi: a bemeneti \xE9rt\xE9k ${issue2.origin} t\xFAl kicsi ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with")
+          return `\xC9rv\xE9nytelen string: "${_issue.prefix}" \xE9rt\xE9kkel kell kezd\u0151dnie`;
+        if (_issue.format === "ends_with")
+          return `\xC9rv\xE9nytelen string: "${_issue.suffix}" \xE9rt\xE9kkel kell v\xE9gz\u0151dnie`;
+        if (_issue.format === "includes")
+          return `\xC9rv\xE9nytelen string: "${_issue.includes}" \xE9rt\xE9ket kell tartalmaznia`;
+        if (_issue.format === "regex")
+          return `\xC9rv\xE9nytelen string: ${_issue.pattern} mint\xE1nak kell megfelelnie`;
+        return `\xC9rv\xE9nytelen ${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `\xC9rv\xE9nytelen sz\xE1m: ${issue2.divisor} t\xF6bbsz\xF6r\xF6s\xE9nek kell lennie`;
+      case "unrecognized_keys":
+        return `Ismeretlen kulcs${issue2.keys.length > 1 ? "s" : ""}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `\xC9rv\xE9nytelen kulcs ${issue2.origin}`;
+      case "invalid_union":
+        return "\xC9rv\xE9nytelen bemenet";
+      case "invalid_element":
+        return `\xC9rv\xE9nytelen \xE9rt\xE9k: ${issue2.origin}`;
+      default:
+        return `\xC9rv\xE9nytelen bemenet`;
+    }
+  };
+};
+function hu_default() {
+  return {
+    localeError: error19()
+  };
+}
+
+// node_modules/zod/v4/locales/hy.js
+function getArmenianPlural(count, one, many) {
+  return Math.abs(count) === 1 ? one : many;
+}
+function withDefiniteArticle(word) {
+  if (!word)
+    return "";
+  const vowels = ["\u0561", "\u0565", "\u0568", "\u056B", "\u0578", "\u0578\u0582", "\u0585"];
+  const lastChar = word[word.length - 1];
+  return word + (vowels.includes(lastChar) ? "\u0576" : "\u0568");
+}
+var error20 = () => {
+  const Sizable = {
+    string: {
+      unit: {
+        one: "\u0576\u0577\u0561\u0576",
+        many: "\u0576\u0577\u0561\u0576\u0576\u0565\u0580"
+      },
+      verb: "\u0578\u0582\u0576\u0565\u0576\u0561\u056C"
+    },
+    file: {
+      unit: {
+        one: "\u0562\u0561\u0575\u0569",
+        many: "\u0562\u0561\u0575\u0569\u0565\u0580"
+      },
+      verb: "\u0578\u0582\u0576\u0565\u0576\u0561\u056C"
+    },
+    array: {
+      unit: {
+        one: "\u057F\u0561\u0580\u0580",
+        many: "\u057F\u0561\u0580\u0580\u0565\u0580"
+      },
+      verb: "\u0578\u0582\u0576\u0565\u0576\u0561\u056C"
+    },
+    set: {
+      unit: {
+        one: "\u057F\u0561\u0580\u0580",
+        many: "\u057F\u0561\u0580\u0580\u0565\u0580"
+      },
+      verb: "\u0578\u0582\u0576\u0565\u0576\u0561\u056C"
+    }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "\u0574\u0578\u0582\u057F\u0584",
+    email: "\u0567\u056C. \u0570\u0561\u057D\u0581\u0565",
+    url: "URL",
+    emoji: "\u0567\u0574\u0578\u057B\u056B",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "ISO \u0561\u0574\u057D\u0561\u0569\u056B\u057E \u0587 \u056A\u0561\u0574",
+    date: "ISO \u0561\u0574\u057D\u0561\u0569\u056B\u057E",
+    time: "ISO \u056A\u0561\u0574",
+    duration: "ISO \u057F\u0587\u0578\u0572\u0578\u0582\u0569\u0575\u0578\u0582\u0576",
+    ipv4: "IPv4 \u0570\u0561\u057D\u0581\u0565",
+    ipv6: "IPv6 \u0570\u0561\u057D\u0581\u0565",
+    cidrv4: "IPv4 \u0574\u056B\u057B\u0561\u056F\u0561\u0575\u0584",
+    cidrv6: "IPv6 \u0574\u056B\u057B\u0561\u056F\u0561\u0575\u0584",
+    base64: "base64 \u0571\u0587\u0561\u0579\u0561\u0583\u0578\u057E \u057F\u0578\u0572",
+    base64url: "base64url \u0571\u0587\u0561\u0579\u0561\u0583\u0578\u057E \u057F\u0578\u0572",
+    json_string: "JSON \u057F\u0578\u0572",
+    e164: "E.164 \u0570\u0561\u0574\u0561\u0580",
+    jwt: "JWT",
+    template_literal: "\u0574\u0578\u0582\u057F\u0584"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "\u0569\u056B\u057E",
+    array: "\u0566\u0561\u0576\u0563\u057E\u0561\u056E"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `\u054D\u056D\u0561\u056C \u0574\u0578\u0582\u057F\u0584\u0561\u0563\u0580\u0578\u0582\u0574\u2024 \u057D\u057A\u0561\u057D\u057E\u0578\u0582\u0574 \u0567\u0580 instanceof ${issue2.expected}, \u057D\u057F\u0561\u0581\u057E\u0565\u056C \u0567 ${received}`;
+        }
+        return `\u054D\u056D\u0561\u056C \u0574\u0578\u0582\u057F\u0584\u0561\u0563\u0580\u0578\u0582\u0574\u2024 \u057D\u057A\u0561\u057D\u057E\u0578\u0582\u0574 \u0567\u0580 ${expected}, \u057D\u057F\u0561\u0581\u057E\u0565\u056C \u0567 ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `\u054D\u056D\u0561\u056C \u0574\u0578\u0582\u057F\u0584\u0561\u0563\u0580\u0578\u0582\u0574\u2024 \u057D\u057A\u0561\u057D\u057E\u0578\u0582\u0574 \u0567\u0580 ${stringifyPrimitive(issue2.values[1])}`;
+        return `\u054D\u056D\u0561\u056C \u057F\u0561\u0580\u0562\u0565\u0580\u0561\u056F\u2024 \u057D\u057A\u0561\u057D\u057E\u0578\u0582\u0574 \u0567\u0580 \u0570\u0565\u057F\u0587\u0575\u0561\u056C\u0576\u0565\u0580\u056B\u0581 \u0574\u0565\u056F\u0568\u055D ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          const maxValue = Number(issue2.maximum);
+          const unit = getArmenianPlural(maxValue, sizing.unit.one, sizing.unit.many);
+          return `\u0549\u0561\u0583\u0561\u0566\u0561\u0576\u0581 \u0574\u0565\u056E \u0561\u0580\u056A\u0565\u0584\u2024 \u057D\u057A\u0561\u057D\u057E\u0578\u0582\u0574 \u0567, \u0578\u0580 ${withDefiniteArticle((_c = issue2.origin) != null ? _c : "\u0561\u0580\u056A\u0565\u0584")} \u056F\u0578\u0582\u0576\u0565\u0576\u0561 ${adj}${issue2.maximum.toString()} ${unit}`;
+        }
+        return `\u0549\u0561\u0583\u0561\u0566\u0561\u0576\u0581 \u0574\u0565\u056E \u0561\u0580\u056A\u0565\u0584\u2024 \u057D\u057A\u0561\u057D\u057E\u0578\u0582\u0574 \u0567, \u0578\u0580 ${withDefiniteArticle((_d = issue2.origin) != null ? _d : "\u0561\u0580\u056A\u0565\u0584")} \u056C\u056B\u0576\u056B ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          const minValue = Number(issue2.minimum);
+          const unit = getArmenianPlural(minValue, sizing.unit.one, sizing.unit.many);
+          return `\u0549\u0561\u0583\u0561\u0566\u0561\u0576\u0581 \u0583\u0578\u0584\u0580 \u0561\u0580\u056A\u0565\u0584\u2024 \u057D\u057A\u0561\u057D\u057E\u0578\u0582\u0574 \u0567, \u0578\u0580 ${withDefiniteArticle(issue2.origin)} \u056F\u0578\u0582\u0576\u0565\u0576\u0561 ${adj}${issue2.minimum.toString()} ${unit}`;
+        }
+        return `\u0549\u0561\u0583\u0561\u0566\u0561\u0576\u0581 \u0583\u0578\u0584\u0580 \u0561\u0580\u056A\u0565\u0584\u2024 \u057D\u057A\u0561\u057D\u057E\u0578\u0582\u0574 \u0567, \u0578\u0580 ${withDefiniteArticle(issue2.origin)} \u056C\u056B\u0576\u056B ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with")
+          return `\u054D\u056D\u0561\u056C \u057F\u0578\u0572\u2024 \u057A\u0565\u057F\u0584 \u0567 \u057D\u056F\u057D\u057E\u056B "${_issue.prefix}"-\u0578\u057E`;
+        if (_issue.format === "ends_with")
+          return `\u054D\u056D\u0561\u056C \u057F\u0578\u0572\u2024 \u057A\u0565\u057F\u0584 \u0567 \u0561\u057E\u0561\u0580\u057F\u057E\u056B "${_issue.suffix}"-\u0578\u057E`;
+        if (_issue.format === "includes")
+          return `\u054D\u056D\u0561\u056C \u057F\u0578\u0572\u2024 \u057A\u0565\u057F\u0584 \u0567 \u057A\u0561\u0580\u0578\u0582\u0576\u0561\u056F\u056B "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `\u054D\u056D\u0561\u056C \u057F\u0578\u0572\u2024 \u057A\u0565\u057F\u0584 \u0567 \u0570\u0561\u0574\u0561\u057A\u0561\u057F\u0561\u057D\u056D\u0561\u0576\u056B ${_issue.pattern} \u0571\u0587\u0561\u0579\u0561\u0583\u056B\u0576`;
+        return `\u054D\u056D\u0561\u056C ${(_e = FormatDictionary[_issue.format]) != null ? _e : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `\u054D\u056D\u0561\u056C \u0569\u056B\u057E\u2024 \u057A\u0565\u057F\u0584 \u0567 \u0562\u0561\u0566\u0574\u0561\u057A\u0561\u057F\u056B\u056F \u056C\u056B\u0576\u056B ${issue2.divisor}-\u056B`;
+      case "unrecognized_keys":
+        return `\u0549\u0573\u0561\u0576\u0561\u0579\u057E\u0561\u056E \u0562\u0561\u0576\u0561\u056C\u056B${issue2.keys.length > 1 ? "\u0576\u0565\u0580" : ""}. ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `\u054D\u056D\u0561\u056C \u0562\u0561\u0576\u0561\u056C\u056B ${withDefiniteArticle(issue2.origin)}-\u0578\u0582\u0574`;
+      case "invalid_union":
+        return "\u054D\u056D\u0561\u056C \u0574\u0578\u0582\u057F\u0584\u0561\u0563\u0580\u0578\u0582\u0574";
+      case "invalid_element":
+        return `\u054D\u056D\u0561\u056C \u0561\u0580\u056A\u0565\u0584 ${withDefiniteArticle(issue2.origin)}-\u0578\u0582\u0574`;
+      default:
+        return `\u054D\u056D\u0561\u056C \u0574\u0578\u0582\u057F\u0584\u0561\u0563\u0580\u0578\u0582\u0574`;
+    }
+  };
+};
+function hy_default() {
+  return {
+    localeError: error20()
+  };
+}
+
+// node_modules/zod/v4/locales/id.js
+var error21 = () => {
+  const Sizable = {
+    string: { unit: "karakter", verb: "memiliki" },
+    file: { unit: "byte", verb: "memiliki" },
+    array: { unit: "item", verb: "memiliki" },
+    set: { unit: "item", verb: "memiliki" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "input",
+    email: "alamat email",
+    url: "URL",
+    emoji: "emoji",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "tanggal dan waktu format ISO",
+    date: "tanggal format ISO",
+    time: "jam format ISO",
+    duration: "durasi format ISO",
+    ipv4: "alamat IPv4",
+    ipv6: "alamat IPv6",
+    cidrv4: "rentang alamat IPv4",
+    cidrv6: "rentang alamat IPv6",
+    base64: "string dengan enkode base64",
+    base64url: "string dengan enkode base64url",
+    json_string: "string JSON",
+    e164: "angka E.164",
+    jwt: "JWT",
+    template_literal: "input"
+  };
+  const TypeDictionary = {
+    nan: "NaN"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `Input tidak valid: diharapkan instanceof ${issue2.expected}, diterima ${received}`;
+        }
+        return `Input tidak valid: diharapkan ${expected}, diterima ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `Input tidak valid: diharapkan ${stringifyPrimitive(issue2.values[0])}`;
+        return `Pilihan tidak valid: diharapkan salah satu dari ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `Terlalu besar: diharapkan ${(_c = issue2.origin) != null ? _c : "value"} memiliki ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "elemen"}`;
+        return `Terlalu besar: diharapkan ${(_e = issue2.origin) != null ? _e : "value"} menjadi ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `Terlalu kecil: diharapkan ${issue2.origin} memiliki ${adj}${issue2.minimum.toString()} ${sizing.unit}`;
+        }
+        return `Terlalu kecil: diharapkan ${issue2.origin} menjadi ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with")
+          return `String tidak valid: harus dimulai dengan "${_issue.prefix}"`;
+        if (_issue.format === "ends_with")
+          return `String tidak valid: harus berakhir dengan "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `String tidak valid: harus menyertakan "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `String tidak valid: harus sesuai pola ${_issue.pattern}`;
+        return `${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format} tidak valid`;
+      }
+      case "not_multiple_of":
+        return `Angka tidak valid: harus kelipatan dari ${issue2.divisor}`;
+      case "unrecognized_keys":
+        return `Kunci tidak dikenali ${issue2.keys.length > 1 ? "s" : ""}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `Kunci tidak valid di ${issue2.origin}`;
+      case "invalid_union":
+        return "Input tidak valid";
+      case "invalid_element":
+        return `Nilai tidak valid di ${issue2.origin}`;
+      default:
+        return `Input tidak valid`;
+    }
+  };
+};
+function id_default() {
+  return {
+    localeError: error21()
+  };
+}
+
+// node_modules/zod/v4/locales/is.js
+var error22 = () => {
+  const Sizable = {
+    string: { unit: "stafi", verb: "a\xF0 hafa" },
+    file: { unit: "b\xE6ti", verb: "a\xF0 hafa" },
+    array: { unit: "hluti", verb: "a\xF0 hafa" },
+    set: { unit: "hluti", verb: "a\xF0 hafa" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "gildi",
+    email: "netfang",
+    url: "vefsl\xF3\xF0",
+    emoji: "emoji",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "ISO dagsetning og t\xEDmi",
+    date: "ISO dagsetning",
+    time: "ISO t\xEDmi",
+    duration: "ISO t\xEDmalengd",
+    ipv4: "IPv4 address",
+    ipv6: "IPv6 address",
+    cidrv4: "IPv4 range",
+    cidrv6: "IPv6 range",
+    base64: "base64-encoded strengur",
+    base64url: "base64url-encoded strengur",
+    json_string: "JSON strengur",
+    e164: "E.164 t\xF6lugildi",
+    jwt: "JWT",
+    template_literal: "gildi"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "n\xFAmer",
+    array: "fylki"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `Rangt gildi: \xDE\xFA sl\xF3st inn ${received} \xFEar sem \xE1 a\xF0 vera instanceof ${issue2.expected}`;
+        }
+        return `Rangt gildi: \xDE\xFA sl\xF3st inn ${received} \xFEar sem \xE1 a\xF0 vera ${expected}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `Rangt gildi: gert r\xE1\xF0 fyrir ${stringifyPrimitive(issue2.values[0])}`;
+        return `\xD3gilt val: m\xE1 vera eitt af eftirfarandi ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `Of st\xF3rt: gert er r\xE1\xF0 fyrir a\xF0 ${(_c = issue2.origin) != null ? _c : "gildi"} hafi ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "hluti"}`;
+        return `Of st\xF3rt: gert er r\xE1\xF0 fyrir a\xF0 ${(_e = issue2.origin) != null ? _e : "gildi"} s\xE9 ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `Of l\xEDti\xF0: gert er r\xE1\xF0 fyrir a\xF0 ${issue2.origin} hafi ${adj}${issue2.minimum.toString()} ${sizing.unit}`;
+        }
+        return `Of l\xEDti\xF0: gert er r\xE1\xF0 fyrir a\xF0 ${issue2.origin} s\xE9 ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with") {
+          return `\xD3gildur strengur: ver\xF0ur a\xF0 byrja \xE1 "${_issue.prefix}"`;
+        }
+        if (_issue.format === "ends_with")
+          return `\xD3gildur strengur: ver\xF0ur a\xF0 enda \xE1 "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `\xD3gildur strengur: ver\xF0ur a\xF0 innihalda "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `\xD3gildur strengur: ver\xF0ur a\xF0 fylgja mynstri ${_issue.pattern}`;
+        return `Rangt ${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `R\xF6ng tala: ver\xF0ur a\xF0 vera margfeldi af ${issue2.divisor}`;
+      case "unrecognized_keys":
+        return `\xD3\xFEekkt ${issue2.keys.length > 1 ? "ir lyklar" : "ur lykill"}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `Rangur lykill \xED ${issue2.origin}`;
+      case "invalid_union":
+        return "Rangt gildi";
+      case "invalid_element":
+        return `Rangt gildi \xED ${issue2.origin}`;
+      default:
+        return `Rangt gildi`;
+    }
+  };
+};
+function is_default() {
+  return {
+    localeError: error22()
+  };
+}
+
+// node_modules/zod/v4/locales/it.js
+var error23 = () => {
+  const Sizable = {
+    string: { unit: "caratteri", verb: "avere" },
+    file: { unit: "byte", verb: "avere" },
+    array: { unit: "elementi", verb: "avere" },
+    set: { unit: "elementi", verb: "avere" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "input",
+    email: "indirizzo email",
+    url: "URL",
+    emoji: "emoji",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "data e ora ISO",
+    date: "data ISO",
+    time: "ora ISO",
+    duration: "durata ISO",
+    ipv4: "indirizzo IPv4",
+    ipv6: "indirizzo IPv6",
+    cidrv4: "intervallo IPv4",
+    cidrv6: "intervallo IPv6",
+    base64: "stringa codificata in base64",
+    base64url: "URL codificata in base64",
+    json_string: "stringa JSON",
+    e164: "numero E.164",
+    jwt: "JWT",
+    template_literal: "input"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "numero",
+    array: "vettore"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `Input non valido: atteso instanceof ${issue2.expected}, ricevuto ${received}`;
+        }
+        return `Input non valido: atteso ${expected}, ricevuto ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `Input non valido: atteso ${stringifyPrimitive(issue2.values[0])}`;
+        return `Opzione non valida: atteso uno tra ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `Troppo grande: ${(_c = issue2.origin) != null ? _c : "valore"} deve avere ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "elementi"}`;
+        return `Troppo grande: ${(_e = issue2.origin) != null ? _e : "valore"} deve essere ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `Troppo piccolo: ${issue2.origin} deve avere ${adj}${issue2.minimum.toString()} ${sizing.unit}`;
+        }
+        return `Troppo piccolo: ${issue2.origin} deve essere ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with")
+          return `Stringa non valida: deve iniziare con "${_issue.prefix}"`;
+        if (_issue.format === "ends_with")
+          return `Stringa non valida: deve terminare con "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `Stringa non valida: deve includere "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `Stringa non valida: deve corrispondere al pattern ${_issue.pattern}`;
+        return `Input non valido: ${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `Numero non valido: deve essere un multiplo di ${issue2.divisor}`;
+      case "unrecognized_keys":
+        return `Chiav${issue2.keys.length > 1 ? "i" : "e"} non riconosciut${issue2.keys.length > 1 ? "e" : "a"}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `Chiave non valida in ${issue2.origin}`;
+      case "invalid_union":
+        return "Input non valido";
+      case "invalid_element":
+        return `Valore non valido in ${issue2.origin}`;
+      default:
+        return `Input non valido`;
+    }
+  };
+};
+function it_default() {
+  return {
+    localeError: error23()
+  };
+}
+
+// node_modules/zod/v4/locales/ja.js
+var error24 = () => {
+  const Sizable = {
+    string: { unit: "\u6587\u5B57", verb: "\u3067\u3042\u308B" },
+    file: { unit: "\u30D0\u30A4\u30C8", verb: "\u3067\u3042\u308B" },
+    array: { unit: "\u8981\u7D20", verb: "\u3067\u3042\u308B" },
+    set: { unit: "\u8981\u7D20", verb: "\u3067\u3042\u308B" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "\u5165\u529B\u5024",
+    email: "\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9",
+    url: "URL",
+    emoji: "\u7D75\u6587\u5B57",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "ISO\u65E5\u6642",
+    date: "ISO\u65E5\u4ED8",
+    time: "ISO\u6642\u523B",
+    duration: "ISO\u671F\u9593",
+    ipv4: "IPv4\u30A2\u30C9\u30EC\u30B9",
+    ipv6: "IPv6\u30A2\u30C9\u30EC\u30B9",
+    cidrv4: "IPv4\u7BC4\u56F2",
+    cidrv6: "IPv6\u7BC4\u56F2",
+    base64: "base64\u30A8\u30F3\u30B3\u30FC\u30C9\u6587\u5B57\u5217",
+    base64url: "base64url\u30A8\u30F3\u30B3\u30FC\u30C9\u6587\u5B57\u5217",
+    json_string: "JSON\u6587\u5B57\u5217",
+    e164: "E.164\u756A\u53F7",
+    jwt: "JWT",
+    template_literal: "\u5165\u529B\u5024"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "\u6570\u5024",
+    array: "\u914D\u5217"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `\u7121\u52B9\u306A\u5165\u529B: instanceof ${issue2.expected}\u304C\u671F\u5F85\u3055\u308C\u307E\u3057\u305F\u304C\u3001${received}\u304C\u5165\u529B\u3055\u308C\u307E\u3057\u305F`;
+        }
+        return `\u7121\u52B9\u306A\u5165\u529B: ${expected}\u304C\u671F\u5F85\u3055\u308C\u307E\u3057\u305F\u304C\u3001${received}\u304C\u5165\u529B\u3055\u308C\u307E\u3057\u305F`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `\u7121\u52B9\u306A\u5165\u529B: ${stringifyPrimitive(issue2.values[0])}\u304C\u671F\u5F85\u3055\u308C\u307E\u3057\u305F`;
+        return `\u7121\u52B9\u306A\u9078\u629E: ${joinValues(issue2.values, "\u3001")}\u306E\u3044\u305A\u308C\u304B\u3067\u3042\u308B\u5FC5\u8981\u304C\u3042\u308A\u307E\u3059`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "\u4EE5\u4E0B\u3067\u3042\u308B" : "\u3088\u308A\u5C0F\u3055\u3044";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `\u5927\u304D\u3059\u304E\u308B\u5024: ${(_c = issue2.origin) != null ? _c : "\u5024"}\u306F${issue2.maximum.toString()}${(_d = sizing.unit) != null ? _d : "\u8981\u7D20"}${adj}\u5FC5\u8981\u304C\u3042\u308A\u307E\u3059`;
+        return `\u5927\u304D\u3059\u304E\u308B\u5024: ${(_e = issue2.origin) != null ? _e : "\u5024"}\u306F${issue2.maximum.toString()}${adj}\u5FC5\u8981\u304C\u3042\u308A\u307E\u3059`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? "\u4EE5\u4E0A\u3067\u3042\u308B" : "\u3088\u308A\u5927\u304D\u3044";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `\u5C0F\u3055\u3059\u304E\u308B\u5024: ${issue2.origin}\u306F${issue2.minimum.toString()}${sizing.unit}${adj}\u5FC5\u8981\u304C\u3042\u308A\u307E\u3059`;
+        return `\u5C0F\u3055\u3059\u304E\u308B\u5024: ${issue2.origin}\u306F${issue2.minimum.toString()}${adj}\u5FC5\u8981\u304C\u3042\u308A\u307E\u3059`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with")
+          return `\u7121\u52B9\u306A\u6587\u5B57\u5217: "${_issue.prefix}"\u3067\u59CB\u307E\u308B\u5FC5\u8981\u304C\u3042\u308A\u307E\u3059`;
+        if (_issue.format === "ends_with")
+          return `\u7121\u52B9\u306A\u6587\u5B57\u5217: "${_issue.suffix}"\u3067\u7D42\u308F\u308B\u5FC5\u8981\u304C\u3042\u308A\u307E\u3059`;
+        if (_issue.format === "includes")
+          return `\u7121\u52B9\u306A\u6587\u5B57\u5217: "${_issue.includes}"\u3092\u542B\u3080\u5FC5\u8981\u304C\u3042\u308A\u307E\u3059`;
+        if (_issue.format === "regex")
+          return `\u7121\u52B9\u306A\u6587\u5B57\u5217: \u30D1\u30BF\u30FC\u30F3${_issue.pattern}\u306B\u4E00\u81F4\u3059\u308B\u5FC5\u8981\u304C\u3042\u308A\u307E\u3059`;
+        return `\u7121\u52B9\u306A${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `\u7121\u52B9\u306A\u6570\u5024: ${issue2.divisor}\u306E\u500D\u6570\u3067\u3042\u308B\u5FC5\u8981\u304C\u3042\u308A\u307E\u3059`;
+      case "unrecognized_keys":
+        return `\u8A8D\u8B58\u3055\u308C\u3066\u3044\u306A\u3044\u30AD\u30FC${issue2.keys.length > 1 ? "\u7FA4" : ""}: ${joinValues(issue2.keys, "\u3001")}`;
+      case "invalid_key":
+        return `${issue2.origin}\u5185\u306E\u7121\u52B9\u306A\u30AD\u30FC`;
+      case "invalid_union":
+        return "\u7121\u52B9\u306A\u5165\u529B";
+      case "invalid_element":
+        return `${issue2.origin}\u5185\u306E\u7121\u52B9\u306A\u5024`;
+      default:
+        return `\u7121\u52B9\u306A\u5165\u529B`;
+    }
+  };
+};
+function ja_default() {
+  return {
+    localeError: error24()
+  };
+}
+
+// node_modules/zod/v4/locales/ka.js
+var error25 = () => {
+  const Sizable = {
+    string: { unit: "\u10E1\u10D8\u10DB\u10D1\u10DD\u10DA\u10DD", verb: "\u10E3\u10DC\u10D3\u10D0 \u10E8\u10D4\u10D8\u10EA\u10D0\u10D5\u10D3\u10D4\u10E1" },
+    file: { unit: "\u10D1\u10D0\u10D8\u10E2\u10D8", verb: "\u10E3\u10DC\u10D3\u10D0 \u10E8\u10D4\u10D8\u10EA\u10D0\u10D5\u10D3\u10D4\u10E1" },
+    array: { unit: "\u10D4\u10DA\u10D4\u10DB\u10D4\u10DC\u10E2\u10D8", verb: "\u10E3\u10DC\u10D3\u10D0 \u10E8\u10D4\u10D8\u10EA\u10D0\u10D5\u10D3\u10D4\u10E1" },
+    set: { unit: "\u10D4\u10DA\u10D4\u10DB\u10D4\u10DC\u10E2\u10D8", verb: "\u10E3\u10DC\u10D3\u10D0 \u10E8\u10D4\u10D8\u10EA\u10D0\u10D5\u10D3\u10D4\u10E1" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "\u10E8\u10D4\u10E7\u10D5\u10D0\u10DC\u10D0",
+    email: "\u10D4\u10DA-\u10E4\u10DD\u10E1\u10E2\u10D8\u10E1 \u10DB\u10D8\u10E1\u10D0\u10DB\u10D0\u10E0\u10D7\u10D8",
+    url: "URL",
+    emoji: "\u10D4\u10DB\u10DD\u10EF\u10D8",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "\u10D7\u10D0\u10E0\u10D8\u10E6\u10D8-\u10D3\u10E0\u10DD",
+    date: "\u10D7\u10D0\u10E0\u10D8\u10E6\u10D8",
+    time: "\u10D3\u10E0\u10DD",
+    duration: "\u10EE\u10D0\u10DC\u10D2\u10E0\u10EB\u10DA\u10D8\u10D5\u10DD\u10D1\u10D0",
+    ipv4: "IPv4 \u10DB\u10D8\u10E1\u10D0\u10DB\u10D0\u10E0\u10D7\u10D8",
+    ipv6: "IPv6 \u10DB\u10D8\u10E1\u10D0\u10DB\u10D0\u10E0\u10D7\u10D8",
+    cidrv4: "IPv4 \u10D3\u10D8\u10D0\u10DE\u10D0\u10D6\u10DD\u10DC\u10D8",
+    cidrv6: "IPv6 \u10D3\u10D8\u10D0\u10DE\u10D0\u10D6\u10DD\u10DC\u10D8",
+    base64: "base64-\u10D9\u10DD\u10D3\u10D8\u10E0\u10D4\u10D1\u10E3\u10DA\u10D8 \u10D5\u10D4\u10DA\u10D8",
+    base64url: "base64url-\u10D9\u10DD\u10D3\u10D8\u10E0\u10D4\u10D1\u10E3\u10DA\u10D8 \u10D5\u10D4\u10DA\u10D8",
+    json_string: "JSON \u10D5\u10D4\u10DA\u10D8",
+    e164: "E.164 \u10DC\u10DD\u10DB\u10D4\u10E0\u10D8",
+    jwt: "JWT",
+    template_literal: "\u10E8\u10D4\u10E7\u10D5\u10D0\u10DC\u10D0"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "\u10E0\u10D8\u10EA\u10EE\u10D5\u10D8",
+    string: "\u10D5\u10D4\u10DA\u10D8",
+    boolean: "\u10D1\u10E3\u10DA\u10D4\u10D0\u10DC\u10D8",
+    function: "\u10E4\u10E3\u10DC\u10E5\u10EA\u10D8\u10D0",
+    array: "\u10DB\u10D0\u10E1\u10D8\u10D5\u10D8"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `\u10D0\u10E0\u10D0\u10E1\u10EC\u10DD\u10E0\u10D8 \u10E8\u10D4\u10E7\u10D5\u10D0\u10DC\u10D0: \u10DB\u10DD\u10E1\u10D0\u10DA\u10DD\u10D3\u10DC\u10D4\u10DA\u10D8 instanceof ${issue2.expected}, \u10DB\u10D8\u10E6\u10D4\u10D1\u10E3\u10DA\u10D8 ${received}`;
+        }
+        return `\u10D0\u10E0\u10D0\u10E1\u10EC\u10DD\u10E0\u10D8 \u10E8\u10D4\u10E7\u10D5\u10D0\u10DC\u10D0: \u10DB\u10DD\u10E1\u10D0\u10DA\u10DD\u10D3\u10DC\u10D4\u10DA\u10D8 ${expected}, \u10DB\u10D8\u10E6\u10D4\u10D1\u10E3\u10DA\u10D8 ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `\u10D0\u10E0\u10D0\u10E1\u10EC\u10DD\u10E0\u10D8 \u10E8\u10D4\u10E7\u10D5\u10D0\u10DC\u10D0: \u10DB\u10DD\u10E1\u10D0\u10DA\u10DD\u10D3\u10DC\u10D4\u10DA\u10D8 ${stringifyPrimitive(issue2.values[0])}`;
+        return `\u10D0\u10E0\u10D0\u10E1\u10EC\u10DD\u10E0\u10D8 \u10D5\u10D0\u10E0\u10D8\u10D0\u10DC\u10E2\u10D8: \u10DB\u10DD\u10E1\u10D0\u10DA\u10DD\u10D3\u10DC\u10D4\u10DA\u10D8\u10D0 \u10D4\u10E0\u10D7-\u10D4\u10E0\u10D7\u10D8 ${joinValues(issue2.values, "|")}-\u10D3\u10D0\u10DC`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `\u10D6\u10D4\u10D3\u10DB\u10D4\u10E2\u10D0\u10D3 \u10D3\u10D8\u10D3\u10D8: \u10DB\u10DD\u10E1\u10D0\u10DA\u10DD\u10D3\u10DC\u10D4\u10DA\u10D8 ${(_c = issue2.origin) != null ? _c : "\u10DB\u10DC\u10D8\u10E8\u10D5\u10DC\u10D4\u10DA\u10DD\u10D1\u10D0"} ${sizing.verb} ${adj}${issue2.maximum.toString()} ${sizing.unit}`;
+        return `\u10D6\u10D4\u10D3\u10DB\u10D4\u10E2\u10D0\u10D3 \u10D3\u10D8\u10D3\u10D8: \u10DB\u10DD\u10E1\u10D0\u10DA\u10DD\u10D3\u10DC\u10D4\u10DA\u10D8 ${(_d = issue2.origin) != null ? _d : "\u10DB\u10DC\u10D8\u10E8\u10D5\u10DC\u10D4\u10DA\u10DD\u10D1\u10D0"} \u10D8\u10E7\u10DD\u10E1 ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `\u10D6\u10D4\u10D3\u10DB\u10D4\u10E2\u10D0\u10D3 \u10DE\u10D0\u10E2\u10D0\u10E0\u10D0: \u10DB\u10DD\u10E1\u10D0\u10DA\u10DD\u10D3\u10DC\u10D4\u10DA\u10D8 ${issue2.origin} ${sizing.verb} ${adj}${issue2.minimum.toString()} ${sizing.unit}`;
+        }
+        return `\u10D6\u10D4\u10D3\u10DB\u10D4\u10E2\u10D0\u10D3 \u10DE\u10D0\u10E2\u10D0\u10E0\u10D0: \u10DB\u10DD\u10E1\u10D0\u10DA\u10DD\u10D3\u10DC\u10D4\u10DA\u10D8 ${issue2.origin} \u10D8\u10E7\u10DD\u10E1 ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with") {
+          return `\u10D0\u10E0\u10D0\u10E1\u10EC\u10DD\u10E0\u10D8 \u10D5\u10D4\u10DA\u10D8: \u10E3\u10DC\u10D3\u10D0 \u10D8\u10EC\u10E7\u10D4\u10D1\u10DD\u10D3\u10D4\u10E1 "${_issue.prefix}"-\u10D8\u10D7`;
+        }
+        if (_issue.format === "ends_with")
+          return `\u10D0\u10E0\u10D0\u10E1\u10EC\u10DD\u10E0\u10D8 \u10D5\u10D4\u10DA\u10D8: \u10E3\u10DC\u10D3\u10D0 \u10DB\u10D7\u10D0\u10D5\u10E0\u10D3\u10D4\u10D1\u10DD\u10D3\u10D4\u10E1 "${_issue.suffix}"-\u10D8\u10D7`;
+        if (_issue.format === "includes")
+          return `\u10D0\u10E0\u10D0\u10E1\u10EC\u10DD\u10E0\u10D8 \u10D5\u10D4\u10DA\u10D8: \u10E3\u10DC\u10D3\u10D0 \u10E8\u10D4\u10D8\u10EA\u10D0\u10D5\u10D3\u10D4\u10E1 "${_issue.includes}"-\u10E1`;
+        if (_issue.format === "regex")
+          return `\u10D0\u10E0\u10D0\u10E1\u10EC\u10DD\u10E0\u10D8 \u10D5\u10D4\u10DA\u10D8: \u10E3\u10DC\u10D3\u10D0 \u10E8\u10D4\u10D4\u10E1\u10D0\u10D1\u10D0\u10DB\u10D4\u10D1\u10DD\u10D3\u10D4\u10E1 \u10E8\u10D0\u10D1\u10DA\u10DD\u10DC\u10E1 ${_issue.pattern}`;
+        return `\u10D0\u10E0\u10D0\u10E1\u10EC\u10DD\u10E0\u10D8 ${(_e = FormatDictionary[_issue.format]) != null ? _e : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `\u10D0\u10E0\u10D0\u10E1\u10EC\u10DD\u10E0\u10D8 \u10E0\u10D8\u10EA\u10EE\u10D5\u10D8: \u10E3\u10DC\u10D3\u10D0 \u10D8\u10E7\u10DD\u10E1 ${issue2.divisor}-\u10D8\u10E1 \u10EF\u10D4\u10E0\u10D0\u10D3\u10D8`;
+      case "unrecognized_keys":
+        return `\u10E3\u10EA\u10DC\u10DD\u10D1\u10D8 \u10D2\u10D0\u10E1\u10D0\u10E6\u10D4\u10D1${issue2.keys.length > 1 ? "\u10D4\u10D1\u10D8" : "\u10D8"}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `\u10D0\u10E0\u10D0\u10E1\u10EC\u10DD\u10E0\u10D8 \u10D2\u10D0\u10E1\u10D0\u10E6\u10D4\u10D1\u10D8 ${issue2.origin}-\u10E8\u10D8`;
+      case "invalid_union":
+        return "\u10D0\u10E0\u10D0\u10E1\u10EC\u10DD\u10E0\u10D8 \u10E8\u10D4\u10E7\u10D5\u10D0\u10DC\u10D0";
+      case "invalid_element":
+        return `\u10D0\u10E0\u10D0\u10E1\u10EC\u10DD\u10E0\u10D8 \u10DB\u10DC\u10D8\u10E8\u10D5\u10DC\u10D4\u10DA\u10DD\u10D1\u10D0 ${issue2.origin}-\u10E8\u10D8`;
+      default:
+        return `\u10D0\u10E0\u10D0\u10E1\u10EC\u10DD\u10E0\u10D8 \u10E8\u10D4\u10E7\u10D5\u10D0\u10DC\u10D0`;
+    }
+  };
+};
+function ka_default() {
+  return {
+    localeError: error25()
+  };
+}
+
+// node_modules/zod/v4/locales/km.js
+var error26 = () => {
+  const Sizable = {
+    string: { unit: "\u178F\u17BD\u17A2\u1780\u17D2\u179F\u179A", verb: "\u1782\u17BD\u179A\u1798\u17B6\u1793" },
+    file: { unit: "\u1794\u17C3", verb: "\u1782\u17BD\u179A\u1798\u17B6\u1793" },
+    array: { unit: "\u1792\u17B6\u178F\u17BB", verb: "\u1782\u17BD\u179A\u1798\u17B6\u1793" },
+    set: { unit: "\u1792\u17B6\u178F\u17BB", verb: "\u1782\u17BD\u179A\u1798\u17B6\u1793" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "\u1791\u17B7\u1793\u17D2\u1793\u1793\u17D0\u1799\u1794\u1789\u17D2\u1785\u17BC\u179B",
+    email: "\u17A2\u17B6\u179F\u1799\u178A\u17D2\u178B\u17B6\u1793\u17A2\u17CA\u17B8\u1798\u17C2\u179B",
+    url: "URL",
+    emoji: "\u179F\u1789\u17D2\u1789\u17B6\u17A2\u17B6\u179A\u1798\u17D2\u1798\u178E\u17CD",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "\u1780\u17B6\u179B\u1794\u179A\u17B7\u1785\u17D2\u1786\u17C1\u1791 \u1793\u17B7\u1784\u1798\u17C9\u17C4\u1784 ISO",
+    date: "\u1780\u17B6\u179B\u1794\u179A\u17B7\u1785\u17D2\u1786\u17C1\u1791 ISO",
+    time: "\u1798\u17C9\u17C4\u1784 ISO",
+    duration: "\u179A\u1799\u17C8\u1796\u17C1\u179B ISO",
+    ipv4: "\u17A2\u17B6\u179F\u1799\u178A\u17D2\u178B\u17B6\u1793 IPv4",
+    ipv6: "\u17A2\u17B6\u179F\u1799\u178A\u17D2\u178B\u17B6\u1793 IPv6",
+    cidrv4: "\u178A\u17C2\u1793\u17A2\u17B6\u179F\u1799\u178A\u17D2\u178B\u17B6\u1793 IPv4",
+    cidrv6: "\u178A\u17C2\u1793\u17A2\u17B6\u179F\u1799\u178A\u17D2\u178B\u17B6\u1793 IPv6",
+    base64: "\u1781\u17D2\u179F\u17C2\u17A2\u1780\u17D2\u179F\u179A\u17A2\u17CA\u17B7\u1780\u17BC\u178A base64",
+    base64url: "\u1781\u17D2\u179F\u17C2\u17A2\u1780\u17D2\u179F\u179A\u17A2\u17CA\u17B7\u1780\u17BC\u178A base64url",
+    json_string: "\u1781\u17D2\u179F\u17C2\u17A2\u1780\u17D2\u179F\u179A JSON",
+    e164: "\u179B\u17C1\u1781 E.164",
+    jwt: "JWT",
+    template_literal: "\u1791\u17B7\u1793\u17D2\u1793\u1793\u17D0\u1799\u1794\u1789\u17D2\u1785\u17BC\u179B"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "\u179B\u17C1\u1781",
+    array: "\u17A2\u17B6\u179A\u17C1 (Array)",
+    null: "\u1782\u17D2\u1798\u17B6\u1793\u178F\u1798\u17D2\u179B\u17C3 (null)"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `\u1791\u17B7\u1793\u17D2\u1793\u1793\u17D0\u1799\u1794\u1789\u17D2\u1785\u17BC\u179B\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u17D6 \u178F\u17D2\u179A\u17BC\u179C\u1780\u17B6\u179A instanceof ${issue2.expected} \u1794\u17C9\u17BB\u1793\u17D2\u178F\u17C2\u1791\u1791\u17BD\u179B\u1794\u17B6\u1793 ${received}`;
+        }
+        return `\u1791\u17B7\u1793\u17D2\u1793\u1793\u17D0\u1799\u1794\u1789\u17D2\u1785\u17BC\u179B\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u17D6 \u178F\u17D2\u179A\u17BC\u179C\u1780\u17B6\u179A ${expected} \u1794\u17C9\u17BB\u1793\u17D2\u178F\u17C2\u1791\u1791\u17BD\u179B\u1794\u17B6\u1793 ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `\u1791\u17B7\u1793\u17D2\u1793\u1793\u17D0\u1799\u1794\u1789\u17D2\u1785\u17BC\u179B\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u17D6 \u178F\u17D2\u179A\u17BC\u179C\u1780\u17B6\u179A ${stringifyPrimitive(issue2.values[0])}`;
+        return `\u1787\u1798\u17D2\u179A\u17BE\u179F\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u17D6 \u178F\u17D2\u179A\u17BC\u179C\u1787\u17B6\u1798\u17BD\u1799\u1780\u17D2\u1793\u17BB\u1784\u1785\u17C6\u178E\u17C4\u1798 ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `\u1792\u17C6\u1796\u17C1\u1780\u17D6 \u178F\u17D2\u179A\u17BC\u179C\u1780\u17B6\u179A ${(_c = issue2.origin) != null ? _c : "\u178F\u1798\u17D2\u179B\u17C3"} ${adj} ${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "\u1792\u17B6\u178F\u17BB"}`;
+        return `\u1792\u17C6\u1796\u17C1\u1780\u17D6 \u178F\u17D2\u179A\u17BC\u179C\u1780\u17B6\u179A ${(_e = issue2.origin) != null ? _e : "\u178F\u1798\u17D2\u179B\u17C3"} ${adj} ${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `\u178F\u17BC\u1785\u1796\u17C1\u1780\u17D6 \u178F\u17D2\u179A\u17BC\u179C\u1780\u17B6\u179A ${issue2.origin} ${adj} ${issue2.minimum.toString()} ${sizing.unit}`;
+        }
+        return `\u178F\u17BC\u1785\u1796\u17C1\u1780\u17D6 \u178F\u17D2\u179A\u17BC\u179C\u1780\u17B6\u179A ${issue2.origin} ${adj} ${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with") {
+          return `\u1781\u17D2\u179F\u17C2\u17A2\u1780\u17D2\u179F\u179A\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u17D6 \u178F\u17D2\u179A\u17BC\u179C\u1785\u17B6\u1794\u17CB\u1795\u17D2\u178F\u17BE\u1798\u178A\u17C4\u1799 "${_issue.prefix}"`;
+        }
+        if (_issue.format === "ends_with")
+          return `\u1781\u17D2\u179F\u17C2\u17A2\u1780\u17D2\u179F\u179A\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u17D6 \u178F\u17D2\u179A\u17BC\u179C\u1794\u1789\u17D2\u1785\u1794\u17CB\u178A\u17C4\u1799 "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `\u1781\u17D2\u179F\u17C2\u17A2\u1780\u17D2\u179F\u179A\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u17D6 \u178F\u17D2\u179A\u17BC\u179C\u1798\u17B6\u1793 "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `\u1781\u17D2\u179F\u17C2\u17A2\u1780\u17D2\u179F\u179A\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u17D6 \u178F\u17D2\u179A\u17BC\u179C\u178F\u17C2\u1795\u17D2\u1782\u17BC\u1795\u17D2\u1782\u1784\u1793\u17B9\u1784\u1791\u1798\u17D2\u179A\u1784\u17CB\u178A\u17C2\u179B\u1794\u17B6\u1793\u1780\u17C6\u178E\u178F\u17CB ${_issue.pattern}`;
+        return `\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u17D6 ${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `\u179B\u17C1\u1781\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u17D6 \u178F\u17D2\u179A\u17BC\u179C\u178F\u17C2\u1787\u17B6\u1796\u17A0\u17BB\u1782\u17BB\u178E\u1793\u17C3 ${issue2.divisor}`;
+      case "unrecognized_keys":
+        return `\u179A\u1780\u1783\u17BE\u1789\u179F\u17C4\u1798\u17B7\u1793\u179F\u17D2\u1782\u17B6\u179B\u17CB\u17D6 ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `\u179F\u17C4\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u1793\u17C5\u1780\u17D2\u1793\u17BB\u1784 ${issue2.origin}`;
+      case "invalid_union":
+        return `\u1791\u17B7\u1793\u17D2\u1793\u1793\u17D0\u1799\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C`;
+      case "invalid_element":
+        return `\u1791\u17B7\u1793\u17D2\u1793\u1793\u17D0\u1799\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u1793\u17C5\u1780\u17D2\u1793\u17BB\u1784 ${issue2.origin}`;
+      default:
+        return `\u1791\u17B7\u1793\u17D2\u1793\u1793\u17D0\u1799\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C`;
+    }
+  };
+};
+function km_default() {
+  return {
+    localeError: error26()
+  };
+}
+
+// node_modules/zod/v4/locales/kh.js
+function kh_default() {
+  return km_default();
+}
+
+// node_modules/zod/v4/locales/ko.js
+var error27 = () => {
+  const Sizable = {
+    string: { unit: "\uBB38\uC790", verb: "to have" },
+    file: { unit: "\uBC14\uC774\uD2B8", verb: "to have" },
+    array: { unit: "\uAC1C", verb: "to have" },
+    set: { unit: "\uAC1C", verb: "to have" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "\uC785\uB825",
+    email: "\uC774\uBA54\uC77C \uC8FC\uC18C",
+    url: "URL",
+    emoji: "\uC774\uBAA8\uC9C0",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "ISO \uB0A0\uC9DC\uC2DC\uAC04",
+    date: "ISO \uB0A0\uC9DC",
+    time: "ISO \uC2DC\uAC04",
+    duration: "ISO \uAE30\uAC04",
+    ipv4: "IPv4 \uC8FC\uC18C",
+    ipv6: "IPv6 \uC8FC\uC18C",
+    cidrv4: "IPv4 \uBC94\uC704",
+    cidrv6: "IPv6 \uBC94\uC704",
+    base64: "base64 \uC778\uCF54\uB529 \uBB38\uC790\uC5F4",
+    base64url: "base64url \uC778\uCF54\uB529 \uBB38\uC790\uC5F4",
+    json_string: "JSON \uBB38\uC790\uC5F4",
+    e164: "E.164 \uBC88\uD638",
+    jwt: "JWT",
+    template_literal: "\uC785\uB825"
+  };
+  const TypeDictionary = {
+    nan: "NaN"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f, _g, _h, _i;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `\uC798\uBABB\uB41C \uC785\uB825: \uC608\uC0C1 \uD0C0\uC785\uC740 instanceof ${issue2.expected}, \uBC1B\uC740 \uD0C0\uC785\uC740 ${received}\uC785\uB2C8\uB2E4`;
+        }
+        return `\uC798\uBABB\uB41C \uC785\uB825: \uC608\uC0C1 \uD0C0\uC785\uC740 ${expected}, \uBC1B\uC740 \uD0C0\uC785\uC740 ${received}\uC785\uB2C8\uB2E4`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `\uC798\uBABB\uB41C \uC785\uB825: \uAC12\uC740 ${stringifyPrimitive(issue2.values[0])} \uC774\uC5B4\uC57C \uD569\uB2C8\uB2E4`;
+        return `\uC798\uBABB\uB41C \uC635\uC158: ${joinValues(issue2.values, "\uB610\uB294 ")} \uC911 \uD558\uB098\uC5EC\uC57C \uD569\uB2C8\uB2E4`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "\uC774\uD558" : "\uBBF8\uB9CC";
+        const suffix = adj === "\uBBF8\uB9CC" ? "\uC774\uC5B4\uC57C \uD569\uB2C8\uB2E4" : "\uC5EC\uC57C \uD569\uB2C8\uB2E4";
+        const sizing = getSizing(issue2.origin);
+        const unit = (_c = sizing == null ? void 0 : sizing.unit) != null ? _c : "\uC694\uC18C";
+        if (sizing)
+          return `${(_d = issue2.origin) != null ? _d : "\uAC12"}\uC774 \uB108\uBB34 \uD07D\uB2C8\uB2E4: ${issue2.maximum.toString()}${unit} ${adj}${suffix}`;
+        return `${(_e = issue2.origin) != null ? _e : "\uAC12"}\uC774 \uB108\uBB34 \uD07D\uB2C8\uB2E4: ${issue2.maximum.toString()} ${adj}${suffix}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? "\uC774\uC0C1" : "\uCD08\uACFC";
+        const suffix = adj === "\uC774\uC0C1" ? "\uC774\uC5B4\uC57C \uD569\uB2C8\uB2E4" : "\uC5EC\uC57C \uD569\uB2C8\uB2E4";
+        const sizing = getSizing(issue2.origin);
+        const unit = (_f = sizing == null ? void 0 : sizing.unit) != null ? _f : "\uC694\uC18C";
+        if (sizing) {
+          return `${(_g = issue2.origin) != null ? _g : "\uAC12"}\uC774 \uB108\uBB34 \uC791\uC2B5\uB2C8\uB2E4: ${issue2.minimum.toString()}${unit} ${adj}${suffix}`;
+        }
+        return `${(_h = issue2.origin) != null ? _h : "\uAC12"}\uC774 \uB108\uBB34 \uC791\uC2B5\uB2C8\uB2E4: ${issue2.minimum.toString()} ${adj}${suffix}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with") {
+          return `\uC798\uBABB\uB41C \uBB38\uC790\uC5F4: "${_issue.prefix}"(\uC73C)\uB85C \uC2DC\uC791\uD574\uC57C \uD569\uB2C8\uB2E4`;
+        }
+        if (_issue.format === "ends_with")
+          return `\uC798\uBABB\uB41C \uBB38\uC790\uC5F4: "${_issue.suffix}"(\uC73C)\uB85C \uB05D\uB098\uC57C \uD569\uB2C8\uB2E4`;
+        if (_issue.format === "includes")
+          return `\uC798\uBABB\uB41C \uBB38\uC790\uC5F4: "${_issue.includes}"\uC744(\uB97C) \uD3EC\uD568\uD574\uC57C \uD569\uB2C8\uB2E4`;
+        if (_issue.format === "regex")
+          return `\uC798\uBABB\uB41C \uBB38\uC790\uC5F4: \uC815\uADDC\uC2DD ${_issue.pattern} \uD328\uD134\uACFC \uC77C\uCE58\uD574\uC57C \uD569\uB2C8\uB2E4`;
+        return `\uC798\uBABB\uB41C ${(_i = FormatDictionary[_issue.format]) != null ? _i : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `\uC798\uBABB\uB41C \uC22B\uC790: ${issue2.divisor}\uC758 \uBC30\uC218\uC5EC\uC57C \uD569\uB2C8\uB2E4`;
+      case "unrecognized_keys":
+        return `\uC778\uC2DD\uD560 \uC218 \uC5C6\uB294 \uD0A4: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `\uC798\uBABB\uB41C \uD0A4: ${issue2.origin}`;
+      case "invalid_union":
+        return `\uC798\uBABB\uB41C \uC785\uB825`;
+      case "invalid_element":
+        return `\uC798\uBABB\uB41C \uAC12: ${issue2.origin}`;
+      default:
+        return `\uC798\uBABB\uB41C \uC785\uB825`;
+    }
+  };
+};
+function ko_default() {
+  return {
+    localeError: error27()
+  };
+}
+
+// node_modules/zod/v4/locales/lt.js
+var capitalizeFirstCharacter = (text) => {
+  return text.charAt(0).toUpperCase() + text.slice(1);
+};
+function getUnitTypeFromNumber(number4) {
+  const abs = Math.abs(number4);
+  const last = abs % 10;
+  const last2 = abs % 100;
+  if (last2 >= 11 && last2 <= 19 || last === 0)
+    return "many";
+  if (last === 1)
+    return "one";
+  return "few";
+}
+var error28 = () => {
+  const Sizable = {
+    string: {
+      unit: {
+        one: "simbolis",
+        few: "simboliai",
+        many: "simboli\u0173"
+      },
+      verb: {
+        smaller: {
+          inclusive: "turi b\u016Bti ne ilgesn\u0117 kaip",
+          notInclusive: "turi b\u016Bti trumpesn\u0117 kaip"
+        },
+        bigger: {
+          inclusive: "turi b\u016Bti ne trumpesn\u0117 kaip",
+          notInclusive: "turi b\u016Bti ilgesn\u0117 kaip"
+        }
+      }
+    },
+    file: {
+      unit: {
+        one: "baitas",
+        few: "baitai",
+        many: "bait\u0173"
+      },
+      verb: {
+        smaller: {
+          inclusive: "turi b\u016Bti ne didesnis kaip",
+          notInclusive: "turi b\u016Bti ma\u017Eesnis kaip"
+        },
+        bigger: {
+          inclusive: "turi b\u016Bti ne ma\u017Eesnis kaip",
+          notInclusive: "turi b\u016Bti didesnis kaip"
+        }
+      }
+    },
+    array: {
+      unit: {
+        one: "element\u0105",
+        few: "elementus",
+        many: "element\u0173"
+      },
+      verb: {
+        smaller: {
+          inclusive: "turi tur\u0117ti ne daugiau kaip",
+          notInclusive: "turi tur\u0117ti ma\u017Eiau kaip"
+        },
+        bigger: {
+          inclusive: "turi tur\u0117ti ne ma\u017Eiau kaip",
+          notInclusive: "turi tur\u0117ti daugiau kaip"
+        }
+      }
+    },
+    set: {
+      unit: {
+        one: "element\u0105",
+        few: "elementus",
+        many: "element\u0173"
+      },
+      verb: {
+        smaller: {
+          inclusive: "turi tur\u0117ti ne daugiau kaip",
+          notInclusive: "turi tur\u0117ti ma\u017Eiau kaip"
+        },
+        bigger: {
+          inclusive: "turi tur\u0117ti ne ma\u017Eiau kaip",
+          notInclusive: "turi tur\u0117ti daugiau kaip"
+        }
+      }
+    }
+  };
+  function getSizing(origin, unitType, inclusive, targetShouldBe) {
+    var _a5;
+    const result = (_a5 = Sizable[origin]) != null ? _a5 : null;
+    if (result === null)
+      return result;
+    return {
+      unit: result.unit[unitType],
+      verb: result.verb[targetShouldBe][inclusive ? "inclusive" : "notInclusive"]
+    };
+  }
+  const FormatDictionary = {
+    regex: "\u012Fvestis",
+    email: "el. pa\u0161to adresas",
+    url: "URL",
+    emoji: "jaustukas",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "ISO data ir laikas",
+    date: "ISO data",
+    time: "ISO laikas",
+    duration: "ISO trukm\u0117",
+    ipv4: "IPv4 adresas",
+    ipv6: "IPv6 adresas",
+    cidrv4: "IPv4 tinklo prefiksas (CIDR)",
+    cidrv6: "IPv6 tinklo prefiksas (CIDR)",
+    base64: "base64 u\u017Ekoduota eilut\u0117",
+    base64url: "base64url u\u017Ekoduota eilut\u0117",
+    json_string: "JSON eilut\u0117",
+    e164: "E.164 numeris",
+    jwt: "JWT",
+    template_literal: "\u012Fvestis"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "skai\u010Dius",
+    bigint: "sveikasis skai\u010Dius",
+    string: "eilut\u0117",
+    boolean: "login\u0117 reik\u0161m\u0117",
+    undefined: "neapibr\u0117\u017Eta reik\u0161m\u0117",
+    function: "funkcija",
+    symbol: "simbolis",
+    array: "masyvas",
+    object: "objektas",
+    null: "nulin\u0117 reik\u0161m\u0117"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l, _m, _n, _o;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `Gautas tipas ${received}, o tik\u0117tasi - instanceof ${issue2.expected}`;
+        }
+        return `Gautas tipas ${received}, o tik\u0117tasi - ${expected}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `Privalo b\u016Bti ${stringifyPrimitive(issue2.values[0])}`;
+        return `Privalo b\u016Bti vienas i\u0161 ${joinValues(issue2.values, "|")} pasirinkim\u0173`;
+      case "too_big": {
+        const origin = (_c = TypeDictionary[issue2.origin]) != null ? _c : issue2.origin;
+        const sizing = getSizing(issue2.origin, getUnitTypeFromNumber(Number(issue2.maximum)), (_d = issue2.inclusive) != null ? _d : false, "smaller");
+        if (sizing == null ? void 0 : sizing.verb)
+          return `${capitalizeFirstCharacter((_e = origin != null ? origin : issue2.origin) != null ? _e : "reik\u0161m\u0117")} ${sizing.verb} ${issue2.maximum.toString()} ${(_f = sizing.unit) != null ? _f : "element\u0173"}`;
+        const adj = issue2.inclusive ? "ne didesnis kaip" : "ma\u017Eesnis kaip";
+        return `${capitalizeFirstCharacter((_g = origin != null ? origin : issue2.origin) != null ? _g : "reik\u0161m\u0117")} turi b\u016Bti ${adj} ${issue2.maximum.toString()} ${sizing == null ? void 0 : sizing.unit}`;
+      }
+      case "too_small": {
+        const origin = (_h = TypeDictionary[issue2.origin]) != null ? _h : issue2.origin;
+        const sizing = getSizing(issue2.origin, getUnitTypeFromNumber(Number(issue2.minimum)), (_i = issue2.inclusive) != null ? _i : false, "bigger");
+        if (sizing == null ? void 0 : sizing.verb)
+          return `${capitalizeFirstCharacter((_j = origin != null ? origin : issue2.origin) != null ? _j : "reik\u0161m\u0117")} ${sizing.verb} ${issue2.minimum.toString()} ${(_k = sizing.unit) != null ? _k : "element\u0173"}`;
+        const adj = issue2.inclusive ? "ne ma\u017Eesnis kaip" : "didesnis kaip";
+        return `${capitalizeFirstCharacter((_l = origin != null ? origin : issue2.origin) != null ? _l : "reik\u0161m\u0117")} turi b\u016Bti ${adj} ${issue2.minimum.toString()} ${sizing == null ? void 0 : sizing.unit}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with") {
+          return `Eilut\u0117 privalo prasid\u0117ti "${_issue.prefix}"`;
+        }
+        if (_issue.format === "ends_with")
+          return `Eilut\u0117 privalo pasibaigti "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `Eilut\u0117 privalo \u012Ftraukti "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `Eilut\u0117 privalo atitikti ${_issue.pattern}`;
+        return `Neteisingas ${(_m = FormatDictionary[_issue.format]) != null ? _m : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `Skai\u010Dius privalo b\u016Bti ${issue2.divisor} kartotinis.`;
+      case "unrecognized_keys":
+        return `Neatpa\u017Eint${issue2.keys.length > 1 ? "i" : "as"} rakt${issue2.keys.length > 1 ? "ai" : "as"}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return "Rastas klaidingas raktas";
+      case "invalid_union":
+        return "Klaidinga \u012Fvestis";
+      case "invalid_element": {
+        const origin = (_n = TypeDictionary[issue2.origin]) != null ? _n : issue2.origin;
+        return `${capitalizeFirstCharacter((_o = origin != null ? origin : issue2.origin) != null ? _o : "reik\u0161m\u0117")} turi klaiding\u0105 \u012Fvest\u012F`;
+      }
+      default:
+        return "Klaidinga \u012Fvestis";
+    }
+  };
+};
+function lt_default() {
+  return {
+    localeError: error28()
+  };
+}
+
+// node_modules/zod/v4/locales/mk.js
+var error29 = () => {
+  const Sizable = {
+    string: { unit: "\u0437\u043D\u0430\u0446\u0438", verb: "\u0434\u0430 \u0438\u043C\u0430\u0430\u0442" },
+    file: { unit: "\u0431\u0430\u0458\u0442\u0438", verb: "\u0434\u0430 \u0438\u043C\u0430\u0430\u0442" },
+    array: { unit: "\u0441\u0442\u0430\u0432\u043A\u0438", verb: "\u0434\u0430 \u0438\u043C\u0430\u0430\u0442" },
+    set: { unit: "\u0441\u0442\u0430\u0432\u043A\u0438", verb: "\u0434\u0430 \u0438\u043C\u0430\u0430\u0442" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "\u0432\u043D\u0435\u0441",
+    email: "\u0430\u0434\u0440\u0435\u0441\u0430 \u043D\u0430 \u0435-\u043F\u043E\u0448\u0442\u0430",
+    url: "URL",
+    emoji: "\u0435\u043C\u043E\u045F\u0438",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "ISO \u0434\u0430\u0442\u0443\u043C \u0438 \u0432\u0440\u0435\u043C\u0435",
+    date: "ISO \u0434\u0430\u0442\u0443\u043C",
+    time: "ISO \u0432\u0440\u0435\u043C\u0435",
+    duration: "ISO \u0432\u0440\u0435\u043C\u0435\u0442\u0440\u0430\u0435\u045A\u0435",
+    ipv4: "IPv4 \u0430\u0434\u0440\u0435\u0441\u0430",
+    ipv6: "IPv6 \u0430\u0434\u0440\u0435\u0441\u0430",
+    cidrv4: "IPv4 \u043E\u043F\u0441\u0435\u0433",
+    cidrv6: "IPv6 \u043E\u043F\u0441\u0435\u0433",
+    base64: "base64-\u0435\u043D\u043A\u043E\u0434\u0438\u0440\u0430\u043D\u0430 \u043D\u0438\u0437\u0430",
+    base64url: "base64url-\u0435\u043D\u043A\u043E\u0434\u0438\u0440\u0430\u043D\u0430 \u043D\u0438\u0437\u0430",
+    json_string: "JSON \u043D\u0438\u0437\u0430",
+    e164: "E.164 \u0431\u0440\u043E\u0458",
+    jwt: "JWT",
+    template_literal: "\u0432\u043D\u0435\u0441"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "\u0431\u0440\u043E\u0458",
+    array: "\u043D\u0438\u0437\u0430"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `\u0413\u0440\u0435\u0448\u0435\u043D \u0432\u043D\u0435\u0441: \u0441\u0435 \u043E\u0447\u0435\u043A\u0443\u0432\u0430 instanceof ${issue2.expected}, \u043F\u0440\u0438\u043C\u0435\u043D\u043E ${received}`;
+        }
+        return `\u0413\u0440\u0435\u0448\u0435\u043D \u0432\u043D\u0435\u0441: \u0441\u0435 \u043E\u0447\u0435\u043A\u0443\u0432\u0430 ${expected}, \u043F\u0440\u0438\u043C\u0435\u043D\u043E ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `Invalid input: expected ${stringifyPrimitive(issue2.values[0])}`;
+        return `\u0413\u0440\u0435\u0448\u0430\u043D\u0430 \u043E\u043F\u0446\u0438\u0458\u0430: \u0441\u0435 \u043E\u0447\u0435\u043A\u0443\u0432\u0430 \u0435\u0434\u043D\u0430 ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `\u041F\u0440\u0435\u043C\u043D\u043E\u0433\u0443 \u0433\u043E\u043B\u0435\u043C: \u0441\u0435 \u043E\u0447\u0435\u043A\u0443\u0432\u0430 ${(_c = issue2.origin) != null ? _c : "\u0432\u0440\u0435\u0434\u043D\u043E\u0441\u0442\u0430"} \u0434\u0430 \u0438\u043C\u0430 ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "\u0435\u043B\u0435\u043C\u0435\u043D\u0442\u0438"}`;
+        return `\u041F\u0440\u0435\u043C\u043D\u043E\u0433\u0443 \u0433\u043E\u043B\u0435\u043C: \u0441\u0435 \u043E\u0447\u0435\u043A\u0443\u0432\u0430 ${(_e = issue2.origin) != null ? _e : "\u0432\u0440\u0435\u0434\u043D\u043E\u0441\u0442\u0430"} \u0434\u0430 \u0431\u0438\u0434\u0435 ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `\u041F\u0440\u0435\u043C\u043D\u043E\u0433\u0443 \u043C\u0430\u043B: \u0441\u0435 \u043E\u0447\u0435\u043A\u0443\u0432\u0430 ${issue2.origin} \u0434\u0430 \u0438\u043C\u0430 ${adj}${issue2.minimum.toString()} ${sizing.unit}`;
+        }
+        return `\u041F\u0440\u0435\u043C\u043D\u043E\u0433\u0443 \u043C\u0430\u043B: \u0441\u0435 \u043E\u0447\u0435\u043A\u0443\u0432\u0430 ${issue2.origin} \u0434\u0430 \u0431\u0438\u0434\u0435 ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with") {
+          return `\u041D\u0435\u0432\u0430\u0436\u0435\u0447\u043A\u0430 \u043D\u0438\u0437\u0430: \u043C\u043E\u0440\u0430 \u0434\u0430 \u0437\u0430\u043F\u043E\u0447\u043D\u0443\u0432\u0430 \u0441\u043E "${_issue.prefix}"`;
+        }
+        if (_issue.format === "ends_with")
+          return `\u041D\u0435\u0432\u0430\u0436\u0435\u0447\u043A\u0430 \u043D\u0438\u0437\u0430: \u043C\u043E\u0440\u0430 \u0434\u0430 \u0437\u0430\u0432\u0440\u0448\u0443\u0432\u0430 \u0441\u043E "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `\u041D\u0435\u0432\u0430\u0436\u0435\u0447\u043A\u0430 \u043D\u0438\u0437\u0430: \u043C\u043E\u0440\u0430 \u0434\u0430 \u0432\u043A\u043B\u0443\u0447\u0443\u0432\u0430 "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `\u041D\u0435\u0432\u0430\u0436\u0435\u0447\u043A\u0430 \u043D\u0438\u0437\u0430: \u043C\u043E\u0440\u0430 \u0434\u0430 \u043E\u0434\u0433\u043E\u0430\u0440\u0430 \u043D\u0430 \u043F\u0430\u0442\u0435\u0440\u043D\u043E\u0442 ${_issue.pattern}`;
+        return `Invalid ${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `\u0413\u0440\u0435\u0448\u0435\u043D \u0431\u0440\u043E\u0458: \u043C\u043E\u0440\u0430 \u0434\u0430 \u0431\u0438\u0434\u0435 \u0434\u0435\u043B\u0438\u0432 \u0441\u043E ${issue2.divisor}`;
+      case "unrecognized_keys":
+        return `${issue2.keys.length > 1 ? "\u041D\u0435\u043F\u0440\u0435\u043F\u043E\u0437\u043D\u0430\u0435\u043D\u0438 \u043A\u043B\u0443\u0447\u0435\u0432\u0438" : "\u041D\u0435\u043F\u0440\u0435\u043F\u043E\u0437\u043D\u0430\u0435\u043D \u043A\u043B\u0443\u0447"}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `\u0413\u0440\u0435\u0448\u0435\u043D \u043A\u043B\u0443\u0447 \u0432\u043E ${issue2.origin}`;
+      case "invalid_union":
+        return "\u0413\u0440\u0435\u0448\u0435\u043D \u0432\u043D\u0435\u0441";
+      case "invalid_element":
+        return `\u0413\u0440\u0435\u0448\u043D\u0430 \u0432\u0440\u0435\u0434\u043D\u043E\u0441\u0442 \u0432\u043E ${issue2.origin}`;
+      default:
+        return `\u0413\u0440\u0435\u0448\u0435\u043D \u0432\u043D\u0435\u0441`;
+    }
+  };
+};
+function mk_default() {
+  return {
+    localeError: error29()
+  };
+}
+
+// node_modules/zod/v4/locales/ms.js
+var error30 = () => {
+  const Sizable = {
+    string: { unit: "aksara", verb: "mempunyai" },
+    file: { unit: "bait", verb: "mempunyai" },
+    array: { unit: "elemen", verb: "mempunyai" },
+    set: { unit: "elemen", verb: "mempunyai" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "input",
+    email: "alamat e-mel",
+    url: "URL",
+    emoji: "emoji",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "tarikh masa ISO",
+    date: "tarikh ISO",
+    time: "masa ISO",
+    duration: "tempoh ISO",
+    ipv4: "alamat IPv4",
+    ipv6: "alamat IPv6",
+    cidrv4: "julat IPv4",
+    cidrv6: "julat IPv6",
+    base64: "string dikodkan base64",
+    base64url: "string dikodkan base64url",
+    json_string: "string JSON",
+    e164: "nombor E.164",
+    jwt: "JWT",
+    template_literal: "input"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "nombor"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `Input tidak sah: dijangka instanceof ${issue2.expected}, diterima ${received}`;
+        }
+        return `Input tidak sah: dijangka ${expected}, diterima ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `Input tidak sah: dijangka ${stringifyPrimitive(issue2.values[0])}`;
+        return `Pilihan tidak sah: dijangka salah satu daripada ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `Terlalu besar: dijangka ${(_c = issue2.origin) != null ? _c : "nilai"} ${sizing.verb} ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "elemen"}`;
+        return `Terlalu besar: dijangka ${(_e = issue2.origin) != null ? _e : "nilai"} adalah ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `Terlalu kecil: dijangka ${issue2.origin} ${sizing.verb} ${adj}${issue2.minimum.toString()} ${sizing.unit}`;
+        }
+        return `Terlalu kecil: dijangka ${issue2.origin} adalah ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with")
+          return `String tidak sah: mesti bermula dengan "${_issue.prefix}"`;
+        if (_issue.format === "ends_with")
+          return `String tidak sah: mesti berakhir dengan "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `String tidak sah: mesti mengandungi "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `String tidak sah: mesti sepadan dengan corak ${_issue.pattern}`;
+        return `${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format} tidak sah`;
+      }
+      case "not_multiple_of":
+        return `Nombor tidak sah: perlu gandaan ${issue2.divisor}`;
+      case "unrecognized_keys":
+        return `Kunci tidak dikenali: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `Kunci tidak sah dalam ${issue2.origin}`;
+      case "invalid_union":
+        return "Input tidak sah";
+      case "invalid_element":
+        return `Nilai tidak sah dalam ${issue2.origin}`;
+      default:
+        return `Input tidak sah`;
+    }
+  };
+};
+function ms_default() {
+  return {
+    localeError: error30()
+  };
+}
+
+// node_modules/zod/v4/locales/nl.js
+var error31 = () => {
+  const Sizable = {
+    string: { unit: "tekens", verb: "heeft" },
+    file: { unit: "bytes", verb: "heeft" },
+    array: { unit: "elementen", verb: "heeft" },
+    set: { unit: "elementen", verb: "heeft" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "invoer",
+    email: "emailadres",
+    url: "URL",
+    emoji: "emoji",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "ISO datum en tijd",
+    date: "ISO datum",
+    time: "ISO tijd",
+    duration: "ISO duur",
+    ipv4: "IPv4-adres",
+    ipv6: "IPv6-adres",
+    cidrv4: "IPv4-bereik",
+    cidrv6: "IPv6-bereik",
+    base64: "base64-gecodeerde tekst",
+    base64url: "base64 URL-gecodeerde tekst",
+    json_string: "JSON string",
+    e164: "E.164-nummer",
+    jwt: "JWT",
+    template_literal: "invoer"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "getal"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `Ongeldige invoer: verwacht instanceof ${issue2.expected}, ontving ${received}`;
+        }
+        return `Ongeldige invoer: verwacht ${expected}, ontving ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `Ongeldige invoer: verwacht ${stringifyPrimitive(issue2.values[0])}`;
+        return `Ongeldige optie: verwacht \xE9\xE9n van ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        const longName = issue2.origin === "date" ? "laat" : issue2.origin === "string" ? "lang" : "groot";
+        if (sizing)
+          return `Te ${longName}: verwacht dat ${(_c = issue2.origin) != null ? _c : "waarde"} ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "elementen"} ${sizing.verb}`;
+        return `Te ${longName}: verwacht dat ${(_e = issue2.origin) != null ? _e : "waarde"} ${adj}${issue2.maximum.toString()} is`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        const shortName = issue2.origin === "date" ? "vroeg" : issue2.origin === "string" ? "kort" : "klein";
+        if (sizing) {
+          return `Te ${shortName}: verwacht dat ${issue2.origin} ${adj}${issue2.minimum.toString()} ${sizing.unit} ${sizing.verb}`;
+        }
+        return `Te ${shortName}: verwacht dat ${issue2.origin} ${adj}${issue2.minimum.toString()} is`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with") {
+          return `Ongeldige tekst: moet met "${_issue.prefix}" beginnen`;
+        }
+        if (_issue.format === "ends_with")
+          return `Ongeldige tekst: moet op "${_issue.suffix}" eindigen`;
+        if (_issue.format === "includes")
+          return `Ongeldige tekst: moet "${_issue.includes}" bevatten`;
+        if (_issue.format === "regex")
+          return `Ongeldige tekst: moet overeenkomen met patroon ${_issue.pattern}`;
+        return `Ongeldig: ${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `Ongeldig getal: moet een veelvoud van ${issue2.divisor} zijn`;
+      case "unrecognized_keys":
+        return `Onbekende key${issue2.keys.length > 1 ? "s" : ""}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `Ongeldige key in ${issue2.origin}`;
+      case "invalid_union":
+        return "Ongeldige invoer";
+      case "invalid_element":
+        return `Ongeldige waarde in ${issue2.origin}`;
+      default:
+        return `Ongeldige invoer`;
+    }
+  };
+};
+function nl_default() {
+  return {
+    localeError: error31()
+  };
+}
+
+// node_modules/zod/v4/locales/no.js
+var error32 = () => {
+  const Sizable = {
+    string: { unit: "tegn", verb: "\xE5 ha" },
+    file: { unit: "bytes", verb: "\xE5 ha" },
+    array: { unit: "elementer", verb: "\xE5 inneholde" },
+    set: { unit: "elementer", verb: "\xE5 inneholde" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "input",
+    email: "e-postadresse",
+    url: "URL",
+    emoji: "emoji",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "ISO dato- og klokkeslett",
+    date: "ISO-dato",
+    time: "ISO-klokkeslett",
+    duration: "ISO-varighet",
+    ipv4: "IPv4-omr\xE5de",
+    ipv6: "IPv6-omr\xE5de",
+    cidrv4: "IPv4-spekter",
+    cidrv6: "IPv6-spekter",
+    base64: "base64-enkodet streng",
+    base64url: "base64url-enkodet streng",
+    json_string: "JSON-streng",
+    e164: "E.164-nummer",
+    jwt: "JWT",
+    template_literal: "input"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "tall",
+    array: "liste"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `Ugyldig input: forventet instanceof ${issue2.expected}, fikk ${received}`;
+        }
+        return `Ugyldig input: forventet ${expected}, fikk ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `Ugyldig verdi: forventet ${stringifyPrimitive(issue2.values[0])}`;
+        return `Ugyldig valg: forventet en av ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `For stor(t): forventet ${(_c = issue2.origin) != null ? _c : "value"} til \xE5 ha ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "elementer"}`;
+        return `For stor(t): forventet ${(_e = issue2.origin) != null ? _e : "value"} til \xE5 ha ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `For lite(n): forventet ${issue2.origin} til \xE5 ha ${adj}${issue2.minimum.toString()} ${sizing.unit}`;
+        }
+        return `For lite(n): forventet ${issue2.origin} til \xE5 ha ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with")
+          return `Ugyldig streng: m\xE5 starte med "${_issue.prefix}"`;
+        if (_issue.format === "ends_with")
+          return `Ugyldig streng: m\xE5 ende med "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `Ugyldig streng: m\xE5 inneholde "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `Ugyldig streng: m\xE5 matche m\xF8nsteret ${_issue.pattern}`;
+        return `Ugyldig ${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `Ugyldig tall: m\xE5 v\xE6re et multiplum av ${issue2.divisor}`;
+      case "unrecognized_keys":
+        return `${issue2.keys.length > 1 ? "Ukjente n\xF8kler" : "Ukjent n\xF8kkel"}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `Ugyldig n\xF8kkel i ${issue2.origin}`;
+      case "invalid_union":
+        return "Ugyldig input";
+      case "invalid_element":
+        return `Ugyldig verdi i ${issue2.origin}`;
+      default:
+        return `Ugyldig input`;
+    }
+  };
+};
+function no_default() {
+  return {
+    localeError: error32()
+  };
+}
+
+// node_modules/zod/v4/locales/ota.js
+var error33 = () => {
+  const Sizable = {
+    string: { unit: "harf", verb: "olmal\u0131d\u0131r" },
+    file: { unit: "bayt", verb: "olmal\u0131d\u0131r" },
+    array: { unit: "unsur", verb: "olmal\u0131d\u0131r" },
+    set: { unit: "unsur", verb: "olmal\u0131d\u0131r" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "giren",
+    email: "epostag\xE2h",
+    url: "URL",
+    emoji: "emoji",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "ISO heng\xE2m\u0131",
+    date: "ISO tarihi",
+    time: "ISO zaman\u0131",
+    duration: "ISO m\xFCddeti",
+    ipv4: "IPv4 ni\u015F\xE2n\u0131",
+    ipv6: "IPv6 ni\u015F\xE2n\u0131",
+    cidrv4: "IPv4 menzili",
+    cidrv6: "IPv6 menzili",
+    base64: "base64-\u015Fifreli metin",
+    base64url: "base64url-\u015Fifreli metin",
+    json_string: "JSON metin",
+    e164: "E.164 say\u0131s\u0131",
+    jwt: "JWT",
+    template_literal: "giren"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "numara",
+    array: "saf",
+    null: "gayb"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `F\xE2sit giren: umulan instanceof ${issue2.expected}, al\u0131nan ${received}`;
+        }
+        return `F\xE2sit giren: umulan ${expected}, al\u0131nan ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `F\xE2sit giren: umulan ${stringifyPrimitive(issue2.values[0])}`;
+        return `F\xE2sit tercih: m\xFBteberler ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `Fazla b\xFCy\xFCk: ${(_c = issue2.origin) != null ? _c : "value"}, ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "elements"} sahip olmal\u0131yd\u0131.`;
+        return `Fazla b\xFCy\xFCk: ${(_e = issue2.origin) != null ? _e : "value"}, ${adj}${issue2.maximum.toString()} olmal\u0131yd\u0131.`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `Fazla k\xFC\xE7\xFCk: ${issue2.origin}, ${adj}${issue2.minimum.toString()} ${sizing.unit} sahip olmal\u0131yd\u0131.`;
+        }
+        return `Fazla k\xFC\xE7\xFCk: ${issue2.origin}, ${adj}${issue2.minimum.toString()} olmal\u0131yd\u0131.`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with")
+          return `F\xE2sit metin: "${_issue.prefix}" ile ba\u015Flamal\u0131.`;
+        if (_issue.format === "ends_with")
+          return `F\xE2sit metin: "${_issue.suffix}" ile bitmeli.`;
+        if (_issue.format === "includes")
+          return `F\xE2sit metin: "${_issue.includes}" ihtiv\xE2 etmeli.`;
+        if (_issue.format === "regex")
+          return `F\xE2sit metin: ${_issue.pattern} nak\u015F\u0131na uymal\u0131.`;
+        return `F\xE2sit ${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `F\xE2sit say\u0131: ${issue2.divisor} kat\u0131 olmal\u0131yd\u0131.`;
+      case "unrecognized_keys":
+        return `Tan\u0131nmayan anahtar ${issue2.keys.length > 1 ? "s" : ""}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `${issue2.origin} i\xE7in tan\u0131nmayan anahtar var.`;
+      case "invalid_union":
+        return "Giren tan\u0131namad\u0131.";
+      case "invalid_element":
+        return `${issue2.origin} i\xE7in tan\u0131nmayan k\u0131ymet var.`;
+      default:
+        return `K\u0131ymet tan\u0131namad\u0131.`;
+    }
+  };
+};
+function ota_default() {
+  return {
+    localeError: error33()
+  };
+}
+
+// node_modules/zod/v4/locales/ps.js
+var error34 = () => {
+  const Sizable = {
+    string: { unit: "\u062A\u0648\u06A9\u064A", verb: "\u0648\u0644\u0631\u064A" },
+    file: { unit: "\u0628\u0627\u06CC\u067C\u0633", verb: "\u0648\u0644\u0631\u064A" },
+    array: { unit: "\u062A\u0648\u06A9\u064A", verb: "\u0648\u0644\u0631\u064A" },
+    set: { unit: "\u062A\u0648\u06A9\u064A", verb: "\u0648\u0644\u0631\u064A" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "\u0648\u0631\u0648\u062F\u064A",
+    email: "\u0628\u0631\u06CC\u069A\u0646\u0627\u0644\u06CC\u06A9",
+    url: "\u06CC\u0648 \u0622\u0631 \u0627\u0644",
+    emoji: "\u0627\u06CC\u0645\u0648\u062C\u064A",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "\u0646\u06CC\u067C\u0647 \u0627\u0648 \u0648\u062E\u062A",
+    date: "\u0646\u06D0\u067C\u0647",
+    time: "\u0648\u062E\u062A",
+    duration: "\u0645\u0648\u062F\u0647",
+    ipv4: "\u062F IPv4 \u067E\u062A\u0647",
+    ipv6: "\u062F IPv6 \u067E\u062A\u0647",
+    cidrv4: "\u062F IPv4 \u0633\u0627\u062D\u0647",
+    cidrv6: "\u062F IPv6 \u0633\u0627\u062D\u0647",
+    base64: "base64-encoded \u0645\u062A\u0646",
+    base64url: "base64url-encoded \u0645\u062A\u0646",
+    json_string: "JSON \u0645\u062A\u0646",
+    e164: "\u062F E.164 \u0634\u0645\u06D0\u0631\u0647",
+    jwt: "JWT",
+    template_literal: "\u0648\u0631\u0648\u062F\u064A"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "\u0639\u062F\u062F",
+    array: "\u0627\u0631\u06D0"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `\u0646\u0627\u0633\u0645 \u0648\u0631\u0648\u062F\u064A: \u0628\u0627\u06CC\u062F instanceof ${issue2.expected} \u0648\u0627\u06CC, \u0645\u06AB\u0631 ${received} \u062A\u0631\u0644\u0627\u0633\u0647 \u0634\u0648`;
+        }
+        return `\u0646\u0627\u0633\u0645 \u0648\u0631\u0648\u062F\u064A: \u0628\u0627\u06CC\u062F ${expected} \u0648\u0627\u06CC, \u0645\u06AB\u0631 ${received} \u062A\u0631\u0644\u0627\u0633\u0647 \u0634\u0648`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1) {
+          return `\u0646\u0627\u0633\u0645 \u0648\u0631\u0648\u062F\u064A: \u0628\u0627\u06CC\u062F ${stringifyPrimitive(issue2.values[0])} \u0648\u0627\u06CC`;
+        }
+        return `\u0646\u0627\u0633\u0645 \u0627\u0646\u062A\u062E\u0627\u0628: \u0628\u0627\u06CC\u062F \u06CC\u0648 \u0644\u0647 ${joinValues(issue2.values, "|")} \u0685\u062E\u0647 \u0648\u0627\u06CC`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `\u0689\u06CC\u0631 \u0644\u0648\u06CC: ${(_c = issue2.origin) != null ? _c : "\u0627\u0631\u0632\u069A\u062A"} \u0628\u0627\u06CC\u062F ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "\u0639\u0646\u0635\u0631\u0648\u0646\u0647"} \u0648\u0644\u0631\u064A`;
+        }
+        return `\u0689\u06CC\u0631 \u0644\u0648\u06CC: ${(_e = issue2.origin) != null ? _e : "\u0627\u0631\u0632\u069A\u062A"} \u0628\u0627\u06CC\u062F ${adj}${issue2.maximum.toString()} \u0648\u064A`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `\u0689\u06CC\u0631 \u06A9\u0648\u0686\u0646\u06CC: ${issue2.origin} \u0628\u0627\u06CC\u062F ${adj}${issue2.minimum.toString()} ${sizing.unit} \u0648\u0644\u0631\u064A`;
+        }
+        return `\u0689\u06CC\u0631 \u06A9\u0648\u0686\u0646\u06CC: ${issue2.origin} \u0628\u0627\u06CC\u062F ${adj}${issue2.minimum.toString()} \u0648\u064A`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with") {
+          return `\u0646\u0627\u0633\u0645 \u0645\u062A\u0646: \u0628\u0627\u06CC\u062F \u062F "${_issue.prefix}" \u0633\u0631\u0647 \u067E\u06CC\u0644 \u0634\u064A`;
+        }
+        if (_issue.format === "ends_with") {
+          return `\u0646\u0627\u0633\u0645 \u0645\u062A\u0646: \u0628\u0627\u06CC\u062F \u062F "${_issue.suffix}" \u0633\u0631\u0647 \u067E\u0627\u06CC \u062A\u0647 \u0648\u0631\u0633\u064A\u0696\u064A`;
+        }
+        if (_issue.format === "includes") {
+          return `\u0646\u0627\u0633\u0645 \u0645\u062A\u0646: \u0628\u0627\u06CC\u062F "${_issue.includes}" \u0648\u0644\u0631\u064A`;
+        }
+        if (_issue.format === "regex") {
+          return `\u0646\u0627\u0633\u0645 \u0645\u062A\u0646: \u0628\u0627\u06CC\u062F \u062F ${_issue.pattern} \u0633\u0631\u0647 \u0645\u0637\u0627\u0628\u0642\u062A \u0648\u0644\u0631\u064A`;
+        }
+        return `${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format} \u0646\u0627\u0633\u0645 \u062F\u06CC`;
+      }
+      case "not_multiple_of":
+        return `\u0646\u0627\u0633\u0645 \u0639\u062F\u062F: \u0628\u0627\u06CC\u062F \u062F ${issue2.divisor} \u0645\u0636\u0631\u0628 \u0648\u064A`;
+      case "unrecognized_keys":
+        return `\u0646\u0627\u0633\u0645 ${issue2.keys.length > 1 ? "\u06A9\u0644\u06CC\u0689\u0648\u0646\u0647" : "\u06A9\u0644\u06CC\u0689"}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `\u0646\u0627\u0633\u0645 \u06A9\u0644\u06CC\u0689 \u067E\u0647 ${issue2.origin} \u06A9\u06D0`;
+      case "invalid_union":
+        return `\u0646\u0627\u0633\u0645\u0647 \u0648\u0631\u0648\u062F\u064A`;
+      case "invalid_element":
+        return `\u0646\u0627\u0633\u0645 \u0639\u0646\u0635\u0631 \u067E\u0647 ${issue2.origin} \u06A9\u06D0`;
+      default:
+        return `\u0646\u0627\u0633\u0645\u0647 \u0648\u0631\u0648\u062F\u064A`;
+    }
+  };
+};
+function ps_default() {
+  return {
+    localeError: error34()
+  };
+}
+
+// node_modules/zod/v4/locales/pl.js
+var error35 = () => {
+  const Sizable = {
+    string: { unit: "znak\xF3w", verb: "mie\u0107" },
+    file: { unit: "bajt\xF3w", verb: "mie\u0107" },
+    array: { unit: "element\xF3w", verb: "mie\u0107" },
+    set: { unit: "element\xF3w", verb: "mie\u0107" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "wyra\u017Cenie",
+    email: "adres email",
+    url: "URL",
+    emoji: "emoji",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "data i godzina w formacie ISO",
+    date: "data w formacie ISO",
+    time: "godzina w formacie ISO",
+    duration: "czas trwania ISO",
+    ipv4: "adres IPv4",
+    ipv6: "adres IPv6",
+    cidrv4: "zakres IPv4",
+    cidrv6: "zakres IPv6",
+    base64: "ci\u0105g znak\xF3w zakodowany w formacie base64",
+    base64url: "ci\u0105g znak\xF3w zakodowany w formacie base64url",
+    json_string: "ci\u0105g znak\xF3w w formacie JSON",
+    e164: "liczba E.164",
+    jwt: "JWT",
+    template_literal: "wej\u015Bcie"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "liczba",
+    array: "tablica"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f, _g, _h, _i;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `Nieprawid\u0142owe dane wej\u015Bciowe: oczekiwano instanceof ${issue2.expected}, otrzymano ${received}`;
+        }
+        return `Nieprawid\u0142owe dane wej\u015Bciowe: oczekiwano ${expected}, otrzymano ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `Nieprawid\u0142owe dane wej\u015Bciowe: oczekiwano ${stringifyPrimitive(issue2.values[0])}`;
+        return `Nieprawid\u0142owa opcja: oczekiwano jednej z warto\u015Bci ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `Za du\u017Ca warto\u015B\u0107: oczekiwano, \u017Ce ${(_c = issue2.origin) != null ? _c : "warto\u015B\u0107"} b\u0119dzie mie\u0107 ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "element\xF3w"}`;
+        }
+        return `Zbyt du\u017C(y/a/e): oczekiwano, \u017Ce ${(_e = issue2.origin) != null ? _e : "warto\u015B\u0107"} b\u0119dzie wynosi\u0107 ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `Za ma\u0142a warto\u015B\u0107: oczekiwano, \u017Ce ${(_f = issue2.origin) != null ? _f : "warto\u015B\u0107"} b\u0119dzie mie\u0107 ${adj}${issue2.minimum.toString()} ${(_g = sizing.unit) != null ? _g : "element\xF3w"}`;
+        }
+        return `Zbyt ma\u0142(y/a/e): oczekiwano, \u017Ce ${(_h = issue2.origin) != null ? _h : "warto\u015B\u0107"} b\u0119dzie wynosi\u0107 ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with")
+          return `Nieprawid\u0142owy ci\u0105g znak\xF3w: musi zaczyna\u0107 si\u0119 od "${_issue.prefix}"`;
+        if (_issue.format === "ends_with")
+          return `Nieprawid\u0142owy ci\u0105g znak\xF3w: musi ko\u0144czy\u0107 si\u0119 na "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `Nieprawid\u0142owy ci\u0105g znak\xF3w: musi zawiera\u0107 "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `Nieprawid\u0142owy ci\u0105g znak\xF3w: musi odpowiada\u0107 wzorcowi ${_issue.pattern}`;
+        return `Nieprawid\u0142ow(y/a/e) ${(_i = FormatDictionary[_issue.format]) != null ? _i : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `Nieprawid\u0142owa liczba: musi by\u0107 wielokrotno\u015Bci\u0105 ${issue2.divisor}`;
+      case "unrecognized_keys":
+        return `Nierozpoznane klucze${issue2.keys.length > 1 ? "s" : ""}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `Nieprawid\u0142owy klucz w ${issue2.origin}`;
+      case "invalid_union":
+        return "Nieprawid\u0142owe dane wej\u015Bciowe";
+      case "invalid_element":
+        return `Nieprawid\u0142owa warto\u015B\u0107 w ${issue2.origin}`;
+      default:
+        return `Nieprawid\u0142owe dane wej\u015Bciowe`;
+    }
+  };
+};
+function pl_default() {
+  return {
+    localeError: error35()
+  };
+}
+
+// node_modules/zod/v4/locales/pt.js
+var error36 = () => {
+  const Sizable = {
+    string: { unit: "caracteres", verb: "ter" },
+    file: { unit: "bytes", verb: "ter" },
+    array: { unit: "itens", verb: "ter" },
+    set: { unit: "itens", verb: "ter" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "padr\xE3o",
+    email: "endere\xE7o de e-mail",
+    url: "URL",
+    emoji: "emoji",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "data e hora ISO",
+    date: "data ISO",
+    time: "hora ISO",
+    duration: "dura\xE7\xE3o ISO",
+    ipv4: "endere\xE7o IPv4",
+    ipv6: "endere\xE7o IPv6",
+    cidrv4: "faixa de IPv4",
+    cidrv6: "faixa de IPv6",
+    base64: "texto codificado em base64",
+    base64url: "URL codificada em base64",
+    json_string: "texto JSON",
+    e164: "n\xFAmero E.164",
+    jwt: "JWT",
+    template_literal: "entrada"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "n\xFAmero",
+    null: "nulo"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `Tipo inv\xE1lido: esperado instanceof ${issue2.expected}, recebido ${received}`;
+        }
+        return `Tipo inv\xE1lido: esperado ${expected}, recebido ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `Entrada inv\xE1lida: esperado ${stringifyPrimitive(issue2.values[0])}`;
+        return `Op\xE7\xE3o inv\xE1lida: esperada uma das ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `Muito grande: esperado que ${(_c = issue2.origin) != null ? _c : "valor"} tivesse ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "elementos"}`;
+        return `Muito grande: esperado que ${(_e = issue2.origin) != null ? _e : "valor"} fosse ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `Muito pequeno: esperado que ${issue2.origin} tivesse ${adj}${issue2.minimum.toString()} ${sizing.unit}`;
+        }
+        return `Muito pequeno: esperado que ${issue2.origin} fosse ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with")
+          return `Texto inv\xE1lido: deve come\xE7ar com "${_issue.prefix}"`;
+        if (_issue.format === "ends_with")
+          return `Texto inv\xE1lido: deve terminar com "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `Texto inv\xE1lido: deve incluir "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `Texto inv\xE1lido: deve corresponder ao padr\xE3o ${_issue.pattern}`;
+        return `${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format} inv\xE1lido`;
+      }
+      case "not_multiple_of":
+        return `N\xFAmero inv\xE1lido: deve ser m\xFAltiplo de ${issue2.divisor}`;
+      case "unrecognized_keys":
+        return `Chave${issue2.keys.length > 1 ? "s" : ""} desconhecida${issue2.keys.length > 1 ? "s" : ""}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `Chave inv\xE1lida em ${issue2.origin}`;
+      case "invalid_union":
+        return "Entrada inv\xE1lida";
+      case "invalid_element":
+        return `Valor inv\xE1lido em ${issue2.origin}`;
+      default:
+        return `Campo inv\xE1lido`;
+    }
+  };
+};
+function pt_default() {
+  return {
+    localeError: error36()
+  };
+}
+
+// node_modules/zod/v4/locales/ro.js
+var error37 = () => {
+  const Sizable = {
+    string: { unit: "caractere", verb: "s\u0103 aib\u0103" },
+    file: { unit: "octe\u021Bi", verb: "s\u0103 aib\u0103" },
+    array: { unit: "elemente", verb: "s\u0103 aib\u0103" },
+    set: { unit: "elemente", verb: "s\u0103 aib\u0103" },
+    map: { unit: "intr\u0103ri", verb: "s\u0103 aib\u0103" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "intrare",
+    email: "adres\u0103 de email",
+    url: "URL",
+    emoji: "emoji",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "dat\u0103 \u0219i or\u0103 ISO",
+    date: "dat\u0103 ISO",
+    time: "or\u0103 ISO",
+    duration: "durat\u0103 ISO",
+    ipv4: "adres\u0103 IPv4",
+    ipv6: "adres\u0103 IPv6",
+    mac: "adres\u0103 MAC",
+    cidrv4: "interval IPv4",
+    cidrv6: "interval IPv6",
+    base64: "\u0219ir codat base64",
+    base64url: "\u0219ir codat base64url",
+    json_string: "\u0219ir JSON",
+    e164: "num\u0103r E.164",
+    jwt: "JWT",
+    template_literal: "intrare"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    string: "\u0219ir",
+    number: "num\u0103r",
+    boolean: "boolean",
+    function: "func\u021Bie",
+    array: "matrice",
+    object: "obiect",
+    undefined: "nedefinit",
+    symbol: "simbol",
+    bigint: "num\u0103r mare",
+    void: "void",
+    never: "never",
+    map: "hart\u0103",
+    set: "set"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        return `Intrare invalid\u0103: a\u0219teptat ${expected}, primit ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `Intrare invalid\u0103: a\u0219teptat ${stringifyPrimitive(issue2.values[0])}`;
+        return `Op\u021Biune invalid\u0103: a\u0219teptat una dintre ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `Prea mare: a\u0219teptat ca ${(_c = issue2.origin) != null ? _c : "valoarea"} ${sizing.verb} ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "elemente"}`;
+        return `Prea mare: a\u0219teptat ca ${(_e = issue2.origin) != null ? _e : "valoarea"} s\u0103 fie ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `Prea mic: a\u0219teptat ca ${issue2.origin} ${sizing.verb} ${adj}${issue2.minimum.toString()} ${sizing.unit}`;
+        }
+        return `Prea mic: a\u0219teptat ca ${issue2.origin} s\u0103 fie ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with") {
+          return `\u0218ir invalid: trebuie s\u0103 \xEEnceap\u0103 cu "${_issue.prefix}"`;
+        }
+        if (_issue.format === "ends_with")
+          return `\u0218ir invalid: trebuie s\u0103 se termine cu "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `\u0218ir invalid: trebuie s\u0103 includ\u0103 "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `\u0218ir invalid: trebuie s\u0103 se potriveasc\u0103 cu modelul ${_issue.pattern}`;
+        return `Format invalid: ${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `Num\u0103r invalid: trebuie s\u0103 fie multiplu de ${issue2.divisor}`;
+      case "unrecognized_keys":
+        return `Chei nerecunoscute: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `Cheie invalid\u0103 \xEEn ${issue2.origin}`;
+      case "invalid_union":
+        return "Intrare invalid\u0103";
+      case "invalid_element":
+        return `Valoare invalid\u0103 \xEEn ${issue2.origin}`;
+      default:
+        return `Intrare invalid\u0103`;
+    }
+  };
+};
+function ro_default() {
+  return {
+    localeError: error37()
+  };
+}
+
+// node_modules/zod/v4/locales/ru.js
+function getRussianPlural(count, one, few, many) {
+  const absCount = Math.abs(count);
+  const lastDigit = absCount % 10;
+  const lastTwoDigits = absCount % 100;
+  if (lastTwoDigits >= 11 && lastTwoDigits <= 19) {
+    return many;
+  }
+  if (lastDigit === 1) {
+    return one;
+  }
+  if (lastDigit >= 2 && lastDigit <= 4) {
+    return few;
+  }
+  return many;
+}
+var error38 = () => {
+  const Sizable = {
+    string: {
+      unit: {
+        one: "\u0441\u0438\u043C\u0432\u043E\u043B",
+        few: "\u0441\u0438\u043C\u0432\u043E\u043B\u0430",
+        many: "\u0441\u0438\u043C\u0432\u043E\u043B\u043E\u0432"
+      },
+      verb: "\u0438\u043C\u0435\u0442\u044C"
+    },
+    file: {
+      unit: {
+        one: "\u0431\u0430\u0439\u0442",
+        few: "\u0431\u0430\u0439\u0442\u0430",
+        many: "\u0431\u0430\u0439\u0442"
+      },
+      verb: "\u0438\u043C\u0435\u0442\u044C"
+    },
+    array: {
+      unit: {
+        one: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442",
+        few: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u0430",
+        many: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u043E\u0432"
+      },
+      verb: "\u0438\u043C\u0435\u0442\u044C"
+    },
+    set: {
+      unit: {
+        one: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442",
+        few: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u0430",
+        many: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u043E\u0432"
+      },
+      verb: "\u0438\u043C\u0435\u0442\u044C"
+    }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "\u0432\u0432\u043E\u0434",
+    email: "email \u0430\u0434\u0440\u0435\u0441",
+    url: "URL",
+    emoji: "\u044D\u043C\u043E\u0434\u0437\u0438",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "ISO \u0434\u0430\u0442\u0430 \u0438 \u0432\u0440\u0435\u043C\u044F",
+    date: "ISO \u0434\u0430\u0442\u0430",
+    time: "ISO \u0432\u0440\u0435\u043C\u044F",
+    duration: "ISO \u0434\u043B\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u044C",
+    ipv4: "IPv4 \u0430\u0434\u0440\u0435\u0441",
+    ipv6: "IPv6 \u0430\u0434\u0440\u0435\u0441",
+    cidrv4: "IPv4 \u0434\u0438\u0430\u043F\u0430\u0437\u043E\u043D",
+    cidrv6: "IPv6 \u0434\u0438\u0430\u043F\u0430\u0437\u043E\u043D",
+    base64: "\u0441\u0442\u0440\u043E\u043A\u0430 \u0432 \u0444\u043E\u0440\u043C\u0430\u0442\u0435 base64",
+    base64url: "\u0441\u0442\u0440\u043E\u043A\u0430 \u0432 \u0444\u043E\u0440\u043C\u0430\u0442\u0435 base64url",
+    json_string: "JSON \u0441\u0442\u0440\u043E\u043A\u0430",
+    e164: "\u043D\u043E\u043C\u0435\u0440 E.164",
+    jwt: "JWT",
+    template_literal: "\u0432\u0432\u043E\u0434"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "\u0447\u0438\u0441\u043B\u043E",
+    array: "\u043C\u0430\u0441\u0441\u0438\u0432"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `\u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0439 \u0432\u0432\u043E\u0434: \u043E\u0436\u0438\u0434\u0430\u043B\u043E\u0441\u044C instanceof ${issue2.expected}, \u043F\u043E\u043B\u0443\u0447\u0435\u043D\u043E ${received}`;
+        }
+        return `\u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0439 \u0432\u0432\u043E\u0434: \u043E\u0436\u0438\u0434\u0430\u043B\u043E\u0441\u044C ${expected}, \u043F\u043E\u043B\u0443\u0447\u0435\u043D\u043E ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `\u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0439 \u0432\u0432\u043E\u0434: \u043E\u0436\u0438\u0434\u0430\u043B\u043E\u0441\u044C ${stringifyPrimitive(issue2.values[0])}`;
+        return `\u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0439 \u0432\u0430\u0440\u0438\u0430\u043D\u0442: \u043E\u0436\u0438\u0434\u0430\u043B\u043E\u0441\u044C \u043E\u0434\u043D\u043E \u0438\u0437 ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          const maxValue = Number(issue2.maximum);
+          const unit = getRussianPlural(maxValue, sizing.unit.one, sizing.unit.few, sizing.unit.many);
+          return `\u0421\u043B\u0438\u0448\u043A\u043E\u043C \u0431\u043E\u043B\u044C\u0448\u043E\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435: \u043E\u0436\u0438\u0434\u0430\u043B\u043E\u0441\u044C, \u0447\u0442\u043E ${(_c = issue2.origin) != null ? _c : "\u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435"} \u0431\u0443\u0434\u0435\u0442 \u0438\u043C\u0435\u0442\u044C ${adj}${issue2.maximum.toString()} ${unit}`;
+        }
+        return `\u0421\u043B\u0438\u0448\u043A\u043E\u043C \u0431\u043E\u043B\u044C\u0448\u043E\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435: \u043E\u0436\u0438\u0434\u0430\u043B\u043E\u0441\u044C, \u0447\u0442\u043E ${(_d = issue2.origin) != null ? _d : "\u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435"} \u0431\u0443\u0434\u0435\u0442 ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          const minValue = Number(issue2.minimum);
+          const unit = getRussianPlural(minValue, sizing.unit.one, sizing.unit.few, sizing.unit.many);
+          return `\u0421\u043B\u0438\u0448\u043A\u043E\u043C \u043C\u0430\u043B\u0435\u043D\u044C\u043A\u043E\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435: \u043E\u0436\u0438\u0434\u0430\u043B\u043E\u0441\u044C, \u0447\u0442\u043E ${issue2.origin} \u0431\u0443\u0434\u0435\u0442 \u0438\u043C\u0435\u0442\u044C ${adj}${issue2.minimum.toString()} ${unit}`;
+        }
+        return `\u0421\u043B\u0438\u0448\u043A\u043E\u043C \u043C\u0430\u043B\u0435\u043D\u044C\u043A\u043E\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435: \u043E\u0436\u0438\u0434\u0430\u043B\u043E\u0441\u044C, \u0447\u0442\u043E ${issue2.origin} \u0431\u0443\u0434\u0435\u0442 ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with")
+          return `\u041D\u0435\u0432\u0435\u0440\u043D\u0430\u044F \u0441\u0442\u0440\u043E\u043A\u0430: \u0434\u043E\u043B\u0436\u043D\u0430 \u043D\u0430\u0447\u0438\u043D\u0430\u0442\u044C\u0441\u044F \u0441 "${_issue.prefix}"`;
+        if (_issue.format === "ends_with")
+          return `\u041D\u0435\u0432\u0435\u0440\u043D\u0430\u044F \u0441\u0442\u0440\u043E\u043A\u0430: \u0434\u043E\u043B\u0436\u043D\u0430 \u0437\u0430\u043A\u0430\u043D\u0447\u0438\u0432\u0430\u0442\u044C\u0441\u044F \u043D\u0430 "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `\u041D\u0435\u0432\u0435\u0440\u043D\u0430\u044F \u0441\u0442\u0440\u043E\u043A\u0430: \u0434\u043E\u043B\u0436\u043D\u0430 \u0441\u043E\u0434\u0435\u0440\u0436\u0430\u0442\u044C "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `\u041D\u0435\u0432\u0435\u0440\u043D\u0430\u044F \u0441\u0442\u0440\u043E\u043A\u0430: \u0434\u043E\u043B\u0436\u043D\u0430 \u0441\u043E\u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u043E\u0432\u0430\u0442\u044C \u0448\u0430\u0431\u043B\u043E\u043D\u0443 ${_issue.pattern}`;
+        return `\u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0439 ${(_e = FormatDictionary[_issue.format]) != null ? _e : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `\u041D\u0435\u0432\u0435\u0440\u043D\u043E\u0435 \u0447\u0438\u0441\u043B\u043E: \u0434\u043E\u043B\u0436\u043D\u043E \u0431\u044B\u0442\u044C \u043A\u0440\u0430\u0442\u043D\u044B\u043C ${issue2.divisor}`;
+      case "unrecognized_keys":
+        return `\u041D\u0435\u0440\u0430\u0441\u043F\u043E\u0437\u043D\u0430\u043D\u043D${issue2.keys.length > 1 ? "\u044B\u0435" : "\u044B\u0439"} \u043A\u043B\u044E\u0447${issue2.keys.length > 1 ? "\u0438" : ""}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `\u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0439 \u043A\u043B\u044E\u0447 \u0432 ${issue2.origin}`;
+      case "invalid_union":
+        return "\u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0435 \u0432\u0445\u043E\u0434\u043D\u044B\u0435 \u0434\u0430\u043D\u043D\u044B\u0435";
+      case "invalid_element":
+        return `\u041D\u0435\u0432\u0435\u0440\u043D\u043E\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \u0432 ${issue2.origin}`;
+      default:
+        return `\u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0435 \u0432\u0445\u043E\u0434\u043D\u044B\u0435 \u0434\u0430\u043D\u043D\u044B\u0435`;
+    }
+  };
+};
+function ru_default() {
+  return {
+    localeError: error38()
+  };
+}
+
+// node_modules/zod/v4/locales/sl.js
+var error39 = () => {
+  const Sizable = {
+    string: { unit: "znakov", verb: "imeti" },
+    file: { unit: "bajtov", verb: "imeti" },
+    array: { unit: "elementov", verb: "imeti" },
+    set: { unit: "elementov", verb: "imeti" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "vnos",
+    email: "e-po\u0161tni naslov",
+    url: "URL",
+    emoji: "emoji",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "ISO datum in \u010Das",
+    date: "ISO datum",
+    time: "ISO \u010Das",
+    duration: "ISO trajanje",
+    ipv4: "IPv4 naslov",
+    ipv6: "IPv6 naslov",
+    cidrv4: "obseg IPv4",
+    cidrv6: "obseg IPv6",
+    base64: "base64 kodiran niz",
+    base64url: "base64url kodiran niz",
+    json_string: "JSON niz",
+    e164: "E.164 \u0161tevilka",
+    jwt: "JWT",
+    template_literal: "vnos"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "\u0161tevilo",
+    array: "tabela"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `Neveljaven vnos: pri\u010Dakovano instanceof ${issue2.expected}, prejeto ${received}`;
+        }
+        return `Neveljaven vnos: pri\u010Dakovano ${expected}, prejeto ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `Neveljaven vnos: pri\u010Dakovano ${stringifyPrimitive(issue2.values[0])}`;
+        return `Neveljavna mo\u017Enost: pri\u010Dakovano eno izmed ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `Preveliko: pri\u010Dakovano, da bo ${(_c = issue2.origin) != null ? _c : "vrednost"} imelo ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "elementov"}`;
+        return `Preveliko: pri\u010Dakovano, da bo ${(_e = issue2.origin) != null ? _e : "vrednost"} ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `Premajhno: pri\u010Dakovano, da bo ${issue2.origin} imelo ${adj}${issue2.minimum.toString()} ${sizing.unit}`;
+        }
+        return `Premajhno: pri\u010Dakovano, da bo ${issue2.origin} ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with") {
+          return `Neveljaven niz: mora se za\u010Deti z "${_issue.prefix}"`;
+        }
+        if (_issue.format === "ends_with")
+          return `Neveljaven niz: mora se kon\u010Dati z "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `Neveljaven niz: mora vsebovati "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `Neveljaven niz: mora ustrezati vzorcu ${_issue.pattern}`;
+        return `Neveljaven ${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `Neveljavno \u0161tevilo: mora biti ve\u010Dkratnik ${issue2.divisor}`;
+      case "unrecognized_keys":
+        return `Neprepoznan${issue2.keys.length > 1 ? "i klju\u010Di" : " klju\u010D"}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `Neveljaven klju\u010D v ${issue2.origin}`;
+      case "invalid_union":
+        return "Neveljaven vnos";
+      case "invalid_element":
+        return `Neveljavna vrednost v ${issue2.origin}`;
+      default:
+        return "Neveljaven vnos";
+    }
+  };
+};
+function sl_default() {
+  return {
+    localeError: error39()
+  };
+}
+
+// node_modules/zod/v4/locales/sv.js
+var error40 = () => {
+  const Sizable = {
+    string: { unit: "tecken", verb: "att ha" },
+    file: { unit: "bytes", verb: "att ha" },
+    array: { unit: "objekt", verb: "att inneh\xE5lla" },
+    set: { unit: "objekt", verb: "att inneh\xE5lla" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "regulj\xE4rt uttryck",
+    email: "e-postadress",
+    url: "URL",
+    emoji: "emoji",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "ISO-datum och tid",
+    date: "ISO-datum",
+    time: "ISO-tid",
+    duration: "ISO-varaktighet",
+    ipv4: "IPv4-intervall",
+    ipv6: "IPv6-intervall",
+    cidrv4: "IPv4-spektrum",
+    cidrv6: "IPv6-spektrum",
+    base64: "base64-kodad str\xE4ng",
+    base64url: "base64url-kodad str\xE4ng",
+    json_string: "JSON-str\xE4ng",
+    e164: "E.164-nummer",
+    jwt: "JWT",
+    template_literal: "mall-literal"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "antal",
+    array: "lista"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f, _g, _h, _i, _j;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `Ogiltig inmatning: f\xF6rv\xE4ntat instanceof ${issue2.expected}, fick ${received}`;
+        }
+        return `Ogiltig inmatning: f\xF6rv\xE4ntat ${expected}, fick ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `Ogiltig inmatning: f\xF6rv\xE4ntat ${stringifyPrimitive(issue2.values[0])}`;
+        return `Ogiltigt val: f\xF6rv\xE4ntade en av ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `F\xF6r stor(t): f\xF6rv\xE4ntade ${(_c = issue2.origin) != null ? _c : "v\xE4rdet"} att ha ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "element"}`;
+        }
+        return `F\xF6r stor(t): f\xF6rv\xE4ntat ${(_e = issue2.origin) != null ? _e : "v\xE4rdet"} att ha ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `F\xF6r lite(t): f\xF6rv\xE4ntade ${(_f = issue2.origin) != null ? _f : "v\xE4rdet"} att ha ${adj}${issue2.minimum.toString()} ${sizing.unit}`;
+        }
+        return `F\xF6r lite(t): f\xF6rv\xE4ntade ${(_g = issue2.origin) != null ? _g : "v\xE4rdet"} att ha ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with") {
+          return `Ogiltig str\xE4ng: m\xE5ste b\xF6rja med "${_issue.prefix}"`;
+        }
+        if (_issue.format === "ends_with")
+          return `Ogiltig str\xE4ng: m\xE5ste sluta med "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `Ogiltig str\xE4ng: m\xE5ste inneh\xE5lla "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `Ogiltig str\xE4ng: m\xE5ste matcha m\xF6nstret "${_issue.pattern}"`;
+        return `Ogiltig(t) ${(_h = FormatDictionary[_issue.format]) != null ? _h : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `Ogiltigt tal: m\xE5ste vara en multipel av ${issue2.divisor}`;
+      case "unrecognized_keys":
+        return `${issue2.keys.length > 1 ? "Ok\xE4nda nycklar" : "Ok\xE4nd nyckel"}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `Ogiltig nyckel i ${(_i = issue2.origin) != null ? _i : "v\xE4rdet"}`;
+      case "invalid_union":
+        return "Ogiltig input";
+      case "invalid_element":
+        return `Ogiltigt v\xE4rde i ${(_j = issue2.origin) != null ? _j : "v\xE4rdet"}`;
+      default:
+        return `Ogiltig input`;
+    }
+  };
+};
+function sv_default() {
+  return {
+    localeError: error40()
+  };
+}
+
+// node_modules/zod/v4/locales/ta.js
+var error41 = () => {
+  const Sizable = {
+    string: { unit: "\u0B8E\u0BB4\u0BC1\u0BA4\u0BCD\u0BA4\u0BC1\u0B95\u0BCD\u0B95\u0BB3\u0BCD", verb: "\u0B95\u0BCA\u0BA3\u0BCD\u0B9F\u0BBF\u0BB0\u0BC1\u0B95\u0BCD\u0B95 \u0BB5\u0BC7\u0BA3\u0BCD\u0B9F\u0BC1\u0BAE\u0BCD" },
+    file: { unit: "\u0BAA\u0BC8\u0B9F\u0BCD\u0B9F\u0BC1\u0B95\u0BB3\u0BCD", verb: "\u0B95\u0BCA\u0BA3\u0BCD\u0B9F\u0BBF\u0BB0\u0BC1\u0B95\u0BCD\u0B95 \u0BB5\u0BC7\u0BA3\u0BCD\u0B9F\u0BC1\u0BAE\u0BCD" },
+    array: { unit: "\u0B89\u0BB1\u0BC1\u0BAA\u0BCD\u0BAA\u0BC1\u0B95\u0BB3\u0BCD", verb: "\u0B95\u0BCA\u0BA3\u0BCD\u0B9F\u0BBF\u0BB0\u0BC1\u0B95\u0BCD\u0B95 \u0BB5\u0BC7\u0BA3\u0BCD\u0B9F\u0BC1\u0BAE\u0BCD" },
+    set: { unit: "\u0B89\u0BB1\u0BC1\u0BAA\u0BCD\u0BAA\u0BC1\u0B95\u0BB3\u0BCD", verb: "\u0B95\u0BCA\u0BA3\u0BCD\u0B9F\u0BBF\u0BB0\u0BC1\u0B95\u0BCD\u0B95 \u0BB5\u0BC7\u0BA3\u0BCD\u0B9F\u0BC1\u0BAE\u0BCD" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "\u0B89\u0BB3\u0BCD\u0BB3\u0BC0\u0B9F\u0BC1",
+    email: "\u0BAE\u0BBF\u0BA9\u0BCD\u0BA9\u0B9E\u0BCD\u0B9A\u0BB2\u0BCD \u0BAE\u0BC1\u0B95\u0BB5\u0BB0\u0BBF",
+    url: "URL",
+    emoji: "emoji",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "ISO \u0BA4\u0BC7\u0BA4\u0BBF \u0BA8\u0BC7\u0BB0\u0BAE\u0BCD",
+    date: "ISO \u0BA4\u0BC7\u0BA4\u0BBF",
+    time: "ISO \u0BA8\u0BC7\u0BB0\u0BAE\u0BCD",
+    duration: "ISO \u0B95\u0BBE\u0BB2 \u0B85\u0BB3\u0BB5\u0BC1",
+    ipv4: "IPv4 \u0BAE\u0BC1\u0B95\u0BB5\u0BB0\u0BBF",
+    ipv6: "IPv6 \u0BAE\u0BC1\u0B95\u0BB5\u0BB0\u0BBF",
+    cidrv4: "IPv4 \u0BB5\u0BB0\u0BAE\u0BCD\u0BAA\u0BC1",
+    cidrv6: "IPv6 \u0BB5\u0BB0\u0BAE\u0BCD\u0BAA\u0BC1",
+    base64: "base64-encoded \u0B9A\u0BB0\u0BAE\u0BCD",
+    base64url: "base64url-encoded \u0B9A\u0BB0\u0BAE\u0BCD",
+    json_string: "JSON \u0B9A\u0BB0\u0BAE\u0BCD",
+    e164: "E.164 \u0B8E\u0BA3\u0BCD",
+    jwt: "JWT",
+    template_literal: "input"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "\u0B8E\u0BA3\u0BCD",
+    array: "\u0B85\u0BA3\u0BBF",
+    null: "\u0BB5\u0BC6\u0BB1\u0BC1\u0BAE\u0BC8"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `\u0BA4\u0BB5\u0BB1\u0BBE\u0BA9 \u0B89\u0BB3\u0BCD\u0BB3\u0BC0\u0B9F\u0BC1: \u0B8E\u0BA4\u0BBF\u0BB0\u0BCD\u0BAA\u0BBE\u0BB0\u0BCD\u0B95\u0BCD\u0B95\u0BAA\u0BCD\u0BAA\u0B9F\u0BCD\u0B9F\u0BA4\u0BC1 instanceof ${issue2.expected}, \u0BAA\u0BC6\u0BB1\u0BAA\u0BCD\u0BAA\u0B9F\u0BCD\u0B9F\u0BA4\u0BC1 ${received}`;
+        }
+        return `\u0BA4\u0BB5\u0BB1\u0BBE\u0BA9 \u0B89\u0BB3\u0BCD\u0BB3\u0BC0\u0B9F\u0BC1: \u0B8E\u0BA4\u0BBF\u0BB0\u0BCD\u0BAA\u0BBE\u0BB0\u0BCD\u0B95\u0BCD\u0B95\u0BAA\u0BCD\u0BAA\u0B9F\u0BCD\u0B9F\u0BA4\u0BC1 ${expected}, \u0BAA\u0BC6\u0BB1\u0BAA\u0BCD\u0BAA\u0B9F\u0BCD\u0B9F\u0BA4\u0BC1 ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `\u0BA4\u0BB5\u0BB1\u0BBE\u0BA9 \u0B89\u0BB3\u0BCD\u0BB3\u0BC0\u0B9F\u0BC1: \u0B8E\u0BA4\u0BBF\u0BB0\u0BCD\u0BAA\u0BBE\u0BB0\u0BCD\u0B95\u0BCD\u0B95\u0BAA\u0BCD\u0BAA\u0B9F\u0BCD\u0B9F\u0BA4\u0BC1 ${stringifyPrimitive(issue2.values[0])}`;
+        return `\u0BA4\u0BB5\u0BB1\u0BBE\u0BA9 \u0BB5\u0BBF\u0BB0\u0BC1\u0BAA\u0BCD\u0BAA\u0BAE\u0BCD: \u0B8E\u0BA4\u0BBF\u0BB0\u0BCD\u0BAA\u0BBE\u0BB0\u0BCD\u0B95\u0BCD\u0B95\u0BAA\u0BCD\u0BAA\u0B9F\u0BCD\u0B9F\u0BA4\u0BC1 ${joinValues(issue2.values, "|")} \u0B87\u0BB2\u0BCD \u0B92\u0BA9\u0BCD\u0BB1\u0BC1`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `\u0BAE\u0BBF\u0B95 \u0BAA\u0BC6\u0BB0\u0BBF\u0BAF\u0BA4\u0BC1: \u0B8E\u0BA4\u0BBF\u0BB0\u0BCD\u0BAA\u0BBE\u0BB0\u0BCD\u0B95\u0BCD\u0B95\u0BAA\u0BCD\u0BAA\u0B9F\u0BCD\u0B9F\u0BA4\u0BC1 ${(_c = issue2.origin) != null ? _c : "\u0BAE\u0BA4\u0BBF\u0BAA\u0BCD\u0BAA\u0BC1"} ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "\u0B89\u0BB1\u0BC1\u0BAA\u0BCD\u0BAA\u0BC1\u0B95\u0BB3\u0BCD"} \u0B86\u0B95 \u0B87\u0BB0\u0BC1\u0B95\u0BCD\u0B95 \u0BB5\u0BC7\u0BA3\u0BCD\u0B9F\u0BC1\u0BAE\u0BCD`;
+        }
+        return `\u0BAE\u0BBF\u0B95 \u0BAA\u0BC6\u0BB0\u0BBF\u0BAF\u0BA4\u0BC1: \u0B8E\u0BA4\u0BBF\u0BB0\u0BCD\u0BAA\u0BBE\u0BB0\u0BCD\u0B95\u0BCD\u0B95\u0BAA\u0BCD\u0BAA\u0B9F\u0BCD\u0B9F\u0BA4\u0BC1 ${(_e = issue2.origin) != null ? _e : "\u0BAE\u0BA4\u0BBF\u0BAA\u0BCD\u0BAA\u0BC1"} ${adj}${issue2.maximum.toString()} \u0B86\u0B95 \u0B87\u0BB0\u0BC1\u0B95\u0BCD\u0B95 \u0BB5\u0BC7\u0BA3\u0BCD\u0B9F\u0BC1\u0BAE\u0BCD`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `\u0BAE\u0BBF\u0B95\u0B9A\u0BCD \u0B9A\u0BBF\u0BB1\u0BBF\u0BAF\u0BA4\u0BC1: \u0B8E\u0BA4\u0BBF\u0BB0\u0BCD\u0BAA\u0BBE\u0BB0\u0BCD\u0B95\u0BCD\u0B95\u0BAA\u0BCD\u0BAA\u0B9F\u0BCD\u0B9F\u0BA4\u0BC1 ${issue2.origin} ${adj}${issue2.minimum.toString()} ${sizing.unit} \u0B86\u0B95 \u0B87\u0BB0\u0BC1\u0B95\u0BCD\u0B95 \u0BB5\u0BC7\u0BA3\u0BCD\u0B9F\u0BC1\u0BAE\u0BCD`;
+        }
+        return `\u0BAE\u0BBF\u0B95\u0B9A\u0BCD \u0B9A\u0BBF\u0BB1\u0BBF\u0BAF\u0BA4\u0BC1: \u0B8E\u0BA4\u0BBF\u0BB0\u0BCD\u0BAA\u0BBE\u0BB0\u0BCD\u0B95\u0BCD\u0B95\u0BAA\u0BCD\u0BAA\u0B9F\u0BCD\u0B9F\u0BA4\u0BC1 ${issue2.origin} ${adj}${issue2.minimum.toString()} \u0B86\u0B95 \u0B87\u0BB0\u0BC1\u0B95\u0BCD\u0B95 \u0BB5\u0BC7\u0BA3\u0BCD\u0B9F\u0BC1\u0BAE\u0BCD`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with")
+          return `\u0BA4\u0BB5\u0BB1\u0BBE\u0BA9 \u0B9A\u0BB0\u0BAE\u0BCD: "${_issue.prefix}" \u0B87\u0BB2\u0BCD \u0BA4\u0BCA\u0B9F\u0B99\u0BCD\u0B95 \u0BB5\u0BC7\u0BA3\u0BCD\u0B9F\u0BC1\u0BAE\u0BCD`;
+        if (_issue.format === "ends_with")
+          return `\u0BA4\u0BB5\u0BB1\u0BBE\u0BA9 \u0B9A\u0BB0\u0BAE\u0BCD: "${_issue.suffix}" \u0B87\u0BB2\u0BCD \u0BAE\u0BC1\u0B9F\u0BBF\u0BB5\u0B9F\u0BC8\u0BAF \u0BB5\u0BC7\u0BA3\u0BCD\u0B9F\u0BC1\u0BAE\u0BCD`;
+        if (_issue.format === "includes")
+          return `\u0BA4\u0BB5\u0BB1\u0BBE\u0BA9 \u0B9A\u0BB0\u0BAE\u0BCD: "${_issue.includes}" \u0B90 \u0B89\u0BB3\u0BCD\u0BB3\u0B9F\u0B95\u0BCD\u0B95 \u0BB5\u0BC7\u0BA3\u0BCD\u0B9F\u0BC1\u0BAE\u0BCD`;
+        if (_issue.format === "regex")
+          return `\u0BA4\u0BB5\u0BB1\u0BBE\u0BA9 \u0B9A\u0BB0\u0BAE\u0BCD: ${_issue.pattern} \u0BAE\u0BC1\u0BB1\u0BC8\u0BAA\u0BBE\u0B9F\u0BCD\u0B9F\u0BC1\u0B9F\u0BA9\u0BCD \u0BAA\u0BCA\u0BB0\u0BC1\u0BA8\u0BCD\u0BA4 \u0BB5\u0BC7\u0BA3\u0BCD\u0B9F\u0BC1\u0BAE\u0BCD`;
+        return `\u0BA4\u0BB5\u0BB1\u0BBE\u0BA9 ${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `\u0BA4\u0BB5\u0BB1\u0BBE\u0BA9 \u0B8E\u0BA3\u0BCD: ${issue2.divisor} \u0B87\u0BA9\u0BCD \u0BAA\u0BB2\u0BAE\u0BBE\u0B95 \u0B87\u0BB0\u0BC1\u0B95\u0BCD\u0B95 \u0BB5\u0BC7\u0BA3\u0BCD\u0B9F\u0BC1\u0BAE\u0BCD`;
+      case "unrecognized_keys":
+        return `\u0B85\u0B9F\u0BC8\u0BAF\u0BBE\u0BB3\u0BAE\u0BCD \u0BA4\u0BC6\u0BB0\u0BBF\u0BAF\u0BBE\u0BA4 \u0BB5\u0BBF\u0B9A\u0BC8${issue2.keys.length > 1 ? "\u0B95\u0BB3\u0BCD" : ""}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `${issue2.origin} \u0B87\u0BB2\u0BCD \u0BA4\u0BB5\u0BB1\u0BBE\u0BA9 \u0BB5\u0BBF\u0B9A\u0BC8`;
+      case "invalid_union":
+        return "\u0BA4\u0BB5\u0BB1\u0BBE\u0BA9 \u0B89\u0BB3\u0BCD\u0BB3\u0BC0\u0B9F\u0BC1";
+      case "invalid_element":
+        return `${issue2.origin} \u0B87\u0BB2\u0BCD \u0BA4\u0BB5\u0BB1\u0BBE\u0BA9 \u0BAE\u0BA4\u0BBF\u0BAA\u0BCD\u0BAA\u0BC1`;
+      default:
+        return `\u0BA4\u0BB5\u0BB1\u0BBE\u0BA9 \u0B89\u0BB3\u0BCD\u0BB3\u0BC0\u0B9F\u0BC1`;
+    }
+  };
+};
+function ta_default() {
+  return {
+    localeError: error41()
+  };
+}
+
+// node_modules/zod/v4/locales/th.js
+var error42 = () => {
+  const Sizable = {
+    string: { unit: "\u0E15\u0E31\u0E27\u0E2D\u0E31\u0E01\u0E29\u0E23", verb: "\u0E04\u0E27\u0E23\u0E21\u0E35" },
+    file: { unit: "\u0E44\u0E1A\u0E15\u0E4C", verb: "\u0E04\u0E27\u0E23\u0E21\u0E35" },
+    array: { unit: "\u0E23\u0E32\u0E22\u0E01\u0E32\u0E23", verb: "\u0E04\u0E27\u0E23\u0E21\u0E35" },
+    set: { unit: "\u0E23\u0E32\u0E22\u0E01\u0E32\u0E23", verb: "\u0E04\u0E27\u0E23\u0E21\u0E35" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E17\u0E35\u0E48\u0E1B\u0E49\u0E2D\u0E19",
+    email: "\u0E17\u0E35\u0E48\u0E2D\u0E22\u0E39\u0E48\u0E2D\u0E35\u0E40\u0E21\u0E25",
+    url: "URL",
+    emoji: "\u0E2D\u0E34\u0E42\u0E21\u0E08\u0E34",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "\u0E27\u0E31\u0E19\u0E17\u0E35\u0E48\u0E40\u0E27\u0E25\u0E32\u0E41\u0E1A\u0E1A ISO",
+    date: "\u0E27\u0E31\u0E19\u0E17\u0E35\u0E48\u0E41\u0E1A\u0E1A ISO",
+    time: "\u0E40\u0E27\u0E25\u0E32\u0E41\u0E1A\u0E1A ISO",
+    duration: "\u0E0A\u0E48\u0E27\u0E07\u0E40\u0E27\u0E25\u0E32\u0E41\u0E1A\u0E1A ISO",
+    ipv4: "\u0E17\u0E35\u0E48\u0E2D\u0E22\u0E39\u0E48 IPv4",
+    ipv6: "\u0E17\u0E35\u0E48\u0E2D\u0E22\u0E39\u0E48 IPv6",
+    cidrv4: "\u0E0A\u0E48\u0E27\u0E07 IP \u0E41\u0E1A\u0E1A IPv4",
+    cidrv6: "\u0E0A\u0E48\u0E27\u0E07 IP \u0E41\u0E1A\u0E1A IPv6",
+    base64: "\u0E02\u0E49\u0E2D\u0E04\u0E27\u0E32\u0E21\u0E41\u0E1A\u0E1A Base64",
+    base64url: "\u0E02\u0E49\u0E2D\u0E04\u0E27\u0E32\u0E21\u0E41\u0E1A\u0E1A Base64 \u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A URL",
+    json_string: "\u0E02\u0E49\u0E2D\u0E04\u0E27\u0E32\u0E21\u0E41\u0E1A\u0E1A JSON",
+    e164: "\u0E40\u0E1A\u0E2D\u0E23\u0E4C\u0E42\u0E17\u0E23\u0E28\u0E31\u0E1E\u0E17\u0E4C\u0E23\u0E30\u0E2B\u0E27\u0E48\u0E32\u0E07\u0E1B\u0E23\u0E30\u0E40\u0E17\u0E28 (E.164)",
+    jwt: "\u0E42\u0E17\u0E40\u0E04\u0E19 JWT",
+    template_literal: "\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E17\u0E35\u0E48\u0E1B\u0E49\u0E2D\u0E19"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "\u0E15\u0E31\u0E27\u0E40\u0E25\u0E02",
+    array: "\u0E2D\u0E32\u0E23\u0E4C\u0E40\u0E23\u0E22\u0E4C (Array)",
+    null: "\u0E44\u0E21\u0E48\u0E21\u0E35\u0E04\u0E48\u0E32 (null)"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `\u0E1B\u0E23\u0E30\u0E40\u0E20\u0E17\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E04\u0E27\u0E23\u0E40\u0E1B\u0E47\u0E19 instanceof ${issue2.expected} \u0E41\u0E15\u0E48\u0E44\u0E14\u0E49\u0E23\u0E31\u0E1A ${received}`;
+        }
+        return `\u0E1B\u0E23\u0E30\u0E40\u0E20\u0E17\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E04\u0E27\u0E23\u0E40\u0E1B\u0E47\u0E19 ${expected} \u0E41\u0E15\u0E48\u0E44\u0E14\u0E49\u0E23\u0E31\u0E1A ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `\u0E04\u0E48\u0E32\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E04\u0E27\u0E23\u0E40\u0E1B\u0E47\u0E19 ${stringifyPrimitive(issue2.values[0])}`;
+        return `\u0E15\u0E31\u0E27\u0E40\u0E25\u0E37\u0E2D\u0E01\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E04\u0E27\u0E23\u0E40\u0E1B\u0E47\u0E19\u0E2B\u0E19\u0E36\u0E48\u0E07\u0E43\u0E19 ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "\u0E44\u0E21\u0E48\u0E40\u0E01\u0E34\u0E19" : "\u0E19\u0E49\u0E2D\u0E22\u0E01\u0E27\u0E48\u0E32";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `\u0E40\u0E01\u0E34\u0E19\u0E01\u0E33\u0E2B\u0E19\u0E14: ${(_c = issue2.origin) != null ? _c : "\u0E04\u0E48\u0E32"} \u0E04\u0E27\u0E23\u0E21\u0E35${adj} ${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "\u0E23\u0E32\u0E22\u0E01\u0E32\u0E23"}`;
+        return `\u0E40\u0E01\u0E34\u0E19\u0E01\u0E33\u0E2B\u0E19\u0E14: ${(_e = issue2.origin) != null ? _e : "\u0E04\u0E48\u0E32"} \u0E04\u0E27\u0E23\u0E21\u0E35${adj} ${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? "\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E19\u0E49\u0E2D\u0E22" : "\u0E21\u0E32\u0E01\u0E01\u0E27\u0E48\u0E32";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `\u0E19\u0E49\u0E2D\u0E22\u0E01\u0E27\u0E48\u0E32\u0E01\u0E33\u0E2B\u0E19\u0E14: ${issue2.origin} \u0E04\u0E27\u0E23\u0E21\u0E35${adj} ${issue2.minimum.toString()} ${sizing.unit}`;
+        }
+        return `\u0E19\u0E49\u0E2D\u0E22\u0E01\u0E27\u0E48\u0E32\u0E01\u0E33\u0E2B\u0E19\u0E14: ${issue2.origin} \u0E04\u0E27\u0E23\u0E21\u0E35${adj} ${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with") {
+          return `\u0E23\u0E39\u0E1B\u0E41\u0E1A\u0E1A\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E02\u0E49\u0E2D\u0E04\u0E27\u0E32\u0E21\u0E15\u0E49\u0E2D\u0E07\u0E02\u0E36\u0E49\u0E19\u0E15\u0E49\u0E19\u0E14\u0E49\u0E27\u0E22 "${_issue.prefix}"`;
+        }
+        if (_issue.format === "ends_with")
+          return `\u0E23\u0E39\u0E1B\u0E41\u0E1A\u0E1A\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E02\u0E49\u0E2D\u0E04\u0E27\u0E32\u0E21\u0E15\u0E49\u0E2D\u0E07\u0E25\u0E07\u0E17\u0E49\u0E32\u0E22\u0E14\u0E49\u0E27\u0E22 "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `\u0E23\u0E39\u0E1B\u0E41\u0E1A\u0E1A\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E02\u0E49\u0E2D\u0E04\u0E27\u0E32\u0E21\u0E15\u0E49\u0E2D\u0E07\u0E21\u0E35 "${_issue.includes}" \u0E2D\u0E22\u0E39\u0E48\u0E43\u0E19\u0E02\u0E49\u0E2D\u0E04\u0E27\u0E32\u0E21`;
+        if (_issue.format === "regex")
+          return `\u0E23\u0E39\u0E1B\u0E41\u0E1A\u0E1A\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E15\u0E49\u0E2D\u0E07\u0E15\u0E23\u0E07\u0E01\u0E31\u0E1A\u0E23\u0E39\u0E1B\u0E41\u0E1A\u0E1A\u0E17\u0E35\u0E48\u0E01\u0E33\u0E2B\u0E19\u0E14 ${_issue.pattern}`;
+        return `\u0E23\u0E39\u0E1B\u0E41\u0E1A\u0E1A\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: ${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `\u0E15\u0E31\u0E27\u0E40\u0E25\u0E02\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E15\u0E49\u0E2D\u0E07\u0E40\u0E1B\u0E47\u0E19\u0E08\u0E33\u0E19\u0E27\u0E19\u0E17\u0E35\u0E48\u0E2B\u0E32\u0E23\u0E14\u0E49\u0E27\u0E22 ${issue2.divisor} \u0E44\u0E14\u0E49\u0E25\u0E07\u0E15\u0E31\u0E27`;
+      case "unrecognized_keys":
+        return `\u0E1E\u0E1A\u0E04\u0E35\u0E22\u0E4C\u0E17\u0E35\u0E48\u0E44\u0E21\u0E48\u0E23\u0E39\u0E49\u0E08\u0E31\u0E01: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `\u0E04\u0E35\u0E22\u0E4C\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07\u0E43\u0E19 ${issue2.origin}`;
+      case "invalid_union":
+        return "\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E44\u0E21\u0E48\u0E15\u0E23\u0E07\u0E01\u0E31\u0E1A\u0E23\u0E39\u0E1B\u0E41\u0E1A\u0E1A\u0E22\u0E39\u0E40\u0E19\u0E35\u0E22\u0E19\u0E17\u0E35\u0E48\u0E01\u0E33\u0E2B\u0E19\u0E14\u0E44\u0E27\u0E49";
+      case "invalid_element":
+        return `\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07\u0E43\u0E19 ${issue2.origin}`;
+      default:
+        return `\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07`;
+    }
+  };
+};
+function th_default() {
+  return {
+    localeError: error42()
+  };
+}
+
+// node_modules/zod/v4/locales/tr.js
+var error43 = () => {
+  const Sizable = {
+    string: { unit: "karakter", verb: "olmal\u0131" },
+    file: { unit: "bayt", verb: "olmal\u0131" },
+    array: { unit: "\xF6\u011Fe", verb: "olmal\u0131" },
+    set: { unit: "\xF6\u011Fe", verb: "olmal\u0131" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "girdi",
+    email: "e-posta adresi",
+    url: "URL",
+    emoji: "emoji",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "ISO tarih ve saat",
+    date: "ISO tarih",
+    time: "ISO saat",
+    duration: "ISO s\xFCre",
+    ipv4: "IPv4 adresi",
+    ipv6: "IPv6 adresi",
+    cidrv4: "IPv4 aral\u0131\u011F\u0131",
+    cidrv6: "IPv6 aral\u0131\u011F\u0131",
+    base64: "base64 ile \u015Fifrelenmi\u015F metin",
+    base64url: "base64url ile \u015Fifrelenmi\u015F metin",
+    json_string: "JSON dizesi",
+    e164: "E.164 say\u0131s\u0131",
+    jwt: "JWT",
+    template_literal: "\u015Eablon dizesi"
+  };
+  const TypeDictionary = {
+    nan: "NaN"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `Ge\xE7ersiz de\u011Fer: beklenen instanceof ${issue2.expected}, al\u0131nan ${received}`;
+        }
+        return `Ge\xE7ersiz de\u011Fer: beklenen ${expected}, al\u0131nan ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `Ge\xE7ersiz de\u011Fer: beklenen ${stringifyPrimitive(issue2.values[0])}`;
+        return `Ge\xE7ersiz se\xE7enek: a\u015Fa\u011F\u0131dakilerden biri olmal\u0131: ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `\xC7ok b\xFCy\xFCk: beklenen ${(_c = issue2.origin) != null ? _c : "de\u011Fer"} ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "\xF6\u011Fe"}`;
+        return `\xC7ok b\xFCy\xFCk: beklenen ${(_e = issue2.origin) != null ? _e : "de\u011Fer"} ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `\xC7ok k\xFC\xE7\xFCk: beklenen ${issue2.origin} ${adj}${issue2.minimum.toString()} ${sizing.unit}`;
+        return `\xC7ok k\xFC\xE7\xFCk: beklenen ${issue2.origin} ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with")
+          return `Ge\xE7ersiz metin: "${_issue.prefix}" ile ba\u015Flamal\u0131`;
+        if (_issue.format === "ends_with")
+          return `Ge\xE7ersiz metin: "${_issue.suffix}" ile bitmeli`;
+        if (_issue.format === "includes")
+          return `Ge\xE7ersiz metin: "${_issue.includes}" i\xE7ermeli`;
+        if (_issue.format === "regex")
+          return `Ge\xE7ersiz metin: ${_issue.pattern} desenine uymal\u0131`;
+        return `Ge\xE7ersiz ${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `Ge\xE7ersiz say\u0131: ${issue2.divisor} ile tam b\xF6l\xFCnebilmeli`;
+      case "unrecognized_keys":
+        return `Tan\u0131nmayan anahtar${issue2.keys.length > 1 ? "lar" : ""}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `${issue2.origin} i\xE7inde ge\xE7ersiz anahtar`;
+      case "invalid_union":
+        return "Ge\xE7ersiz de\u011Fer";
+      case "invalid_element":
+        return `${issue2.origin} i\xE7inde ge\xE7ersiz de\u011Fer`;
+      default:
+        return `Ge\xE7ersiz de\u011Fer`;
+    }
+  };
+};
+function tr_default() {
+  return {
+    localeError: error43()
+  };
+}
+
+// node_modules/zod/v4/locales/uk.js
+var error44 = () => {
+  const Sizable = {
+    string: { unit: "\u0441\u0438\u043C\u0432\u043E\u043B\u0456\u0432", verb: "\u043C\u0430\u0442\u0438\u043C\u0435" },
+    file: { unit: "\u0431\u0430\u0439\u0442\u0456\u0432", verb: "\u043C\u0430\u0442\u0438\u043C\u0435" },
+    array: { unit: "\u0435\u043B\u0435\u043C\u0435\u043D\u0442\u0456\u0432", verb: "\u043C\u0430\u0442\u0438\u043C\u0435" },
+    set: { unit: "\u0435\u043B\u0435\u043C\u0435\u043D\u0442\u0456\u0432", verb: "\u043C\u0430\u0442\u0438\u043C\u0435" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "\u0432\u0445\u0456\u0434\u043D\u0456 \u0434\u0430\u043D\u0456",
+    email: "\u0430\u0434\u0440\u0435\u0441\u0430 \u0435\u043B\u0435\u043A\u0442\u0440\u043E\u043D\u043D\u043E\u0457 \u043F\u043E\u0448\u0442\u0438",
+    url: "URL",
+    emoji: "\u0435\u043C\u043E\u0434\u0437\u0456",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "\u0434\u0430\u0442\u0430 \u0442\u0430 \u0447\u0430\u0441 ISO",
+    date: "\u0434\u0430\u0442\u0430 ISO",
+    time: "\u0447\u0430\u0441 ISO",
+    duration: "\u0442\u0440\u0438\u0432\u0430\u043B\u0456\u0441\u0442\u044C ISO",
+    ipv4: "\u0430\u0434\u0440\u0435\u0441\u0430 IPv4",
+    ipv6: "\u0430\u0434\u0440\u0435\u0441\u0430 IPv6",
+    cidrv4: "\u0434\u0456\u0430\u043F\u0430\u0437\u043E\u043D IPv4",
+    cidrv6: "\u0434\u0456\u0430\u043F\u0430\u0437\u043E\u043D IPv6",
+    base64: "\u0440\u044F\u0434\u043E\u043A \u0443 \u043A\u043E\u0434\u0443\u0432\u0430\u043D\u043D\u0456 base64",
+    base64url: "\u0440\u044F\u0434\u043E\u043A \u0443 \u043A\u043E\u0434\u0443\u0432\u0430\u043D\u043D\u0456 base64url",
+    json_string: "\u0440\u044F\u0434\u043E\u043A JSON",
+    e164: "\u043D\u043E\u043C\u0435\u0440 E.164",
+    jwt: "JWT",
+    template_literal: "\u0432\u0445\u0456\u0434\u043D\u0456 \u0434\u0430\u043D\u0456"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "\u0447\u0438\u0441\u043B\u043E",
+    array: "\u043C\u0430\u0441\u0438\u0432"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0456 \u0432\u0445\u0456\u0434\u043D\u0456 \u0434\u0430\u043D\u0456: \u043E\u0447\u0456\u043A\u0443\u0454\u0442\u044C\u0441\u044F instanceof ${issue2.expected}, \u043E\u0442\u0440\u0438\u043C\u0430\u043D\u043E ${received}`;
+        }
+        return `\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0456 \u0432\u0445\u0456\u0434\u043D\u0456 \u0434\u0430\u043D\u0456: \u043E\u0447\u0456\u043A\u0443\u0454\u0442\u044C\u0441\u044F ${expected}, \u043E\u0442\u0440\u0438\u043C\u0430\u043D\u043E ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0456 \u0432\u0445\u0456\u0434\u043D\u0456 \u0434\u0430\u043D\u0456: \u043E\u0447\u0456\u043A\u0443\u0454\u0442\u044C\u0441\u044F ${stringifyPrimitive(issue2.values[0])}`;
+        return `\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0430 \u043E\u043F\u0446\u0456\u044F: \u043E\u0447\u0456\u043A\u0443\u0454\u0442\u044C\u0441\u044F \u043E\u0434\u043D\u0435 \u0437 ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `\u0417\u0430\u043D\u0430\u0434\u0442\u043E \u0432\u0435\u043B\u0438\u043A\u0435: \u043E\u0447\u0456\u043A\u0443\u0454\u0442\u044C\u0441\u044F, \u0449\u043E ${(_c = issue2.origin) != null ? _c : "\u0437\u043D\u0430\u0447\u0435\u043D\u043D\u044F"} ${sizing.verb} ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "\u0435\u043B\u0435\u043C\u0435\u043D\u0442\u0456\u0432"}`;
+        return `\u0417\u0430\u043D\u0430\u0434\u0442\u043E \u0432\u0435\u043B\u0438\u043A\u0435: \u043E\u0447\u0456\u043A\u0443\u0454\u0442\u044C\u0441\u044F, \u0449\u043E ${(_e = issue2.origin) != null ? _e : "\u0437\u043D\u0430\u0447\u0435\u043D\u043D\u044F"} \u0431\u0443\u0434\u0435 ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `\u0417\u0430\u043D\u0430\u0434\u0442\u043E \u043C\u0430\u043B\u0435: \u043E\u0447\u0456\u043A\u0443\u0454\u0442\u044C\u0441\u044F, \u0449\u043E ${issue2.origin} ${sizing.verb} ${adj}${issue2.minimum.toString()} ${sizing.unit}`;
+        }
+        return `\u0417\u0430\u043D\u0430\u0434\u0442\u043E \u043C\u0430\u043B\u0435: \u043E\u0447\u0456\u043A\u0443\u0454\u0442\u044C\u0441\u044F, \u0449\u043E ${issue2.origin} \u0431\u0443\u0434\u0435 ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with")
+          return `\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0438\u0439 \u0440\u044F\u0434\u043E\u043A: \u043F\u043E\u0432\u0438\u043D\u0435\u043D \u043F\u043E\u0447\u0438\u043D\u0430\u0442\u0438\u0441\u044F \u0437 "${_issue.prefix}"`;
+        if (_issue.format === "ends_with")
+          return `\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0438\u0439 \u0440\u044F\u0434\u043E\u043A: \u043F\u043E\u0432\u0438\u043D\u0435\u043D \u0437\u0430\u043A\u0456\u043D\u0447\u0443\u0432\u0430\u0442\u0438\u0441\u044F \u043D\u0430 "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0438\u0439 \u0440\u044F\u0434\u043E\u043A: \u043F\u043E\u0432\u0438\u043D\u0435\u043D \u043C\u0456\u0441\u0442\u0438\u0442\u0438 "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0438\u0439 \u0440\u044F\u0434\u043E\u043A: \u043F\u043E\u0432\u0438\u043D\u0435\u043D \u0432\u0456\u0434\u043F\u043E\u0432\u0456\u0434\u0430\u0442\u0438 \u0448\u0430\u0431\u043B\u043E\u043D\u0443 ${_issue.pattern}`;
+        return `\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0438\u0439 ${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0435 \u0447\u0438\u0441\u043B\u043E: \u043F\u043E\u0432\u0438\u043D\u043D\u043E \u0431\u0443\u0442\u0438 \u043A\u0440\u0430\u0442\u043D\u0438\u043C ${issue2.divisor}`;
+      case "unrecognized_keys":
+        return `\u041D\u0435\u0440\u043E\u0437\u043F\u0456\u0437\u043D\u0430\u043D\u0438\u0439 \u043A\u043B\u044E\u0447${issue2.keys.length > 1 ? "\u0456" : ""}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0438\u0439 \u043A\u043B\u044E\u0447 \u0443 ${issue2.origin}`;
+      case "invalid_union":
+        return "\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0456 \u0432\u0445\u0456\u0434\u043D\u0456 \u0434\u0430\u043D\u0456";
+      case "invalid_element":
+        return `\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u043D\u044F \u0443 ${issue2.origin}`;
+      default:
+        return `\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0456 \u0432\u0445\u0456\u0434\u043D\u0456 \u0434\u0430\u043D\u0456`;
+    }
+  };
+};
+function uk_default() {
+  return {
+    localeError: error44()
+  };
+}
+
+// node_modules/zod/v4/locales/ua.js
+function ua_default() {
+  return uk_default();
+}
+
+// node_modules/zod/v4/locales/ur.js
+var error45 = () => {
+  const Sizable = {
+    string: { unit: "\u062D\u0631\u0648\u0641", verb: "\u06C1\u0648\u0646\u0627" },
+    file: { unit: "\u0628\u0627\u0626\u0679\u0633", verb: "\u06C1\u0648\u0646\u0627" },
+    array: { unit: "\u0622\u0626\u0679\u0645\u0632", verb: "\u06C1\u0648\u0646\u0627" },
+    set: { unit: "\u0622\u0626\u0679\u0645\u0632", verb: "\u06C1\u0648\u0646\u0627" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "\u0627\u0646 \u067E\u0679",
+    email: "\u0627\u06CC \u0645\u06CC\u0644 \u0627\u06CC\u0688\u0631\u06CC\u0633",
+    url: "\u06CC\u0648 \u0622\u0631 \u0627\u06CC\u0644",
+    emoji: "\u0627\u06CC\u0645\u0648\u062C\u06CC",
+    uuid: "\u06CC\u0648 \u06CC\u0648 \u0622\u0626\u06CC \u0688\u06CC",
+    uuidv4: "\u06CC\u0648 \u06CC\u0648 \u0622\u0626\u06CC \u0688\u06CC \u0648\u06CC 4",
+    uuidv6: "\u06CC\u0648 \u06CC\u0648 \u0622\u0626\u06CC \u0688\u06CC \u0648\u06CC 6",
+    nanoid: "\u0646\u06CC\u0646\u0648 \u0622\u0626\u06CC \u0688\u06CC",
+    guid: "\u062C\u06CC \u06CC\u0648 \u0622\u0626\u06CC \u0688\u06CC",
+    cuid: "\u0633\u06CC \u06CC\u0648 \u0622\u0626\u06CC \u0688\u06CC",
+    cuid2: "\u0633\u06CC \u06CC\u0648 \u0622\u0626\u06CC \u0688\u06CC 2",
+    ulid: "\u06CC\u0648 \u0627\u06CC\u0644 \u0622\u0626\u06CC \u0688\u06CC",
+    xid: "\u0627\u06CC\u06A9\u0633 \u0622\u0626\u06CC \u0688\u06CC",
+    ksuid: "\u06A9\u06D2 \u0627\u06CC\u0633 \u06CC\u0648 \u0622\u0626\u06CC \u0688\u06CC",
+    datetime: "\u0622\u0626\u06CC \u0627\u06CC\u0633 \u0627\u0648 \u0688\u06CC\u0679 \u0679\u0627\u0626\u0645",
+    date: "\u0622\u0626\u06CC \u0627\u06CC\u0633 \u0627\u0648 \u062A\u0627\u0631\u06CC\u062E",
+    time: "\u0622\u0626\u06CC \u0627\u06CC\u0633 \u0627\u0648 \u0648\u0642\u062A",
+    duration: "\u0622\u0626\u06CC \u0627\u06CC\u0633 \u0627\u0648 \u0645\u062F\u062A",
+    ipv4: "\u0622\u0626\u06CC \u067E\u06CC \u0648\u06CC 4 \u0627\u06CC\u0688\u0631\u06CC\u0633",
+    ipv6: "\u0622\u0626\u06CC \u067E\u06CC \u0648\u06CC 6 \u0627\u06CC\u0688\u0631\u06CC\u0633",
+    cidrv4: "\u0622\u0626\u06CC \u067E\u06CC \u0648\u06CC 4 \u0631\u06CC\u0646\u062C",
+    cidrv6: "\u0622\u0626\u06CC \u067E\u06CC \u0648\u06CC 6 \u0631\u06CC\u0646\u062C",
+    base64: "\u0628\u06CC\u0633 64 \u0627\u0646 \u06A9\u0648\u0688\u0688 \u0633\u0679\u0631\u0646\u06AF",
+    base64url: "\u0628\u06CC\u0633 64 \u06CC\u0648 \u0622\u0631 \u0627\u06CC\u0644 \u0627\u0646 \u06A9\u0648\u0688\u0688 \u0633\u0679\u0631\u0646\u06AF",
+    json_string: "\u062C\u06D2 \u0627\u06CC\u0633 \u0627\u0648 \u0627\u06CC\u0646 \u0633\u0679\u0631\u0646\u06AF",
+    e164: "\u0627\u06CC 164 \u0646\u0645\u0628\u0631",
+    jwt: "\u062C\u06D2 \u0688\u0628\u0644\u06CC\u0648 \u0679\u06CC",
+    template_literal: "\u0627\u0646 \u067E\u0679"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "\u0646\u0645\u0628\u0631",
+    array: "\u0622\u0631\u06D2",
+    null: "\u0646\u0644"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `\u063A\u0644\u0637 \u0627\u0646 \u067E\u0679: instanceof ${issue2.expected} \u0645\u062A\u0648\u0642\u0639 \u062A\u06BE\u0627\u060C ${received} \u0645\u0648\u0635\u0648\u0644 \u06C1\u0648\u0627`;
+        }
+        return `\u063A\u0644\u0637 \u0627\u0646 \u067E\u0679: ${expected} \u0645\u062A\u0648\u0642\u0639 \u062A\u06BE\u0627\u060C ${received} \u0645\u0648\u0635\u0648\u0644 \u06C1\u0648\u0627`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `\u063A\u0644\u0637 \u0627\u0646 \u067E\u0679: ${stringifyPrimitive(issue2.values[0])} \u0645\u062A\u0648\u0642\u0639 \u062A\u06BE\u0627`;
+        return `\u063A\u0644\u0637 \u0622\u067E\u0634\u0646: ${joinValues(issue2.values, "|")} \u0645\u06CC\u06BA \u0633\u06D2 \u0627\u06CC\u06A9 \u0645\u062A\u0648\u0642\u0639 \u062A\u06BE\u0627`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `\u0628\u06C1\u062A \u0628\u0691\u0627: ${(_c = issue2.origin) != null ? _c : "\u0648\u06CC\u0644\u06CC\u0648"} \u06A9\u06D2 ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "\u0639\u0646\u0627\u0635\u0631"} \u06C1\u0648\u0646\u06D2 \u0645\u062A\u0648\u0642\u0639 \u062A\u06BE\u06D2`;
+        return `\u0628\u06C1\u062A \u0628\u0691\u0627: ${(_e = issue2.origin) != null ? _e : "\u0648\u06CC\u0644\u06CC\u0648"} \u06A9\u0627 ${adj}${issue2.maximum.toString()} \u06C1\u0648\u0646\u0627 \u0645\u062A\u0648\u0642\u0639 \u062A\u06BE\u0627`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `\u0628\u06C1\u062A \u0686\u06BE\u0648\u0679\u0627: ${issue2.origin} \u06A9\u06D2 ${adj}${issue2.minimum.toString()} ${sizing.unit} \u06C1\u0648\u0646\u06D2 \u0645\u062A\u0648\u0642\u0639 \u062A\u06BE\u06D2`;
+        }
+        return `\u0628\u06C1\u062A \u0686\u06BE\u0648\u0679\u0627: ${issue2.origin} \u06A9\u0627 ${adj}${issue2.minimum.toString()} \u06C1\u0648\u0646\u0627 \u0645\u062A\u0648\u0642\u0639 \u062A\u06BE\u0627`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with") {
+          return `\u063A\u0644\u0637 \u0633\u0679\u0631\u0646\u06AF: "${_issue.prefix}" \u0633\u06D2 \u0634\u0631\u0648\u0639 \u06C1\u0648\u0646\u0627 \u0686\u0627\u06C1\u06CC\u06D2`;
+        }
+        if (_issue.format === "ends_with")
+          return `\u063A\u0644\u0637 \u0633\u0679\u0631\u0646\u06AF: "${_issue.suffix}" \u067E\u0631 \u062E\u062A\u0645 \u06C1\u0648\u0646\u0627 \u0686\u0627\u06C1\u06CC\u06D2`;
+        if (_issue.format === "includes")
+          return `\u063A\u0644\u0637 \u0633\u0679\u0631\u0646\u06AF: "${_issue.includes}" \u0634\u0627\u0645\u0644 \u06C1\u0648\u0646\u0627 \u0686\u0627\u06C1\u06CC\u06D2`;
+        if (_issue.format === "regex")
+          return `\u063A\u0644\u0637 \u0633\u0679\u0631\u0646\u06AF: \u067E\u06CC\u0679\u0631\u0646 ${_issue.pattern} \u0633\u06D2 \u0645\u06CC\u0686 \u06C1\u0648\u0646\u0627 \u0686\u0627\u06C1\u06CC\u06D2`;
+        return `\u063A\u0644\u0637 ${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `\u063A\u0644\u0637 \u0646\u0645\u0628\u0631: ${issue2.divisor} \u06A9\u0627 \u0645\u0636\u0627\u0639\u0641 \u06C1\u0648\u0646\u0627 \u0686\u0627\u06C1\u06CC\u06D2`;
+      case "unrecognized_keys":
+        return `\u063A\u06CC\u0631 \u062A\u0633\u0644\u06CC\u0645 \u0634\u062F\u06C1 \u06A9\u06CC${issue2.keys.length > 1 ? "\u0632" : ""}: ${joinValues(issue2.keys, "\u060C ")}`;
+      case "invalid_key":
+        return `${issue2.origin} \u0645\u06CC\u06BA \u063A\u0644\u0637 \u06A9\u06CC`;
+      case "invalid_union":
+        return "\u063A\u0644\u0637 \u0627\u0646 \u067E\u0679";
+      case "invalid_element":
+        return `${issue2.origin} \u0645\u06CC\u06BA \u063A\u0644\u0637 \u0648\u06CC\u0644\u06CC\u0648`;
+      default:
+        return `\u063A\u0644\u0637 \u0627\u0646 \u067E\u0679`;
+    }
+  };
+};
+function ur_default() {
+  return {
+    localeError: error45()
+  };
+}
+
+// node_modules/zod/v4/locales/uz.js
+var error46 = () => {
+  const Sizable = {
+    string: { unit: "belgi", verb: "bo\u2018lishi kerak" },
+    file: { unit: "bayt", verb: "bo\u2018lishi kerak" },
+    array: { unit: "element", verb: "bo\u2018lishi kerak" },
+    set: { unit: "element", verb: "bo\u2018lishi kerak" },
+    map: { unit: "yozuv", verb: "bo\u2018lishi kerak" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "kirish",
+    email: "elektron pochta manzili",
+    url: "URL",
+    emoji: "emoji",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "ISO sana va vaqti",
+    date: "ISO sana",
+    time: "ISO vaqt",
+    duration: "ISO davomiylik",
+    ipv4: "IPv4 manzil",
+    ipv6: "IPv6 manzil",
+    mac: "MAC manzil",
+    cidrv4: "IPv4 diapazon",
+    cidrv6: "IPv6 diapazon",
+    base64: "base64 kodlangan satr",
+    base64url: "base64url kodlangan satr",
+    json_string: "JSON satr",
+    e164: "E.164 raqam",
+    jwt: "JWT",
+    template_literal: "kirish"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "raqam",
+    array: "massiv"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `Noto\u2018g\u2018ri kirish: kutilgan instanceof ${issue2.expected}, qabul qilingan ${received}`;
+        }
+        return `Noto\u2018g\u2018ri kirish: kutilgan ${expected}, qabul qilingan ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `Noto\u2018g\u2018ri kirish: kutilgan ${stringifyPrimitive(issue2.values[0])}`;
+        return `Noto\u2018g\u2018ri variant: quyidagilardan biri kutilgan ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `Juda katta: kutilgan ${(_c = issue2.origin) != null ? _c : "qiymat"} ${adj}${issue2.maximum.toString()} ${sizing.unit} ${sizing.verb}`;
+        return `Juda katta: kutilgan ${(_d = issue2.origin) != null ? _d : "qiymat"} ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `Juda kichik: kutilgan ${issue2.origin} ${adj}${issue2.minimum.toString()} ${sizing.unit} ${sizing.verb}`;
+        }
+        return `Juda kichik: kutilgan ${issue2.origin} ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with")
+          return `Noto\u2018g\u2018ri satr: "${_issue.prefix}" bilan boshlanishi kerak`;
+        if (_issue.format === "ends_with")
+          return `Noto\u2018g\u2018ri satr: "${_issue.suffix}" bilan tugashi kerak`;
+        if (_issue.format === "includes")
+          return `Noto\u2018g\u2018ri satr: "${_issue.includes}" ni o\u2018z ichiga olishi kerak`;
+        if (_issue.format === "regex")
+          return `Noto\u2018g\u2018ri satr: ${_issue.pattern} shabloniga mos kelishi kerak`;
+        return `Noto\u2018g\u2018ri ${(_e = FormatDictionary[_issue.format]) != null ? _e : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `Noto\u2018g\u2018ri raqam: ${issue2.divisor} ning karralisi bo\u2018lishi kerak`;
+      case "unrecognized_keys":
+        return `Noma\u2019lum kalit${issue2.keys.length > 1 ? "lar" : ""}: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `${issue2.origin} dagi kalit noto\u2018g\u2018ri`;
+      case "invalid_union":
+        return "Noto\u2018g\u2018ri kirish";
+      case "invalid_element":
+        return `${issue2.origin} da noto\u2018g\u2018ri qiymat`;
+      default:
+        return `Noto\u2018g\u2018ri kirish`;
+    }
+  };
+};
+function uz_default() {
+  return {
+    localeError: error46()
+  };
+}
+
+// node_modules/zod/v4/locales/vi.js
+var error47 = () => {
+  const Sizable = {
+    string: { unit: "k\xFD t\u1EF1", verb: "c\xF3" },
+    file: { unit: "byte", verb: "c\xF3" },
+    array: { unit: "ph\u1EA7n t\u1EED", verb: "c\xF3" },
+    set: { unit: "ph\u1EA7n t\u1EED", verb: "c\xF3" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "\u0111\u1EA7u v\xE0o",
+    email: "\u0111\u1ECBa ch\u1EC9 email",
+    url: "URL",
+    emoji: "emoji",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "ng\xE0y gi\u1EDD ISO",
+    date: "ng\xE0y ISO",
+    time: "gi\u1EDD ISO",
+    duration: "kho\u1EA3ng th\u1EDDi gian ISO",
+    ipv4: "\u0111\u1ECBa ch\u1EC9 IPv4",
+    ipv6: "\u0111\u1ECBa ch\u1EC9 IPv6",
+    cidrv4: "d\u1EA3i IPv4",
+    cidrv6: "d\u1EA3i IPv6",
+    base64: "chu\u1ED7i m\xE3 h\xF3a base64",
+    base64url: "chu\u1ED7i m\xE3 h\xF3a base64url",
+    json_string: "chu\u1ED7i JSON",
+    e164: "s\u1ED1 E.164",
+    jwt: "JWT",
+    template_literal: "\u0111\u1EA7u v\xE0o"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "s\u1ED1",
+    array: "m\u1EA3ng"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `\u0110\u1EA7u v\xE0o kh\xF4ng h\u1EE3p l\u1EC7: mong \u0111\u1EE3i instanceof ${issue2.expected}, nh\u1EADn \u0111\u01B0\u1EE3c ${received}`;
+        }
+        return `\u0110\u1EA7u v\xE0o kh\xF4ng h\u1EE3p l\u1EC7: mong \u0111\u1EE3i ${expected}, nh\u1EADn \u0111\u01B0\u1EE3c ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `\u0110\u1EA7u v\xE0o kh\xF4ng h\u1EE3p l\u1EC7: mong \u0111\u1EE3i ${stringifyPrimitive(issue2.values[0])}`;
+        return `T\xF9y ch\u1ECDn kh\xF4ng h\u1EE3p l\u1EC7: mong \u0111\u1EE3i m\u1ED9t trong c\xE1c gi\xE1 tr\u1ECB ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `Qu\xE1 l\u1EDBn: mong \u0111\u1EE3i ${(_c = issue2.origin) != null ? _c : "gi\xE1 tr\u1ECB"} ${sizing.verb} ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "ph\u1EA7n t\u1EED"}`;
+        return `Qu\xE1 l\u1EDBn: mong \u0111\u1EE3i ${(_e = issue2.origin) != null ? _e : "gi\xE1 tr\u1ECB"} ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `Qu\xE1 nh\u1ECF: mong \u0111\u1EE3i ${issue2.origin} ${sizing.verb} ${adj}${issue2.minimum.toString()} ${sizing.unit}`;
+        }
+        return `Qu\xE1 nh\u1ECF: mong \u0111\u1EE3i ${issue2.origin} ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with")
+          return `Chu\u1ED7i kh\xF4ng h\u1EE3p l\u1EC7: ph\u1EA3i b\u1EAFt \u0111\u1EA7u b\u1EB1ng "${_issue.prefix}"`;
+        if (_issue.format === "ends_with")
+          return `Chu\u1ED7i kh\xF4ng h\u1EE3p l\u1EC7: ph\u1EA3i k\u1EBFt th\xFAc b\u1EB1ng "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `Chu\u1ED7i kh\xF4ng h\u1EE3p l\u1EC7: ph\u1EA3i bao g\u1ED3m "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `Chu\u1ED7i kh\xF4ng h\u1EE3p l\u1EC7: ph\u1EA3i kh\u1EDBp v\u1EDBi m\u1EABu ${_issue.pattern}`;
+        return `${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format} kh\xF4ng h\u1EE3p l\u1EC7`;
+      }
+      case "not_multiple_of":
+        return `S\u1ED1 kh\xF4ng h\u1EE3p l\u1EC7: ph\u1EA3i l\xE0 b\u1ED9i s\u1ED1 c\u1EE7a ${issue2.divisor}`;
+      case "unrecognized_keys":
+        return `Kh\xF3a kh\xF4ng \u0111\u01B0\u1EE3c nh\u1EADn d\u1EA1ng: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `Kh\xF3a kh\xF4ng h\u1EE3p l\u1EC7 trong ${issue2.origin}`;
+      case "invalid_union":
+        return "\u0110\u1EA7u v\xE0o kh\xF4ng h\u1EE3p l\u1EC7";
+      case "invalid_element":
+        return `Gi\xE1 tr\u1ECB kh\xF4ng h\u1EE3p l\u1EC7 trong ${issue2.origin}`;
+      default:
+        return `\u0110\u1EA7u v\xE0o kh\xF4ng h\u1EE3p l\u1EC7`;
+    }
+  };
+};
+function vi_default() {
+  return {
+    localeError: error47()
+  };
+}
+
+// node_modules/zod/v4/locales/zh-CN.js
+var error48 = () => {
+  const Sizable = {
+    string: { unit: "\u5B57\u7B26", verb: "\u5305\u542B" },
+    file: { unit: "\u5B57\u8282", verb: "\u5305\u542B" },
+    array: { unit: "\u9879", verb: "\u5305\u542B" },
+    set: { unit: "\u9879", verb: "\u5305\u542B" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "\u8F93\u5165",
+    email: "\u7535\u5B50\u90AE\u4EF6",
+    url: "URL",
+    emoji: "\u8868\u60C5\u7B26\u53F7",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "ISO\u65E5\u671F\u65F6\u95F4",
+    date: "ISO\u65E5\u671F",
+    time: "ISO\u65F6\u95F4",
+    duration: "ISO\u65F6\u957F",
+    ipv4: "IPv4\u5730\u5740",
+    ipv6: "IPv6\u5730\u5740",
+    cidrv4: "IPv4\u7F51\u6BB5",
+    cidrv6: "IPv6\u7F51\u6BB5",
+    base64: "base64\u7F16\u7801\u5B57\u7B26\u4E32",
+    base64url: "base64url\u7F16\u7801\u5B57\u7B26\u4E32",
+    json_string: "JSON\u5B57\u7B26\u4E32",
+    e164: "E.164\u53F7\u7801",
+    jwt: "JWT",
+    template_literal: "\u8F93\u5165"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "\u6570\u5B57",
+    array: "\u6570\u7EC4",
+    null: "\u7A7A\u503C(null)"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `\u65E0\u6548\u8F93\u5165\uFF1A\u671F\u671B instanceof ${issue2.expected}\uFF0C\u5B9E\u9645\u63A5\u6536 ${received}`;
+        }
+        return `\u65E0\u6548\u8F93\u5165\uFF1A\u671F\u671B ${expected}\uFF0C\u5B9E\u9645\u63A5\u6536 ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `\u65E0\u6548\u8F93\u5165\uFF1A\u671F\u671B ${stringifyPrimitive(issue2.values[0])}`;
+        return `\u65E0\u6548\u9009\u9879\uFF1A\u671F\u671B\u4EE5\u4E0B\u4E4B\u4E00 ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `\u6570\u503C\u8FC7\u5927\uFF1A\u671F\u671B ${(_c = issue2.origin) != null ? _c : "\u503C"} ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "\u4E2A\u5143\u7D20"}`;
+        return `\u6570\u503C\u8FC7\u5927\uFF1A\u671F\u671B ${(_e = issue2.origin) != null ? _e : "\u503C"} ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `\u6570\u503C\u8FC7\u5C0F\uFF1A\u671F\u671B ${issue2.origin} ${adj}${issue2.minimum.toString()} ${sizing.unit}`;
+        }
+        return `\u6570\u503C\u8FC7\u5C0F\uFF1A\u671F\u671B ${issue2.origin} ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with")
+          return `\u65E0\u6548\u5B57\u7B26\u4E32\uFF1A\u5FC5\u987B\u4EE5 "${_issue.prefix}" \u5F00\u5934`;
+        if (_issue.format === "ends_with")
+          return `\u65E0\u6548\u5B57\u7B26\u4E32\uFF1A\u5FC5\u987B\u4EE5 "${_issue.suffix}" \u7ED3\u5C3E`;
+        if (_issue.format === "includes")
+          return `\u65E0\u6548\u5B57\u7B26\u4E32\uFF1A\u5FC5\u987B\u5305\u542B "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `\u65E0\u6548\u5B57\u7B26\u4E32\uFF1A\u5FC5\u987B\u6EE1\u8DB3\u6B63\u5219\u8868\u8FBE\u5F0F ${_issue.pattern}`;
+        return `\u65E0\u6548${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `\u65E0\u6548\u6570\u5B57\uFF1A\u5FC5\u987B\u662F ${issue2.divisor} \u7684\u500D\u6570`;
+      case "unrecognized_keys":
+        return `\u51FA\u73B0\u672A\u77E5\u7684\u952E(key): ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `${issue2.origin} \u4E2D\u7684\u952E(key)\u65E0\u6548`;
+      case "invalid_union":
+        return "\u65E0\u6548\u8F93\u5165";
+      case "invalid_element":
+        return `${issue2.origin} \u4E2D\u5305\u542B\u65E0\u6548\u503C(value)`;
+      default:
+        return `\u65E0\u6548\u8F93\u5165`;
+    }
+  };
+};
+function zh_CN_default() {
+  return {
+    localeError: error48()
+  };
+}
+
+// node_modules/zod/v4/locales/zh-TW.js
+var error49 = () => {
+  const Sizable = {
+    string: { unit: "\u5B57\u5143", verb: "\u64C1\u6709" },
+    file: { unit: "\u4F4D\u5143\u7D44", verb: "\u64C1\u6709" },
+    array: { unit: "\u9805\u76EE", verb: "\u64C1\u6709" },
+    set: { unit: "\u9805\u76EE", verb: "\u64C1\u6709" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "\u8F38\u5165",
+    email: "\u90F5\u4EF6\u5730\u5740",
+    url: "URL",
+    emoji: "emoji",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "ISO \u65E5\u671F\u6642\u9593",
+    date: "ISO \u65E5\u671F",
+    time: "ISO \u6642\u9593",
+    duration: "ISO \u671F\u9593",
+    ipv4: "IPv4 \u4F4D\u5740",
+    ipv6: "IPv6 \u4F4D\u5740",
+    cidrv4: "IPv4 \u7BC4\u570D",
+    cidrv6: "IPv6 \u7BC4\u570D",
+    base64: "base64 \u7DE8\u78BC\u5B57\u4E32",
+    base64url: "base64url \u7DE8\u78BC\u5B57\u4E32",
+    json_string: "JSON \u5B57\u4E32",
+    e164: "E.164 \u6578\u503C",
+    jwt: "JWT",
+    template_literal: "\u8F38\u5165"
+  };
+  const TypeDictionary = {
+    nan: "NaN"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d, _e, _f;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `\u7121\u6548\u7684\u8F38\u5165\u503C\uFF1A\u9810\u671F\u70BA instanceof ${issue2.expected}\uFF0C\u4F46\u6536\u5230 ${received}`;
+        }
+        return `\u7121\u6548\u7684\u8F38\u5165\u503C\uFF1A\u9810\u671F\u70BA ${expected}\uFF0C\u4F46\u6536\u5230 ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `\u7121\u6548\u7684\u8F38\u5165\u503C\uFF1A\u9810\u671F\u70BA ${stringifyPrimitive(issue2.values[0])}`;
+        return `\u7121\u6548\u7684\u9078\u9805\uFF1A\u9810\u671F\u70BA\u4EE5\u4E0B\u5176\u4E2D\u4E4B\u4E00 ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `\u6578\u503C\u904E\u5927\uFF1A\u9810\u671F ${(_c = issue2.origin) != null ? _c : "\u503C"} \u61C9\u70BA ${adj}${issue2.maximum.toString()} ${(_d = sizing.unit) != null ? _d : "\u500B\u5143\u7D20"}`;
+        return `\u6578\u503C\u904E\u5927\uFF1A\u9810\u671F ${(_e = issue2.origin) != null ? _e : "\u503C"} \u61C9\u70BA ${adj}${issue2.maximum.toString()}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing) {
+          return `\u6578\u503C\u904E\u5C0F\uFF1A\u9810\u671F ${issue2.origin} \u61C9\u70BA ${adj}${issue2.minimum.toString()} ${sizing.unit}`;
+        }
+        return `\u6578\u503C\u904E\u5C0F\uFF1A\u9810\u671F ${issue2.origin} \u61C9\u70BA ${adj}${issue2.minimum.toString()}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with") {
+          return `\u7121\u6548\u7684\u5B57\u4E32\uFF1A\u5FC5\u9808\u4EE5 "${_issue.prefix}" \u958B\u982D`;
+        }
+        if (_issue.format === "ends_with")
+          return `\u7121\u6548\u7684\u5B57\u4E32\uFF1A\u5FC5\u9808\u4EE5 "${_issue.suffix}" \u7D50\u5C3E`;
+        if (_issue.format === "includes")
+          return `\u7121\u6548\u7684\u5B57\u4E32\uFF1A\u5FC5\u9808\u5305\u542B "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `\u7121\u6548\u7684\u5B57\u4E32\uFF1A\u5FC5\u9808\u7B26\u5408\u683C\u5F0F ${_issue.pattern}`;
+        return `\u7121\u6548\u7684 ${(_f = FormatDictionary[_issue.format]) != null ? _f : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `\u7121\u6548\u7684\u6578\u5B57\uFF1A\u5FC5\u9808\u70BA ${issue2.divisor} \u7684\u500D\u6578`;
+      case "unrecognized_keys":
+        return `\u7121\u6CD5\u8B58\u5225\u7684\u9375\u503C${issue2.keys.length > 1 ? "\u5011" : ""}\uFF1A${joinValues(issue2.keys, "\u3001")}`;
+      case "invalid_key":
+        return `${issue2.origin} \u4E2D\u6709\u7121\u6548\u7684\u9375\u503C`;
+      case "invalid_union":
+        return "\u7121\u6548\u7684\u8F38\u5165\u503C";
+      case "invalid_element":
+        return `${issue2.origin} \u4E2D\u6709\u7121\u6548\u7684\u503C`;
+      default:
+        return `\u7121\u6548\u7684\u8F38\u5165\u503C`;
+    }
+  };
+};
+function zh_TW_default() {
+  return {
+    localeError: error49()
+  };
+}
+
+// node_modules/zod/v4/locales/yo.js
+var error50 = () => {
+  const Sizable = {
+    string: { unit: "\xE0mi", verb: "n\xED" },
+    file: { unit: "bytes", verb: "n\xED" },
+    array: { unit: "nkan", verb: "n\xED" },
+    set: { unit: "nkan", verb: "n\xED" }
+  };
+  function getSizing(origin) {
+    var _a5;
+    return (_a5 = Sizable[origin]) != null ? _a5 : null;
+  }
+  const FormatDictionary = {
+    regex: "\u1EB9\u0300r\u1ECD \xECb\xE1w\u1ECDl\xE9",
+    email: "\xE0d\xEDr\u1EB9\u0301s\xEC \xECm\u1EB9\u0301l\xEC",
+    url: "URL",
+    emoji: "emoji",
+    uuid: "UUID",
+    uuidv4: "UUIDv4",
+    uuidv6: "UUIDv6",
+    nanoid: "nanoid",
+    guid: "GUID",
+    cuid: "cuid",
+    cuid2: "cuid2",
+    ulid: "ULID",
+    xid: "XID",
+    ksuid: "KSUID",
+    datetime: "\xE0k\xF3k\xF2 ISO",
+    date: "\u1ECDj\u1ECD\u0301 ISO",
+    time: "\xE0k\xF3k\xF2 ISO",
+    duration: "\xE0k\xF3k\xF2 t\xF3 p\xE9 ISO",
+    ipv4: "\xE0d\xEDr\u1EB9\u0301s\xEC IPv4",
+    ipv6: "\xE0d\xEDr\u1EB9\u0301s\xEC IPv6",
+    cidrv4: "\xE0gb\xE8gb\xE8 IPv4",
+    cidrv6: "\xE0gb\xE8gb\xE8 IPv6",
+    base64: "\u1ECD\u0300r\u1ECD\u0300 t\xED a k\u1ECD\u0301 n\xED base64",
+    base64url: "\u1ECD\u0300r\u1ECD\u0300 base64url",
+    json_string: "\u1ECD\u0300r\u1ECD\u0300 JSON",
+    e164: "n\u1ECD\u0301mb\xE0 E.164",
+    jwt: "JWT",
+    template_literal: "\u1EB9\u0300r\u1ECD \xECb\xE1w\u1ECDl\xE9"
+  };
+  const TypeDictionary = {
+    nan: "NaN",
+    number: "n\u1ECD\u0301mb\xE0",
+    array: "akop\u1ECD"
+  };
+  return (issue2) => {
+    var _a5, _b, _c, _d;
+    switch (issue2.code) {
+      case "invalid_type": {
+        const expected = (_a5 = TypeDictionary[issue2.expected]) != null ? _a5 : issue2.expected;
+        const receivedType = parsedType(issue2.input);
+        const received = (_b = TypeDictionary[receivedType]) != null ? _b : receivedType;
+        if (/^[A-Z]/.test(issue2.expected)) {
+          return `\xCCb\xE1w\u1ECDl\xE9 a\u1E63\xEC\u1E63e: a n\xED l\xE1ti fi instanceof ${issue2.expected}, \xE0m\u1ECD\u0300 a r\xED ${received}`;
+        }
+        return `\xCCb\xE1w\u1ECDl\xE9 a\u1E63\xEC\u1E63e: a n\xED l\xE1ti fi ${expected}, \xE0m\u1ECD\u0300 a r\xED ${received}`;
+      }
+      case "invalid_value":
+        if (issue2.values.length === 1)
+          return `\xCCb\xE1w\u1ECDl\xE9 a\u1E63\xEC\u1E63e: a n\xED l\xE1ti fi ${stringifyPrimitive(issue2.values[0])}`;
+        return `\xC0\u1E63\xE0y\xE0n a\u1E63\xEC\u1E63e: yan \u1ECD\u0300kan l\xE1ra ${joinValues(issue2.values, "|")}`;
+      case "too_big": {
+        const adj = issue2.inclusive ? "<=" : "<";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `T\xF3 p\u1ECD\u0300 j\xF9: a n\xED l\xE1ti j\u1EB9\u0301 p\xE9 ${(_c = issue2.origin) != null ? _c : "iye"} ${sizing.verb} ${adj}${issue2.maximum} ${sizing.unit}`;
+        return `T\xF3 p\u1ECD\u0300 j\xF9: a n\xED l\xE1ti j\u1EB9\u0301 ${adj}${issue2.maximum}`;
+      }
+      case "too_small": {
+        const adj = issue2.inclusive ? ">=" : ">";
+        const sizing = getSizing(issue2.origin);
+        if (sizing)
+          return `K\xE9r\xE9 ju: a n\xED l\xE1ti j\u1EB9\u0301 p\xE9 ${issue2.origin} ${sizing.verb} ${adj}${issue2.minimum} ${sizing.unit}`;
+        return `K\xE9r\xE9 ju: a n\xED l\xE1ti j\u1EB9\u0301 ${adj}${issue2.minimum}`;
+      }
+      case "invalid_format": {
+        const _issue = issue2;
+        if (_issue.format === "starts_with")
+          return `\u1ECC\u0300r\u1ECD\u0300 a\u1E63\xEC\u1E63e: gb\u1ECD\u0301d\u1ECD\u0300 b\u1EB9\u0300r\u1EB9\u0300 p\u1EB9\u0300l\xFA "${_issue.prefix}"`;
+        if (_issue.format === "ends_with")
+          return `\u1ECC\u0300r\u1ECD\u0300 a\u1E63\xEC\u1E63e: gb\u1ECD\u0301d\u1ECD\u0300 par\xED p\u1EB9\u0300l\xFA "${_issue.suffix}"`;
+        if (_issue.format === "includes")
+          return `\u1ECC\u0300r\u1ECD\u0300 a\u1E63\xEC\u1E63e: gb\u1ECD\u0301d\u1ECD\u0300 n\xED "${_issue.includes}"`;
+        if (_issue.format === "regex")
+          return `\u1ECC\u0300r\u1ECD\u0300 a\u1E63\xEC\u1E63e: gb\u1ECD\u0301d\u1ECD\u0300 b\xE1 \xE0p\u1EB9\u1EB9r\u1EB9 mu ${_issue.pattern}`;
+        return `A\u1E63\xEC\u1E63e: ${(_d = FormatDictionary[_issue.format]) != null ? _d : issue2.format}`;
+      }
+      case "not_multiple_of":
+        return `N\u1ECD\u0301mb\xE0 a\u1E63\xEC\u1E63e: gb\u1ECD\u0301d\u1ECD\u0300 j\u1EB9\u0301 \xE8y\xE0 p\xEDp\xEDn ti ${issue2.divisor}`;
+      case "unrecognized_keys":
+        return `B\u1ECDt\xECn\xEC \xE0\xECm\u1ECD\u0300: ${joinValues(issue2.keys, ", ")}`;
+      case "invalid_key":
+        return `B\u1ECDt\xECn\xEC a\u1E63\xEC\u1E63e n\xEDn\xFA ${issue2.origin}`;
+      case "invalid_union":
+        return "\xCCb\xE1w\u1ECDl\xE9 a\u1E63\xEC\u1E63e";
+      case "invalid_element":
+        return `Iye a\u1E63\xEC\u1E63e n\xEDn\xFA ${issue2.origin}`;
+      default:
+        return "\xCCb\xE1w\u1ECDl\xE9 a\u1E63\xEC\u1E63e";
+    }
+  };
+};
+function yo_default() {
+  return {
+    localeError: error50()
+  };
+}
+
+// node_modules/zod/v4/core/registries.js
+var _a3;
+var $output = Symbol("ZodOutput");
+var $input = Symbol("ZodInput");
+var $ZodRegistry = class {
+  constructor() {
+    this._map = /* @__PURE__ */ new WeakMap();
+    this._idmap = /* @__PURE__ */ new Map();
+  }
+  add(schema, ..._meta) {
+    const meta3 = _meta[0];
+    this._map.set(schema, meta3);
+    if (meta3 && typeof meta3 === "object" && "id" in meta3) {
+      this._idmap.set(meta3.id, schema);
+    }
+    return this;
+  }
+  clear() {
+    this._map = /* @__PURE__ */ new WeakMap();
+    this._idmap = /* @__PURE__ */ new Map();
+    return this;
+  }
+  remove(schema) {
+    const meta3 = this._map.get(schema);
+    if (meta3 && typeof meta3 === "object" && "id" in meta3) {
+      this._idmap.delete(meta3.id);
+    }
+    this._map.delete(schema);
+    return this;
+  }
+  get(schema) {
+    var _a5;
+    const p = schema._zod.parent;
+    if (p) {
+      const pm = __spreadValues({}, (_a5 = this.get(p)) != null ? _a5 : {});
+      delete pm.id;
+      const f = __spreadValues(__spreadValues({}, pm), this._map.get(schema));
+      return Object.keys(f).length ? f : void 0;
+    }
+    return this._map.get(schema);
+  }
+  has(schema) {
+    return this._map.has(schema);
+  }
+};
+function registry() {
+  return new $ZodRegistry();
+}
+var _a4;
+(_a4 = (_a3 = globalThis).__zod_globalRegistry) != null ? _a4 : _a3.__zod_globalRegistry = registry();
+var globalRegistry = globalThis.__zod_globalRegistry;
+
+// node_modules/zod/v4/core/api.js
+function _string(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "string"
+  }, normalizeParams(params)));
+}
+function _coercedString(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "string",
+    coerce: true
+  }, normalizeParams(params)));
+}
+function _email(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "string",
+    format: "email",
+    check: "string_format",
+    abort: false
+  }, normalizeParams(params)));
+}
+function _guid(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "string",
+    format: "guid",
+    check: "string_format",
+    abort: false
+  }, normalizeParams(params)));
+}
+function _uuid(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "string",
+    format: "uuid",
+    check: "string_format",
+    abort: false
+  }, normalizeParams(params)));
+}
+function _uuidv4(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "string",
+    format: "uuid",
+    check: "string_format",
+    abort: false,
+    version: "v4"
+  }, normalizeParams(params)));
+}
+function _uuidv6(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "string",
+    format: "uuid",
+    check: "string_format",
+    abort: false,
+    version: "v6"
+  }, normalizeParams(params)));
+}
+function _uuidv7(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "string",
+    format: "uuid",
+    check: "string_format",
+    abort: false,
+    version: "v7"
+  }, normalizeParams(params)));
+}
+function _url(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "string",
+    format: "url",
+    check: "string_format",
+    abort: false
+  }, normalizeParams(params)));
+}
+function _emoji2(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "string",
+    format: "emoji",
+    check: "string_format",
+    abort: false
+  }, normalizeParams(params)));
+}
+function _nanoid(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "string",
+    format: "nanoid",
+    check: "string_format",
+    abort: false
+  }, normalizeParams(params)));
+}
+function _cuid(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "string",
+    format: "cuid",
+    check: "string_format",
+    abort: false
+  }, normalizeParams(params)));
+}
+function _cuid2(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "string",
+    format: "cuid2",
+    check: "string_format",
+    abort: false
+  }, normalizeParams(params)));
+}
+function _ulid(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "string",
+    format: "ulid",
+    check: "string_format",
+    abort: false
+  }, normalizeParams(params)));
+}
+function _xid(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "string",
+    format: "xid",
+    check: "string_format",
+    abort: false
+  }, normalizeParams(params)));
+}
+function _ksuid(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "string",
+    format: "ksuid",
+    check: "string_format",
+    abort: false
+  }, normalizeParams(params)));
+}
+function _ipv4(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "string",
+    format: "ipv4",
+    check: "string_format",
+    abort: false
+  }, normalizeParams(params)));
+}
+function _ipv6(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "string",
+    format: "ipv6",
+    check: "string_format",
+    abort: false
+  }, normalizeParams(params)));
+}
+function _mac(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "string",
+    format: "mac",
+    check: "string_format",
+    abort: false
+  }, normalizeParams(params)));
+}
+function _cidrv4(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "string",
+    format: "cidrv4",
+    check: "string_format",
+    abort: false
+  }, normalizeParams(params)));
+}
+function _cidrv6(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "string",
+    format: "cidrv6",
+    check: "string_format",
+    abort: false
+  }, normalizeParams(params)));
+}
+function _base64(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "string",
+    format: "base64",
+    check: "string_format",
+    abort: false
+  }, normalizeParams(params)));
+}
+function _base64url(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "string",
+    format: "base64url",
+    check: "string_format",
+    abort: false
+  }, normalizeParams(params)));
+}
+function _e164(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "string",
+    format: "e164",
+    check: "string_format",
+    abort: false
+  }, normalizeParams(params)));
+}
+function _jwt(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "string",
+    format: "jwt",
+    check: "string_format",
+    abort: false
+  }, normalizeParams(params)));
+}
+var TimePrecision = {
+  Any: null,
+  Minute: -1,
+  Second: 0,
+  Millisecond: 3,
+  Microsecond: 6
+};
+function _isoDateTime(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "string",
+    format: "datetime",
+    check: "string_format",
+    offset: false,
+    local: false,
+    precision: null
+  }, normalizeParams(params)));
+}
+function _isoDate(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "string",
+    format: "date",
+    check: "string_format"
+  }, normalizeParams(params)));
+}
+function _isoTime(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "string",
+    format: "time",
+    check: "string_format",
+    precision: null
+  }, normalizeParams(params)));
+}
+function _isoDuration(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "string",
+    format: "duration",
+    check: "string_format"
+  }, normalizeParams(params)));
+}
+function _number(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "number",
+    checks: []
+  }, normalizeParams(params)));
+}
+function _coercedNumber(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "number",
+    coerce: true,
+    checks: []
+  }, normalizeParams(params)));
+}
+function _int(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "number",
+    check: "number_format",
+    abort: false,
+    format: "safeint"
+  }, normalizeParams(params)));
+}
+function _float32(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "number",
+    check: "number_format",
+    abort: false,
+    format: "float32"
+  }, normalizeParams(params)));
+}
+function _float64(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "number",
+    check: "number_format",
+    abort: false,
+    format: "float64"
+  }, normalizeParams(params)));
+}
+function _int32(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "number",
+    check: "number_format",
+    abort: false,
+    format: "int32"
+  }, normalizeParams(params)));
+}
+function _uint32(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "number",
+    check: "number_format",
+    abort: false,
+    format: "uint32"
+  }, normalizeParams(params)));
+}
+function _boolean(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "boolean"
+  }, normalizeParams(params)));
+}
+function _coercedBoolean(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "boolean",
+    coerce: true
+  }, normalizeParams(params)));
+}
+function _bigint(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "bigint"
+  }, normalizeParams(params)));
+}
+function _coercedBigint(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "bigint",
+    coerce: true
+  }, normalizeParams(params)));
+}
+function _int64(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "bigint",
+    check: "bigint_format",
+    abort: false,
+    format: "int64"
+  }, normalizeParams(params)));
+}
+function _uint64(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "bigint",
+    check: "bigint_format",
+    abort: false,
+    format: "uint64"
+  }, normalizeParams(params)));
+}
+function _symbol(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "symbol"
+  }, normalizeParams(params)));
+}
+function _undefined2(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "undefined"
+  }, normalizeParams(params)));
+}
+function _null2(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "null"
+  }, normalizeParams(params)));
+}
+function _any(Class2) {
+  return new Class2({
+    type: "any"
+  });
+}
+function _unknown(Class2) {
+  return new Class2({
+    type: "unknown"
+  });
+}
+function _never(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "never"
+  }, normalizeParams(params)));
+}
+function _void(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "void"
+  }, normalizeParams(params)));
+}
+function _date(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "date"
+  }, normalizeParams(params)));
+}
+function _coercedDate(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "date",
+    coerce: true
+  }, normalizeParams(params)));
+}
+function _nan(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "nan"
+  }, normalizeParams(params)));
+}
+function _lt(value, params) {
+  return new $ZodCheckLessThan(__spreadProps(__spreadValues({
+    check: "less_than"
+  }, normalizeParams(params)), {
+    value,
+    inclusive: false
+  }));
+}
+function _lte(value, params) {
+  return new $ZodCheckLessThan(__spreadProps(__spreadValues({
+    check: "less_than"
+  }, normalizeParams(params)), {
+    value,
+    inclusive: true
+  }));
+}
+function _gt(value, params) {
+  return new $ZodCheckGreaterThan(__spreadProps(__spreadValues({
+    check: "greater_than"
+  }, normalizeParams(params)), {
+    value,
+    inclusive: false
+  }));
+}
+function _gte(value, params) {
+  return new $ZodCheckGreaterThan(__spreadProps(__spreadValues({
+    check: "greater_than"
+  }, normalizeParams(params)), {
+    value,
+    inclusive: true
+  }));
+}
+function _positive(params) {
+  return _gt(0, params);
+}
+function _negative(params) {
+  return _lt(0, params);
+}
+function _nonpositive(params) {
+  return _lte(0, params);
+}
+function _nonnegative(params) {
+  return _gte(0, params);
+}
+function _multipleOf(value, params) {
+  return new $ZodCheckMultipleOf(__spreadProps(__spreadValues({
+    check: "multiple_of"
+  }, normalizeParams(params)), {
+    value
+  }));
+}
+function _maxSize(maximum, params) {
+  return new $ZodCheckMaxSize(__spreadProps(__spreadValues({
+    check: "max_size"
+  }, normalizeParams(params)), {
+    maximum
+  }));
+}
+function _minSize(minimum, params) {
+  return new $ZodCheckMinSize(__spreadProps(__spreadValues({
+    check: "min_size"
+  }, normalizeParams(params)), {
+    minimum
+  }));
+}
+function _size(size, params) {
+  return new $ZodCheckSizeEquals(__spreadProps(__spreadValues({
+    check: "size_equals"
+  }, normalizeParams(params)), {
+    size
+  }));
+}
+function _maxLength(maximum, params) {
+  const ch = new $ZodCheckMaxLength(__spreadProps(__spreadValues({
+    check: "max_length"
+  }, normalizeParams(params)), {
+    maximum
+  }));
+  return ch;
+}
+function _minLength(minimum, params) {
+  return new $ZodCheckMinLength(__spreadProps(__spreadValues({
+    check: "min_length"
+  }, normalizeParams(params)), {
+    minimum
+  }));
+}
+function _length(length, params) {
+  return new $ZodCheckLengthEquals(__spreadProps(__spreadValues({
+    check: "length_equals"
+  }, normalizeParams(params)), {
+    length
+  }));
+}
+function _regex(pattern, params) {
+  return new $ZodCheckRegex(__spreadProps(__spreadValues({
+    check: "string_format",
+    format: "regex"
+  }, normalizeParams(params)), {
+    pattern
+  }));
+}
+function _lowercase(params) {
+  return new $ZodCheckLowerCase(__spreadValues({
+    check: "string_format",
+    format: "lowercase"
+  }, normalizeParams(params)));
+}
+function _uppercase(params) {
+  return new $ZodCheckUpperCase(__spreadValues({
+    check: "string_format",
+    format: "uppercase"
+  }, normalizeParams(params)));
+}
+function _includes(includes, params) {
+  return new $ZodCheckIncludes(__spreadProps(__spreadValues({
+    check: "string_format",
+    format: "includes"
+  }, normalizeParams(params)), {
+    includes
+  }));
+}
+function _startsWith(prefix, params) {
+  return new $ZodCheckStartsWith(__spreadProps(__spreadValues({
+    check: "string_format",
+    format: "starts_with"
+  }, normalizeParams(params)), {
+    prefix
+  }));
+}
+function _endsWith(suffix, params) {
+  return new $ZodCheckEndsWith(__spreadProps(__spreadValues({
+    check: "string_format",
+    format: "ends_with"
+  }, normalizeParams(params)), {
+    suffix
+  }));
+}
+function _property(property, schema, params) {
+  return new $ZodCheckProperty(__spreadValues({
+    check: "property",
+    property,
+    schema
+  }, normalizeParams(params)));
+}
+function _mime(types, params) {
+  return new $ZodCheckMimeType(__spreadValues({
+    check: "mime_type",
+    mime: types
+  }, normalizeParams(params)));
+}
+function _overwrite(tx) {
+  return new $ZodCheckOverwrite({
+    check: "overwrite",
+    tx
+  });
+}
+function _normalize(form) {
+  return _overwrite((input) => input.normalize(form));
+}
+function _trim() {
+  return _overwrite((input) => input.trim());
+}
+function _toLowerCase() {
+  return _overwrite((input) => input.toLowerCase());
+}
+function _toUpperCase() {
+  return _overwrite((input) => input.toUpperCase());
+}
+function _slugify() {
+  return _overwrite((input) => slugify(input));
+}
+function _array(Class2, element, params) {
+  return new Class2(__spreadValues({
+    type: "array",
+    element
+  }, normalizeParams(params)));
+}
+function _union(Class2, options, params) {
+  return new Class2(__spreadValues({
+    type: "union",
+    options
+  }, normalizeParams(params)));
+}
+function _xor(Class2, options, params) {
+  return new Class2(__spreadValues({
+    type: "union",
+    options,
+    inclusive: false
+  }, normalizeParams(params)));
+}
+function _discriminatedUnion(Class2, discriminator, options, params) {
+  return new Class2(__spreadValues({
+    type: "union",
+    options,
+    discriminator
+  }, normalizeParams(params)));
+}
+function _intersection(Class2, left, right) {
+  return new Class2({
+    type: "intersection",
+    left,
+    right
+  });
+}
+function _tuple(Class2, items, _paramsOrRest, _params) {
+  const hasRest = _paramsOrRest instanceof $ZodType;
+  const params = hasRest ? _params : _paramsOrRest;
+  const rest = hasRest ? _paramsOrRest : null;
+  return new Class2(__spreadValues({
+    type: "tuple",
+    items,
+    rest
+  }, normalizeParams(params)));
+}
+function _record(Class2, keyType, valueType, params) {
+  return new Class2(__spreadValues({
+    type: "record",
+    keyType,
+    valueType
+  }, normalizeParams(params)));
+}
+function _map(Class2, keyType, valueType, params) {
+  return new Class2(__spreadValues({
+    type: "map",
+    keyType,
+    valueType
+  }, normalizeParams(params)));
+}
+function _set(Class2, valueType, params) {
+  return new Class2(__spreadValues({
+    type: "set",
+    valueType
+  }, normalizeParams(params)));
+}
+function _enum(Class2, values, params) {
+  const entries = Array.isArray(values) ? Object.fromEntries(values.map((v) => [v, v])) : values;
+  return new Class2(__spreadValues({
+    type: "enum",
+    entries
+  }, normalizeParams(params)));
+}
+function _nativeEnum(Class2, entries, params) {
+  return new Class2(__spreadValues({
+    type: "enum",
+    entries
+  }, normalizeParams(params)));
+}
+function _literal(Class2, value, params) {
+  return new Class2(__spreadValues({
+    type: "literal",
+    values: Array.isArray(value) ? value : [value]
+  }, normalizeParams(params)));
+}
+function _file(Class2, params) {
+  return new Class2(__spreadValues({
+    type: "file"
+  }, normalizeParams(params)));
+}
+function _transform(Class2, fn) {
+  return new Class2({
+    type: "transform",
+    transform: fn
+  });
+}
+function _optional(Class2, innerType) {
+  return new Class2({
+    type: "optional",
+    innerType
+  });
+}
+function _nullable(Class2, innerType) {
+  return new Class2({
+    type: "nullable",
+    innerType
+  });
+}
+function _default(Class2, innerType, defaultValue) {
+  return new Class2({
+    type: "default",
+    innerType,
+    get defaultValue() {
+      return typeof defaultValue === "function" ? defaultValue() : shallowClone(defaultValue);
+    }
+  });
+}
+function _nonoptional(Class2, innerType, params) {
+  return new Class2(__spreadValues({
+    type: "nonoptional",
+    innerType
+  }, normalizeParams(params)));
+}
+function _success(Class2, innerType) {
+  return new Class2({
+    type: "success",
+    innerType
+  });
+}
+function _catch(Class2, innerType, catchValue) {
+  return new Class2({
+    type: "catch",
+    innerType,
+    catchValue: typeof catchValue === "function" ? catchValue : () => catchValue
+  });
+}
+function _pipe(Class2, in_, out) {
+  return new Class2({
+    type: "pipe",
+    in: in_,
+    out
+  });
+}
+function _readonly(Class2, innerType) {
+  return new Class2({
+    type: "readonly",
+    innerType
+  });
+}
+function _templateLiteral(Class2, parts, params) {
+  return new Class2(__spreadValues({
+    type: "template_literal",
+    parts
+  }, normalizeParams(params)));
+}
+function _lazy(Class2, getter) {
+  return new Class2({
+    type: "lazy",
+    getter
+  });
+}
+function _promise(Class2, innerType) {
+  return new Class2({
+    type: "promise",
+    innerType
+  });
+}
+function _custom(Class2, fn, _params) {
+  var _a5;
+  const norm = normalizeParams(_params);
+  (_a5 = norm.abort) != null ? _a5 : norm.abort = true;
+  const schema = new Class2(__spreadValues({
+    type: "custom",
+    check: "custom",
+    fn
+  }, norm));
+  return schema;
+}
+function _refine(Class2, fn, _params) {
+  const schema = new Class2(__spreadValues({
+    type: "custom",
+    check: "custom",
+    fn
+  }, normalizeParams(_params)));
+  return schema;
+}
+function _superRefine(fn, params) {
+  const ch = _check((payload) => {
+    payload.addIssue = (issue2) => {
+      var _a5, _b, _c, _d;
+      if (typeof issue2 === "string") {
+        payload.issues.push(issue(issue2, payload.value, ch._zod.def));
+      } else {
+        const _issue = issue2;
+        if (_issue.fatal)
+          _issue.continue = false;
+        (_a5 = _issue.code) != null ? _a5 : _issue.code = "custom";
+        (_b = _issue.input) != null ? _b : _issue.input = payload.value;
+        (_c = _issue.inst) != null ? _c : _issue.inst = ch;
+        (_d = _issue.continue) != null ? _d : _issue.continue = !ch._zod.def.abort;
+        payload.issues.push(issue(_issue));
+      }
+    };
+    return fn(payload.value, payload);
+  }, params);
+  return ch;
+}
+function _check(fn, params) {
+  const ch = new $ZodCheck(__spreadValues({
+    check: "custom"
+  }, normalizeParams(params)));
+  ch._zod.check = fn;
+  return ch;
+}
+function describe(description) {
+  const ch = new $ZodCheck({ check: "describe" });
+  ch._zod.onattach = [
+    (inst) => {
+      var _a5;
+      const existing = (_a5 = globalRegistry.get(inst)) != null ? _a5 : {};
+      globalRegistry.add(inst, __spreadProps(__spreadValues({}, existing), { description }));
+    }
+  ];
+  ch._zod.check = () => {
+  };
+  return ch;
+}
+function meta(metadata) {
+  const ch = new $ZodCheck({ check: "meta" });
+  ch._zod.onattach = [
+    (inst) => {
+      var _a5;
+      const existing = (_a5 = globalRegistry.get(inst)) != null ? _a5 : {};
+      globalRegistry.add(inst, __spreadValues(__spreadValues({}, existing), metadata));
+    }
+  ];
+  ch._zod.check = () => {
+  };
+  return ch;
+}
+function _stringbool(Classes, _params) {
+  var _a5, _b, _c, _d, _e;
+  const params = normalizeParams(_params);
+  let truthyArray = (_a5 = params.truthy) != null ? _a5 : ["true", "1", "yes", "on", "y", "enabled"];
+  let falsyArray = (_b = params.falsy) != null ? _b : ["false", "0", "no", "off", "n", "disabled"];
+  if (params.case !== "sensitive") {
+    truthyArray = truthyArray.map((v) => typeof v === "string" ? v.toLowerCase() : v);
+    falsyArray = falsyArray.map((v) => typeof v === "string" ? v.toLowerCase() : v);
+  }
+  const truthySet = new Set(truthyArray);
+  const falsySet = new Set(falsyArray);
+  const _Codec = (_c = Classes.Codec) != null ? _c : $ZodCodec;
+  const _Boolean = (_d = Classes.Boolean) != null ? _d : $ZodBoolean;
+  const _String = (_e = Classes.String) != null ? _e : $ZodString;
+  const stringSchema = new _String({ type: "string", error: params.error });
+  const booleanSchema = new _Boolean({ type: "boolean", error: params.error });
+  const codec2 = new _Codec({
+    type: "pipe",
+    in: stringSchema,
+    out: booleanSchema,
+    transform: (input, payload) => {
+      let data = input;
+      if (params.case !== "sensitive")
+        data = data.toLowerCase();
+      if (truthySet.has(data)) {
+        return true;
+      } else if (falsySet.has(data)) {
+        return false;
+      } else {
+        payload.issues.push({
+          code: "invalid_value",
+          expected: "stringbool",
+          values: [...truthySet, ...falsySet],
+          input: payload.value,
+          inst: codec2,
+          continue: false
+        });
+        return {};
+      }
+    },
+    reverseTransform: (input, _payload) => {
+      if (input === true) {
+        return truthyArray[0] || "true";
+      } else {
+        return falsyArray[0] || "false";
+      }
+    },
+    error: params.error
+  });
+  return codec2;
+}
+function _stringFormat(Class2, format, fnOrRegex, _params = {}) {
+  const params = normalizeParams(_params);
+  const def = __spreadValues(__spreadProps(__spreadValues({}, normalizeParams(_params)), {
+    check: "string_format",
+    type: "string",
+    format,
+    fn: typeof fnOrRegex === "function" ? fnOrRegex : (val) => fnOrRegex.test(val)
+  }), params);
+  if (fnOrRegex instanceof RegExp) {
+    def.pattern = fnOrRegex;
+  }
+  const inst = new Class2(def);
+  return inst;
+}
+
+// node_modules/zod/v4/core/to-json-schema.js
+function initializeContext(params) {
+  var _a5, _b, _c, _d, _e, _f, _g, _h, _i;
+  let target = (_a5 = params == null ? void 0 : params.target) != null ? _a5 : "draft-2020-12";
+  if (target === "draft-4")
+    target = "draft-04";
+  if (target === "draft-7")
+    target = "draft-07";
+  return {
+    processors: (_b = params.processors) != null ? _b : {},
+    metadataRegistry: (_c = params == null ? void 0 : params.metadata) != null ? _c : globalRegistry,
+    target,
+    unrepresentable: (_d = params == null ? void 0 : params.unrepresentable) != null ? _d : "throw",
+    override: (_e = params == null ? void 0 : params.override) != null ? _e : () => {
+    },
+    io: (_f = params == null ? void 0 : params.io) != null ? _f : "output",
+    counter: 0,
+    seen: /* @__PURE__ */ new Map(),
+    cycles: (_g = params == null ? void 0 : params.cycles) != null ? _g : "ref",
+    reused: (_h = params == null ? void 0 : params.reused) != null ? _h : "inline",
+    external: (_i = params == null ? void 0 : params.external) != null ? _i : void 0
+  };
+}
+function process(schema, ctx, _params = { path: [], schemaPath: [] }) {
+  var _a6, _b, _c;
+  var _a5;
+  const def = schema._zod.def;
+  const seen = ctx.seen.get(schema);
+  if (seen) {
+    seen.count++;
+    const isCycle = _params.schemaPath.includes(schema);
+    if (isCycle) {
+      seen.cycle = _params.path;
+    }
+    return seen.schema;
+  }
+  const result = { schema: {}, count: 1, cycle: void 0, path: _params.path };
+  ctx.seen.set(schema, result);
+  const overrideSchema = (_b = (_a6 = schema._zod).toJSONSchema) == null ? void 0 : _b.call(_a6);
+  if (overrideSchema) {
+    result.schema = overrideSchema;
+  } else {
+    const params = __spreadProps(__spreadValues({}, _params), {
+      schemaPath: [..._params.schemaPath, schema],
+      path: _params.path
+    });
+    if (schema._zod.processJSONSchema) {
+      schema._zod.processJSONSchema(ctx, result.schema, params);
+    } else {
+      const _json = result.schema;
+      const processor = ctx.processors[def.type];
+      if (!processor) {
+        throw new Error(`[toJSONSchema]: Non-representable type encountered: ${def.type}`);
+      }
+      processor(schema, ctx, _json, params);
+    }
+    const parent = schema._zod.parent;
+    if (parent) {
+      if (!result.ref)
+        result.ref = parent;
+      process(parent, ctx, params);
+      ctx.seen.get(parent).isParent = true;
+    }
+  }
+  const meta3 = ctx.metadataRegistry.get(schema);
+  if (meta3)
+    Object.assign(result.schema, meta3);
+  if (ctx.io === "input" && isTransforming(schema)) {
+    delete result.schema.examples;
+    delete result.schema.default;
+  }
+  if (ctx.io === "input" && "_prefault" in result.schema)
+    (_c = (_a5 = result.schema).default) != null ? _c : _a5.default = result.schema._prefault;
+  delete result.schema._prefault;
+  const _result = ctx.seen.get(schema);
+  return _result.schema;
+}
+function extractDefs(ctx, schema) {
+  var _a5, _b, _c, _d;
+  const root = ctx.seen.get(schema);
+  if (!root)
+    throw new Error("Unprocessed schema. This is a bug in Zod.");
+  const idToSchema = /* @__PURE__ */ new Map();
+  for (const entry of ctx.seen.entries()) {
+    const id = (_a5 = ctx.metadataRegistry.get(entry[0])) == null ? void 0 : _a5.id;
+    if (id) {
+      const existing = idToSchema.get(id);
+      if (existing && existing !== entry[0]) {
+        throw new Error(`Duplicate schema id "${id}" detected during JSON Schema conversion. Two different schemas cannot share the same id when converted together.`);
+      }
+      idToSchema.set(id, entry[0]);
+    }
+  }
+  const makeURI = (entry) => {
+    var _a6, _b2, _c2, _d2, _e;
+    const defsSegment = ctx.target === "draft-2020-12" ? "$defs" : "definitions";
+    if (ctx.external) {
+      const externalId = (_a6 = ctx.external.registry.get(entry[0])) == null ? void 0 : _a6.id;
+      const uriGenerator = (_b2 = ctx.external.uri) != null ? _b2 : (id2) => id2;
+      if (externalId) {
+        return { ref: uriGenerator(externalId) };
+      }
+      const id = (_d2 = (_c2 = entry[1].defId) != null ? _c2 : entry[1].schema.id) != null ? _d2 : `schema${ctx.counter++}`;
+      entry[1].defId = id;
+      return { defId: id, ref: `${uriGenerator("__shared")}#/${defsSegment}/${id}` };
+    }
+    if (entry[1] === root) {
+      return { ref: "#" };
+    }
+    const uriPrefix = `#`;
+    const defUriPrefix = `${uriPrefix}/${defsSegment}/`;
+    const defId = (_e = entry[1].schema.id) != null ? _e : `__schema${ctx.counter++}`;
+    return { defId, ref: defUriPrefix + defId };
+  };
+  const extractToDef = (entry) => {
+    if (entry[1].schema.$ref) {
+      return;
+    }
+    const seen = entry[1];
+    const { ref, defId } = makeURI(entry);
+    seen.def = __spreadValues({}, seen.schema);
+    if (defId)
+      seen.defId = defId;
+    const schema2 = seen.schema;
+    for (const key in schema2) {
+      delete schema2[key];
+    }
+    schema2.$ref = ref;
+  };
+  if (ctx.cycles === "throw") {
+    for (const entry of ctx.seen.entries()) {
+      const seen = entry[1];
+      if (seen.cycle) {
+        throw new Error(`Cycle detected: #/${(_b = seen.cycle) == null ? void 0 : _b.join("/")}/<root>
+
+Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.`);
+      }
+    }
+  }
+  for (const entry of ctx.seen.entries()) {
+    const seen = entry[1];
+    if (schema === entry[0]) {
+      extractToDef(entry);
+      continue;
+    }
+    if (ctx.external) {
+      const ext = (_c = ctx.external.registry.get(entry[0])) == null ? void 0 : _c.id;
+      if (schema !== entry[0] && ext) {
+        extractToDef(entry);
+        continue;
+      }
+    }
+    const id = (_d = ctx.metadataRegistry.get(entry[0])) == null ? void 0 : _d.id;
+    if (id) {
+      extractToDef(entry);
+      continue;
+    }
+    if (seen.cycle) {
+      extractToDef(entry);
+      continue;
+    }
+    if (seen.count > 1) {
+      if (ctx.reused === "ref") {
+        extractToDef(entry);
+        continue;
+      }
+    }
+  }
+}
+function finalize(ctx, schema) {
+  var _a5, _b, _c, _d, _e, _f;
+  const root = ctx.seen.get(schema);
+  if (!root)
+    throw new Error("Unprocessed schema. This is a bug in Zod.");
+  const flattenRef = (zodSchema) => {
+    var _a6, _b2, _c2;
+    const seen = ctx.seen.get(zodSchema);
+    if (seen.ref === null)
+      return;
+    const schema2 = (_a6 = seen.def) != null ? _a6 : seen.schema;
+    const _cached = __spreadValues({}, schema2);
+    const ref = seen.ref;
+    seen.ref = null;
+    if (ref) {
+      flattenRef(ref);
+      const refSeen = ctx.seen.get(ref);
+      const refSchema = refSeen.schema;
+      if (refSchema.$ref && (ctx.target === "draft-07" || ctx.target === "draft-04" || ctx.target === "openapi-3.0")) {
+        schema2.allOf = (_b2 = schema2.allOf) != null ? _b2 : [];
+        schema2.allOf.push(refSchema);
+      } else {
+        Object.assign(schema2, refSchema);
+      }
+      Object.assign(schema2, _cached);
+      const isParentRef = zodSchema._zod.parent === ref;
+      if (isParentRef) {
+        for (const key in schema2) {
+          if (key === "$ref" || key === "allOf")
+            continue;
+          if (!(key in _cached)) {
+            delete schema2[key];
+          }
+        }
+      }
+      if (refSchema.$ref && refSeen.def) {
+        for (const key in schema2) {
+          if (key === "$ref" || key === "allOf")
+            continue;
+          if (key in refSeen.def && JSON.stringify(schema2[key]) === JSON.stringify(refSeen.def[key])) {
+            delete schema2[key];
+          }
+        }
+      }
+    }
+    const parent = zodSchema._zod.parent;
+    if (parent && parent !== ref) {
+      flattenRef(parent);
+      const parentSeen = ctx.seen.get(parent);
+      if (parentSeen == null ? void 0 : parentSeen.schema.$ref) {
+        schema2.$ref = parentSeen.schema.$ref;
+        if (parentSeen.def) {
+          for (const key in schema2) {
+            if (key === "$ref" || key === "allOf")
+              continue;
+            if (key in parentSeen.def && JSON.stringify(schema2[key]) === JSON.stringify(parentSeen.def[key])) {
+              delete schema2[key];
+            }
+          }
+        }
+      }
+    }
+    ctx.override({
+      zodSchema,
+      jsonSchema: schema2,
+      path: (_c2 = seen.path) != null ? _c2 : []
+    });
+  };
+  for (const entry of [...ctx.seen.entries()].reverse()) {
+    flattenRef(entry[0]);
+  }
+  const result = {};
+  if (ctx.target === "draft-2020-12") {
+    result.$schema = "https://json-schema.org/draft/2020-12/schema";
+  } else if (ctx.target === "draft-07") {
+    result.$schema = "http://json-schema.org/draft-07/schema#";
+  } else if (ctx.target === "draft-04") {
+    result.$schema = "http://json-schema.org/draft-04/schema#";
+  } else if (ctx.target === "openapi-3.0") {
+  } else {
+  }
+  if ((_a5 = ctx.external) == null ? void 0 : _a5.uri) {
+    const id = (_b = ctx.external.registry.get(schema)) == null ? void 0 : _b.id;
+    if (!id)
+      throw new Error("Schema is missing an `id` property");
+    result.$id = ctx.external.uri(id);
+  }
+  Object.assign(result, (_c = root.def) != null ? _c : root.schema);
+  const rootMetaId = (_d = ctx.metadataRegistry.get(schema)) == null ? void 0 : _d.id;
+  if (rootMetaId !== void 0 && result.id === rootMetaId)
+    delete result.id;
+  const defs = (_f = (_e = ctx.external) == null ? void 0 : _e.defs) != null ? _f : {};
+  for (const entry of ctx.seen.entries()) {
+    const seen = entry[1];
+    if (seen.def && seen.defId) {
+      if (seen.def.id === seen.defId)
+        delete seen.def.id;
+      defs[seen.defId] = seen.def;
+    }
+  }
+  if (ctx.external) {
+  } else {
+    if (Object.keys(defs).length > 0) {
+      if (ctx.target === "draft-2020-12") {
+        result.$defs = defs;
+      } else {
+        result.definitions = defs;
+      }
+    }
+  }
+  try {
+    const finalized = JSON.parse(JSON.stringify(result));
+    Object.defineProperty(finalized, "~standard", {
+      value: __spreadProps(__spreadValues({}, schema["~standard"]), {
+        jsonSchema: {
+          input: createStandardJSONSchemaMethod(schema, "input", ctx.processors),
+          output: createStandardJSONSchemaMethod(schema, "output", ctx.processors)
+        }
+      }),
+      enumerable: false,
+      writable: false
+    });
+    return finalized;
+  } catch (_err) {
+    throw new Error("Error converting schema to JSON.");
+  }
+}
+function isTransforming(_schema, _ctx) {
+  const ctx = _ctx != null ? _ctx : { seen: /* @__PURE__ */ new Set() };
+  if (ctx.seen.has(_schema))
+    return false;
+  ctx.seen.add(_schema);
+  const def = _schema._zod.def;
+  if (def.type === "transform")
+    return true;
+  if (def.type === "array")
+    return isTransforming(def.element, ctx);
+  if (def.type === "set")
+    return isTransforming(def.valueType, ctx);
+  if (def.type === "lazy")
+    return isTransforming(def.getter(), ctx);
+  if (def.type === "promise" || def.type === "optional" || def.type === "nonoptional" || def.type === "nullable" || def.type === "readonly" || def.type === "default" || def.type === "prefault") {
+    return isTransforming(def.innerType, ctx);
+  }
+  if (def.type === "intersection") {
+    return isTransforming(def.left, ctx) || isTransforming(def.right, ctx);
+  }
+  if (def.type === "record" || def.type === "map") {
+    return isTransforming(def.keyType, ctx) || isTransforming(def.valueType, ctx);
+  }
+  if (def.type === "pipe") {
+    if (_schema._zod.traits.has("$ZodCodec"))
+      return true;
+    return isTransforming(def.in, ctx) || isTransforming(def.out, ctx);
+  }
+  if (def.type === "object") {
+    for (const key in def.shape) {
+      if (isTransforming(def.shape[key], ctx))
+        return true;
+    }
+    return false;
+  }
+  if (def.type === "union") {
+    for (const option of def.options) {
+      if (isTransforming(option, ctx))
+        return true;
+    }
+    return false;
+  }
+  if (def.type === "tuple") {
+    for (const item of def.items) {
+      if (isTransforming(item, ctx))
+        return true;
+    }
+    if (def.rest && isTransforming(def.rest, ctx))
+      return true;
+    return false;
+  }
+  return false;
+}
+var createToJSONSchemaMethod = (schema, processors = {}) => (params) => {
+  const ctx = initializeContext(__spreadProps(__spreadValues({}, params), { processors }));
+  process(schema, ctx);
+  extractDefs(ctx, schema);
+  return finalize(ctx, schema);
+};
+var createStandardJSONSchemaMethod = (schema, io, processors = {}) => (params) => {
+  const { libraryOptions, target } = params != null ? params : {};
+  const ctx = initializeContext(__spreadProps(__spreadValues({}, libraryOptions != null ? libraryOptions : {}), { target, io, processors }));
+  process(schema, ctx);
+  extractDefs(ctx, schema);
+  return finalize(ctx, schema);
+};
+
+// node_modules/zod/v4/core/json-schema-processors.js
+var formatMap = {
+  guid: "uuid",
+  url: "uri",
+  datetime: "date-time",
+  json_string: "json-string",
+  regex: ""
+};
+var stringProcessor = (schema, ctx, _json, _params) => {
+  var _a5;
+  const json2 = _json;
+  json2.type = "string";
+  const { minimum, maximum, format, patterns, contentEncoding } = schema._zod.bag;
+  if (typeof minimum === "number")
+    json2.minLength = minimum;
+  if (typeof maximum === "number")
+    json2.maxLength = maximum;
+  if (format) {
+    json2.format = (_a5 = formatMap[format]) != null ? _a5 : format;
+    if (json2.format === "")
+      delete json2.format;
+    if (format === "time") {
+      delete json2.format;
+    }
+  }
+  if (contentEncoding)
+    json2.contentEncoding = contentEncoding;
+  if (patterns && patterns.size > 0) {
+    const regexes = [...patterns];
+    if (regexes.length === 1)
+      json2.pattern = regexes[0].source;
+    else if (regexes.length > 1) {
+      json2.allOf = [
+        ...regexes.map((regex) => __spreadProps(__spreadValues({}, ctx.target === "draft-07" || ctx.target === "draft-04" || ctx.target === "openapi-3.0" ? { type: "string" } : {}), {
+          pattern: regex.source
+        }))
+      ];
+    }
+  }
+};
+var numberProcessor = (schema, ctx, _json, _params) => {
+  const json2 = _json;
+  const { minimum, maximum, format, multipleOf, exclusiveMaximum, exclusiveMinimum } = schema._zod.bag;
+  if (typeof format === "string" && format.includes("int"))
+    json2.type = "integer";
+  else
+    json2.type = "number";
+  const exMin = typeof exclusiveMinimum === "number" && exclusiveMinimum >= (minimum != null ? minimum : Number.NEGATIVE_INFINITY);
+  const exMax = typeof exclusiveMaximum === "number" && exclusiveMaximum <= (maximum != null ? maximum : Number.POSITIVE_INFINITY);
+  const legacy = ctx.target === "draft-04" || ctx.target === "openapi-3.0";
+  if (exMin) {
+    if (legacy) {
+      json2.minimum = exclusiveMinimum;
+      json2.exclusiveMinimum = true;
+    } else {
+      json2.exclusiveMinimum = exclusiveMinimum;
+    }
+  } else if (typeof minimum === "number") {
+    json2.minimum = minimum;
+  }
+  if (exMax) {
+    if (legacy) {
+      json2.maximum = exclusiveMaximum;
+      json2.exclusiveMaximum = true;
+    } else {
+      json2.exclusiveMaximum = exclusiveMaximum;
+    }
+  } else if (typeof maximum === "number") {
+    json2.maximum = maximum;
+  }
+  if (typeof multipleOf === "number")
+    json2.multipleOf = multipleOf;
+};
+var booleanProcessor = (_schema, _ctx, json2, _params) => {
+  json2.type = "boolean";
+};
+var bigintProcessor = (_schema, ctx, _json, _params) => {
+  if (ctx.unrepresentable === "throw") {
+    throw new Error("BigInt cannot be represented in JSON Schema");
+  }
+};
+var symbolProcessor = (_schema, ctx, _json, _params) => {
+  if (ctx.unrepresentable === "throw") {
+    throw new Error("Symbols cannot be represented in JSON Schema");
+  }
+};
+var nullProcessor = (_schema, ctx, json2, _params) => {
+  if (ctx.target === "openapi-3.0") {
+    json2.type = "string";
+    json2.nullable = true;
+    json2.enum = [null];
+  } else {
+    json2.type = "null";
+  }
+};
+var undefinedProcessor = (_schema, ctx, _json, _params) => {
+  if (ctx.unrepresentable === "throw") {
+    throw new Error("Undefined cannot be represented in JSON Schema");
+  }
+};
+var voidProcessor = (_schema, ctx, _json, _params) => {
+  if (ctx.unrepresentable === "throw") {
+    throw new Error("Void cannot be represented in JSON Schema");
+  }
+};
+var neverProcessor = (_schema, _ctx, json2, _params) => {
+  json2.not = {};
+};
+var anyProcessor = (_schema, _ctx, _json, _params) => {
+};
+var unknownProcessor = (_schema, _ctx, _json, _params) => {
+};
+var dateProcessor = (_schema, ctx, _json, _params) => {
+  if (ctx.unrepresentable === "throw") {
+    throw new Error("Date cannot be represented in JSON Schema");
+  }
+};
+var enumProcessor = (schema, _ctx, json2, _params) => {
+  const def = schema._zod.def;
+  const values = getEnumValues(def.entries);
+  if (values.every((v) => typeof v === "number"))
+    json2.type = "number";
+  if (values.every((v) => typeof v === "string"))
+    json2.type = "string";
+  json2.enum = values;
+};
+var literalProcessor = (schema, ctx, json2, _params) => {
+  const def = schema._zod.def;
+  const vals = [];
+  for (const val of def.values) {
+    if (val === void 0) {
+      if (ctx.unrepresentable === "throw") {
+        throw new Error("Literal `undefined` cannot be represented in JSON Schema");
+      } else {
+      }
+    } else if (typeof val === "bigint") {
+      if (ctx.unrepresentable === "throw") {
+        throw new Error("BigInt literals cannot be represented in JSON Schema");
+      } else {
+        vals.push(Number(val));
+      }
+    } else {
+      vals.push(val);
+    }
+  }
+  if (vals.length === 0) {
+  } else if (vals.length === 1) {
+    const val = vals[0];
+    json2.type = val === null ? "null" : typeof val;
+    if (ctx.target === "draft-04" || ctx.target === "openapi-3.0") {
+      json2.enum = [val];
+    } else {
+      json2.const = val;
+    }
+  } else {
+    if (vals.every((v) => typeof v === "number"))
+      json2.type = "number";
+    if (vals.every((v) => typeof v === "string"))
+      json2.type = "string";
+    if (vals.every((v) => typeof v === "boolean"))
+      json2.type = "boolean";
+    if (vals.every((v) => v === null))
+      json2.type = "null";
+    json2.enum = vals;
+  }
+};
+var nanProcessor = (_schema, ctx, _json, _params) => {
+  if (ctx.unrepresentable === "throw") {
+    throw new Error("NaN cannot be represented in JSON Schema");
+  }
+};
+var templateLiteralProcessor = (schema, _ctx, json2, _params) => {
+  const _json = json2;
+  const pattern = schema._zod.pattern;
+  if (!pattern)
+    throw new Error("Pattern not found in template literal");
+  _json.type = "string";
+  _json.pattern = pattern.source;
+};
+var fileProcessor = (schema, _ctx, json2, _params) => {
+  const _json = json2;
+  const file2 = {
+    type: "string",
+    format: "binary",
+    contentEncoding: "binary"
+  };
+  const { minimum, maximum, mime } = schema._zod.bag;
+  if (minimum !== void 0)
+    file2.minLength = minimum;
+  if (maximum !== void 0)
+    file2.maxLength = maximum;
+  if (mime) {
+    if (mime.length === 1) {
+      file2.contentMediaType = mime[0];
+      Object.assign(_json, file2);
+    } else {
+      Object.assign(_json, file2);
+      _json.anyOf = mime.map((m) => ({ contentMediaType: m }));
+    }
+  } else {
+    Object.assign(_json, file2);
+  }
+};
+var successProcessor = (_schema, _ctx, json2, _params) => {
+  json2.type = "boolean";
+};
+var customProcessor = (_schema, ctx, _json, _params) => {
+  if (ctx.unrepresentable === "throw") {
+    throw new Error("Custom types cannot be represented in JSON Schema");
+  }
+};
+var functionProcessor = (_schema, ctx, _json, _params) => {
+  if (ctx.unrepresentable === "throw") {
+    throw new Error("Function types cannot be represented in JSON Schema");
+  }
+};
+var transformProcessor = (_schema, ctx, _json, _params) => {
+  if (ctx.unrepresentable === "throw") {
+    throw new Error("Transforms cannot be represented in JSON Schema");
+  }
+};
+var mapProcessor = (_schema, ctx, _json, _params) => {
+  if (ctx.unrepresentable === "throw") {
+    throw new Error("Map cannot be represented in JSON Schema");
+  }
+};
+var setProcessor = (_schema, ctx, _json, _params) => {
+  if (ctx.unrepresentable === "throw") {
+    throw new Error("Set cannot be represented in JSON Schema");
+  }
+};
+var arrayProcessor = (schema, ctx, _json, params) => {
+  const json2 = _json;
+  const def = schema._zod.def;
+  const { minimum, maximum } = schema._zod.bag;
+  if (typeof minimum === "number")
+    json2.minItems = minimum;
+  if (typeof maximum === "number")
+    json2.maxItems = maximum;
+  json2.type = "array";
+  json2.items = process(def.element, ctx, __spreadProps(__spreadValues({}, params), {
+    path: [...params.path, "items"]
+  }));
+};
+var objectProcessor = (schema, ctx, _json, params) => {
+  var _a5;
+  const json2 = _json;
+  const def = schema._zod.def;
+  json2.type = "object";
+  json2.properties = {};
+  const shape = def.shape;
+  for (const key in shape) {
+    json2.properties[key] = process(shape[key], ctx, __spreadProps(__spreadValues({}, params), {
+      path: [...params.path, "properties", key]
+    }));
+  }
+  const allKeys = new Set(Object.keys(shape));
+  const requiredKeys = new Set([...allKeys].filter((key) => {
+    const v = def.shape[key]._zod;
+    if (ctx.io === "input") {
+      return v.optin === void 0;
+    } else {
+      return v.optout === void 0;
+    }
+  }));
+  if (requiredKeys.size > 0) {
+    json2.required = Array.from(requiredKeys);
+  }
+  if (((_a5 = def.catchall) == null ? void 0 : _a5._zod.def.type) === "never") {
+    json2.additionalProperties = false;
+  } else if (!def.catchall) {
+    if (ctx.io === "output")
+      json2.additionalProperties = false;
+  } else if (def.catchall) {
+    json2.additionalProperties = process(def.catchall, ctx, __spreadProps(__spreadValues({}, params), {
+      path: [...params.path, "additionalProperties"]
+    }));
+  }
+};
+var unionProcessor = (schema, ctx, json2, params) => {
+  const def = schema._zod.def;
+  const isExclusive = def.inclusive === false;
+  const options = def.options.map((x, i) => process(x, ctx, __spreadProps(__spreadValues({}, params), {
+    path: [...params.path, isExclusive ? "oneOf" : "anyOf", i]
+  })));
+  if (isExclusive) {
+    json2.oneOf = options;
+  } else {
+    json2.anyOf = options;
+  }
+};
+var intersectionProcessor = (schema, ctx, json2, params) => {
+  const def = schema._zod.def;
+  const a = process(def.left, ctx, __spreadProps(__spreadValues({}, params), {
+    path: [...params.path, "allOf", 0]
+  }));
+  const b = process(def.right, ctx, __spreadProps(__spreadValues({}, params), {
+    path: [...params.path, "allOf", 1]
+  }));
+  const isSimpleIntersection = (val) => "allOf" in val && Object.keys(val).length === 1;
+  const allOf = [
+    ...isSimpleIntersection(a) ? a.allOf : [a],
+    ...isSimpleIntersection(b) ? b.allOf : [b]
+  ];
+  json2.allOf = allOf;
+};
+var tupleProcessor = (schema, ctx, _json, params) => {
+  const json2 = _json;
+  const def = schema._zod.def;
+  json2.type = "array";
+  const prefixPath = ctx.target === "draft-2020-12" ? "prefixItems" : "items";
+  const restPath = ctx.target === "draft-2020-12" ? "items" : ctx.target === "openapi-3.0" ? "items" : "additionalItems";
+  const prefixItems = def.items.map((x, i) => process(x, ctx, __spreadProps(__spreadValues({}, params), {
+    path: [...params.path, prefixPath, i]
+  })));
+  const rest = def.rest ? process(def.rest, ctx, __spreadProps(__spreadValues({}, params), {
+    path: [...params.path, restPath, ...ctx.target === "openapi-3.0" ? [def.items.length] : []]
+  })) : null;
+  if (ctx.target === "draft-2020-12") {
+    json2.prefixItems = prefixItems;
+    if (rest) {
+      json2.items = rest;
+    }
+  } else if (ctx.target === "openapi-3.0") {
+    json2.items = {
+      anyOf: prefixItems
+    };
+    if (rest) {
+      json2.items.anyOf.push(rest);
+    }
+    json2.minItems = prefixItems.length;
+    if (!rest) {
+      json2.maxItems = prefixItems.length;
+    }
+  } else {
+    json2.items = prefixItems;
+    if (rest) {
+      json2.additionalItems = rest;
+    }
+  }
+  const { minimum, maximum } = schema._zod.bag;
+  if (typeof minimum === "number")
+    json2.minItems = minimum;
+  if (typeof maximum === "number")
+    json2.maxItems = maximum;
+};
+var recordProcessor = (schema, ctx, _json, params) => {
+  const json2 = _json;
+  const def = schema._zod.def;
+  json2.type = "object";
+  const keyType = def.keyType;
+  const keyBag = keyType._zod.bag;
+  const patterns = keyBag == null ? void 0 : keyBag.patterns;
+  if (def.mode === "loose" && patterns && patterns.size > 0) {
+    const valueSchema = process(def.valueType, ctx, __spreadProps(__spreadValues({}, params), {
+      path: [...params.path, "patternProperties", "*"]
+    }));
+    json2.patternProperties = {};
+    for (const pattern of patterns) {
+      json2.patternProperties[pattern.source] = valueSchema;
+    }
+  } else {
+    if (ctx.target === "draft-07" || ctx.target === "draft-2020-12") {
+      json2.propertyNames = process(def.keyType, ctx, __spreadProps(__spreadValues({}, params), {
+        path: [...params.path, "propertyNames"]
+      }));
+    }
+    json2.additionalProperties = process(def.valueType, ctx, __spreadProps(__spreadValues({}, params), {
+      path: [...params.path, "additionalProperties"]
+    }));
+  }
+  const keyValues = keyType._zod.values;
+  if (keyValues) {
+    const validKeyValues = [...keyValues].filter((v) => typeof v === "string" || typeof v === "number");
+    if (validKeyValues.length > 0) {
+      json2.required = validKeyValues;
+    }
+  }
+};
+var nullableProcessor = (schema, ctx, json2, params) => {
+  const def = schema._zod.def;
+  const inner = process(def.innerType, ctx, params);
+  const seen = ctx.seen.get(schema);
+  if (ctx.target === "openapi-3.0") {
+    seen.ref = def.innerType;
+    json2.nullable = true;
+  } else {
+    json2.anyOf = [inner, { type: "null" }];
+  }
+};
+var nonoptionalProcessor = (schema, ctx, _json, params) => {
+  const def = schema._zod.def;
+  process(def.innerType, ctx, params);
+  const seen = ctx.seen.get(schema);
+  seen.ref = def.innerType;
+};
+var defaultProcessor = (schema, ctx, json2, params) => {
+  const def = schema._zod.def;
+  process(def.innerType, ctx, params);
+  const seen = ctx.seen.get(schema);
+  seen.ref = def.innerType;
+  json2.default = JSON.parse(JSON.stringify(def.defaultValue));
+};
+var prefaultProcessor = (schema, ctx, json2, params) => {
+  const def = schema._zod.def;
+  process(def.innerType, ctx, params);
+  const seen = ctx.seen.get(schema);
+  seen.ref = def.innerType;
+  if (ctx.io === "input")
+    json2._prefault = JSON.parse(JSON.stringify(def.defaultValue));
+};
+var catchProcessor = (schema, ctx, json2, params) => {
+  const def = schema._zod.def;
+  process(def.innerType, ctx, params);
+  const seen = ctx.seen.get(schema);
+  seen.ref = def.innerType;
+  let catchValue;
+  try {
+    catchValue = def.catchValue(void 0);
+  } catch (e) {
+    throw new Error("Dynamic catch values are not supported in JSON Schema");
+  }
+  json2.default = catchValue;
+};
+var pipeProcessor = (schema, ctx, _json, params) => {
+  const def = schema._zod.def;
+  const inIsTransform = def.in._zod.traits.has("$ZodTransform");
+  const innerType = ctx.io === "input" ? inIsTransform ? def.out : def.in : def.out;
+  process(innerType, ctx, params);
+  const seen = ctx.seen.get(schema);
+  seen.ref = innerType;
+};
+var readonlyProcessor = (schema, ctx, json2, params) => {
+  const def = schema._zod.def;
+  process(def.innerType, ctx, params);
+  const seen = ctx.seen.get(schema);
+  seen.ref = def.innerType;
+  json2.readOnly = true;
+};
+var promiseProcessor = (schema, ctx, _json, params) => {
+  const def = schema._zod.def;
+  process(def.innerType, ctx, params);
+  const seen = ctx.seen.get(schema);
+  seen.ref = def.innerType;
+};
+var optionalProcessor = (schema, ctx, _json, params) => {
+  const def = schema._zod.def;
+  process(def.innerType, ctx, params);
+  const seen = ctx.seen.get(schema);
+  seen.ref = def.innerType;
+};
+var lazyProcessor = (schema, ctx, _json, params) => {
+  const innerType = schema._zod.innerType;
+  process(innerType, ctx, params);
+  const seen = ctx.seen.get(schema);
+  seen.ref = innerType;
+};
+var allProcessors = {
+  string: stringProcessor,
+  number: numberProcessor,
+  boolean: booleanProcessor,
+  bigint: bigintProcessor,
+  symbol: symbolProcessor,
+  null: nullProcessor,
+  undefined: undefinedProcessor,
+  void: voidProcessor,
+  never: neverProcessor,
+  any: anyProcessor,
+  unknown: unknownProcessor,
+  date: dateProcessor,
+  enum: enumProcessor,
+  literal: literalProcessor,
+  nan: nanProcessor,
+  template_literal: templateLiteralProcessor,
+  file: fileProcessor,
+  success: successProcessor,
+  custom: customProcessor,
+  function: functionProcessor,
+  transform: transformProcessor,
+  map: mapProcessor,
+  set: setProcessor,
+  array: arrayProcessor,
+  object: objectProcessor,
+  union: unionProcessor,
+  intersection: intersectionProcessor,
+  tuple: tupleProcessor,
+  record: recordProcessor,
+  nullable: nullableProcessor,
+  nonoptional: nonoptionalProcessor,
+  default: defaultProcessor,
+  prefault: prefaultProcessor,
+  catch: catchProcessor,
+  pipe: pipeProcessor,
+  readonly: readonlyProcessor,
+  promise: promiseProcessor,
+  optional: optionalProcessor,
+  lazy: lazyProcessor
+};
+function toJSONSchema(input, params) {
+  if ("_idmap" in input) {
+    const registry2 = input;
+    const ctx2 = initializeContext(__spreadProps(__spreadValues({}, params), { processors: allProcessors }));
+    const defs = {};
+    for (const entry of registry2._idmap.entries()) {
+      const [_, schema] = entry;
+      process(schema, ctx2);
+    }
+    const schemas = {};
+    const external = {
+      registry: registry2,
+      uri: params == null ? void 0 : params.uri,
+      defs
+    };
+    ctx2.external = external;
+    for (const entry of registry2._idmap.entries()) {
+      const [key, schema] = entry;
+      extractDefs(ctx2, schema);
+      schemas[key] = finalize(ctx2, schema);
+    }
+    if (Object.keys(defs).length > 0) {
+      const defsSegment = ctx2.target === "draft-2020-12" ? "$defs" : "definitions";
+      schemas.__shared = {
+        [defsSegment]: defs
+      };
+    }
+    return { schemas };
+  }
+  const ctx = initializeContext(__spreadProps(__spreadValues({}, params), { processors: allProcessors }));
+  process(input, ctx);
+  extractDefs(ctx, input);
+  return finalize(ctx, input);
+}
+
+// node_modules/zod/v4/core/json-schema-generator.js
+var JSONSchemaGenerator = class {
+  get metadataRegistry() {
+    return this.ctx.metadataRegistry;
+  }
+  get target() {
+    return this.ctx.target;
+  }
+  get unrepresentable() {
+    return this.ctx.unrepresentable;
+  }
+  get override() {
+    return this.ctx.override;
+  }
+  get io() {
+    return this.ctx.io;
+  }
+  get counter() {
+    return this.ctx.counter;
+  }
+  set counter(value) {
+    this.ctx.counter = value;
+  }
+  get seen() {
+    return this.ctx.seen;
+  }
+  constructor(params) {
+    var _a5;
+    let normalizedTarget = (_a5 = params == null ? void 0 : params.target) != null ? _a5 : "draft-2020-12";
+    if (normalizedTarget === "draft-4")
+      normalizedTarget = "draft-04";
+    if (normalizedTarget === "draft-7")
+      normalizedTarget = "draft-07";
+    this.ctx = initializeContext(__spreadValues(__spreadValues(__spreadValues(__spreadValues({
+      processors: allProcessors,
+      target: normalizedTarget
+    }, (params == null ? void 0 : params.metadata) && { metadata: params.metadata }), (params == null ? void 0 : params.unrepresentable) && { unrepresentable: params.unrepresentable }), (params == null ? void 0 : params.override) && { override: params.override }), (params == null ? void 0 : params.io) && { io: params.io }));
+  }
+  process(schema, _params = { path: [], schemaPath: [] }) {
+    return process(schema, this.ctx, _params);
+  }
+  emit(schema, _params) {
+    if (_params) {
+      if (_params.cycles)
+        this.ctx.cycles = _params.cycles;
+      if (_params.reused)
+        this.ctx.reused = _params.reused;
+      if (_params.external)
+        this.ctx.external = _params.external;
+    }
+    extractDefs(this.ctx, schema);
+    const result = finalize(this.ctx, schema);
+    const _a5 = result, { "~standard": _ } = _a5, plainResult = __objRest(_a5, ["~standard"]);
+    return plainResult;
+  }
+};
+
+// node_modules/zod/v4/core/json-schema.js
+var json_schema_exports = {};
+
+// node_modules/zod/v4/classic/schemas.js
+var schemas_exports2 = {};
+__export(schemas_exports2, {
+  ZodAny: () => ZodAny,
+  ZodArray: () => ZodArray,
+  ZodBase64: () => ZodBase64,
+  ZodBase64URL: () => ZodBase64URL,
+  ZodBigInt: () => ZodBigInt,
+  ZodBigIntFormat: () => ZodBigIntFormat,
+  ZodBoolean: () => ZodBoolean,
+  ZodCIDRv4: () => ZodCIDRv4,
+  ZodCIDRv6: () => ZodCIDRv6,
+  ZodCUID: () => ZodCUID,
+  ZodCUID2: () => ZodCUID2,
+  ZodCatch: () => ZodCatch,
+  ZodCodec: () => ZodCodec,
+  ZodCustom: () => ZodCustom,
+  ZodCustomStringFormat: () => ZodCustomStringFormat,
+  ZodDate: () => ZodDate,
+  ZodDefault: () => ZodDefault,
+  ZodDiscriminatedUnion: () => ZodDiscriminatedUnion,
+  ZodE164: () => ZodE164,
+  ZodEmail: () => ZodEmail,
+  ZodEmoji: () => ZodEmoji,
+  ZodEnum: () => ZodEnum,
+  ZodExactOptional: () => ZodExactOptional,
+  ZodFile: () => ZodFile,
+  ZodFunction: () => ZodFunction,
+  ZodGUID: () => ZodGUID,
+  ZodIPv4: () => ZodIPv4,
+  ZodIPv6: () => ZodIPv6,
+  ZodIntersection: () => ZodIntersection,
+  ZodJWT: () => ZodJWT,
+  ZodKSUID: () => ZodKSUID,
+  ZodLazy: () => ZodLazy,
+  ZodLiteral: () => ZodLiteral,
+  ZodMAC: () => ZodMAC,
+  ZodMap: () => ZodMap,
+  ZodNaN: () => ZodNaN,
+  ZodNanoID: () => ZodNanoID,
+  ZodNever: () => ZodNever,
+  ZodNonOptional: () => ZodNonOptional,
+  ZodNull: () => ZodNull,
+  ZodNullable: () => ZodNullable,
+  ZodNumber: () => ZodNumber,
+  ZodNumberFormat: () => ZodNumberFormat,
+  ZodObject: () => ZodObject,
+  ZodOptional: () => ZodOptional,
+  ZodPipe: () => ZodPipe,
+  ZodPrefault: () => ZodPrefault,
+  ZodPreprocess: () => ZodPreprocess,
+  ZodPromise: () => ZodPromise,
+  ZodReadonly: () => ZodReadonly,
+  ZodRecord: () => ZodRecord,
+  ZodSet: () => ZodSet,
+  ZodString: () => ZodString,
+  ZodStringFormat: () => ZodStringFormat,
+  ZodSuccess: () => ZodSuccess,
+  ZodSymbol: () => ZodSymbol,
+  ZodTemplateLiteral: () => ZodTemplateLiteral,
+  ZodTransform: () => ZodTransform,
+  ZodTuple: () => ZodTuple,
+  ZodType: () => ZodType,
+  ZodULID: () => ZodULID,
+  ZodURL: () => ZodURL,
+  ZodUUID: () => ZodUUID,
+  ZodUndefined: () => ZodUndefined,
+  ZodUnion: () => ZodUnion,
+  ZodUnknown: () => ZodUnknown,
+  ZodVoid: () => ZodVoid,
+  ZodXID: () => ZodXID,
+  ZodXor: () => ZodXor,
+  _ZodString: () => _ZodString,
+  _default: () => _default2,
+  _function: () => _function,
+  any: () => any,
+  array: () => array,
+  base64: () => base642,
+  base64url: () => base64url2,
+  bigint: () => bigint2,
+  boolean: () => boolean2,
+  catch: () => _catch2,
+  check: () => check,
+  cidrv4: () => cidrv42,
+  cidrv6: () => cidrv62,
+  codec: () => codec,
+  cuid: () => cuid3,
+  cuid2: () => cuid22,
+  custom: () => custom,
+  date: () => date3,
+  describe: () => describe2,
+  discriminatedUnion: () => discriminatedUnion,
+  e164: () => e1642,
+  email: () => email2,
+  emoji: () => emoji2,
+  enum: () => _enum2,
+  exactOptional: () => exactOptional,
+  file: () => file,
+  float32: () => float32,
+  float64: () => float64,
+  function: () => _function,
+  guid: () => guid2,
+  hash: () => hash,
+  hex: () => hex2,
+  hostname: () => hostname2,
+  httpUrl: () => httpUrl,
+  instanceof: () => _instanceof,
+  int: () => int,
+  int32: () => int32,
+  int64: () => int64,
+  intersection: () => intersection,
+  invertCodec: () => invertCodec,
+  ipv4: () => ipv42,
+  ipv6: () => ipv62,
+  json: () => json,
+  jwt: () => jwt,
+  keyof: () => keyof,
+  ksuid: () => ksuid2,
+  lazy: () => lazy,
+  literal: () => literal,
+  looseObject: () => looseObject,
+  looseRecord: () => looseRecord,
+  mac: () => mac2,
+  map: () => map,
+  meta: () => meta2,
+  nan: () => nan,
+  nanoid: () => nanoid2,
+  nativeEnum: () => nativeEnum,
+  never: () => never,
+  nonoptional: () => nonoptional,
+  null: () => _null3,
+  nullable: () => nullable,
+  nullish: () => nullish2,
+  number: () => number2,
+  object: () => object,
+  optional: () => optional,
+  partialRecord: () => partialRecord,
+  pipe: () => pipe,
+  prefault: () => prefault,
+  preprocess: () => preprocess,
+  promise: () => promise,
+  readonly: () => readonly,
+  record: () => record,
+  refine: () => refine,
+  set: () => set,
+  strictObject: () => strictObject,
+  string: () => string2,
+  stringFormat: () => stringFormat,
+  stringbool: () => stringbool,
+  success: () => success,
+  superRefine: () => superRefine,
+  symbol: () => symbol,
+  templateLiteral: () => templateLiteral,
+  transform: () => transform,
+  tuple: () => tuple,
+  uint32: () => uint32,
+  uint64: () => uint64,
+  ulid: () => ulid2,
+  undefined: () => _undefined3,
+  union: () => union,
+  unknown: () => unknown,
+  url: () => url,
+  uuid: () => uuid2,
+  uuidv4: () => uuidv4,
+  uuidv6: () => uuidv6,
+  uuidv7: () => uuidv7,
+  void: () => _void2,
+  xid: () => xid2,
+  xor: () => xor
+});
+
+// node_modules/zod/v4/classic/checks.js
+var checks_exports2 = {};
+__export(checks_exports2, {
+  endsWith: () => _endsWith,
+  gt: () => _gt,
+  gte: () => _gte,
+  includes: () => _includes,
+  length: () => _length,
+  lowercase: () => _lowercase,
+  lt: () => _lt,
+  lte: () => _lte,
+  maxLength: () => _maxLength,
+  maxSize: () => _maxSize,
+  mime: () => _mime,
+  minLength: () => _minLength,
+  minSize: () => _minSize,
+  multipleOf: () => _multipleOf,
+  negative: () => _negative,
+  nonnegative: () => _nonnegative,
+  nonpositive: () => _nonpositive,
+  normalize: () => _normalize,
+  overwrite: () => _overwrite,
+  positive: () => _positive,
+  property: () => _property,
+  regex: () => _regex,
+  size: () => _size,
+  slugify: () => _slugify,
+  startsWith: () => _startsWith,
+  toLowerCase: () => _toLowerCase,
+  toUpperCase: () => _toUpperCase,
+  trim: () => _trim,
+  uppercase: () => _uppercase
+});
+
+// node_modules/zod/v4/classic/iso.js
+var iso_exports = {};
+__export(iso_exports, {
+  ZodISODate: () => ZodISODate,
+  ZodISODateTime: () => ZodISODateTime,
+  ZodISODuration: () => ZodISODuration,
+  ZodISOTime: () => ZodISOTime,
+  date: () => date2,
+  datetime: () => datetime2,
+  duration: () => duration2,
+  time: () => time2
+});
+var ZodISODateTime = /* @__PURE__ */ $constructor("ZodISODateTime", (inst, def) => {
+  $ZodISODateTime.init(inst, def);
+  ZodStringFormat.init(inst, def);
+});
+function datetime2(params) {
+  return _isoDateTime(ZodISODateTime, params);
+}
+var ZodISODate = /* @__PURE__ */ $constructor("ZodISODate", (inst, def) => {
+  $ZodISODate.init(inst, def);
+  ZodStringFormat.init(inst, def);
+});
+function date2(params) {
+  return _isoDate(ZodISODate, params);
+}
+var ZodISOTime = /* @__PURE__ */ $constructor("ZodISOTime", (inst, def) => {
+  $ZodISOTime.init(inst, def);
+  ZodStringFormat.init(inst, def);
+});
+function time2(params) {
+  return _isoTime(ZodISOTime, params);
+}
+var ZodISODuration = /* @__PURE__ */ $constructor("ZodISODuration", (inst, def) => {
+  $ZodISODuration.init(inst, def);
+  ZodStringFormat.init(inst, def);
+});
+function duration2(params) {
+  return _isoDuration(ZodISODuration, params);
+}
+
+// node_modules/zod/v4/classic/errors.js
+var initializer2 = (inst, issues) => {
+  $ZodError.init(inst, issues);
+  inst.name = "ZodError";
+  Object.defineProperties(inst, {
+    format: {
+      value: (mapper) => formatError(inst, mapper)
+    },
+    flatten: {
+      value: (mapper) => flattenError(inst, mapper)
+    },
+    addIssue: {
+      value: (issue2) => {
+        inst.issues.push(issue2);
+        inst.message = JSON.stringify(inst.issues, jsonStringifyReplacer, 2);
+      }
+    },
+    addIssues: {
+      value: (issues2) => {
+        inst.issues.push(...issues2);
+        inst.message = JSON.stringify(inst.issues, jsonStringifyReplacer, 2);
+      }
+    },
+    isEmpty: {
+      get() {
+        return inst.issues.length === 0;
+      }
+    }
+  });
+};
+var ZodError = /* @__PURE__ */ $constructor("ZodError", initializer2);
+var ZodRealError = /* @__PURE__ */ $constructor("ZodError", initializer2, {
+  Parent: Error
+});
+
+// node_modules/zod/v4/classic/parse.js
+var parse2 = /* @__PURE__ */ _parse(ZodRealError);
+var parseAsync2 = /* @__PURE__ */ _parseAsync(ZodRealError);
+var safeParse2 = /* @__PURE__ */ _safeParse(ZodRealError);
+var safeParseAsync2 = /* @__PURE__ */ _safeParseAsync(ZodRealError);
+var encode2 = /* @__PURE__ */ _encode(ZodRealError);
+var decode2 = /* @__PURE__ */ _decode(ZodRealError);
+var encodeAsync2 = /* @__PURE__ */ _encodeAsync(ZodRealError);
+var decodeAsync2 = /* @__PURE__ */ _decodeAsync(ZodRealError);
+var safeEncode2 = /* @__PURE__ */ _safeEncode(ZodRealError);
+var safeDecode2 = /* @__PURE__ */ _safeDecode(ZodRealError);
+var safeEncodeAsync2 = /* @__PURE__ */ _safeEncodeAsync(ZodRealError);
+var safeDecodeAsync2 = /* @__PURE__ */ _safeDecodeAsync(ZodRealError);
+
+// node_modules/zod/v4/classic/schemas.js
+var _installedGroups = /* @__PURE__ */ new WeakMap();
+function _installLazyMethods(inst, group, methods) {
+  const proto = Object.getPrototypeOf(inst);
+  let installed = _installedGroups.get(proto);
+  if (!installed) {
+    installed = /* @__PURE__ */ new Set();
+    _installedGroups.set(proto, installed);
+  }
+  if (installed.has(group))
+    return;
+  installed.add(group);
+  for (const key in methods) {
+    const fn = methods[key];
+    Object.defineProperty(proto, key, {
+      configurable: true,
+      enumerable: false,
+      get() {
+        const bound = fn.bind(this);
+        Object.defineProperty(this, key, {
+          configurable: true,
+          writable: true,
+          enumerable: true,
+          value: bound
+        });
+        return bound;
+      },
+      set(v) {
+        Object.defineProperty(this, key, {
+          configurable: true,
+          writable: true,
+          enumerable: true,
+          value: v
+        });
+      }
+    });
+  }
+}
+var ZodType = /* @__PURE__ */ $constructor("ZodType", (inst, def) => {
+  $ZodType.init(inst, def);
+  Object.assign(inst["~standard"], {
+    jsonSchema: {
+      input: createStandardJSONSchemaMethod(inst, "input"),
+      output: createStandardJSONSchemaMethod(inst, "output")
+    }
+  });
+  inst.toJSONSchema = createToJSONSchemaMethod(inst, {});
+  inst.def = def;
+  inst.type = def.type;
+  Object.defineProperty(inst, "_def", { value: def });
+  inst.parse = (data, params) => parse2(inst, data, params, { callee: inst.parse });
+  inst.safeParse = (data, params) => safeParse2(inst, data, params);
+  inst.parseAsync = (data, params) => __async(void 0, null, function* () {
+    return parseAsync2(inst, data, params, { callee: inst.parseAsync });
+  });
+  inst.safeParseAsync = (data, params) => __async(void 0, null, function* () {
+    return safeParseAsync2(inst, data, params);
+  });
+  inst.spa = inst.safeParseAsync;
+  inst.encode = (data, params) => encode2(inst, data, params);
+  inst.decode = (data, params) => decode2(inst, data, params);
+  inst.encodeAsync = (data, params) => __async(void 0, null, function* () {
+    return encodeAsync2(inst, data, params);
+  });
+  inst.decodeAsync = (data, params) => __async(void 0, null, function* () {
+    return decodeAsync2(inst, data, params);
+  });
+  inst.safeEncode = (data, params) => safeEncode2(inst, data, params);
+  inst.safeDecode = (data, params) => safeDecode2(inst, data, params);
+  inst.safeEncodeAsync = (data, params) => __async(void 0, null, function* () {
+    return safeEncodeAsync2(inst, data, params);
+  });
+  inst.safeDecodeAsync = (data, params) => __async(void 0, null, function* () {
+    return safeDecodeAsync2(inst, data, params);
+  });
+  _installLazyMethods(inst, "ZodType", {
+    check(...chks) {
+      var _a5;
+      const def2 = this.def;
+      return this.clone(util_exports.mergeDefs(def2, {
+        checks: [
+          ...(_a5 = def2.checks) != null ? _a5 : [],
+          ...chks.map((ch) => typeof ch === "function" ? { _zod: { check: ch, def: { check: "custom" }, onattach: [] } } : ch)
+        ]
+      }), { parent: true });
+    },
+    with(...chks) {
+      return this.check(...chks);
+    },
+    clone(def2, params) {
+      return clone(this, def2, params);
+    },
+    brand() {
+      return this;
+    },
+    register(reg, meta3) {
+      reg.add(this, meta3);
+      return this;
+    },
+    refine(check2, params) {
+      return this.check(refine(check2, params));
+    },
+    superRefine(refinement, params) {
+      return this.check(superRefine(refinement, params));
+    },
+    overwrite(fn) {
+      return this.check(_overwrite(fn));
+    },
+    optional() {
+      return optional(this);
+    },
+    exactOptional() {
+      return exactOptional(this);
+    },
+    nullable() {
+      return nullable(this);
+    },
+    nullish() {
+      return optional(nullable(this));
+    },
+    nonoptional(params) {
+      return nonoptional(this, params);
+    },
+    array() {
+      return array(this);
+    },
+    or(arg) {
+      return union([this, arg]);
+    },
+    and(arg) {
+      return intersection(this, arg);
+    },
+    transform(tx) {
+      return pipe(this, transform(tx));
+    },
+    default(d) {
+      return _default2(this, d);
+    },
+    prefault(d) {
+      return prefault(this, d);
+    },
+    catch(params) {
+      return _catch2(this, params);
+    },
+    pipe(target) {
+      return pipe(this, target);
+    },
+    readonly() {
+      return readonly(this);
+    },
+    describe(description) {
+      const cl = this.clone();
+      globalRegistry.add(cl, { description });
+      return cl;
+    },
+    meta(...args) {
+      if (args.length === 0)
+        return globalRegistry.get(this);
+      const cl = this.clone();
+      globalRegistry.add(cl, args[0]);
+      return cl;
+    },
+    isOptional() {
+      return this.safeParse(void 0).success;
+    },
+    isNullable() {
+      return this.safeParse(null).success;
+    },
+    apply(fn) {
+      return fn(this);
+    }
+  });
+  Object.defineProperty(inst, "description", {
+    get() {
+      var _a5;
+      return (_a5 = globalRegistry.get(inst)) == null ? void 0 : _a5.description;
+    },
+    configurable: true
+  });
+  return inst;
+});
+var _ZodString = /* @__PURE__ */ $constructor("_ZodString", (inst, def) => {
+  var _a5, _b, _c;
+  $ZodString.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => stringProcessor(inst, ctx, json2, params);
+  const bag = inst._zod.bag;
+  inst.format = (_a5 = bag.format) != null ? _a5 : null;
+  inst.minLength = (_b = bag.minimum) != null ? _b : null;
+  inst.maxLength = (_c = bag.maximum) != null ? _c : null;
+  _installLazyMethods(inst, "_ZodString", {
+    regex(...args) {
+      return this.check(_regex(...args));
+    },
+    includes(...args) {
+      return this.check(_includes(...args));
+    },
+    startsWith(...args) {
+      return this.check(_startsWith(...args));
+    },
+    endsWith(...args) {
+      return this.check(_endsWith(...args));
+    },
+    min(...args) {
+      return this.check(_minLength(...args));
+    },
+    max(...args) {
+      return this.check(_maxLength(...args));
+    },
+    length(...args) {
+      return this.check(_length(...args));
+    },
+    nonempty(...args) {
+      return this.check(_minLength(1, ...args));
+    },
+    lowercase(params) {
+      return this.check(_lowercase(params));
+    },
+    uppercase(params) {
+      return this.check(_uppercase(params));
+    },
+    trim() {
+      return this.check(_trim());
+    },
+    normalize(...args) {
+      return this.check(_normalize(...args));
+    },
+    toLowerCase() {
+      return this.check(_toLowerCase());
+    },
+    toUpperCase() {
+      return this.check(_toUpperCase());
+    },
+    slugify() {
+      return this.check(_slugify());
+    }
+  });
+});
+var ZodString = /* @__PURE__ */ $constructor("ZodString", (inst, def) => {
+  $ZodString.init(inst, def);
+  _ZodString.init(inst, def);
+  inst.email = (params) => inst.check(_email(ZodEmail, params));
+  inst.url = (params) => inst.check(_url(ZodURL, params));
+  inst.jwt = (params) => inst.check(_jwt(ZodJWT, params));
+  inst.emoji = (params) => inst.check(_emoji2(ZodEmoji, params));
+  inst.guid = (params) => inst.check(_guid(ZodGUID, params));
+  inst.uuid = (params) => inst.check(_uuid(ZodUUID, params));
+  inst.uuidv4 = (params) => inst.check(_uuidv4(ZodUUID, params));
+  inst.uuidv6 = (params) => inst.check(_uuidv6(ZodUUID, params));
+  inst.uuidv7 = (params) => inst.check(_uuidv7(ZodUUID, params));
+  inst.nanoid = (params) => inst.check(_nanoid(ZodNanoID, params));
+  inst.guid = (params) => inst.check(_guid(ZodGUID, params));
+  inst.cuid = (params) => inst.check(_cuid(ZodCUID, params));
+  inst.cuid2 = (params) => inst.check(_cuid2(ZodCUID2, params));
+  inst.ulid = (params) => inst.check(_ulid(ZodULID, params));
+  inst.base64 = (params) => inst.check(_base64(ZodBase64, params));
+  inst.base64url = (params) => inst.check(_base64url(ZodBase64URL, params));
+  inst.xid = (params) => inst.check(_xid(ZodXID, params));
+  inst.ksuid = (params) => inst.check(_ksuid(ZodKSUID, params));
+  inst.ipv4 = (params) => inst.check(_ipv4(ZodIPv4, params));
+  inst.ipv6 = (params) => inst.check(_ipv6(ZodIPv6, params));
+  inst.cidrv4 = (params) => inst.check(_cidrv4(ZodCIDRv4, params));
+  inst.cidrv6 = (params) => inst.check(_cidrv6(ZodCIDRv6, params));
+  inst.e164 = (params) => inst.check(_e164(ZodE164, params));
+  inst.datetime = (params) => inst.check(datetime2(params));
+  inst.date = (params) => inst.check(date2(params));
+  inst.time = (params) => inst.check(time2(params));
+  inst.duration = (params) => inst.check(duration2(params));
+});
+function string2(params) {
+  return _string(ZodString, params);
+}
+var ZodStringFormat = /* @__PURE__ */ $constructor("ZodStringFormat", (inst, def) => {
+  $ZodStringFormat.init(inst, def);
+  _ZodString.init(inst, def);
+});
+var ZodEmail = /* @__PURE__ */ $constructor("ZodEmail", (inst, def) => {
+  $ZodEmail.init(inst, def);
+  ZodStringFormat.init(inst, def);
+});
+function email2(params) {
+  return _email(ZodEmail, params);
+}
+var ZodGUID = /* @__PURE__ */ $constructor("ZodGUID", (inst, def) => {
+  $ZodGUID.init(inst, def);
+  ZodStringFormat.init(inst, def);
+});
+function guid2(params) {
+  return _guid(ZodGUID, params);
+}
+var ZodUUID = /* @__PURE__ */ $constructor("ZodUUID", (inst, def) => {
+  $ZodUUID.init(inst, def);
+  ZodStringFormat.init(inst, def);
+});
+function uuid2(params) {
+  return _uuid(ZodUUID, params);
+}
+function uuidv4(params) {
+  return _uuidv4(ZodUUID, params);
+}
+function uuidv6(params) {
+  return _uuidv6(ZodUUID, params);
+}
+function uuidv7(params) {
+  return _uuidv7(ZodUUID, params);
+}
+var ZodURL = /* @__PURE__ */ $constructor("ZodURL", (inst, def) => {
+  $ZodURL.init(inst, def);
+  ZodStringFormat.init(inst, def);
+});
+function url(params) {
+  return _url(ZodURL, params);
+}
+function httpUrl(params) {
+  return _url(ZodURL, __spreadValues({
+    protocol: regexes_exports.httpProtocol,
+    hostname: regexes_exports.domain
+  }, util_exports.normalizeParams(params)));
+}
+var ZodEmoji = /* @__PURE__ */ $constructor("ZodEmoji", (inst, def) => {
+  $ZodEmoji.init(inst, def);
+  ZodStringFormat.init(inst, def);
+});
+function emoji2(params) {
+  return _emoji2(ZodEmoji, params);
+}
+var ZodNanoID = /* @__PURE__ */ $constructor("ZodNanoID", (inst, def) => {
+  $ZodNanoID.init(inst, def);
+  ZodStringFormat.init(inst, def);
+});
+function nanoid2(params) {
+  return _nanoid(ZodNanoID, params);
+}
+var ZodCUID = /* @__PURE__ */ $constructor("ZodCUID", (inst, def) => {
+  $ZodCUID.init(inst, def);
+  ZodStringFormat.init(inst, def);
+});
+function cuid3(params) {
+  return _cuid(ZodCUID, params);
+}
+var ZodCUID2 = /* @__PURE__ */ $constructor("ZodCUID2", (inst, def) => {
+  $ZodCUID2.init(inst, def);
+  ZodStringFormat.init(inst, def);
+});
+function cuid22(params) {
+  return _cuid2(ZodCUID2, params);
+}
+var ZodULID = /* @__PURE__ */ $constructor("ZodULID", (inst, def) => {
+  $ZodULID.init(inst, def);
+  ZodStringFormat.init(inst, def);
+});
+function ulid2(params) {
+  return _ulid(ZodULID, params);
+}
+var ZodXID = /* @__PURE__ */ $constructor("ZodXID", (inst, def) => {
+  $ZodXID.init(inst, def);
+  ZodStringFormat.init(inst, def);
+});
+function xid2(params) {
+  return _xid(ZodXID, params);
+}
+var ZodKSUID = /* @__PURE__ */ $constructor("ZodKSUID", (inst, def) => {
+  $ZodKSUID.init(inst, def);
+  ZodStringFormat.init(inst, def);
+});
+function ksuid2(params) {
+  return _ksuid(ZodKSUID, params);
+}
+var ZodIPv4 = /* @__PURE__ */ $constructor("ZodIPv4", (inst, def) => {
+  $ZodIPv4.init(inst, def);
+  ZodStringFormat.init(inst, def);
+});
+function ipv42(params) {
+  return _ipv4(ZodIPv4, params);
+}
+var ZodMAC = /* @__PURE__ */ $constructor("ZodMAC", (inst, def) => {
+  $ZodMAC.init(inst, def);
+  ZodStringFormat.init(inst, def);
+});
+function mac2(params) {
+  return _mac(ZodMAC, params);
+}
+var ZodIPv6 = /* @__PURE__ */ $constructor("ZodIPv6", (inst, def) => {
+  $ZodIPv6.init(inst, def);
+  ZodStringFormat.init(inst, def);
+});
+function ipv62(params) {
+  return _ipv6(ZodIPv6, params);
+}
+var ZodCIDRv4 = /* @__PURE__ */ $constructor("ZodCIDRv4", (inst, def) => {
+  $ZodCIDRv4.init(inst, def);
+  ZodStringFormat.init(inst, def);
+});
+function cidrv42(params) {
+  return _cidrv4(ZodCIDRv4, params);
+}
+var ZodCIDRv6 = /* @__PURE__ */ $constructor("ZodCIDRv6", (inst, def) => {
+  $ZodCIDRv6.init(inst, def);
+  ZodStringFormat.init(inst, def);
+});
+function cidrv62(params) {
+  return _cidrv6(ZodCIDRv6, params);
+}
+var ZodBase64 = /* @__PURE__ */ $constructor("ZodBase64", (inst, def) => {
+  $ZodBase64.init(inst, def);
+  ZodStringFormat.init(inst, def);
+});
+function base642(params) {
+  return _base64(ZodBase64, params);
+}
+var ZodBase64URL = /* @__PURE__ */ $constructor("ZodBase64URL", (inst, def) => {
+  $ZodBase64URL.init(inst, def);
+  ZodStringFormat.init(inst, def);
+});
+function base64url2(params) {
+  return _base64url(ZodBase64URL, params);
+}
+var ZodE164 = /* @__PURE__ */ $constructor("ZodE164", (inst, def) => {
+  $ZodE164.init(inst, def);
+  ZodStringFormat.init(inst, def);
+});
+function e1642(params) {
+  return _e164(ZodE164, params);
+}
+var ZodJWT = /* @__PURE__ */ $constructor("ZodJWT", (inst, def) => {
+  $ZodJWT.init(inst, def);
+  ZodStringFormat.init(inst, def);
+});
+function jwt(params) {
+  return _jwt(ZodJWT, params);
+}
+var ZodCustomStringFormat = /* @__PURE__ */ $constructor("ZodCustomStringFormat", (inst, def) => {
+  $ZodCustomStringFormat.init(inst, def);
+  ZodStringFormat.init(inst, def);
+});
+function stringFormat(format, fnOrRegex, _params = {}) {
+  return _stringFormat(ZodCustomStringFormat, format, fnOrRegex, _params);
+}
+function hostname2(_params) {
+  return _stringFormat(ZodCustomStringFormat, "hostname", regexes_exports.hostname, _params);
+}
+function hex2(_params) {
+  return _stringFormat(ZodCustomStringFormat, "hex", regexes_exports.hex, _params);
+}
+function hash(alg, params) {
+  var _a5;
+  const enc = (_a5 = params == null ? void 0 : params.enc) != null ? _a5 : "hex";
+  const format = `${alg}_${enc}`;
+  const regex = regexes_exports[format];
+  if (!regex)
+    throw new Error(`Unrecognized hash format: ${format}`);
+  return _stringFormat(ZodCustomStringFormat, format, regex, params);
+}
+var ZodNumber = /* @__PURE__ */ $constructor("ZodNumber", (inst, def) => {
+  var _a5, _b, _c, _d, _e, _f, _g, _h, _i;
+  $ZodNumber.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => numberProcessor(inst, ctx, json2, params);
+  _installLazyMethods(inst, "ZodNumber", {
+    gt(value, params) {
+      return this.check(_gt(value, params));
+    },
+    gte(value, params) {
+      return this.check(_gte(value, params));
+    },
+    min(value, params) {
+      return this.check(_gte(value, params));
+    },
+    lt(value, params) {
+      return this.check(_lt(value, params));
+    },
+    lte(value, params) {
+      return this.check(_lte(value, params));
+    },
+    max(value, params) {
+      return this.check(_lte(value, params));
+    },
+    int(params) {
+      return this.check(int(params));
+    },
+    safe(params) {
+      return this.check(int(params));
+    },
+    positive(params) {
+      return this.check(_gt(0, params));
+    },
+    nonnegative(params) {
+      return this.check(_gte(0, params));
+    },
+    negative(params) {
+      return this.check(_lt(0, params));
+    },
+    nonpositive(params) {
+      return this.check(_lte(0, params));
+    },
+    multipleOf(value, params) {
+      return this.check(_multipleOf(value, params));
+    },
+    step(value, params) {
+      return this.check(_multipleOf(value, params));
+    },
+    finite() {
+      return this;
+    }
+  });
+  const bag = inst._zod.bag;
+  inst.minValue = (_c = Math.max((_a5 = bag.minimum) != null ? _a5 : Number.NEGATIVE_INFINITY, (_b = bag.exclusiveMinimum) != null ? _b : Number.NEGATIVE_INFINITY)) != null ? _c : null;
+  inst.maxValue = (_f = Math.min((_d = bag.maximum) != null ? _d : Number.POSITIVE_INFINITY, (_e = bag.exclusiveMaximum) != null ? _e : Number.POSITIVE_INFINITY)) != null ? _f : null;
+  inst.isInt = ((_g = bag.format) != null ? _g : "").includes("int") || Number.isSafeInteger((_h = bag.multipleOf) != null ? _h : 0.5);
+  inst.isFinite = true;
+  inst.format = (_i = bag.format) != null ? _i : null;
+});
+function number2(params) {
+  return _number(ZodNumber, params);
+}
+var ZodNumberFormat = /* @__PURE__ */ $constructor("ZodNumberFormat", (inst, def) => {
+  $ZodNumberFormat.init(inst, def);
+  ZodNumber.init(inst, def);
+});
+function int(params) {
+  return _int(ZodNumberFormat, params);
+}
+function float32(params) {
+  return _float32(ZodNumberFormat, params);
+}
+function float64(params) {
+  return _float64(ZodNumberFormat, params);
+}
+function int32(params) {
+  return _int32(ZodNumberFormat, params);
+}
+function uint32(params) {
+  return _uint32(ZodNumberFormat, params);
+}
+var ZodBoolean = /* @__PURE__ */ $constructor("ZodBoolean", (inst, def) => {
+  $ZodBoolean.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => booleanProcessor(inst, ctx, json2, params);
+});
+function boolean2(params) {
+  return _boolean(ZodBoolean, params);
+}
+var ZodBigInt = /* @__PURE__ */ $constructor("ZodBigInt", (inst, def) => {
+  var _a5, _b, _c;
+  $ZodBigInt.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => bigintProcessor(inst, ctx, json2, params);
+  inst.gte = (value, params) => inst.check(_gte(value, params));
+  inst.min = (value, params) => inst.check(_gte(value, params));
+  inst.gt = (value, params) => inst.check(_gt(value, params));
+  inst.gte = (value, params) => inst.check(_gte(value, params));
+  inst.min = (value, params) => inst.check(_gte(value, params));
+  inst.lt = (value, params) => inst.check(_lt(value, params));
+  inst.lte = (value, params) => inst.check(_lte(value, params));
+  inst.max = (value, params) => inst.check(_lte(value, params));
+  inst.positive = (params) => inst.check(_gt(BigInt(0), params));
+  inst.negative = (params) => inst.check(_lt(BigInt(0), params));
+  inst.nonpositive = (params) => inst.check(_lte(BigInt(0), params));
+  inst.nonnegative = (params) => inst.check(_gte(BigInt(0), params));
+  inst.multipleOf = (value, params) => inst.check(_multipleOf(value, params));
+  const bag = inst._zod.bag;
+  inst.minValue = (_a5 = bag.minimum) != null ? _a5 : null;
+  inst.maxValue = (_b = bag.maximum) != null ? _b : null;
+  inst.format = (_c = bag.format) != null ? _c : null;
+});
+function bigint2(params) {
+  return _bigint(ZodBigInt, params);
+}
+var ZodBigIntFormat = /* @__PURE__ */ $constructor("ZodBigIntFormat", (inst, def) => {
+  $ZodBigIntFormat.init(inst, def);
+  ZodBigInt.init(inst, def);
+});
+function int64(params) {
+  return _int64(ZodBigIntFormat, params);
+}
+function uint64(params) {
+  return _uint64(ZodBigIntFormat, params);
+}
+var ZodSymbol = /* @__PURE__ */ $constructor("ZodSymbol", (inst, def) => {
+  $ZodSymbol.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => symbolProcessor(inst, ctx, json2, params);
+});
+function symbol(params) {
+  return _symbol(ZodSymbol, params);
+}
+var ZodUndefined = /* @__PURE__ */ $constructor("ZodUndefined", (inst, def) => {
+  $ZodUndefined.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => undefinedProcessor(inst, ctx, json2, params);
+});
+function _undefined3(params) {
+  return _undefined2(ZodUndefined, params);
+}
+var ZodNull = /* @__PURE__ */ $constructor("ZodNull", (inst, def) => {
+  $ZodNull.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => nullProcessor(inst, ctx, json2, params);
+});
+function _null3(params) {
+  return _null2(ZodNull, params);
+}
+var ZodAny = /* @__PURE__ */ $constructor("ZodAny", (inst, def) => {
+  $ZodAny.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => anyProcessor(inst, ctx, json2, params);
+});
+function any() {
+  return _any(ZodAny);
+}
+var ZodUnknown = /* @__PURE__ */ $constructor("ZodUnknown", (inst, def) => {
+  $ZodUnknown.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => unknownProcessor(inst, ctx, json2, params);
+});
+function unknown() {
+  return _unknown(ZodUnknown);
+}
+var ZodNever = /* @__PURE__ */ $constructor("ZodNever", (inst, def) => {
+  $ZodNever.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => neverProcessor(inst, ctx, json2, params);
+});
+function never(params) {
+  return _never(ZodNever, params);
+}
+var ZodVoid = /* @__PURE__ */ $constructor("ZodVoid", (inst, def) => {
+  $ZodVoid.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => voidProcessor(inst, ctx, json2, params);
+});
+function _void2(params) {
+  return _void(ZodVoid, params);
+}
+var ZodDate = /* @__PURE__ */ $constructor("ZodDate", (inst, def) => {
+  $ZodDate.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => dateProcessor(inst, ctx, json2, params);
+  inst.min = (value, params) => inst.check(_gte(value, params));
+  inst.max = (value, params) => inst.check(_lte(value, params));
+  const c = inst._zod.bag;
+  inst.minDate = c.minimum ? new Date(c.minimum) : null;
+  inst.maxDate = c.maximum ? new Date(c.maximum) : null;
+});
+function date3(params) {
+  return _date(ZodDate, params);
+}
+var ZodArray = /* @__PURE__ */ $constructor("ZodArray", (inst, def) => {
+  $ZodArray.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => arrayProcessor(inst, ctx, json2, params);
+  inst.element = def.element;
+  _installLazyMethods(inst, "ZodArray", {
+    min(n, params) {
+      return this.check(_minLength(n, params));
+    },
+    nonempty(params) {
+      return this.check(_minLength(1, params));
+    },
+    max(n, params) {
+      return this.check(_maxLength(n, params));
+    },
+    length(n, params) {
+      return this.check(_length(n, params));
+    },
+    unwrap() {
+      return this.element;
+    }
+  });
+});
+function array(element, params) {
+  return _array(ZodArray, element, params);
+}
+function keyof(schema) {
+  const shape = schema._zod.def.shape;
+  return _enum2(Object.keys(shape));
+}
+var ZodObject = /* @__PURE__ */ $constructor("ZodObject", (inst, def) => {
+  $ZodObjectJIT.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => objectProcessor(inst, ctx, json2, params);
+  util_exports.defineLazy(inst, "shape", () => {
+    return def.shape;
+  });
+  _installLazyMethods(inst, "ZodObject", {
+    keyof() {
+      return _enum2(Object.keys(this._zod.def.shape));
+    },
+    catchall(catchall) {
+      return this.clone(__spreadProps(__spreadValues({}, this._zod.def), { catchall }));
+    },
+    passthrough() {
+      return this.clone(__spreadProps(__spreadValues({}, this._zod.def), { catchall: unknown() }));
+    },
+    loose() {
+      return this.clone(__spreadProps(__spreadValues({}, this._zod.def), { catchall: unknown() }));
+    },
+    strict() {
+      return this.clone(__spreadProps(__spreadValues({}, this._zod.def), { catchall: never() }));
+    },
+    strip() {
+      return this.clone(__spreadProps(__spreadValues({}, this._zod.def), { catchall: void 0 }));
+    },
+    extend(incoming) {
+      return util_exports.extend(this, incoming);
+    },
+    safeExtend(incoming) {
+      return util_exports.safeExtend(this, incoming);
+    },
+    merge(other) {
+      return util_exports.merge(this, other);
+    },
+    pick(mask) {
+      return util_exports.pick(this, mask);
+    },
+    omit(mask) {
+      return util_exports.omit(this, mask);
+    },
+    partial(...args) {
+      return util_exports.partial(ZodOptional, this, args[0]);
+    },
+    required(...args) {
+      return util_exports.required(ZodNonOptional, this, args[0]);
+    }
+  });
+});
+function object(shape, params) {
+  const def = __spreadValues({
+    type: "object",
+    shape: shape != null ? shape : {}
+  }, util_exports.normalizeParams(params));
+  return new ZodObject(def);
+}
+function strictObject(shape, params) {
+  return new ZodObject(__spreadValues({
+    type: "object",
+    shape,
+    catchall: never()
+  }, util_exports.normalizeParams(params)));
+}
+function looseObject(shape, params) {
+  return new ZodObject(__spreadValues({
+    type: "object",
+    shape,
+    catchall: unknown()
+  }, util_exports.normalizeParams(params)));
+}
+var ZodUnion = /* @__PURE__ */ $constructor("ZodUnion", (inst, def) => {
+  $ZodUnion.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => unionProcessor(inst, ctx, json2, params);
+  inst.options = def.options;
+});
+function union(options, params) {
+  return new ZodUnion(__spreadValues({
+    type: "union",
+    options
+  }, util_exports.normalizeParams(params)));
+}
+var ZodXor = /* @__PURE__ */ $constructor("ZodXor", (inst, def) => {
+  ZodUnion.init(inst, def);
+  $ZodXor.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => unionProcessor(inst, ctx, json2, params);
+  inst.options = def.options;
+});
+function xor(options, params) {
+  return new ZodXor(__spreadValues({
+    type: "union",
+    options,
+    inclusive: false
+  }, util_exports.normalizeParams(params)));
+}
+var ZodDiscriminatedUnion = /* @__PURE__ */ $constructor("ZodDiscriminatedUnion", (inst, def) => {
+  ZodUnion.init(inst, def);
+  $ZodDiscriminatedUnion.init(inst, def);
+});
+function discriminatedUnion(discriminator, options, params) {
+  return new ZodDiscriminatedUnion(__spreadValues({
+    type: "union",
+    options,
+    discriminator
+  }, util_exports.normalizeParams(params)));
+}
+var ZodIntersection = /* @__PURE__ */ $constructor("ZodIntersection", (inst, def) => {
+  $ZodIntersection.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => intersectionProcessor(inst, ctx, json2, params);
+});
+function intersection(left, right) {
+  return new ZodIntersection({
+    type: "intersection",
+    left,
+    right
+  });
+}
+var ZodTuple = /* @__PURE__ */ $constructor("ZodTuple", (inst, def) => {
+  $ZodTuple.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => tupleProcessor(inst, ctx, json2, params);
+  inst.rest = (rest) => inst.clone(__spreadProps(__spreadValues({}, inst._zod.def), {
+    rest
+  }));
+});
+function tuple(items, _paramsOrRest, _params) {
+  const hasRest = _paramsOrRest instanceof $ZodType;
+  const params = hasRest ? _params : _paramsOrRest;
+  const rest = hasRest ? _paramsOrRest : null;
+  return new ZodTuple(__spreadValues({
+    type: "tuple",
+    items,
+    rest
+  }, util_exports.normalizeParams(params)));
+}
+var ZodRecord = /* @__PURE__ */ $constructor("ZodRecord", (inst, def) => {
+  $ZodRecord.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => recordProcessor(inst, ctx, json2, params);
+  inst.keyType = def.keyType;
+  inst.valueType = def.valueType;
+});
+function record(keyType, valueType, params) {
+  if (!valueType || !valueType._zod) {
+    return new ZodRecord(__spreadValues({
+      type: "record",
+      keyType: string2(),
+      valueType: keyType
+    }, util_exports.normalizeParams(valueType)));
+  }
+  return new ZodRecord(__spreadValues({
+    type: "record",
+    keyType,
+    valueType
+  }, util_exports.normalizeParams(params)));
+}
+function partialRecord(keyType, valueType, params) {
+  const k = clone(keyType);
+  k._zod.values = void 0;
+  return new ZodRecord(__spreadValues({
+    type: "record",
+    keyType: k,
+    valueType
+  }, util_exports.normalizeParams(params)));
+}
+function looseRecord(keyType, valueType, params) {
+  return new ZodRecord(__spreadValues({
+    type: "record",
+    keyType,
+    valueType,
+    mode: "loose"
+  }, util_exports.normalizeParams(params)));
+}
+var ZodMap = /* @__PURE__ */ $constructor("ZodMap", (inst, def) => {
+  $ZodMap.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => mapProcessor(inst, ctx, json2, params);
+  inst.keyType = def.keyType;
+  inst.valueType = def.valueType;
+  inst.min = (...args) => inst.check(_minSize(...args));
+  inst.nonempty = (params) => inst.check(_minSize(1, params));
+  inst.max = (...args) => inst.check(_maxSize(...args));
+  inst.size = (...args) => inst.check(_size(...args));
+});
+function map(keyType, valueType, params) {
+  return new ZodMap(__spreadValues({
+    type: "map",
+    keyType,
+    valueType
+  }, util_exports.normalizeParams(params)));
+}
+var ZodSet = /* @__PURE__ */ $constructor("ZodSet", (inst, def) => {
+  $ZodSet.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => setProcessor(inst, ctx, json2, params);
+  inst.min = (...args) => inst.check(_minSize(...args));
+  inst.nonempty = (params) => inst.check(_minSize(1, params));
+  inst.max = (...args) => inst.check(_maxSize(...args));
+  inst.size = (...args) => inst.check(_size(...args));
+});
+function set(valueType, params) {
+  return new ZodSet(__spreadValues({
+    type: "set",
+    valueType
+  }, util_exports.normalizeParams(params)));
+}
+var ZodEnum = /* @__PURE__ */ $constructor("ZodEnum", (inst, def) => {
+  $ZodEnum.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => enumProcessor(inst, ctx, json2, params);
+  inst.enum = def.entries;
+  inst.options = Object.values(def.entries);
+  const keys = new Set(Object.keys(def.entries));
+  inst.extract = (values, params) => {
+    const newEntries = {};
+    for (const value of values) {
+      if (keys.has(value)) {
+        newEntries[value] = def.entries[value];
+      } else
+        throw new Error(`Key ${value} not found in enum`);
+    }
+    return new ZodEnum(__spreadProps(__spreadValues(__spreadProps(__spreadValues({}, def), {
+      checks: []
+    }), util_exports.normalizeParams(params)), {
+      entries: newEntries
+    }));
+  };
+  inst.exclude = (values, params) => {
+    const newEntries = __spreadValues({}, def.entries);
+    for (const value of values) {
+      if (keys.has(value)) {
+        delete newEntries[value];
+      } else
+        throw new Error(`Key ${value} not found in enum`);
+    }
+    return new ZodEnum(__spreadProps(__spreadValues(__spreadProps(__spreadValues({}, def), {
+      checks: []
+    }), util_exports.normalizeParams(params)), {
+      entries: newEntries
+    }));
+  };
+});
+function _enum2(values, params) {
+  const entries = Array.isArray(values) ? Object.fromEntries(values.map((v) => [v, v])) : values;
+  return new ZodEnum(__spreadValues({
+    type: "enum",
+    entries
+  }, util_exports.normalizeParams(params)));
+}
+function nativeEnum(entries, params) {
+  return new ZodEnum(__spreadValues({
+    type: "enum",
+    entries
+  }, util_exports.normalizeParams(params)));
+}
+var ZodLiteral = /* @__PURE__ */ $constructor("ZodLiteral", (inst, def) => {
+  $ZodLiteral.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => literalProcessor(inst, ctx, json2, params);
+  inst.values = new Set(def.values);
+  Object.defineProperty(inst, "value", {
+    get() {
+      if (def.values.length > 1) {
+        throw new Error("This schema contains multiple valid literal values. Use `.values` instead.");
+      }
+      return def.values[0];
+    }
+  });
+});
+function literal(value, params) {
+  return new ZodLiteral(__spreadValues({
+    type: "literal",
+    values: Array.isArray(value) ? value : [value]
+  }, util_exports.normalizeParams(params)));
+}
+var ZodFile = /* @__PURE__ */ $constructor("ZodFile", (inst, def) => {
+  $ZodFile.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => fileProcessor(inst, ctx, json2, params);
+  inst.min = (size, params) => inst.check(_minSize(size, params));
+  inst.max = (size, params) => inst.check(_maxSize(size, params));
+  inst.mime = (types, params) => inst.check(_mime(Array.isArray(types) ? types : [types], params));
+});
+function file(params) {
+  return _file(ZodFile, params);
+}
+var ZodTransform = /* @__PURE__ */ $constructor("ZodTransform", (inst, def) => {
+  $ZodTransform.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => transformProcessor(inst, ctx, json2, params);
+  inst._zod.parse = (payload, _ctx) => {
+    if (_ctx.direction === "backward") {
+      throw new $ZodEncodeError(inst.constructor.name);
+    }
+    payload.addIssue = (issue2) => {
+      var _a5, _b, _c;
+      if (typeof issue2 === "string") {
+        payload.issues.push(util_exports.issue(issue2, payload.value, def));
+      } else {
+        const _issue = issue2;
+        if (_issue.fatal)
+          _issue.continue = false;
+        (_a5 = _issue.code) != null ? _a5 : _issue.code = "custom";
+        (_b = _issue.input) != null ? _b : _issue.input = payload.value;
+        (_c = _issue.inst) != null ? _c : _issue.inst = inst;
+        payload.issues.push(util_exports.issue(_issue));
+      }
+    };
+    const output = def.transform(payload.value, payload);
+    if (output instanceof Promise) {
+      return output.then((output2) => {
+        payload.value = output2;
+        payload.fallback = true;
+        return payload;
+      });
+    }
+    payload.value = output;
+    payload.fallback = true;
+    return payload;
+  };
+});
+function transform(fn) {
+  return new ZodTransform({
+    type: "transform",
+    transform: fn
+  });
+}
+var ZodOptional = /* @__PURE__ */ $constructor("ZodOptional", (inst, def) => {
+  $ZodOptional.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => optionalProcessor(inst, ctx, json2, params);
+  inst.unwrap = () => inst._zod.def.innerType;
+});
+function optional(innerType) {
+  return new ZodOptional({
+    type: "optional",
+    innerType
+  });
+}
+var ZodExactOptional = /* @__PURE__ */ $constructor("ZodExactOptional", (inst, def) => {
+  $ZodExactOptional.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => optionalProcessor(inst, ctx, json2, params);
+  inst.unwrap = () => inst._zod.def.innerType;
+});
+function exactOptional(innerType) {
+  return new ZodExactOptional({
+    type: "optional",
+    innerType
+  });
+}
+var ZodNullable = /* @__PURE__ */ $constructor("ZodNullable", (inst, def) => {
+  $ZodNullable.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => nullableProcessor(inst, ctx, json2, params);
+  inst.unwrap = () => inst._zod.def.innerType;
+});
+function nullable(innerType) {
+  return new ZodNullable({
+    type: "nullable",
+    innerType
+  });
+}
+function nullish2(innerType) {
+  return optional(nullable(innerType));
+}
+var ZodDefault = /* @__PURE__ */ $constructor("ZodDefault", (inst, def) => {
+  $ZodDefault.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => defaultProcessor(inst, ctx, json2, params);
+  inst.unwrap = () => inst._zod.def.innerType;
+  inst.removeDefault = inst.unwrap;
+});
+function _default2(innerType, defaultValue) {
+  return new ZodDefault({
+    type: "default",
+    innerType,
+    get defaultValue() {
+      return typeof defaultValue === "function" ? defaultValue() : util_exports.shallowClone(defaultValue);
+    }
+  });
+}
+var ZodPrefault = /* @__PURE__ */ $constructor("ZodPrefault", (inst, def) => {
+  $ZodPrefault.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => prefaultProcessor(inst, ctx, json2, params);
+  inst.unwrap = () => inst._zod.def.innerType;
+});
+function prefault(innerType, defaultValue) {
+  return new ZodPrefault({
+    type: "prefault",
+    innerType,
+    get defaultValue() {
+      return typeof defaultValue === "function" ? defaultValue() : util_exports.shallowClone(defaultValue);
+    }
+  });
+}
+var ZodNonOptional = /* @__PURE__ */ $constructor("ZodNonOptional", (inst, def) => {
+  $ZodNonOptional.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => nonoptionalProcessor(inst, ctx, json2, params);
+  inst.unwrap = () => inst._zod.def.innerType;
+});
+function nonoptional(innerType, params) {
+  return new ZodNonOptional(__spreadValues({
+    type: "nonoptional",
+    innerType
+  }, util_exports.normalizeParams(params)));
+}
+var ZodSuccess = /* @__PURE__ */ $constructor("ZodSuccess", (inst, def) => {
+  $ZodSuccess.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => successProcessor(inst, ctx, json2, params);
+  inst.unwrap = () => inst._zod.def.innerType;
+});
+function success(innerType) {
+  return new ZodSuccess({
+    type: "success",
+    innerType
+  });
+}
+var ZodCatch = /* @__PURE__ */ $constructor("ZodCatch", (inst, def) => {
+  $ZodCatch.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => catchProcessor(inst, ctx, json2, params);
+  inst.unwrap = () => inst._zod.def.innerType;
+  inst.removeCatch = inst.unwrap;
+});
+function _catch2(innerType, catchValue) {
+  return new ZodCatch({
+    type: "catch",
+    innerType,
+    catchValue: typeof catchValue === "function" ? catchValue : () => catchValue
+  });
+}
+var ZodNaN = /* @__PURE__ */ $constructor("ZodNaN", (inst, def) => {
+  $ZodNaN.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => nanProcessor(inst, ctx, json2, params);
+});
+function nan(params) {
+  return _nan(ZodNaN, params);
+}
+var ZodPipe = /* @__PURE__ */ $constructor("ZodPipe", (inst, def) => {
+  $ZodPipe.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => pipeProcessor(inst, ctx, json2, params);
+  inst.in = def.in;
+  inst.out = def.out;
+});
+function pipe(in_, out) {
+  return new ZodPipe({
+    type: "pipe",
+    in: in_,
+    out
+  });
+}
+var ZodCodec = /* @__PURE__ */ $constructor("ZodCodec", (inst, def) => {
+  ZodPipe.init(inst, def);
+  $ZodCodec.init(inst, def);
+});
+function codec(in_, out, params) {
+  return new ZodCodec({
+    type: "pipe",
+    in: in_,
+    out,
+    transform: params.decode,
+    reverseTransform: params.encode
+  });
+}
+function invertCodec(codec2) {
+  const def = codec2._zod.def;
+  return new ZodCodec({
+    type: "pipe",
+    in: def.out,
+    out: def.in,
+    transform: def.reverseTransform,
+    reverseTransform: def.transform
+  });
+}
+var ZodPreprocess = /* @__PURE__ */ $constructor("ZodPreprocess", (inst, def) => {
+  ZodPipe.init(inst, def);
+  $ZodPreprocess.init(inst, def);
+});
+var ZodReadonly = /* @__PURE__ */ $constructor("ZodReadonly", (inst, def) => {
+  $ZodReadonly.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => readonlyProcessor(inst, ctx, json2, params);
+  inst.unwrap = () => inst._zod.def.innerType;
+});
+function readonly(innerType) {
+  return new ZodReadonly({
+    type: "readonly",
+    innerType
+  });
+}
+var ZodTemplateLiteral = /* @__PURE__ */ $constructor("ZodTemplateLiteral", (inst, def) => {
+  $ZodTemplateLiteral.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => templateLiteralProcessor(inst, ctx, json2, params);
+});
+function templateLiteral(parts, params) {
+  return new ZodTemplateLiteral(__spreadValues({
+    type: "template_literal",
+    parts
+  }, util_exports.normalizeParams(params)));
+}
+var ZodLazy = /* @__PURE__ */ $constructor("ZodLazy", (inst, def) => {
+  $ZodLazy.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => lazyProcessor(inst, ctx, json2, params);
+  inst.unwrap = () => inst._zod.def.getter();
+});
+function lazy(getter) {
+  return new ZodLazy({
+    type: "lazy",
+    getter
+  });
+}
+var ZodPromise = /* @__PURE__ */ $constructor("ZodPromise", (inst, def) => {
+  $ZodPromise.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => promiseProcessor(inst, ctx, json2, params);
+  inst.unwrap = () => inst._zod.def.innerType;
+});
+function promise(innerType) {
+  return new ZodPromise({
+    type: "promise",
+    innerType
+  });
+}
+var ZodFunction = /* @__PURE__ */ $constructor("ZodFunction", (inst, def) => {
+  $ZodFunction.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => functionProcessor(inst, ctx, json2, params);
+});
+function _function(params) {
+  var _a5, _b;
+  return new ZodFunction({
+    type: "function",
+    input: Array.isArray(params == null ? void 0 : params.input) ? tuple(params == null ? void 0 : params.input) : (_a5 = params == null ? void 0 : params.input) != null ? _a5 : array(unknown()),
+    output: (_b = params == null ? void 0 : params.output) != null ? _b : unknown()
+  });
+}
+var ZodCustom = /* @__PURE__ */ $constructor("ZodCustom", (inst, def) => {
+  $ZodCustom.init(inst, def);
+  ZodType.init(inst, def);
+  inst._zod.processJSONSchema = (ctx, json2, params) => customProcessor(inst, ctx, json2, params);
+});
+function check(fn) {
+  const ch = new $ZodCheck({
+    check: "custom"
+  });
+  ch._zod.check = fn;
+  return ch;
+}
+function custom(fn, _params) {
+  return _custom(ZodCustom, fn != null ? fn : () => true, _params);
+}
+function refine(fn, _params = {}) {
+  return _refine(ZodCustom, fn, _params);
+}
+function superRefine(fn, params) {
+  return _superRefine(fn, params);
+}
+var describe2 = describe;
+var meta2 = meta;
+function _instanceof(cls, params = {}) {
+  const inst = new ZodCustom(__spreadValues({
+    type: "custom",
+    check: "custom",
+    fn: (data) => data instanceof cls,
+    abort: true
+  }, util_exports.normalizeParams(params)));
+  inst._zod.bag.Class = cls;
+  inst._zod.check = (payload) => {
+    var _a5;
+    if (!(payload.value instanceof cls)) {
+      payload.issues.push({
+        code: "invalid_type",
+        expected: cls.name,
+        input: payload.value,
+        inst,
+        path: [...(_a5 = inst._zod.def.path) != null ? _a5 : []]
+      });
+    }
+  };
+  return inst;
+}
+var stringbool = (...args) => _stringbool({
+  Codec: ZodCodec,
+  Boolean: ZodBoolean,
+  String: ZodString
+}, ...args);
+function json(params) {
+  const jsonSchema = lazy(() => {
+    return union([string2(params), number2(), boolean2(), _null3(), array(jsonSchema), record(string2(), jsonSchema)]);
+  });
+  return jsonSchema;
+}
+function preprocess(fn, schema) {
+  return new ZodPreprocess({
+    type: "pipe",
+    in: transform(fn),
+    out: schema
+  });
+}
+
+// node_modules/zod/v4/classic/compat.js
+var ZodIssueCode = {
+  invalid_type: "invalid_type",
+  too_big: "too_big",
+  too_small: "too_small",
+  invalid_format: "invalid_format",
+  not_multiple_of: "not_multiple_of",
+  unrecognized_keys: "unrecognized_keys",
+  invalid_union: "invalid_union",
+  invalid_key: "invalid_key",
+  invalid_element: "invalid_element",
+  invalid_value: "invalid_value",
+  custom: "custom"
+};
+function setErrorMap(map3) {
+  config({
+    customError: map3
+  });
+}
+function getErrorMap() {
+  return config().customError;
+}
+var ZodFirstPartyTypeKind;
+(function(ZodFirstPartyTypeKind2) {
+})(ZodFirstPartyTypeKind || (ZodFirstPartyTypeKind = {}));
+
+// node_modules/zod/v4/classic/from-json-schema.js
+var z = __spreadProps(__spreadValues(__spreadValues({}, schemas_exports2), checks_exports2), {
+  iso: iso_exports
+});
+var RECOGNIZED_KEYS = /* @__PURE__ */ new Set([
+  "$schema",
+  "$ref",
+  "$defs",
+  "definitions",
+  "$id",
+  "id",
+  "$comment",
+  "$anchor",
+  "$vocabulary",
+  "$dynamicRef",
+  "$dynamicAnchor",
+  "type",
+  "enum",
+  "const",
+  "anyOf",
+  "oneOf",
+  "allOf",
+  "not",
+  "properties",
+  "required",
+  "additionalProperties",
+  "patternProperties",
+  "propertyNames",
+  "minProperties",
+  "maxProperties",
+  "items",
+  "prefixItems",
+  "additionalItems",
+  "minItems",
+  "maxItems",
+  "uniqueItems",
+  "contains",
+  "minContains",
+  "maxContains",
+  "minLength",
+  "maxLength",
+  "pattern",
+  "format",
+  "minimum",
+  "maximum",
+  "exclusiveMinimum",
+  "exclusiveMaximum",
+  "multipleOf",
+  "description",
+  "default",
+  "contentEncoding",
+  "contentMediaType",
+  "contentSchema",
+  "unevaluatedItems",
+  "unevaluatedProperties",
+  "if",
+  "then",
+  "else",
+  "dependentSchemas",
+  "dependentRequired",
+  "nullable",
+  "readOnly"
+]);
+function detectVersion(schema, defaultTarget) {
+  const $schema = schema.$schema;
+  if ($schema === "https://json-schema.org/draft/2020-12/schema") {
+    return "draft-2020-12";
+  }
+  if ($schema === "http://json-schema.org/draft-07/schema#") {
+    return "draft-7";
+  }
+  if ($schema === "http://json-schema.org/draft-04/schema#") {
+    return "draft-4";
+  }
+  return defaultTarget != null ? defaultTarget : "draft-2020-12";
+}
+function resolveRef(ref, ctx) {
+  if (!ref.startsWith("#")) {
+    throw new Error("External $ref is not supported, only local refs (#/...) are allowed");
+  }
+  const path = ref.slice(1).split("/").filter(Boolean);
+  if (path.length === 0) {
+    return ctx.rootSchema;
+  }
+  const defsKey = ctx.version === "draft-2020-12" ? "$defs" : "definitions";
+  if (path[0] === defsKey) {
+    const key = path[1];
+    if (!key || !ctx.defs[key]) {
+      throw new Error(`Reference not found: ${ref}`);
+    }
+    return ctx.defs[key];
+  }
+  throw new Error(`Reference not found: ${ref}`);
+}
+function convertBaseSchema(schema, ctx) {
+  if (schema.not !== void 0) {
+    if (typeof schema.not === "object" && Object.keys(schema.not).length === 0) {
+      return z.never();
+    }
+    throw new Error("not is not supported in Zod (except { not: {} } for never)");
+  }
+  if (schema.unevaluatedItems !== void 0) {
+    throw new Error("unevaluatedItems is not supported");
+  }
+  if (schema.unevaluatedProperties !== void 0) {
+    throw new Error("unevaluatedProperties is not supported");
+  }
+  if (schema.if !== void 0 || schema.then !== void 0 || schema.else !== void 0) {
+    throw new Error("Conditional schemas (if/then/else) are not supported");
+  }
+  if (schema.dependentSchemas !== void 0 || schema.dependentRequired !== void 0) {
+    throw new Error("dependentSchemas and dependentRequired are not supported");
+  }
+  if (schema.$ref) {
+    const refPath = schema.$ref;
+    if (ctx.refs.has(refPath)) {
+      return ctx.refs.get(refPath);
+    }
+    if (ctx.processing.has(refPath)) {
+      return z.lazy(() => {
+        if (!ctx.refs.has(refPath)) {
+          throw new Error(`Circular reference not resolved: ${refPath}`);
+        }
+        return ctx.refs.get(refPath);
+      });
+    }
+    ctx.processing.add(refPath);
+    const resolved = resolveRef(refPath, ctx);
+    const zodSchema2 = convertSchema(resolved, ctx);
+    ctx.refs.set(refPath, zodSchema2);
+    ctx.processing.delete(refPath);
+    return zodSchema2;
+  }
+  if (schema.enum !== void 0) {
+    const enumValues = schema.enum;
+    if (ctx.version === "openapi-3.0" && schema.nullable === true && enumValues.length === 1 && enumValues[0] === null) {
+      return z.null();
+    }
+    if (enumValues.length === 0) {
+      return z.never();
+    }
+    if (enumValues.length === 1) {
+      return z.literal(enumValues[0]);
+    }
+    if (enumValues.every((v) => typeof v === "string")) {
+      return z.enum(enumValues);
+    }
+    const literalSchemas = enumValues.map((v) => z.literal(v));
+    if (literalSchemas.length < 2) {
+      return literalSchemas[0];
+    }
+    return z.union([literalSchemas[0], literalSchemas[1], ...literalSchemas.slice(2)]);
+  }
+  if (schema.const !== void 0) {
+    return z.literal(schema.const);
+  }
+  const type = schema.type;
+  if (Array.isArray(type)) {
+    const typeSchemas = type.map((t) => {
+      const typeSchema = __spreadProps(__spreadValues({}, schema), { type: t });
+      return convertBaseSchema(typeSchema, ctx);
+    });
+    if (typeSchemas.length === 0) {
+      return z.never();
+    }
+    if (typeSchemas.length === 1) {
+      return typeSchemas[0];
+    }
+    return z.union(typeSchemas);
+  }
+  if (!type) {
+    return z.any();
+  }
+  let zodSchema;
+  switch (type) {
+    case "string": {
+      let stringSchema = z.string();
+      if (schema.format) {
+        const format = schema.format;
+        if (format === "email") {
+          stringSchema = stringSchema.check(z.email());
+        } else if (format === "uri" || format === "uri-reference") {
+          stringSchema = stringSchema.check(z.url());
+        } else if (format === "uuid" || format === "guid") {
+          stringSchema = stringSchema.check(z.uuid());
+        } else if (format === "date-time") {
+          stringSchema = stringSchema.check(z.iso.datetime());
+        } else if (format === "date") {
+          stringSchema = stringSchema.check(z.iso.date());
+        } else if (format === "time") {
+          stringSchema = stringSchema.check(z.iso.time());
+        } else if (format === "duration") {
+          stringSchema = stringSchema.check(z.iso.duration());
+        } else if (format === "ipv4") {
+          stringSchema = stringSchema.check(z.ipv4());
+        } else if (format === "ipv6") {
+          stringSchema = stringSchema.check(z.ipv6());
+        } else if (format === "mac") {
+          stringSchema = stringSchema.check(z.mac());
+        } else if (format === "cidr") {
+          stringSchema = stringSchema.check(z.cidrv4());
+        } else if (format === "cidr-v6") {
+          stringSchema = stringSchema.check(z.cidrv6());
+        } else if (format === "base64") {
+          stringSchema = stringSchema.check(z.base64());
+        } else if (format === "base64url") {
+          stringSchema = stringSchema.check(z.base64url());
+        } else if (format === "e164") {
+          stringSchema = stringSchema.check(z.e164());
+        } else if (format === "jwt") {
+          stringSchema = stringSchema.check(z.jwt());
+        } else if (format === "emoji") {
+          stringSchema = stringSchema.check(z.emoji());
+        } else if (format === "nanoid") {
+          stringSchema = stringSchema.check(z.nanoid());
+        } else if (format === "cuid") {
+          stringSchema = stringSchema.check(z.cuid());
+        } else if (format === "cuid2") {
+          stringSchema = stringSchema.check(z.cuid2());
+        } else if (format === "ulid") {
+          stringSchema = stringSchema.check(z.ulid());
+        } else if (format === "xid") {
+          stringSchema = stringSchema.check(z.xid());
+        } else if (format === "ksuid") {
+          stringSchema = stringSchema.check(z.ksuid());
+        }
+      }
+      if (typeof schema.minLength === "number") {
+        stringSchema = stringSchema.min(schema.minLength);
+      }
+      if (typeof schema.maxLength === "number") {
+        stringSchema = stringSchema.max(schema.maxLength);
+      }
+      if (schema.pattern) {
+        stringSchema = stringSchema.regex(new RegExp(schema.pattern));
+      }
+      zodSchema = stringSchema;
+      break;
+    }
+    case "number":
+    case "integer": {
+      let numberSchema = type === "integer" ? z.number().int() : z.number();
+      if (typeof schema.minimum === "number") {
+        numberSchema = numberSchema.min(schema.minimum);
+      }
+      if (typeof schema.maximum === "number") {
+        numberSchema = numberSchema.max(schema.maximum);
+      }
+      if (typeof schema.exclusiveMinimum === "number") {
+        numberSchema = numberSchema.gt(schema.exclusiveMinimum);
+      } else if (schema.exclusiveMinimum === true && typeof schema.minimum === "number") {
+        numberSchema = numberSchema.gt(schema.minimum);
+      }
+      if (typeof schema.exclusiveMaximum === "number") {
+        numberSchema = numberSchema.lt(schema.exclusiveMaximum);
+      } else if (schema.exclusiveMaximum === true && typeof schema.maximum === "number") {
+        numberSchema = numberSchema.lt(schema.maximum);
+      }
+      if (typeof schema.multipleOf === "number") {
+        numberSchema = numberSchema.multipleOf(schema.multipleOf);
+      }
+      zodSchema = numberSchema;
+      break;
+    }
+    case "boolean": {
+      zodSchema = z.boolean();
+      break;
+    }
+    case "null": {
+      zodSchema = z.null();
+      break;
+    }
+    case "object": {
+      const shape = {};
+      const properties = schema.properties || {};
+      const requiredSet = new Set(schema.required || []);
+      for (const [key, propSchema] of Object.entries(properties)) {
+        const propZodSchema = convertSchema(propSchema, ctx);
+        shape[key] = requiredSet.has(key) ? propZodSchema : propZodSchema.optional();
+      }
+      if (schema.propertyNames) {
+        const keySchema = convertSchema(schema.propertyNames, ctx);
+        const valueSchema = schema.additionalProperties && typeof schema.additionalProperties === "object" ? convertSchema(schema.additionalProperties, ctx) : z.any();
+        if (Object.keys(shape).length === 0) {
+          zodSchema = z.record(keySchema, valueSchema);
+          break;
+        }
+        const objectSchema2 = z.object(shape).passthrough();
+        const recordSchema = z.looseRecord(keySchema, valueSchema);
+        zodSchema = z.intersection(objectSchema2, recordSchema);
+        break;
+      }
+      if (schema.patternProperties) {
+        const patternProps = schema.patternProperties;
+        const patternKeys = Object.keys(patternProps);
+        const looseRecords = [];
+        for (const pattern of patternKeys) {
+          const patternValue = convertSchema(patternProps[pattern], ctx);
+          const keySchema = z.string().regex(new RegExp(pattern));
+          looseRecords.push(z.looseRecord(keySchema, patternValue));
+        }
+        const schemasToIntersect = [];
+        if (Object.keys(shape).length > 0) {
+          schemasToIntersect.push(z.object(shape).passthrough());
+        }
+        schemasToIntersect.push(...looseRecords);
+        if (schemasToIntersect.length === 0) {
+          zodSchema = z.object({}).passthrough();
+        } else if (schemasToIntersect.length === 1) {
+          zodSchema = schemasToIntersect[0];
+        } else {
+          let result = z.intersection(schemasToIntersect[0], schemasToIntersect[1]);
+          for (let i = 2; i < schemasToIntersect.length; i++) {
+            result = z.intersection(result, schemasToIntersect[i]);
+          }
+          zodSchema = result;
+        }
+        break;
+      }
+      const objectSchema = z.object(shape);
+      if (schema.additionalProperties === false) {
+        zodSchema = objectSchema.strict();
+      } else if (typeof schema.additionalProperties === "object") {
+        zodSchema = objectSchema.catchall(convertSchema(schema.additionalProperties, ctx));
+      } else {
+        zodSchema = objectSchema.passthrough();
+      }
+      break;
+    }
+    case "array": {
+      const prefixItems = schema.prefixItems;
+      const items = schema.items;
+      if (prefixItems && Array.isArray(prefixItems)) {
+        const tupleItems = prefixItems.map((item) => convertSchema(item, ctx));
+        const rest = items && typeof items === "object" && !Array.isArray(items) ? convertSchema(items, ctx) : void 0;
+        if (rest) {
+          zodSchema = z.tuple(tupleItems).rest(rest);
+        } else {
+          zodSchema = z.tuple(tupleItems);
+        }
+        if (typeof schema.minItems === "number") {
+          zodSchema = zodSchema.check(z.minLength(schema.minItems));
+        }
+        if (typeof schema.maxItems === "number") {
+          zodSchema = zodSchema.check(z.maxLength(schema.maxItems));
+        }
+      } else if (Array.isArray(items)) {
+        const tupleItems = items.map((item) => convertSchema(item, ctx));
+        const rest = schema.additionalItems && typeof schema.additionalItems === "object" ? convertSchema(schema.additionalItems, ctx) : void 0;
+        if (rest) {
+          zodSchema = z.tuple(tupleItems).rest(rest);
+        } else {
+          zodSchema = z.tuple(tupleItems);
+        }
+        if (typeof schema.minItems === "number") {
+          zodSchema = zodSchema.check(z.minLength(schema.minItems));
+        }
+        if (typeof schema.maxItems === "number") {
+          zodSchema = zodSchema.check(z.maxLength(schema.maxItems));
+        }
+      } else if (items !== void 0) {
+        const element = convertSchema(items, ctx);
+        let arraySchema = z.array(element);
+        if (typeof schema.minItems === "number") {
+          arraySchema = arraySchema.min(schema.minItems);
+        }
+        if (typeof schema.maxItems === "number") {
+          arraySchema = arraySchema.max(schema.maxItems);
+        }
+        zodSchema = arraySchema;
+      } else {
+        zodSchema = z.array(z.any());
+      }
+      break;
+    }
+    default:
+      throw new Error(`Unsupported type: ${type}`);
+  }
+  return zodSchema;
+}
+function convertSchema(schema, ctx) {
+  if (typeof schema === "boolean") {
+    return schema ? z.any() : z.never();
+  }
+  let baseSchema = convertBaseSchema(schema, ctx);
+  const hasExplicitType = schema.type || schema.enum !== void 0 || schema.const !== void 0;
+  if (schema.anyOf && Array.isArray(schema.anyOf)) {
+    const options = schema.anyOf.map((s) => convertSchema(s, ctx));
+    const anyOfUnion = z.union(options);
+    baseSchema = hasExplicitType ? z.intersection(baseSchema, anyOfUnion) : anyOfUnion;
+  }
+  if (schema.oneOf && Array.isArray(schema.oneOf)) {
+    const options = schema.oneOf.map((s) => convertSchema(s, ctx));
+    const oneOfUnion = z.xor(options);
+    baseSchema = hasExplicitType ? z.intersection(baseSchema, oneOfUnion) : oneOfUnion;
+  }
+  if (schema.allOf && Array.isArray(schema.allOf)) {
+    if (schema.allOf.length === 0) {
+      baseSchema = hasExplicitType ? baseSchema : z.any();
+    } else {
+      let result = hasExplicitType ? baseSchema : convertSchema(schema.allOf[0], ctx);
+      const startIdx = hasExplicitType ? 0 : 1;
+      for (let i = startIdx; i < schema.allOf.length; i++) {
+        result = z.intersection(result, convertSchema(schema.allOf[i], ctx));
+      }
+      baseSchema = result;
+    }
+  }
+  if (schema.nullable === true && ctx.version === "openapi-3.0") {
+    baseSchema = z.nullable(baseSchema);
+  }
+  if (schema.readOnly === true) {
+    baseSchema = z.readonly(baseSchema);
+  }
+  if (schema.default !== void 0) {
+    baseSchema = baseSchema.default(schema.default);
+  }
+  const extraMeta = {};
+  const coreMetadataKeys = ["$id", "id", "$comment", "$anchor", "$vocabulary", "$dynamicRef", "$dynamicAnchor"];
+  for (const key of coreMetadataKeys) {
+    if (key in schema) {
+      extraMeta[key] = schema[key];
+    }
+  }
+  const contentMetadataKeys = ["contentEncoding", "contentMediaType", "contentSchema"];
+  for (const key of contentMetadataKeys) {
+    if (key in schema) {
+      extraMeta[key] = schema[key];
+    }
+  }
+  for (const key of Object.keys(schema)) {
+    if (!RECOGNIZED_KEYS.has(key)) {
+      extraMeta[key] = schema[key];
+    }
+  }
+  if (Object.keys(extraMeta).length > 0) {
+    ctx.registry.add(baseSchema, extraMeta);
+  }
+  if (schema.description) {
+    baseSchema = baseSchema.describe(schema.description);
+  }
+  return baseSchema;
+}
+function fromJSONSchema(schema, params) {
+  var _a5;
+  if (typeof schema === "boolean") {
+    return schema ? z.any() : z.never();
+  }
+  let normalized;
+  try {
+    normalized = JSON.parse(JSON.stringify(schema));
+  } catch (e) {
+    throw new Error("fromJSONSchema input is not valid JSON (possibly cyclic); use $defs/$ref for recursive schemas");
+  }
+  const version2 = detectVersion(normalized, params == null ? void 0 : params.defaultTarget);
+  const defs = normalized.$defs || normalized.definitions || {};
+  const ctx = {
+    version: version2,
+    defs,
+    refs: /* @__PURE__ */ new Map(),
+    processing: /* @__PURE__ */ new Set(),
+    rootSchema: normalized,
+    registry: (_a5 = params == null ? void 0 : params.registry) != null ? _a5 : globalRegistry
+  };
+  return convertSchema(normalized, ctx);
+}
+
+// node_modules/zod/v4/classic/coerce.js
+var coerce_exports = {};
+__export(coerce_exports, {
+  bigint: () => bigint3,
+  boolean: () => boolean3,
+  date: () => date4,
+  number: () => number3,
+  string: () => string3
+});
+function string3(params) {
+  return _coercedString(ZodString, params);
+}
+function number3(params) {
+  return _coercedNumber(ZodNumber, params);
+}
+function boolean3(params) {
+  return _coercedBoolean(ZodBoolean, params);
+}
+function bigint3(params) {
+  return _coercedBigint(ZodBigInt, params);
+}
+function date4(params) {
+  return _coercedDate(ZodDate, params);
+}
+
+// node_modules/zod/v4/classic/external.js
+config(en_default());
+
+// src/schemas/exif.ts
 var piexif = __toESM(require_piexif());
+var ExifSectionSchema = external_exports.record(external_exports.string(), external_exports.unknown());
+var ExifDataSchema = external_exports.object({
+  "0th": ExifSectionSchema.default({}),
+  "Exif": ExifSectionSchema.default({}),
+  "GPS": ExifSectionSchema.default({}),
+  "1st": ExifSectionSchema.default({}),
+  "thumbnail": external_exports.unknown().nullable().default(null)
+});
+function safeParseExifData(data) {
+  const result = ExifDataSchema.safeParse(data);
+  return result.success ? result.data : null;
+}
+function ensureExifSection(data, section) {
+  const existing = data[section];
+  if (existing && typeof existing === "object" && !Array.isArray(existing)) {
+    return existing;
+  }
+  const newSection = {};
+  data[section] = newSection;
+  return newSection;
+}
+function getExifValue(data, section, tagCode) {
+  const sectionData = ensureExifSection(data, section);
+  const value = sectionData[tagCode];
+  return value !== void 0 && value !== null ? String(value) : "";
+}
+function setExifValue(data, section, tagCode, value) {
+  const sectionData = ensureExifSection(data, section);
+  sectionData[tagCode] = value;
+}
+function createEmptyExif() {
+  return ExifDataSchema.parse({
+    "0th": {},
+    "Exif": {},
+    "GPS": {},
+    "1st": {},
+    "thumbnail": null
+  });
+}
+function dmsToDecimal(dms, ref) {
+  const degrees = dms[0][0] / dms[0][1];
+  const minutes = dms[1][0] / dms[1][1];
+  const seconds = dms[2][0] / dms[2][1];
+  let decimal = degrees + minutes / 60 + seconds / 3600;
+  if (ref === "S" || ref === "W") {
+    decimal = -decimal;
+  }
+  return decimal;
+}
+function decimalToDms(value, isLatitude) {
+  const ref = isLatitude ? value >= 0 ? "N" : "S" : value >= 0 ? "E" : "W";
+  const absValue = Math.abs(value);
+  const degrees = Math.floor(absValue);
+  const minutesFloat = (absValue - degrees) * 60;
+  const minutes = Math.floor(minutesFloat);
+  const seconds = (minutesFloat - minutes) * 60;
+  return {
+    dms: [
+      [degrees, 1],
+      [minutes, 1],
+      [Math.round(seconds * 1e4), 1e4]
+    ],
+    ref
+  };
+}
+function getGpsCoordinates(data) {
+  const gps = data.GPS;
+  if (!gps || typeof gps !== "object")
+    return null;
+  const latDms = gps[piexif.GPSIFD.GPSLatitude];
+  const latRef = gps[piexif.GPSIFD.GPSLatitudeRef];
+  const lngDms = gps[piexif.GPSIFD.GPSLongitude];
+  const lngRef = gps[piexif.GPSIFD.GPSLongitudeRef];
+  if (!Array.isArray(latDms) || latDms.length !== 3 || !Array.isArray(lngDms) || lngDms.length !== 3 || typeof latRef !== "string" || typeof lngRef !== "string") {
+    return null;
+  }
+  try {
+    const lat = dmsToDecimal(latDms, latRef);
+    const lng = dmsToDecimal(lngDms, lngRef);
+    return { lat, lng };
+  } catch (e) {
+    return null;
+  }
+}
+function setGpsCoordinates(data, lat, lng) {
+  const gps = ensureExifSection(data, "GPS");
+  const latData = decimalToDms(lat, true);
+  const lngData = decimalToDms(lng, false);
+  gps[piexif.GPSIFD.GPSLatitude] = latData.dms;
+  gps[piexif.GPSIFD.GPSLatitudeRef] = latData.ref;
+  gps[piexif.GPSIFD.GPSLongitude] = lngData.dms;
+  gps[piexif.GPSIFD.GPSLongitudeRef] = lngData.ref;
+}
+function clearGpsCoordinates(data) {
+  const gps = ensureExifSection(data, "GPS");
+  delete gps[piexif.GPSIFD.GPSLatitude];
+  delete gps[piexif.GPSIFD.GPSLatitudeRef];
+  delete gps[piexif.GPSIFD.GPSLongitude];
+  delete gps[piexif.GPSIFD.GPSLongitudeRef];
+  delete gps[piexif.GPSIFD.GPSAltitude];
+  delete gps[piexif.GPSIFD.GPSAltitudeRef];
+}
+
+// src/components/JsonTreeEditor.ts
+var JsonTreeEditor = class {
+  constructor(container, data, onChange, orientation2 = 1) {
+    this.expandedPaths = /* @__PURE__ */ new Set();
+    this.expandedThumbnails = /* @__PURE__ */ new Set();
+    this.editingPath = null;
+    this.editingKeyPath = null;
+    this.container = container;
+    this.data = data;
+    this.onChange = onChange;
+    this.orientation = orientation2;
+    this.render();
+  }
+  setData(data) {
+    this.data = data;
+    this.render();
+  }
+  getData() {
+    return this.data;
+  }
+  render() {
+    this.container.empty();
+    this.container.addClass("json-tree-editor");
+    const tree = this.container.createDiv("json-tree");
+    this.renderValue(tree, this.data, "", 0);
+  }
+  renderValue(container, value, path, depth) {
+    if (value === null) {
+      const span = container.createSpan({ text: "null", cls: "json-null json-editable" });
+      if (this.editingPath !== path) {
+        span.addEventListener("click", () => this.startEdit(path, value));
+      }
+    } else if (typeof value === "boolean") {
+      const span = container.createSpan({ text: String(value), cls: "json-boolean json-editable" });
+      if (this.editingPath !== path) {
+        span.addEventListener("click", () => this.startEdit(path, value));
+      }
+    } else if (typeof value === "number") {
+      const span = container.createSpan({ text: String(value), cls: "json-number json-editable" });
+      if (this.editingPath !== path) {
+        span.addEventListener("click", () => this.startEdit(path, value));
+      }
+    } else if (typeof value === "string") {
+      const span = container.createSpan({ cls: "json-string json-editable" });
+      span.textContent = `"${value}"`;
+      if (this.editingPath !== path) {
+        span.addEventListener("click", () => this.startEdit(path, value));
+      }
+    } else if (Array.isArray(value)) {
+      this.renderArray(container, value, path, depth);
+    } else if (typeof value === "object") {
+      this.renderObject(container, value, path, depth);
+    }
+  }
+  startEdit(path, originalValue) {
+    this.editingPath = path;
+    this.render();
+    const input = this.container.querySelector(`[data-path="${path}"]`);
+    if (input) {
+      input.focus();
+      input.select();
+    }
+  }
+  getValueAtPath(path) {
+    if (path === "")
+      return this.data;
+    const parts = path.split(/\.|\[(\d+)\]/).filter(Boolean);
+    let current = this.data;
+    for (const part of parts) {
+      if (current && typeof current === "object") {
+        current = current[part];
+      } else {
+        return void 0;
+      }
+    }
+    return current;
+  }
+  setValueAtPath(path, newValue) {
+    if (path === "") {
+      this.data = newValue;
+      return;
+    }
+    const parts = path.split(/\.|\[(\d+)\]/).filter(Boolean);
+    const lastKey = parts.pop();
+    let current = this.data;
+    for (const part of parts) {
+      if (current && typeof current === "object") {
+        current = current[part];
+      }
+    }
+    if (current && typeof current === "object") {
+      current[lastKey] = newValue;
+    }
+  }
+  parseValue(input, originalValue) {
+    const trimmed = input.trim();
+    if (trimmed === "null")
+      return null;
+    if (trimmed === "true")
+      return true;
+    if (trimmed === "false")
+      return false;
+    if (/^-?\d+$/.test(trimmed)) {
+      return parseInt(trimmed, 10);
+    }
+    if (/^-?\d+\.\d+$/.test(trimmed)) {
+      return parseFloat(trimmed);
+    }
+    return trimmed;
+  }
+  isThumbnailData(value) {
+    if (typeof value !== "string")
+      return false;
+    if (value.length < 100)
+      return false;
+    return true;
+  }
+  calculateBinarySize(binaryString) {
+    const bytes = binaryString.length;
+    if (bytes < 1024) {
+      return `${bytes}B`;
+    }
+    return `${(bytes / 1024).toFixed(1)}KB`;
+  }
+  toggleThumbnail(path) {
+    if (this.expandedThumbnails.has(path)) {
+      this.expandedThumbnails.delete(path);
+    } else {
+      this.expandedThumbnails.add(path);
+    }
+    this.render();
+  }
+  commitEdit(path, input) {
+    const rawValue = input.value;
+    const originalValue = this.getValueAtPath(path);
+    const newValue = this.parseValue(rawValue, originalValue);
+    this.setValueAtPath(path, newValue);
+    this.editingPath = null;
+    this.onChange(this.data);
+    this.render();
+  }
+  cancelEdit() {
+    this.editingPath = null;
+    this.render();
+  }
+  renderEditableValue(container, path, value) {
+    const input = container.createEl("input", {
+      cls: "json-inline-input",
+      attr: { "data-path": path }
+    });
+    if (value === null) {
+      input.value = "null";
+    } else if (typeof value === "boolean") {
+      input.value = String(value);
+    } else if (typeof value === "number") {
+      input.value = String(value);
+    } else if (typeof value === "string") {
+      input.value = value;
+    }
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        this.commitEdit(path, input);
+      } else if (e.key === "Escape") {
+        this.cancelEdit();
+      }
+    });
+    input.addEventListener("blur", () => {
+      this.commitEdit(path, input);
+    });
+  }
+  renderThumbnail(container, binaryData, path) {
+    const isExpanded = this.expandedThumbnails.has(path);
+    const size = this.calculateBinarySize(binaryData);
+    if (!isExpanded) {
+      const placeholder = container.createSpan({
+        cls: "json-thumbnail-placeholder",
+        text: `<embedded image: ${size}>`
+      });
+      placeholder.addEventListener("click", () => this.toggleThumbnail(path));
+    } else {
+      const previewContainer = container.createDiv("json-thumbnail-preview");
+      try {
+        const bytes = new Uint8Array(binaryData.length);
+        for (let i = 0; i < binaryData.length; i++) {
+          bytes[i] = binaryData.charCodeAt(i);
+        }
+        const blob = new Blob([bytes], { type: "image/jpeg" });
+        const url2 = URL.createObjectURL(blob);
+        const img = previewContainer.createEl("img", {
+          cls: `json-thumbnail-image json-orientation-${this.orientation}`
+        });
+        img.src = url2;
+        img.alt = "Thumbnail preview";
+        img.addEventListener("load", () => {
+          URL.revokeObjectURL(url2);
+        });
+      } catch (e) {
+        previewContainer.createSpan({
+          text: "Unable to render thumbnail",
+          cls: "json-thumbnail-error"
+        });
+      }
+      const hideBtn = previewContainer.createEl("button", {
+        text: "Hide",
+        cls: "json-thumbnail-hide-btn"
+      });
+      hideBtn.addEventListener("click", () => this.toggleThumbnail(path));
+    }
+  }
+  renderObject(container, obj, path, depth) {
+    const keys = Object.keys(obj);
+    const isEmpty = keys.length === 0;
+    if (isEmpty) {
+      container.createSpan({ text: "{}", cls: "json-bracket" });
+      return;
+    }
+    const isExpanded = this.expandedPaths.has(path) || depth < 1;
+    const header = container.createDiv("json-object-header");
+    const toggle = header.createSpan({
+      cls: `json-toggle ${isExpanded ? "is-expanded" : ""}`,
+      text: isExpanded ? "\u25BC" : "\u25B6"
+    });
+    header.createSpan({ text: "{", cls: "json-bracket" });
+    if (!isExpanded) {
+      header.createSpan({
+        text: ` ${keys.length} ${keys.length === 1 ? "item" : "items"} `,
+        cls: "json-collapsed-info"
+      });
+      header.createSpan({ text: "}", cls: "json-bracket" });
+    }
+    toggle.addEventListener("click", () => {
+      if (isExpanded) {
+        this.expandedPaths.delete(path);
+      } else {
+        this.expandedPaths.add(path);
+      }
+      this.render();
+    });
+    if (isExpanded) {
+      const body = container.createDiv("json-object-body");
+      keys.forEach((key, index) => {
+        const row = body.createDiv("json-row");
+        const childPath = path ? `${path}.${key}` : key;
+        if (this.editingKeyPath === childPath) {
+          this.renderEditableKey(row, obj, key, childPath);
+        } else {
+          const keySpan = row.createSpan({
+            text: `"${key}": `,
+            cls: "json-key"
+          });
+          keySpan.addEventListener("click", () => {
+            this.startKeyEdit(childPath);
+          });
+        }
+        const valueContainer = row.createSpan("json-value-container");
+        if (key === "thumbnail" && this.isThumbnailData(obj[key])) {
+          this.renderThumbnail(valueContainer, obj[key], childPath);
+        } else if (this.editingPath === childPath) {
+          this.renderEditableValue(valueContainer, childPath, obj[key]);
+        } else {
+          this.renderValue(valueContainer, obj[key], childPath, depth + 1);
+        }
+        if (index < keys.length - 1) {
+          row.createSpan({ text: ",", cls: "json-comma" });
+        }
+      });
+      const closing = container.createDiv("json-closing-bracket");
+      closing.createSpan({ text: "}", cls: "json-bracket" });
+    }
+  }
+  renderArray(container, arr, path, depth) {
+    if (arr.length === 0) {
+      container.createSpan({ text: "[]", cls: "json-bracket" });
+      return;
+    }
+    const isExpanded = this.expandedPaths.has(path) || depth < 1;
+    const header = container.createDiv("json-array-header");
+    const toggle = header.createSpan({
+      cls: `json-toggle ${isExpanded ? "is-expanded" : ""}`,
+      text: isExpanded ? "\u25BC" : "\u25B6"
+    });
+    header.createSpan({ text: "[", cls: "json-bracket" });
+    if (!isExpanded) {
+      header.createSpan({
+        text: ` ${arr.length} ${arr.length === 1 ? "item" : "items"} `,
+        cls: "json-collapsed-info"
+      });
+      header.createSpan({ text: "]", cls: "json-bracket" });
+    }
+    toggle.addEventListener("click", () => {
+      if (isExpanded) {
+        this.expandedPaths.delete(path);
+      } else {
+        this.expandedPaths.add(path);
+      }
+      this.render();
+    });
+    if (isExpanded) {
+      const body = container.createDiv("json-array-body");
+      arr.forEach((item, index) => {
+        const row = body.createDiv("json-row");
+        const valueContainer = row.createSpan("json-value-container");
+        const childPath = path ? `${path}[${index}]` : `[${index}]`;
+        if (this.editingPath === childPath) {
+          this.renderEditableValue(valueContainer, childPath, item);
+        } else {
+          this.renderValue(valueContainer, item, childPath, depth + 1);
+        }
+        if (index < arr.length - 1) {
+          row.createSpan({ text: ",", cls: "json-comma" });
+        }
+      });
+      const closing = container.createDiv("json-closing-bracket");
+      closing.createSpan({ text: "]", cls: "json-bracket" });
+    }
+  }
+  startKeyEdit(path) {
+    this.editingKeyPath = path;
+    this.render();
+  }
+  renderEditableKey(container, obj, oldKey, path) {
+    const input = container.createEl("input", {
+      cls: "json-inline-input json-key-input"
+    });
+    input.value = oldKey;
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        this.commitKeyEdit(obj, oldKey, input.value, path);
+      } else if (e.key === "Escape") {
+        this.cancelKeyEdit();
+      }
+    });
+    input.addEventListener("blur", () => {
+      this.commitKeyEdit(obj, oldKey, input.value, path);
+    });
+    window.requestAnimationFrame(() => {
+      input.focus();
+      input.select();
+    });
+    container.createSpan({ text: ": ", cls: "json-key" });
+  }
+  commitKeyEdit(obj, oldKey, newKey, path) {
+    this.editingKeyPath = null;
+    if (newKey && newKey !== oldKey) {
+      obj[newKey] = obj[oldKey];
+      delete obj[oldKey];
+      this.onChange(this.data);
+    }
+    this.render();
+  }
+  cancelKeyEdit() {
+    this.editingKeyPath = null;
+    this.render();
+  }
+};
+
+// src/components/GpsMapEditor.ts
+var L2 = __toESM(require_leaflet_src());
+var GpsMapEditor = class {
+  constructor(container, exifData, onChange) {
+    this.map = null;
+    this.marker = null;
+    this.latInput = null;
+    this.lngInput = null;
+    this.originalCoords = null;
+    this.overviewMap = null;
+    this.overviewMarker = null;
+    this.container = container;
+    this.exifData = exifData;
+    this.onChange = onChange;
+    this.mapContainer = this.container.createDiv("gps-map-container");
+    this.render();
+  }
+  setData(exifData) {
+    this.exifData = exifData;
+    this.updateMarkerFromData();
+  }
+  render() {
+    var _a5, _b;
+    this.mapContainer.empty();
+    const mapEl = this.mapContainer.createDiv("gps-map");
+    const coords = getGpsCoordinates(this.exifData);
+    if (coords) {
+      this.originalCoords = __spreadValues({}, coords);
+    }
+    const initialLat = (_a5 = coords == null ? void 0 : coords.lat) != null ? _a5 : 0;
+    const initialLng = (_b = coords == null ? void 0 : coords.lng) != null ? _b : 0;
+    this.map = L2.map(mapEl, {
+      center: [initialLat, initialLng],
+      zoom: coords ? 14 : 2
+    });
+    L2.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
+      attribution: "&copy; OSM &copy; CARTO",
+      subdomains: "abcd",
+      maxZoom: 20
+    }).addTo(this.map);
+    const customIcon = L2.divIcon({
+      className: "gps-map-marker",
+      iconSize: [20, 20],
+      iconAnchor: [10, 10]
+    });
+    this.marker = L2.marker([initialLat, initialLng], {
+      icon: customIcon
+    }).addTo(this.map);
+    this.map.on("click", (e) => {
+      this.marker.setLatLng(e.latlng);
+      this.updateCoordinates(e.latlng.lat, e.latlng.lng);
+    });
+    const overviewEl = mapEl.createDiv("gps-overview-map");
+    this.overviewMap = L2.map(overviewEl, {
+      center: [initialLat, initialLng],
+      zoom: 3,
+      dragging: false,
+      zoomControl: false,
+      scrollWheelZoom: false,
+      doubleClickZoom: false,
+      boxZoom: false,
+      keyboard: false,
+      attributionControl: false
+    });
+    L2.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
+      subdomains: "abcd",
+      maxZoom: 20
+    }).addTo(this.overviewMap);
+    this.overviewMarker = L2.circleMarker([initialLat, initialLng], {
+      radius: 4,
+      fillColor: "var(--interactive-accent)",
+      color: "#fff",
+      weight: 2,
+      opacity: 1,
+      fillOpacity: 1
+    }).addTo(this.overviewMap);
+    const inputsRow = this.mapContainer.createDiv("gps-map-inputs");
+    const latWrapper = inputsRow.createDiv("gps-map-input-wrapper");
+    latWrapper.createEl("label", { text: "Latitude" });
+    this.latInput = latWrapper.createEl("input", {
+      type: "text",
+      cls: "gps-map-input"
+    });
+    this.latInput.value = coords ? String(coords.lat.toFixed(6)) : "";
+    this.latInput.addEventListener("change", () => this.handleManualInput());
+    const lngWrapper = inputsRow.createDiv("gps-map-input-wrapper");
+    lngWrapper.createEl("label", { text: "Longitude" });
+    this.lngInput = lngWrapper.createEl("input", {
+      type: "text",
+      cls: "gps-map-input"
+    });
+    this.lngInput.value = coords ? String(coords.lng.toFixed(6)) : "";
+    this.lngInput.addEventListener("change", () => this.handleManualInput());
+    const actionsRow = this.mapContainer.createDiv("gps-map-actions");
+    const resetBtn = actionsRow.createEl("button", {
+      text: "Reset Location",
+      cls: "gps-map-btn"
+    });
+    resetBtn.addEventListener("click", () => {
+      if (this.originalCoords) {
+        this.marker.setLatLng([this.originalCoords.lat, this.originalCoords.lng]);
+        this.map.setView([this.originalCoords.lat, this.originalCoords.lng], 14);
+        this.updateCoordinates(this.originalCoords.lat, this.originalCoords.lng);
+      } else {
+        clearGpsCoordinates(this.exifData);
+        this.onChange(this.exifData);
+        this.marker.setLatLng([0, 0]);
+        this.map.setView([0, 0], 2);
+        if (this.latInput)
+          this.latInput.value = "";
+        if (this.lngInput)
+          this.lngInput.value = "";
+      }
+    });
+  }
+  updateCoordinates(lat, lng) {
+    setGpsCoordinates(this.exifData, lat, lng);
+    this.onChange(this.exifData);
+    if (this.latInput)
+      this.latInput.value = lat.toFixed(6);
+    if (this.lngInput)
+      this.lngInput.value = lng.toFixed(6);
+    if (this.overviewMarker)
+      this.overviewMarker.setLatLng([lat, lng]);
+    if (this.overviewMap)
+      this.overviewMap.setView([lat, lng], 3);
+  }
+  handleManualInput() {
+    if (!this.latInput || !this.lngInput)
+      return;
+    const lat = parseFloat(this.latInput.value);
+    const lng = parseFloat(this.lngInput.value);
+    if (Number.isNaN(lat) || Number.isNaN(lng))
+      return;
+    this.marker.setLatLng([lat, lng]);
+    this.map.setView([lat, lng], 14);
+    setGpsCoordinates(this.exifData, lat, lng);
+    this.onChange(this.exifData);
+  }
+  updateMarkerFromData() {
+    const coords = getGpsCoordinates(this.exifData);
+    if (!coords || !this.marker || !this.map)
+      return;
+    this.marker.setLatLng([coords.lat, coords.lng]);
+    this.map.setView([coords.lat, coords.lng], 14);
+    if (this.latInput)
+      this.latInput.value = coords.lat.toFixed(6);
+    if (this.lngInput)
+      this.lngInput.value = coords.lng.toFixed(6);
+    if (this.overviewMarker)
+      this.overviewMarker.setLatLng([coords.lat, coords.lng]);
+    if (this.overviewMap)
+      this.overviewMap.setView([coords.lat, coords.lng], 3);
+  }
+};
+
+// src/main.ts
 var VIEW_TYPE_EXIF = "exif-editor-view";
 var ExifEditorView = class extends import_obsidian.ItemView {
   constructor(leaf, plugin) {
@@ -2400,28 +25684,30 @@ var ExifEditorView = class extends import_obsidian.ItemView {
   getIcon() {
     return "camera";
   }
-  setFile(file) {
+  setFile(file2) {
     return __async(this, null, function* () {
-      this.file = file;
+      this.file = file2;
       yield this.loadExifData();
       this.redraw();
     });
   }
   loadExifData() {
     return __async(this, null, function* () {
+      var _a5;
       if (!this.file)
         return;
       try {
         const arrayBuffer = yield this.plugin.app.vault.readBinary(this.file);
         this.originalBinary = this.plugin.arrayBufferToBinaryString(arrayBuffer);
         try {
-          this.exifData = piexif.load(this.originalBinary);
+          const loaded = piexif2.load(this.originalBinary);
+          this.exifData = (_a5 = safeParseExifData(loaded)) != null ? _a5 : createEmptyExif();
         } catch (e) {
-          this.exifData = this.plugin.createEmptyExif();
+          this.exifData = createEmptyExif();
         }
-      } catch (error) {
+      } catch (error51) {
         new import_obsidian.Notice("Error reading image file");
-        console.error(error);
+        console.error(error51);
       }
     });
   }
@@ -2444,50 +25730,117 @@ var ExifEditorView = class extends import_obsidian.ItemView {
       { section: "Exif", tag: "UserComment", label: "User Comment", placeholder: "Tags, notes, or any free text..." }
     ];
     const sectionMap = {
-      "0th": piexif.ImageIFD,
-      "Exif": piexif.ExifIFD,
-      "GPS": piexif.GPSIFD,
-      "1st": piexif.IopIFD
+      "0th": piexif2.ImageIFD,
+      "Exif": piexif2.ExifIFD,
+      "GPS": piexif2.GPSIFD,
+      "1st": piexif2.IopIFD
     };
     tagsToEdit.forEach(({ section, tag, label, placeholder }) => {
-      var _a, _b;
       const setting = new import_obsidian.Setting(form).setName(label).setDesc(`${section}.${tag}`);
       const sectionObj = sectionMap[section];
       const tagCode = sectionObj == null ? void 0 : sectionObj[tag];
-      const value = ((_b = (_a = this.exifData) == null ? void 0 : _a[section]) == null ? void 0 : _b[tagCode]) || "";
+      const value = this.exifData && tagCode !== void 0 ? getExifValue(this.exifData, section, tagCode) : "";
       setting.addText((text) => {
         text.setPlaceholder(placeholder).setValue(value).onChange((newValue) => {
-          if (!this.exifData[section])
-            this.exifData[section] = {};
+          if (!this.exifData) {
+            this.exifData = createEmptyExif();
+          }
           if (tagCode !== void 0) {
-            this.exifData[section][tagCode] = newValue;
+            setExifValue(this.exifData, section, tagCode, newValue);
           }
         });
       });
     });
+    contentEl.createEl("h4", { text: "GPS Location" });
+    const gpsSection = contentEl.createDiv("exif-gps-section");
+    if (this.exifData) {
+      new GpsMapEditor(gpsSection, this.exifData, (newData) => {
+        this.exifData = newData;
+      });
+    }
     contentEl.createEl("h4", { text: "Advanced: Raw EXIF JSON" });
-    const jsonArea = contentEl.createEl("textarea", {
-      cls: "exif-json-editor",
-      attr: { rows: "8", style: "width: 100%; font-family: monospace;" }
-    });
-    jsonArea.value = JSON.stringify(this.exifData, null, 2);
-    const updateJson = () => {
+    const jsonEditorContainer = contentEl.createDiv("json-editor-container");
+    let currentMode = "tree";
+    let jsonArea = null;
+    const modeToggle = jsonEditorContainer.createDiv("json-mode-toggle");
+    const treeBtn = modeToggle.createEl("button", { text: "Tree View" });
+    const textBtn = modeToggle.createEl("button", { text: "Text View" });
+    const editorContainer = jsonEditorContainer.createDiv("json-editor-content");
+    const updateFromText = () => {
+      if (!jsonArea)
+        return;
       try {
-        this.exifData = JSON.parse(jsonArea.value);
-        new import_obsidian.Notice("JSON parsed successfully");
+        const parsed = JSON.parse(jsonArea.value);
+        const validated = safeParseExifData(parsed);
+        if (validated) {
+          this.exifData = validated;
+          new import_obsidian.Notice("JSON parsed successfully");
+        } else {
+          new import_obsidian.Notice("Invalid EXIF structure");
+        }
       } catch (e) {
         new import_obsidian.Notice("Invalid JSON");
       }
     };
+    const renderEditor = () => {
+      var _a5, _b;
+      editorContainer.empty();
+      if (currentMode === "tree") {
+        treeBtn.addClass("is-active");
+        textBtn.removeClass("is-active");
+        const treeContainer = editorContainer.createDiv("json-tree-container");
+        const orientationValue = (_b = (_a5 = this.exifData) == null ? void 0 : _a5["0th"]) == null ? void 0 : _b[piexif2.ImageIFD.Orientation];
+        const orientation2 = typeof orientationValue === "number" ? orientationValue : 1;
+        new JsonTreeEditor(
+          treeContainer,
+          this.exifData,
+          (newData) => {
+            const validated = safeParseExifData(newData);
+            if (validated) {
+              this.exifData = validated;
+            }
+          },
+          orientation2
+        );
+      } else {
+        textBtn.addClass("is-active");
+        treeBtn.removeClass("is-active");
+        jsonArea = editorContainer.createEl("textarea", {
+          cls: "exif-json-editor",
+          attr: { rows: "8", style: "width: 100%; font-family: monospace;" }
+        });
+        jsonArea.value = JSON.stringify(this.exifData, null, 2);
+      }
+    };
+    treeBtn.addEventListener("click", () => {
+      if (currentMode === "tree")
+        return;
+      if (jsonArea) {
+        updateFromText();
+      }
+      currentMode = "tree";
+      renderEditor();
+    });
+    textBtn.addEventListener("click", () => {
+      if (currentMode === "text")
+        return;
+      currentMode = "text";
+      renderEditor();
+    });
+    renderEditor();
     const buttonContainer = contentEl.createDiv({ cls: "exif-button-container" });
-    buttonContainer.style.marginTop = "10px";
-    buttonContainer.style.display = "flex";
-    buttonContainer.style.gap = "10px";
-    buttonContainer.createEl("button", { text: "Update from JSON", cls: "mod-cta" }).addEventListener("click", updateJson);
+    buttonContainer.createEl("button", { text: "Update from JSON", cls: "mod-cta" }).addEventListener("click", () => {
+      if (currentMode === "text" && jsonArea) {
+        updateFromText();
+      }
+    });
     const saveBtn = buttonContainer.createEl("button", { text: "Save EXIF", cls: "mod-cta" });
-    saveBtn.addEventListener("click", () => __async(this, null, function* () {
-      yield this.plugin.saveExifData(this.file, this.originalBinary, this.exifData);
-    }));
+    saveBtn.addEventListener("click", () => {
+      if (currentMode === "text" && jsonArea) {
+        updateFromText();
+      }
+      void this.plugin.saveExifData(this.file, this.originalBinary, this.exifData);
+    });
   }
   onClose() {
     return __async(this, null, function* () {
@@ -2513,10 +25866,10 @@ var ExifEditorPlugin = class extends import_obsidian.Plugin {
         id: "edit-exif",
         name: "Edit EXIF data of current photo",
         checkCallback: (checking) => {
-          const file = this.app.workspace.getActiveFile();
-          if (file && this.isImageFile(file)) {
+          const file2 = this.app.workspace.getActiveFile();
+          if (file2 && this.isImageFile(file2)) {
             if (!checking) {
-              this.activateView(file);
+              void this.activateView(file2);
             }
             return true;
           }
@@ -2524,21 +25877,21 @@ var ExifEditorPlugin = class extends import_obsidian.Plugin {
         }
       });
       this.addRibbonIcon("camera", "Edit EXIF", () => {
-        const file = this.app.workspace.getActiveFile();
-        if (file && this.isImageFile(file)) {
-          this.activateView(file);
+        const file2 = this.app.workspace.getActiveFile();
+        if (file2 && this.isImageFile(file2)) {
+          void this.activateView(file2);
         } else {
-          this.activateView();
+          void this.activateView();
         }
       });
       this.registerEvent(
         this.app.workspace.on("active-leaf-change", () => {
-          var _a;
-          const view = (_a = this.app.workspace.getLeavesOfType(VIEW_TYPE_EXIF)[0]) == null ? void 0 : _a.view;
+          var _a5;
+          const view = (_a5 = this.app.workspace.getLeavesOfType(VIEW_TYPE_EXIF)[0]) == null ? void 0 : _a5.view;
           if (view) {
-            const file = this.app.workspace.getActiveFile();
-            if (file && this.isImageFile(file)) {
-              view.setFile(file);
+            const file2 = this.app.workspace.getActiveFile();
+            if (file2 && this.isImageFile(file2)) {
+              void view.setFile(file2);
             } else {
               view.clearView();
             }
@@ -2547,10 +25900,10 @@ var ExifEditorPlugin = class extends import_obsidian.Plugin {
       );
     });
   }
-  isImageFile(file) {
-    return ["jpg", "jpeg", "JPG", "JPEG"].includes(file.extension);
+  isImageFile(file2) {
+    return ["jpg", "jpeg", "JPG", "JPEG"].includes(file2.extension);
   }
-  activateView(file) {
+  activateView(file2) {
     return __async(this, null, function* () {
       const { workspace } = this.app;
       let leaf = workspace.getLeavesOfType(VIEW_TYPE_EXIF)[0];
@@ -2558,21 +25911,12 @@ var ExifEditorPlugin = class extends import_obsidian.Plugin {
         leaf = workspace.getRightLeaf(false);
         yield leaf.setViewState({ type: VIEW_TYPE_EXIF });
       }
-      workspace.revealLeaf(leaf);
+      yield workspace.revealLeaf(leaf);
       const view = leaf.view;
-      if (file) {
-        yield view.setFile(file);
+      if (file2) {
+        yield view.setFile(file2);
       }
     });
-  }
-  createEmptyExif() {
-    return {
-      "0th": {},
-      "Exif": {},
-      "GPS": {},
-      "1st": {},
-      "thumbnail": null
-    };
   }
   arrayBufferToBinaryString(buffer) {
     let binary = "";
@@ -2590,18 +25934,28 @@ var ExifEditorPlugin = class extends import_obsidian.Plugin {
     }
     return buffer;
   }
-  saveExifData(file, originalBinary, exifData) {
+  saveExifData(file2, originalBinary, exifData) {
     return __async(this, null, function* () {
+      if (!exifData) {
+        new import_obsidian.Notice("No EXIF data to save");
+        return;
+      }
       try {
-        const exifDump = piexif.dump(exifData);
-        const newBinary = piexif.insert(exifDump, originalBinary);
+        const exifDump = piexif2.dump(exifData);
+        const newBinary = piexif2.insert(exifDump, originalBinary);
         const arrayBuffer = this.binaryStringToArrayBuffer(newBinary);
-        yield this.app.vault.modifyBinary(file, arrayBuffer);
+        yield this.app.vault.modifyBinary(file2, arrayBuffer);
         new import_obsidian.Notice("EXIF data saved successfully");
-      } catch (error) {
+      } catch (error51) {
         new import_obsidian.Notice("Error saving EXIF data");
-        console.error(error);
+        console.error(error51);
       }
     });
   }
 };
+/* @preserve
+ * Leaflet 1.9.4, a JS library for interactive maps. https://leafletjs.com
+ * (c) 2010-2023 Vladimir Agafonkin, (c) 2010-2011 CloudMade
+ */
+
+/* nosourcemap */

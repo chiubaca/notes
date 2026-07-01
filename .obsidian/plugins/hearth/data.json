@@ -1,0 +1,118 @@
+{
+  "title": "Obsidian",
+  "showTitle": true,
+  "logo": "",
+  "searchPlaceholder": "Search the vault, #tag, or property:value",
+  "showNewNoteButton": true,
+  "backgroundKind": "none",
+  "backgroundValue": "",
+  "backgroundOpacity": 0.15,
+  "backgroundBlur": 0,
+  "openOnStartup": true,
+  "replaceNewTabs": true,
+  "mobileSearchOnly": false,
+  "showMobileActionBar": true,
+  "mobileActionButtons": [
+    {
+      "id": "action-new-note",
+      "label": "New note",
+      "icon": "plus",
+      "commandId": "hearth:new-note"
+    },
+    {
+      "id": "action-new-drawing",
+      "label": "New drawing",
+      "icon": "pen-tool",
+      "commandId": "hearth:new-drawing"
+    },
+    {
+      "id": "action-record-voice",
+      "label": "Record voice",
+      "icon": "mic",
+      "commandId": "hearth:record-voice"
+    },
+    {
+      "id": "action-daily-note",
+      "label": "Daily note",
+      "icon": "calendar",
+      "commandId": "hearth:open-daily-note"
+    }
+  ],
+  "compact": false,
+  "hiddenFilters": [],
+  "dashboards": [
+    {
+      "id": "dash-mr2emobg-2322",
+      "name": "Dashboard 1",
+      "cards": [
+        {
+          "id": "card-base",
+          "kind": "embed",
+          "title": "Embedded base",
+          "target": "",
+          "x": 0,
+          "y": 4,
+          "w": 6,
+          "h": 6
+        },
+        {
+          "id": "card-note",
+          "kind": "embed",
+          "title": "Embedded note",
+          "target": "",
+          "x": 6,
+          "y": 4,
+          "w": 6,
+          "h": 2
+        },
+        {
+          "id": "card-bookmarks",
+          "kind": "bookmarks",
+          "title": "Bookmarks",
+          "x": 6,
+          "y": 8,
+          "w": 6,
+          "h": 2
+        },
+        {
+          "id": "card-image",
+          "kind": "embed",
+          "title": "Embedded image",
+          "target": "",
+          "x": 6,
+          "y": 6,
+          "w": 3,
+          "h": 2
+        },
+        {
+          "id": "card-favorites",
+          "kind": "favorites",
+          "title": "Favorites",
+          "x": 9,
+          "y": 6,
+          "w": 3,
+          "h": 2
+        },
+        {
+          "id": "card-mr2enia6-3223",
+          "x": 0,
+          "y": 0,
+          "kind": "daily",
+          "title": "Today",
+          "w": 12,
+          "h": 4
+        }
+      ]
+    }
+  ],
+  "activeDashboardId": "dash-mr2emobg-2322",
+  "pinnedCards": [],
+  "gridColumns": 12,
+  "rowHeight": 92,
+  "favorites": [],
+  "fitToPage": false,
+  "taskNotesStatusField": "status",
+  "taskNotesDueField": "due",
+  "taskNotesDoneValue": "done",
+  "maxWidth": 1100
+}

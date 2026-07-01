@@ -1,0 +1,1356 @@
+/* ===================================================================== */
+/*  Hearth — home dashboard                                              */
+/* ===================================================================== */
+
+.hearth-view {
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+	padding: 0;
+}
+
+/* Background layer sits behind everything. */
+.hearth-bg {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	pointer-events: none;
+	background-size: cover;
+	background-position: center;
+}
+
+.hearth-scroll {
+	position: relative;
+	z-index: 1;
+	height: 100%;
+	overflow-y: auto;
+	padding: 4vh 24px 48px;
+}
+
+.hearth-scroll.hearth-fit {
+	overflow-y: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+/* While the mobile keyboard is open, constrain the scroll area to the visible
+   viewport height and allow scrolling so nothing hides behind the keyboard
+   (overrides fit-to-page clipping for the duration). */
+.hearth-view.hearth-kbd-open .hearth-scroll,
+.hearth-view.hearth-kbd-open .hearth-scroll.hearth-fit {
+	height: var(--hearth-vh, 100%);
+	overflow-y: auto;
+}
+
+.hearth-inner {
+	margin: 0 auto;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 28px;
+}
+
+.hearth-fit .hearth-inner {
+	height: 100%;
+	min-height: 0;
+}
+
+/* ---- Header --------------------------------------------------------- */
+
+.hearth-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 18px;
+	/* Sit above the dashboard so the search dropdown overlay isn't covered. */
+	position: relative;
+	z-index: 2;
+}
+
+.hearth-search-wrap {
+	position: relative;
+	width: 100%;
+	max-width: 720px;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+
+.hearth-title {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	font-size: clamp(2.2rem, 5vw, 3.4rem);
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	color: var(--text-normal);
+	margin-top: 2vh;
+}
+
+.hearth-logo {
+	font-size: 0.9em;
+	line-height: 1;
+}
+
+.hearth-logo-icon {
+	display: inline-flex;
+	align-items: center;
+}
+
+.hearth-logo-icon svg {
+	width: 1em;
+	height: 1em;
+}
+
+/* ---- Search --------------------------------------------------------- */
+
+.hearth-search {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	width: 100%;
+	max-width: 720px;
+}
+
+.hearth-search-bar {
+	position: relative;
+	flex: 1;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	height: 52px;
+	padding: 0 18px;
+	border-radius: 14px;
+	background: var(--background-primary);
+	border: 1px solid var(--background-modifier-border);
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+	transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.hearth-search-bar:focus-within {
+	border-color: var(--interactive-accent);
+	box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+}
+
+.hearth-search-icon {
+	display: flex;
+	color: var(--text-muted);
+}
+
+/* Extra selector specificity (.hearth-view …) lets these win over Obsidian's
+ * default input styles without needing !important. */
+.hearth-view .hearth-search-bar .hearth-search-input {
+	flex: 1;
+	border: none;
+	outline: none;
+	box-shadow: none;
+	background: transparent;
+	font-size: 1.05rem;
+	color: var(--text-normal);
+	padding: 0;
+	height: 100%;
+}
+
+.hearth-newnote {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	height: 52px;
+	padding: 0 18px;
+	border-radius: 14px;
+	border: 1px solid var(--background-modifier-border);
+	background: var(--background-primary);
+	color: var(--text-normal);
+	cursor: pointer;
+	font-size: 0.95rem;
+	white-space: nowrap;
+	transition: background 120ms ease, border-color 120ms ease;
+}
+
+.hearth-newnote:hover {
+	background: var(--background-modifier-hover);
+	border-color: var(--interactive-accent);
+}
+
+.hearth-newnote-icon {
+	display: flex;
+}
+
+/* ---- Search results dropdown --------------------------------------- */
+
+.hearth-search-results {
+	/* Float beneath the search bar as an overlay so showing results never
+	   reflows or clips the dashboard (important on mobile / fit-to-page). */
+	position: absolute;
+	top: calc(100% + 6px);
+	left: 0;
+	right: 0;
+	z-index: 30;
+	max-height: min(360px, 50vh);
+	overflow-y: auto;
+	border-radius: 12px;
+	border: 1px solid var(--background-modifier-border);
+	background: var(--background-primary);
+	box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+	padding: 6px;
+}
+
+.hearth-result {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 9px 12px;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.hearth-result:hover,
+.hearth-result.is-selected {
+	background: var(--background-modifier-hover);
+}
+
+.hearth-result-icon {
+	display: flex;
+	color: var(--text-muted);
+	flex-shrink: 0;
+}
+
+.hearth-result-text {
+	min-width: 0;
+}
+
+.hearth-result-name {
+	color: var(--text-normal);
+	font-size: 0.95rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.hearth-result-path {
+	color: var(--text-faint);
+	font-size: 0.78rem;
+}
+
+/* Shown on tag/property-search hits instead of the folder path, so it's
+ * visible what actually matched. */
+.hearth-result-badge {
+	color: var(--interactive-accent);
+	font-size: 0.78rem;
+}
+
+.hearth-search-empty {
+	padding: 12px;
+	text-align: center;
+	color: var(--text-muted);
+}
+
+/* ---- Filters -------------------------------------------------------- */
+
+.hearth-filters {
+	display: flex;
+	flex-wrap: wrap;
+	/* Left-align the chips and match the search field's width/position so the
+	 * first filter lines up with the left edge of the search box. */
+	justify-content: flex-start;
+	gap: 8px;
+	width: 100%;
+	max-width: 720px;
+}
+
+.hearth-filter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 38px;
+	height: 38px;
+	border-radius: 10px;
+	border: 1px solid var(--background-modifier-border);
+	background: var(--background-primary);
+	color: var(--text-muted);
+	cursor: pointer;
+	transition: all 120ms ease;
+}
+
+.hearth-filter:hover {
+	color: var(--text-normal);
+	border-color: var(--interactive-accent);
+}
+
+.hearth-filter.is-active {
+	color: var(--text-on-accent);
+	background: var(--interactive-accent);
+	border-color: var(--interactive-accent);
+}
+
+.hearth-filter-icon {
+	display: flex;
+}
+
+/* ---- Dashboard grid ------------------------------------------------- */
+
+.hearth-dashboard {
+	flex: 1;
+	min-height: 0;
+	/* Anchor the floating (at-rest) toolbar to the dashboard. */
+	position: relative;
+}
+
+.hearth-grid {
+	display: grid;
+	grid-template-columns: repeat(var(--hearth-cols, 12), minmax(0, 1fr));
+	grid-auto-rows: 92px;
+	gap: 16px;
+}
+
+.hearth-fit .hearth-grid {
+	height: 100%;
+}
+
+.hearth-card {
+	grid-column: span min(var(--card-w, 4), var(--hearth-cols, 12));
+	grid-row: span var(--card-h, 2);
+	display: flex;
+	flex-direction: column;
+	min-height: 0;
+	border-radius: 14px;
+	border: 1px solid var(--background-modifier-border);
+	background: var(--background-primary);
+	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+	overflow: hidden;
+	transition: box-shadow 120ms ease, transform 120ms ease;
+}
+
+.hearth-card:hover {
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.hearth-card-head {
+	display: flex;
+	align-items: center;
+	padding: 10px 14px;
+	border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.hearth-card-title {
+	font-weight: 600;
+	font-size: 0.9rem;
+	color: var(--text-normal);
+}
+
+/* Hidden via the .is-untitled class (set in dashboard.ts) instead of :has, which
+ * can be costly due to broad selector invalidation. */
+.hearth-card-head.is-untitled {
+	display: none;
+}
+
+.hearth-card-body {
+	flex: 1;
+	min-height: 0;
+	overflow: auto;
+	padding: 12px 14px;
+}
+
+/* Empty states */
+.hearth-card-empty,
+.hearth-grid-empty {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	color: var(--text-faint);
+	text-align: center;
+}
+
+.hearth-grid-empty {
+	grid-column: 1 / -1;
+	min-height: 160px;
+}
+
+.hearth-card-empty-icon {
+	display: flex;
+	opacity: 0.7;
+}
+
+.hearth-card-empty-text {
+	font-size: 0.85rem;
+}
+
+/* Embeds */
+.hearth-embed img,
+.hearth-embed video {
+	max-width: 100%;
+	border-radius: 8px;
+}
+
+/* Per-card zoom: anchor at the top-left and widen inversely so scaled-up
+ * content fills the card before scaling (the card body scrolls any overflow). */
+.hearth-embed.is-scaled {
+	transform: scale(var(--hearth-embed-scale, 1));
+	transform-origin: top left;
+	width: calc(100% / var(--hearth-embed-scale, 1));
+}
+
+/* Editable embed: a plain textarea bound to the note's file. Uses a monospace
+ * face to make raw Markdown comfortable to edit and scrolls within the card. */
+.hearth-embed-edit {
+	font-family: var(--font-monospace);
+	font-size: 0.85rem;
+	resize: none;
+	overflow: auto;
+}
+
+.hearth-embed-edit:disabled {
+	opacity: 0.6;
+}
+
+/* Canvas / Excalidraw embeds: give the actual embedded view (Obsidian's own
+ * interactive canvas preview, or Excalidraw's in-place edit toggle) the full
+ * card so pan/zoom feels native instead of cramped in a small fixed box. */
+.hearth-card-body.hearth-card-body-live {
+	overflow: hidden;
+	padding: 0;
+}
+
+.hearth-embed-live {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+/* Obsidian/Excalidraw set an inline height on the embed's own root element;
+ * !important is needed to override that and stretch it to the card. */
+.hearth-embed-live > * {
+	flex: 1 1 auto;
+	min-height: 0;
+	width: 100%;
+	height: 100% !important;
+}
+
+/* Daily-note card: the "create today's note" prompt button. */
+.hearth-daily-create {
+	margin-top: 10px;
+	padding: 6px 14px;
+	border-radius: 8px;
+	border: 1px solid var(--interactive-accent);
+	background: var(--interactive-accent);
+	color: var(--text-on-accent);
+	cursor: pointer;
+	font-size: 0.85rem;
+}
+
+.hearth-daily-create:hover {
+	opacity: 0.9;
+}
+
+/* A small sticky action bar (e.g. the daily-note "open" button) pinned to the
+ * top-right of a card body, staying visible while the content scrolls. */
+.hearth-card-actions-overlay {
+	position: sticky;
+	top: 0;
+	z-index: 4;
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 2px;
+	pointer-events: none;
+}
+
+.hearth-open-btn {
+	pointer-events: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 4px;
+	border-radius: 7px;
+	border: 1px solid var(--background-modifier-border);
+	background: var(--background-secondary);
+	color: var(--text-muted);
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+.hearth-open-btn:hover {
+	opacity: 1;
+	color: var(--text-normal);
+	border-color: var(--interactive-accent);
+}
+
+.hearth-open-btn .svg-icon {
+	width: 16px;
+	height: 16px;
+}
+
+/* Destructive buttons (remove card, replace-on-import). Styled with a class
+ * instead of the deprecated ButtonComponent.setWarning(). */
+.hearth-danger-btn {
+	background-color: var(--background-modifier-error);
+	color: var(--text-on-accent);
+}
+
+.hearth-danger-btn:hover {
+	background-color: var(--background-modifier-error-hover);
+}
+
+/* Web / iframe embeds fill the whole card body. */
+.hearth-card-body.hearth-web-body {
+	padding: 0;
+	overflow: hidden;
+}
+
+.hearth-web {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+.hearth-import-input {
+	width: 100%;
+	font-family: var(--font-monospace);
+	font-size: 0.8rem;
+	resize: vertical;
+}
+
+/* Lists (bookmarks) */
+.hearth-list {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.hearth-list-item {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 7px 8px;
+	border-radius: 7px;
+	cursor: pointer;
+}
+
+.hearth-list-item:hover {
+	background: var(--background-modifier-hover);
+}
+
+.hearth-list-icon {
+	display: flex;
+	color: var(--text-muted);
+	flex-shrink: 0;
+}
+
+.hearth-list-icon .hearth-favicon {
+	width: 16px;
+	height: 16px;
+	object-fit: contain;
+	border-radius: 3px;
+}
+
+.hearth-list-label {
+	font-size: 0.9rem;
+	color: var(--text-normal);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* Tasks card */
+.hearth-task-text {
+	flex: 1;
+}
+
+.hearth-task.is-done .hearth-task-text {
+	color: var(--text-faint);
+	text-decoration: line-through;
+}
+
+.hearth-task-check {
+	flex-shrink: 0;
+	margin: 0;
+}
+
+.hearth-task-due {
+	flex-shrink: 0;
+	font-size: 0.78rem;
+	color: var(--text-muted);
+}
+
+.hearth-task-due.is-overdue {
+	color: var(--text-error);
+}
+
+.hearth-task-status {
+	flex-shrink: 0;
+	padding: 1px 8px;
+	border-radius: 999px;
+	background: var(--background-modifier-hover);
+	color: var(--text-muted);
+	font-size: 0.72rem;
+	white-space: nowrap;
+}
+
+/* Favorites cards */
+.hearth-favorites {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+	gap: 10px;
+}
+
+.hearth-fav-card {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	padding: 12px;
+	border-radius: 10px;
+	border: 1px solid var(--background-modifier-border);
+	background: var(--background-secondary);
+	cursor: pointer;
+	transition: border-color 120ms ease, background 120ms ease;
+}
+
+.hearth-fav-card:hover {
+	border-color: var(--interactive-accent);
+	background: var(--background-modifier-hover);
+}
+
+.hearth-fav-card.is-missing {
+	opacity: 0.6;
+	cursor: default;
+}
+
+.hearth-fav-icon {
+	display: flex;
+	color: var(--text-muted);
+}
+
+.hearth-fav-name {
+	font-size: 0.85rem;
+	color: var(--text-normal);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* Text / jot-down: a rendered Markdown preview that swaps to a textarea on
+ * double-click (so links in the preview stay clickable). */
+.hearth-jot {
+	height: 100%;
+}
+
+.hearth-jot-preview {
+	height: 100%;
+	overflow: auto;
+	cursor: text;
+}
+
+.hearth-jot-preview.is-empty {
+	color: var(--text-faint);
+	font-style: italic;
+}
+
+.hearth-text {
+	width: 100%;
+	height: 100%;
+	min-height: 60px;
+	resize: none;
+	border: none;
+	outline: none;
+	background: transparent;
+	color: var(--text-normal);
+	font-family: var(--font-text);
+	font-size: 0.92rem;
+	line-height: 1.5;
+}
+
+/* Links / launchpad */
+.hearth-links {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+	gap: 10px;
+}
+
+.hearth-link-tile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	padding: 14px 8px;
+	border-radius: 12px;
+	border: 1px solid var(--background-modifier-border);
+	background: var(--background-secondary);
+	cursor: pointer;
+	text-align: center;
+	transition: border-color 120ms ease, background 120ms ease, transform 120ms ease;
+}
+
+/* Commands card: tile size is driven by --hearth-tile (set per card), scaling
+ * the column width, tile height and icon together. */
+.hearth-commands-grid {
+	grid-template-columns: repeat(auto-fill, minmax(var(--hearth-tile, 90px), 1fr));
+}
+
+.hearth-commands-grid .hearth-link-tile {
+	min-height: calc(var(--hearth-tile, 90px) * 0.78);
+}
+
+.hearth-commands-grid .hearth-link-icon .svg-icon {
+	width: calc(var(--hearth-tile, 90px) * 0.26);
+	height: calc(var(--hearth-tile, 90px) * 0.26);
+}
+
+.hearth-link-tile:hover {
+	border-color: var(--interactive-accent);
+	background: var(--background-modifier-hover);
+	transform: translateY(-1px);
+}
+
+.hearth-link-icon {
+	display: flex;
+	color: var(--text-muted);
+}
+
+.hearth-link-icon .svg-icon {
+	width: 22px;
+	height: 22px;
+}
+
+.hearth-link-label {
+	font-size: 0.8rem;
+	color: var(--text-normal);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 100%;
+}
+
+/* Clock / greeting */
+.hearth-clock {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2px;
+}
+
+.hearth-clock-greeting {
+	font-size: 0.85rem;
+	color: var(--text-muted);
+}
+
+.hearth-clock-time {
+	font-size: clamp(1.8rem, 6vw, 2.6rem);
+	font-weight: 700;
+	letter-spacing: -0.01em;
+	color: var(--text-normal);
+	line-height: 1.1;
+}
+
+.hearth-clock-date {
+	font-size: 0.85rem;
+	color: var(--text-muted);
+}
+
+/* Analogue clock face */
+.hearth-analog {
+	width: 100%;
+	max-width: 220px;
+	aspect-ratio: 1;
+	margin-bottom: 4px;
+}
+
+.hearth-analog-face {
+	fill: none;
+	stroke: var(--background-modifier-border);
+	stroke-width: 2;
+}
+
+.hearth-analog-tick {
+	stroke: var(--text-faint);
+	stroke-width: 1;
+}
+
+.hearth-analog-tick-major {
+	stroke: var(--text-muted);
+	stroke-width: 2.4;
+}
+
+.hearth-analog-hour {
+	stroke: var(--text-normal);
+	stroke-width: 3.6;
+	stroke-linecap: round;
+}
+
+.hearth-analog-min {
+	stroke: var(--text-normal);
+	stroke-width: 2.4;
+	stroke-linecap: round;
+}
+
+.hearth-analog-sec {
+	stroke: var(--interactive-accent);
+	stroke-width: 1.2;
+	stroke-linecap: round;
+}
+
+.hearth-analog-pin {
+	fill: var(--interactive-accent);
+}
+
+/* Mini calendar card */
+.hearth-calendar {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	gap: 8px;
+}
+
+.hearth-calendar-head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.hearth-calendar-nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 26px;
+	height: 26px;
+	border-radius: 7px;
+	border: none;
+	background: transparent;
+	color: var(--text-muted);
+	cursor: pointer;
+}
+
+.hearth-calendar-nav:hover {
+	background: var(--background-modifier-hover);
+	color: var(--text-normal);
+}
+
+.hearth-calendar-label {
+	font-weight: 600;
+	font-size: 0.92rem;
+	color: var(--text-normal);
+	cursor: pointer;
+}
+
+.hearth-calendar-grid {
+	display: grid;
+	grid-template-columns: repeat(7, minmax(0, 1fr));
+	gap: 2px;
+	flex: 1;
+}
+
+.hearth-calendar-dow {
+	text-align: center;
+	font-size: 0.7rem;
+	color: var(--text-faint);
+	padding-bottom: 4px;
+}
+
+.hearth-calendar-day {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2px;
+	border-radius: 7px;
+	cursor: pointer;
+	min-height: 28px;
+}
+
+.hearth-calendar-day:hover {
+	background: var(--background-modifier-hover);
+}
+
+.hearth-calendar-daynum {
+	font-size: 0.82rem;
+	color: var(--text-normal);
+}
+
+.hearth-calendar-day.is-outside .hearth-calendar-daynum {
+	color: var(--text-faint);
+}
+
+.hearth-calendar-day.is-today .hearth-calendar-daynum {
+	color: var(--text-on-accent);
+	background: var(--interactive-accent);
+	border-radius: 999px;
+	width: 20px;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.hearth-calendar-dot {
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background: var(--interactive-accent);
+}
+
+.hearth-calendar-day.is-today .hearth-calendar-dot {
+	background: var(--text-normal);
+}
+
+/* Vault statistics card */
+.hearth-stats {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+	gap: 10px;
+	height: 100%;
+	align-content: center;
+}
+
+.hearth-stat {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 4px;
+	text-align: center;
+}
+
+.hearth-stat-icon {
+	display: flex;
+	color: var(--text-muted);
+}
+
+.hearth-stat-value {
+	font-size: 1.3rem;
+	font-weight: 700;
+	color: var(--text-normal);
+}
+
+.hearth-stat-label {
+	font-size: 0.72rem;
+	color: var(--text-faint);
+}
+
+/* ---- Toolbar -------------------------------------------------------- */
+
+.hearth-toolbar {
+	display: flex;
+	justify-content: flex-end;
+	gap: 8px;
+}
+
+/* While arranging the bar carries the Add card / Done actions, so keep it in
+ * normal flow above the grid. */
+.hearth-toolbar.is-arranging {
+	margin-bottom: 12px;
+}
+
+/* At rest the bar holds only the compact Arrange toggle. Float it into the
+ * gap above the grid so it no longer reserves a whole empty row, letting the
+ * cards reclaim that space. */
+.hearth-toolbar:not(.is-arranging) {
+	position: absolute;
+	right: 0;
+	bottom: 100%;
+	margin: 0 0 4px 0;
+	z-index: 3;
+}
+
+.hearth-tool-btn {
+	display: flex;
+	align-items: center;
+	gap: 7px;
+	padding: 6px 12px;
+	border-radius: 9px;
+	border: 1px solid var(--background-modifier-border);
+	background: var(--background-primary);
+	color: var(--text-muted);
+	cursor: pointer;
+	font-size: 0.85rem;
+	transition: all 120ms ease;
+}
+
+.hearth-tool-btn:hover {
+	color: var(--text-normal);
+	border-color: var(--interactive-accent);
+}
+
+.hearth-tool-btn.is-active {
+	color: var(--text-on-accent);
+	background: var(--interactive-accent);
+	border-color: var(--interactive-accent);
+}
+
+.hearth-tool-icon {
+	display: flex;
+}
+
+/* Compact icon-only toolbar button (e.g. the Arrange toggle at rest). */
+.hearth-tool-btn.is-icon {
+	padding: 3px;
+	border-radius: 7px;
+	opacity: 0.55;
+}
+
+.hearth-tool-btn.is-icon:hover {
+	opacity: 1;
+}
+
+.hearth-tool-btn.is-icon .hearth-tool-icon {
+	width: 15px;
+	height: 15px;
+}
+
+.hearth-tool-btn.is-icon .hearth-tool-icon svg {
+	width: 15px;
+	height: 15px;
+}
+
+/* ---- Dashboard switcher (top-left) ---------------------------------- */
+
+.hearth-dash-switcher {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	margin-bottom: -16px;
+}
+
+.hearth-dash-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 28px;
+	height: 28px;
+	padding: 0;
+	border-radius: 8px;
+	border: 1px solid var(--background-modifier-border);
+	background: var(--background-primary);
+	color: var(--text-muted);
+	cursor: pointer;
+	font-size: 0.85rem;
+	line-height: 1;
+	transition: all 120ms ease;
+}
+
+.hearth-dash-btn:hover {
+	color: var(--text-normal);
+	border-color: var(--interactive-accent);
+}
+
+.hearth-dash-btn.is-active {
+	color: var(--text-on-accent);
+	background: var(--interactive-accent);
+	border-color: var(--interactive-accent);
+}
+
+.hearth-dash-add {
+	opacity: 0.6;
+}
+
+.hearth-dash-add:hover {
+	opacity: 1;
+}
+
+.hearth-dash-add svg {
+	width: 15px;
+	height: 15px;
+}
+
+.hearth-rename-input {
+	width: 100%;
+}
+
+/* ---- Mobile-only mode (search-only launcher) ------------------------ */
+
+.hearth-view.hearth-mobile-only .hearth-scroll {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.hearth-view.hearth-mobile-only .hearth-inner {
+	gap: 20px;
+}
+
+/* ---- Mobile action bar (Mobile mode) --------------------------------- */
+
+/* Pinned to the bottom quarter of the screen, independent of the centred
+ * search/filters above it (a sibling of .hearth-inner inside .hearth-scroll,
+ * which is position: relative). */
+.hearth-mobile-actions {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	min-height: 25%;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	padding: 12px 24px calc(env(safe-area-inset-bottom, 0px) + 12px);
+}
+
+.hearth-mobile-action {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	height: 48px;
+	padding: 0 16px;
+	border-radius: 14px;
+	border: 1px solid var(--background-modifier-border);
+	background: var(--background-primary);
+	color: var(--text-normal);
+	cursor: pointer;
+	font-size: 0.92rem;
+	white-space: nowrap;
+	transition: background 120ms ease, border-color 120ms ease;
+}
+
+.hearth-mobile-action:hover {
+	background: var(--background-modifier-hover);
+	border-color: var(--interactive-accent);
+}
+
+.hearth-mobile-action-icon {
+	display: flex;
+}
+
+/* Hide while the on-screen keyboard is up so it doesn't sit on top of it or
+ * cover the search results dropdown. */
+.hearth-view.hearth-kbd-open .hearth-mobile-actions {
+	display: none;
+}
+
+/* ---- Empty board (no cards): centre the search like a launcher ------ */
+
+/* Make the scroll a flex column so the inner can reliably fill its height. */
+.hearth-view.hearth-empty-board .hearth-scroll {
+	display: flex;
+	flex-direction: column;
+}
+
+.hearth-view.hearth-empty-board .hearth-inner {
+	flex: 1 1 auto;
+	min-height: 0;
+}
+
+/* Centre the header + dashboard group vertically while the dashboard switcher
+ * stays anchored at the top. The auto margin above the header and below the
+ * dashboard absorb the free space equally, so the group lands in the middle. */
+.hearth-view.hearth-empty-board .hearth-header {
+	margin-top: auto;
+}
+
+/* Stop the dashboard from growing to fill the column (its default), so the
+ * free space is left for the auto margins to centre the search. */
+.hearth-view.hearth-empty-board .hearth-dashboard {
+	flex: 0 0 auto;
+	margin-bottom: auto;
+}
+
+/* Don't let the "No cards yet" placeholder stretch and push the search off
+ * centre — let it size to its content under the centred search. */
+.hearth-view.hearth-empty-board .hearth-grid-empty {
+	height: auto;
+}
+
+/* Pinned cards (shown on every dashboard): mark them while arranging so it's
+ * clear they're shared and will move on all boards at once. */
+.hearth-grid.is-arranging .hearth-card.is-pinned::after {
+	content: "📌";
+	position: absolute;
+	top: 4px;
+	left: 6px;
+	font-size: 0.7rem;
+	opacity: 0.65;
+	pointer-events: none;
+}
+
+/* ---- Per-card colors ------------------------------------------------ */
+
+.hearth-card.has-accent {
+	border-color: var(--card-accent);
+}
+
+.hearth-card.has-accent .hearth-card-head {
+	border-bottom-color: var(--card-accent);
+}
+
+.hearth-card.has-accent .hearth-card-title {
+	color: var(--card-accent);
+}
+
+.hearth-card-body.has-bg {
+	background: var(--card-bg);
+}
+
+/* ---- Arrange mode (drag & resize) ----------------------------------- */
+
+.hearth-grid.is-arranging .hearth-card {
+	user-select: none;
+}
+
+.hearth-grid.is-arranging .hearth-card::after {
+	/* dashed outline cue without affecting layout */
+	content: "";
+	position: absolute;
+	inset: 0;
+	border: 1px dashed var(--interactive-accent);
+	border-radius: 14px;
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+.hearth-card {
+	position: relative;
+}
+
+.hearth-card-overlay {
+	position: absolute;
+	inset: 0;
+	z-index: 5;
+	cursor: grab;
+	background: transparent;
+	/* Claim the gesture so dragging a card doesn't also scroll/swipe the page. */
+	touch-action: none;
+}
+
+/* The editable header must sit above the drag overlay so its field and
+ * action buttons stay interactive; cards are still dragged from the body. */
+.hearth-grid.is-arranging .hearth-card-head.is-editing {
+	position: relative;
+	z-index: 7;
+	gap: 8px;
+}
+
+.hearth-card-title-input {
+	flex: 1;
+	min-width: 0;
+	padding: 4px 8px;
+	border-radius: 7px;
+	border: 1px solid var(--background-modifier-border);
+	background: var(--background-primary);
+	color: var(--text-normal);
+	font-weight: 600;
+	font-size: 0.9rem;
+}
+
+.hearth-card-title-input:focus {
+	outline: none;
+	border-color: var(--interactive-accent);
+}
+
+.hearth-card-actions {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	flex-shrink: 0;
+}
+
+.hearth-card-action {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px;
+	border-radius: 7px;
+	border: 1px solid var(--background-modifier-border);
+	background: var(--background-primary);
+	color: var(--text-muted);
+	cursor: pointer;
+}
+
+.hearth-card-action:hover {
+	color: var(--text-normal);
+	border-color: var(--interactive-accent);
+}
+
+.hearth-card-action.is-danger:hover {
+	color: var(--text-on-accent);
+	background: var(--text-error);
+	border-color: var(--text-error);
+}
+
+.hearth-card.is-moving {
+	cursor: grabbing;
+	z-index: 20;
+	box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+}
+
+.hearth-card.is-moving .hearth-card-overlay {
+	cursor: grabbing;
+}
+
+.hearth-card.is-resizing {
+	z-index: 20;
+}
+
+.hearth-resize-handle {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 18px;
+	height: 18px;
+	z-index: 6;
+	cursor: nwse-resize;
+	/* Resizing must not also scroll/swipe the page on touch devices. */
+	touch-action: none;
+	background:
+		linear-gradient(
+			135deg,
+			transparent 0 50%,
+			var(--interactive-accent) 50% 60%,
+			transparent 60% 70%,
+			var(--interactive-accent) 70% 80%,
+			transparent 80%
+		);
+	border-bottom-right-radius: 12px;
+}
+
+/* Bigger, easier-to-grab resize target on touch devices. */
+@media (pointer: coarse) {
+	.hearth-resize-handle {
+		width: 30px;
+		height: 30px;
+	}
+}
+
+/* ---- Settings ------------------------------------------------------- */
+
+.hearth-card-setting .setting-item-control,
+.hearth-link-setting .setting-item-control {
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	gap: 6px;
+}
+
+.hearth-count-input {
+	width: 64px;
+}
+
+/* ---- Compact spacing ----------------------------------------------- */
+
+.hearth-compact .hearth-scroll {
+	padding: 1.5vh 14px 24px;
+}
+
+.hearth-compact .hearth-inner {
+	gap: 16px;
+}
+
+.hearth-compact .hearth-header {
+	gap: 10px;
+}
+
+.hearth-compact .hearth-title {
+	margin-top: 0;
+}
+
+.hearth-compact .hearth-card-head {
+	padding: 6px 10px;
+}
+
+.hearth-compact .hearth-card-body {
+	padding: 8px 10px;
+}
