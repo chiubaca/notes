@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "42ad16b265d62bc4",
+        "id": "2b56962e8574b2bd",
         "type": "tabs",
         "children": [
           {
-            "id": "51f17bf9f6f1d6a9",
+            "id": "272fd194ef116d64",
             "type": "leaf",
             "state": {
               "type": "hearth-home-view",
@@ -18,17 +18,15 @@
             }
           },
           {
-            "id": "6034e99f54589e37",
+            "id": "64b0218638a4fdd2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "permanent-notes/everthing-ive-built-with-ai-this-year.md",
-                "mode": "source",
-                "source": false
+                "file": "photos/20210918_171514_10.jpg"
               },
-              "icon": "lucide-file",
-              "title": "everthing-ive-built-with-ai-this-year"
+              "icon": "lucide-image",
+              "title": "20210918_171514_10"
             }
           }
         ],
@@ -64,7 +62,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "leaning-into",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -105,8 +103,7 @@
               "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -168,8 +165,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 552.5,
-    "collapsed": true
+    "width": 552.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -187,28 +183,38 @@
       "hearth:Open Hearth home": false
     }
   },
-  "active": "6034e99f54589e37",
+  "active": "64b0218638a4fdd2",
   "lastOpenFiles": [
+    "photos/20210924_113718.jpg",
+    "photos/20210924_183507.jpg",
+    "photos/20210924_184344.jpg",
+    "photos/20210924_191727.jpg",
+    "photos/20211016_135057.jpg",
+    "photos/20211204_111849.jpg",
+    "photos/20210615_210331.jpg",
+    "photos/20200730_173140_03.jpg",
+    "photos/20181026_175346_HDR.jpg",
+    "photos/20181027_161158.jpg",
+    "photos/IMG_20171226_194840.jpg",
+    "photos/20210814_134504.mp4",
+    "photos/Untitled 1.base",
+    "photos/20210530_161221_01.mp4",
+    "photos/20210301_191558_01.mp4",
+    "photos/20210208_125605_03.mp4",
+    "photos/20150504_173824.mp4",
+    "photos/Untitled.base",
+    "permanent-notes/everthing-ive-built-with-ai-this-year.md",
+    "permanent-notes/Untitled Kanban.md",
     "Untitled Kanban.md",
     "Untitled.canvas",
     "Untitled.base",
-    "photos/Untitled 1.base",
-    "photos/Untitled.base",
-    "photos/calvin-2026-05-06.jpg",
-    "permanent-notes/everthing-ive-built-with-ai-this-year.md",
     "permanent-notes/no-regrets.md",
     "permanent-notes/Untitled.base",
-    "photos/calvin-2026-04-18.jpg",
     "syz/betacap-taper-journal.md",
-    "attachments/20230326_112558.jpg",
-    "photos/me-everest.jpg",
     "fleeting-notes/2026-07-03.md",
-    "photos/calvin-2026-05-07.jpg",
     "fleeting-notes/2026-07-01.md",
     "fleeting-notes/2026-06-28.md",
     "Untitled.md",
-    "photos/89756dc3-39cf-486e-9918-67d5dbbe5403.jpg",
-    "photos/68747470733a2f2f636f6d6679616e6f6e796d6f75732e6769746875622e696f2f436f6d667955495f6578616d706c65732f666c75782f666c75785f6465765f6578616d706c652e706e67.png",
     "README.md",
     "templates/new-permanent-note.md",
     "fleeting-notes/2025-06-14.md",
@@ -225,16 +231,7 @@
     "fleeting/20250613.md",
     "permanent-notes/skill-stacking.md",
     "permanent-notes/leaning-into-the-vibes.md",
-    "permanent-notes/betacap-taper-journal.md",
     "permanent",
-    "fleeting",
-    "attachments/GOPR0424_1680172721833.jpg",
-    "attachments/GOPR0333.jpg",
-    "attachments/GOPR0235.jpg",
-    "photos",
-    "photos/calvin",
-    "syz",
-    "retrospectives/2026/Untitled",
     "planning/House renovation.canvas",
     "planning/Face Wall Game.canvas",
     "planning/TikTok Filters.canvas",
