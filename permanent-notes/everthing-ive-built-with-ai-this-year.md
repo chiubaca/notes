@@ -3,7 +3,7 @@ title: Everything I've built with AI this year
 publish_date: 2026-07-18
 last_updated: 2026-07-18
 description: Everything I've built with AI this year
-status: draft
+status: live
 tags:
 ---
 I already talked about my AI anxiety in [leaning-into-the-vibes](permanent-notes/leaning-into-the-vibes.md), but despite all these mixed feelings i've double down on using AI at work and on side projects. It's been game-changing, addictive and mind-blowing.
