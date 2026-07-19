@@ -26,7 +26,7 @@ Built with xstate, tanstack start, cloudflare d1 /do / workers. This was my Opus
 
 # Mecha Portfolio
 
-![](atta/mecha-screenshot.png)
+![](attachments/mecha-screenshot.png)
 
 Pretty silly project trying to get an LLM to create gundam wing with just three.js shapes and not actually using a 3d model. Opus did the best job, but it still looks pretty goofy.
 

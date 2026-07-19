@@ -12,8 +12,8 @@ tags:
 - Family first
   
 - Give praise publicly
-- 
-- Have strong opinions, but be willing to change.
+
+-  Strong opinions, loosely held
 
 
 
