@@ -20,11 +20,13 @@ For jokes at work we started planning our tickets with using the [chonk scale](h
 
 Built with xstate, tanstack start, cloudflare d1 /do / workers. This was my Opus 4.6 moment.
 
-![](assets/Pasted%20image%2020260719204949.png)
+![](attachments/rec_1.gif)
 
 [demo](https://chonk-poker.chiubaca.com/) | [github](https://github.com/chiubaca/chonk-poker)
 
 # Mecha Portfolio
+
+![](atta/mecha-screenshot.png)
 
 Pretty silly project trying to get an LLM to create gundam wing with just three.js shapes and not actually using a 3d model. Opus did the best job, but it still looks pretty goofy.
 
