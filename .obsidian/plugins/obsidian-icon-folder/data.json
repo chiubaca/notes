@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiDumbbell",
+      "👟",
       "LiRewind",
       "LiNewspaper",
-      "🤔",
-      "LiCamera",
-      "LiPen"
+      "🤔"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -39,5 +39,6 @@
   "permanent-notes": "LiPen",
   "photos": "LiCamera",
   "retrospectives": "LiRewind",
-  "planning": "LiNewspaper"
+  "planning": "LiNewspaper",
+  "garmin": "LiDumbbell"
 }
