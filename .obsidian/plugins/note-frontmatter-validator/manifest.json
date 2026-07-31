@@ -1,0 +1,9 @@
+{
+  "id": "note-frontmatter-validator",
+  "name": "Note Frontmatter Validator",
+  "version": "1.0.0",
+  "minAppVersion": "1.0.0",
+  "description": "Shows frontmatter validation errors for publishable notes after saving.",
+  "author": "Alex Chiu",
+  "isDesktopOnly": true
+}

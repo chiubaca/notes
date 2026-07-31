@@ -1,0 +1,12 @@
+#!/bin/sh
+
+if [ -x "$HOME/.vite-plus/bin/node" ]; then
+  node="$HOME/.vite-plus/bin/node"
+elif command -v node >/dev/null 2>&1; then
+  node="$(command -v node)"
+else
+  echo "Note frontmatter validation requires Node.js. Install Node or set it on PATH." >&2
+  exit 127
+fi
+
+"$node" scripts/validate-frontmatter.mjs --staged
