@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2026-07-31.md",
+                "file": "fleeting-notes/2026-07-30.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "2026-07-31"
+              "title": "2026-07-30"
             }
           }
         ],
@@ -180,10 +180,12 @@
   },
   "active": "b7a470891dce5789",
   "lastOpenFiles": [
+    "permanent-notes/my-values.md",
+    "permanent-notes/4am-hugs.md",
+    "garmin/2026-07-28.md",
     "fleeting-notes/2026-07-31.md",
     "garmin/2025-05-03.md",
     "fleeting-notes/2026-07-30.md",
-    "garmin/2026-07-28.md",
     "garmin/2026-07-20.md",
     "garmin/2026-07-21.md",
     "garmin/2026-07-22.md",
@@ -204,8 +206,6 @@
     "garmin/2023-06-21.md",
     "garmin/2023-08-16.md",
     "garmin/2023-12-02.md",
-    "garmin/2026-06-05.md",
-    "garmin/2026-06-03.md",
     "Untitled",
     "attachments/mecha-screenshot.png",
     "atta/mecha-screenshot.png",
