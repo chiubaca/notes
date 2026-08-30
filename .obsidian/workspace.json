@@ -27,16 +27,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fleeting-notes/2026-07-30.md",
+                "file": "retrospectives/2026/07.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "2026-07-30"
+              "title": "07"
+            }
+          },
+          {
+            "id": "afb42a58a7d2cfda",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "retrospectives/2026/08.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "08"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -178,10 +192,15 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "b7a470891dce5789",
+  "active": "afb42a58a7d2cfda",
   "lastOpenFiles": [
-    "fleeting-notes/2026-07-31.md",
+    "retrospectives/2026/07.md",
+    "retrospectives/2026/08.md",
     "fleeting-notes/2026-07-30.md",
+    "fleeting-notes/2026-08-07.md",
+    "fleeting-notes/2026-08-05.md",
+    "fleeting-notes/2026-08-02.md",
+    "fleeting-notes/2026-07-31.md",
     "fleeting-notes/2026-07-20.md",
     "scripts/note-frontmatter-validation.js",
     "scripts/validate-frontmatter.mjs",
@@ -204,10 +223,6 @@
     "garmin/2023-07-01.md",
     "garmin/2023-01-01.md",
     "garmin/2023-01-02.md",
-    "garmin/2023-02-06.md",
-    "garmin/2023-04-22.md",
-    "garmin/2023-06-21.md",
-    "garmin/2023-08-16.md",
     "Untitled",
     "attachments/mecha-screenshot.png",
     "atta/mecha-screenshot.png",
